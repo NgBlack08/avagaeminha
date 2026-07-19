@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CEBRASPE Lab — Laboratório de Engenharia Reversa da Banca</title>
+  <meta name="description" content="Plataforma inteligente de análise da banca CEBRASPE para carreiras policiais — prioridade Polícia Civil de Alagoas.">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%234f8cff'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='white' font-family='Arial' font-weight='bold'>CL</text></svg>">
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand">
+        <div class="logo">CL</div>
+        <h1>CEBRASPE Lab<small>Carreiras Policiais · Foco PCAL</small></h1>
+      </div>
+      <nav id="nav"></nav>
+      <div class="foot">
+        Banco inicial: questões inéditas geradas em estilo CEBRASPE, com fundamentos em legislação vigente e jurisprudência STF/STJ.<br><br>
+        Estimativas estatísticas ≠ garantia de prova.
+      </div>
+    </aside>
+    <div class="backdrop" id="backdrop" onclick="closeSidebar()"></div>
+    <main class="main">
+      <button class="btn ghost small menu-toggle" onclick="toggleSidebar()">☰ Menu</button>
+      <div id="main"></div>
+    </main>
+  </div>
+  <script src="js/data.js?v=1.2"></script>
+  <script src="js/engine.js?v=1.2"></script>
+  <script src="js/charts.js?v=1.2"></script>
+  <script src="js/app.js?v=1.2"></script>
+</body>
+</html>
