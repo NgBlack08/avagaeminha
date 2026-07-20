@@ -185,6 +185,7 @@ function renderBanco() {
       <label class="f">Busca<input type="search" id="f-busca" value="${bancoFiltros.busca || ""}" placeholder="palavra-chave…" onchange="setFiltroBanco()"></label>
       <label class="check"><input type="checkbox" id="f-erradas" ${bancoFiltros.somenteErradas ? "checked" : ""} onchange="setFiltroBanco()"> só as que errei</label>
       <label class="check"><input type="checkbox" id="f-novas" ${bancoFiltros.somenteNaoRespondidas ? "checked" : ""} onchange="setFiltroBanco()"> só não respondidas</label>
+      <label class="check"><input type="checkbox" id="f-edital" ${bancoFiltros.ocultarForaEdital ? "checked" : ""} onchange="setFiltroBanco()"> só edital PC-AL 2026</label>
     </div>
   </div>
   <div style="font-size:13px;color:var(--muted);margin-bottom:12px"><b>${lista.length}</b> questão(ões) encontrada(s)</div>
@@ -203,6 +204,7 @@ function setFiltroBanco(resetAssunto) {
     busca: $("#f-busca").value.trim() || null,
     somenteErradas: $("#f-erradas").checked,
     somenteNaoRespondidas: $("#f-novas").checked,
+    ocultarForaEdital: $("#f-edital").checked,
   };
   renderBanco();
 }
@@ -221,6 +223,7 @@ function questaoCardHtml(q, opts) {
       <span class="tag">${q.disciplina}</span>
       <span class="tag">${q.assunto}</span>
       <span class="tag diff" title="dificuldade">${diff}</span>
+      ${q.foraEdital ? '<span class="tag warn" title="Tema não consta do conteúdo programático de Agente/Escrivão no edital PC-AL 2026 — mantido como treino complementar">fora do edital PC-AL 2026</span>' : ""}
       ${s.tentativas ? `<span class="tag ${s.ultima.branco ? "" : s.ultima.correta ? "ok" : "bad"}">${s.ultima.branco ? "em branco" : s.ultima.correta ? "acertou" : "errou"} na última</span>` : ""}
       <span class="tag" title="tempo ideal de resolução">⏱ ideal: ${q.tempoIdealSeg}s</span>
     </div>
@@ -324,7 +327,7 @@ function renderSimulado() {
     <div class="opts">
       <label class="f">Número de questões<select id="sim-n">
         <option value="5">5 (rápido)</option><option value="10" selected>10</option>
-        <option value="20">20</option><option value="40">40 (todas)</option>
+        <option value="20">20</option><option value="40">40</option><option value="60">60</option><option value="120">120 (prova completa)</option>
       </select></label>
       <label class="f">Concurso<select id="sim-concurso">
         <option value="">Todos (foco em ${APP_STATE.config.concursoFoco})</option>

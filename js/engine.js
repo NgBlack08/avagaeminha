@@ -300,6 +300,7 @@ function filtrarQuestoes(f) {
     if (f.somenteNaoRespondidas) {
       if ((APP_STATE.respostas[q.id] || []).length) return false;
     }
+    if (f.ocultarForaEdital && q.foraEdital) return false;
     if (f.busca) {
       const alvo = (q.enunciado + " " + q.assunto + " " + q.subassunto + " " + (q.comentario.resolucao || "")).toLowerCase();
       if (!alvo.includes(f.busca.toLowerCase())) return false;
