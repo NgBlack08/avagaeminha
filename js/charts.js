@@ -64,11 +64,10 @@ function chartGauge(value, opts = {}) {
   const pct = Math.max(0, Math.min(100, value));
   const ang = Math.PI * (1 - pct / 100);
   const px = cx + r * Math.cos(ang), py = cy - r * Math.sin(ang);
-  const large = pct > 50 ? 1 : 0;
   const color = pct >= 75 ? "#22c55e" : pct >= 50 ? "#f59e0b" : "#ef4444";
   let s = svgEl(w, h);
   s += `<path d="M ${cx - r} ${cy} A ${r} ${r} 0 1 1 ${cx + r} ${cy}" fill="none" stroke="var(--border)" stroke-width="14" stroke-linecap="round"></path>`;
-  if (pct > 0.5) s += `<path d="M ${cx - r} ${cy} A ${r} ${r} 0 ${large} 1 ${px} ${py}" fill="none" stroke="${color}" stroke-width="14" stroke-linecap="round"></path>`;
+  if (pct > 0.5) s += `<path d="M ${cx - r} ${cy} A ${r} ${r} 0 0 1 ${px} ${py}" fill="none" stroke="${color}" stroke-width="14" stroke-linecap="round"></path>`;
   s += `<text x="${cx}" y="${cy - 14}" text-anchor="middle" class="c-gauge-num">${Math.round(pct)}</text>`;
   s += `<text x="${cx}" y="${cy + 6}" text-anchor="middle" class="c-gauge-sub">${escapeHtml(opts.sub || "")}</text>`;
   return s + "</svg>";
