@@ -23,10 +23,16 @@ let SIM = null; /* estado do simulado em andamento */
 
 /* ============ Bootstrap ============ */
 document.addEventListener("DOMContentLoaded", () => {
+  bootstrapAuth();
+});
+
+function iniciarApp() {
+  const root = document.getElementById("approot");
+  if (root) root.classList.remove("no-sidebar");
   document.documentElement.dataset.theme = APP_STATE.config.tema || "dark";
   renderSidebar();
   navigate("dashboard");
-});
+}
 
 function renderSidebar() {
   const nav = $("#nav");
@@ -37,6 +43,12 @@ function renderSidebar() {
     VIEWS.slice(3, 7).map(navBtn).join("") +
     '<div class="nav-sep">Você</div>' +
     VIEWS.slice(7).map(navBtn).join("");
+  const acct = $("#acct");
+  if (acct) {
+    acct.innerHTML = (MODO === "cloud" && CURRENT_USER)
+      ? `<div style="color:var(--text)">👤 ${escapeHtml(CURRENT_USER.email)}</div><button class="btn ghost small" style="margin-top:6px;width:100%" onclick="sair()">Sair</button>`
+      : `<div style="color:var(--warn)">⚠ Modo local (sem conta)</div><button class="btn ghost small" style="margin-top:6px;width:100%" onclick="mostrarTelaLogin()">Criar conta / Entrar</button>`;
+  }
 }
 function navBtn(v) {
   return `<button class="nav-btn ${v.id === currentView ? "active" : ""}" onclick="navigate('${v.id}')">
@@ -378,8 +390,7 @@ function finalizarSimulado() {
   const liquida = acertos - erros;
   const tempoTotal = Math.round((Date.now() - SIM.inicio) / 1000);
   const taxa = (acertos + erros) ? acertos / (acertos + erros) : 0;
-  APP_STATE.sessoes.push({ data: Date.now(), n: r.length, acertos, erros, brancos, liquida, tempoTotal });
-  saveState();
+  registrarSessao({ data: Date.now(), n: r.length, acertos, erros, brancos, liquida, tempoTotal });
 
   /* desempenho por disciplina nesta sessão */
   const porDisc = {};

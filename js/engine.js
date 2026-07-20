@@ -7,16 +7,74 @@
 
 const STORAGE_KEY = "cebraspe-lab-v1";
 
-/* ---------------- Persistência ---------------- */
-function loadState() {
+/* ---------------- Persistência ----------------
+   MODO "offline": tudo em localStorage (padrão, sem conta).
+   MODO "cloud": tudo em Supabase, sincronizado entre dispositivos. */
+let MODO = "offline";
+let CURRENT_USER = null;
+
+function loadLocalState() {
   try {
     const raw = localStorage.getItem(STORAGE_KEY);
     if (raw) return JSON.parse(raw);
   } catch (e) { /* estado corrompido: recomeça */ }
   return { respostas: {}, srs: {}, sessoes: [], config: { tema: "dark", concursoFoco: "PCAL", cargoFoco: "Escrivão" } };
 }
-function saveState() { localStorage.setItem(STORAGE_KEY, JSON.stringify(APP_STATE)); }
-const APP_STATE = loadState();
+function saveLocalState() { localStorage.setItem(STORAGE_KEY, JSON.stringify(APP_STATE)); }
+const APP_STATE = loadLocalState();
+
+/* Salva a config (tema/foco) no destino certo conforme o modo atual. */
+function saveState() {
+  if (MODO === "cloud" && CURRENT_USER) {
+    supa.from("profiles").update({
+      tema: APP_STATE.config.tema,
+      concurso_foco: APP_STATE.config.concursoFoco,
+      cargo_foco: APP_STATE.config.cargoFoco,
+      updated_at: new Date().toISOString(),
+    }).eq("id", CURRENT_USER.id).then(({ error }) => { if (error) console.error("Erro ao salvar perfil:", error); });
+  } else {
+    saveLocalState();
+  }
+}
+
+/* Busca todo o estado do usuário logado no Supabase e popula o APP_STATE. */
+async function carregarEstadoNuvem(user) {
+  CURRENT_USER = user;
+  MODO = "cloud";
+  const [{ data: perfil }, { data: respostasRows }, { data: srsRows }, { data: sessoesRows }] = await Promise.all([
+    supa.from("profiles").select("*").eq("id", user.id).single(),
+    supa.from("respostas").select("*").eq("user_id", user.id).order("created_at", { ascending: true }),
+    supa.from("srs").select("*").eq("user_id", user.id),
+    supa.from("sessoes").select("*").eq("user_id", user.id).order("created_at", { ascending: true }),
+  ]);
+  const respostas = {};
+  for (const r of (respostasRows || [])) {
+    if (!respostas[r.qid]) respostas[r.qid] = [];
+    respostas[r.qid].push({ qid: r.qid, resposta: r.resposta, correta: r.correta, branco: r.branco, tempoMs: r.tempo_ms, confianca: r.confianca, data: new Date(r.created_at).getTime() });
+  }
+  const srs = {};
+  for (const s of (srsRows || [])) srs[s.qid] = { nivel: s.nivel, proxima: new Date(s.proxima).getTime() };
+  const sessoes = (sessoesRows || []).map(s => ({ data: new Date(s.created_at).getTime(), n: s.n, acertos: s.acertos, erros: s.erros, brancos: s.brancos, liquida: s.liquida, tempoTotal: s.tempo_total }));
+  APP_STATE.respostas = respostas;
+  APP_STATE.srs = srs;
+  APP_STATE.sessoes = sessoes;
+  APP_STATE.config = {
+    tema: perfil?.tema || "dark",
+    concursoFoco: perfil?.concurso_foco || "PCAL",
+    cargoFoco: perfil?.cargo_foco || "Escrivão",
+  };
+}
+
+/* Volta o app para modo local (após logout), recarregando o localStorage. */
+function voltarModoLocal() {
+  MODO = "offline";
+  CURRENT_USER = null;
+  const local = loadLocalState();
+  APP_STATE.respostas = local.respostas;
+  APP_STATE.srs = local.srs;
+  APP_STATE.sessoes = local.sessoes;
+  APP_STATE.config = local.config;
+}
 
 /* ---------------- Registro de respostas ---------------- */
 /* resposta: "C" | "E" | "B" (branco). confianca: 1-3 (opcional) */
@@ -28,8 +86,36 @@ function registrarResposta(qid, resposta, tempoMs, confianca) {
   if (!APP_STATE.respostas[qid]) APP_STATE.respostas[qid] = [];
   APP_STATE.respostas[qid].push(registro);
   atualizarSRS(qid, resposta === "B" ? false : correta, resposta === "B");
-  saveState();
+  if (MODO === "cloud" && CURRENT_USER) persistirRespostaNuvem(registro);
+  else saveLocalState();
   return { correta, gabarito: q.gabarito };
+}
+
+function persistirRespostaNuvem(registro) {
+  supa.from("respostas").insert({
+    user_id: CURRENT_USER.id, qid: registro.qid, resposta: registro.resposta,
+    correta: registro.correta, branco: registro.branco, tempo_ms: registro.tempoMs, confianca: registro.confianca,
+  }).then(({ error }) => { if (error) console.error("Erro ao salvar resposta:", error); });
+  const s = APP_STATE.srs[registro.qid];
+  if (s) {
+    supa.from("srs").upsert({
+      user_id: CURRENT_USER.id, qid: registro.qid, nivel: s.nivel,
+      proxima: new Date(s.proxima).toISOString(), updated_at: new Date().toISOString(),
+    }).then(({ error }) => { if (error) console.error("Erro ao salvar SRS:", error); });
+  }
+}
+
+/* Registra o resumo de um simulado concluído (Módulo 7 + 8). */
+function registrarSessao(sessao) {
+  APP_STATE.sessoes.push(sessao);
+  if (MODO === "cloud" && CURRENT_USER) {
+    supa.from("sessoes").insert({
+      user_id: CURRENT_USER.id, n: sessao.n, acertos: sessao.acertos, erros: sessao.erros,
+      brancos: sessao.brancos, liquida: sessao.liquida, tempo_total: sessao.tempoTotal,
+    }).then(({ error }) => { if (error) console.error("Erro ao salvar sessão:", error); });
+  } else {
+    saveLocalState();
+  }
 }
 
 /* ---------------- Repetição espaçada (SM-2 simplificado) ----------------
@@ -256,5 +342,16 @@ function listaAssuntos(disciplina) {
 
 function resetarDados() {
   APP_STATE.respostas = {}; APP_STATE.srs = {}; APP_STATE.sessoes = [];
-  saveState();
+  if (MODO === "cloud" && CURRENT_USER) {
+    Promise.all([
+      supa.from("respostas").delete().eq("user_id", CURRENT_USER.id),
+      supa.from("srs").delete().eq("user_id", CURRENT_USER.id),
+      supa.from("sessoes").delete().eq("user_id", CURRENT_USER.id),
+    ]).then(results => {
+      const erro = results.find(r => r.error);
+      if (erro) console.error("Erro ao zerar dados na nuvem:", erro.error);
+    });
+  } else {
+    saveLocalState();
+  }
 }

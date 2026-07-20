@@ -210,6 +210,11 @@ details.cog summary { cursor: pointer; font-size: 13.5px; font-weight: 600; colo
 .radar-linha:last-child { border-bottom: none; }
 .radar-linha .pct { margin-left: auto; font-weight: 700; font-variant-numeric: tabular-nums; }
 
+/* ---------- Autenticação ---------- */
+.app.no-sidebar .sidebar, .app.no-sidebar .backdrop, .app.no-sidebar .menu-toggle { display: none; }
+.auth-wrap { min-height: 82vh; display: flex; align-items: center; justify-content: center; padding: 20px 0; }
+.auth-card { width: 100%; max-width: 380px; }
+
 /* ---------- Responsivo ---------- */
 .menu-toggle { display: none; }
 @media (max-width: 900px) {
