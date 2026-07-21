@@ -8,8 +8,11 @@
 const STORAGE_KEY = "cebraspe-lab-v1";
 
 /* ---------------- Persistência ----------------
-   MODO "offline": tudo em localStorage (padrão, sem conta).
-   MODO "cloud": tudo em Supabase, sincronizado entre dispositivos. */
+   Login obrigatório: o app só é exibido após autenticação (Supabase),
+   e todo o progresso é salvo e sincronizado na nuvem (MODO "cloud").
+   "offline"/localStorage existe apenas como estado inicial transitório
+   (antes do login) e rede de segurança defensiva — não é acessível
+   pela interface. */
 let MODO = "offline";
 let CURRENT_USER = null;
 

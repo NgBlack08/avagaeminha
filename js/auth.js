@@ -1,17 +1,15 @@
 /* =====================================================================
    CEBRASPE LAB — Autenticação (Supabase Auth)
-   Cadastro/login por e-mail e senha, com alternativa "modo local"
-   (sem conta, dados só neste navegador — comportamento original).
+   Acesso exclusivo por login (e-mail e senha). Não há modo local/sem
+   conta: é preciso estar autenticado para usar a plataforma, e todo o
+   progresso é sincronizado na nuvem (Supabase).
    ===================================================================== */
-const AUTH_LOCAL_KEY = "cebraspe-lab-modo-local";
 let authTab = "entrar";
 
 async function bootstrapAuth() {
   const { data: { session } } = await supa.auth.getSession();
   if (session && session.user) {
     await carregarEstadoNuvem(session.user);
-    iniciarApp();
-  } else if (localStorage.getItem(AUTH_LOCAL_KEY) === "1") {
     iniciarApp();
   } else {
     renderAuthScreen();
@@ -20,20 +18,9 @@ async function bootstrapAuth() {
   supa.auth.onAuthStateChange((event) => {
     if (event === "SIGNED_OUT") {
       voltarModoLocal();
-      localStorage.removeItem(AUTH_LOCAL_KEY);
       renderAuthScreen();
     }
   });
-}
-
-function mostrarTelaLogin() {
-  renderAuthScreen();
-}
-
-function continuarSemConta() {
-  localStorage.setItem(AUTH_LOCAL_KEY, "1");
-  voltarModoLocal();
-  iniciarApp();
 }
 
 async function sair() {
@@ -61,10 +48,8 @@ function renderAuthScreen(erro) {
         <button class="btn" type="submit" style="margin-top:16px;width:100%" id="auth-submit">Entrar</button>
       </form>
       <div id="auth-msg" style="margin-top:10px;font-size:13px;min-height:18px"></div>
-      <div style="text-align:center;margin:16px 0 6px;color:var(--muted);font-size:12.5px">— ou —</div>
-      <button class="btn ghost" style="width:100%" onclick="continuarSemConta()">Continuar sem conta (só neste dispositivo)</button>
       <div style="font-size:12px;color:var(--muted);margin-top:14px">
-        Criar conta sincroniza seu progresso entre computador e celular. Sem conta, os dados ficam salvos apenas neste navegador.
+        É necessário entrar ou criar uma conta para acessar a plataforma. Seu progresso fica salvo e sincronizado entre seus dispositivos.
       </div>
     </div>
   </div>`;
