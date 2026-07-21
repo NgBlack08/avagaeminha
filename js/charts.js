@@ -3,7 +3,7 @@
    Sem dependências externas: barras, linhas, medidor e heatmap.
    ===================================================================== */
 
-const CHART_COLORS = ["#4f8cff", "#22c55e", "#f59e0b", "#ef4444", "#a78bfa", "#14b8a6", "#f472b6", "#94a3b8"];
+const CHART_COLORS = ["#3b82f6", "#10b981", "#f59e0b", "#ef4444", "#8b5cf6", "#14b8a6", "#f472b6", "#94a3b8"];
 
 function svgEl(w, h) {
   return `<svg viewBox="0 0 ${w} ${h}" width="100%" preserveAspectRatio="xMidYMid meet" role="img">`;
@@ -64,7 +64,7 @@ function chartGauge(value, opts = {}) {
   const pct = Math.max(0, Math.min(100, value));
   const ang = Math.PI * (1 - pct / 100);
   const px = cx + r * Math.cos(ang), py = cy - r * Math.sin(ang);
-  const color = pct >= 75 ? "#22c55e" : pct >= 50 ? "#f59e0b" : "#ef4444";
+  const color = pct >= 75 ? "#10b981" : pct >= 50 ? "#f59e0b" : "#ef4444";
   let s = svgEl(w, h);
   s += `<path d="M ${cx - r} ${cy} A ${r} ${r} 0 1 1 ${cx + r} ${cy}" fill="none" stroke="var(--border)" stroke-width="14" stroke-linecap="round"></path>`;
   if (pct > 0.5) s += `<path d="M ${cx - r} ${cy} A ${r} ${r} 0 0 1 ${px} ${py}" fill="none" stroke="${color}" stroke-width="14" stroke-linecap="round"></path>`;

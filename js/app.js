@@ -402,7 +402,7 @@ function finalizarSimulado() {
   }
   const discData = Object.entries(porDisc).map(([d, v]) => ({
     label: d, value: (v.a + v.e) ? Math.round(100 * v.a / (v.a + v.e)) : 0,
-    display: `${v.a}✔ ${v.e}✖`, color: (v.a + v.e) && v.a / (v.a + v.e) >= .7 ? "#22c55e" : "#ef4444",
+    display: `${v.a}✔ ${v.e}✖`, color: (v.a + v.e) && v.a / (v.a + v.e) >= .7 ? "#10b981" : "#ef4444",
   }));
 
   MAIN().innerHTML = topbar("Resultado do Simulado", "Correção estilo CEBRASPE (1 líquida)") +
@@ -525,7 +525,7 @@ function renderPegadinhas() {
     <h3>🎯 Seus pontos cegos <span class="hint">padrões em que você mais erra</span></h3>
     <div class="chart-scroll">${chartHBar(fraquezas.map(f => ({
       label: f.nome, value: Math.round(f.taxa * 100), display: Math.round(f.taxa * 100) + "% de acerto",
-      color: f.taxa >= .7 ? "#22c55e" : f.taxa >= .5 ? "#f59e0b" : "#ef4444",
+      color: f.taxa >= .7 ? "#10b981" : f.taxa >= .5 ? "#f59e0b" : "#ef4444",
     })), { max: 100 })}</div>
   </div>` : ""}
   <div class="card">
@@ -626,7 +626,7 @@ function renderPerfil() {
   const discData = g.porDisc.filter(d => d.acertos + d.erros > 0).map(d => ({
     label: d.disciplina, value: Math.round((d.taxa || 0) * 100),
     display: `${Math.round((d.taxa || 0) * 100)}% (${d.acertos}✔/${d.erros}✖)`,
-    color: d.taxa >= .8 ? "#22c55e" : d.taxa >= .6 ? "#f59e0b" : "#ef4444",
+    color: d.taxa >= .8 ? "#10b981" : d.taxa >= .6 ? "#f59e0b" : "#ef4444",
   })).sort((a, b) => b.value - a.value);
 
   MAIN().innerHTML = topbar("Meu Perfil",
@@ -659,7 +659,7 @@ function renderPerfil() {
     <h3>🕳 Vulnerabilidade por padrão da banca <span class="hint">menor barra = ponto cego</span></h3>
     <div class="chart-scroll">${chartHBar(fraq.map(f => ({
       label: f.nome, value: Math.round(f.taxa * 100), display: `${Math.round(f.taxa * 100)}% (${f.acertos}✔/${f.erros}✖)`,
-      color: f.taxa >= .7 ? "#22c55e" : f.taxa >= .5 ? "#f59e0b" : "#ef4444",
+      color: f.taxa >= .7 ? "#10b981" : f.taxa >= .5 ? "#f59e0b" : "#ef4444",
     })), { max: 100 })}</div>
   </div>` : ""}
   <div class="card" style="margin-top:16px">
