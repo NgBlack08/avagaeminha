@@ -815,8 +815,8 @@ FREQUENCIA_TEMAS.push(
 
 /* 4) Predições específicas do certame PC-AL 2026 (Módulo 9) */
 PREDICOES.push(
-  { tema: "Lei 14.735/2026 — Lei Orgânica Nacional das Polícias Civis", disciplina: "Legislação Institucional (AL)", score: 97,
-    motivos: ["Lei novíssima citada nominalmente no edital", "Padrão da banca: cobrança literal de norma recente", "⚠ Importar o texto oficial para estudo — ainda sem questões no banco"] },
+  { tema: "Lei 14.735/2023 — Lei Orgânica Nacional das Polícias Civis", disciplina: "Legislação Institucional (AL)", score: 97,
+    motivos: ["Lei recente citada nominalmente no edital", "Padrão da banca: cobrança literal de norma nova (números, prazos e competências)", "⚠ Atenção: o edital a indica como 'Lei estadual nº 14.735/2026' — trata-se, na verdade, da LEI FEDERAL nº 14.735, de 23/11/2023"] },
   { tema: "Invasão de dispositivo pós-Lei 14.155/2021 (art. 154-A, CP)", disciplina: "Crimes Cibernéticos e Segurança Digital", score: 93,
     motivos: ["Edital criou disciplina própria de crimes cibernéticos", "Alteração legislativa que muda gabarito de questões antigas"] },
   { tema: "Injúria racial como racismo (Lei 14.532/2023)", disciplina: "Legislação Especial", score: 92,
