@@ -768,7 +768,7 @@ QUESTOES.forEach(q => { if (q.disciplina === "Informática") q.disciplina = "TI 
 
 /* 2) Marca temas que NÃO constam do conteúdo programático de
       Agente/Escrivão no edital PC-AL 2026 (mantidos como treino) */
-const FORA_EDITAL_PCAL2026 = ["CR-001", "CR-002", "LE-001", "LE-002", "LE-003"];
+const FORA_EDITAL_PCAL2026 = ["LE-001", "LE-002", "LE-003"];
 QUESTOES.forEach(q => { if (FORA_EDITAL_PCAL2026.includes(q.id)) q.foraEdital = true; });
 
 /* 3) Frequências estimadas das novas disciplinas (Módulo 2) */

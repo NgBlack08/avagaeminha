@@ -1001,54 +1001,6 @@ const QUESTOES = [
     }
   },
 
-  /* ================= CRIMINOLOGIA ================= */
-  {
-    id: "CR-001", disciplina: "Criminologia", assunto: "Escolas criminológicas", subassunto: "Escola Positiva",
-    concurso: "PCAL", cargo: ["Delegado","Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (padrão PCAL)",
-    tipo: "CE", dificuldade: 2, tempoIdealSeg: 35, probReaparecer: 0.7,
-    enunciado: "Para a Escola Positiva, cujo expoente antropológico foi Cesare Lombroso, o crime é fenômeno natural e social, e o criminoso, um ser determinado por fatores biológicos, psicológicos e sociais, o que fundamenta a responsabilidade social em substituição à responsabilidade moral defendida pela Escola Clássica.",
-    gabarito: "C", pegadinha: "literalidade", palavraChave: "determinismo",
-    cognitivo: {
-      motivo: "Contrapor Escola Positiva (determinismo) e Clássica (livre-arbítrio).",
-      mede: "Fundamentos das escolas criminológicas.",
-      pegadinhaDesc: "Item extenso e denso — o tamanho é a pegadinha: cansaço induz erro.",
-      ondeErra: "Perde-se na densidade e desconfia de item longo correto.",
-      palavraCritica: "responsabilidade social × moral",
-      tecnica: "Quebre o item em blocos: (1) Lombroso positivista? Sim. (2) Determinismo? Sim. (3) Responsabilidade social × moral? Sim.",
-      regraMental: "Clássica = livre-arbítrio (culpa moral). Positiva = determinismo (defesa social)."
-    },
-    comentario: {
-      resolucao: "CERTO. A Escola Positiva (Lombroso, Ferri, Garofalo) vê o crime como fenômeno natural/social e o criminoso como determinado (não livre), fundando a responsabilidade social e a periculosidade — em oposição ao livre-arbítrio e à responsabilidade moral da Escola Clássica (Beccaria, Carrara).",
-      fundamento: "Doutrina criminológica clássica.",
-      macete: "LFG da Positiva: Lombroso (bio), Ferri (socio), Garofalo (psico/jurídica).",
-      erroComum: "Trocar os fundamentos das duas escolas.",
-      comoBancaPensa: "Em Criminologia, a banca gosta de itens longos e corretos — treina a resistência à desconfiança."
-    }
-  },
-  {
-    id: "CR-002", disciplina: "Criminologia", assunto: "Vitimologia", subassunto: "Processos de vitimização",
-    concurso: "PCAL", cargo: ["Delegado","Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (padrão PCAL)",
-    tipo: "CE", dificuldade: 2, tempoIdealSeg: 35, probReaparecer: 0.75,
-    enunciado: "A vitimização secundária, também denominada sobrevitimização, é aquela causada pelas instâncias formais de controle social — como polícia, Ministério Público e Poder Judiciário — no curso do processo de apuração e julgamento do delito.",
-    gabarito: "C", pegadinha: "literalidade", palavraChave: "instâncias formais",
-    cognitivo: {
-      motivo: "Cobrar os graus de vitimização, tema em alta nas provas policiais (protagonismo da vítima).",
-      mede: "Vitimização primária, secundária e terciária.",
-      pegadinhaDesc: "A banca costuma trocar secundária por terciária; aqui manteve o par correto.",
-      ondeErra: "Confunde secundária (Estado) com terciária (meio social).",
-      palavraCritica: "instâncias formais de controle",
-      tecnica: "1ª = crime; 2ª = Estado (o 'segundo sofrimento' vem do sistema); 3ª = sociedade/grupo (abandono, estigma).",
-      regraMental: "Primária: criminoso. Secundária: sistema. Terciária: sociedade."
-    },
-    comentario: {
-      resolucao: "CERTO. A vitimização secundária (sobrevitimização) é o dano adicional causado à vítima pelas instâncias formais de controle (delegacias, MP, Judiciário): depoimentos repetidos, descrédito, exposição. A Lei 14.245/2021 (Lei Mariana Ferrer) é resposta legislativa a esse fenômeno.",
-      fundamento: "Doutrina vitimológica; Lei 14.245/2021.",
-      macete: "O '2º golpe' vem do próprio sistema que deveria proteger.",
-      erroComum: "Atribuir à sociedade (terciária) o papel das instâncias formais (secundária).",
-      comoBancaPensa: "Tema com lei nova correlata (Lei Mariana Ferrer) = probabilidade de cobrança elevada."
-    }
-  },
-
   /* ================= LEGISLAÇÃO PCAL / ESTADUAL ================= */
   {
     id: "LP-001", disciplina: "Legislação Especial", assunto: "Pacote Anticrime", subassunto: "Juiz das garantias / ANPP",
@@ -1152,11 +1104,6 @@ const FREQUENCIA_TEMAS = [
     { tema: "Sistemas operacionais", freq: 70, tendencia: "caindo", prob: 0.68 },
     { tema: "Computação em nuvem", freq: 66, tendencia: "alta", prob: 0.72 },
   ]},
-  { disciplina: "Criminologia", temas: [
-    { tema: "Escolas criminológicas", freq: 85, tendencia: "estavel", prob: 0.87 },
-    { tema: "Vitimologia", freq: 78, tendencia: "alta", prob: 0.82 },
-    { tema: "Prevenção criminal", freq: 70, tendencia: "estavel", prob: 0.72 },
-  ]},
 ];
 
 /* Evolução histórica (estimativa de nº de itens por disciplina em provas
@@ -1224,7 +1171,7 @@ const ESTRATEGIAS = [
   { nome: "Gestão do branco (1 líquida)", desc: "No CEBRASPE, errado anula certo. Regra prática: convicção ou fundamento parcial → responda; chute puro (50/50 sem nenhum indício) → em regra, deixe em branco. Use as heurísticas de padrão para transformar 50/50 em 70/30.",
     aplicar: "Estratégia de prova — treine no simulador com correção 1 líquida.", exemplo: null },
   { nome: "Imunidade ao item longo", desc: "Item extenso não é sinônimo de errado. A banca usa comprimento para cansar; quebre em blocos e julgue tecnicamente.",
-    aplicar: "Criminologia e Constitucional.", exemplo: "CR-001" },
+    aplicar: "Constitucional, Direitos Humanos e itens com texto de apoio.", exemplo: "DP-005" },
 ];
 
 /* Correção estilo CEBRASPE: 1 errada anula 1 certa */

@@ -831,30 +831,6 @@ const QUESTOES_PCAL_LOTE10 = [
     }
   },
 
-  /* ============ CRIMINOLOGIA (1 item 'Errado') ============ */
-  {
-    id: "CR-003", disciplina: "Criminologia", assunto: "Escolas criminológicas", subassunto: "Escola Clássica",
-    concurso: "PCAL", cargo: ["Delegado","Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
-    tipo: "CE", dificuldade: 2, tempoIdealSeg: 40, probReaparecer: 0.68,
-    enunciado: "Para a Escola Clássica, cujo expoente foi Cesare Lombroso, o criminoso é um indivíduo determinado por fatores biológicos, sendo o crime um fenômeno natural e não uma opção racional.",
-    gabarito: "E", pegadinha: "troca-conceito", palavraChave: "Escola Clássica / determinado / Lombroso",
-    cognitivo: {
-      motivo: "Distinguir a Escola Clássica (livre-arbítrio) da Positiva (determinismo/Lombroso).",
-      mede: "Escolas criminológicas (item do edital).",
-      pegadinhaDesc: "Atribui à Escola Clássica o determinismo biológico e Lombroso (que são da Positiva).",
-      ondeErra: "Troca os fundamentos das duas escolas.",
-      palavraCritica: "Clássica determinista / Lombroso (falso)",
-      tecnica: "Clássica (Beccaria, Carrara): livre-arbítrio e responsabilidade moral. Positiva (Lombroso, Ferri, Garofalo): determinismo e defesa social.",
-      regraMental: "Clássica = livre-arbítrio. Positiva = determinismo (Lombroso). O enunciado inverteu."
-    },
-    comentario: {
-      resolucao: "ERRADO. O determinismo biológico e Cesare Lombroso pertencem à Escola POSITIVA. A Escola CLÁSSICA (Beccaria, Carrara) funda-se no LIVRE-ARBÍTRIO: o crime é opção racional do indivíduo, e a responsabilidade é moral. A assertiva inverteu as escolas.",
-      fundamento: "Doutrina criminológica — Escolas Clássica e Positiva.",
-      macete: "Clássica = livre-arbítrio (Beccaria). Positiva = determinismo (Lombroso).",
-      erroComum: "Atribuir Lombroso/determinismo à Escola Clássica.",
-      comoBancaPensa: "Inverte os fundamentos das duas escolas."
-    }
-  },
 ];
 
 QUESTOES.push(...QUESTOES_PCAL_LOTE10);
