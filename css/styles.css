@@ -453,6 +453,42 @@ details.cog summary:hover { opacity: .8; }
   .gami-bottom { flex-direction: column; align-items: stretch; }
 }
 
+/* ===================== Onboarding (primeiros passos) ===================== */
+.onboarding-card { padding: 20px 22px; border-color: color-mix(in srgb, var(--accent) 20%, var(--border)); }
+.onboarding-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; }
+.onboarding-top h3 { margin: 0; }
+.onboarding-top .hint { margin-top: 3px; }
+.onboarding-lista { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 8px; margin-top: 14px; }
+.onboarding-item {
+  display: flex; align-items: center; gap: 10px; text-align: left; padding: 10px 12px;
+  border-radius: var(--r-md); background: var(--surface2); border: 1px solid var(--border);
+  color: var(--text); font-size: 13px; font-family: inherit; cursor: pointer; transition: border-color var(--t-fast);
+}
+.onboarding-item:hover { border-color: color-mix(in srgb, var(--accent) 40%, var(--border)); }
+.onboarding-check {
+  width: 20px; height: 20px; border-radius: var(--r-full); flex-shrink: 0; display: flex;
+  align-items: center; justify-content: center; font-size: 11px; background: var(--surface); border: 1px solid var(--border); color: var(--muted);
+}
+.onboarding-item.done { opacity: .6; }
+.onboarding-item.done .onboarding-check { background: var(--ok); border-color: transparent; color: #fff; }
+
+/* ===================== Modais (substituem alert/confirm nativos) ===================== */
+.modal-overlay {
+  position: fixed; inset: 0; z-index: 200; background: rgba(2,6,18,.6); backdrop-filter: blur(2px);
+  display: flex; align-items: center; justify-content: center; padding: 20px;
+  animation: modalFadeIn var(--t-fast) ease-out;
+}
+@keyframes modalFadeIn { from { opacity: 0; } to { opacity: 1; } }
+.modal-box {
+  background: var(--surface); border: 1px solid var(--border); border-radius: var(--r-lg);
+  box-shadow: var(--shadow-lg); padding: 24px; width: min(420px, 100%);
+  animation: modalPopIn var(--t-slow) cubic-bezier(.16,1,.3,1);
+}
+@keyframes modalPopIn { from { opacity: 0; transform: translateY(8px) scale(.98); } to { opacity: 1; transform: translateY(0) scale(1); } }
+.modal-titulo { font-size: 16px; font-weight: 700; color: var(--text); margin-bottom: 8px; }
+.modal-msg { font-size: 14px; color: var(--text); line-height: 1.5; }
+.modal-actions { display: flex; justify-content: flex-end; gap: 10px; margin-top: 20px; }
+
 /* Acessibilidade: respeita usuários com movimento reduzido (WCAG 2.3.3) */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }

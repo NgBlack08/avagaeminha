@@ -55,14 +55,16 @@ function navBtn(v) {
     <span class="ico">${v.ico}</span>${v.nome}</button>`;
 }
 
-function navigate(view) {
+async function navigate(view) {
   /* Proteção: sair de uma prova em andamento encerra e corrige. */
   if (PROVA && !PROVA.finalizada && view !== "prova") {
-    if (!confirm("Você está com uma prova em andamento. Sair agora vai ENCERRAR e corrigir a prova. Deseja sair?")) return;
+    const ok = await mostrarConfirm("Você está com uma prova em andamento. Sair agora vai ENCERRAR e corrigir a prova. Deseja sair?", "Encerrar prova em andamento?");
+    if (!ok) return;
     pararTimerProva();
     PROVA = null;
   }
   currentView = view;
+  if (view === "raiox" || view === "perfil") marcarVisitaOnboarding(view);
   renderSidebar();
   closeSidebar();
   const fn = {
@@ -72,6 +74,62 @@ function navigate(view) {
   }[view];
   fn();
   window.scrollTo(0, 0);
+}
+
+/* ================================================================
+   MODAIS — substituem alert()/confirm() nativos do navegador por
+   componentes do próprio design system (consistentes com o tema
+   claro/escuro e a identidade visual da plataforma).
+   ================================================================ */
+function modal({ titulo, mensagem, botoes }) {
+  return new Promise(resolve => {
+    const overlay = document.createElement("div");
+    overlay.className = "modal-overlay";
+    overlay.innerHTML = `
+      <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modal-titulo">
+        ${titulo ? `<div class="modal-titulo" id="modal-titulo">${escapeHtml(titulo)}</div>` : ""}
+        <div class="modal-msg">${escapeHtml(mensagem)}</div>
+        <div class="modal-actions"></div>
+      </div>`;
+    const actions = overlay.querySelector(".modal-actions");
+    let resolvido = false;
+    function fechar(valor) {
+      if (resolvido) return;
+      resolvido = true;
+      document.removeEventListener("keydown", onKey);
+      overlay.remove();
+      resolve(valor);
+    }
+    botoes.forEach(b => {
+      const btn = document.createElement("button");
+      btn.className = "btn small " + (b.cls || "ghost");
+      btn.textContent = b.label;
+      btn.onclick = () => fechar(b.value);
+      actions.appendChild(btn);
+    });
+    function onKey(e) {
+      if (e.key === "Escape") fechar(botoes.find(b => b.cancelavel)?.value ?? botoes[0].value);
+    }
+    document.addEventListener("keydown", onKey);
+    overlay.addEventListener("click", e => {
+      if (e.target === overlay) fechar(botoes.find(b => b.cancelavel)?.value ?? botoes[0].value);
+    });
+    document.body.appendChild(overlay);
+    setTimeout(() => actions.querySelector(".btn:last-child")?.focus(), 20);
+  });
+}
+function mostrarAlerta(mensagem, titulo) {
+  return modal({ titulo, mensagem, botoes: [{ label: "Entendi", value: true, cls: "" }] });
+}
+function mostrarConfirm(mensagem, titulo) {
+  return modal({ titulo, mensagem, botoes: [
+    { label: "Cancelar", value: false, cls: "ghost", cancelavel: true },
+    { label: "Confirmar", value: true, cls: "" },
+  ] });
+}
+async function confirmarResetarDados() {
+  const ok = await mostrarConfirm("Apagar todo o seu histórico de respostas e estatísticas? Esta ação não pode ser desfeita.", "Zerar histórico");
+  if (ok) { resetarDados(); navigate("perfil"); }
 }
 
 function toggleTheme() {
@@ -92,6 +150,56 @@ function topbar(titulo, sub, actionsHtml) {
 }
 
 const AVISO_ESTATISTICO = `<div class="aviso">⚠ As probabilidades e índices exibidos são <b>estimativas estatísticas</b> baseadas em frequência histórica, tendências legislativas e perfil da banca — não constituem garantia sobre o conteúdo de provas futuras.</div>`;
+
+/* ================================================================
+   ONBOARDING — checklist de primeiros passos (Dashboard)
+   Calculado sobre dados já existentes (respostas/sessões) + flags de
+   visita salvas apenas neste dispositivo (não sincronizadas: são só
+   um lembrete de UI, não precisam de tabela nova no Supabase).
+   ================================================================ */
+const ONBOARDING_VISITAS_KEY = "cebraspe-lab-onboarding-visitas";
+const ONBOARDING_DISMISS_KEY = "cebraspe-lab-onboarding-dismissed";
+function onboardingVisitas() {
+  try { return JSON.parse(localStorage.getItem(ONBOARDING_VISITAS_KEY) || "{}"); } catch (e) { return {}; }
+}
+function marcarVisitaOnboarding(chave) {
+  const v = onboardingVisitas();
+  if (v[chave]) return;
+  v[chave] = true;
+  localStorage.setItem(ONBOARDING_VISITAS_KEY, JSON.stringify(v));
+}
+function onboardingPassos() {
+  const totalRespondidas = Object.values(APP_STATE.respostas).reduce((a, h) => a + h.length, 0);
+  const visitas = onboardingVisitas();
+  return [
+    { label: "Responda sua primeira questão", done: totalRespondidas >= 1, view: "banco" },
+    { label: "Complete um simulado ou o Modo Prova", done: APP_STATE.sessoes.length >= 1, view: "simulado" },
+    { label: "Explore o Raio-X da Banca", done: !!visitas.raiox, view: "raiox" },
+    { label: "Veja suas estatísticas no Perfil", done: !!visitas.perfil, view: "perfil" },
+  ];
+}
+function onboardingCardHtml() {
+  if (localStorage.getItem(ONBOARDING_DISMISS_KEY) === "1") return "";
+  const passos = onboardingPassos();
+  const feitos = passos.filter(p => p.done).length;
+  if (feitos === passos.length) return "";
+  return `<div class="card onboarding-card" style="margin-bottom:16px">
+    <div class="onboarding-top">
+      <div><h3>🚀 Primeiros passos</h3><div class="hint">${feitos}/${passos.length} concluídos — ganhe XP e desbloqueie conquistas ao completar</div></div>
+      <button class="btn ghost small" onclick="dispensarOnboarding()" aria-label="Dispensar primeiros passos" title="Dispensar">✕</button>
+    </div>
+    <div class="onboarding-lista">
+      ${passos.map(p => `
+        <button class="onboarding-item ${p.done ? "done" : ""}" onclick="navigate('${p.view}')">
+          <span class="onboarding-check">${p.done ? "✔" : "○"}</span>${escapeHtml(p.label)}
+        </button>`).join("")}
+    </div>
+  </div>`;
+}
+function dispensarOnboarding() {
+  localStorage.setItem(ONBOARDING_DISMISS_KEY, "1");
+  renderDashboard();
+}
 
 /* ================================================================
    GAMIFICAÇÃO — camada de engajamento (XP, patente, sequência, metas)
@@ -139,6 +247,7 @@ function renderDashboard() {
   MAIN().innerHTML = topbar("Dashboard",
     `Foco: <b>${foco.nome}</b> · Cargo: <b>${APP_STATE.config.cargoFoco}</b>`,
     `<button class="btn small" onclick="navigate('simulado')">▶ Iniciar simulado</button>`) +
+  onboardingCardHtml() +
   gamiCardHtml(gam) +
   `<div class="grid cols-4" style="margin-bottom:16px">
     <div class="card stat"><span class="num">${g.respondidasUnicas}/${g.totalBanco}</span><span class="lbl">questões exploradas do banco</span></div>
@@ -393,20 +502,20 @@ function renderSimulado() {
     <div class="aviso">Correção estilo CEBRASPE: <b>cada erro anula um acerto</b>; em branco não pontua. Use o botão "Em branco" estrategicamente, como faria na prova.</div>
   </div>`;
 }
-function iniciarSimulado() {
+async function iniciarSimulado() {
   const n = +$("#sim-n").value;
   const modo = $("#sim-modo").value;
   const filtros = { concurso: $("#sim-concurso").value || null, disciplina: $("#sim-disc").value || null };
   let questoes;
   if (modo === "revisao") {
     questoes = embaralhar(questoesDevidas()).slice(0, n);
-    if (!questoes.length) { alert("Nenhuma revisão devida no momento. Bom sinal! Use o modo adaptativo."); return; }
+    if (!questoes.length) { await mostrarAlerta("Nenhuma revisão devida no momento. Bom sinal! Use o modo adaptativo."); return; }
   } else if (modo === "erradas") {
     questoes = montarSimulado(n, { ...filtros, somenteErradas: true });
-    if (!questoes.length) { alert("Você ainda não tem questões erradas registradas com esses filtros."); return; }
+    if (!questoes.length) { await mostrarAlerta("Você ainda não tem questões erradas registradas com esses filtros."); return; }
   } else {
     questoes = montarSimulado(n, filtros);
-    if (!questoes.length) { alert("Nenhuma questão encontrada com esses filtros."); return; }
+    if (!questoes.length) { await mostrarAlerta("Nenhuma questão encontrada com esses filtros."); return; }
   }
   SIM = { questoes, idx: 0, respostas: [], inicio: Date.now(), finalizado: false };
   renderQuestaoSimulado();
@@ -529,7 +638,7 @@ function montarProva(n, filtros) {
   return pool.slice(0, Math.min(n, pool.length));
 }
 
-function iniciarProva() {
+async function iniciarProva() {
   const n = +$("#pv-n").value;
   const tempoSel = $("#pv-tempo").value;
   const filtros = {
@@ -537,8 +646,11 @@ function iniciarProva() {
     ocultarForaEdital: $("#pv-edital").checked,
   };
   const questoes = montarProva(n, filtros);
-  if (!questoes.length) { alert("Nenhuma questão encontrada com esses filtros."); return; }
-  if (questoes.length < n && !confirm(`Apenas ${questoes.length} questão(ões) encontradas com esses filtros (menos que as ${n} solicitadas). Iniciar a prova mesmo assim com ${questoes.length} questões?`)) return;
+  if (!questoes.length) { await mostrarAlerta("Nenhuma questão encontrada com esses filtros."); return; }
+  if (questoes.length < n) {
+    const ok = await mostrarConfirm(`Apenas ${questoes.length} questão(ões) encontradas com esses filtros (menos que as ${n} solicitadas). Iniciar a prova mesmo assim com ${questoes.length} questões?`, "Menos questões que o solicitado");
+    if (!ok) return;
+  }
   const duracaoSeg = tempoSel === "auto" ? Math.round(questoes.length * 150) : +tempoSel * 60;
   PROVA = {
     questoes, respostas: {}, marcadas: {}, tempoPorQ: {},
@@ -660,14 +772,15 @@ function provaIr(i) {
 }
 function provaNav(delta) { provaIr(Math.max(0, Math.min(PROVA.questoes.length - 1, PROVA.idx + delta))); }
 
-function finalizarProvaConfirm() {
+async function finalizarProvaConfirm() {
   const n = PROVA.questoes.length;
   const respondidas = Object.keys(PROVA.respostas).filter(k => PROVA.respostas[k] && PROVA.respostas[k] !== "B").length;
   const emAberto = n - Object.keys(PROVA.respostas).filter(k => PROVA.respostas[k]).length;
   const msg = emAberto > 0
     ? `Você ainda tem ${emAberto} questão(ões) sem nenhuma marcação (serão consideradas EM BRANCO). Finalizar mesmo assim?`
     : `Finalizar a prova? Você respondeu ${respondidas} questão(ões). A correção será exibida em seguida.`;
-  if (confirm(msg)) finalizarProva(false);
+  const ok = await mostrarConfirm(msg, "Finalizar prova");
+  if (ok) finalizarProva(false);
 }
 
 function finalizarProva(porTempo) {
@@ -1081,6 +1194,6 @@ function renderPerfil() {
   </div>
   <div style="font-size:12px;color:var(--muted);margin-top:14px">* Confiança calibrada: % de acerto nas questões em que você marcou confiança "alta". Abaixo de 85% indica excesso de confiança — o perfil de candidato que mais perde pontos líquidos no CEBRASPE.</div>
   <div style="margin-top:18px">
-    <button class="btn ghost small" onclick="if(confirm('Apagar todo o seu histórico de respostas e estatísticas? Esta ação não pode ser desfeita.')){resetarDados();navigate('perfil')}">🗑 Zerar meu histórico</button>
+    <button class="btn ghost small" onclick="confirmarResetarDados()">🗑 Zerar meu histórico</button>
   </div>`;
 }
