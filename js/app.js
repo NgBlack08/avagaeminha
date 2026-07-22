@@ -193,7 +193,7 @@ let bancoFiltros = {};
 function renderBanco() {
   const discs = listaDisciplinas();
   const assuntos = listaAssuntos(bancoFiltros.disciplina);
-  const lista = filtrarQuestoes(bancoFiltros);
+  const lista = embaralhar(filtrarQuestoes(bancoFiltros));
 
   MAIN().innerHTML = topbar("Banco Inteligente de Questões",
     `${QUESTOES.length} questões inéditas em estilo CEBRASPE · filtros combinados`,) +
@@ -308,6 +308,15 @@ function responder(qid, resposta) {
   const res = registrarResposta(qid, resposta, tempoMs, ui.confianca);
   const q = QUESTOES.find(x => x.id === qid);
 
+  /* Reinicia a contagem das demais questões ainda não respondidas —
+     evita que o tempo gasto nesta questão seja somado ao tempo
+     registrado nas próximas (relevante na listagem do Banco, onde
+     várias questões ficam visíveis e com o timer ativo ao mesmo tempo). */
+  const agora = Date.now();
+  for (const id in qUI) {
+    if (id !== qid && qUI[id] && !qUI[id].respondida) qUI[id].inicio = agora;
+  }
+
   /* revela destaques de palavras perigosas no enunciado */
   $("#qe-" + qid).innerHTML = highlightPerigos(q.enunciado);
   $("#qa-" + qid).style.display = "none";
@@ -390,13 +399,14 @@ function iniciarSimulado() {
   const filtros = { concurso: $("#sim-concurso").value || null, disciplina: $("#sim-disc").value || null };
   let questoes;
   if (modo === "revisao") {
-    questoes = questoesDevidas().slice(0, n);
+    questoes = embaralhar(questoesDevidas()).slice(0, n);
     if (!questoes.length) { alert("Nenhuma revisão devida no momento. Bom sinal! Use o modo adaptativo."); return; }
   } else if (modo === "erradas") {
     questoes = montarSimulado(n, { ...filtros, somenteErradas: true });
     if (!questoes.length) { alert("Você ainda não tem questões erradas registradas com esses filtros."); return; }
   } else {
     questoes = montarSimulado(n, filtros);
+    if (!questoes.length) { alert("Nenhuma questão encontrada com esses filtros."); return; }
   }
   SIM = { questoes, idx: 0, respostas: [], inicio: Date.now(), finalizado: false };
   renderQuestaoSimulado();
@@ -512,15 +522,11 @@ function renderProva() {
 }
 
 function montarProva(n, filtros) {
-  let pool = filtrarQuestoes(filtros || {});
-  if (pool.length < n) pool = filtrarQuestoes({ ocultarForaEdital: filtros.ocultarForaEdital });
-  /* embaralha (Fisher–Yates) para uma seleção representativa, não adaptativa */
-  const arr = pool.slice();
-  for (let i = arr.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [arr[i], arr[j]] = [arr[j], arr[i]];
-  }
-  return arr.slice(0, Math.min(n, arr.length));
+  /* O filtro é sempre respeitado — se houver menos questões que o
+     solicitado dentro do filtro, a prova sai menor, nunca completada
+     com questões fora do filtro escolhido. */
+  const pool = embaralhar(filtrarQuestoes(filtros || {}));
+  return pool.slice(0, Math.min(n, pool.length));
 }
 
 function iniciarProva() {
@@ -532,6 +538,7 @@ function iniciarProva() {
   };
   const questoes = montarProva(n, filtros);
   if (!questoes.length) { alert("Nenhuma questão encontrada com esses filtros."); return; }
+  if (questoes.length < n && !confirm(`Apenas ${questoes.length} questão(ões) encontradas com esses filtros (menos que as ${n} solicitadas). Iniciar a prova mesmo assim com ${questoes.length} questões?`)) return;
   const duracaoSeg = tempoSel === "auto" ? Math.round(questoes.length * 150) : +tempoSel * 60;
   PROVA = {
     questoes, respostas: {}, marcadas: {}, tempoPorQ: {},

@@ -268,14 +268,27 @@ function pesoAdaptativo(q, ctx) {
   return Math.max(w, 0.1);
 }
 
+/* Fisher–Yates: garante que toda geração de questões saia em ordem
+   diferente, nunca repetindo a ordem de inserção do banco. */
+function embaralhar(arr) {
+  const a = arr.slice();
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
+/* O filtro é sempre respeitado: se não houver questões suficientes (ou
+   nenhuma) dentro do filtro escolhido, o resultado vem menor (ou vazio) —
+   nunca se recorre ao banco inteiro para completar a quantidade pedida. */
 function montarSimulado(n, filtros) {
-  let pool = filtrarQuestoes(filtros || {});
-  if (!pool.length) pool = [...QUESTOES];
+  const pool = embaralhar(filtrarQuestoes(filtros || {}));
   const ctx = statsGerais();
   const pesos = pool.map(q => pesoAdaptativo(q, ctx));
   const escolhidas = [];
   const poolCopy = [...pool], pesosCopy = [...pesos];
-  while (escolhidas.length < Math.min(n, poolCopy.length + escolhidas.length) && poolCopy.length) {
+  while (escolhidas.length < n && poolCopy.length) {
     const total = pesosCopy.reduce((a, b) => a + b, 0);
     let r = Math.random() * total;
     let idx = 0;
