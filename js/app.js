@@ -11,6 +11,7 @@ const VIEWS = [
   { id: "dashboard",  nome: "Dashboard",             ico: "◧" },
   { id: "banco",      nome: "Banco de Questões",     ico: "▤" },
   { id: "simulado",   nome: "Simulado Adaptativo",   ico: "▶" },
+  { id: "prova",      nome: "Modo Prova",            ico: "◈" },
   { id: "raiox",      nome: "Raio-X da Banca",       ico: "◉" },
   { id: "pegadinhas", nome: "Detector de Pegadinhas",ico: "⚠" },
   { id: "predicao",   nome: "Predição de Cobrança",  ico: "↗" },
@@ -19,7 +20,8 @@ const VIEWS = [
 ];
 
 let currentView = "dashboard";
-let SIM = null; /* estado do simulado em andamento */
+let SIM = null; /* estado do simulado adaptativo em andamento */
+let PROVA = null; /* estado do Modo Prova em andamento */
 
 /* ============ Bootstrap ============ */
 document.addEventListener("DOMContentLoaded", () => {
@@ -38,11 +40,11 @@ function renderSidebar() {
   const nav = $("#nav");
   nav.innerHTML =
     '<div class="nav-sep">Treinamento</div>' +
-    VIEWS.slice(0, 3).map(navBtn).join("") +
+    VIEWS.slice(0, 4).map(navBtn).join("") +
     '<div class="nav-sep">Inteligência</div>' +
-    VIEWS.slice(3, 7).map(navBtn).join("") +
+    VIEWS.slice(4, 8).map(navBtn).join("") +
     '<div class="nav-sep">Você</div>' +
-    VIEWS.slice(7).map(navBtn).join("");
+    VIEWS.slice(8).map(navBtn).join("");
   const acct = $("#acct");
   if (acct && CURRENT_USER) {
     acct.innerHTML = `<div style="color:var(--text)">👤 ${escapeHtml(CURRENT_USER.email)}</div><button class="btn ghost small" style="margin-top:6px;width:100%" onclick="sair()">Sair</button>`;
@@ -54,13 +56,19 @@ function navBtn(v) {
 }
 
 function navigate(view) {
+  /* Proteção: sair de uma prova em andamento encerra e corrige. */
+  if (PROVA && !PROVA.finalizada && view !== "prova") {
+    if (!confirm("Você está com uma prova em andamento. Sair agora vai ENCERRAR e corrigir a prova. Deseja sair?")) return;
+    pararTimerProva();
+    PROVA = null;
+  }
   currentView = view;
   renderSidebar();
   closeSidebar();
   const fn = {
     dashboard: renderDashboard, banco: renderBanco, simulado: renderSimulado,
-    raiox: renderRaioX, pegadinhas: renderPegadinhas, predicao: renderPredicao,
-    estrategias: renderEstrategias, perfil: renderPerfil,
+    prova: renderProva, raiox: renderRaioX, pegadinhas: renderPegadinhas,
+    predicao: renderPredicao, estrategias: renderEstrategias, perfil: renderPerfil,
   }[view];
   fn();
   window.scrollTo(0, 0);
@@ -425,6 +433,349 @@ function finalizarSimulado() {
     <button class="btn ghost" onclick="SIM=null;navigate('perfil')">Ver meu perfil →</button>
   </div>`;
   SIM = null;
+}
+
+/* ================================================================
+   MODO PROVA — simulado em condições reais de prova (ENEM Digital)
+   Cronômetro global · navegação livre · sem gabarito até o fim ·
+   correção em lote · relatório de tempo e gestão do branco.
+   ================================================================ */
+let provaTimerInterval = null;
+
+function renderProva() {
+  if (PROVA && !PROVA.finalizada) { renderProvaRunner(); return; }
+  const discs = listaDisciplinas();
+  MAIN().innerHTML = topbar("Modo Prova",
+    "Simulado em condições reais: cronômetro correndo, navegação livre e correção só no final — como na prova de verdade.") +
+  `<div class="card sim-setup">
+    <h3>◈ Configurar prova</h3>
+    <div class="opts">
+      <label class="f">Número de questões<select id="pv-n">
+        <option value="10">10 questões</option>
+        <option value="20" selected>20 questões</option>
+        <option value="30">30 questões</option>
+        <option value="50">50 questões</option>
+        <option value="120">120 (prova completa)</option>
+      </select></label>
+      <label class="f">Tempo de prova<select id="pv-tempo">
+        <option value="auto" selected>Automático (≈2,5 min/questão)</option>
+        <option value="30">30 minutos</option>
+        <option value="60">1 hora</option>
+        <option value="120">2 horas</option>
+        <option value="180">3 horas</option>
+        <option value="240">4 horas</option>
+      </select></label>
+      <label class="f">Disciplina<select id="pv-disc">
+        <option value="">Todas (mistura balanceada)</option>
+        ${discs.map(d => `<option>${escapeHtml(d)}</option>`).join("")}
+      </select></label>
+      <label class="check" style="align-self:end"><input type="checkbox" id="pv-edital" checked> só conteúdo do edital PC-AL 2026</label>
+    </div>
+    <button class="btn" onclick="iniciarProva()">◈ Iniciar prova</button>
+    <div class="aviso">
+      <b>Regras da prova:</b> o cronômetro não para; você navega livremente e pode marcar questões para revisar;
+      <b>não há gabarito nem comentário até você finalizar</b>. Correção estilo CEBRASPE (cada erro anula um acerto;
+      em branco não pontua). Ao esgotar o tempo, a prova é entregue automaticamente.
+    </div>
+  </div>`;
+}
+
+function montarProva(n, filtros) {
+  let pool = filtrarQuestoes(filtros || {});
+  if (pool.length < n) pool = filtrarQuestoes({ ocultarForaEdital: filtros.ocultarForaEdital });
+  /* embaralha (Fisher–Yates) para uma seleção representativa, não adaptativa */
+  const arr = pool.slice();
+  for (let i = arr.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+  }
+  return arr.slice(0, Math.min(n, arr.length));
+}
+
+function iniciarProva() {
+  const n = +$("#pv-n").value;
+  const tempoSel = $("#pv-tempo").value;
+  const filtros = {
+    disciplina: $("#pv-disc").value || null,
+    ocultarForaEdital: $("#pv-edital").checked,
+  };
+  const questoes = montarProva(n, filtros);
+  if (!questoes.length) { alert("Nenhuma questão encontrada com esses filtros."); return; }
+  const duracaoSeg = tempoSel === "auto" ? Math.round(questoes.length * 150) : +tempoSel * 60;
+  PROVA = {
+    questoes, respostas: {}, marcadas: {}, tempoPorQ: {},
+    idx: 0, inicio: Date.now(), fim: Date.now() + duracaoSeg * 1000,
+    duracaoSeg, desde: Date.now(), finalizada: false,
+  };
+  renderProvaRunner();
+  iniciarTimerProva();
+}
+
+function iniciarTimerProva() {
+  pararTimerProva();
+  provaTimerInterval = setInterval(() => {
+    const restante = Math.round((PROVA.fim - Date.now()) / 1000);
+    const el = $("#pv-timer");
+    if (!el) return;
+    if (restante <= 0) { atualizarTimerProva(0); finalizarProva(true); return; }
+    atualizarTimerProva(restante);
+  }, 1000);
+}
+function pararTimerProva() { if (provaTimerInterval) { clearInterval(provaTimerInterval); provaTimerInterval = null; } }
+function atualizarTimerProva(restante) {
+  const el = $("#pv-timer"); if (!el) return;
+  const h = Math.floor(restante / 3600), m = Math.floor((restante % 3600) / 60), s = restante % 60;
+  el.textContent = (h ? h + ":" : "") + String(m).padStart(h ? 2 : 1, "0") + ":" + String(s).padStart(2, "0");
+  el.classList.toggle("urgent", restante <= 300); /* últimos 5 min */
+}
+
+function provaAcumularTempo() {
+  if (!PROVA) return;
+  const q = PROVA.questoes[PROVA.idx];
+  PROVA.tempoPorQ[q.id] = (PROVA.tempoPorQ[q.id] || 0) + (Date.now() - PROVA.desde);
+  PROVA.desde = Date.now();
+}
+
+function renderProvaRunner() {
+  const q = PROVA.questoes[PROVA.idx];
+  const n = PROVA.questoes.length;
+  const respondidas = Object.keys(PROVA.respostas).filter(k => PROVA.respostas[k]).length;
+  const restanteSeg = Math.max(0, Math.round((PROVA.fim - Date.now()) / 1000));
+
+  /* paleta de navegação (estilo ENEM Digital) */
+  const palette = PROVA.questoes.map((qq, i) => {
+    const resp = PROVA.respostas[qq.id];
+    const cls = ["q-pal"];
+    if (i === PROVA.idx) cls.push("cur");
+    if (resp) cls.push("done");
+    if (PROVA.marcadas[qq.id]) cls.push("mark");
+    return `<button class="${cls.join(" ")}" onclick="provaIr(${i})" title="Questão ${i + 1}${resp ? " · respondida" : ""}${PROVA.marcadas[qq.id] ? " · marcada" : ""}">${i + 1}</button>`;
+  }).join("");
+
+  const sel = PROVA.respostas[q.id] || null;
+  const btn = (val, label, cls) =>
+    `<button class="btn ${cls} ${sel === val ? "" : "ghost"}" style="${sel && sel !== val ? "opacity:.55" : ""}" onclick="provaResp('${q.id}','${val}')">${label}</button>`;
+
+  MAIN().innerHTML = `
+  <div class="prova-bar">
+    <div class="pv-meta">
+      <span class="tag accent">Questão ${PROVA.idx + 1} / ${n}</span>
+      <span class="tag">${respondidas} respondidas · ${n - respondidas} em aberto</span>
+    </div>
+    <div class="pv-timerwrap">
+      <span class="pv-timerlbl">⏱ tempo restante</span>
+      <span class="pv-timer" id="pv-timer">–</span>
+    </div>
+    <button class="btn small" onclick="finalizarProvaConfirm()">Finalizar prova</button>
+  </div>
+  <div class="sim-progress" style="margin-top:14px"><i style="width:${(respondidas / n) * 100}%"></i></div>
+
+  <div class="prova-layout">
+    <aside class="card q-palette-card">
+      <div class="q-palette-legend">
+        <span><i class="lg-done"></i>respondida</span>
+        <span><i class="lg-mark"></i>marcada</span>
+        <span><i class="lg-cur"></i>atual</span>
+      </div>
+      <div class="q-palette">${palette}</div>
+    </aside>
+
+    <div class="card q-card" style="margin:0">
+      <div class="q-head">
+        <span class="tag accent">${q.id}</span>
+        <span class="tag">${escapeHtml(q.disciplina)}</span>
+        <span class="tag">${escapeHtml(q.assunto)}</span>
+        <span class="tag diff">${"●".repeat(q.dificuldade) + "○".repeat(3 - q.dificuldade)}</span>
+        <button class="btn ghost small" style="margin-left:auto" onclick="provaMarcar('${q.id}')">
+          ${PROVA.marcadas[q.id] ? "★ Marcada" : "☆ Marcar p/ revisar"}</button>
+      </div>
+      ${q.textoApoio ? `<div class="q-texto-apoio">${escapeHtml(q.textoApoio)}</div>` : ""}
+      <div class="q-enunciado">${escapeHtml(q.enunciado)}</div>
+      <div class="q-actions">
+        ${btn("C", "CERTO", "ok")}
+        ${btn("E", "ERRADO", "bad")}
+        ${btn("B", "Em branco", "")}
+        ${sel ? '<span class="tag ok" style="margin-left:4px">resposta registrada</span>' : '<span class="tag" style="margin-left:4px">sem resposta</span>'}
+      </div>
+      <div class="prova-nav">
+        <button class="btn ghost small" ${PROVA.idx === 0 ? "disabled" : ""} onclick="provaNav(-1)">← Anterior</button>
+        <button class="btn ghost small" ${PROVA.idx >= n - 1 ? "disabled" : ""} onclick="provaNav(1)">Próxima →</button>
+      </div>
+    </div>
+  </div>`;
+  atualizarTimerProva(restanteSeg);
+}
+
+function provaResp(qid, val) {
+  PROVA.respostas[qid] = val;
+  renderProvaRunner(); /* re-render para atualizar seleção e paleta */
+}
+function provaMarcar(qid) {
+  PROVA.marcadas[qid] = !PROVA.marcadas[qid];
+  renderProvaRunner();
+}
+function provaIr(i) {
+  provaAcumularTempo();
+  PROVA.idx = i;
+  renderProvaRunner();
+  window.scrollTo(0, 0);
+}
+function provaNav(delta) { provaIr(Math.max(0, Math.min(PROVA.questoes.length - 1, PROVA.idx + delta))); }
+
+function finalizarProvaConfirm() {
+  const n = PROVA.questoes.length;
+  const respondidas = Object.keys(PROVA.respostas).filter(k => PROVA.respostas[k] && PROVA.respostas[k] !== "B").length;
+  const emAberto = n - Object.keys(PROVA.respostas).filter(k => PROVA.respostas[k]).length;
+  const msg = emAberto > 0
+    ? `Você ainda tem ${emAberto} questão(ões) sem nenhuma marcação (serão consideradas EM BRANCO). Finalizar mesmo assim?`
+    : `Finalizar a prova? Você respondeu ${respondidas} questão(ões). A correção será exibida em seguida.`;
+  if (confirm(msg)) finalizarProva(false);
+}
+
+function finalizarProva(porTempo) {
+  provaAcumularTempo();
+  pararTimerProva();
+  PROVA.finalizada = true;
+  const tempoTotal = Math.min(PROVA.duracaoSeg, Math.round((Date.now() - PROVA.inicio) / 1000));
+
+  /* correção em lote — registra cada resposta (alimenta stats/SRS/nuvem) */
+  const detalhe = PROVA.questoes.map(q => {
+    const resp = PROVA.respostas[q.id] || "B";
+    const tempoMs = PROVA.tempoPorQ[q.id] || 0;
+    const res = registrarResposta(q.id, resp, tempoMs, null);
+    return { q, resp, correta: res.correta, gabarito: res.gabarito, branco: resp === "B", tempoMs };
+  });
+
+  const acertos = detalhe.filter(d => !d.branco && d.correta).length;
+  const erros = detalhe.filter(d => !d.branco && !d.correta).length;
+  const brancos = detalhe.filter(d => d.branco).length;
+  const liquida = acertos - erros;
+  const taxa = (acertos + erros) ? acertos / (acertos + erros) : 0;
+  registrarSessao({ data: Date.now(), n: detalhe.length, acertos, erros, brancos, liquida, tempoTotal });
+
+  renderProvaResultado({ detalhe, acertos, erros, brancos, liquida, taxa, tempoTotal, porTempo });
+}
+
+function renderProvaResultado(r) {
+  const { detalhe, acertos, erros, brancos, liquida, taxa, tempoTotal, porTempo } = r;
+  const n = detalhe.length;
+
+  /* desempenho por disciplina */
+  const porDisc = {};
+  for (const d of detalhe) {
+    if (!porDisc[d.q.disciplina]) porDisc[d.q.disciplina] = { a: 0, e: 0, b: 0 };
+    if (d.branco) porDisc[d.q.disciplina].b++;
+    else (d.correta ? porDisc[d.q.disciplina].a++ : porDisc[d.q.disciplina].e++);
+  }
+  const discData = Object.entries(porDisc).map(([disc, v]) => ({
+    label: disc, value: (v.a + v.e) ? Math.round(100 * v.a / (v.a + v.e)) : 0,
+    display: `${v.a}✔ ${v.e}✖ ${v.b}⊘`,
+    color: (v.a + v.e) && v.a / (v.a + v.e) >= .7 ? "#10b981" : (v.a + v.e) === 0 ? "#94a3b8" : "#ef4444",
+  })).sort((a, b) => b.value - a.value);
+
+  /* análise de tempo: questões que "comeram" mais tempo que o ideal */
+  const tempoIdealTotal = detalhe.reduce((s, d) => s + d.q.tempoIdealSeg, 0);
+  const sinks = detalhe.filter(d => d.tempoMs / 1000 > d.q.tempoIdealSeg * 1.5)
+    .sort((a, b) => b.tempoMs - a.tempoMs).slice(0, 5);
+  const mmss = seg => `${Math.floor(seg / 60)}min ${Math.round(seg % 60)}s`;
+
+  MAIN().innerHTML = topbar("Resultado da Prova",
+    `${porTempo ? "⏱ Tempo esgotado — prova entregue automaticamente. " : ""}Correção estilo CEBRASPE (1 líquida)`) +
+  `<div class="grid cols-4" style="margin-bottom:16px">
+    <div class="card stat"><span class="num ok">${acertos}</span><span class="lbl">acertos</span></div>
+    <div class="card stat"><span class="num bad">${erros}</span><span class="lbl">erros (cada um anula 1 acerto)</span></div>
+    <div class="card stat"><span class="num">${brancos}</span><span class="lbl">em branco</span></div>
+    <div class="card stat"><span class="num ${liquida > 0 ? "ok" : liquida < 0 ? "bad" : ""}">${liquida > 0 ? "+" : ""}${liquida}</span><span class="lbl">pontuação líquida</span></div>
+  </div>
+
+  <div class="grid cols-2">
+    <div class="card">
+      <h3>🎯 Aproveitamento</h3>
+      <div style="display:flex;justify-content:center">${chartGauge(taxa * 100, { sub: "% de acerto" })}</div>
+      <div style="text-align:center;color:var(--muted);font-size:13px;margin-top:4px">
+        Você acertou <b>${acertos}</b> de <b>${acertos + erros}</b> questões respondidas${brancos ? ` (${brancos} em branco)` : ""}.
+      </div>
+    </div>
+    <div class="card"><h3>📊 Desempenho por disciplina</h3><div class="chart-scroll">${discData.length ? chartHBar(discData, { max: 100 }) : "<div class='empty'>—</div>"}</div></div>
+  </div>
+
+  <div class="grid cols-2" style="margin-top:16px">
+    <div class="card">
+      <h3>⏱ Gestão do tempo</h3>
+      <div class="radar-linha">Tempo usado<span class="pct">${mmss(tempoTotal)}</span></div>
+      <div class="radar-linha">Tempo ideal estimado<span class="pct">${mmss(tempoIdealTotal)}</span></div>
+      <div class="radar-linha">Média por questão<span class="pct">${Math.round(tempoTotal / Math.max(n, 1))}s</span></div>
+      ${sinks.length ? `<div style="margin-top:10px;font-size:12.5px;color:var(--muted)">Questões que mais consumiram tempo:</div>
+        ${sinks.map(d => `<div class="radar-linha" style="font-size:13px">${d.q.id} · ${escapeHtml(d.q.disciplina)}
+          <span class="pct ${d.branco ? "" : d.correta ? "" : ""}" style="color:${d.correta && !d.branco ? "var(--ok)" : d.branco ? "var(--muted)" : "var(--bad)"}">${Math.round(d.tempoMs / 1000)}s ${d.branco ? "⊘" : d.correta ? "✔" : "✖"}</span></div>`).join("")}`
+        : `<div style="margin-top:10px;font-size:13px;color:var(--ok)">✔ Bom controle: nenhuma questão passou muito do tempo ideal.</div>`}
+    </div>
+    <div class="card">
+      <h3>🎲 Gestão do branco (1 líquida)</h3>
+      <p style="font-size:13.5px;color:var(--muted);margin-bottom:10px">No CEBRASPE, cada erro anula um acerto. Deixar em branco quando não se tem convicção protege a nota.</p>
+      <div class="radar-linha">Se tivesse chutado tudo (0 branco)<span class="pct">líquida seria pior a cada erro</span></div>
+      <div class="radar-linha">Sua líquida atual<span class="pct ${liquida >= 0 ? "" : ""}" style="color:${liquida > 0 ? "var(--ok)" : liquida < 0 ? "var(--bad)" : "var(--muted)"}">${liquida > 0 ? "+" : ""}${liquida}</span></div>
+      <div class="radar-linha">Custo dos ${erros} erro(s)<span class="pct" style="color:var(--bad)">−${erros}</span></div>
+      <div class="aviso" style="margin-top:12px">
+        ${erros > brancos && erros > 0
+          ? `Você errou mais (${erros}) do que deixou em branco (${brancos}). Sem esses erros, sua líquida seria <b>+${acertos}</b>. Considere deixar em branco quando não conseguir reduzir o 50/50 com os padrões da banca.`
+          : erros === 0
+          ? `Excelente controle de risco: <b>zero erros</b>. ${brancos ? "Avalie se alguns brancos eram recuperáveis com as técnicas do Detector de Pegadinhas." : "Aproveitamento máximo."}`
+          : `Boa gestão: você deixou em branco (${brancos}) mais do que errou (${erros}), protegendo a líquida.`}
+      </div>
+    </div>
+  </div>
+
+  <div style="margin-top:18px;display:flex;gap:10px;flex-wrap:wrap">
+    <button class="btn" onclick="PROVA=null;renderProva()">◈ Nova prova</button>
+    <button class="btn ghost" onclick="document.getElementById('pv-review').scrollIntoView({behavior:'smooth'})">Revisar questões ↓</button>
+    <button class="btn ghost" onclick="PROVA=null;navigate('perfil')">Ver meu perfil →</button>
+  </div>
+
+  <h3 id="pv-review" style="margin:26px 0 12px;font-size:17px;font-weight:700">📖 Gabarito comentado (${n} questões)</h3>
+  ${detalhe.map((d, i) => provaRevisaoHtml(d, i)).join("")}`;
+
+  PROVA = null; /* prova concluída; estado liberado (relatório já renderizado) */
+  window.scrollTo(0, 0);
+}
+
+function provaRevisaoHtml(d, i) {
+  const q = d.q, c = q.comentario, cog = q.cognitivo;
+  const dna = DNA_BANCA.find(x => x.slug === q.pegadinha);
+  const gabTxt = d.gabarito === "C" ? "CERTO" : "ERRADO";
+  const suaTxt = d.branco ? "Em branco" : (d.resp === "C" ? "CERTO" : "ERRADO");
+  const cls = d.branco ? "neutro" : d.correta ? "ok" : "bad";
+  const icone = d.branco ? "⊘" : d.correta ? "✔" : "✖";
+  return `<div class="card q-card">
+    <div class="q-head">
+      <span class="tag ${cls === "ok" ? "ok" : cls === "bad" ? "bad" : ""}">${i + 1} · ${icone}</span>
+      <span class="tag accent">${q.id}</span>
+      <span class="tag">${escapeHtml(q.disciplina)}</span>
+      <span class="tag">${escapeHtml(q.assunto)}</span>
+      <span class="tag" title="seu tempo nesta questão">⏱ ${Math.round(d.tempoMs / 1000)}s</span>
+    </div>
+    ${q.textoApoio ? `<div class="q-texto-apoio">${escapeHtml(q.textoApoio)}</div>` : ""}
+    <div class="q-enunciado">${highlightPerigos(q.enunciado)}</div>
+    <div class="resultado ${cls}">
+      Sua resposta: <b>${suaTxt}</b> · Gabarito: <b>${gabTxt}</b>${d.branco ? " (em branco não pontua nem desconta)" : d.correta ? " — você acertou" : " — este erro anulou um acerto"}
+    </div>
+    <div class="comentario">
+      <div class="bloco"><b>Resolução</b>${escapeHtml(c.resolucao)}</div>
+      <div class="bloco"><b>Fundamento legal</b>${escapeHtml(c.fundamento)}</div>
+      ${c.jurisprudencia ? `<div class="bloco"><b>Jurisprudência</b>${escapeHtml(c.jurisprudencia)}</div>` : ""}
+      <div class="bloco"><b>Macete</b>${escapeHtml(c.macete)}</div>
+      <div class="bloco"><b>Como a banca pensa</b>${escapeHtml(c.comoBancaPensa)}</div>
+      ${dna ? `<div class="bloco"><b>Padrão detectado: ${escapeHtml(dna.nome)} (incidência ${dna.incidencia}%)</b>${escapeHtml(dna.gatilho)}</div>` : ""}
+    </div>
+    <details class="cog"><summary>🧠 Engenharia cognitiva</summary>
+      <div class="cog-grid">
+        <div class="item"><b>Pegadinha</b>${escapeHtml(cog.pegadinhaDesc)}</div>
+        <div class="item"><b>Palavra que muda tudo</b>${escapeHtml(cog.palavraCritica)}</div>
+        <div class="item"><b>Técnica</b>${escapeHtml(cog.tecnica)}</div>
+        <div class="item"><b>Regra mental</b>${escapeHtml(cog.regraMental)}</div>
+      </div>
+    </details>
+  </div>`;
 }
 
 /* ================================================================
