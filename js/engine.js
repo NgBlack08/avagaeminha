@@ -359,3 +359,150 @@ function resetarDados() {
     saveLocalState();
   }
 }
+
+/* ---------------- Gamificação ----------------
+   Camada inteiramente calculada a partir de respostas/sessões já
+   persistidas — nenhuma tabela nova no Supabase, nenhum novo estado
+   para sincronizar. XP, patente, sequência de dias, meta semanal e
+   conquistas são recalculados a cada leitura. */
+const PATENTES = [
+  { nome: "Recruta",              xp: 0 },
+  { nome: "Soldado",               xp: 100 },
+  { nome: "Cabo",                  xp: 250 },
+  { nome: "3º Sargento",           xp: 450 },
+  { nome: "2º Sargento",           xp: 700 },
+  { nome: "1º Sargento",           xp: 1000 },
+  { nome: "Subtenente",            xp: 1400 },
+  { nome: "Aspirante a Oficial",   xp: 1900 },
+  { nome: "2º Tenente",            xp: 2500 },
+  { nome: "1º Tenente",            xp: 3200 },
+  { nome: "Capitão",               xp: 4000 },
+  { nome: "Major",                 xp: 5000 },
+  { nome: "Tenente-Coronel",       xp: 6200 },
+  { nome: "Coronel",               xp: 7600 },
+  { nome: "Delegado-Geral",        xp: 9200 },
+];
+
+const META_SEMANAL_QUESTOES = 100;
+
+function calcularXP() {
+  let xp = 0;
+  for (const qid in APP_STATE.respostas) {
+    for (const h of APP_STATE.respostas[qid]) {
+      if (h.branco) xp += 1;
+      else if (h.correta) xp += 10;
+      else xp += 3;
+    }
+  }
+  for (const s of APP_STATE.sessoes) xp += 25 + Math.max(0, s.liquida) * 2;
+  return xp;
+}
+
+function nivelAtual(xp) {
+  let idx = 0;
+  for (let i = 0; i < PATENTES.length; i++) if (xp >= PATENTES[i].xp) idx = i;
+  const atual = PATENTES[idx];
+  const prox = PATENTES[idx + 1] || null;
+  const pct = prox ? Math.round(((xp - atual.xp) / (prox.xp - atual.xp)) * 100) : 100;
+  return { indice: idx, nome: atual.nome, xp, xpAtual: atual.xp,
+    xpProximo: prox ? prox.xp : null, proximoNome: prox ? prox.nome : null, pct };
+}
+
+/* Sequência de dias com pelo menos uma resposta registrada. */
+function calcularStreak() {
+  const dias = new Set();
+  for (const qid in APP_STATE.respostas) {
+    for (const h of APP_STATE.respostas[qid]) dias.add(new Date(h.data).toISOString().slice(0, 10));
+  }
+  const lista = [...dias].sort();
+  if (!lista.length) return { atual: 0, recorde: 0, ultimoDia: null };
+  let recorde = 1, corrente = 1;
+  for (let i = 1; i < lista.length; i++) {
+    const diff = Math.round((new Date(lista[i]) - new Date(lista[i - 1])) / 864e5);
+    corrente = diff === 1 ? corrente + 1 : 1;
+    recorde = Math.max(recorde, corrente);
+  }
+  const hoje = new Date().toISOString().slice(0, 10);
+  const ontem = new Date(Date.now() - 864e5).toISOString().slice(0, 10);
+  const ultimoDia = lista[lista.length - 1];
+  let atual = 0;
+  if (ultimoDia === hoje || ultimoDia === ontem) {
+    atual = 1;
+    for (let i = lista.length - 1; i > 0; i--) {
+      const diff = Math.round((new Date(lista[i]) - new Date(lista[i - 1])) / 864e5);
+      if (diff === 1) atual++; else break;
+    }
+  }
+  return { atual, recorde, ultimoDia };
+}
+
+/* Progresso na semana corrente (segunda 00h → agora). */
+function calcularMetaSemanal() {
+  const agora = new Date();
+  const diaSemana = (agora.getDay() + 6) % 7; /* 0 = segunda */
+  const inicioSemana = new Date(agora);
+  inicioSemana.setHours(0, 0, 0, 0);
+  inicioSemana.setDate(inicioSemana.getDate() - diaSemana);
+  let n = 0;
+  for (const qid in APP_STATE.respostas) {
+    for (const h of APP_STATE.respostas[qid]) if (h.data >= inicioSemana.getTime()) n++;
+  }
+  return { respondidas: n, meta: META_SEMANAL_QUESTOES, pct: Math.min(100, Math.round(n / META_SEMANAL_QUESTOES * 100)) };
+}
+
+const CONQUISTAS = [
+  { id: "primeiro-passo", nome: "Primeiro Passo", icone: "🎯", desc: "Responda sua primeira questão.",
+    condicao: c => c.totalRespondidas >= 1 },
+  { id: "recruta-dedicado", nome: "Recruta Dedicado", icone: "📘", desc: "Responda 50 questões.",
+    condicao: c => c.totalRespondidas >= 50 },
+  { id: "maratonista", nome: "Maratonista", icone: "🏃", desc: "Responda 500 questões.",
+    condicao: c => c.totalRespondidas >= 500 },
+  { id: "veterano", nome: "Veterano de Guerra", icone: "🎖️", desc: "Responda 1.500 questões.",
+    condicao: c => c.totalRespondidas >= 1500 },
+  { id: "sequencia-7", nome: "Sequência de Ferro", icone: "🔥", desc: "Estude 7 dias seguidos.",
+    condicao: c => c.streak.recorde >= 7 },
+  { id: "sequencia-30", nome: "Sequência Lendária", icone: "⚡", desc: "Estude 30 dias seguidos.",
+    condicao: c => c.streak.recorde >= 30 },
+  { id: "batismo-fogo", nome: "Batismo de Fogo", icone: "🚔", desc: "Conclua seu primeiro simulado ou Modo Prova.",
+    condicao: c => c.sessoes.length >= 1 },
+  { id: "rotina-aprovado", nome: "Rotina de Aprovado", icone: "📋", desc: "Conclua 10 simulados ou provas.",
+    condicao: c => c.sessoes.length >= 10 },
+  { id: "gestao-branco", nome: "Gestão de Branco", icone: "🧊", desc: "Conclua um simulado com 10+ questões sem deixar nenhuma em branco.",
+    condicao: c => c.sessoes.some(s => s.n >= 10 && s.brancos === 0) },
+  { id: "nota-mil", nome: "Nota Mil", icone: "💯", desc: "Acerte todas as questões de um simulado com 10 ou mais itens.",
+    condicao: c => c.sessoes.some(s => s.n >= 10 && s.erros === 0 && s.brancos === 0) },
+  { id: "mira-certeira", nome: "Mira Certeira", icone: "🏆", desc: "Atinja 90% de acerto geral com 50+ questões respondidas.",
+    condicao: c => c.taxaGeral !== null && c.taxaGeral >= 0.9 && c.totalRespondidas >= 50 },
+  { id: "especialista", nome: "Especialista de Disciplina", icone: "🧠", desc: "Domine uma disciplina com 85%+ de acerto em 20+ questões.",
+    condicao: c => c.disciplinasEspecialista >= 1 },
+  { id: "coruja", nome: "Coruja da Delegacia", icone: "🦉", desc: "Responda uma questão entre 0h e 5h da manhã.",
+    condicao: c => c.temRespostaMadrugada },
+];
+
+function calcularConquistas() {
+  const g = statsGerais();
+  const streak = calcularStreak();
+  const totalRespondidas = g.acertos + g.erros + g.brancos;
+  let temRespostaMadrugada = false;
+  for (const qid in APP_STATE.respostas) {
+    for (const h of APP_STATE.respostas[qid]) {
+      const hora = new Date(h.data).getHours();
+      if (hora >= 0 && hora < 5) temRespostaMadrugada = true;
+    }
+  }
+  const disciplinasEspecialista = statsPorDisciplina()
+    .filter(d => d.taxa !== null && d.taxa >= 0.85 && (d.acertos + d.erros) >= 20).length;
+  const ctx = { totalRespondidas, taxaGeral: g.taxa, streak, sessoes: APP_STATE.sessoes, disciplinasEspecialista, temRespostaMadrugada };
+  return CONQUISTAS.map(a => ({ id: a.id, nome: a.nome, icone: a.icone, desc: a.desc, desbloqueada: !!a.condicao(ctx) }));
+}
+
+/* API pública consumida pela interface. */
+function gamificacao() {
+  const xp = calcularXP();
+  const nivel = nivelAtual(xp);
+  const streak = calcularStreak();
+  const semana = calcularMetaSemanal();
+  const conquistas = calcularConquistas();
+  return { nivel, streak, semana, conquistas,
+    desbloqueadas: conquistas.filter(c => c.desbloqueada).length, totalConquistas: conquistas.length };
+}

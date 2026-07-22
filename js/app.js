@@ -94,6 +94,35 @@ function topbar(titulo, sub, actionsHtml) {
 const AVISO_ESTATISTICO = `<div class="aviso">⚠ As probabilidades e índices exibidos são <b>estimativas estatísticas</b> baseadas em frequência histórica, tendências legislativas e perfil da banca — não constituem garantia sobre o conteúdo de provas futuras.</div>`;
 
 /* ================================================================
+   GAMIFICAÇÃO — camada de engajamento (XP, patente, sequência, metas)
+   ================================================================ */
+function gamiCardHtml(gam) {
+  const { nivel, streak, semana, conquistas } = gam;
+  return `<div class="card gami-card" style="margin-bottom:16px">
+    <div class="gami-top">
+      <div class="gami-patente">
+        <div class="gami-badge">🎖️</div>
+        <div>
+          <div class="gami-nome">${escapeHtml(nivel.nome)}</div>
+          <div class="gami-xp">${nivel.xp} XP${nivel.proximoNome ? ` · faltam ${nivel.xpProximo - nivel.xp} XP para ${escapeHtml(nivel.proximoNome)}` : " · patente máxima atingida"}</div>
+        </div>
+      </div>
+      <div class="gami-streak ${streak.atual > 0 ? "on" : ""}">🔥 <b>${streak.atual}</b> dia(s) em sequência <span class="hint">recorde: ${streak.recorde}</span></div>
+    </div>
+    <div class="gami-bar"><i style="width:${nivel.pct}%"></i></div>
+    <div class="gami-bottom">
+      <div class="gami-meta">
+        <div class="gami-meta-lbl">Meta semanal: ${semana.respondidas}/${semana.meta} questões</div>
+        <div class="gami-bar small"><i style="width:${semana.pct}%"></i></div>
+      </div>
+      <div class="gami-conquistas">
+        ${conquistas.map(c => `<span class="gami-badge-mini ${c.desbloqueada ? "" : "locked"}" title="${escapeHtml(c.nome)} — ${escapeHtml(c.desc)}${c.desbloqueada ? "" : " (bloqueada)"}">${c.icone}</span>`).join("")}
+      </div>
+    </div>
+  </div>`;
+}
+
+/* ================================================================
    DASHBOARD (Módulos 8 + 12)
    ================================================================ */
 function renderDashboard() {
@@ -101,6 +130,7 @@ function renderDashboard() {
   const radar = radarAprovacao();
   const devidas = questoesDevidas().length;
   const foco = CONCURSOS.find(c => c.id === APP_STATE.config.concursoFoco) || CONCURSOS[0];
+  const gam = gamificacao();
 
   const linha = (arr, cls, icone) => arr.length
     ? arr.map(d => `<div class="radar-linha">${icone} ${d.disciplina}<span class="pct">${Math.round(d.taxa * 100)}%</span></div>`).join("")
@@ -109,6 +139,7 @@ function renderDashboard() {
   MAIN().innerHTML = topbar("Dashboard",
     `Foco: <b>${foco.nome}</b> · Cargo: <b>${APP_STATE.config.cargoFoco}</b>`,
     `<button class="btn small" onclick="navigate('simulado')">▶ Iniciar simulado</button>`) +
+  gamiCardHtml(gam) +
   `<div class="grid cols-4" style="margin-bottom:16px">
     <div class="card stat"><span class="num">${g.respondidasUnicas}/${g.totalBanco}</span><span class="lbl">questões exploradas do banco</span></div>
     <div class="card stat"><span class="num ${g.taxa >= .75 ? "ok" : g.taxa >= .5 ? "warn" : g.taxa === null ? "" : "bad"}">${g.taxa === null ? "—" : Math.round(g.taxa * 100) + "%"}</span><span class="lbl">taxa de acerto</span></div>
@@ -974,6 +1005,7 @@ function renderPerfil() {
   const g = statsGerais();
   const evo = evolucaoDiaria();
   const fraq = statsPorPegadinha();
+  const gam = gamificacao();
   const discData = g.porDisc.filter(d => d.acertos + d.erros > 0).map(d => ({
     label: d.disciplina, value: Math.round((d.taxa || 0) * 100),
     display: `${Math.round((d.taxa || 0) * 100)}% (${d.acertos}✔/${d.erros}✖)`,
@@ -1013,6 +1045,25 @@ function renderPerfil() {
       color: f.taxa >= .7 ? "#10b981" : f.taxa >= .5 ? "#f59e0b" : "#ef4444",
     })), { max: 100 })}</div>
   </div>` : ""}
+  <div class="card" style="margin-top:16px">
+    <h3>🎖️ Patente e Conquistas</h3>
+    <div class="gami-perfil-top">
+      <div class="gami-badge lg">🎖️</div>
+      <div style="flex:1">
+        <div class="gami-nome lg">${escapeHtml(gam.nivel.nome)}</div>
+        <div class="gami-xp">${gam.nivel.xp} XP total${gam.nivel.proximoNome ? ` · ${gam.nivel.xpProximo - gam.nivel.xp} XP até ${escapeHtml(gam.nivel.proximoNome)}` : " · patente máxima"}</div>
+        <div class="gami-bar"><i style="width:${gam.nivel.pct}%"></i></div>
+      </div>
+    </div>
+    <div style="font-size:12px;color:var(--muted);margin:14px 0 8px">${gam.desbloqueadas}/${gam.totalConquistas} conquistas desbloqueadas</div>
+    <div class="conquistas-grid">
+      ${gam.conquistas.map(c => `
+        <div class="conquista-item ${c.desbloqueada ? "unlocked" : "locked"}">
+          <div class="conquista-ico">${c.icone}</div>
+          <div><div class="conquista-nome">${escapeHtml(c.nome)}</div><div class="conquista-desc">${escapeHtml(c.desc)}</div></div>
+        </div>`).join("")}
+    </div>
+  </div>
   <div class="card" style="margin-top:16px">
     <h3>🗂 Histórico de simulados</h3>
     ${APP_STATE.sessoes.length ? APP_STATE.sessoes.slice(-8).reverse().map(s => `
