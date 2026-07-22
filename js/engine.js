@@ -65,6 +65,7 @@ async function carregarEstadoNuvem(user) {
     tema: perfil?.tema || "dark",
     concursoFoco: perfil?.concurso_foco || null,
     cargoFoco: perfil?.cargo_foco || "Escrivão",
+    apelido: perfil?.apelido || null,
   };
 }
 

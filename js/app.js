@@ -12,6 +12,7 @@ const VIEWS = [
   { id: "banco",      nome: "Banco de Questões",     ico: "▤" },
   { id: "simulado",   nome: "Simulado Adaptativo",   ico: "▶" },
   { id: "prova",      nome: "Modo Prova",            ico: "◈" },
+  { id: "ranking",    nome: "Ranking & Desafios",    ico: "🏆" },
   { id: "raiox",      nome: "Raio-X da Banca",       ico: "◉" },
   { id: "pegadinhas", nome: "Detector de Pegadinhas",ico: "⚠" },
   { id: "predicao",   nome: "Predição de Cobrança",  ico: "↗" },
@@ -41,10 +42,12 @@ function renderSidebar() {
   nav.innerHTML =
     '<div class="nav-sep">Treinamento</div>' +
     VIEWS.slice(0, 4).map(navBtn).join("") +
+    '<div class="nav-sep">Competição</div>' +
+    VIEWS.slice(4, 5).map(navBtn).join("") +
     '<div class="nav-sep">Inteligência</div>' +
-    VIEWS.slice(4, 8).map(navBtn).join("") +
+    VIEWS.slice(5, 9).map(navBtn).join("") +
     '<div class="nav-sep">Você</div>' +
-    VIEWS.slice(8).map(navBtn).join("");
+    VIEWS.slice(9).map(navBtn).join("");
   const acct = $("#acct");
   if (acct && CURRENT_USER) {
     acct.innerHTML = `<div style="color:var(--text)">👤 ${escapeHtml(CURRENT_USER.email)}</div><button class="btn ghost small" style="margin-top:6px;width:100%" onclick="sair()">Sair</button>`;
@@ -63,13 +66,20 @@ async function navigate(view) {
     pararTimerProva();
     PROVA = null;
   }
+  /* Proteção: sair de um duelo em andamento descarta o progresso não enviado. */
+  if (typeof DUELO !== "undefined" && DUELO && view !== "ranking") {
+    const ok = await mostrarConfirm("Você está no meio de um duelo. Sair agora descarta o duelo (nada será enviado). Deseja sair?", "Abandonar duelo?");
+    if (!ok) return;
+    if (typeof pararTimerDuelo === "function") pararTimerDuelo();
+    DUELO = null;
+  }
   currentView = view;
   if (view === "raiox" || view === "perfil") marcarVisitaOnboarding(view);
   renderSidebar();
   closeSidebar();
   const fn = {
     dashboard: renderDashboard, banco: renderBanco, simulado: renderSimulado,
-    prova: renderProva, raiox: renderRaioX, pegadinhas: renderPegadinhas,
+    prova: renderProva, ranking: renderRanking, raiox: renderRaioX, pegadinhas: renderPegadinhas,
     predicao: renderPredicao, estrategias: renderEstrategias, perfil: renderPerfil,
   }[view];
   fn();
