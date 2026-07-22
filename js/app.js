@@ -237,7 +237,9 @@ function renderDashboard() {
   const g = statsGerais();
   const radar = radarAprovacao();
   const devidas = questoesDevidas().length;
-  const foco = CONCURSOS.find(c => c.id === APP_STATE.config.concursoFoco) || CONCURSOS[0];
+  const focoNome = APP_STATE.config.concursoFoco
+    ? (CONCURSOS.find(c => c.id === APP_STATE.config.concursoFoco)?.nome || APP_STATE.config.concursoFoco)
+    : "Carreiras Policiais";
   const gam = gamificacao();
 
   const linha = (arr, cls, icone) => arr.length
@@ -245,7 +247,7 @@ function renderDashboard() {
     : `<div class="radar-linha" style="color:var(--muted)">— ainda sem dados suficientes</div>`;
 
   MAIN().innerHTML = topbar("Dashboard",
-    `Foco: <b>${foco.nome}</b> · Cargo: <b>${APP_STATE.config.cargoFoco}</b>`,
+    `Foco: <b>${focoNome}</b> · Cargo: <b>${APP_STATE.config.cargoFoco}</b>`,
     `<button class="btn small" onclick="navigate('simulado')">▶ Iniciar simulado</button>`) +
   onboardingCardHtml() +
   gamiCardHtml(gam) +
@@ -485,7 +487,7 @@ function renderSimulado() {
         <option value="20">20</option><option value="40">40</option><option value="60">60</option><option value="120">120 (prova completa)</option>
       </select></label>
       <label class="f">Concurso<select id="sim-concurso">
-        <option value="">Todos (foco em ${APP_STATE.config.concursoFoco})</option>
+        <option value="">Todos${APP_STATE.config.concursoFoco ? ` (foco em ${APP_STATE.config.concursoFoco})` : ""}</option>
         ${CONCURSOS.map(c => `<option value="${c.id}">${c.id}</option>`).join("")}
       </select></label>
       <label class="f">Disciplina<select id="sim-disc">
@@ -1134,7 +1136,8 @@ function renderPerfil() {
 
   MAIN().innerHTML = topbar("Meu Perfil",
     "Seu retrato estatístico como candidato",
-    `<label class="f" style="min-width:130px">Concurso-foco<select onchange="APP_STATE.config.concursoFoco=this.value;saveState();renderPerfil()">
+    `<label class="f" style="min-width:130px">Concurso-foco<select onchange="APP_STATE.config.concursoFoco=this.value||null;saveState();renderPerfil()">
+      <option value="" ${!APP_STATE.config.concursoFoco ? "selected" : ""}>Todas as carreiras</option>
       ${CONCURSOS.map(c => `<option value="${c.id}" ${APP_STATE.config.concursoFoco === c.id ? "selected" : ""}>${c.id}</option>`).join("")}
     </select></label>
     <label class="f" style="min-width:130px">Cargo-foco<select onchange="APP_STATE.config.cargoFoco=this.value;saveState();renderPerfil()">

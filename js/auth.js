@@ -44,7 +44,7 @@ function renderAuthScreen(erro) {
     <header class="landing-top">
       <div class="brand">
         <div class="logo">CL</div>
-        <h1>CEBRASPE Lab<small>Carreiras Policiais · Foco PCAL</small></h1>
+        <h1>CEBRASPE Lab<small>Foco: Carreiras Policiais</small></h1>
       </div>
       <button class="btn ghost small" onclick="toggleTheme()" aria-label="Alternar tema claro/escuro">◐ Tema</button>
     </header>
@@ -54,7 +54,7 @@ function renderAuthScreen(erro) {
         <h1>Estude como a banca pensa.<br><span class="grad">Aprove com método.</span></h1>
         <p class="lead">Laboratório de engenharia reversa da CEBRASPE para carreiras policiais:
         questões inéditas com engenharia cognitiva, simulados adaptativos com repetição espaçada
-        e estatísticas que mostram exatamente onde você erra — com prioridade absoluta para a PC-AL.</p>
+        e estatísticas que mostram exatamente onde você erra.</p>
         <ul class="pitch-feats">
           <li><span class="fico">🧠</span><span><b>Engenharia cognitiva por questão</b> — o porquê da questão, a pegadinha usada e a regra mental que a resolve.</span></li>
           <li><span class="fico">🎯</span><span><b>Simulado adaptativo + revisão espaçada</b> — prioriza seus pontos fracos e agenda revisões automáticas.</span></li>

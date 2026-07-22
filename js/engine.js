@@ -21,7 +21,7 @@ function loadLocalState() {
     const raw = localStorage.getItem(STORAGE_KEY);
     if (raw) return JSON.parse(raw);
   } catch (e) { /* estado corrompido: recomeça */ }
-  return { respostas: {}, srs: {}, sessoes: [], config: { tema: "dark", concursoFoco: "PCAL", cargoFoco: "Escrivão" } };
+  return { respostas: {}, srs: {}, sessoes: [], config: { tema: "dark", concursoFoco: null, cargoFoco: "Escrivão" } };
 }
 function saveLocalState() { localStorage.setItem(STORAGE_KEY, JSON.stringify(APP_STATE)); }
 const APP_STATE = loadLocalState();
@@ -63,7 +63,7 @@ async function carregarEstadoNuvem(user) {
   APP_STATE.sessoes = sessoes;
   APP_STATE.config = {
     tema: perfil?.tema || "dark",
-    concursoFoco: perfil?.concurso_foco || "PCAL",
+    concursoFoco: perfil?.concurso_foco || null,
     cargoFoco: perfil?.cargo_foco || "Escrivão",
   };
 }
@@ -263,7 +263,7 @@ function pesoAdaptativo(q, ctx) {
   const taxaGeral = ctx.taxa ?? 0.5;
   const alvo = taxaGeral >= 0.8 ? 3 : taxaGeral >= 0.6 ? 2 : 1;
   w += 1 - Math.abs(q.dificuldade - alvo) * 0.4;
-  if (q.concurso === (APP_STATE.config.concursoFoco || "PCAL")) w += 1;
+  if (APP_STATE.config.concursoFoco && q.concurso === APP_STATE.config.concursoFoco) w += 1;
   if (s.ultima && !s.ultima.correta && !s.ultima.branco) w += 1.5;
   return Math.max(w, 0.1);
 }

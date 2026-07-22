@@ -1,6 +1,6 @@
 # CEBRASPE Lab — Laboratório de Engenharia Reversa da Banca
 
-Plataforma inteligente de preparação para concursos **CEBRASPE** de **carreiras policiais**, com prioridade absoluta para a **Polícia Civil de Alagoas (PCAL)**.
+Plataforma inteligente de preparação para concursos **CEBRASPE** de **carreiras policiais**.
 
 ## Como usar
 
