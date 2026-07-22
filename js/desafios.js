@@ -1,7 +1,7 @@
 /* =====================================================================
    CEBRASPE LAB — Ranking & Desafios (duelos assíncronos)
    - Ranking público dos maiores vencedores (via função SECURITY DEFINER
-     no Supabase; nunca expõe e-mail — só o apelido escolhido).
+     no Supabase; nunca expõe e-mail — só o nickname escolhido).
    - Desafio direcionado: o desafiante joga N questões; o adversário
      responde EXATAMENTE as mesmas e vence a maior pontuação líquida.
    ===================================================================== */
@@ -37,9 +37,9 @@ async function carregarHistoricoDesafios() {
   return data || [];
 }
 
-async function salvarApelido() {
-  const val = ($("#ap-input").value || "").trim();
-  const msg = $("#ap-msg");
+async function salvarNickname() {
+  const val = ($("#nick-input").value || "").trim();
+  const msg = $("#nick-msg");
   if (!/^[0-9A-Za-zÀ-ÿ_. ]{3,20}$/.test(val)) {
     msg.style.color = "var(--bad)";
     msg.textContent = "Use de 3 a 20 caracteres (letras, números, espaço, _ ou .).";
@@ -47,16 +47,16 @@ async function salvarApelido() {
   }
   msg.style.color = "var(--muted)"; msg.textContent = "Salvando…";
   const { error } = await supa.from("profiles")
-    .update({ apelido: val, updated_at: new Date().toISOString() })
+    .update({ nickname: val, updated_at: new Date().toISOString() })
     .eq("id", CURRENT_USER.id);
   if (error) {
     msg.style.color = "var(--bad)";
     msg.textContent = /duplicate|unique/i.test(error.message)
-      ? "Esse apelido já está em uso. Escolha outro."
+      ? "Esse nickname já está em uso. Escolha outro."
       : "Não foi possível salvar: " + error.message;
     return;
   }
-  APP_STATE.config.apelido = val;
+  APP_STATE.config.nickname = val;
   renderRanking();
 }
 
@@ -64,25 +64,25 @@ async function salvarApelido() {
 async function renderRanking() {
   MAIN().innerHTML = topbar("Ranking & Desafios",
     "Os maiores vencedores da plataforma — desafie outros candidatos em duelos de questões",
-    APP_STATE.config.apelido ? `<button class="btn small" onclick="abrirNovoDesafio()">⚔ Novo desafio</button>` : "") +
+    APP_STATE.config.nickname ? `<button class="btn small" onclick="abrirNovoDesafio()">⚔ Novo desafio</button>` : "") +
     `<div class="empty" id="ranking-load"><div class="big">🏆</div>Carregando ranking…</div>`;
 
-  /* Sem apelido: precisa criar para participar */
-  if (!APP_STATE.config.apelido) {
+  /* Sem nickname: precisa criar para participar */
+  if (!APP_STATE.config.nickname) {
     const ranking = await carregarRanking();
     MAIN().querySelector("#ranking-load")?.remove();
     MAIN().insertAdjacentHTML("beforeend", `
       <div class="card" style="margin-bottom:16px">
-        <h3>🎭 Crie seu apelido para competir</h3>
+        <h3>🎭 Crie seu nickname para competir</h3>
         <p style="color:var(--muted);font-size:14px;margin:6px 0 12px">
-          Para aparecer no ranking e desafiar outros candidatos, escolha um apelido público.
+          Para aparecer no ranking e desafiar outros candidatos, escolha um nickname público.
           Seu e-mail nunca é exibido para ninguém.</p>
         <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:flex-end">
-          <label class="f" style="flex:1;min-width:200px">Apelido
-            <input type="text" id="ap-input" maxlength="20" placeholder="ex.: FuturoDelegado_AL" autocomplete="off"></label>
-          <button class="btn" onclick="salvarApelido()">Salvar apelido</button>
+          <label class="f" style="flex:1;min-width:200px">Nickname
+            <input type="text" id="nick-input" maxlength="20" placeholder="ex.: FuturoDelegado_AL" autocomplete="off"></label>
+          <button class="btn" onclick="salvarNickname()">Salvar nickname</button>
         </div>
-        <div id="ap-msg" style="margin-top:8px;font-size:13px;min-height:18px" role="status" aria-live="polite"></div>
+        <div id="nick-msg" style="margin-top:8px;font-size:13px;min-height:18px" role="status" aria-live="polite"></div>
       </div>
       ${rankingTabelaHtml(ranking, null)}`);
     return;
@@ -91,7 +91,7 @@ async function renderRanking() {
   const [ranking, pendentes, enviados, historico] = await Promise.all([
     carregarRanking(), carregarDesafiosPendentes(), carregarDesafiosEnviados(), carregarHistoricoDesafios()
   ]);
-  const eu = APP_STATE.config.apelido;
+  const eu = APP_STATE.config.nickname;
   MAIN().querySelector("#ranking-load")?.remove();
 
   let html = "";
@@ -103,7 +103,7 @@ async function renderRanking() {
       ${pendentes.map(d => `
         <div class="desafio-item">
           <div class="desafio-info">
-            <b>${escapeHtml(d.apelido_desafiante)}</b> te desafiou · ${d.n} questões${d.disciplina ? " · " + escapeHtml(d.disciplina) : ""}
+            <b>${escapeHtml(d.nickname_desafiante)}</b> te desafiou · ${d.n} questões${d.disciplina ? " · " + escapeHtml(d.disciplina) : ""}
             <div class="hint">Pontuação a superar: <b>${d.desafiante_liquida} líquida</b> (${d.desafiante_acertos}✔/${d.desafiante_erros}✖)</div>
           </div>
           <div class="desafio-acoes">
@@ -121,7 +121,7 @@ async function renderRanking() {
   if (enviados.length) {
     html += `<div class="card" style="margin-top:16px">
       <h3>📤 Seus desafios aguardando resposta</h3>
-      ${enviados.map(d => `<div class="radar-linha">⏳ Você desafiou <b>${escapeHtml(d.apelido_desafiado)}</b> · ${d.n} questões
+      ${enviados.map(d => `<div class="radar-linha">⏳ Você desafiou <b>${escapeHtml(d.nickname_desafiado)}</b> · ${d.n} questões
         <span class="pct">sua marca: ${d.desafiante_liquida} líquida</span></div>`).join("")}
     </div>`;
   }
@@ -147,15 +147,15 @@ function rankingTabelaHtml(ranking, eu) {
     <h3>🏆 Ranking dos maiores vencedores</h3>
     <div class="chart-scroll">
     <table class="ranking-tab">
-      <thead><tr><th>#</th><th>Apelido</th><th>Vitórias</th><th>Derrotas</th><th>Empates</th><th>Aproveit.</th></tr></thead>
+      <thead><tr><th>#</th><th>Nickname</th><th>Vitórias</th><th>Derrotas</th><th>Empates</th><th>Aproveit.</th></tr></thead>
       <tbody>
         ${ranking.map((r, i) => {
           const jogos = Number(r.total) || 0;
           const aprov = jogos ? Math.round((Number(r.vitorias) / jogos) * 100) : 0;
-          const souEu = eu && r.apelido === eu;
+          const souEu = eu && r.nickname === eu;
           return `<tr class="${souEu ? "me" : ""}">
             <td class="rk-pos">${medalha(i)}</td>
-            <td class="rk-nome">${escapeHtml(r.apelido)}${souEu ? ' <span class="tag accent">você</span>' : ""}</td>
+            <td class="rk-nome">${escapeHtml(r.nickname)}${souEu ? ' <span class="tag accent">você</span>' : ""}</td>
             <td class="rk-v">${r.vitorias}</td>
             <td>${r.derrotas}</td>
             <td>${r.empates}</td>
@@ -173,7 +173,7 @@ function desafioHistoricoLinha(d) {
   const souDesafiante = d.desafiante_id === uid;
   const meu = souDesafiante ? d.desafiante_liquida : d.desafiado_liquida;
   const dele = souDesafiante ? d.desafiado_liquida : d.desafiante_liquida;
-  const oponente = souDesafiante ? d.apelido_desafiado : d.apelido_desafiante;
+  const oponente = souDesafiante ? d.nickname_desafiado : d.nickname_desafiante;
   let tag;
   if (d.vencedor_id === uid) tag = '<span class="tag ok">vitória</span>';
   else if (d.vencedor_id === null) tag = '<span class="tag">empate</span>';
@@ -185,15 +185,15 @@ function desafioHistoricoLinha(d) {
 /* ---------------- Criar desafio ---------------- */
 async function abrirNovoDesafio() {
   const ranking = await carregarRanking();
-  const eu = APP_STATE.config.apelido;
-  const oponentes = ranking.filter(r => r.apelido !== eu);
+  const eu = APP_STATE.config.nickname;
+  const oponentes = ranking.filter(r => r.nickname !== eu);
   MAIN().innerHTML = topbar("Novo desafio", "Escolha o adversário e o tamanho do duelo", `<button class="btn ghost small" onclick="navigate('ranking')">← Voltar</button>`) +
     `<div class="card sim-setup">
       <h3>⚔ Montar duelo</h3>
       <div class="opts">
-        <label class="f">Apelido do adversário
-          <input type="text" id="dz-oponente" list="dz-lista" maxlength="20" placeholder="digite o apelido" autocomplete="off">
-          <datalist id="dz-lista">${oponentes.map(o => `<option value="${escapeHtml(o.apelido)}">`).join("")}</datalist>
+        <label class="f">Nickname do adversário
+          <input type="text" id="dz-oponente" list="dz-lista" maxlength="20" placeholder="digite o nickname" autocomplete="off">
+          <datalist id="dz-lista">${oponentes.map(o => `<option value="${escapeHtml(o.nickname)}">`).join("")}</datalist>
         </label>
         <label class="f">Número de questões<select id="dz-n">
           <option value="5">5 (rápido)</option><option value="10" selected>10</option><option value="20">20</option>
@@ -211,8 +211,8 @@ async function iniciarDueloCriar() {
   const oponente = ($("#dz-oponente").value || "").trim();
   const n = +$("#dz-n").value;
   const disciplina = $("#dz-disc").value || null;
-  const eu = APP_STATE.config.apelido;
-  if (!oponente) { await mostrarAlerta("Digite o apelido do adversário."); return; }
+  const eu = APP_STATE.config.nickname;
+  if (!oponente) { await mostrarAlerta("Digite o nickname do adversário."); return; }
   if (oponente === eu) { await mostrarAlerta("Você não pode desafiar a si mesmo."); return; }
   const questoes = montarProva(n, disciplina ? { disciplina } : {});
   if (!questoes.length) { await mostrarAlerta("Nenhuma questão encontrada com esse filtro."); return; }
@@ -231,7 +231,7 @@ async function aceitarDesafio(id) {
   const questoes = data.qids.map(qid => QUESTOES.find(q => q.id === qid)).filter(Boolean);
   if (!questoes.length) { await mostrarAlerta("As questões deste desafio não estão mais disponíveis."); return; }
   DUELO = {
-    modo: "responder", oponente: data.apelido_desafiante, desafioId: data.id,
+    modo: "responder", oponente: data.nickname_desafiante, desafioId: data.id,
     alvoLiquida: data.desafiante_liquida, disciplina: data.disciplina,
     questoes, qids: questoes.map(q => q.id),
     idx: 0, respostas: [], inicioQ: Date.now(), inicioTotal: Date.now(),
@@ -318,7 +318,7 @@ async function finalizarDuelo() {
 
   if (DUELO.modo === "criar") {
     const { error } = await supa.rpc("criar_desafio", {
-      p_desafiado_apelido: DUELO.oponente, p_n: DUELO.questoes.length, p_qids: DUELO.qids,
+      p_desafiado_nickname: DUELO.oponente, p_n: DUELO.questoes.length, p_qids: DUELO.qids,
       p_disciplina: DUELO.disciplina, p_acertos: acertos, p_erros: erros, p_brancos: brancos, p_tempo: tempo,
     });
     const oponente = DUELO.oponente; DUELO = null;
@@ -379,8 +379,8 @@ function renderResultadoDuelo(d, meu) {
 }
 
 function traduzErroDesafio(m) {
-  if (/apelido/i.test(m) && /desafiar/i.test(m)) return "você precisa definir um apelido.";
-  if (/nao encontrado|não encontrado/i.test(m)) return "adversário não encontrado (confira o apelido).";
+  if (/nickname/i.test(m) && /desafiar/i.test(m)) return "você precisa definir um nickname.";
+  if (/nao encontrado|não encontrado/i.test(m)) return "adversário não encontrado (confira o nickname).";
   if (/si mesmo/i.test(m)) return "você não pode desafiar a si mesmo.";
   if (/ja finalizado|já finalizado/i.test(m)) return "este desafio já foi finalizado.";
   return m;
