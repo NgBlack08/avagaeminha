@@ -138,7 +138,13 @@ async function submitAuthForm(ev) {
     }
   } catch (err) {
     msg.style.color = "var(--bad)";
-    msg.textContent = traduzErroAuth(err.message);
+    /* No cadastro, falhas de validação de convite (trigger no banco) chegam
+       como HTTP 500 e a supabase-js embrulha a mensagem real de forma
+       inutilizável (AuthRetryableFetchError, message vazio) — tratamos esse
+       caso à parte em vez de depender do texto do erro. */
+    msg.textContent = (authTab === "criar" && err.status === 500)
+      ? "Não foi possível criar a conta. Verifique o código de convite: ele pode estar incorreto, já ter sido utilizado, ou o e-mail já pode estar cadastrado. Confirme com quem te convidou."
+      : traduzErroAuth(err.message);
   } finally {
     btn.disabled = false;
   }
