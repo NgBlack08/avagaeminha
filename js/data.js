@@ -51,6 +51,12 @@ const DNA_BANCA = [
   { slug: "troca-sujeito", nome: "Troca de sujeitos/atribuições", incidencia: 41,
     desc: "Atribui competência de um órgão/agente a outro (delegado arquiva IP; PF × PRF; MP × juiz).",
     gatilho: "Pergunte: QUEM pode praticar esse ato segundo a norma?" },
+  { slug: "negacao-dupla", nome: "Negação dupla / embaralhamento", incidencia: 38,
+    desc: "Construções como 'não é incorreto afirmar que…', 'é inegável que não se pode negar…' que invertem o sentido e confundem a leitura. Duas negativas se anulam e viram uma afirmação.",
+    gatilho: "Reescreva a frase na forma afirmativa antes de julgar. Cada 'não' inverte o sentido — conte-os." },
+  { slug: "juris-inventada", nome: "Jurisprudência/súmula inventada", incidencia: 35,
+    desc: "Cita súmula, tese ou informativo com NÚMERO fictício ou enunciado inexistente ('Súmula 999 do STF'), apostando que o candidato aceita a autoridade sem checar.",
+    gatilho: "Número de súmula que 'não lembra' é sinal de alerta. Desconfie do conteúdo, não da aparência de autoridade." },
 ];
 
 /* ---------------- PALAVRAS PERIGOSAS (Módulo 5) ----------------
@@ -78,6 +84,10 @@ const PALAVRAS_PERIGOSAS = [
   { termo: "presume-se", vies: "N", explica: "Cheque se a presunção é absoluta (iuris et de iure) ou relativa (iuris tantum) — a banca troca as duas." },
   { termo: "prescinde", vies: "N", explica: "Pegadinha semântica: prescindir = DISPENSAR. Muitos leem como 'precisar'. Leia duas vezes." },
   { termo: "não", vies: "N", explica: "Negativas e duplas negativas invertem o julgamento. Reescreva mentalmente a frase na forma afirmativa." },
+  { termo: "não é incorreto", vies: "N", explica: "Negação dupla: 'não é incorreto' = 'é correto'. Reescreva na forma afirmativa antes de julgar." },
+  { termo: "não é errado", vies: "N", explica: "Negação dupla: 'não é errado' = 'é certo'. Cuidado com o embaralhamento proposital." },
+  { termo: "inegável", vies: "N", explica: "Muitas vezes acompanha outra negativa ('é inegável que não…'), criando dupla negação. Conte os 'não'." },
+  { termo: "não se pode negar", vies: "N", explica: "Negação dupla: equivale a uma afirmação. A banca usa para confundir a leitura rápida." },
 ];
 
 /* ---------------- BANCO DE QUESTÕES (Módulos 1, 3, 5, 6, 11) ---------------- */
