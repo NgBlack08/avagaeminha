@@ -21,7 +21,7 @@ function loadLocalState() {
     const raw = localStorage.getItem(STORAGE_KEY);
     if (raw) return JSON.parse(raw);
   } catch (e) { /* estado corrompido: recomeça */ }
-  return { respostas: {}, srs: {}, sessoes: [], config: { tema: "dark", concursoFoco: null, cargoFoco: "Escrivão" } };
+  return { respostas: {}, srs: {}, sessoes: [], config: { tema: "dark", concursoFoco: null, cargoFoco: "Escrivão", isAdmin: false } };
 }
 function saveLocalState() { localStorage.setItem(STORAGE_KEY, JSON.stringify(APP_STATE)); }
 const APP_STATE = loadLocalState();
@@ -66,6 +66,7 @@ async function carregarEstadoNuvem(user) {
     concursoFoco: perfil?.concurso_foco || null,
     cargoFoco: perfil?.cargo_foco || "Escrivão",
     nickname: perfil?.nickname || null,
+    isAdmin: perfil?.is_admin || false,
   };
 }
 

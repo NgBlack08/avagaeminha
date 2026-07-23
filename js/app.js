@@ -47,7 +47,10 @@ function renderSidebar() {
     '<div class="nav-sep">Inteligência</div>' +
     VIEWS.slice(5, 9).map(navBtn).join("") +
     '<div class="nav-sep">Você</div>' +
-    VIEWS.slice(9).map(navBtn).join("");
+    VIEWS.slice(9).map(navBtn).join("") +
+    (APP_STATE.config.isAdmin
+      ? '<div class="nav-sep">Administração</div>' + navBtn({ id: "admin", nome: "Usuários & Convites", ico: "🛡" })
+      : "");
   const acct = $("#acct");
   if (acct && CURRENT_USER) {
     acct.innerHTML = `<div style="color:var(--text)">👤 ${escapeHtml(CURRENT_USER.email)}</div><button class="btn ghost small" style="margin-top:6px;width:100%" onclick="sair()">Sair</button>`;
@@ -80,7 +83,7 @@ async function navigate(view) {
   const fn = {
     dashboard: renderDashboard, banco: renderBanco, simulado: renderSimulado,
     prova: renderProva, ranking: renderRanking, raiox: renderRaioX, pegadinhas: renderPegadinhas,
-    predicao: renderPredicao, estrategias: renderEstrategias, perfil: renderPerfil,
+    predicao: renderPredicao, estrategias: renderEstrategias, perfil: renderPerfil, admin: renderAdmin,
   }[view];
   fn();
   window.scrollTo(0, 0);

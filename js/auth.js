@@ -77,6 +77,8 @@ function renderAuthScreen(erro) {
         <form onsubmit="return submitAuthForm(event)">
           <label class="f">E-mail<input type="email" id="auth-email" required autocomplete="email" placeholder="voce@email.com"></label>
           <label class="f" style="margin-top:10px">Senha<input type="password" id="auth-senha" required minlength="6" autocomplete="current-password" placeholder="mínimo 6 caracteres"></label>
+          <label class="f" id="auth-convite-wrap" style="margin-top:10px;display:none">Código de convite
+            <input type="text" id="auth-convite" autocomplete="off" placeholder="ex.: A1B2C3D4" style="text-transform:uppercase"></label>
           <button class="btn" type="submit" style="margin-top:16px;width:100%" id="auth-submit">Entrar</button>
         </form>
         <div id="auth-msg" style="margin-top:10px;font-size:13px;min-height:18px" role="status" aria-live="polite"></div>
@@ -95,6 +97,11 @@ function setAuthTab(tab) {
   $("#tab-criar").className = tab === "criar" ? "btn small" : "btn ghost small";
   $("#auth-submit").textContent = tab === "entrar" ? "Entrar" : "Criar conta";
   $("#auth-msg").textContent = "";
+  const convite = $("#auth-convite-wrap");
+  if (convite) {
+    convite.style.display = tab === "criar" ? "" : "none";
+    $("#auth-convite").required = tab === "criar";
+  }
 }
 
 async function submitAuthForm(ev) {
@@ -108,7 +115,12 @@ async function submitAuthForm(ev) {
   msg.textContent = "Processando…";
   try {
     if (authTab === "criar") {
-      const { data, error } = await supa.auth.signUp({ email, password: senha });
+      const convite = $("#auth-convite").value.trim();
+      if (!convite) { msg.style.color = "var(--bad)"; msg.textContent = "Informe o código de convite para criar sua conta."; return false; }
+      const { data, error } = await supa.auth.signUp({
+        email, password: senha,
+        options: { data: { invite_code: convite } },
+      });
       if (error) throw error;
       if (data.session) {
         await carregarEstadoNuvem(data.user);
@@ -138,5 +150,9 @@ function traduzErroAuth(msg) {
   if (/invalid login credentials/i.test(msg)) return "E-mail ou senha incorretos.";
   if (/password should be|at least 6/i.test(msg)) return "A senha deve ter pelo menos 6 caracteres.";
   if (/rate limit/i.test(msg)) return "Muitas tentativas. Aguarde um instante e tente de novo.";
+  if (/convite.*ausente/i.test(msg)) return "É necessário informar um código de convite para criar sua conta.";
+  if (/convite invalido/i.test(msg)) return "Código de convite inválido. Confira e tente novamente.";
+  if (/convite ja utilizado|convite.*inativo/i.test(msg)) return "Este código de convite já foi utilizado ou está inativo.";
+  if (/database error saving new user/i.test(msg)) return "Não foi possível criar a conta. Verifique o código de convite.";
   return msg;
 }
