@@ -242,7 +242,7 @@ const QUESTOES_PCAL_LOTE23 = [
     origem: "Inédita — estilo CEBRASPE (Súmula Vinculante 11 do STF)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 55, probReaparecer: 0.8,
     enunciado: "Nos termos da Súmula Vinculante 11 do STF, o uso de algemas é medida excepcional, admitida apenas diante de resistência, fundado receio de fuga ou perigo à integridade, exigindo-se justificativa por escrito.",
-    gabarito: "C", pegadinha: "juris-mais-lei", palavraChave: "Súmula Vinculante 11",
+    gabarito: "C", pegadinha: "juris-inventada", palavraChave: "Súmula Vinculante 11",
     cognitivo: {
       motivo: "Item de CONTROLE: súmula real corretamente citada — não rejeitar por reflexo.",
       mede: "Direitos Humanos — verificação (não rejeição) de citação.",
@@ -259,6 +259,56 @@ const QUESTOES_PCAL_LOTE23 = [
       macete: "Verifique a súmula; se é real e bate, marque C sem medo.",
       erroComum: "Rejeitar por desconfiança reflexa de qualquer número.",
       comoBancaPensa: "Após inventar súmulas, cobra uma verdadeira para pegar o candidato hipercauteloso."
+    }
+  },
+  {
+    id: "DP-078", disciplina: "Direito Penal", assunto: "Aplicação da pena", subassunto: "Súmula real (controle de verificação)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    origem: "Inédita — estilo CEBRASPE (Súmula 231 do STJ)",
+    tipo: "CE", dificuldade: 3, tempoIdealSeg: 55, probReaparecer: 0.78,
+    enunciado: "De acordo com a Súmula 231 do STJ, a incidência de circunstância atenuante não pode conduzir à redução da pena abaixo do mínimo legal cominado ao crime.",
+    gabarito: "C", pegadinha: "juris-inventada", palavraChave: "Súmula 231 do STJ",
+    cognitivo: {
+      motivo: "Item de CONTROLE: súmula real e corretamente citada, no mesmo padrão das súmulas inventadas.",
+      mede: "Direito Penal — verificação (não rejeição reflexa) de citação.",
+      pegadinhaDesc: "Depois de treinar súmulas fabricadas, o candidato tende a desconfiar de qualquer número, mesmo real.",
+      ondeErra: "Marca E só porque 'parece' mais uma armadilha de número.",
+      palavraCritica: "Súmula 231 do STJ (real e corretamente citada)",
+      tecnica: "A Súmula 231 do STJ existe e diz exatamente isso. O número está certo e o conteúdo também — não é armadilha.",
+      regraMental: "Confira o número E o conteúdo. Se ambos batem, marque C — desconfiança não é regra absoluta."
+    },
+    comentario: {
+      resolucao: "CERTO. A Súmula 231 do STJ estabelece que a incidência de circunstância atenuante não pode conduzir à redução da pena abaixo do mínimo legal. A citação é real e o conteúdo, fielmente reproduzido — reconhecer isso é tão importante quanto flagrar uma súmula inventada.",
+      fundamento: "STJ, Súmula 231; CP, art. 65.",
+      jurisprudencia: "STJ, Súmula 231.",
+      macete: "Súmula 231 STJ: atenuante não fura o piso. Aqui, citação correta.",
+      erroComum: "Rejeitar por desconfiança automática do número citado.",
+      comoBancaPensa: "Mistura súmulas reais entre as inventadas para testar se o candidato verifica, em vez de só desconfiar."
+    }
+  },
+  {
+    id: "PP-055", disciplina: "Processo Penal", assunto: "Prisão em flagrante", subassunto: "Súmula real (controle de verificação)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    origem: "Inédita — estilo CEBRASPE (Súmula 145 do STF)",
+    tipo: "CE", dificuldade: 3, tempoIdealSeg: 55, probReaparecer: 0.78,
+    enunciado: "Conforme a Súmula 145 do STF, não há crime quando a preparação do flagrante pela autoridade policial torna impossível a sua consumação.",
+    gabarito: "C", pegadinha: "juris-inventada", palavraChave: "Súmula 145 do STF",
+    cognitivo: {
+      motivo: "Item de CONTROLE: súmula real e corretamente citada, no mesmo padrão das súmulas inventadas.",
+      mede: "Processo Penal — verificação (não rejeição reflexa) de citação.",
+      pegadinhaDesc: "O candidato treinado em súmulas fabricadas pode rejeitar esta por puro reflexo.",
+      ondeErra: "Marca E por desconfiança automática, sem checar se a Súmula 145 realmente existe (e existe).",
+      palavraCritica: "Súmula 145 do STF (real e corretamente citada)",
+      tecnica: "A Súmula 145 do STF é real: flagrante preparado = crime impossível. Número e conteúdo corretos — não há armadilha aqui.",
+      regraMental: "Nem toda citação de súmula é cilada. Verifique antes de rejeitar."
+    },
+    comentario: {
+      resolucao: "CERTO. A Súmula 145 do STF de fato estabelece que não há crime quando a preparação do flagrante pela autoridade torna impossível a sua consumação (flagrante preparado). A citação é real e fielmente reproduzida.",
+      fundamento: "STF, Súmula 145; CP, art. 17.",
+      jurisprudencia: "STF, Súmula 145.",
+      macete: "Flagrante preparado = crime impossível (Súmula 145 STF, real).",
+      erroComum: "Rejeitar a citação por desconfiança reflexa.",
+      comoBancaPensa: "Intercala súmulas reais com inventadas para cobrar verificação genuína, não desconfiança automática."
     }
   },
 
