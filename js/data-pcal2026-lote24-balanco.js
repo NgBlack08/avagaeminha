@@ -336,7 +336,7 @@ const QUESTOES_PCAL_LOTE24 = [
     concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (CP, art. 155, caput)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 45, probReaparecer: 0.8,
-    enunciado: "Subtrair, para si ou para outrem, coisa alheia móvel: pena, detenção, de um a quatro anos, e multa.",
+    enunciado: "Nos termos do Código Penal, o crime de furto — subtrair, para si ou para outrem, coisa alheia móvel — é punido com pena de detenção, de um a quatro anos, e multa.",
     gabarito: "E", pegadinha: "literalidade", palavraChave: "detenção",
     cognitivo: {
       motivo: "Reproduz o art. 155, caput, trocando 'reclusão' por 'detenção'.",
