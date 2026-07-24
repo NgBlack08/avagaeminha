@@ -97,12 +97,12 @@ const QUESTOES_PCAL_LOTE33 = [
       pegadinhaDesc: "A banca generaliza a avocação como medida permanente e imotivada.",
       ondeErra: "Confunde a natureza excepcional da avocação com uma prerrogativa genérica e ilimitada da autoridade superior.",
       palavraCritica: "caráter permanente ... independentemente de justificativa",
-      tecnica: "A avocação é medida EXCEPCIONAL, TEMPORÁRIA e deve ser MOTIVADA: a autoridade superior chama para si, provisoriamente, competência de órgão subordinado, mas não pode fazê-lo de forma permanente e sem justificativa, sob pena de esvaziar a repartição de competências estabelecida no ordenamento.",
-      regraMental: "Avocação: excepcional, temporária e motivada — nunca permanente e sem justificativa."
+      tecnica: "Art. 15 da Lei 9.784/1999: a avocação é permitida 'em caráter excepcional e por motivos relevantes devidamente justificados' — é temporária, chamando para si a autoridade superior competência de órgão subordinado, mas não pode ser permanente nem imotivada, sob pena de esvaziar a repartição de competências.",
+      regraMental: "Avocação: excepcional, temporária e motivada (art. 15, Lei 9.784/99) — nunca permanente e sem justificativa."
     },
     comentario: {
-      resolucao: "ERRADO. A avocação de competência é medida excepcional, temporária e deve ser motivada — não pode ser exercida em caráter permanente e sem justificativa, sob pena de comprometer a repartição de competências estabelecida entre os órgãos da Administração.",
-      fundamento: "Doutrina de Direito Administrativo — poderes administrativos (poder hierárquico, avocação).",
+      resolucao: "ERRADO. Nos termos do art. 15 da Lei 9.784/1999, a avocação só é permitida em caráter excepcional e por motivos relevantes devidamente justificados, sendo temporária — não pode ser exercida em caráter permanente e sem justificativa, sob pena de comprometer a repartição de competências entre os órgãos da Administração. (Não confundir com a delegação, que, nos termos do art. 12, pode ocorrer mesmo sem subordinação hierárquica.)",
+      fundamento: "Lei nº 9.784/1999, art. 15 (avocação); art. 12 (delegação); doutrina de Direito Administrativo (poder hierárquico).",
       macete: "Avocação: sempre excepcional, temporária e motivada.",
       erroComum: "Tratar a avocação como prerrogativa ampla, permanente e discricionária da autoridade superior.",
       comoBancaPensa: "Generaliza indevidamente uma medida excepcional como se fosse regra permanente."

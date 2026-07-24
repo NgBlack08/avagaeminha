@@ -102,8 +102,8 @@ const QUESTOES_PCAL_LOTE32 = [
       regraMental: "Determinação judicial para entrar em casa alheia: só de DIA. À noite, só flagrante/desastre/socorro."
     },
     comentario: {
-      resolucao: "ERRADO. A determinação judicial autoriza o ingresso em domicílio alheio apenas DURANTE O DIA. À noite, o ingresso sem consentimento do morador só é permitido em caso de flagrante delito, desastre ou para prestar socorro — nunca por mera determinação judicial.",
-      fundamento: "Constituição Federal, art. 5º, XI.",
+      resolucao: "ERRADO. A determinação judicial autoriza o ingresso em domicílio alheio apenas DURANTE O DIA. À noite, o ingresso sem consentimento do morador só é permitido em caso de flagrante delito, desastre ou para prestar socorro — nunca por mera determinação judicial. O STF (RE 603.616, Tema 280) firmou que a entrada forçada sem mandado, mesmo à noite, só é lícita quando amparada em fundadas razões, devidamente justificadas, de flagrante delito no interior da residência.",
+      fundamento: "Constituição Federal, art. 5º, XI; STF, RE 603.616 (Tema 280 de repercussão geral).",
       macete: "Determinação judicial = só de dia. À noite: só flagrante, desastre ou socorro.",
       erroComum: "Generalizar a autorização judicial para qualquer horário.",
       comoBancaPensa: "Clássica pegadinha de generalização indevida de uma restrição temporal expressa na CF."

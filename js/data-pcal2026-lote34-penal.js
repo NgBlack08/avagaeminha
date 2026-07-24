@@ -31,7 +31,7 @@ const QUESTOES_PCAL_LOTE34 = [
     },
     comentario: {
       resolucao: "CERTO. É entendimento consolidado do STJ e do STF que a habitualidade ou a reiteração delitiva específica, em regra, afasta a incidência do princípio da insignificância, ainda que o valor do bem seja irrisório, tendo em vista o maior grau de reprovabilidade da conduta do agente que reitera a prática delitiva.",
-      fundamento: "Jurisprudência consolidada do STJ e do STF sobre o princípio da insignificância (vetor da reprovabilidade da conduta).",
+      fundamento: "STF, HC 84.412/SP (requisitos da insignificância: mínima ofensividade, ausência de periculosidade social, reduzida reprovabilidade e inexpressividade da lesão); STJ, Enunciado 2 da Jurisprudência em Teses (edição 219): 'A reiteração delitiva, a reincidência e os antecedentes, em regra, afastam a aplicação do princípio da insignificância, por ausência de reduzido grau de reprovabilidade do comportamento do agente.'",
       macete: "Reincidência/habitualidade específica = insignificância, em regra, não se aplica.",
       erroComum: "Aplicar a insignificância apenas com base no valor do bem, ignorando o histórico do agente.",
       comoBancaPensa: "Cobra a jurisprudência real e consolidada, corrigindo uma crença intuitiva comum entre candidatos."
@@ -78,8 +78,8 @@ const QUESTOES_PCAL_LOTE34 = [
       regraMental: "Pós-Lei 14.994/2024: feminicídio = crime autônomo (art. 121-A), não mais qualificadora do art. 121."
     },
     comentario: {
-      resolucao: "CERTO. A Lei nº 14.994/2024 alterou o Código Penal para transformar o feminicídio, antes qualificadora do homicídio (art. 121, §2º, VI), em crime autônomo (art. 121-A), mantendo a presunção das razões da condição do sexo feminino nos casos de violência doméstica e familiar ou de menosprezo/discriminação à condição de mulher.",
-      fundamento: "Código Penal, art. 121-A, com redação dada pela Lei nº 14.994/2024.",
+      resolucao: "CERTO. A Lei nº 14.994/2024 (conhecida como 'Pacote Antifeminicídio') alterou o Código Penal para transformar o feminicídio, antes qualificadora do homicídio (art. 121, §2º, VI), em crime autônomo (art. 121-A, pena de reclusão de 20 a 40 anos), mantendo a presunção das razões da condição do sexo feminino nos casos de violência doméstica e familiar ou de menosprezo/discriminação à condição de mulher — fenômeno de continuidade normativo-típica, sem abolitio criminis.",
+      fundamento: "Código Penal, art. 121-A, com redação dada pela Lei nº 14.994/2024 ('Pacote Antifeminicídio').",
       macete: "Feminicídio hoje é crime autônomo (art. 121-A), não mais qualificadora.",
       erroComum: "Manter o entendimento anterior à Lei 14.994/2024, tratando o feminicídio apenas como qualificadora.",
       comoBancaPensa: "Cobra atualização legislativa recente, testando se o candidato acompanha as mudanças do Código Penal."

@@ -249,8 +249,8 @@ const QUESTOES_PCAL_LOTE31 = [
       regraMental: "Equivalência a emenda: 2 turnos + 3/5 dos votos, em cada Casa (mesmo rito de PEC)."
     },
     comentario: {
-      resolucao: "ERRADO. O rito exigido pelo art. 5º, §3º, da CF para que o tratado de direitos humanos equivalha a emenda constitucional é: aprovação em CADA Casa do Congresso Nacional, em DOIS turnos, por TRÊS QUINTOS dos votos dos respectivos membros — e não maioria simples em turno único, como afirmado.",
-      fundamento: "Constituição Federal, art. 5º, §3º (incluído pela EC nº 45/2004).",
+      resolucao: "ERRADO. O rito exigido pelo art. 5º, §3º, da CF para que o tratado de direitos humanos equivalha a emenda constitucional é: aprovação em CADA Casa do Congresso Nacional, em DOIS turnos, por TRÊS QUINTOS dos votos dos respectivos membros — e não maioria simples em turno único, como afirmado. Os tratados que não observam esse rito, segundo o STF (RE 466.343/SP, rel. Min. Cezar Peluso), possuem status supralegal, e não de lei ordinária.",
+      fundamento: "Constituição Federal, art. 5º, §3º (incluído pela EC nº 45/2004); STF, RE 466.343/SP (status supralegal dos tratados de direitos humanos não incorporados pelo rito qualificado).",
       macete: "Mesmo rito de uma PEC: 2 turnos, 3/5, em cada Casa.",
       erroComum: "Confundir com o quórum de aprovação de lei ordinária ou complementar.",
       comoBancaPensa: "Troca o quórum qualificado exigido pela CF por um requisito mais brando e genérico."
