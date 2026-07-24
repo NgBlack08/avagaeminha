@@ -30,6 +30,7 @@ async function sair() {
 function renderAuthScreen(erro) {
   const root = document.getElementById("approot");
   if (root) root.classList.add("no-sidebar");
+  historyInitialized = false; /* reinicia o controle de histórico do navegador (app.js) */
 
   /* Prova social HONESTA: números reais computados da própria plataforma
      (nunca métricas inventadas). */

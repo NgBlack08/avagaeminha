@@ -23,10 +23,20 @@ const VIEWS = [
 let currentView = "dashboard";
 let SIM = null; /* estado do simulado adaptativo em andamento */
 let PROVA = null; /* estado do Modo Prova em andamento */
+let historyInitialized = false; /* controla a integração com o histórico do navegador */
 
 /* ============ Bootstrap ============ */
 document.addEventListener("DOMContentLoaded", () => {
   bootstrapAuth();
+});
+
+/* Botão voltar/avançar do navegador: retorna para a view anterior DENTRO
+   do app, em vez de sair do site (só passa a existir histórico depois
+   que o app é inicializado — historyInitialized). */
+window.addEventListener("popstate", (e) => {
+  if (!historyInitialized) return;
+  const view = (e.state && e.state.view) || "dashboard";
+  navigate(view, { fromPopstate: true });
 });
 
 function iniciarApp() {
@@ -61,22 +71,38 @@ function navBtn(v) {
     <span class="ico">${v.ico}</span>${v.nome}</button>`;
 }
 
-async function navigate(view) {
+async function navigate(view, opts = {}) {
+  const fromPopstate = !!opts.fromPopstate;
   /* Proteção: sair de uma prova em andamento encerra e corrige. */
   if (PROVA && !PROVA.finalizada && view !== "prova") {
     const ok = await mostrarConfirm("Você está com uma prova em andamento. Sair agora vai ENCERRAR e corrigir a prova. Deseja sair?", "Encerrar prova em andamento?");
-    if (!ok) return;
+    if (!ok) {
+      /* Veio do botão voltar do navegador: desfaz o "voltar", mantendo a prova em foco. */
+      if (fromPopstate) history.pushState({ view: "prova" }, "", "#prova");
+      return;
+    }
     pararTimerProva();
     PROVA = null;
   }
   /* Proteção: sair de um duelo em andamento descarta o progresso não enviado. */
   if (typeof DUELO !== "undefined" && DUELO && view !== "ranking") {
     const ok = await mostrarConfirm("Você está no meio de um duelo. Sair agora descarta o duelo (nada será enviado). Deseja sair?", "Abandonar duelo?");
-    if (!ok) return;
+    if (!ok) {
+      if (fromPopstate) history.pushState({ view: "ranking" }, "", "#ranking");
+      return;
+    }
     if (typeof pararTimerDuelo === "function") pararTimerDuelo();
     DUELO = null;
   }
   currentView = view;
+  if (!fromPopstate) {
+    if (!historyInitialized) {
+      history.replaceState({ view }, "", "#" + view);
+      historyInitialized = true;
+    } else if (!history.state || history.state.view !== view) {
+      history.pushState({ view }, "", "#" + view);
+    }
+  }
   if (view === "raiox" || view === "perfil") marcarVisitaOnboarding(view);
   renderSidebar();
   closeSidebar();
