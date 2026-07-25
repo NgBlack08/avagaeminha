@@ -63,7 +63,10 @@ function renderSidebar() {
       : "");
   const acct = $("#acct");
   if (acct && CURRENT_USER) {
-    acct.innerHTML = `<div style="color:var(--text)">👤 ${escapeHtml(CURRENT_USER.email)}</div><button class="btn ghost small" style="margin-top:6px;width:100%" onclick="sair()">Sair</button>`;
+    const planoTag = APP_STATE.config.plano !== "completo"
+      ? `<div style="margin-top:6px"><span class="tag">Plano Gratuito</span> <button class="link-btn" style="font-size:12px" onclick="navigate('perfil')">ativar convite</button></div>`
+      : "";
+    acct.innerHTML = `<div style="color:var(--text)">👤 ${escapeHtml(CURRENT_USER.email)}</div>${planoTag}<button class="btn ghost small" style="margin-top:6px;width:100%" onclick="sair()">Sair</button>`;
   }
 }
 function navBtn(v) {
@@ -1162,6 +1165,14 @@ function verExemplo(qid) {
 /* ================================================================
    PERFIL DO ESTUDANTE (Módulo 8)
    ================================================================ */
+async function submitAtivarConvitePerfil() {
+  const codigo = $("#perfil-convite-input").value.trim();
+  const msg = $("#perfil-convite-msg");
+  const btn = $("#perfil-convite-btn");
+  if (!codigo) { msg.style.color = "var(--bad)"; msg.textContent = "Informe um código de convite."; return; }
+  const ok = await resgatarConvite(codigo, msg, btn);
+  if (ok) renderPerfil();
+}
 function renderPerfil() {
   const g = statsGerais();
   const evo = evolucaoDiaria();
@@ -1182,6 +1193,16 @@ function renderPerfil() {
     <label class="f" style="min-width:130px">Cargo-foco<select onchange="APP_STATE.config.cargoFoco=this.value;saveState();renderPerfil()">
       ${CARGOS.map(c => `<option ${APP_STATE.config.cargoFoco === c ? "selected" : ""}>${c}</option>`).join("")}
     </select></label>`) +
+  (APP_STATE.config.plano !== "completo" ? `<div class="card" style="margin-bottom:16px">
+    <h3>🔓 Ativar código de convite</h3>
+    <p class="hint" style="margin-bottom:10px">Você está no plano gratuito, com acesso a uma amostra do banco de questões. Um código de convite libera acesso completo, a qualquer momento.</p>
+    <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:flex-end">
+      <label class="f" style="flex:1;min-width:200px">Código de convite
+        <input type="text" id="perfil-convite-input" autocomplete="off" placeholder="ex.: A1B2C3D4" style="text-transform:uppercase"></label>
+      <button class="btn" id="perfil-convite-btn" onclick="submitAtivarConvitePerfil()">Ativar</button>
+    </div>
+    <div id="perfil-convite-msg" style="margin-top:8px;font-size:13px;min-height:18px" role="status" aria-live="polite"></div>
+  </div>` : "") +
   `<div class="grid cols-4" style="margin-bottom:16px">
     <div class="card stat"><span class="num">${g.nRespostas}</span><span class="lbl">respostas registradas</span></div>
     <div class="card stat"><span class="num ${g.taxa >= .75 ? "ok" : g.taxa === null ? "" : g.taxa >= .5 ? "warn" : "bad"}">${g.taxa === null ? "—" : Math.round(g.taxa * 100) + "%"}</span><span class="lbl">taxa de acerto geral</span></div>

@@ -21,7 +21,7 @@ function loadLocalState() {
     const raw = localStorage.getItem(STORAGE_KEY);
     if (raw) return JSON.parse(raw);
   } catch (e) { /* estado corrompido: recomeça */ }
-  return { respostas: {}, srs: {}, sessoes: [], config: { tema: "dark", concursoFoco: null, cargoFoco: "Escrivão", isAdmin: false } };
+  return { respostas: {}, srs: {}, sessoes: [], config: { tema: "dark", concursoFoco: null, cargoFoco: "Escrivão", isAdmin: false, plano: "gratuito" } };
 }
 function saveLocalState() { localStorage.setItem(STORAGE_KEY, JSON.stringify(APP_STATE)); }
 const APP_STATE = loadLocalState();
@@ -67,7 +67,7 @@ async function carregarEstadoNuvem(user) {
     cargoFoco: perfil?.cargo_foco || "Escrivão",
     nickname: perfil?.nickname || null,
     isAdmin: perfil?.is_admin || false,
-    convitePendente: perfil?.convite_pendente || false,
+    plano: perfil?.plano || "gratuito",
   };
 }
 
@@ -140,9 +140,13 @@ function atualizarSRS(qid, acertou, branco) {
   }
   APP_STATE.srs[qid] = s;
 }
+function questaoLiberada(q) {
+  return APP_STATE.config.plano === "completo" || FREE_QUESTION_IDS.has(q.id);
+}
 function questoesDevidas() {
   const agora = Date.now();
   return QUESTOES.filter(q => {
+    if (!questaoLiberada(q)) return false;
     const s = APP_STATE.srs[q.id];
     return s && s.proxima <= agora;
   });
@@ -306,6 +310,7 @@ function montarSimulado(n, filtros) {
 /* ---------------- Filtros combinados (Módulo 1) ---------------- */
 function filtrarQuestoes(f) {
   return QUESTOES.filter(q => {
+    if (!questaoLiberada(q)) return false;
     if (f.concurso && q.concurso !== f.concurso) return false;
     if (f.cargo && !q.cargo.includes(f.cargo)) return false;
     if (f.disciplina && q.disciplina !== f.disciplina) return false;
@@ -355,9 +360,9 @@ function escapeHtml(s) {
 }
 
 /* ---------------- Helpers de catálogo ---------------- */
-function listaDisciplinas() { return [...new Set(QUESTOES.map(q => q.disciplina))]; }
+function listaDisciplinas() { return [...new Set(QUESTOES.filter(questaoLiberada).map(q => q.disciplina))]; }
 function listaAssuntos(disciplina) {
-  return [...new Set(QUESTOES.filter(q => !disciplina || q.disciplina === disciplina).map(q => q.assunto))];
+  return [...new Set(QUESTOES.filter(q => questaoLiberada(q) && (!disciplina || q.disciplina === disciplina)).map(q => q.assunto))];
 }
 
 function resetarDados() {
