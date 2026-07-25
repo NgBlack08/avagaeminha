@@ -67,6 +67,7 @@ async function carregarEstadoNuvem(user) {
     cargoFoco: perfil?.cargo_foco || "Escrivão",
     nickname: perfil?.nickname || null,
     isAdmin: perfil?.is_admin || false,
+    convitePendente: perfil?.convite_pendente || false,
   };
 }
 

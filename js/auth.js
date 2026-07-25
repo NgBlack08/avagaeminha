@@ -6,6 +6,12 @@
    ===================================================================== */
 let authTab = "entrar";
 
+/* Chave de sessionStorage para o código de convite digitado antes de
+   redirecionar para o Google — a criação da conta via signInWithOAuth não
+   tem como carregar metadata customizada, então o convite só é validado
+   depois do retorno (ver tentarAtivarConvitePendente()). */
+const PENDING_INVITE_KEY = "cebraspe-lab-pending-invite";
+
 /* Ícones inline (SVG autoral/genérico) — sem dependência de rede. */
 const EYE_ICON = `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8Z"/><circle cx="12" cy="12" r="3"/></svg>`;
 const EYE_OFF_ICON = `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19M6.61 6.61A18.5 18.5 0 0 0 1 12s4 8 11 8a9.26 9.26 0 0 0 5.39-1.61M14.12 14.12a3 3 0 1 1-4.24-4.24"/><line x1="1" y1="1" x2="23" y2="23"/></svg>`;
@@ -55,7 +61,11 @@ async function bootstrapAuth() {
   if (recuperandoSenha) return; /* já mostrando a tela de redefinição de senha */
   if (session && session.user) {
     await carregarEstadoNuvem(session.user);
-    iniciarApp();
+    if (APP_STATE.config.convitePendente) {
+      await tentarAtivarConvitePendente();
+    } else {
+      iniciarApp();
+    }
   } else {
     renderAuthScreen(oauthErro || undefined);
   }
@@ -377,6 +387,73 @@ async function submitNovaSenha(ev) {
   return false;
 }
 
+/* Tela de ativação por convite — chegada quando o login com Google criou
+   a conta mas o convite digitado antes do redirect não chegou até aqui
+   (sessionStorage limpo, aba/sessão diferente etc.). O profile já existe
+   com convite_pendente=true; só falta validar um código. */
+function renderAguardandoAtivacaoScreen() {
+  const root = document.getElementById("approot");
+  if (root) root.classList.add("no-sidebar");
+  MAIN().innerHTML = `
+  <div class="landing-reset">
+    <section class="card auth-card fx-stagger" aria-label="Ativar conta">
+      <h2 style="margin-bottom:6px;font-size:20px">Falta pouco: informe seu convite</h2>
+      <p class="lead" style="font-size:13.5px;margin-bottom:20px">Sua conta Google foi reconhecida, mas esta plataforma é fechada por convite. Informe o código para liberar o acesso.</p>
+      <form onsubmit="return submitAtivarConvite(event)">
+        <label class="f">Código de convite
+          <input type="text" id="ativar-convite" required autocomplete="off" placeholder="ex.: A1B2C3D4" style="text-transform:uppercase">
+        </label>
+        <button class="btn" type="submit" style="margin-top:18px;width:100%" id="ativar-convite-submit">Ativar conta</button>
+      </form>
+      <div id="ativar-convite-msg" style="margin-top:10px;font-size:13px;min-height:18px" role="status" aria-live="polite"></div>
+    </section>
+  </div>`;
+}
+
+async function submitAtivarConvite(ev) {
+  ev.preventDefault();
+  const codigo = $("#ativar-convite").value.trim();
+  const msg = $("#ativar-convite-msg");
+  const btn = $("#ativar-convite-submit");
+  btn.disabled = true;
+  msg.style.color = "var(--muted)";
+  msg.textContent = "Validando…";
+  try {
+    const { error } = await supa.rpc("resgatar_convite_pendente", { p_code: codigo });
+    if (error) throw error;
+    await carregarEstadoNuvem(CURRENT_USER);
+    iniciarApp();
+  } catch (err) {
+    msg.style.color = "var(--bad)";
+    msg.textContent = traduzErroAuth(err.message);
+    btn.disabled = false;
+  }
+  return false;
+}
+
+/* Chamada logo após bootstrapAuth() detectar convite_pendente=true no
+   profile: tenta resgatar automaticamente o código salvo em sessionStorage
+   antes do redirect do Google. Sem código salvo (ex.: usuário entrou pela
+   aba "Entrar" no Google, ou sessionStorage foi limpo), mostra a tela de
+   ativação para o usuário informar o convite manualmente. */
+async function tentarAtivarConvitePendente() {
+  const codigo = sessionStorage.getItem(PENDING_INVITE_KEY);
+  sessionStorage.removeItem(PENDING_INVITE_KEY);
+  if (!codigo) {
+    renderAguardandoAtivacaoScreen();
+    return;
+  }
+  try {
+    const { error } = await supa.rpc("resgatar_convite_pendente", { p_code: codigo });
+    if (error) throw error;
+    await carregarEstadoNuvem(CURRENT_USER);
+    iniciarApp();
+  } catch (err) {
+    await supa.auth.signOut();
+    renderAuthScreen(traduzErroAuth(err.message));
+  }
+}
+
 /* Microinterações da landing: contagem progressiva dos números reais da
    plataforma e leve efeito de paralaxe no plano de fundo (ambos
    desativados quando o usuário prefere movimento reduzido). */
@@ -460,6 +537,21 @@ async function esqueciSenha() {
 async function loginComGoogle() {
   const btn = $("#btn-google");
   const msg = $("#auth-msg");
+  /* A plataforma é fechada por convite: na aba "Criar conta" exigimos o
+     código aqui também, antes do redirect, e o guardamos para validar
+     depois do retorno do Google (ver tentarAtivarConvitePendente()) —
+     o signInWithOAuth não tem como carregar essa informação junto. */
+  if (authTab === "criar") {
+    const convite = $("#auth-convite").value.trim();
+    if (!convite) {
+      msg.style.color = "var(--bad)";
+      msg.textContent = "Informe o código de convite para criar sua conta com o Google.";
+      return;
+    }
+    sessionStorage.setItem(PENDING_INVITE_KEY, convite.toUpperCase());
+  } else {
+    sessionStorage.removeItem(PENDING_INVITE_KEY);
+  }
   btn.disabled = true;
   msg.style.color = "var(--muted)";
   msg.textContent = "Redirecionando para o Google…";
