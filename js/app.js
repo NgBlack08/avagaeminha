@@ -1316,20 +1316,21 @@ async function assinar(planoTipo) {
   msg.style.color = "var(--muted)";
   msg.textContent = "Redirecionando para o Mercado Pago…";
   try {
-    const { data, error } = await supa.functions.invoke("mp-criar-assinatura", { body: { plano_tipo: planoTipo } });
-    if (error) {
-      /* supabase-js não expõe o corpo JSON do erro diretamente em error.message
-         quando a function retorna um status != 2xx — precisa ler do Response
-         bruto em error.context para pegar a mensagem amigável que a function
-         devolveu (ver mp-criar-assinatura/index.ts). */
-      let mensagem = error.message;
-      try {
-        const body = await error.context?.json();
-        if (body?.error) mensagem = body.error;
-      } catch (_e) { /* corpo não era JSON — mantém a mensagem genérica */ }
-      throw new Error(mensagem);
-    }
-    if (data?.error) throw new Error(data.error);
+    /* supa.functions.invoke() falha com "Failed to send a request to the
+       Edge Function" em alguns navegadores/versões do supabase-js — um
+       fetch() direto para o mesmo endpoint funciona normalmente, então
+       chamamos a function assim em vez de usar o wrapper da lib. */
+    const { data: { session } } = await supa.auth.getSession();
+    const res = await fetch(`${SUPABASE_URL}/functions/v1/mp-criar-assinatura`, {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${session.access_token}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ plano_tipo: planoTipo }),
+    });
+    const data = await res.json();
+    if (!res.ok || data?.error) throw new Error(data?.error || "Não foi possível iniciar a assinatura no Mercado Pago.");
     if (!data?.init_point) throw new Error("Resposta inesperada do servidor de pagamentos.");
     window.location.href = data.init_point;
   } catch (err) {
