@@ -1,5 +1,5 @@
 /* =====================================================================
-   CEBRASPE LAB — Lote 51: ESTATÍSTICA — MEDIDAS DE TENDÊNCIA CENTRAL
+   QUESTLAB — Lote 51: ESTATÍSTICA — MEDIDAS DE TENDÊNCIA CENTRAL
    Baseado em material de terceiros contendo questões REAIS de
    Certo/Errado de provas anteriores da CEBRASPE (2024-2025) sobre
    medidas de tendência central (média, mediana, moda, quartis).

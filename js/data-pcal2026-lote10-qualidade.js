@@ -1,5 +1,5 @@
 /* =====================================================================
-   CEBRASPE LAB — Ajuste de Qualidade (Lote 10 — calibração final C/E)
+   QUESTLAB — Ajuste de Qualidade (Lote 10 — calibração final C/E)
    2º passe: 36 questões INÉDITAS, TODAS "Errado", distribuídas nas
    disciplinas ainda enviesadas para "Certo" (Penal, Legislação Especial,
    Processo Penal, Estatística, Constitucional, Direitos Humanos, etc.).

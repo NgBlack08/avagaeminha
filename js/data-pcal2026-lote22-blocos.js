@@ -1,5 +1,5 @@
 /* =====================================================================
-   CEBRASPE LAB — Lote 22: BLOCOS TEXTO-BASE ("prova real")
+   QUESTLAB — Lote 22: BLOCOS TEXTO-BASE ("prova real")
    Formato clássico da CEBRASPE: um caso concreto (texto de apoio) com
    várias assertivas encadeadas, exigindo aplicação do direito ao fato.
    3 blocos × 4 itens = 12 itens INÉDITOS (C/E balanceados).

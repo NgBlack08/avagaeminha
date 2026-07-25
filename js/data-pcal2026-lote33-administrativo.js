@@ -1,5 +1,5 @@
 /* =====================================================================
-   CEBRASPE LAB — Lote 33: DIREITO ADMINISTRATIVO (expansão)
+   QUESTLAB — Lote 33: DIREITO ADMINISTRATIVO (expansão)
    Cobre organização administrativa (desconcentração), classificação de
    atos administrativos, agentes públicos (emprego x cargo), poderes
    administrativos (hierárquico, regulamentar, de polícia), controle

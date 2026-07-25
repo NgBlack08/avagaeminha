@@ -1,5 +1,5 @@
 /* =====================================================================
-   CEBRASPE LAB — Lote 41: INTELIGÊNCIA ARTIFICIAL (LLMs, IA generativa,
+   QUESTLAB — Lote 41: INTELIGÊNCIA ARTIFICIAL (LLMs, IA generativa,
    deep learning, embeddings)
    Baseado em material de terceiros contendo 12 questões REAIS de
    múltipla escolha de provas anteriores da CEBRASPE sobre Inteligência

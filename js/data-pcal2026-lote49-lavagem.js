@@ -1,5 +1,5 @@
 /* =====================================================================
-   CEBRASPE LAB — Lote 49: LAVAGEM DE DINHEIRO (Lei 9.613/1998)
+   QUESTLAB — Lote 49: LAVAGEM DE DINHEIRO (Lei 9.613/1998)
    Baseado em material de terceiros contendo 7 questões REAIS de
    Certo/Errado de provas anteriores da banca CEBRASPE (TCE-SC, PC-SE,
    MPE-CE, TC-DF, PF, MJSP), com gabarito oficial, fundamentação nos

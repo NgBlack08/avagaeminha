@@ -1,5 +1,5 @@
 /* =====================================================================
-   CEBRASPE LAB — Lote 28: TI E SEGURANÇA CIBERNÉTICA (expansão)
+   QUESTLAB — Lote 28: TI E SEGURANÇA CIBERNÉTICA (expansão)
    Preenche lacunas confirmadas pela auditoria do edital nos itens de
    Segurança Cibernética (frameworks, protocolos de autenticação,
    gestão de identidades) e nos Crimes Cibernéticos (autenticação,

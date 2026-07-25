@@ -1,5 +1,5 @@
 /* =====================================================================
-   CEBRASPE LAB — Aplicação (SPA)
+   QUESTLAB — Aplicação (SPA)
    Telas: Dashboard, Banco, Simulado, Raio-X da Banca, Predição,
    Estratégias, Detector de Pegadinhas, Perfil.
    ===================================================================== */
@@ -196,8 +196,8 @@ const AVISO_ESTATISTICO = `<div class="aviso">⚠ As probabilidades e índices e
    visita salvas apenas neste dispositivo (não sincronizadas: são só
    um lembrete de UI, não precisam de tabela nova no Supabase).
    ================================================================ */
-const ONBOARDING_VISITAS_KEY = "cebraspe-lab-onboarding-visitas";
-const ONBOARDING_DISMISS_KEY = "cebraspe-lab-onboarding-dismissed";
+const ONBOARDING_VISITAS_KEY = "questlab-onboarding-visitas";
+const ONBOARDING_DISMISS_KEY = "questlab-onboarding-dismissed";
 function onboardingVisitas() {
   try { return JSON.parse(localStorage.getItem(ONBOARDING_VISITAS_KEY) || "{}"); } catch (e) { return {}; }
 }

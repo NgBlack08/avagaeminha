@@ -1,5 +1,5 @@
 /* =====================================================================
-   CEBRASPE LAB — Lote 42: MICROSOFT WINDOWS 10/11
+   QUESTLAB — Lote 42: MICROSOFT WINDOWS 10/11
    Baseado em material de terceiros contendo 12 questões REAIS de
    Certo/Errado de prova anterior da CEBRASPE sobre Windows 10/11
    (com gabarito oficial e dicas de revisão anexadas). Diferentemente

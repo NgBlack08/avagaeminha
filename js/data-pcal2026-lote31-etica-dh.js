@@ -1,5 +1,5 @@
 /* =====================================================================
-   CEBRASPE LAB — Lote 31: ÉTICA NO SERVIÇO PÚBLICO + DIREITOS HUMANOS
+   QUESTLAB — Lote 31: ÉTICA NO SERVIÇO PÚBLICO + DIREITOS HUMANOS
    (expansão)
    Ética no Serviço Público era a disciplina com MENOR cobertura absoluta
    do banco. Como não há texto verificado da Lei Estadual nº 6.754/2006

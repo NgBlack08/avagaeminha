@@ -1,5 +1,5 @@
 /* =====================================================================
-   CEBRASPE LAB — Lote 40: SEGURANÇA DA INFORMAÇÃO (expansão profunda)
+   QUESTLAB — Lote 40: SEGURANÇA DA INFORMAÇÃO (expansão profunda)
    Baseado em três materiais de terceiros contendo 20 questões REAIS de
    provas anteriores da CEBRASPE sobre Segurança da Informação (com
    gabarito oficial e comentários explicativos anexados). Os itens

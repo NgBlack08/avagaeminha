@@ -1,5 +1,5 @@
 /* =====================================================================
-   CEBRASPE LAB — Lote 16: LEGISLAÇÃO PENAL ESPECIAL II
+   QUESTLAB — Lote 16: LEGISLAÇÃO PENAL ESPECIAL II
    Crimes Ambientais (Lei 9.605/1998), Crimes de Racismo/Preconceito
    (Lei 7.716/1989, atualizada pela Lei 14.532/2023), Lavagem de
    Dinheiro (Lei 9.613/1998) e Juizados Especiais Criminais (Lei

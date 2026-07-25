@@ -1,5 +1,5 @@
 /* =====================================================================
-   CEBRASPE LAB — Lote 13: LEI ORGÂNICA NACIONAL DAS POLÍCIAS CIVIS
+   QUESTLAB — Lote 13: LEI ORGÂNICA NACIONAL DAS POLÍCIAS CIVIS
    Lei nº 14.735, de 23 de novembro de 2023 (LONPC).
    ATENÇÃO: o edital PC-AL 2026 a indica como "Lei estadual nº
    14.735/2026" — trata-se, na verdade, da LEI FEDERAL 14.735/2023.

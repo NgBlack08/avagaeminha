@@ -1,5 +1,5 @@
 /* =====================================================================
-   CEBRASPE LAB — Expansão Edital PC-AL 2026 (Lote 3)
+   QUESTLAB — Expansão Edital PC-AL 2026 (Lote 3)
    Preenche lacunas reais do programa de Agente/Escrivão detectadas no
    cruzamento com a prova oficial CESPE (PC-AL 2022):
      • Direito Penal — Crimes contra a pessoa (edital, item 2)

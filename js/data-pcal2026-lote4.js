@@ -1,5 +1,5 @@
 /* =====================================================================
-   CEBRASPE LAB — Expansão Edital PC-AL 2026 (Lote 4 — robustez)
+   QUESTLAB — Expansão Edital PC-AL 2026 (Lote 4 — robustez)
    Grande lote de questões INÉDITAS no estilo CEBRASPE, modeladas nos
    temas e padrões recorrentes da banca em provas policiais, filtradas
    ao programa de Agente/Escrivão (itens 20.2.3 e 20.2.4 do edital).

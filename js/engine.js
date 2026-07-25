@@ -1,11 +1,11 @@
 /* =====================================================================
-   CEBRASPE LAB — Motor Inteligente
+   QUESTLAB — Motor Inteligente
    Perfil do estudante (Módulo 8), simulador adaptativo com repetição
    espaçada (Módulo 7), detector de pegadinhas (Módulo 5) e camada
    estatística (Módulos 2, 12, 13 — versão local/heurística).
    ===================================================================== */
 
-const STORAGE_KEY = "cebraspe-lab-v1";
+const STORAGE_KEY = "questlab-v1";
 
 /* ---------------- Persistência ----------------
    Login obrigatório: o app só é exibido após autenticação (Supabase),

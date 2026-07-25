@@ -1,5 +1,5 @@
 /* =====================================================================
-   CEBRASPE LAB — Expansão Edital PC-AL 2026 (Lote 1: Conhecimentos Básicos)
+   QUESTLAB — Expansão Edital PC-AL 2026 (Lote 1: Conhecimentos Básicos)
    Cobertura do conteúdo programático oficial (item 20.2.3) para
    Agente e Escrivão: Raciocínio Lógico-Matemático, Direitos Humanos,
    Ética no Serviço Público, TI/Segurança Cibernética e Segurança Digital.

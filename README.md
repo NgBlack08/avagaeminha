@@ -1,4 +1,4 @@
-# CEBRASPE Lab — Laboratório de Engenharia Reversa da Banca
+# QuestLab — Laboratório de Engenharia Reversa da Banca
 
 Plataforma inteligente de preparação para concursos **CEBRASPE** de **carreiras policiais**.
 

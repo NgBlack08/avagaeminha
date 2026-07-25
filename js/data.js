@@ -1,5 +1,5 @@
 /* =====================================================================
-   CEBRASPE LAB — Camada de Dados
+   QUESTLAB — Camada de Dados
    Banco inicial de questões INÉDITAS geradas em estilo CEBRASPE
    (Módulo 11), com metadados completos (Módulo 1), engenharia
    cognitiva (Módulo 3) e comentários fundamentados (Módulo 6).

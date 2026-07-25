@@ -1,5 +1,5 @@
 /* =====================================================================
-   CEBRASPE LAB — Lote 11: SIMULADO com textos de apoio longos
+   QUESTLAB — Lote 11: SIMULADO com textos de apoio longos
    Reproduz a ESTRUTURA da prova real da banca: um texto/caso denso
    seguido de vários itens Certo/Errado que o julgam em sequência.
    São 4 blocos temáticos (18 itens), com textos ORIGINAIS redigidos

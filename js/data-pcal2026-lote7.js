@@ -1,5 +1,5 @@
 /* =====================================================================
-   CEBRASPE LAB — Expansão Edital PC-AL 2026 (Lote 7 — robustez)
+   QUESTLAB — Expansão Edital PC-AL 2026 (Lote 7 — robustez)
    Foco: Contabilidade e Análise Financeira, Direito Administrativo
    (organização, responsabilidade do Estado, poderes), Legislação
    Penal Especial (crime organizado, hediondos), Direitos Humanos,

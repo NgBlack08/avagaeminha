@@ -1,5 +1,5 @@
 /* =====================================================================
-   CEBRASPE LAB — Lote 35: DIREITO PROCESSUAL PENAL (expansão)
+   QUESTLAB — Lote 35: DIREITO PROCESSUAL PENAL (expansão)
    Cobre inquérito policial (dispensabilidade), prisão preventiva de
    ofício (vedação pós-Pacote Anticrime), prisão temporária em crimes
    hediondos, presunção de inocência e execução da pena, suspensão

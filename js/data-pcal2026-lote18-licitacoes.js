@@ -1,5 +1,5 @@
 /* =====================================================================
-   CEBRASPE LAB — Lote 18: LEI DE LICITAÇÕES E CONTRATOS (Lei 14.133/2021)
+   QUESTLAB — Lote 18: LEI DE LICITAÇÕES E CONTRATOS (Lei 14.133/2021)
    Nova Lei de Licitações — modalidades, critérios de julgamento, fases,
    contratação direta e agentes.
    14 itens INÉDITOS (C/E balanceados), estilo CEBRASPE.

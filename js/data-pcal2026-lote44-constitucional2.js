@@ -1,5 +1,5 @@
 /* =====================================================================
-   CEBRASPE LAB — Lote 44: DIREITO CONSTITUCIONAL
+   QUESTLAB — Lote 44: DIREITO CONSTITUCIONAL
    Direitos e Deveres Individuais e Coletivos (art. 5º da CF/88) — expansão
    Baseado em material de terceiros contendo 7 questões REAIS de
    Certo/Errado de provas anteriores da banca CEBRASPE (TCE-RN, PC-AL,

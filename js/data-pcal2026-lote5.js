@@ -1,5 +1,5 @@
 /* =====================================================================
-   CEBRASPE LAB — Expansão Edital PC-AL 2026 (Lote 5 — robustez)
+   QUESTLAB — Expansão Edital PC-AL 2026 (Lote 5 — robustez)
    Foco: Processo Penal (IP, prisões, provas), Legislação Penal Especial
    (tortura, racismo/injúria racial, idoso, drogas, ordem tributária,
    lavagem, PcD), Crimes Cibernéticos e reforço de Direito Penal.

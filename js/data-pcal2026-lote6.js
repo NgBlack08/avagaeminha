@@ -1,5 +1,5 @@
 /* =====================================================================
-   CEBRASPE LAB — Expansão Edital PC-AL 2026 (Lote 6 — robustez)
+   QUESTLAB — Expansão Edital PC-AL 2026 (Lote 6 — robustez)
    Guiado pelo mapa de artigos do plano de leitura pós-edital.
    Foco: Lei 9.099/95 (Juizados), Estatuto do Desarmamento, Crimes
    contra o Sistema Financeiro Nacional (Lei 7.492/86), Lei de

@@ -1,5 +1,5 @@
 /* =====================================================================
-   CEBRASPE LAB — Lote 12: SIMULADO com textos longos (ampliação)
+   QUESTLAB — Lote 12: SIMULADO com textos longos (ampliação)
    Amplia o formato de bloco (texto/caso denso + vários itens Certo/Errado
    em sequência) às disciplinas ainda não contempladas no lote 11:
      BLOCO 5 — Caso de contratação pública    → Direito Administrativo

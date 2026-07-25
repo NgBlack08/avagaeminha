@@ -1,5 +1,5 @@
 /* =====================================================================
-   CEBRASPE LAB — Lote 17: DIREITOS HUMANOS
+   QUESTLAB — Lote 17: DIREITOS HUMANOS
    Convenção Americana de Direitos Humanos (Pacto de San José da Costa
    Rica — Decreto 678/1992) e Programa Nacional de Direitos Humanos
    (PNDH-3 — Decreto 7.037/2009).

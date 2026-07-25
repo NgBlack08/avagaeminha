@@ -1,5 +1,5 @@
 /* =====================================================================
-   CEBRASPE LAB — Lote 15: LEGISLAÇÃO PENAL ESPECIAL I
+   QUESTLAB — Lote 15: LEGISLAÇÃO PENAL ESPECIAL I
    Lei Maria da Penha (11.340/2006), Lei de Tortura (9.455/1997) e
    Lei dos Crimes Hediondos (8.072/1990).
    30 itens INÉDITOS (C/E balanceados), no estilo CEBRASPE, com

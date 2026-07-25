@@ -1,5 +1,5 @@
 /* =====================================================================
-   CEBRASPE LAB — Lote 25: AJUSTE DE ESCOPO (fora do edital PC-AL 2026)
+   QUESTLAB — Lote 25: AJUSTE DE ESCOPO (fora do edital PC-AL 2026)
    Verificação cruzada com o conteúdo programático oficial do edital
    PC-AL 2026 (Agente/Escrivão) revelou dois temas presentes no banco
    que NÃO constam do edital:

@@ -1,5 +1,5 @@
 /* =====================================================================
-   CEBRASPE LAB — Autenticação (Supabase Auth)
+   QUESTLAB — Autenticação (Supabase Auth)
    Acesso exclusivo por login (e-mail e senha, ou Google). Não há modo
    local/sem conta: é preciso estar autenticado para usar a plataforma,
    e todo o progresso é sincronizado na nuvem (Supabase).
@@ -10,7 +10,7 @@ let authTab = "entrar";
    redirecionar para o Google — a criação da conta via signInWithOAuth não
    tem como carregar metadata customizada, então o convite só é validado
    depois do retorno (ver tentarAtivarConvitePendente()). */
-const PENDING_INVITE_KEY = "cebraspe-lab-pending-invite";
+const PENDING_INVITE_KEY = "questlab-pending-invite";
 
 /* Ícones inline (SVG autoral/genérico) — sem dependência de rede. */
 const EYE_ICON = `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8Z"/><circle cx="12" cy="12" r="3"/></svg>`;
@@ -270,8 +270,8 @@ function renderAuthScreen(erro) {
         ${landingHeroBg()}
         <header class="landing-top">
           <div class="brand">
-            <div class="logo">CL</div>
-            <h1>CEBRASPE Lab<small>Foco: Carreiras Policiais</small></h1>
+            <div class="logo">QL</div>
+            <h1>QuestLab<small>Foco: Carreiras Policiais</small></h1>
           </div>
           <button class="btn ghost small" onclick="toggleTheme()" aria-label="Alternar tema claro/escuro">◐ Tema</button>
         </header>

@@ -1,5 +1,5 @@
 /* =====================================================================
-   CEBRASPE LAB — Lote 24: BALANÇO C/E POR PADRÃO DA BANCA
+   QUESTLAB — Lote 24: BALANÇO C/E POR PADRÃO DA BANCA
    Corrige o desequilíbrio mais grave encontrado ao auditar a distribuição
    Certo/Errado de cada padrão (DNA_BANCA):
    - "Exigência inexistente" estava em 0C/56E (nunca Certo) — sem

@@ -1,5 +1,5 @@
 /* =====================================================================
-   CEBRASPE LAB — Ranking & Desafios (duelos assíncronos)
+   QUESTLAB — Ranking & Desafios (duelos assíncronos)
    - Ranking público dos maiores vencedores (via função SECURITY DEFINER
      no Supabase; nunca expõe e-mail — só o nickname escolhido).
    - Desafio direcionado: o desafiante joga N questões; o adversário

@@ -1,5 +1,5 @@
 /* =====================================================================
-   CEBRASPE LAB — Lote 19: DIREITO PENAL — ATUALIZAÇÃO + JURISPRUDÊNCIA
+   QUESTLAB — Lote 19: DIREITO PENAL — ATUALIZAÇÃO + JURISPRUDÊNCIA
    Fecha lacunas de alto rendimento e traz legislação recente:
    - Feminicídio como crime AUTÔNOMO (Lei 14.994/2024, art. 121-A do CP)
    - Perseguição/stalking (art. 147-A) e violência psicológica (147-B)

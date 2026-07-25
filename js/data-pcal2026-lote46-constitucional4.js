@@ -1,5 +1,5 @@
 /* =====================================================================
-   CEBRASPE LAB — Lote 46: DIREITO CONSTITUCIONAL
+   QUESTLAB — Lote 46: DIREITO CONSTITUCIONAL
    Nacionalidade (art. 12 e correlatos da CF/88) — expansão
    Baseado em material de terceiros contendo 5 questões REAIS de
    Certo/Errado de provas anteriores da banca CEBRASPE (MPE-TO,

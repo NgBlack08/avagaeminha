@@ -1,5 +1,5 @@
 /* =====================================================================
-   CEBRASPE LAB — Expansão Edital PC-AL 2026 (Lote 8 — robustez máxima)
+   QUESTLAB — Expansão Edital PC-AL 2026 (Lote 8 — robustez máxima)
    Mapeado pelo plano de leitura (artigos do edital). Preenche lacunas:
    Direito Penal (crimes contra a pessoa, contra a Administração e
    contra a administração da justiça, receptação), Raciocínio Lógico

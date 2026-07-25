@@ -1,6 +1,7 @@
 /* =====================================================================
-   CEBRASPE LAB — Cliente Supabase
-   Projeto dedicado "cebraspe-lab". A anon key é pública por design
+   QUESTLAB — Cliente Supabase
+   Projeto dedicado (nome interno no Supabase: "cebraspe-lab", legado —
+   não é o nome do produto). A anon key é pública por design
    (protegida por Row Level Security nas tabelas), segura para uso
    direto no front-end estático.
    ===================================================================== */

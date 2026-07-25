@@ -1,5 +1,5 @@
 /* =====================================================================
-   CEBRASPE LAB — Lote 37: CONTABILIDADE E ANÁLISE FINANCEIRA (expansão)
+   QUESTLAB — Lote 37: CONTABILIDADE E ANÁLISE FINANCEIRA (expansão)
    Preenche uma das lacunas mais profundas do banco: balanço patrimonial,
    DRE, análise de indícios de fraude/lavagem (movimentação financeira
    incompatível), gestão de riscos financeiros, análises vertical e

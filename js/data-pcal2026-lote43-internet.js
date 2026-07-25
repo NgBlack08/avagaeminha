@@ -1,5 +1,5 @@
 /* =====================================================================
-   CEBRASPE LAB — Lote 43: INTERNET (navegação, nuvem, redes, buscadores)
+   QUESTLAB — Lote 43: INTERNET (navegação, nuvem, redes, buscadores)
    Baseado em material de terceiros contendo 12 questões REAIS de
    Certo/Errado de prova anterior da CEBRASPE sobre Internet (com
    gabarito oficial e dicas de revisão anexadas). Cada enunciado

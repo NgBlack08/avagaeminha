@@ -1,5 +1,5 @@
 /* =====================================================================
-   CEBRASPE LAB — Lote 29: LÍNGUA PORTUGUESA (expansão — texto-base autoral)
+   QUESTLAB — Lote 29: LÍNGUA PORTUGUESA (expansão — texto-base autoral)
    Preenche uma das lacunas mais rasas do banco (Língua Portuguesa era a
    disciplina com menor cobertura relativa considerando sua relevância
    no edital). Texto-base 100% autoral (tema: perícia criminal e cadeia

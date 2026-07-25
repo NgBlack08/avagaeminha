@@ -1,5 +1,5 @@
 /* =====================================================================
-   CEBRASPE LAB — Lote 23: PADRÕES QUE FALTAVAM (verificação de banca)
+   QUESTLAB — Lote 23: PADRÕES QUE FALTAVAM (verificação de banca)
    Fecha as duas lacunas apontadas ao cruzar o DNA do sistema com as
    análises públicas da CEBRASPE:
    - NEGAÇÃO DUPLA / embaralhamento ("não é incorreto…", "não se pode

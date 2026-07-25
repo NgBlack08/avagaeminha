@@ -1,5 +1,5 @@
 /* =====================================================================
-   CEBRASPE LAB — Painel de Administração (somente leitura + convites)
+   QUESTLAB — Painel de Administração (somente leitura + convites)
    Visível apenas para contas com is_admin = true (checagem também
    reforçada no servidor via SECURITY DEFINER: qualquer chamada de uma
    conta não-admin é rejeitada pelo Supabase, independentemente da UI).

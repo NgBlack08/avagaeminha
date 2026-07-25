@@ -1,5 +1,5 @@
 /* =====================================================================
-   CEBRASPE LAB — Lote 47: DIREITO CONSTITUCIONAL
+   QUESTLAB — Lote 47: DIREITO CONSTITUCIONAL
    Direitos Políticos e Partidos Políticos (arts. 14 a 17 da CF/88)
    Baseado em material de terceiros contendo 7 questões REAIS de
    Certo/Errado de provas anteriores da banca CEBRASPE (FUB, TCE-PA,

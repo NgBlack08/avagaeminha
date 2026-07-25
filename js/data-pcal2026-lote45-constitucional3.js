@@ -1,5 +1,5 @@
 /* =====================================================================
-   CEBRASPE LAB — Lote 45: DIREITO CONSTITUCIONAL
+   QUESTLAB — Lote 45: DIREITO CONSTITUCIONAL
    Direitos Sociais (arts. 6º a 11 da CF/88) — expansão
    Baseado em material de terceiros contendo 7 questões REAIS de
    Certo/Errado de provas anteriores da banca CEBRASPE (PC-AL, MPS,

@@ -1,5 +1,5 @@
 /* =====================================================================
-   CEBRASPE LAB — Lote 50: ESTATÍSTICA — ANÁLISE EXPLORATÓRIA DE DADOS
+   QUESTLAB — Lote 50: ESTATÍSTICA — ANÁLISE EXPLORATÓRIA DE DADOS
    Baseado em material de terceiros contendo questões REAIS de
    Certo/Errado de provas anteriores da CEBRASPE (2013 a 2025) sobre
    conceitos de análise exploratória de dados (tipos de variáveis,

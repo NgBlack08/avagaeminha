@@ -1,5 +1,5 @@
 /* =====================================================================
-   CEBRASPE LAB — Lote 30: RACIOCÍNIO LÓGICO-MATEMÁTICO (expansão)
+   QUESTLAB — Lote 30: RACIOCÍNIO LÓGICO-MATEMÁTICO (expansão)
    Preenche lacuna relevante de RLM: proporcionalidade, porcentagem,
    probabilidade, combinatória com restrições, lógica proposicional,
    negação de proposições categóricas, divisibilidade, PA, conjuntos e

@@ -1,5 +1,5 @@
 /* =====================================================================
-   CEBRASPE LAB — Lote 32: DIREITO CONSTITUCIONAL (expansão)
+   QUESTLAB — Lote 32: DIREITO CONSTITUCIONAL (expansão)
    Cobre pontos de alta recorrência ainda pouco explorados no banco:
    extradição de brasileiro naturalizado, direito ao esquecimento (STF,
    Tema 786), inviolabilidade de domicílio, remédios constitucionais

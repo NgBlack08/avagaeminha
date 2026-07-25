@@ -1,5 +1,5 @@
 /* =====================================================================
-   CEBRASPE LAB — Lote 14: CONSTITUIÇÃO DO ESTADO DE ALAGOAS
+   QUESTLAB — Lote 14: CONSTITUIÇÃO DO ESTADO DE ALAGOAS
    Recorte do edital PC-AL 2026: SERVIDORES PÚBLICOS e SEGURANÇA PÚBLICA.
    20 itens INÉDITOS (10 Certo / 10 Errado), com referência aos artigos
    da Constituição Estadual (arts. 54 a 65 e sistema de segurança).

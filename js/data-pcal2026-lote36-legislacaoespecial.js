@@ -1,5 +1,5 @@
 /* =====================================================================
-   CEBRASPE LAB — Lote 36: LEGISLAÇÃO PENAL ESPECIAL (expansão)
+   QUESTLAB — Lote 36: LEGISLAÇÃO PENAL ESPECIAL (expansão)
    Cobre crimes falimentares (Lei 11.101/2005), efeitos da condenação
    por lavagem de dinheiro (Lei 9.613/1998), a real extensão da
    insuscetibilidade dos crimes hediondos após a Lei 11.464/2007 (fim

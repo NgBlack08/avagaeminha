@@ -1,5 +1,5 @@
 /* =====================================================================
-   CEBRASPE LAB — Gráficos SVG nativos (Módulo 14)
+   QUESTLAB — Gráficos SVG nativos (Módulo 14)
    Sem dependências externas: barras, linhas, medidor e heatmap.
    ===================================================================== */
 

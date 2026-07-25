@@ -1,5 +1,5 @@
 /* =====================================================================
-   CEBRASPE LAB — Ajuste de Qualidade (Lote 9 — calibração)
+   QUESTLAB — Ajuste de Qualidade (Lote 9 — calibração)
    1º passe de qualidade: rebalanceia a proporção Certo/Errado (o banco
    estava com 64% "Certo"; alvo ~50%), reforça as disciplinas mais
    enviesadas para "Certo" com itens "Errado" plausíveis, adiciona

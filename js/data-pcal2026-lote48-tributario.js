@@ -1,5 +1,5 @@
 /* =====================================================================
-   CEBRASPE LAB — Lote 48: LEGISLAÇÃO EXTRAVAGANTE
+   QUESTLAB — Lote 48: LEGISLAÇÃO EXTRAVAGANTE
    Crimes contra a ordem tributária, econômica e as relações de
    consumo (Lei 8.137/1990) e crimes contra a ordem econômica —
    combustíveis e usurpação de bens da União (Lei 8.176/1991)

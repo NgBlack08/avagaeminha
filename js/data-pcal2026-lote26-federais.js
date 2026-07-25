@@ -1,5 +1,5 @@
 /* =====================================================================
-   CEBRASPE LAB — Lote 26: LEIS FEDERAIS DO EDITAL SEM QUESTÕES
+   QUESTLAB — Lote 26: LEIS FEDERAIS DO EDITAL SEM QUESTÕES
    Preenche lacunas de LEGISLAÇÃO PENAL ESPECIAL apontadas na
    verificação cruzada com o edital PC-AL 2026:
    - Crimes de responsabilidade: Lei 1.079/1950 (autoridades federais/

@@ -1,5 +1,5 @@
 /* =====================================================================
-   CEBRASPE LAB — Lote 38: TI E SEGURANÇA CIBERNÉTICA (expansão 2)
+   QUESTLAB — Lote 38: TI E SEGURANÇA CIBERNÉTICA (expansão 2)
    Complementa o lote 28 com temas confirmados via simulado próprio e
    ainda não cobertos: permissões no Linux (chmod), modelo conceitual
    de bancos de dados (DER), linguagem SQL (DML), fundamentos de

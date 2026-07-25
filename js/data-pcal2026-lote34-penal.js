@@ -1,5 +1,5 @@
 /* =====================================================================
-   CEBRASPE LAB — Lote 34: DIREITO PENAL (expansão)
+   QUESTLAB — Lote 34: DIREITO PENAL (expansão)
    Cobre temas de alta recorrência: princípio da insignificância e
    habitualidade delitiva (jurisprudência STJ/STF), feminicídio como
    crime autônomo pós-Lei nº 14.994/2024, latrocínio consumado, furto

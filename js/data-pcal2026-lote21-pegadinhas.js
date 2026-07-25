@@ -1,5 +1,5 @@
 /* =====================================================================
-   CEBRASPE LAB — Lote 21: PEGADINHAS AVANÇADAS (rebalanceamento)
+   QUESTLAB — Lote 21: PEGADINHAS AVANÇADAS (rebalanceamento)
    Lote engenhado para treinar os padrões da banca SUBUTILIZADOS no
    banco: restrição indevida, troca de sujeito, verdade + falso emendado,
    generalização indevida e termo absoluto — inclusive o caso decisivo do

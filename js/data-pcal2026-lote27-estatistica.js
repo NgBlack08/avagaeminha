@@ -1,5 +1,5 @@
 /* =====================================================================
-   CEBRASPE LAB — Lote 27: ESTATÍSTICA E ANÁLISE DE DADOS (expansão)
+   QUESTLAB — Lote 27: ESTATÍSTICA E ANÁLISE DE DADOS (expansão)
    Preenche a lacuna mais profunda apontada na auditoria do edital: os
    itens técnicos especializados (Machine Learning, PLN, bibliotecas
    Python, ETL) do item II "Análise de Dados", que tinham cobertura

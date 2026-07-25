@@ -1,5 +1,5 @@
 /* =====================================================================
-   CEBRASPE LAB — Lote 20: JURISPRUDÊNCIA STF/STJ (o diferencial da elite)
+   QUESTLAB — Lote 20: JURISPRUDÊNCIA STF/STJ (o diferencial da elite)
    Preenche a maior lacuna do banco — súmulas e teses dos tribunais
    superiores, tão cobradas em carreiras policiais:
    - Constitucional: remédios constitucionais + Súmulas STF (266)

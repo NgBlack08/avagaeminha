@@ -1,5 +1,5 @@
 /* =====================================================================
-   CEBRASPE LAB — Lote 39: ÉTICA NO SERVIÇO PÚBLICO — Lei Estadual nº
+   QUESTLAB — Lote 39: ÉTICA NO SERVIÇO PÚBLICO — Lei Estadual nº
    6.754/2006 (Código de Ética Funcional do Servidor Público do Estado
    de Alagoas)
    Esta lacuna havia sido deixada propositalmente em aberto em lotes

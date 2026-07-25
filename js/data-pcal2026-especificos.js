@@ -1,5 +1,5 @@
 /* =====================================================================
-   CEBRASPE LAB — Expansão Edital PC-AL 2026 (Lote 2: Conhec. Específicos)
+   QUESTLAB — Expansão Edital PC-AL 2026 (Lote 2: Conhec. Específicos)
    Agente e Escrivão (item 20.2.4): aplicação da lei penal, Lei 9.099/95,
    Legislação Penal Especial, Estatística,
    Contabilidade e Análise Financeira.
