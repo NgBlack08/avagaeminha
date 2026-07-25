@@ -3,7 +3,7 @@
    Foco: Contabilidade e Análise Financeira, Direito Administrativo
    (organização, responsabilidade do Estado, poderes), Legislação
    Penal Especial (crime organizado, hediondos), Direitos Humanos,
-   Estatística e Análise de Dados, e reforço de Direito Penal e TI.
+   Estatística, e reforço de Direito Penal e TI.
    Questões INÉDITAS no estilo CEBRASPE, fundamentadas na legislação
    vigente e jurisprudência consolidada. Não reproduzem questões
    oficiais — usam apenas os padrões e temas da banca.
@@ -366,7 +366,7 @@ const QUESTOES_PCAL_LOTE7 = [
 
   /* ==================== ESTATÍSTICA E ANÁLISE DE DADOS ==================== */
   {
-    id: "ES-012", disciplina: "Estatística e Análise de Dados", assunto: "Machine Learning", subassunto: "Supervisionado × não supervisionado",
+    id: "ES-012", disciplina: "Estatística", assunto: "Machine Learning", subassunto: "Supervisionado × não supervisionado",
     concurso: "PCAL", cargo: ["Agente","Escrivão","Perito Criminal","Papiloscopista"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 45, probReaparecer: 0.82,
     enunciado: "A análise de agrupamentos (clusterização) é uma técnica de aprendizado não supervisionado, pois busca identificar estruturas ou grupos em dados que não possuem rótulos previamente definidos.",
@@ -389,7 +389,7 @@ const QUESTOES_PCAL_LOTE7 = [
     }
   },
   {
-    id: "ES-013", disciplina: "Estatística e Análise de Dados", assunto: "Machine Learning", subassunto: "Overfitting e regularização",
+    id: "ES-013", disciplina: "Estatística", assunto: "Machine Learning", subassunto: "Overfitting e regularização",
     concurso: "PCAL", cargo: ["Agente","Escrivão","Perito Criminal","Papiloscopista"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 45, probReaparecer: 0.8,
     enunciado: "O overfitting (sobreajuste) ocorre quando o modelo se ajusta excessivamente aos dados de treinamento, capturando inclusive o ruído, o que prejudica sua capacidade de generalização para dados novos; técnicas de regularização ajudam a mitigar esse problema.",
@@ -412,7 +412,7 @@ const QUESTOES_PCAL_LOTE7 = [
     }
   },
   {
-    id: "ES-014", disciplina: "Estatística e Análise de Dados", assunto: "Análise de dados", subassunto: "CRISP-DM",
+    id: "ES-014", disciplina: "Estatística", assunto: "Análise de dados", subassunto: "CRISP-DM",
     concurso: "PCAL", cargo: ["Agente","Escrivão","Perito Criminal","Papiloscopista"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 45, probReaparecer: 0.72,
     enunciado: "No modelo CRISP-DM de mineração de dados, a fase de entendimento do negócio antecede a de preparação dos dados, sendo esta última normalmente a que mais consome tempo no processo.",
@@ -549,7 +549,7 @@ QUESTOES.push(...QUESTOES_PCAL_LOTE7);
     { tema: "Descentralização × desconcentração", freq: 85, tendencia: "estavel", prob: 0.87 },
     { tema: "Responsabilidade do Estado por omissão", freq: 82, tendencia: "estavel", prob: 0.84 },
   ]);
-  add("Estatística e Análise de Dados", [
+  add("Estatística", [
     { tema: "Aprendizado supervisionado × não supervisionado", freq: 84, tendencia: "alta", prob: 0.86 },
     { tema: "CRISP-DM", freq: 74, tendencia: "alta", prob: 0.77 },
   ]);

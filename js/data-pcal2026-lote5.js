@@ -457,7 +457,7 @@ const QUESTOES_PCAL_LOTE5 = [
 
   /* ==================== ESTATÍSTICA (reforço) ==================== */
   {
-    id: "ES-010", disciplina: "Estatística e Análise de Dados", assunto: "Probabilidade", subassunto: "Teorema de Bayes",
+    id: "ES-010", disciplina: "Estatística", assunto: "Probabilidade", subassunto: "Teorema de Bayes",
     concurso: "PCAL", cargo: ["Agente","Escrivão","Perito Criminal","Papiloscopista"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 50, probReaparecer: 0.8,
     enunciado: "O teorema de Bayes permite atualizar a probabilidade de uma hipótese à luz de novas evidências, relacionando a probabilidade a posteriori à probabilidade a priori e à verossimilhança da evidência observada.",
@@ -480,7 +480,7 @@ const QUESTOES_PCAL_LOTE5 = [
     }
   },
   {
-    id: "ES-011", disciplina: "Estatística e Análise de Dados", assunto: "Inferência", subassunto: "Teorema Central do Limite",
+    id: "ES-011", disciplina: "Estatística", assunto: "Inferência", subassunto: "Teorema Central do Limite",
     concurso: "PCAL", cargo: ["Agente","Escrivão","Perito Criminal","Papiloscopista"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 50, probReaparecer: 0.78,
     enunciado: "Pelo Teorema Central do Limite, a distribuição da média amostral aproxima-se de uma distribuição normal à medida que o tamanho da amostra aumenta, independentemente da forma da distribuição da população de origem.",

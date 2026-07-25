@@ -21,7 +21,7 @@ const QUESTOES_PCAL_LOTE50 = [
 
   /* ===== ESTATÍSTICA (AMOSTRA) x PARÂMETRO (POPULAÇÃO) ===== */
   {
-    id: "ES-060", disciplina: "Estatística e Análise de Dados", assunto: "Análise Exploratória de Dados", subassunto: "Estatística x parâmetro (amostra x população)",
+    id: "ES-060", disciplina: "Estatística", assunto: "Análise Exploratória de Dados", subassunto: "Estatística x parâmetro (amostra x população)",
     concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (conceitos de amostragem)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.8,
@@ -45,7 +45,7 @@ const QUESTOES_PCAL_LOTE50 = [
     }
   },
   {
-    id: "ES-061", disciplina: "Estatística e Análise de Dados", assunto: "Análise Exploratória de Dados", subassunto: "Estatística x parâmetro (amostra x população)",
+    id: "ES-061", disciplina: "Estatística", assunto: "Análise Exploratória de Dados", subassunto: "Estatística x parâmetro (amostra x população)",
     concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (conceitos de amostragem)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.76,
@@ -71,7 +71,7 @@ const QUESTOES_PCAL_LOTE50 = [
 
   /* ===== VARIÁVEL QUANTITATIVA CONTÍNUA — QUALQUER VALOR NUMÉRICO ===== */
   {
-    id: "ES-062", disciplina: "Estatística e Análise de Dados", assunto: "Análise Exploratória de Dados", subassunto: "Variáveis quantitativas contínuas",
+    id: "ES-062", disciplina: "Estatística", assunto: "Análise Exploratória de Dados", subassunto: "Variáveis quantitativas contínuas",
     concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (tipos de variáveis)",
     tipo: "CE", dificuldade: 1, tempoIdealSeg: 45, probReaparecer: 0.82,
@@ -95,7 +95,7 @@ const QUESTOES_PCAL_LOTE50 = [
     }
   },
   {
-    id: "ES-063", disciplina: "Estatística e Análise de Dados", assunto: "Análise Exploratória de Dados", subassunto: "Variáveis quantitativas contínuas",
+    id: "ES-063", disciplina: "Estatística", assunto: "Análise Exploratória de Dados", subassunto: "Variáveis quantitativas contínuas",
     concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (tipos de variáveis)",
     tipo: "CE", dificuldade: 1, tempoIdealSeg: 45, probReaparecer: 0.78,
@@ -121,7 +121,7 @@ const QUESTOES_PCAL_LOTE50 = [
 
   /* ===== VARIÁVEL DUMMY — K CATEGORIAS EXIGEM K-1 DUMMIES ===== */
   {
-    id: "ES-064", disciplina: "Estatística e Análise de Dados", assunto: "Análise Exploratória de Dados", subassunto: "Variáveis dummy (binárias)",
+    id: "ES-064", disciplina: "Estatística", assunto: "Análise Exploratória de Dados", subassunto: "Variáveis dummy (binárias)",
     concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (variáveis dummy)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.76,
@@ -145,7 +145,7 @@ const QUESTOES_PCAL_LOTE50 = [
     }
   },
   {
-    id: "ES-065", disciplina: "Estatística e Análise de Dados", assunto: "Análise Exploratória de Dados", subassunto: "Variáveis dummy (binárias)",
+    id: "ES-065", disciplina: "Estatística", assunto: "Análise Exploratória de Dados", subassunto: "Variáveis dummy (binárias)",
     concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (variáveis dummy)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.72,
@@ -171,7 +171,7 @@ const QUESTOES_PCAL_LOTE50 = [
 
   /* ===== MÉDIA EXIGE VARIÁVEL MÉTRICA (QUANTITATIVA) ===== */
   {
-    id: "ES-066", disciplina: "Estatística e Análise de Dados", assunto: "Análise Exploratória de Dados", subassunto: "Cálculo da média — exigência de variável métrica",
+    id: "ES-066", disciplina: "Estatística", assunto: "Análise Exploratória de Dados", subassunto: "Cálculo da média — exigência de variável métrica",
     concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (medidas de tendência central)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.8,
@@ -195,7 +195,7 @@ const QUESTOES_PCAL_LOTE50 = [
     }
   },
   {
-    id: "ES-067", disciplina: "Estatística e Análise de Dados", assunto: "Análise Exploratória de Dados", subassunto: "Cálculo da média — exigência de variável métrica",
+    id: "ES-067", disciplina: "Estatística", assunto: "Análise Exploratória de Dados", subassunto: "Cálculo da média — exigência de variável métrica",
     concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (medidas de tendência central)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.76,
@@ -221,7 +221,7 @@ const QUESTOES_PCAL_LOTE50 = [
 
   /* ===== DIAS DA SEMANA SÃO QUALITATIVOS ORDINAIS, NÃO QUANTITATIVOS ===== */
   {
-    id: "ES-068", disciplina: "Estatística e Análise de Dados", assunto: "Análise Exploratória de Dados", subassunto: "Variáveis ordinais são qualitativas, não quantitativas",
+    id: "ES-068", disciplina: "Estatística", assunto: "Análise Exploratória de Dados", subassunto: "Variáveis ordinais são qualitativas, não quantitativas",
     concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (classificação de variáveis)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.8,
@@ -245,7 +245,7 @@ const QUESTOES_PCAL_LOTE50 = [
     }
   },
   {
-    id: "ES-069", disciplina: "Estatística e Análise de Dados", assunto: "Análise Exploratória de Dados", subassunto: "Variáveis ordinais são qualitativas, não quantitativas",
+    id: "ES-069", disciplina: "Estatística", assunto: "Análise Exploratória de Dados", subassunto: "Variáveis ordinais são qualitativas, não quantitativas",
     concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (classificação de variáveis)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.76,
@@ -271,7 +271,7 @@ const QUESTOES_PCAL_LOTE50 = [
 
   /* ===== CORES EM GRÁFICOS INFLUENCIAM A INTERPRETAÇÃO ===== */
   {
-    id: "ES-070", disciplina: "Estatística e Análise de Dados", assunto: "Análise Exploratória de Dados", subassunto: "Visualização de dados — influência das cores",
+    id: "ES-070", disciplina: "Estatística", assunto: "Análise Exploratória de Dados", subassunto: "Visualização de dados — influência das cores",
     concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (visualização de dados)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.78,
@@ -295,7 +295,7 @@ const QUESTOES_PCAL_LOTE50 = [
     }
   },
   {
-    id: "ES-071", disciplina: "Estatística e Análise de Dados", assunto: "Análise Exploratória de Dados", subassunto: "Visualização de dados — influência das cores",
+    id: "ES-071", disciplina: "Estatística", assunto: "Análise Exploratória de Dados", subassunto: "Visualização de dados — influência das cores",
     concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (visualização de dados)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.74,
@@ -321,7 +321,7 @@ const QUESTOES_PCAL_LOTE50 = [
 
   /* ===== GRÁFICO DE PIZZA — INADEQUADO PARA MUITAS CATEGORIAS/DADOS COMPLEXOS ===== */
   {
-    id: "ES-072", disciplina: "Estatística e Análise de Dados", assunto: "Análise Exploratória de Dados", subassunto: "Gráfico de setores (pizza) — limitações",
+    id: "ES-072", disciplina: "Estatística", assunto: "Análise Exploratória de Dados", subassunto: "Gráfico de setores (pizza) — limitações",
     concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (visualização de dados)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.8,
@@ -345,7 +345,7 @@ const QUESTOES_PCAL_LOTE50 = [
     }
   },
   {
-    id: "ES-073", disciplina: "Estatística e Análise de Dados", assunto: "Análise Exploratória de Dados", subassunto: "Gráfico de setores (pizza) — limitações",
+    id: "ES-073", disciplina: "Estatística", assunto: "Análise Exploratória de Dados", subassunto: "Gráfico de setores (pizza) — limitações",
     concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (visualização de dados)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.76,
@@ -371,7 +371,7 @@ const QUESTOES_PCAL_LOTE50 = [
 
   /* ===== TABELA DE FREQUÊNCIAS — PERDA DA SEQUÊNCIA ORIGINAL DOS DADOS ===== */
   {
-    id: "ES-074", disciplina: "Estatística e Análise de Dados", assunto: "Análise Exploratória de Dados", subassunto: "Tabela de frequências — perda de informação sequencial",
+    id: "ES-074", disciplina: "Estatística", assunto: "Análise Exploratória de Dados", subassunto: "Tabela de frequências — perda de informação sequencial",
     concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (distribuição de frequências)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.78,
@@ -395,7 +395,7 @@ const QUESTOES_PCAL_LOTE50 = [
     }
   },
   {
-    id: "ES-075", disciplina: "Estatística e Análise de Dados", assunto: "Análise Exploratória de Dados", subassunto: "Tabela de frequências — perda de informação sequencial",
+    id: "ES-075", disciplina: "Estatística", assunto: "Análise Exploratória de Dados", subassunto: "Tabela de frequências — perda de informação sequencial",
     concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (distribuição de frequências)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.74,
@@ -421,7 +421,7 @@ const QUESTOES_PCAL_LOTE50 = [
 
   /* ===== HISTOGRAMA — ALTURA DAS BARRAS PROPORCIONAL À FREQUÊNCIA ===== */
   {
-    id: "ES-076", disciplina: "Estatística e Análise de Dados", assunto: "Análise Exploratória de Dados", subassunto: "Histograma — construção",
+    id: "ES-076", disciplina: "Estatística", assunto: "Análise Exploratória de Dados", subassunto: "Histograma — construção",
     concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (histogramas)",
     tipo: "CE", dificuldade: 1, tempoIdealSeg: 45, probReaparecer: 0.8,
@@ -445,7 +445,7 @@ const QUESTOES_PCAL_LOTE50 = [
     }
   },
   {
-    id: "ES-077", disciplina: "Estatística e Análise de Dados", assunto: "Análise Exploratória de Dados", subassunto: "Histograma — construção",
+    id: "ES-077", disciplina: "Estatística", assunto: "Análise Exploratória de Dados", subassunto: "Histograma — construção",
     concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (histogramas)",
     tipo: "CE", dificuldade: 1, tempoIdealSeg: 45, probReaparecer: 0.76,
@@ -471,7 +471,7 @@ const QUESTOES_PCAL_LOTE50 = [
 
   /* ===== AGRUPAMENTO EM CLASSES — MAIS CLASSES = MENOS PERDA DE INFORMAÇÃO ===== */
   {
-    id: "ES-078", disciplina: "Estatística e Análise de Dados", assunto: "Análise Exploratória de Dados", subassunto: "Agrupamento em classes — número de classes e perda de informação",
+    id: "ES-078", disciplina: "Estatística", assunto: "Análise Exploratória de Dados", subassunto: "Agrupamento em classes — número de classes e perda de informação",
     concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (distribuição de frequências por classes)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.78,
@@ -495,7 +495,7 @@ const QUESTOES_PCAL_LOTE50 = [
     }
   },
   {
-    id: "ES-079", disciplina: "Estatística e Análise de Dados", assunto: "Análise Exploratória de Dados", subassunto: "Agrupamento em classes — número de classes e perda de informação",
+    id: "ES-079", disciplina: "Estatística", assunto: "Análise Exploratória de Dados", subassunto: "Agrupamento em classes — número de classes e perda de informação",
     concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (distribuição de frequências por classes)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.74,
@@ -523,10 +523,10 @@ const QUESTOES_PCAL_LOTE50 = [
 
 QUESTOES.push(...QUESTOES_PCAL_LOTE50);
 
-/* Frequência de temas — Estatística e Análise de Dados (Análise Exploratória de Dados) */
+/* Frequência de temas — Estatística (Análise Exploratória de Dados) */
 (function () {
-  let d = FREQUENCIA_TEMAS.find(f => f.disciplina === "Estatística e Análise de Dados");
-  if (!d) { d = { disciplina: "Estatística e Análise de Dados", temas: [] }; FREQUENCIA_TEMAS.push(d); }
+  let d = FREQUENCIA_TEMAS.find(f => f.disciplina === "Estatística");
+  if (!d) { d = { disciplina: "Estatística", temas: [] }; FREQUENCIA_TEMAS.push(d); }
   d.temas.push(
     { tema: "Estatística x parâmetro e tipos de variáveis (contínua, dummy, ordinal)", freq: 78, tendencia: "alta", prob: 0.78 },
     { tema: "Medidas de tendência central e nível de mensuração exigido", freq: 78, tendencia: "media", prob: 0.78 },

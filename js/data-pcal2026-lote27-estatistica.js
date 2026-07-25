@@ -16,7 +16,7 @@ const QUESTOES_PCAL_LOTE27 = [
 
   /* ===== ESTATÍSTICA DESCRITIVA — QUARTIS E OUTLIERS ===== */
   {
-    id: "ES-024", disciplina: "Estatística e Análise de Dados", assunto: "Estatística descritiva", subassunto: "Intervalo interquartil",
+    id: "ES-024", disciplina: "Estatística", assunto: "Estatística descritiva", subassunto: "Intervalo interquartil",
     concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (estatística descritiva)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.82,
@@ -40,7 +40,7 @@ const QUESTOES_PCAL_LOTE27 = [
     }
   },
   {
-    id: "ES-025", disciplina: "Estatística e Análise de Dados", assunto: "Estatística descritiva", subassunto: "Regra dos outliers (1,5×IIQ)",
+    id: "ES-025", disciplina: "Estatística", assunto: "Estatística descritiva", subassunto: "Regra dos outliers (1,5×IIQ)",
     concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (estatística descritiva)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 55, probReaparecer: 0.78,
@@ -64,7 +64,7 @@ const QUESTOES_PCAL_LOTE27 = [
     }
   },
   {
-    id: "ES-026", disciplina: "Estatística e Análise de Dados", assunto: "Probabilidade", subassunto: "Variável aleatória discreta (soma de probabilidades)",
+    id: "ES-026", disciplina: "Estatística", assunto: "Probabilidade", subassunto: "Variável aleatória discreta (soma de probabilidades)",
     concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (probabilidade)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.76,
@@ -88,7 +88,7 @@ const QUESTOES_PCAL_LOTE27 = [
     }
   },
   {
-    id: "ES-027", disciplina: "Estatística e Análise de Dados", assunto: "Distribuição normal", subassunto: "Padronização (escore Z)",
+    id: "ES-027", disciplina: "Estatística", assunto: "Distribuição normal", subassunto: "Padronização (escore Z)",
     concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (distribuição normal)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 55, probReaparecer: 0.8,
@@ -114,7 +114,7 @@ const QUESTOES_PCAL_LOTE27 = [
 
   /* ===== ANÁLISE DE DADOS — ETL, PYTHON, ML, PLN ===== */
   {
-    id: "ES-028", disciplina: "Estatística e Análise de Dados", assunto: "Análise de dados", subassunto: "Processo de ETL",
+    id: "ES-028", disciplina: "Estatística", assunto: "Análise de dados", subassunto: "Processo de ETL",
     concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (ETL)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.8,
@@ -138,7 +138,7 @@ const QUESTOES_PCAL_LOTE27 = [
     }
   },
   {
-    id: "ES-029", disciplina: "Estatística e Análise de Dados", assunto: "Análise de dados", subassunto: "Bibliotecas Python (Pandas × Scikit-learn)",
+    id: "ES-029", disciplina: "Estatística", assunto: "Análise de dados", subassunto: "Bibliotecas Python (Pandas × Scikit-learn)",
     concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Python para ciência de dados)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.78,
@@ -162,7 +162,7 @@ const QUESTOES_PCAL_LOTE27 = [
     }
   },
   {
-    id: "ES-030", disciplina: "Estatística e Análise de Dados", assunto: "Mineração de dados", subassunto: "Clusterização (aprendizado não supervisionado)",
+    id: "ES-030", disciplina: "Estatística", assunto: "Mineração de dados", subassunto: "Clusterização (aprendizado não supervisionado)",
     concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (mineração de dados)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 55, probReaparecer: 0.8,
@@ -186,7 +186,7 @@ const QUESTOES_PCAL_LOTE27 = [
     }
   },
   {
-    id: "ES-031", disciplina: "Estatística e Análise de Dados", assunto: "Machine Learning", subassunto: "Classificador Naive Bayes",
+    id: "ES-031", disciplina: "Estatística", assunto: "Machine Learning", subassunto: "Classificador Naive Bayes",
     concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (machine learning)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 55, probReaparecer: 0.76,
@@ -210,7 +210,7 @@ const QUESTOES_PCAL_LOTE27 = [
     }
   },
   {
-    id: "ES-032", disciplina: "Estatística e Análise de Dados", assunto: "Análise de dados", subassunto: "Processamento de Linguagem Natural (n-gramas)",
+    id: "ES-032", disciplina: "Estatística", assunto: "Análise de dados", subassunto: "Processamento de Linguagem Natural (n-gramas)",
     concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (PLN)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.76,
@@ -234,7 +234,7 @@ const QUESTOES_PCAL_LOTE27 = [
     }
   },
   {
-    id: "ES-033", disciplina: "Estatística e Análise de Dados", assunto: "Machine Learning", subassunto: "Overfitting e underfitting",
+    id: "ES-033", disciplina: "Estatística", assunto: "Machine Learning", subassunto: "Overfitting e underfitting",
     concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (machine learning)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.74,
@@ -258,7 +258,7 @@ const QUESTOES_PCAL_LOTE27 = [
     }
   },
   {
-    id: "ES-034", disciplina: "Estatística e Análise de Dados", assunto: "Análise de dados", subassunto: "Formatos de dados abertos",
+    id: "ES-034", disciplina: "Estatística", assunto: "Análise de dados", subassunto: "Formatos de dados abertos",
     concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (dados abertos)",
     tipo: "CE", dificuldade: 1, tempoIdealSeg: 45, probReaparecer: 0.7,
@@ -282,7 +282,7 @@ const QUESTOES_PCAL_LOTE27 = [
     }
   },
   {
-    id: "ES-035", disciplina: "Estatística e Análise de Dados", assunto: "Inferência", subassunto: "Estimação pontual × intervalar",
+    id: "ES-035", disciplina: "Estatística", assunto: "Inferência", subassunto: "Estimação pontual × intervalar",
     concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (inferência estatística)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 55, probReaparecer: 0.72,
@@ -306,7 +306,7 @@ const QUESTOES_PCAL_LOTE27 = [
     }
   },
   {
-    id: "ES-036", disciplina: "Estatística e Análise de Dados", assunto: "Amostragem", subassunto: "Amostragem estratificada",
+    id: "ES-036", disciplina: "Estatística", assunto: "Amostragem", subassunto: "Amostragem estratificada",
     concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (técnicas de amostragem)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.72,
@@ -330,7 +330,7 @@ const QUESTOES_PCAL_LOTE27 = [
     }
   },
   {
-    id: "ES-037", disciplina: "Estatística e Análise de Dados", assunto: "Estatística descritiva", subassunto: "Assimetria da distribuição",
+    id: "ES-037", disciplina: "Estatística", assunto: "Estatística descritiva", subassunto: "Assimetria da distribuição",
     concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (assimetria)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 55, probReaparecer: 0.72,
@@ -358,10 +358,10 @@ const QUESTOES_PCAL_LOTE27 = [
 
 QUESTOES.push(...QUESTOES_PCAL_LOTE27);
 
-/* Frequência de temas — Estatística e Análise de Dados (Módulo 2) */
+/* Frequência de temas — Estatística (Módulo 2) */
 (function () {
-  let d = FREQUENCIA_TEMAS.find(f => f.disciplina === "Estatística e Análise de Dados");
-  if (!d) { d = { disciplina: "Estatística e Análise de Dados", temas: [] }; FREQUENCIA_TEMAS.push(d); }
+  let d = FREQUENCIA_TEMAS.find(f => f.disciplina === "Estatística");
+  if (!d) { d = { disciplina: "Estatística", temas: [] }; FREQUENCIA_TEMAS.push(d); }
   d.temas.push(
     { tema: "Quartis, IIQ e outliers (regra de Tukey)", freq: 82, tendencia: "alta", prob: 0.85 },
     { tema: "Machine Learning: Naive Bayes, overfitting/underfitting", freq: 76, tendencia: "alta", prob: 0.8 },

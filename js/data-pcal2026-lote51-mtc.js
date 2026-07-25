@@ -22,7 +22,7 @@ const QUESTOES_PCAL_LOTE51 = [
 
   /* ===== MEDIANA — MÉDIA DOS DOIS VALORES CENTRAIS (CONJUNTO PAR) ===== */
   {
-    id: "ES-080", disciplina: "Estatística e Análise de Dados", assunto: "Medidas de Tendência Central", subassunto: "Cálculo da mediana (conjunto de tamanho par)",
+    id: "ES-080", disciplina: "Estatística", assunto: "Medidas de Tendência Central", subassunto: "Cálculo da mediana (conjunto de tamanho par)",
     concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (medidas de tendência central)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 60, probReaparecer: 0.8,
@@ -46,7 +46,7 @@ const QUESTOES_PCAL_LOTE51 = [
     }
   },
   {
-    id: "ES-081", disciplina: "Estatística e Análise de Dados", assunto: "Medidas de Tendência Central", subassunto: "Cálculo da mediana (conjunto de tamanho par)",
+    id: "ES-081", disciplina: "Estatística", assunto: "Medidas de Tendência Central", subassunto: "Cálculo da mediana (conjunto de tamanho par)",
     concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (medidas de tendência central)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 60, probReaparecer: 0.76,
@@ -72,7 +72,7 @@ const QUESTOES_PCAL_LOTE51 = [
 
   /* ===== MODA — VALOR MAIS FREQUENTE ===== */
   {
-    id: "ES-082", disciplina: "Estatística e Análise de Dados", assunto: "Medidas de Tendência Central", subassunto: "Cálculo da moda",
+    id: "ES-082", disciplina: "Estatística", assunto: "Medidas de Tendência Central", subassunto: "Cálculo da moda",
     concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (medidas de tendência central)",
     tipo: "CE", dificuldade: 1, tempoIdealSeg: 50, probReaparecer: 0.82,
@@ -96,7 +96,7 @@ const QUESTOES_PCAL_LOTE51 = [
     }
   },
   {
-    id: "ES-083", disciplina: "Estatística e Análise de Dados", assunto: "Medidas de Tendência Central", subassunto: "Cálculo da moda",
+    id: "ES-083", disciplina: "Estatística", assunto: "Medidas de Tendência Central", subassunto: "Cálculo da moda",
     concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (medidas de tendência central)",
     tipo: "CE", dificuldade: 1, tempoIdealSeg: 50, probReaparecer: 0.78,
@@ -122,7 +122,7 @@ const QUESTOES_PCAL_LOTE51 = [
 
   /* ===== MÉDIA ARITMÉTICA — CÁLCULO DIRETO ===== */
   {
-    id: "ES-084", disciplina: "Estatística e Análise de Dados", assunto: "Medidas de Tendência Central", subassunto: "Cálculo da média aritmética",
+    id: "ES-084", disciplina: "Estatística", assunto: "Medidas de Tendência Central", subassunto: "Cálculo da média aritmética",
     concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (medidas de tendência central)",
     tipo: "CE", dificuldade: 1, tempoIdealSeg: 50, probReaparecer: 0.82,
@@ -146,7 +146,7 @@ const QUESTOES_PCAL_LOTE51 = [
     }
   },
   {
-    id: "ES-085", disciplina: "Estatística e Análise de Dados", assunto: "Medidas de Tendência Central", subassunto: "Cálculo da média aritmética",
+    id: "ES-085", disciplina: "Estatística", assunto: "Medidas de Tendência Central", subassunto: "Cálculo da média aritmética",
     concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (medidas de tendência central)",
     tipo: "CE", dificuldade: 1, tempoIdealSeg: 50, probReaparecer: 0.78,
@@ -172,7 +172,7 @@ const QUESTOES_PCAL_LOTE51 = [
 
   /* ===== PRIMEIRO QUARTIL x MÉDIA AMOSTRAL ===== */
   {
-    id: "ES-086", disciplina: "Estatística e Análise de Dados", assunto: "Medidas de Tendência Central", subassunto: "Primeiro quartil x média amostral",
+    id: "ES-086", disciplina: "Estatística", assunto: "Medidas de Tendência Central", subassunto: "Primeiro quartil x média amostral",
     concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (medidas de tendência central, quartis)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 70, probReaparecer: 0.78,
@@ -196,7 +196,7 @@ const QUESTOES_PCAL_LOTE51 = [
     }
   },
   {
-    id: "ES-087", disciplina: "Estatística e Análise de Dados", assunto: "Medidas de Tendência Central", subassunto: "Primeiro quartil x média amostral",
+    id: "ES-087", disciplina: "Estatística", assunto: "Medidas de Tendência Central", subassunto: "Primeiro quartil x média amostral",
     concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (medidas de tendência central, quartis)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 70, probReaparecer: 0.74,
@@ -222,7 +222,7 @@ const QUESTOES_PCAL_LOTE51 = [
 
   /* ===== DISTRIBUIÇÃO PERFEITAMENTE SIMÉTRICA — MÉDIA = MEDIANA = MODA ===== */
   {
-    id: "ES-088", disciplina: "Estatística e Análise de Dados", assunto: "Medidas de Tendência Central", subassunto: "Distribuição simétrica — coincidência de média, mediana e moda",
+    id: "ES-088", disciplina: "Estatística", assunto: "Medidas de Tendência Central", subassunto: "Distribuição simétrica — coincidência de média, mediana e moda",
     concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (medidas de tendência central, simetria)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.8,
@@ -246,7 +246,7 @@ const QUESTOES_PCAL_LOTE51 = [
     }
   },
   {
-    id: "ES-089", disciplina: "Estatística e Análise de Dados", assunto: "Medidas de Tendência Central", subassunto: "Distribuição simétrica — coincidência de média, mediana e moda",
+    id: "ES-089", disciplina: "Estatística", assunto: "Medidas de Tendência Central", subassunto: "Distribuição simétrica — coincidência de média, mediana e moda",
     concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (medidas de tendência central, simetria)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.76,
@@ -272,7 +272,7 @@ const QUESTOES_PCAL_LOTE51 = [
 
   /* ===== MÉDIA = MEDIANA NÃO IMPLICA DISTRIBUIÇÃO SIMÉTRICA ===== */
   {
-    id: "ES-090", disciplina: "Estatística e Análise de Dados", assunto: "Medidas de Tendência Central", subassunto: "Média igual à mediana não implica simetria",
+    id: "ES-090", disciplina: "Estatística", assunto: "Medidas de Tendência Central", subassunto: "Média igual à mediana não implica simetria",
     concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (medidas de tendência central, simetria)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 70, probReaparecer: 0.76,
@@ -296,7 +296,7 @@ const QUESTOES_PCAL_LOTE51 = [
     }
   },
   {
-    id: "ES-091", disciplina: "Estatística e Análise de Dados", assunto: "Medidas de Tendência Central", subassunto: "Média igual à mediana não implica simetria",
+    id: "ES-091", disciplina: "Estatística", assunto: "Medidas de Tendência Central", subassunto: "Média igual à mediana não implica simetria",
     concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (medidas de tendência central, simetria)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 70, probReaparecer: 0.72,
@@ -322,7 +322,7 @@ const QUESTOES_PCAL_LOTE51 = [
 
   /* ===== RECOMPOSIÇÃO DE MÉDIAS AO COMBINAR GRUPOS ===== */
   {
-    id: "ES-092", disciplina: "Estatística e Análise de Dados", assunto: "Medidas de Tendência Central", subassunto: "Recomposição de médias ao combinar grupos",
+    id: "ES-092", disciplina: "Estatística", assunto: "Medidas de Tendência Central", subassunto: "Recomposição de médias ao combinar grupos",
     concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (medidas de tendência central, médias combinadas)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 75, probReaparecer: 0.78,
@@ -346,7 +346,7 @@ const QUESTOES_PCAL_LOTE51 = [
     }
   },
   {
-    id: "ES-093", disciplina: "Estatística e Análise de Dados", assunto: "Medidas de Tendência Central", subassunto: "Recomposição de médias ao combinar grupos",
+    id: "ES-093", disciplina: "Estatística", assunto: "Medidas de Tendência Central", subassunto: "Recomposição de médias ao combinar grupos",
     concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (medidas de tendência central, médias combinadas)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 75, probReaparecer: 0.74,
@@ -372,7 +372,7 @@ const QUESTOES_PCAL_LOTE51 = [
 
   /* ===== QUARTIL EM CONJUNTO DE DADOS COM VALORES REPETIDOS ===== */
   {
-    id: "ES-094", disciplina: "Estatística e Análise de Dados", assunto: "Medidas de Tendência Central", subassunto: "Cálculo do primeiro quartil (conjunto com valores repetidos)",
+    id: "ES-094", disciplina: "Estatística", assunto: "Medidas de Tendência Central", subassunto: "Cálculo do primeiro quartil (conjunto com valores repetidos)",
     concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (medidas de tendência central, quartis)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 70, probReaparecer: 0.76,
@@ -396,7 +396,7 @@ const QUESTOES_PCAL_LOTE51 = [
     }
   },
   {
-    id: "ES-095", disciplina: "Estatística e Análise de Dados", assunto: "Medidas de Tendência Central", subassunto: "Cálculo do primeiro quartil (conjunto com valores repetidos)",
+    id: "ES-095", disciplina: "Estatística", assunto: "Medidas de Tendência Central", subassunto: "Cálculo do primeiro quartil (conjunto com valores repetidos)",
     concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (medidas de tendência central, quartis)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 70, probReaparecer: 0.72,
@@ -422,7 +422,7 @@ const QUESTOES_PCAL_LOTE51 = [
 
   /* ===== SENSIBILIDADE DA MÉDIA A OUTLIERS x ROBUSTEZ DA MEDIANA ===== */
   {
-    id: "ES-096", disciplina: "Estatística e Análise de Dados", assunto: "Medidas de Tendência Central", subassunto: "Sensibilidade da média a outliers x robustez da mediana",
+    id: "ES-096", disciplina: "Estatística", assunto: "Medidas de Tendência Central", subassunto: "Sensibilidade da média a outliers x robustez da mediana",
     concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (medidas de tendência central, outliers)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 65, probReaparecer: 0.82,
@@ -446,7 +446,7 @@ const QUESTOES_PCAL_LOTE51 = [
     }
   },
   {
-    id: "ES-097", disciplina: "Estatística e Análise de Dados", assunto: "Medidas de Tendência Central", subassunto: "Sensibilidade da média a outliers x robustez da mediana",
+    id: "ES-097", disciplina: "Estatística", assunto: "Medidas de Tendência Central", subassunto: "Sensibilidade da média a outliers x robustez da mediana",
     concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (medidas de tendência central, outliers)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 65, probReaparecer: 0.78,
@@ -474,10 +474,10 @@ const QUESTOES_PCAL_LOTE51 = [
 
 QUESTOES.push(...QUESTOES_PCAL_LOTE51);
 
-/* Frequência de temas — Estatística e Análise de Dados (Medidas de Tendência Central) */
+/* Frequência de temas — Estatística (Medidas de Tendência Central) */
 (function () {
-  let d = FREQUENCIA_TEMAS.find(f => f.disciplina === "Estatística e Análise de Dados");
-  if (!d) { d = { disciplina: "Estatística e Análise de Dados", temas: [] }; FREQUENCIA_TEMAS.push(d); }
+  let d = FREQUENCIA_TEMAS.find(f => f.disciplina === "Estatística");
+  if (!d) { d = { disciplina: "Estatística", temas: [] }; FREQUENCIA_TEMAS.push(d); }
   d.temas.push(
     { tema: "Cálculo de mediana, moda e média aritmética", freq: 80, tendencia: "alta", prob: 0.8 },
     { tema: "Quartis — cálculo e comparação com a média", freq: 76, tendencia: "media", prob: 0.76 },

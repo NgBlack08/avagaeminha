@@ -18,7 +18,7 @@ const QUESTOES_PCAL_LOTE41 = [
 
   /* ===== HIERARQUIA IA ⊃ ML ⊃ REDES NEURAIS ⊃ LLMs ===== */
   {
-    id: "ES-038", disciplina: "Estatística e Análise de Dados", assunto: "Inteligência Artificial", subassunto: "Hierarquia IA, ML, redes neurais e LLMs",
+    id: "ES-038", disciplina: "Estatística", assunto: "Inteligência Artificial", subassunto: "Hierarquia IA, ML, redes neurais e LLMs",
     concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Inteligência Artificial)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 60, probReaparecer: 0.86,
@@ -42,7 +42,7 @@ const QUESTOES_PCAL_LOTE41 = [
     }
   },
   {
-    id: "ES-039", disciplina: "Estatística e Análise de Dados", assunto: "Inteligência Artificial", subassunto: "Hierarquia IA, ML, redes neurais e LLMs",
+    id: "ES-039", disciplina: "Estatística", assunto: "Inteligência Artificial", subassunto: "Hierarquia IA, ML, redes neurais e LLMs",
     concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Inteligência Artificial)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 60, probReaparecer: 0.84,
@@ -68,7 +68,7 @@ const QUESTOES_PCAL_LOTE41 = [
 
   /* ===== LLMs: FUNCIONAMENTO E LIMITAÇÕES ===== */
   {
-    id: "ES-040", disciplina: "Estatística e Análise de Dados", assunto: "Inteligência Artificial", subassunto: "Funcionamento dos LLMs",
+    id: "ES-040", disciplina: "Estatística", assunto: "Inteligência Artificial", subassunto: "Funcionamento dos LLMs",
     concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Inteligência Artificial)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.88,
@@ -92,7 +92,7 @@ const QUESTOES_PCAL_LOTE41 = [
     }
   },
   {
-    id: "ES-041", disciplina: "Estatística e Análise de Dados", assunto: "Inteligência Artificial", subassunto: "Funcionamento dos LLMs",
+    id: "ES-041", disciplina: "Estatística", assunto: "Inteligência Artificial", subassunto: "Funcionamento dos LLMs",
     concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Inteligência Artificial)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.86,
@@ -118,7 +118,7 @@ const QUESTOES_PCAL_LOTE41 = [
 
   /* ===== INTELIGÊNCIA ARTIFICIAL GENERATIVA (IAG) ===== */
   {
-    id: "ES-042", disciplina: "Estatística e Análise de Dados", assunto: "Inteligência Artificial", subassunto: "IA Generativa (IAG)",
+    id: "ES-042", disciplina: "Estatística", assunto: "Inteligência Artificial", subassunto: "IA Generativa (IAG)",
     concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Inteligência Artificial)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 60, probReaparecer: 0.88,
@@ -142,7 +142,7 @@ const QUESTOES_PCAL_LOTE41 = [
     }
   },
   {
-    id: "ES-043", disciplina: "Estatística e Análise de Dados", assunto: "Inteligência Artificial", subassunto: "IA Generativa (IAG)",
+    id: "ES-043", disciplina: "Estatística", assunto: "Inteligência Artificial", subassunto: "IA Generativa (IAG)",
     concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Inteligência Artificial)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 60, probReaparecer: 0.84,
@@ -166,7 +166,7 @@ const QUESTOES_PCAL_LOTE41 = [
     }
   },
   {
-    id: "ES-044", disciplina: "Estatística e Análise de Dados", assunto: "Inteligência Artificial", subassunto: "IA Generativa e revisão humana",
+    id: "ES-044", disciplina: "Estatística", assunto: "Inteligência Artificial", subassunto: "IA Generativa e revisão humana",
     concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Inteligência Artificial)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.82,
@@ -190,7 +190,7 @@ const QUESTOES_PCAL_LOTE41 = [
     }
   },
   {
-    id: "ES-045", disciplina: "Estatística e Análise de Dados", assunto: "Inteligência Artificial", subassunto: "IA Generativa e revisão humana",
+    id: "ES-045", disciplina: "Estatística", assunto: "Inteligência Artificial", subassunto: "IA Generativa e revisão humana",
     concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Inteligência Artificial)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.8,
@@ -214,7 +214,7 @@ const QUESTOES_PCAL_LOTE41 = [
     }
   },
   {
-    id: "ES-046", disciplina: "Estatística e Análise de Dados", assunto: "Inteligência Artificial", subassunto: "Alucinação em IA generativa",
+    id: "ES-046", disciplina: "Estatística", assunto: "Inteligência Artificial", subassunto: "Alucinação em IA generativa",
     concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Inteligência Artificial)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.82,
@@ -238,7 +238,7 @@ const QUESTOES_PCAL_LOTE41 = [
     }
   },
   {
-    id: "ES-047", disciplina: "Estatística e Análise de Dados", assunto: "Inteligência Artificial", subassunto: "Alucinação em IA generativa",
+    id: "ES-047", disciplina: "Estatística", assunto: "Inteligência Artificial", subassunto: "Alucinação em IA generativa",
     concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Inteligência Artificial)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.8,
@@ -264,7 +264,7 @@ const QUESTOES_PCAL_LOTE41 = [
 
   /* ===== FUNDAMENTOS DE MACHINE LEARNING ===== */
   {
-    id: "ES-048", disciplina: "Estatística e Análise de Dados", assunto: "Machine Learning", subassunto: "Fundamentos do aprendizado de máquina",
+    id: "ES-048", disciplina: "Estatística", assunto: "Machine Learning", subassunto: "Fundamentos do aprendizado de máquina",
     concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Inteligência Artificial)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 60, probReaparecer: 0.86,
@@ -288,7 +288,7 @@ const QUESTOES_PCAL_LOTE41 = [
     }
   },
   {
-    id: "ES-049", disciplina: "Estatística e Análise de Dados", assunto: "Machine Learning", subassunto: "Fundamentos do aprendizado de máquina",
+    id: "ES-049", disciplina: "Estatística", assunto: "Machine Learning", subassunto: "Fundamentos do aprendizado de máquina",
     concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Inteligência Artificial)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 60, probReaparecer: 0.84,
@@ -312,7 +312,7 @@ const QUESTOES_PCAL_LOTE41 = [
     }
   },
   {
-    id: "ES-050", disciplina: "Estatística e Análise de Dados", assunto: "Machine Learning", subassunto: "Tipos de aprendizado de máquina",
+    id: "ES-050", disciplina: "Estatística", assunto: "Machine Learning", subassunto: "Tipos de aprendizado de máquina",
     concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Inteligência Artificial)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 60, probReaparecer: 0.86,
@@ -336,7 +336,7 @@ const QUESTOES_PCAL_LOTE41 = [
     }
   },
   {
-    id: "ES-051", disciplina: "Estatística e Análise de Dados", assunto: "Machine Learning", subassunto: "Tipos de aprendizado de máquina",
+    id: "ES-051", disciplina: "Estatística", assunto: "Machine Learning", subassunto: "Tipos de aprendizado de máquina",
     concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Inteligência Artificial)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.82,
@@ -362,7 +362,7 @@ const QUESTOES_PCAL_LOTE41 = [
 
   /* ===== EMBEDDINGS (BUSCA SEMÂNTICA) ===== */
   {
-    id: "ES-052", disciplina: "Estatística e Análise de Dados", assunto: "Inteligência Artificial", subassunto: "Embeddings (busca semântica)",
+    id: "ES-052", disciplina: "Estatística", assunto: "Inteligência Artificial", subassunto: "Embeddings (busca semântica)",
     concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Inteligência Artificial)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.8,
@@ -386,7 +386,7 @@ const QUESTOES_PCAL_LOTE41 = [
     }
   },
   {
-    id: "ES-053", disciplina: "Estatística e Análise de Dados", assunto: "Inteligência Artificial", subassunto: "Embeddings (busca semântica)",
+    id: "ES-053", disciplina: "Estatística", assunto: "Inteligência Artificial", subassunto: "Embeddings (busca semântica)",
     concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Inteligência Artificial)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.78,
@@ -412,7 +412,7 @@ const QUESTOES_PCAL_LOTE41 = [
 
   /* ===== DEEP LEARNING ===== */
   {
-    id: "ES-054", disciplina: "Estatística e Análise de Dados", assunto: "Machine Learning", subassunto: "Deep Learning",
+    id: "ES-054", disciplina: "Estatística", assunto: "Machine Learning", subassunto: "Deep Learning",
     concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Inteligência Artificial)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 60, probReaparecer: 0.84,
@@ -436,7 +436,7 @@ const QUESTOES_PCAL_LOTE41 = [
     }
   },
   {
-    id: "ES-055", disciplina: "Estatística e Análise de Dados", assunto: "Machine Learning", subassunto: "Deep Learning",
+    id: "ES-055", disciplina: "Estatística", assunto: "Machine Learning", subassunto: "Deep Learning",
     concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Inteligência Artificial)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.82,
@@ -462,7 +462,7 @@ const QUESTOES_PCAL_LOTE41 = [
 
   /* ===== APRENDIZADO NÃO SUPERVISIONADO (DEFINIÇÃO ESPECÍFICA) ===== */
   {
-    id: "ES-056", disciplina: "Estatística e Análise de Dados", assunto: "Machine Learning", subassunto: "Aprendizado não supervisionado",
+    id: "ES-056", disciplina: "Estatística", assunto: "Machine Learning", subassunto: "Aprendizado não supervisionado",
     concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Inteligência Artificial)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 60, probReaparecer: 0.82,
@@ -486,7 +486,7 @@ const QUESTOES_PCAL_LOTE41 = [
     }
   },
   {
-    id: "ES-057", disciplina: "Estatística e Análise de Dados", assunto: "Machine Learning", subassunto: "Aprendizado não supervisionado",
+    id: "ES-057", disciplina: "Estatística", assunto: "Machine Learning", subassunto: "Aprendizado não supervisionado",
     concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Inteligência Artificial)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 60, probReaparecer: 0.8,
@@ -512,7 +512,7 @@ const QUESTOES_PCAL_LOTE41 = [
 
   /* ===== REDES NEURAIS, IA SIMBÓLICA E APRENDIZADO POR REFORÇO ===== */
   {
-    id: "ES-058", disciplina: "Estatística e Análise de Dados", assunto: "Inteligência Artificial", subassunto: "Redes neurais e aprendizado por reforço",
+    id: "ES-058", disciplina: "Estatística", assunto: "Inteligência Artificial", subassunto: "Redes neurais e aprendizado por reforço",
     concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Inteligência Artificial)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 60, probReaparecer: 0.84,
@@ -536,7 +536,7 @@ const QUESTOES_PCAL_LOTE41 = [
     }
   },
   {
-    id: "ES-059", disciplina: "Estatística e Análise de Dados", assunto: "Inteligência Artificial", subassunto: "Sistemas baseados em regras (IA simbólica)",
+    id: "ES-059", disciplina: "Estatística", assunto: "Inteligência Artificial", subassunto: "Sistemas baseados em regras (IA simbólica)",
     concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Inteligência Artificial)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.76,
@@ -564,10 +564,10 @@ const QUESTOES_PCAL_LOTE41 = [
 
 QUESTOES.push(...QUESTOES_PCAL_LOTE41);
 
-/* Frequência de temas — Estatística e Análise de Dados (Módulo 2) */
+/* Frequência de temas — Estatística (Módulo 2) */
 (function () {
-  let d = FREQUENCIA_TEMAS.find(f => f.disciplina === "Estatística e Análise de Dados");
-  if (!d) { d = { disciplina: "Estatística e Análise de Dados", temas: [] }; FREQUENCIA_TEMAS.push(d); }
+  let d = FREQUENCIA_TEMAS.find(f => f.disciplina === "Estatística");
+  if (!d) { d = { disciplina: "Estatística", temas: [] }; FREQUENCIA_TEMAS.push(d); }
   d.temas.push(
     { tema: "IA generativa, LLMs e alucinação", freq: 90, tendencia: "alta", prob: 0.9 },
     { tema: "Hierarquia IA/ML/redes neurais e Deep Learning", freq: 86, tendencia: "alta", prob: 0.86 },

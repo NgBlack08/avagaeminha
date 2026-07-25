@@ -547,7 +547,7 @@ const QUESTOES_PCAL_LOTE10 = [
 
   /* ============ ESTATÍSTICA (4 itens 'Errado') ============ */
   {
-    id: "ES-018", disciplina: "Estatística e Análise de Dados", assunto: "Medidas de posição", subassunto: "Moda em variáveis qualitativas",
+    id: "ES-018", disciplina: "Estatística", assunto: "Medidas de posição", subassunto: "Moda em variáveis qualitativas",
     concurso: "PCAL", cargo: ["Agente","Escrivão","Perito Criminal","Papiloscopista"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 45, probReaparecer: 0.72,
     enunciado: "A moda é a única medida de tendência central que não pode ser utilizada para variáveis qualitativas, por depender de operações aritméticas sobre os dados.",
@@ -570,7 +570,7 @@ const QUESTOES_PCAL_LOTE10 = [
     }
   },
   {
-    id: "ES-019", disciplina: "Estatística e Análise de Dados", assunto: "Correlação", subassunto: "Coeficiente de Pearson",
+    id: "ES-019", disciplina: "Estatística", assunto: "Correlação", subassunto: "Coeficiente de Pearson",
     concurso: "PCAL", cargo: ["Agente","Escrivão","Perito Criminal","Papiloscopista"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 40, probReaparecer: 0.75,
     enunciado: "O coeficiente de correlação linear de Pearson pode assumir qualquer valor real, sendo tanto mais forte a correlação quanto maior for o seu valor absoluto, inclusive acima de um.",
@@ -593,7 +593,7 @@ const QUESTOES_PCAL_LOTE10 = [
     }
   },
   {
-    id: "ES-020", disciplina: "Estatística e Análise de Dados", assunto: "Distribuição normal", subassunto: "Média, mediana e moda",
+    id: "ES-020", disciplina: "Estatística", assunto: "Distribuição normal", subassunto: "Média, mediana e moda",
     concurso: "PCAL", cargo: ["Agente","Escrivão","Perito Criminal","Papiloscopista"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 40, probReaparecer: 0.75,
     enunciado: "Na distribuição normal, por ser assimétrica à direita, a média, a mediana e a moda assumem necessariamente valores distintos entre si.",
@@ -616,7 +616,7 @@ const QUESTOES_PCAL_LOTE10 = [
     }
   },
   {
-    id: "ES-021", disciplina: "Estatística e Análise de Dados", assunto: "Probabilidade", subassunto: "Intervalo de probabilidade",
+    id: "ES-021", disciplina: "Estatística", assunto: "Probabilidade", subassunto: "Intervalo de probabilidade",
     concurso: "PCAL", cargo: ["Agente","Escrivão","Perito Criminal","Papiloscopista"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 1, tempoIdealSeg: 30, probReaparecer: 0.75,
     enunciado: "A probabilidade de ocorrência de um evento pode assumir valores negativos, especialmente quando se trata de um evento impossível.",

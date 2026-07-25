@@ -1,7 +1,7 @@
 /* =====================================================================
    CEBRASPE LAB — Expansão Edital PC-AL 2026 (Lote 2: Conhec. Específicos)
    Agente e Escrivão (item 20.2.4): aplicação da lei penal, Lei 9.099/95,
-   Legislação Penal Especial, Estatística e Análise de Dados,
+   Legislação Penal Especial, Estatística,
    Contabilidade e Análise Financeira.
    Também aplica os ajustes de integração ao edital (renomeações,
    marcação de temas fora do edital, frequências e predições).
@@ -408,7 +408,7 @@ const QUESTOES_PCAL_ESPECIFICOS = [
 
   /* ============ ESTATÍSTICA E ANÁLISE DE DADOS ============ */
   {
-    id: "ES-001", disciplina: "Estatística e Análise de Dados", assunto: "Estatística descritiva", subassunto: "Medidas de posição",
+    id: "ES-001", disciplina: "Estatística", assunto: "Estatística descritiva", subassunto: "Medidas de posição",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 40, probReaparecer: 0.85,
     enunciado: "Em um conjunto de dados que contenha valores extremos (outliers), a mediana constitui medida de tendência central mais robusta que a média aritmética, por não ser influenciada pela magnitude desses valores.",
@@ -431,7 +431,7 @@ const QUESTOES_PCAL_ESPECIFICOS = [
     }
   },
   {
-    id: "ES-002", disciplina: "Estatística e Análise de Dados", assunto: "Correlação", subassunto: "Correlação × causalidade",
+    id: "ES-002", disciplina: "Estatística", assunto: "Correlação", subassunto: "Correlação × causalidade",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 40, probReaparecer: 0.85,
     enunciado: "Se o coeficiente de correlação linear de Pearson entre duas variáveis for próximo de 1, é correto concluir que a variação de uma delas é causa direta da variação da outra.",
@@ -454,7 +454,7 @@ const QUESTOES_PCAL_ESPECIFICOS = [
     }
   },
   {
-    id: "ES-003", disciplina: "Estatística e Análise de Dados", assunto: "Distribuição normal", subassunto: "Regra empírica (3 sigmas)",
+    id: "ES-003", disciplina: "Estatística", assunto: "Distribuição normal", subassunto: "Regra empírica (3 sigmas)",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 40, probReaparecer: 0.8,
     enunciado: "Em uma distribuição normal, aproximadamente 95% das observações situam-se no intervalo compreendido entre a média menos dois desvios-padrão e a média mais dois desvios-padrão.",
@@ -477,7 +477,7 @@ const QUESTOES_PCAL_ESPECIFICOS = [
     }
   },
   {
-    id: "ES-004", disciplina: "Estatística e Análise de Dados", assunto: "Medidas de dispersão", subassunto: "Coeficiente de variação",
+    id: "ES-004", disciplina: "Estatística", assunto: "Medidas de dispersão", subassunto: "Coeficiente de variação",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 40, probReaparecer: 0.75,
     enunciado: "O coeficiente de variação, obtido pela razão entre o desvio-padrão e a média, é medida de dispersão relativa e adimensional, o que permite comparar a variabilidade de conjuntos de dados expressos em unidades ou escalas diferentes.",
@@ -500,7 +500,7 @@ const QUESTOES_PCAL_ESPECIFICOS = [
     }
   },
   {
-    id: "ES-005", disciplina: "Estatística e Análise de Dados", assunto: "Probabilidade", subassunto: "Independência de eventos",
+    id: "ES-005", disciplina: "Estatística", assunto: "Probabilidade", subassunto: "Independência de eventos",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 40, probReaparecer: 0.8,
     enunciado: "Dois eventos A e B são independentes quando a probabilidade de ocorrência simultânea de ambos é igual ao produto de suas probabilidades individuais, isto é, P(A∩B) = P(A) × P(B).",
@@ -523,7 +523,7 @@ const QUESTOES_PCAL_ESPECIFICOS = [
     }
   },
   {
-    id: "ES-006", disciplina: "Estatística e Análise de Dados", assunto: "Amostragem", subassunto: "Estratificada × conglomerados",
+    id: "ES-006", disciplina: "Estatística", assunto: "Amostragem", subassunto: "Estratificada × conglomerados",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 50, probReaparecer: 0.8,
     enunciado: "Na amostragem estratificada, a população é dividida em grupos e sorteiam-se alguns desses grupos, examinando-se todos os seus integrantes; já na amostragem por conglomerados, extraem-se aleatoriamente elementos de cada um dos grupos previamente definidos.",
@@ -546,7 +546,7 @@ const QUESTOES_PCAL_ESPECIFICOS = [
     }
   },
   {
-    id: "ES-007", disciplina: "Estatística e Análise de Dados", assunto: "Inferência", subassunto: "Testes de hipóteses",
+    id: "ES-007", disciplina: "Estatística", assunto: "Inferência", subassunto: "Testes de hipóteses",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 50, probReaparecer: 0.75,
     enunciado: "Em um teste de hipóteses, o nível de significância corresponde à probabilidade de se rejeitar a hipótese nula quando ela é verdadeira, ou seja, à probabilidade de ocorrência do erro tipo I.",
@@ -569,7 +569,7 @@ const QUESTOES_PCAL_ESPECIFICOS = [
     }
   },
   {
-    id: "ES-008", disciplina: "Estatística e Análise de Dados", assunto: "Machine Learning", subassunto: "Overfitting",
+    id: "ES-008", disciplina: "Estatística", assunto: "Machine Learning", subassunto: "Overfitting",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 45, probReaparecer: 0.85,
     enunciado: "Ocorre overfitting quando o modelo preditivo se ajusta excessivamente às particularidades dos dados de treinamento, apresentando alto desempenho nesses dados, porém baixa capacidade de generalização para dados novos.",
@@ -592,7 +592,7 @@ const QUESTOES_PCAL_ESPECIFICOS = [
     }
   },
   {
-    id: "ES-009", disciplina: "Estatística e Análise de Dados", assunto: "Mineração de dados", subassunto: "Clusterização",
+    id: "ES-009", disciplina: "Estatística", assunto: "Mineração de dados", subassunto: "Clusterização",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 45, probReaparecer: 0.8,
     enunciado: "A análise de agrupamentos (clusterização) é técnica de aprendizado supervisionado, pois exige que os dados de treinamento estejam previamente rotulados com as classes às quais pertencem.",
@@ -798,7 +798,7 @@ FREQUENCIA_TEMAS.push(
     { tema: "LGPD aplicada", freq: 85, tendencia: "alta", prob: 0.87 },
     { tema: "Golpes virtuais e MFA", freq: 80, tendencia: "alta", prob: 0.83 },
   ]},
-  { disciplina: "Estatística e Análise de Dados", temas: [
+  { disciplina: "Estatística", temas: [
     { tema: "Estatística descritiva (posição e dispersão)", freq: 90, tendencia: "alta", prob: 0.9 },
     { tema: "Probabilidade e Bayes", freq: 85, tendencia: "estavel", prob: 0.87 },
     { tema: "Distribuição normal e regra empírica", freq: 82, tendencia: "estavel", prob: 0.84 },

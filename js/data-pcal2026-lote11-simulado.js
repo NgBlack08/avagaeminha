@@ -431,7 +431,7 @@ const QUESTOES_PCAL_LOTE11 = [
     }
   },
   {
-    id: "ES-022", disciplina: "Estatística e Análise de Dados", assunto: "Análise de dados", subassunto: "Incompatibilidade patrimonial",
+    id: "ES-022", disciplina: "Estatística", assunto: "Análise de dados", subassunto: "Incompatibilidade patrimonial",
     concurso: "PCAL", cargo: ["Agente","Escrivão","Perito Criminal","Papiloscopista"], ano: 2026,
     origem: "Inédita — simulado estilo CEBRASPE (bloco 4, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.82,
@@ -456,7 +456,7 @@ const QUESTOES_PCAL_LOTE11 = [
     }
   },
   {
-    id: "ES-023", disciplina: "Estatística e Análise de Dados", assunto: "Medidas de dispersão", subassunto: "Desvio padrão em valores próximos",
+    id: "ES-023", disciplina: "Estatística", assunto: "Medidas de dispersão", subassunto: "Desvio padrão em valores próximos",
     concurso: "PCAL", cargo: ["Agente","Escrivão","Perito Criminal","Papiloscopista"], ano: 2026,
     origem: "Inédita — simulado estilo CEBRASPE (bloco 4, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 55, probReaparecer: 0.78,

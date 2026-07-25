@@ -13,7 +13,7 @@ const QUESTOES_PCAL_LOTE9 = [
 
   /* ===== ESTATÍSTICA (reduzir viés 'C'; incluir fácil) ===== */
   {
-    id: "ES-015", disciplina: "Estatística e Análise de Dados", assunto: "Medidas de posição", subassunto: "Mediana × média",
+    id: "ES-015", disciplina: "Estatística", assunto: "Medidas de posição", subassunto: "Mediana × média",
     concurso: "PCAL", cargo: ["Agente","Escrivão","Perito Criminal","Papiloscopista"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 1, tempoIdealSeg: 30, probReaparecer: 0.8,
     enunciado: "Em qualquer conjunto de dados numéricos, a mediana é sempre igual à média aritmética.",
@@ -36,7 +36,7 @@ const QUESTOES_PCAL_LOTE9 = [
     }
   },
   {
-    id: "ES-016", disciplina: "Estatística e Análise de Dados", assunto: "Medidas de dispersão", subassunto: "Desvio padrão",
+    id: "ES-016", disciplina: "Estatística", assunto: "Medidas de dispersão", subassunto: "Desvio padrão",
     concurso: "PCAL", cargo: ["Agente","Escrivão","Perito Criminal","Papiloscopista"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 1, tempoIdealSeg: 30, probReaparecer: 0.78,
     enunciado: "O desvio padrão pode assumir valores negativos quando a maioria das observações se encontra abaixo da média aritmética.",
@@ -59,7 +59,7 @@ const QUESTOES_PCAL_LOTE9 = [
     }
   },
   {
-    id: "ES-017", disciplina: "Estatística e Análise de Dados", assunto: "Amostragem", subassunto: "Amostragem aleatória simples",
+    id: "ES-017", disciplina: "Estatística", assunto: "Amostragem", subassunto: "Amostragem aleatória simples",
     concurso: "PCAL", cargo: ["Agente","Escrivão","Perito Criminal","Papiloscopista"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 40, probReaparecer: 0.78,
     enunciado: "Na amostragem aleatória simples, cada elemento da população possui probabilidade distinta de ser selecionado, privilegiando-se os estratos mais representativos.",
