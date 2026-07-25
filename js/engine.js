@@ -44,11 +44,12 @@ function saveState() {
 async function carregarEstadoNuvem(user) {
   CURRENT_USER = user;
   MODO = "cloud";
-  const [{ data: perfil }, { data: respostasRows }, { data: srsRows }, { data: sessoesRows }] = await Promise.all([
+  const [{ data: perfil }, { data: respostasRows }, { data: srsRows }, { data: sessoesRows }, { data: assinaturaAtiva }] = await Promise.all([
     supa.from("profiles").select("*").eq("id", user.id).single(),
     supa.from("respostas").select("*").eq("user_id", user.id).order("created_at", { ascending: true }),
     supa.from("srs").select("*").eq("user_id", user.id),
     supa.from("sessoes").select("*").eq("user_id", user.id).order("created_at", { ascending: true }),
+    supa.from("assinaturas").select("plano_tipo").eq("user_id", user.id).eq("status", "autorizada").maybeSingle(),
   ]);
   const respostas = {};
   for (const r of (respostasRows || [])) {
@@ -67,7 +68,8 @@ async function carregarEstadoNuvem(user) {
     cargoFoco: perfil?.cargo_foco || "Escrivão",
     nickname: perfil?.nickname || null,
     isAdmin: perfil?.is_admin || false,
-    plano: perfil?.plano || "gratuito",
+    plano: (perfil?.plano === "completo" || assinaturaAtiva) ? "completo" : "gratuito",
+    assinaturaTipo: assinaturaAtiva?.plano_tipo || null,
   };
 }
 

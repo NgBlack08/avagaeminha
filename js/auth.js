@@ -32,6 +32,24 @@ function checkAuthRedirectError() {
   return null;
 }
 
+/* Lê mp_status da URL (retorno do checkout de assinatura do Mercado Pago,
+   ver back_url em mp-criar-assinatura/index.ts) e limpa a URL. O valor em
+   si não importa muito — quem manda é o webhook, que confirma o status
+   real de forma assíncrona — isso só sinaliza "o usuário acabou de voltar
+   do Mercado Pago" pra iniciarApp() (js/app.js) decidir mostrar a tela de
+   Planos e tentar recarregar o estado. */
+function checkMpRedirectStatus() {
+  const params = new URLSearchParams(window.location.search);
+  const status = params.get("mp_status");
+  if (status) {
+    const url = new URL(window.location.href);
+    url.searchParams.delete("mp_status");
+    window.history.replaceState({}, document.title, url.toString());
+    return status;
+  }
+  return null;
+}
+
 async function bootstrapAuth() {
   const oauthErro = checkAuthRedirectError();
   let recuperandoSenha = false;

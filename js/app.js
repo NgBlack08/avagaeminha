@@ -18,6 +18,7 @@ const VIEWS = [
   { id: "predicao",   nome: "Predição de Cobrança",  ico: "↗" },
   { id: "estrategias",nome: "Estratégias",           ico: "✦" },
   { id: "perfil",     nome: "Meu Perfil",            ico: "◔" },
+  { id: "planos",     nome: "Planos",                ico: "💳" },
 ];
 
 let currentView = "dashboard";
@@ -44,7 +45,21 @@ function iniciarApp() {
   if (root) root.classList.remove("no-sidebar");
   document.documentElement.dataset.theme = APP_STATE.config.tema || "dark";
   renderSidebar();
-  navigate("dashboard");
+  const mpStatus = checkMpRedirectStatus();
+  navigate(mpStatus ? "planos" : "dashboard");
+  if (mpStatus) tratarRetornoMercadoPago();
+}
+
+/* Chamado quando o usuário volta do checkout do Mercado Pago (query param
+   mp_status, ver checkMpRedirectStatus() em js/auth.js). O status real da
+   assinatura só é confirmado depois pelo webhook (mp-webhook), então aqui
+   só avisamos e tentamos recarregar o estado — pode levar alguns segundos
+   até refletir "autorizada". */
+async function tratarRetornoMercadoPago() {
+  await mostrarAlerta("Recebemos seu retorno do Mercado Pago. A confirmação da assinatura pode levar alguns instantes — vamos verificar o status agora.", "Assinatura em processamento");
+  await carregarEstadoNuvem(CURRENT_USER);
+  renderSidebar();
+  renderPlanos();
 }
 
 function renderSidebar() {
@@ -64,7 +79,7 @@ function renderSidebar() {
   const acct = $("#acct");
   if (acct && CURRENT_USER) {
     const planoTag = APP_STATE.config.plano !== "completo"
-      ? `<div style="margin-top:6px"><span class="tag">Plano Gratuito</span> <button class="link-btn" style="font-size:12px" onclick="navigate('perfil')">ativar convite</button></div>`
+      ? `<div style="margin-top:6px"><span class="tag">Plano Gratuito</span> <button class="link-btn" style="font-size:12px" onclick="navigate('planos')">ver planos</button></div>`
       : "";
     acct.innerHTML = `<div style="color:var(--text)">👤 ${escapeHtml(CURRENT_USER.email)}</div>${planoTag}<button class="btn ghost small" style="margin-top:6px;width:100%" onclick="sair()">Sair</button>`;
   }
@@ -113,6 +128,7 @@ async function navigate(view, opts = {}) {
     dashboard: renderDashboard, banco: renderBanco, simulado: renderSimulado,
     prova: renderProva, ranking: renderRanking, raiox: renderRaioX, pegadinhas: renderPegadinhas,
     predicao: renderPredicao, estrategias: renderEstrategias, perfil: renderPerfil, admin: renderAdmin,
+    planos: renderPlanos,
   }[view];
   fn();
   window.scrollTo(0, 0);
@@ -1259,4 +1275,66 @@ function renderPerfil() {
   <div style="margin-top:18px">
     <button class="btn ghost small" onclick="confirmarResetarDados()">🗑 Zerar meu histórico</button>
   </div>`;
+}
+
+/* ================================================================
+   PLANOS — assinatura paga recorrente via Mercado Pago (Preapproval)
+   ================================================================ */
+const PLANOS_PRECO = {
+  mensal:     { label: "Mensal",     preco: 19.90,  periodo: "mês" },
+  trimestral: { label: "Trimestral", preco: 49.90,  periodo: "3 meses" },
+  semestral:  { label: "Semestral",  preco: 89.90,  periodo: "6 meses" },
+  anual:      { label: "Anual",      preco: 159.90, periodo: "ano" },
+};
+
+function renderPlanos() {
+  const planoAtual = APP_STATE.config.assinaturaTipo;
+  const completo = APP_STATE.config.plano === "completo";
+  MAIN().innerHTML = topbar("Planos", "Acesso completo ao banco de questões, sem limites") +
+  (completo && !planoAtual ? `<div class="card" style="margin-bottom:16px">
+    <p>✅ Sua conta já tem <strong>acesso completo</strong> (ativado por convite).</p>
+  </div>` : "") +
+  `<div class="grid cols-4">
+    ${Object.entries(PLANOS_PRECO).map(([id, p]) => `
+      <div class="card ${planoAtual === id ? "stat" : ""}">
+        <h3>${p.label}</h3>
+        <div style="font-size:26px;font-weight:700;margin:8px 0">R$ ${p.preco.toFixed(2).replace(".", ",")}</div>
+        <div class="lbl" style="margin-bottom:14px">cobrado a cada ${p.periodo}</div>
+        ${planoAtual === id
+          ? `<span class="tag ok">Plano atual</span>`
+          : `<button class="btn" style="width:100%" onclick="assinar('${id}')" id="assinar-${id}">Assinar</button>`}
+      </div>`).join("")}
+  </div>
+  <div id="planos-msg" style="margin-top:14px;font-size:13px;min-height:18px" role="status" aria-live="polite"></div>
+  <div style="font-size:12px;color:var(--muted);margin-top:14px">Cobrança recorrente automática via Mercado Pago. Cancele quando quiser diretamente pelo Mercado Pago.</div>`;
+}
+
+async function assinar(planoTipo) {
+  const msg = $("#planos-msg");
+  const btn = $(`#assinar-${planoTipo}`);
+  if (btn) btn.disabled = true;
+  msg.style.color = "var(--muted)";
+  msg.textContent = "Redirecionando para o Mercado Pago…";
+  try {
+    const { data, error } = await supa.functions.invoke("mp-criar-assinatura", { body: { plano_tipo: planoTipo } });
+    if (error) {
+      /* supabase-js não expõe o corpo JSON do erro diretamente em error.message
+         quando a function retorna um status != 2xx — precisa ler do Response
+         bruto em error.context para pegar a mensagem amigável que a function
+         devolveu (ver mp-criar-assinatura/index.ts). */
+      let mensagem = error.message;
+      try {
+        const body = await error.context?.json();
+        if (body?.error) mensagem = body.error;
+      } catch (_e) { /* corpo não era JSON — mantém a mensagem genérica */ }
+      throw new Error(mensagem);
+    }
+    if (data?.error) throw new Error(data.error);
+    if (!data?.init_point) throw new Error("Resposta inesperada do servidor de pagamentos.");
+    window.location.href = data.init_point;
+  } catch (err) {
+    msg.style.color = "var(--bad)";
+    msg.textContent = err.message || "Não foi possível iniciar a assinatura. Tente novamente.";
+    if (btn) btn.disabled = false;
+  }
 }
