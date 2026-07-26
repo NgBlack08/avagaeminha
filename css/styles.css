@@ -337,19 +337,12 @@ details.cog summary:hover { opacity: .8; }
 
 .landing-split { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); min-height: 100vh; }
 .landing-panel { position: relative; display: flex; flex-direction: column; min-height: 100vh; }
-.landing-panel-brand { overflow-y: auto; overflow-x: hidden; }
-.landing-panel-brand > .landing-bg { position: absolute; inset: 0; pointer-events: none; z-index: 0; overflow: hidden; background: #070c1a; }
-.hero-svg { position: absolute; inset: -2%; width: 104%; height: 104%; display: block; transition: transform 300ms cubic-bezier(.2,.7,.3,1); will-change: transform; }
-.hero-holo { animation: heroFloat 6s ease-in-out infinite alternate; }
-.hero-holo-b { animation-delay: -3s; }
-@keyframes heroFloat { from { transform: translateY(0); } to { transform: translateY(-9px); } }
-/* Tema claro: cena vira um acento sutil, preservando a leitura do texto escuro */
-:root[data-theme="light"] .landing-bg { opacity: .22; background: #eef2fb; }
-:root[data-theme="light"] .hero-scrim { opacity: .3; }
-/* Acessibilidade: sem movimento para quem prefere movimento reduzido */
-@media (prefers-reduced-motion: reduce) {
-  .hero-holo { animation: none; }
-  .hero-svg { transition: none; }
+/* Fundo: degradê azul/roxo limpo (mesma identidade do --accent-grad usado
+   no resto do app), fixo independente do tema claro/escuro — sem
+   ilustração, sem ocupar espaço extra sem informação no mobile. */
+.landing-panel-brand {
+  overflow-y: auto; overflow-x: hidden;
+  background: linear-gradient(160deg, #0b1220 0%, #13214a 48%, #1e1a4d 100%);
 }
 
 .landing-top {
@@ -480,16 +473,13 @@ details.cog summary:hover { opacity: .8; }
   .landing-split { grid-template-columns: 1fr; }
   .landing-panel { min-height: auto; }
   .landing-panel-brand { overflow: visible; }
-  .landing-panel-brand > .landing-bg { position: relative; height: 220px; }
   .landing-top { position: static; background: none; backdrop-filter: none; }
   .landing-panel-brand-content { padding-top: 20px; }
   .landing-panel-form { border-left: none; border-top: 1px solid var(--border); }
-  .hero-farlines, .hero-gridlines { display: none; }
 }
 @media (max-width: 640px) {
   .feat-grid { grid-template-columns: 1fr; }
   .landing-panel-brand-content .credibility-band { grid-template-columns: 1fr; }
-  .hero-holo { display: none; }
 }
 @media (max-width: 900px) {
   .app { flex-direction: column; }
