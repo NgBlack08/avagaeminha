@@ -300,25 +300,39 @@ function renderDashboard() {
     : "Carreiras Policiais";
   const gam = gamificacao();
 
-  const linha = (arr, cls, icone) => arr.length
-    ? arr.map(d => `<div class="radar-linha">${icone} ${d.disciplina}<span class="pct">${Math.round(d.taxa * 100)}%</span></div>`).join("")
-    : `<div class="radar-linha" style="color:var(--muted)">— ainda sem dados suficientes</div>`;
+  /* Linha do diagnóstico: barra horizontal colorida por faixa de domínio.
+     `idle` = disciplina ainda não respondida (barra neutra, sem peso negativo). */
+  const linha = (arr, cls, icone, idle) => arr.length
+    ? arr.map(d => `<div class="diag-linha">
+        <span class="diag-nome">${icone} ${escapeHtml(d.disciplina)}</span>
+        <span class="diag-pct">${idle ? "—" : Math.round(d.taxa * 100) + "%"}</span>
+        <div class="diag-bar ${cls}"><i style="width:${idle ? 100 : Math.round(d.taxa * 100)}%"></i></div>
+      </div>`).join("")
+    : "";
 
-  MAIN().innerHTML = topbar("Dashboard",
-    `Foco: <b>${focoNome}</b> · Cargo: <b>${APP_STATE.config.cargoFoco}</b>`,
-    `<button class="btn small" onclick="navigate('simulado')">▶ Iniciar simulado</button>`) +
+  MAIN().innerHTML = topbar("Dashboard", "") +
+  `<div class="card hero-card">
+    <div class="hero-card-info">
+      <div class="hero-card-lbl">Central de comando</div>
+      <div class="hero-card-tags">
+        <span class="tag accent">🎯 ${escapeHtml(focoNome)}</span>
+        <span class="tag accent">👤 ${escapeHtml(APP_STATE.config.cargoFoco)}</span>
+      </div>
+    </div>
+    <button class="btn hero-card-cta" onclick="navigate('simulado')">▶ Iniciar simulado</button>
+  </div>` +
   onboardingCardHtml() +
   gamiCardHtml(gam) +
   `<div class="grid cols-4" style="margin-bottom:16px">
-    <div class="card stat"><span class="num">${g.respondidasUnicas}/${g.totalBanco}</span><span class="lbl">questões exploradas do banco</span></div>
-    <div class="card stat"><span class="num ${g.taxa >= .75 ? "ok" : g.taxa >= .5 ? "warn" : g.taxa === null ? "" : "bad"}">${g.taxa === null ? "—" : Math.round(g.taxa * 100) + "%"}</span><span class="lbl">taxa de acerto</span></div>
-    <div class="card stat"><span class="num ${g.liquida > 0 ? "ok" : g.liquida < 0 ? "bad" : ""}">${g.liquida > 0 ? "+" : ""}${g.liquida}</span><span class="lbl">pontuação líquida (C anula E)</span></div>
-    <div class="card stat"><span class="num ${devidas ? "warn" : "ok"}">${devidas}</span><span class="lbl">revisões devidas (repetição espaçada)</span></div>
+    <div class="card stat"><span class="ico">📚</span><span class="num">${g.respondidasUnicas}/${g.totalBanco}</span><span class="lbl">questões exploradas do banco</span></div>
+    <div class="card stat"><span class="ico">🎯</span><span class="num ${g.taxa >= .75 ? "ok" : g.taxa >= .5 ? "warn" : g.taxa === null ? "" : "bad"}">${g.taxa === null ? "—" : Math.round(g.taxa * 100) + "%"}</span><span class="lbl">taxa de acerto</span></div>
+    <div class="card stat"><span class="ico">⚖️</span><span class="num ${g.liquida > 0 ? "ok" : g.liquida < 0 ? "bad" : ""}">${g.liquida > 0 ? "+" : ""}${g.liquida}</span><span class="lbl">pontuação líquida (C anula E)</span></div>
+    <div class="card stat"><span class="ico">🔁</span><span class="num ${devidas ? "warn" : "ok"}">${devidas}</span><span class="lbl">revisões devidas (repetição espaçada)</span></div>
   </div>
   <div class="grid cols-2">
     <div class="card">
       <h3>🎯 Radar de Aprovação <span class="hint">termômetro heurístico do seu preparo</span></h3>
-      <div style="display:flex;justify-content:center">${chartGauge(radar.score, { sub: "índice de preparo" })}</div>
+      <div style="display:flex;justify-content:center">${chartGauge(radar.score, { sub: "índice de preparo", meta: radar.metaTaxa * 100 })}</div>
       <div style="text-align:center;font-size:13px;color:var(--muted);margin-top:4px">
         ${g.taxa === null ? "Responda questões para calibrar o radar."
           : `Meta de referência: <b>${Math.round(radar.metaTaxa * 100)}% de acertos</b> (perfil típico de aprovados). ` +
@@ -328,12 +342,13 @@ function renderDashboard() {
     </div>
     <div class="card">
       <h3>📊 Diagnóstico por disciplina</h3>
-      <div style="font-size:12px;color:var(--muted);margin-bottom:6px">✔ Domina (≥80%) · ⚠ Precisa melhorar (60–79%) · ✖ Maior risco (&lt;60%)</div>
-      ${linha(radar.dominadas, "ok", "✔")}${linha(radar.atencao, "warn", "⚠")}${linha(radar.risco, "bad", "✖")}
+      <div style="font-size:12px;color:var(--muted);margin-bottom:10px">✔ Domina (≥80%) · ⚠ Precisa melhorar (60–79%) · ✖ Maior risco (&lt;60%) · ○ Não iniciado</div>
+      ${linha(radar.dominadas, "ok", "✔")}${linha(radar.atencao, "warn", "⚠")}${linha(radar.risco, "bad", "✖")}${linha(radar.naoIniciadas, "idle", "○", true)}
+      ${radar.dominadas.length + radar.atencao.length + radar.risco.length + radar.naoIniciadas.length ? "" : `<div style="color:var(--muted);font-size:13px">— ainda sem dados suficientes</div>`}
     </div>
   </div>
   <div class="grid cols-2" style="margin-top:16px">
-    <div class="card">
+    <div class="card card-dna">
       <h3>🧬 DNA da banca — padrões de maior incidência</h3>
       ${DNA_BANCA.slice(0, 5).map(d => `
         <div class="dna-item">
@@ -342,7 +357,7 @@ function renderDashboard() {
         </div>`).join("")}
       <button class="btn ghost small" style="margin-top:12px" onclick="navigate('raiox')">Ver Raio-X completo →</button>
     </div>
-    <div class="card">
+    <div class="card card-pred">
       <h3>↗ Top predições de cobrança</h3>
       ${PREDICOES.slice().sort((a, b) => b.score - a.score).slice(0, 5).map((p, i) => `
         <div class="pred-item">

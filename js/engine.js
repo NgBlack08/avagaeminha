@@ -244,6 +244,7 @@ function radarAprovacao() {
   const dominadas = porDisc.filter(d => d.taxa >= 0.8 && (d.acertos + d.erros) >= 4);
   const atencao = porDisc.filter(d => d.taxa >= 0.6 && d.taxa < 0.8);
   const risco = porDisc.filter(d => d.taxa < 0.6);
+  const naoIniciadas = g.porDisc.filter(d => d.acertos + d.erros === 0);
   const cobertura = g.respondidasUnicas / g.totalBanco;
   const taxa = g.taxa ?? 0;
   /* nota 0-100: 60% desempenho + 25% cobertura + 15% calibração */
@@ -253,7 +254,7 @@ function radarAprovacao() {
      aprovados em carreiras policiais costumam ter 70%+ de acerto bruto */
   const metaTaxa = 0.75;
   const horasEstimadas = Math.max(0, Math.round((metaTaxa - taxa) * 400));
-  return { dominadas, atencao, risco, score, taxa, cobertura, calibracao: g.calibracao,
+  return { dominadas, atencao, risco, naoIniciadas, score, taxa, cobertura, calibracao: g.calibracao,
     liquida: g.liquida, horasEstimadas, metaTaxa };
 }
 

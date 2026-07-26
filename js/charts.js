@@ -58,16 +58,26 @@ function chartLegend(series) {
     `<span><i style="background:${CHART_COLORS[i % CHART_COLORS.length]}"></i>${escapeHtml(s.nome || s.disciplina)}</span>`).join("") + "</div>";
 }
 
-/* Medidor semicircular 0-100 */
+/* Medidor semicircular 0-100. opts.meta (0-100) marca a meta no próprio arco. */
 function chartGauge(value, opts = {}) {
-  const w = 220, h = 130, cx = 110, cy = 112, r = 88;
+  const w = 220, h = 138, cx = 110, cy = 112, r = 88;
   const pct = Math.max(0, Math.min(100, value));
   const ang = Math.PI * (1 - pct / 100);
   const px = cx + r * Math.cos(ang), py = cy - r * Math.sin(ang);
-  const color = pct >= 75 ? "#10b981" : pct >= 50 ? "#f59e0b" : "#ef4444";
+  const color = pct >= 75 ? "var(--ok)" : pct >= 50 ? "var(--warn)" : "var(--bad)";
   let s = svgEl(w, h);
   s += `<path d="M ${cx - r} ${cy} A ${r} ${r} 0 1 1 ${cx + r} ${cy}" fill="none" stroke="var(--border)" stroke-width="14" stroke-linecap="round"></path>`;
   if (pct > 0.5) s += `<path d="M ${cx - r} ${cy} A ${r} ${r} 0 0 1 ${px} ${py}" fill="none" stroke="${color}" stroke-width="14" stroke-linecap="round"></path>`;
+  if (opts.meta != null) {
+    const mPct = Math.max(0, Math.min(100, opts.meta));
+    const mAng = Math.PI * (1 - mPct / 100);
+    const cos = Math.cos(mAng), sin = Math.sin(mAng);
+    s += `<line x1="${(cx + (r - 11) * cos).toFixed(1)}" y1="${(cy - (r - 11) * sin).toFixed(1)}"`
+      + ` x2="${(cx + (r + 11) * cos).toFixed(1)}" y2="${(cy - (r + 11) * sin).toFixed(1)}"`
+      + ` stroke="var(--text)" stroke-width="2.5" stroke-linecap="round" opacity=".75"></line>`;
+    s += `<text x="${(cx + (r + 20) * cos).toFixed(1)}" y="${(cy - (r + 18) * sin).toFixed(1)}"`
+      + ` text-anchor="middle" class="c-gauge-meta">meta ${Math.round(mPct)}</text>`;
+  }
   s += `<text x="${cx}" y="${cy - 14}" text-anchor="middle" class="c-gauge-num">${Math.round(pct)}</text>`;
   s += `<text x="${cx}" y="${cy + 6}" text-anchor="middle" class="c-gauge-sub">${escapeHtml(opts.sub || "")}</text>`;
   return s + "</svg>";
