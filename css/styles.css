@@ -337,9 +337,25 @@ details.cog summary:hover { opacity: .8; }
 
 .landing-split { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); min-height: 100vh; }
 .landing-panel { position: relative; display: flex; flex-direction: column; min-height: 100vh; }
+
+/* Área de login SEMPRE escura — sem opção de tema claro, independente do
+   que o usuário tiver escolhido no resto do app (ou de sessão anterior). */
+.landing-panel-brand, .landing-panel-form {
+  --bg: #0b1220; --surface: #0d1526; --surface2: #141f36; --surface3: #1d2b4a;
+  --border: #1e2c4a; --text: #eaf0fb; --muted: #8fa0c0;
+  --accent: #3b82f6; --accent-2: #60a5fa;
+  --accent-grad: linear-gradient(135deg, #2563eb, #7c3aed);
+  --accent-soft: rgba(59,130,246,.14);
+  --shadow-sm: 0 1px 2px rgba(0,0,0,.3);
+  --shadow: 0 8px 30px rgba(2,6,18,.45);
+  --shadow-lg: 0 20px 60px rgba(2,6,18,.55);
+  --ring: 0 0 0 3px rgba(59,130,246,.45);
+  color: var(--text);
+}
+
 /* Fundo: degradê azul/roxo limpo (mesma identidade do --accent-grad usado
-   no resto do app), fixo independente do tema claro/escuro — sem
-   ilustração, sem ocupar espaço extra sem informação no mobile. */
+   no resto do app), sem ilustração — não ocupa espaço extra sem
+   informação no mobile. */
 .landing-panel-brand {
   overflow-y: auto; overflow-x: hidden;
   background: linear-gradient(160deg, #0b1220 0%, #13214a 48%, #1e1a4d 100%);
@@ -404,7 +420,7 @@ details.cog summary:hover { opacity: .8; }
 .cred-card .cnum { font-size: clamp(18px, 1.6vw, 22px); font-weight: 800; letter-spacing: -.03em; font-variant-numeric: tabular-nums; color: #f4f8ff; }
 .cred-card .clbl { font-size: 11px; color: #9fb0d4; }
 
-/* Painel do formulário — segue o tema do site (claro/escuro), sem glass/imagem por trás */
+/* Painel do formulário — sempre escuro (ver override acima), sem glass/imagem por trás */
 .landing-panel-form {
   align-items: center; justify-content: center; padding: clamp(24px, 4vw, 56px);
   border-left: 1px solid var(--border); background: var(--surface);
@@ -470,12 +486,20 @@ details.cog summary:hover { opacity: .8; }
 /* ---------- Responsivo ---------- */
 .menu-toggle { display: none; }
 @media (max-width: 980px) {
+  /* Login sempre na primeira vista, nunca no fim da página: "achata" os
+     dois painéis (display:contents) para que o card de acesso vire irmão
+     direto do texto de apresentação dentro do grid, e usa `order` para
+     posicioná-lo logo após o texto — antes dos cards de recursos e da
+     faixa de credibilidade. */
   .landing-split { grid-template-columns: 1fr; }
-  .landing-panel { min-height: auto; }
-  .landing-panel-brand { overflow: visible; }
-  .landing-top { position: static; background: none; backdrop-filter: none; }
-  .landing-panel-brand-content { padding-top: 20px; }
-  .landing-panel-form { border-left: none; border-top: 1px solid var(--border); }
+  .landing-panel-brand, .landing-panel-brand-content, .landing-panel-form { display: contents; }
+  .landing-top { position: static; background: none; backdrop-filter: none; order: 1; }
+  .hero-eyebrow { order: 2; margin: 20px clamp(16px, 4vw, 40px) 0; }
+  .landing-panel-brand-content h1 { order: 3; margin-left: clamp(16px, 4vw, 40px); margin-right: clamp(16px, 4vw, 40px); }
+  .landing-panel-brand-content .lead { order: 4; margin-left: clamp(16px, 4vw, 40px); margin-right: clamp(16px, 4vw, 40px); }
+  .auth-card { order: 5; margin: 8px clamp(16px, 4vw, 40px) 0; border-top: 1px solid var(--border); padding-top: 24px; }
+  .feat-grid { order: 6; margin: 24px clamp(16px, 4vw, 40px) 0; }
+  .landing-panel-brand-content .credibility-band { order: 7; margin-left: clamp(16px, 4vw, 40px); margin-right: clamp(16px, 4vw, 40px); }
 }
 @media (max-width: 640px) {
   .feat-grid { grid-template-columns: 1fr; }

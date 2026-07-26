@@ -119,7 +119,6 @@ function renderAuthScreen(erro) {
             <div class="logo">QL</div>
             <h1>QuestLab<small>Foco: Carreiras Policiais</small></h1>
           </div>
-          <button class="btn ghost small" onclick="toggleTheme()" aria-label="Alternar tema claro/escuro">◐ Tema</button>
         </header>
 
         <div class="landing-panel-brand-content fx-stagger">
