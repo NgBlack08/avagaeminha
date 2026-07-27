@@ -46,7 +46,13 @@ function iniciarApp() {
   document.documentElement.dataset.theme = APP_STATE.config.tema || "dark";
   renderSidebar();
   const mpStatus = checkMpRedirectStatus();
-  navigate(mpStatus ? "planos" : "dashboard");
+  /* Ao atualizar a página (F5), permanece na aba atual em vez de voltar
+     ao Dashboard: a URL já carrega a view no hash (ver pushState em
+     navigate()), então só precisamos honrá-lo aqui na inicialização. */
+  const hashView = (location.hash || "").replace(/^#/, "");
+  const viewsValidas = VIEWS.map(v => v.id).concat(["admin"]);
+  const destino = mpStatus ? "planos" : (viewsValidas.includes(hashView) ? hashView : "dashboard");
+  navigate(destino);
   if (mpStatus) tratarRetornoMercadoPago();
 }
 
@@ -374,13 +380,47 @@ function renderDashboard() {
    BANCO DE QUESTÕES (Módulo 1)
    ================================================================ */
 let bancoFiltros = {};
+/* Modo de visualização do Banco: "scroll" (lista, padrão) ou "unica"
+   (uma questão por vez, card ampliado). Persistido para lembrar a
+   preferência entre sessões. */
+let bancoModoVisual = localStorage.getItem("questlab-banco-modo") || "scroll";
+let bancoIndice = 0;
+let bancoListaCache = null; /* {chave, lista} — evita reembaralhar a cada Anterior/Próxima */
+
+function listaBancoAtual() {
+  const chave = JSON.stringify(bancoFiltros);
+  if (!bancoListaCache || bancoListaCache.chave !== chave) {
+    bancoListaCache = { chave, lista: embaralhar(filtrarQuestoes(bancoFiltros)) };
+  }
+  return bancoListaCache.lista;
+}
+
+function setBancoModoVisual(modo) {
+  if (modo === bancoModoVisual) return;
+  bancoModoVisual = modo;
+  localStorage.setItem("questlab-banco-modo", modo);
+  bancoIndice = 0;
+  renderBanco();
+}
+
+function irQuestaoBanco(delta) {
+  bancoIndice += delta;
+  renderBanco();
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}
+
 function renderBanco() {
   const discs = listaDisciplinas();
   const assuntos = listaAssuntos(bancoFiltros.disciplina);
-  const lista = embaralhar(filtrarQuestoes(bancoFiltros));
+  const lista = listaBancoAtual();
+
+  const toggleVisual = `<div class="view-toggle" role="group" aria-label="Modo de visualização">
+    <button class="vt-btn ${bancoModoVisual === "scroll" ? "active" : ""}" onclick="setBancoModoVisual('scroll')">📜 Lista</button>
+    <button class="vt-btn ${bancoModoVisual === "unica" ? "active" : ""}" onclick="setBancoModoVisual('unica')">📄 Questão única</button>
+  </div>`;
 
   MAIN().innerHTML = topbar("Banco Inteligente de Questões",
-    `${QUESTOES.length} questões inéditas em estilo CEBRASPE · filtros combinados`,) +
+    `${QUESTOES.length} questões inéditas em estilo CEBRASPE · filtros combinados`, toggleVisual) +
   `<div class="card" style="margin-bottom:18px">
     <div class="filters">
       <label class="f">Concurso<select id="f-concurso" onchange="setFiltroBanco()">
@@ -409,11 +449,29 @@ function renderBanco() {
       <label class="check"><input type="checkbox" id="f-edital" ${bancoFiltros.ocultarForaEdital ? "checked" : ""} onchange="setFiltroBanco()"> só edital PC-AL 2026</label>
     </div>
   </div>
-  <div style="font-size:13px;color:var(--muted);margin-bottom:12px"><b>${lista.length}</b> questão(ões) encontrada(s)</div>
-  <div id="q-lista">${lista.map(q => questaoCardHtml(q, { modo: "banco" })).join("") ||
-    `<div class="card empty"><div class="big">🔍</div>Nenhuma questão com esses filtros.</div>`}</div>`;
+  ${bancoModoVisual === "unica" ? renderBancoUnica(lista) : renderBancoLista(lista)}`;
   iniciarTimersVisiveis();
 }
+
+function renderBancoLista(lista) {
+  return `<div style="font-size:13px;color:var(--muted);margin-bottom:12px"><b>${lista.length}</b> questão(ões) encontrada(s)</div>
+  <div id="q-lista">${lista.map(q => questaoCardHtml(q, { modo: "banco" })).join("") ||
+    `<div class="card empty"><div class="big">🔍</div>Nenhuma questão com esses filtros.</div>`}</div>`;
+}
+
+function renderBancoUnica(lista) {
+  if (!lista.length) return `<div class="card empty"><div class="big">🔍</div>Nenhuma questão com esses filtros.</div>`;
+  if (bancoIndice > lista.length - 1) bancoIndice = lista.length - 1;
+  if (bancoIndice < 0) bancoIndice = 0;
+  const q = lista[bancoIndice];
+  return `<div class="banco-nav">
+    <button class="btn ghost small" onclick="irQuestaoBanco(-1)" ${bancoIndice <= 0 ? "disabled" : ""}>← Anterior</button>
+    <span class="banco-nav-pos">${bancoIndice + 1} de ${lista.length}</span>
+    <button class="btn ghost small" onclick="irQuestaoBanco(1)" ${bancoIndice >= lista.length - 1 ? "disabled" : ""}>Próxima →</button>
+  </div>
+  <div id="q-lista">${questaoCardHtml(q, { modo: "banco", ampliada: true })}</div>`;
+}
+
 function setFiltroBanco(resetAssunto) {
   bancoFiltros = {
     concurso: $("#f-concurso").value || null,
@@ -427,6 +485,7 @@ function setFiltroBanco(resetAssunto) {
     somenteNaoRespondidas: $("#f-novas").checked,
     ocultarForaEdital: $("#f-edital").checked,
   };
+  bancoIndice = 0;
   renderBanco();
 }
 
@@ -437,7 +496,7 @@ function questaoCardHtml(q, opts) {
   const modo = opts.modo || "banco";
   const diff = "●".repeat(q.dificuldade) + "○".repeat(3 - q.dificuldade);
   qUI[q.id] = { confianca: null, respondida: false, inicio: Date.now(), modo };
-  return `<div class="card q-card" id="qc-${q.id}">
+  return `<div class="card q-card ${opts.ampliada ? "ampliada" : ""}" id="qc-${q.id}">
     <div class="q-head">
       <span class="tag accent">${q.id}</span>
       <span class="tag">${q.concurso} · ${q.cargo.join("/")}</span>
@@ -1186,6 +1245,12 @@ function verExemplo(qid) {
   const q = QUESTOES.find(x => x.id === qid);
   if (!q) return;
   bancoFiltros = { disciplina: q.disciplina, assunto: q.assunto };
+  if (bancoModoVisual === "unica") {
+    const idx = listaBancoAtual().findIndex(x => x.id === qid);
+    bancoIndice = idx >= 0 ? idx : 0;
+    renderBanco();
+    return;
+  }
   renderBanco();
   setTimeout(() => {
     const el = document.getElementById("qc-" + qid);

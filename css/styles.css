@@ -229,6 +229,29 @@ label.f { display: flex; flex-direction: column; gap: 5px; font-size: 12px; colo
 /* ---------- Questões ---------- */
 .q-card { margin-bottom: 16px; }
 .q-card:hover { box-shadow: var(--shadow); border-color: color-mix(in srgb, var(--accent) 30%, var(--border)); }
+
+/* Card ampliado — modo "questão única" do Banco de Questões */
+.q-card.ampliada { max-width: 760px; margin: 0 auto 16px; padding: 36px; }
+.q-card.ampliada .q-enunciado { font-size: 19px; line-height: 1.75; }
+.q-card.ampliada .q-texto-apoio { font-size: 14.5px; }
+.q-card.ampliada .q-actions .btn { padding: 14px 22px; font-size: 15.5px; }
+
+/* Alternância de modo de visualização (Banco de Questões: Lista/Questão única) */
+.view-toggle { display: inline-flex; gap: 4px; background: var(--surface2); border-radius: var(--r-md); padding: 4px; }
+.vt-btn {
+  border: none; background: none; color: var(--muted); font: inherit; font-weight: 600; font-size: 13px;
+  padding: 7px 14px; border-radius: calc(var(--r-md) - 2px); cursor: pointer; white-space: nowrap;
+  transition: background var(--t-fast), color var(--t-fast), box-shadow var(--t-fast);
+}
+.vt-btn.active { background: var(--surface); color: var(--text); box-shadow: var(--shadow-sm); }
+.vt-btn:focus-visible { box-shadow: var(--ring); }
+
+.banco-nav { display: flex; align-items: center; justify-content: center; gap: 16px; margin-bottom: 16px; }
+.banco-nav-pos { font-size: 13.5px; color: var(--muted); font-variant-numeric: tabular-nums; }
+@media (max-width: 640px) {
+  .q-card.ampliada { padding: 22px; }
+  .q-card.ampliada .q-enunciado { font-size: 17px; }
+}
 .q-head { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 14px; align-items: center; }
 .q-texto-apoio {
   background: var(--surface2); border-left: 3px solid var(--accent); border-radius: var(--r-md);
