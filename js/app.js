@@ -218,23 +218,14 @@ const AVISO_ESTATISTICO = `<div class="aviso">⚠ As probabilidades e índices e
 /* ================================================================
    ONBOARDING — checklist de primeiros passos (Dashboard)
    Calculado sobre dados já existentes (respostas/sessões) + flags de
-   visita salvas apenas neste dispositivo (não sincronizadas: são só
-   um lembrete de UI, não precisam de tabela nova no Supabase).
+   visita (Raio-X/Perfil), sincronizadas na nuvem via
+   APP_STATE.config.onboardingVisitas (marcarVisitaOnboarding, em
+   engine.js) — mesmo progresso aparece em qualquer dispositivo.
    ================================================================ */
-const ONBOARDING_VISITAS_KEY = "questlab-onboarding-visitas";
 const ONBOARDING_DISMISS_KEY = "questlab-onboarding-dismissed";
-function onboardingVisitas() {
-  try { return JSON.parse(localStorage.getItem(ONBOARDING_VISITAS_KEY) || "{}"); } catch (e) { return {}; }
-}
-function marcarVisitaOnboarding(chave) {
-  const v = onboardingVisitas();
-  if (v[chave]) return;
-  v[chave] = true;
-  localStorage.setItem(ONBOARDING_VISITAS_KEY, JSON.stringify(v));
-}
 function onboardingPassos() {
   const totalRespondidas = Object.values(APP_STATE.respostas).reduce((a, h) => a + h.length, 0);
-  const visitas = onboardingVisitas();
+  const visitas = APP_STATE.config.onboardingVisitas || {};
   return [
     { label: "Responda sua primeira questão", done: totalRespondidas >= 1, view: "banco" },
     { label: "Complete um simulado ou o Modo Prova", done: APP_STATE.sessoes.length >= 1, view: "simulado" },

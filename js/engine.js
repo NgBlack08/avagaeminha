@@ -21,7 +21,7 @@ function loadLocalState() {
     const raw = localStorage.getItem(STORAGE_KEY);
     if (raw) return JSON.parse(raw);
   } catch (e) { /* estado corrompido: recomeça */ }
-  return { respostas: {}, srs: {}, sessoes: [], config: { tema: "dark", concursoFoco: null, cargoFoco: "Escrivão", isAdmin: false, plano: "gratuito" } };
+  return { respostas: {}, srs: {}, sessoes: [], config: { tema: "dark", concursoFoco: null, cargoFoco: "Escrivão", isAdmin: false, plano: "gratuito", onboardingVisitas: {} } };
 }
 function saveLocalState() { localStorage.setItem(STORAGE_KEY, JSON.stringify(APP_STATE)); }
 const APP_STATE = loadLocalState();
@@ -70,7 +70,25 @@ async function carregarEstadoNuvem(user) {
     isAdmin: perfil?.is_admin || false,
     plano: (perfil?.plano === "completo" || assinaturaAtiva) ? "completo" : "gratuito",
     assinaturaTipo: assinaturaAtiva?.plano_tipo || null,
+    onboardingVisitas: perfil?.onboarding_visitas || {},
   };
+}
+
+/* Marca uma "visita" de onboarding (ex.: Raio-X, Perfil) e sincroniza na
+   nuvem — mesma lógica de saveState(), mas escopada a esse campo para
+   não reenviar tema/foco a cada clique. */
+function marcarVisitaOnboarding(chave) {
+  if (!APP_STATE.config.onboardingVisitas) APP_STATE.config.onboardingVisitas = {};
+  if (APP_STATE.config.onboardingVisitas[chave]) return;
+  APP_STATE.config.onboardingVisitas[chave] = true;
+  if (MODO === "cloud" && CURRENT_USER) {
+    supa.from("profiles").update({
+      onboarding_visitas: APP_STATE.config.onboardingVisitas,
+      updated_at: new Date().toISOString(),
+    }).eq("id", CURRENT_USER.id).then(({ error }) => { if (error) console.error("Erro ao salvar visita de onboarding:", error); });
+  } else {
+    saveLocalState();
+  }
 }
 
 /* Volta o app para modo local (após logout), recarregando o localStorage. */
