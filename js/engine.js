@@ -397,6 +397,37 @@ function escapeHtml(s) {
   return String(s).replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 }
 
+/* ---------------- Destaque de trecho (Estratégias) ----------------
+   Recorta o enunciado em torno do trecho que materializa uma estratégia.
+   Como escapeHtml() mapeia caractere a caractere, escapar cada fatia
+   isoladamente e concatenar equivale a escapar o texto inteiro — o que
+   permite marcar o trecho sem risco de quebrar entidades HTML.
+   Os trechos são definidos em fronteira de palavra (validado na suíte),
+   de modo que o lookbehind/lookahead de reTermo() continua correto em
+   cada fatia. */
+function fatiarTrecho(texto, trecho) {
+  if (!trecho) return null;
+  const i = texto.indexOf(trecho);
+  if (i < 0) return null;
+  return { antes: texto.slice(0, i), meio: texto.slice(i, i + trecho.length), depois: texto.slice(i + trecho.length) };
+}
+function marcaTrecho(htmlInterno, titulo) {
+  return '<mark class="trecho-estrategia"' + (titulo ? ' title="' + escapeHtml(titulo) + '"' : "") + ">" + htmlInterno + "</mark>";
+}
+/* Antes de responder: só o trecho da estratégia (as palavras perigosas
+   continuam ocultas — são reveladas junto com o gabarito). */
+function marcarTrechoEstrategia(texto, trecho, titulo) {
+  const f = fatiarTrecho(texto, trecho);
+  if (!f) return escapeHtml(texto);
+  return escapeHtml(f.antes) + marcaTrecho(escapeHtml(f.meio), titulo) + escapeHtml(f.depois);
+}
+/* Depois de responder: palavras perigosas + trecho da estratégia. */
+function highlightEnunciado(texto, trecho, titulo) {
+  const f = fatiarTrecho(texto, trecho);
+  if (!f) return highlightPerigos(texto);
+  return highlightPerigos(f.antes) + marcaTrecho(highlightPerigos(f.meio), titulo) + highlightPerigos(f.depois);
+}
+
 /* ---------------- Helpers de catálogo ---------------- */
 function listaDisciplinas() { return [...new Set(QUESTOES.filter(questaoLiberada).map(q => q.disciplina))]; }
 function listaAssuntos(disciplina) {

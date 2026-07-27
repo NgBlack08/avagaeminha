@@ -307,11 +307,86 @@ details.cog summary:hover { opacity: .8; }
 .palavra-item .termo { font-weight: 700; font-size: 14.5px; min-width: 150px; }
 .palavra-item p { font-size: 13px; color: var(--muted); flex: 1; }
 
-.estrategia { padding: 16px 0; border-bottom: 1px solid var(--border); }
-.estrategia:last-child { border-bottom: none; }
-.estrategia h4 { font-size: 14.5px; margin-bottom: 4px; font-weight: 650; }
+/* ---------- Estratégias ---------- */
+.estrategia { padding: 22px 0; border-bottom: 1px solid var(--border); }
+.estrategia:last-child { border-bottom: none; padding-bottom: 4px; }
+.estrategia h4 { font-size: 15px; font-weight: 650; margin: 0; }
 .estrategia p { font-size: 13.5px; color: var(--muted); }
-.estrategia .aplicar { font-size: 12.5px; color: var(--accent); margin-top: 4px; }
+.estrategia .aplicar { font-size: 12.5px; color: var(--accent); margin-top: 14px; }
+
+.estr-intro { margin-bottom: 16px; }
+.estr-intro p { font-size: 13.5px; color: var(--muted); line-height: 1.6; margin-bottom: 8px; }
+.estr-intro p:last-child { margin-bottom: 0; }
+
+.estr-filtros { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+.chip {
+  font: inherit; font-size: 12.5px; font-weight: 600; cursor: pointer;
+  padding: 7px 14px; border-radius: var(--r-full);
+  background: var(--surface2); color: var(--muted); border: 1px solid var(--border);
+  transition: color var(--t-fast), background var(--t-fast), border-color var(--t-fast), transform var(--t-fast);
+}
+.chip:hover { color: var(--text); transform: translateY(-1px); }
+.chip.active { background: var(--accent-soft); color: var(--accent); border-color: transparent; }
+
+.estr-cat { margin-bottom: 16px; }
+.estr-cat-desc { margin: -6px 0 4px; font-size: 12.5px; line-height: 1.55; }
+
+.estr-top { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-bottom: 6px; }
+.tag.dna { background: rgba(124,58,237,.14); color: #a78bfa; border-color: transparent; cursor: help; }
+:root[data-theme="light"] .tag.dna { background: rgba(124,58,237,.1); color: #6d28d9; }
+.estr-desc { margin-bottom: 14px; line-height: 1.6; }
+
+.estr-bloco { margin-bottom: 12px; }
+.estr-bloco > b { display: block; font-size: 12.5px; color: var(--text); margin-bottom: 5px; font-weight: 650; }
+.estr-bloco p { font-size: 13px; line-height: 1.6; margin: 0; }
+.estr-bloco.padrao {
+  background: var(--surface2); border-left: 3px solid var(--accent);
+  border-radius: 0 10px 10px 0; padding: 12px 14px;
+}
+.estr-passos { margin: 0; padding-left: 20px; }
+.estr-passos li { font-size: 13px; color: var(--muted); line-height: 1.55; margin-bottom: 4px; }
+.estr-passos li::marker { color: var(--accent); font-weight: 700; }
+
+.estr-duo { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.estr-duo .estr-bloco { padding: 11px 13px; border-radius: 10px; margin-bottom: 12px; }
+.estr-bloco.ganho { background: rgba(16,185,129,.08); }
+.estr-bloco.ganho > b { color: var(--ok); }
+.estr-bloco.risco { background: rgba(245,158,11,.09); }
+.estr-bloco.risco > b { color: var(--warn); }
+
+.estr-exemplo {
+  margin-top: 14px; padding: 14px; border: 1px solid var(--border);
+  border-radius: var(--r-md); background: var(--surface2);
+}
+.ee-head { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 10px; }
+.ee-enunciado {
+  margin: 0 0 10px; padding: 0 0 0 14px; border-left: 3px solid var(--border);
+  font-size: 14px; line-height: 1.65; color: var(--text);
+}
+.ee-porque { font-size: 12.5px; color: var(--muted); line-height: 1.6; margin-bottom: 12px; }
+.ee-porque b { color: var(--text); }
+.ee-bloqueio { font-size: 12.5px; color: var(--muted); margin: 0; }
+.ee-bloqueio a { color: var(--accent); }
+
+/* Recorte que materializa a estratégia, no enunciado */
+mark.trecho-estrategia {
+  background: var(--accent-soft); color: inherit; border-radius: 4px;
+  padding: 1px 4px; box-shadow: inset 0 -2px 0 var(--accent); font-weight: 600;
+}
+
+/* Faixa da estratégia no card da questão (vinda da aba Estratégias) */
+.q-card.com-destaque { border-color: color-mix(in srgb, var(--accent) 45%, var(--border)); }
+.estrategia-flag {
+  margin: -4px 0 16px; padding: 12px 14px; border-radius: var(--r-md);
+  background: var(--accent-soft); border: 1px solid color-mix(in srgb, var(--accent) 30%, transparent);
+}
+.ef-top { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.ef-top .btn { margin-left: auto; }
+.ef-why { font-size: 12.5px; color: var(--muted); line-height: 1.6; margin: 8px 0 0; }
+
+@media (max-width: 640px) {
+  .estr-duo { grid-template-columns: 1fr; }
+}
 
 .pred-item { display: flex; gap: 14px; padding: 14px 0; border-bottom: 1px solid var(--border); align-items: flex-start; }
 .pred-item:last-child { border-bottom: none; }

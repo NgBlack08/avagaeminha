@@ -1156,32 +1156,300 @@ const PREDICOES = [
     motivos: ["Tema central para cargos policiais (sujeito ativo funcionário)", "Padrão de troca de verbos nucleares entre tipos"] },
 ];
 
-/* ---------------- ESTRATÉGIAS (Módulo 10) ---------------- */
+/* ---------------- ESTRATÉGIAS (Módulo 10) ----------------
+   Cada estratégia é uma técnica de resolução derivada de padrões
+   recorrentes e verificáveis nas provas CEBRASPE em domínio público
+   (cadernos e gabaritos oficiais publicados pela banca).
+
+   Campos:
+   - padrao       : o comportamento da banca que a técnica explora
+   - passos       : procedimento executável, na ordem de aplicação
+   - ganho        : o que a técnica entrega em prova
+   - armadilha    : como a própria técnica falha se aplicada no automático
+   - contraDNA    : slugs de DNA_BANCA que a técnica neutraliza
+   - exemplo      : id da questão-exemplo no banco
+   - trecho       : recorte EXATO do enunciado que materializa a estratégia
+                    (validado como substring do enunciado — ver validação)
+   - porqueTrecho : por que aquele recorte é o gatilho da técnica          */
+
+const ESTRATEGIA_CATEGORIAS = [
+  { id: "leitura",   nome: "Leitura e decomposição", ico: "◧",
+    desc: "Como quebrar o item antes de julgá-lo. Ataca a arquitetura da assertiva, não o conteúdo." },
+  { id: "lexical",   nome: "Radar lexical",          ico: "⚠",
+    desc: "Palavras e conectivos que carregam viés estatístico de gabarito. Sinalizam onde olhar — não decidem sozinhas." },
+  { id: "conteudo",  nome: "Conteúdo e conceitos",   ico: "▤",
+    desc: "Checagens de conteúdo nos pontos em que a banca historicamente troca peças: rótulos, números, sujeitos e fontes." },
+  { id: "prova",     nome: "Gestão de prova",        ico: "◈",
+    desc: "Decisões de prova sob a regra 1 líquida (errado anula certo): responder, pular ou deixar em branco." },
+];
+
 const ESTRATEGIAS = [
-  { nome: "Leitura reversa", desc: "Leia primeiro o comando final e a última oração do item — é onde a banca esconde a troca. Depois volte ao início já sabendo o que procurar.",
-    aplicar: "Em itens longos (3+ linhas) e nos de literalidade constitucional.", exemplo: "DC-004" },
-  { nome: "Julgamento por blocos", desc: "Divida a assertiva nas suas orações e julgue cada uma como um item independente. Uma única oração falsa torna todo o item ERRADO.",
-    aplicar: "Itens com 'verdade + falso emendado' e dupla afirmação.", exemplo: "PT-003" },
-  { nome: "Radar de termos absolutos", desc: "'Sempre, nunca, somente, todos, qualquer' sinalizam alta probabilidade de item errado — mas confirme com o conteúdo: a banca planta absolutos verdadeiros para punir o atalho cego.",
-    aplicar: "Sempre — com a ressalva das normas literalmente absolutas.", exemplo: "DP-004" },
-  { nome: "Checagem de pares espelhados", desc: "Conceitos que andam em dupla (anulação×revogação, excesso×desvio, incremental×diferencial) são o alvo favorito de inversão. Monte o par correto ANTES de ler a definição da banca.",
-    aplicar: "Administrativo, Penal e Informática.", exemplo: "DA-005" },
-  { nome: "Ponto de checagem numérico", desc: "Todo número (prazo, quantidade, fração, idade, pena) é ponto de verificação obrigatório. Pare, recupere o número da lei, compare.",
-    aplicar: "Leis penais especiais e CPP.", exemplo: "LE-007" },
-  { nome: "Quem pratica o ato?", desc: "Antes de julgar a ação descrita, confirme o SUJEITO: delegado, juiz, MP, PF, PRF? A conduta pode ser correta com o agente errado.",
-    aplicar: "Inquérito policial, competências do art. 144.", exemplo: "PP-002" },
-  { nome: "Tradutor de 'prescindir'", desc: "Traduza mentalmente: prescinde = DISPENSA; imprescindível = INDISPENSÁVEL; não prescinde = EXIGE. Só então julgue.",
-    aplicar: "Qualquer disciplina — é a pegadinha semântica nº 1.", exemplo: "LE-006" },
-  { nome: "Caça à condição inventada", desc: "'Desde que', 'condicionado a', 'exige-se', 'somente se' — verifique se a condição existe na norma. Condição inexistente = item errado.",
-    aplicar: "Garantias fundamentais e leis especiais.", exemplo: "PP-005" },
-  { nome: "Regra do rótulo", desc: "Quando a definição estiver perfeita, desconfie do NOME definido. A banca raramente erra a definição — ela troca o termo.",
-    aplicar: "Informática e institutos jurídicos nominados.", exemplo: "IN-001" },
-  { nome: "Atualização legislativa", desc: "Lei/decisão dos últimos 2 anos = cobrança literal quase certa, geralmente como item CERTO. Liste as novidades do edital e leia a letra da lei nova.",
-    aplicar: "Antes de qualquer prova, revise o 'radar de novidades'.", exemplo: "LP-002" },
-  { nome: "Gestão do branco (1 líquida)", desc: "No CEBRASPE, errado anula certo. Regra prática: convicção ou fundamento parcial → responda; chute puro (50/50 sem nenhum indício) → em regra, deixe em branco. Use as heurísticas de padrão para transformar 50/50 em 70/30.",
-    aplicar: "Estratégia de prova — treine no simulador com correção 1 líquida.", exemplo: null },
-  { nome: "Imunidade ao item longo", desc: "Item extenso não é sinônimo de errado. A banca usa comprimento para cansar; quebre em blocos e julgue tecnicamente.",
-    aplicar: "Constitucional, Direitos Humanos e itens com texto de apoio.", exemplo: "DP-005" },
+  /* ============ LEITURA E DECOMPOSIÇÃO ============ */
+  {
+    id: "leitura-reversa", categoria: "leitura", nome: "Leitura reversa",
+    desc: "Leia primeiro a última oração do item — é a posição preferida da banca para inserir a troca. Depois volte ao início já sabendo o que procurar.",
+    aplicar: "Itens longos (3+ linhas) e reprodução literal de dispositivo constitucional.",
+    padrao: "Em itens de literalidade, a banca costuma reproduzir o dispositivo de forma fiel e concentrar a alteração no fecho da assertiva. O começo correto cria adesão: o candidato reconhece o texto legal, baixa a guarda e valida o restante por inércia.",
+    passos: [
+      "Leia a última oração antes de qualquer outra coisa.",
+      "Pergunte: essa parte final está mesmo na norma, ou foi acrescentada?",
+      "Volte ao início e leia o item inteiro, agora só confirmando.",
+    ],
+    ganho: "Evita o efeito de adesão: você julga o fecho com a atenção que normalmente já gastou nas primeiras linhas.",
+    armadilha: "Nem toda troca está no fim. Se o fecho estiver correto, leia o item inteiro — não conclua CERTO só porque o final passou no teste.",
+    contraDNA: ["literalidade", "verdade-mais-falso"],
+    exemplo: "DC-004", trecho: "inclusive as militares",
+    porqueTrecho: "As três primeiras linhas reproduzem o art. 144, § 4º, da CF quase palavra por palavra. Toda a alteração está nas três últimas palavras: a apuração de infrações penais militares é justamente a exceção ressalvada pelo dispositivo.",
+  },
+  {
+    id: "julgamento-blocos", categoria: "leitura", nome: "Julgamento por blocos",
+    desc: "Divida a assertiva em orações e julgue cada uma como um item independente. Uma única oração falsa torna todo o item ERRADO.",
+    aplicar: "Itens com duas afirmações encadeadas, especialmente ligadas por 'razão por que', 'de modo que', 'portanto'.",
+    padrao: "O item de duas orações é o formato natural do C/E: a banca afirma algo verdadeiro e emenda uma consequência falsa. O conectivo causal ('razão por que', 'logo', 'assim') é o ponto de solda — a primeira oração compra a confiança que a segunda gasta.",
+    passos: [
+      "Marque os conectivos e quebre o item em orações numeradas.",
+      "Julgue cada oração isoladamente: V ou F, sem olhar as vizinhas.",
+      "Confira a relação entre elas: a segunda realmente decorre da primeira?",
+      "Uma F em qualquer bloco (ou um nexo falso) ⇒ item ERRADO.",
+    ],
+    ganho: "Transforma um item complexo em dois ou três julgamentos simples, e impede que a parte verdadeira contamine a avaliação da parte falsa.",
+    armadilha: "Duas orações verdadeiras não garantem item certo: o nexo entre elas também é objeto de julgamento. Verifique se a causa alegada é mesmo a causa.",
+    contraDNA: ["verdade-mais-falso", "negacao-dupla"],
+    exemplo: "PT-003", trecho: "razão por que sua supressão manteria a correção gramatical do período",
+    porqueTrecho: "A primeira oração está correta (as vírgulas isolam um aposto explicativo). A falsidade mora inteira na consequência emendada pelo 'razão por que' — suprimir as vírgulas de um aposto quebra a correção do período.",
+  },
+  {
+    id: "item-longo", categoria: "leitura", nome: "Imunidade ao item longo",
+    desc: "Item extenso não é sinônimo de item errado. O comprimento é instrumento de cansaço, não indício de gabarito.",
+    aplicar: "Constitucional, Direitos Humanos e itens com texto de apoio.",
+    padrao: "Existe entre candidatos a crença de que 'item grande tende a ser errado'. Os gabaritos públicos não sustentam isso: itens longos aparecem como CERTO com frequência comparável à dos curtos. O que o comprimento faz é aumentar o custo de leitura no fim da prova, quando a atenção já caiu.",
+    passos: [
+      "Não use o comprimento como evidência de nada.",
+      "Aplique o julgamento por blocos: o item longo vira 3 ou 4 itens curtos.",
+      "Se todos os blocos resistirem, marque CERTO sem desconforto.",
+    ],
+    ganho: "Elimina um viés que só produz erro: descartar item correto por parecer 'grande demais para estar certo'.",
+    armadilha: "O inverso também é viés. Item curto e elegante não é mais confiável — a troca de uma única palavra cabe em uma linha.",
+    contraDNA: ["literalidade", "verdade-mais-falso"],
+    exemplo: "DP-005", trecho: "se evitável, exclui o dolo, mas permite a punição por crime culposo, se previsto em lei",
+    porqueTrecho: "Item longo, denso e integralmente CERTO. As duas metades reproduzem com precisão o regime do erro de tipo (art. 20 do CP) — inclusive a ressalva final 'se previsto em lei', que o candidato apressado lê como exigência inventada.",
+  },
+
+  /* ============ RADAR LEXICAL ============ */
+  {
+    id: "termos-absolutos", categoria: "lexical", nome: "Radar de termos absolutos",
+    desc: "'Sempre, nunca, somente, todos, qualquer' sinalizam risco alto — mas confirme no conteúdo: a banca planta absolutos verdadeiros justamente para punir o atalho cego.",
+    aplicar: "Em todo item — com a ressalva das normas que são literalmente absolutas.",
+    padrao: "É o padrão de maior incidência do banco (≈82%). O termo absoluto costuma acompanhar item errado porque quase toda regra jurídica comporta exceção. Mas a banca conhece o atalho e o explora: em vedações constitucionais (tortura, racismo) e em regras de consumação, o absoluto é verdadeiro — e o candidato que marca ERRADO só pelo advérbio perde a questão.",
+    passos: [
+      "Localize o termo absoluto e sublinhe.",
+      "Tente produzir UMA exceção concreta prevista em norma.",
+      "Achou exceção ⇒ ERRADO. Não achou ⇒ o absoluto pode ser legítimo: julgue pelo conteúdo.",
+    ],
+    ganho: "Converte um chute 50/50 em decisão fundamentada, e evita o erro simétrico de marcar ERRADO só pela presença do advérbio.",
+    armadilha: "Usar o radar como regra automática. O termo absoluto indica onde investigar — quem decide é a norma, não o advérbio.",
+    contraDNA: ["termo-absoluto", "generalizacao"],
+    exemplo: "DP-004", trecho: "ainda que a vantagem jamais venha a ser paga",
+    porqueTrecho: "Contém 'jamais' e mesmo assim o gabarito é CERTO. A concussão é crime formal: consuma-se na exigência, e o recebimento é mero exaurimento. É o absoluto verdadeiro que a banca usa para punir quem decide pelo advérbio.",
+  },
+  {
+    id: "prescindir", categoria: "lexical", nome: "Tradutor de 'prescindir'",
+    desc: "Traduza antes de julgar: prescinde = DISPENSA; imprescindível = INDISPENSÁVEL; não prescinde = EXIGE.",
+    aplicar: "Qualquer disciplina — é a pegadinha semântica mais rentável da banca.",
+    padrao: "'Prescindir' é usado com frequência muito acima do que o português corrente justificaria, e quase sempre em itens cujo gabarito depende exatamente de entendê-lo. O erro aqui não é de conteúdo: o candidato sabe a matéria e inverte o sentido do verbo. A mesma armadilha vale para 'obstar', 'elidir', 'ilidir' e 'exsurgir'.",
+    passos: [
+      "Ao ver 'prescinde', reescreva a frase trocando por 'dispensa'.",
+      "Ao ver 'não prescinde' ou 'imprescindível', troque por 'exige'.",
+      "Releia a frase já traduzida e só então julgue o conteúdo.",
+    ],
+    ganho: "Separa dois erros que se confundem: não saber a matéria e não ter lido a frase. Só o segundo é evitável de graça.",
+    armadilha: "Traduzir no automático sem reler a frase inteira — a negação pode estar em outro ponto da oração e inverter tudo de novo.",
+    contraDNA: ["troca-conceito", "negacao-dupla"],
+    exemplo: "LE-006", trecho: "prescindindo da demonstração de lesão ou de perigo concreto",
+    porqueTrecho: "Traduzido, o trecho afirma que o crime DISPENSA a demonstração de perigo concreto — exatamente a definição de crime de perigo abstrato, o que torna o item CERTO. Quem lê 'prescindindo' como 'exigindo' inverte o gabarito com a matéria dominada.",
+  },
+  {
+    id: "condicao-inventada", categoria: "lexical", nome: "Caça à condição inventada",
+    desc: "'Desde que', 'condicionado a', 'exige-se', 'somente se' — verifique se a condição existe na norma. Condição inexistente = item errado.",
+    aplicar: "Garantias fundamentais, leis especiais e procedimentos do CPP.",
+    padrao: "A banca acopla ao final do item um requisito que soa técnico e razoável, mas que a norma não prevê. É eficiente porque o candidato valida o corpo do item (correto) e aceita a condição por parecer plausível — ninguém desconfia de uma exigência que 'faz sentido'.",
+    passos: [
+      "Isole a condição introduzida por 'desde que', 'salvo se', 'exige-se'.",
+      "Pergunte: consigo apontar o dispositivo que cria essa condição?",
+      "Não consigo ⇒ suspeite fortemente. Condição inexistente derruba o item inteiro.",
+    ],
+    ganho: "Ataca um padrão de alta incidência (≈63%) com uma pergunta única e objetiva.",
+    armadilha: "Nem toda condição é inventada — o Direito é cheio de requisitos legítimos. A pergunta certa não é 'parece razoável?', e sim 'está na norma?'.",
+    contraDNA: ["exigencia-inexistente", "restricao-indevida"],
+    exemplo: "PP-005", trecho: "desde que corroborado por outros elementos de prova",
+    porqueTrecho: "A condição é plausível e por isso funciona. Mas não existe: o silêncio do acusado não pode ser interpretado em prejuízo da defesa em hipótese alguma (art. 5º, LXIII, da CF; art. 186, parágrafo único, do CPP). A condição inventada tenta legitimar uma premissa já inconstitucional.",
+  },
+  {
+    id: "negacao-dupla", categoria: "lexical", nome: "Desembaralhar a negação dupla",
+    desc: "'Não é incorreto afirmar', 'é inegável que não se pode negar' — reescreva na forma afirmativa antes de julgar.",
+    aplicar: "Itens que começam com construções negativas empilhadas.",
+    padrao: "A banca embaralha o sentido sem alterar o conteúdo: duas negativas se anulam e produzem uma afirmação. O candidato gasta a atenção decodificando a sintaxe e chega ao conteúdo já sem margem — e então erra um item cuja matéria domina.",
+    passos: [
+      "Conte as negações da assertiva (não, in-, sem, nega, inegável).",
+      "Número par ⇒ afirmação. Número ímpar ⇒ negação.",
+      "Reescreva o item na forma afirmativa, em voz alta se possível.",
+      "Julgue a frase reescrita, ignorando a redação original.",
+    ],
+    ganho: "Neutraliza um custo puramente sintático: depois de reescrito, o item vira uma questão comum de conteúdo.",
+    armadilha: "Cuidado com negações lexicais disfarçadas — 'inviolável', 'impossibilidade', 'vedado' contam como negação e podem quebrar a paridade.",
+    contraDNA: ["negacao-dupla"],
+    exemplo: "DC-030", trecho: "É inegável que a casa não constitui asilo inviolável do indivíduo",
+    porqueTrecho: "Três marcas de negação empilhadas ('inegável', 'não', 'inviolável'). Reescrito: 'a casa não é asilo inviolável' — o oposto do art. 5º, XI, da CF. Sem reescrever, o candidato julga a sintaxe em vez da norma.",
+  },
+
+  /* ============ CONTEÚDO E CONCEITOS ============ */
+  {
+    id: "pares-espelhados", categoria: "conteudo", nome: "Checagem de pares espelhados",
+    desc: "Conceitos que andam em dupla (anulação×revogação, excesso×desvio, ransomware×phishing) são o alvo favorito de inversão. Monte o par correto ANTES de ler a definição da banca.",
+    aplicar: "Direito Administrativo, Penal e Informática.",
+    padrao: "Sempre que dois institutos se opõem de forma simétrica, a banca escreve as duas definições corretamente e troca os rótulos entre si. Reler o item não resolve: as definições estão certas, e a leitura confirma o que já se leu. Só a comparação com o par montado de memória expõe a inversão.",
+    passos: [
+      "Reconheça o par citado e escreva a definição correta de cada lado, de memória.",
+      "Só então leia o item e sobreponha ao seu par.",
+      "Se as definições estiverem corretas mas cruzadas ⇒ ERRADO.",
+    ],
+    ganho: "Cria um gabarito próprio antes da leitura, tornando a inversão visível em vez de plausível.",
+    armadilha: "Montar o par errado de memória confirma a inversão da banca. Se não tiver segurança no par, essa técnica não se aplica — recorra ao conteúdo.",
+    contraDNA: ["troca-conceito"],
+    exemplo: "DA-005", trecho: "O desvio de poder configura-se quando o agente público atua fora dos limites de sua competência",
+    porqueTrecho: "A definição transcrita é impecável — só que é a de EXCESSO de poder. O desvio ocorre quando o agente é competente mas persegue finalidade diversa do interesse público. Duas definições certas, rótulos trocados.",
+  },
+  {
+    id: "checagem-numerica", categoria: "conteudo", nome: "Ponto de checagem numérico",
+    desc: "Todo número (prazo, quantidade, fração, idade, pena) é ponto de verificação obrigatório. Pare, recupere o número da norma, compare.",
+    aplicar: "Leis penais especiais, CPP e prazos processuais.",
+    padrao: "A alteração numérica é a troca mais barata de produzir e uma das mais difíceis de perceber: o item permanece inteiramente correto salvo por um dígito. A banca prefere desvios pequenos e plausíveis (3 em vez de 4; 24 em vez de 48 horas), porque números próximos do verdadeiro não disparam estranhamento.",
+    passos: [
+      "Circule todo número do item, por escrito.",
+      "Para cada um, recupere o valor da norma antes de seguir lendo.",
+      "Divergiu ⇒ ERRADO, sem necessidade de avaliar o resto.",
+    ],
+    ganho: "Um único ponto de checagem objetivo resolve o item inteiro, sem depender de interpretação.",
+    armadilha: "Só funciona com o número memorizado corretamente. Sem isso, a checagem vira confirmação do palpite — prefira deixar em branco a validar de memória insegura.",
+    contraDNA: ["troca-numerica"],
+    exemplo: "LE-007", trecho: "três ou mais pessoas",
+    porqueTrecho: "Todo o resto do conceito legal de organização criminosa está reproduzido com fidelidade. A Lei 12.850/2013 exige 4 ou mais pessoas — o item troca um único algarismo e o gabarito inteiro vira ERRADO.",
+  },
+  {
+    id: "quem-pratica", categoria: "conteudo", nome: "Quem pratica o ato?",
+    desc: "Antes de julgar a conduta descrita, confirme o SUJEITO: delegado, juiz, MP, PF, PRF? A ação pode ser legítima com o agente errado.",
+    aplicar: "Inquérito policial, competências do art. 144 da CF e atos processuais.",
+    padrao: "A banca descreve um ato que de fato existe no ordenamento e o atribui a quem não tem atribuição para praticá-lo. É especialmente rentável em provas de carreira policial, onde o candidato reconhece o instituto e não questiona o titular. O verbo está certo; o sujeito, não.",
+    passos: [
+      "Sublinhe o sujeito da oração principal antes de ler o predicado.",
+      "Pergunte: a norma atribui esse ato a esse agente?",
+      "Se o ato existe mas pertence a outro agente ⇒ ERRADO.",
+    ],
+    ganho: "Um único teste resolve toda uma família de itens de competência e atribuição.",
+    armadilha: "Atenção a atos de titularidade compartilhada — investigar, requisitar perícia e representar por cautelares admitem mais de um legitimado.",
+    contraDNA: ["troca-sujeito"],
+    exemplo: "PP-002", trecho: "A autoridade policial poderá mandar arquivar",
+    porqueTrecho: "O arquivamento existe e a atipicidade é fundamento válido — mas o art. 17 do CPP é expresso: a autoridade policial NÃO pode arquivar inquérito. O ato é real, o titular é outro.",
+  },
+  {
+    id: "regra-rotulo", categoria: "conteudo", nome: "Regra do rótulo",
+    desc: "Quando a definição estiver perfeita, desconfie do NOME definido. A banca raramente erra a definição — ela troca o termo.",
+    aplicar: "Informática, Segurança da Informação e institutos jurídicos nominados.",
+    padrao: "É a variante 'de um lado só' dos pares espelhados: em vez de cruzar duas definições, o item apresenta uma definição correta sob o rótulo errado. A leitura confirmatória falha porque o candidato avalia a definição — que está certa — e não o nome.",
+    passos: [
+      "Leia a definição ignorando deliberadamente o nome dado.",
+      "Nomeie o conceito você mesmo, antes de olhar o rótulo do item.",
+      "Compare o seu nome com o do item. Divergiu ⇒ ERRADO.",
+    ],
+    ganho: "Inverte a ordem natural de leitura e faz o rótulo — e não a definição — ser o objeto do julgamento.",
+    armadilha: "Alguns institutos admitem mais de uma denominação aceita. Antes de marcar ERRADO, verifique se não se trata de sinonímia consagrada.",
+    contraDNA: ["troca-conceito"],
+    exemplo: "IN-001", trecho: "Denomina-se ransomware",
+    porqueTrecho: "A definição descreve phishing com precisão técnica — engenharia social, mensagem fraudulenta, captura de credenciais. Nada nela está errado, exceto o rótulo colado na primeira palavra. Ransomware sequestra dados por criptografia e exige resgate.",
+  },
+  {
+    id: "sumula-existe", categoria: "conteudo", nome: "A súmula existe mesmo?",
+    desc: "Número de súmula que você não reconhece é sinal de alerta. A banca inventa enunciados com aparência de autoridade.",
+    aplicar: "Itens abertos por 'Conforme a Súmula nº X', 'Segundo entendimento sumulado', 'Nos termos da SV nº X'.",
+    padrao: "A citação numerada transfere autoridade e desliga a checagem: o candidato passa a julgar se o conteúdo é razoável, não se a fonte existe. A banca explora isso de duas formas — número fictício com conteúdo plausível, ou número real com enunciado adulterado.",
+    passos: [
+      "Ao ver citação numerada, pergunte primeiro: eu conheço essa súmula?",
+      "Julgue o CONTEÚDO por conta própria, ignorando a autoridade citada.",
+      "Se o conteúdo contraria o que você sabe da matéria, não recue por causa do número.",
+    ],
+    ganho: "Impede que a aparência de fonte oficial sobreponha o conhecimento que você já tem do tema.",
+    armadilha: "Não desconfie de toda citação: súmulas verdadeiras são cobradas o tempo todo, e desconhecê-las não as torna falsas. O teste é o conteúdo, não a sua memória do número.",
+    contraDNA: ["juris-inventada"],
+    exemplo: "DP-077", trecho: "Conforme a Súmula 912 do STJ",
+    porqueTrecho: "A súmula não existe — e o conteúdo entrega a fraude sozinho: a insignificância nunca é de aplicação 'obrigatória e automática', pois depende dos vetores fixados pelo STF (mínima ofensividade, ausência de periculosidade social, reduzido grau de reprovabilidade e inexpressividade da lesão).",
+  },
+  {
+    id: "juris-mais-lei", categoria: "conteudo", nome: "Jurisprudência + lei: confira as duas pontas",
+    desc: "Itens que misturam texto legal e entendimento dos tribunais só fecham para quem conhece os dois lados. Valide separadamente.",
+    aplicar: "Busca domiciliar, insignificância, Maria da Penha, porte de arma.",
+    padrao: "A banca combina um dispositivo legal com uma tese do STF/STJ, e altera apenas uma das pontas. Quem domina só a lei valida a parte legal e aceita a jurisprudencial; quem domina só a jurisprudência faz o inverso. O item é construído para separar quem estudou os dois.",
+    passos: [
+      "Separe o que é texto de lei do que é entendimento de tribunal.",
+      "Valide a ponta legal isoladamente.",
+      "Valide a tese jurisprudencial isoladamente.",
+      "Só marque CERTO se as duas resistirem.",
+    ],
+    ganho: "Evita o erro assimétrico de validar o item inteiro com base na metade que você domina.",
+    armadilha: "Teses mudam. Entendimento superado citado como vigente torna o item errado mesmo com a lei corretamente transcrita.",
+    contraDNA: ["juris-mais-lei"],
+    exemplo: "PP-004", trecho: "mesmo durante a noite, quando amparado em fundadas razões",
+    porqueTrecho: "Item CERTO que exige as duas pontas: a inviolabilidade domiciliar e sua exceção de flagrante (art. 5º, XI, da CF) mais a tese do RE 603.616 — fundadas razões, justificadas a posteriori. Quem só tem a letra da CF estranha o 'durante a noite' e marca errado.",
+  },
+  {
+    id: "contraexemplo", categoria: "conteudo", nome: "Procure o contraexemplo",
+    desc: "Diante de uma regra estendida a 'todos' ou 'em regra', tente produzir um único caso contrário. Um basta para derrubar o item.",
+    aplicar: "Itens que generalizam classificações ou atributos de um instituto.",
+    padrao: "A generalização indevida parte de um núcleo verdadeiro e o estende além do alcance da norma. É diferente do termo absoluto puro: aqui o problema não é o advérbio, é o salto lógico — a banca usa uma característica frequente como se fosse necessária.",
+    passos: [
+      "Identifique a classe generalizada ('todos os atos de X são Y').",
+      "Busque ativamente UM membro da classe que não tenha o atributo.",
+      "Encontrou ⇒ ERRADO. A regra não precisa cair inteira: basta uma exceção.",
+    ],
+    ganho: "Substitui a pergunta difícil ('a regra é sempre verdadeira?') por uma fácil ('consigo lembrar de um caso contrário?').",
+    armadilha: "'Em regra' e 'via de regra' admitem exceção por definição — nesses casos, o contraexemplo isolado não derruba o item. Verifique se a exceção é a hipótese comum ou a rara.",
+    contraDNA: ["generalizacao", "termo-absoluto"],
+    exemplo: "DA-001", trecho: "todos os atos decorrentes do poder de polícia administrativa são dotados de discricionariedade",
+    porqueTrecho: "Basta um contraexemplo: a licença é ato vinculado de polícia administrativa — preenchidos os requisitos legais, a Administração deve concedê-la. Um único caso derruba o 'todos'.",
+  },
+  {
+    id: "atualizacao-legislativa", categoria: "conteudo", nome: "Radar de atualização legislativa",
+    desc: "Lei ou decisão dos últimos 2 anos tem alta chance de cobrança literal — e, nesses casos, com viés de gabarito CERTO.",
+    aplicar: "Revisão pré-prova: liste as novidades do edital e leia a letra da lei nova.",
+    padrao: "Novidade legislativa é material de prova de baixo custo para a banca: o texto é curto, ainda não tem jurisprudência consolidada e discrimina bem quem manteve a revisão em dia. Na estreia de um dispositivo, a cobrança tende a ser mais literal do que interpretativa — o que aumenta a proporção de itens CERTO.",
+    passos: [
+      "Antes da prova, liste toda lei/tese com menos de 2 anos dentro do edital.",
+      "Leia a letra do dispositivo novo, não apenas o resumo do professor.",
+      "Fixe números da lei nova: penas, prazos e quóruns são o recorte preferido.",
+    ],
+    ganho: "Converte um bloco previsível da prova em acerto de baixo esforço.",
+    armadilha: "Viés de CERTO não é garantia. A banca também troca a pena ou o artigo da lei nova — o radar indica o tema, não o gabarito.",
+    contraDNA: ["literalidade", "troca-numerica"],
+    exemplo: "LP-002", trecho: "deixou de ser qualificadora do homicídio e passou a constituir tipo penal autônomo",
+    porqueTrecho: "Reprodução fiel da mudança trazida pela Lei 14.994/2024, que criou o art. 121-A do CP. É o formato típico da novidade recém-editada: literal e CERTO — mas com a pena (20 a 40 anos) exposta no fecho, pronta para ser trocada em outra prova.",
+  },
+
+  /* ============ GESTÃO DE PROVA ============ */
+  {
+    id: "gestao-branco", categoria: "prova", nome: "Gestão do branco (1 líquida)",
+    desc: "No CEBRASPE, errado anula certo. Convicção ou fundamento parcial → responda; chute puro 50/50 sem nenhum indício → em regra, deixe em branco.",
+    aplicar: "Estratégia de prova — treine no simulador com correção 1 líquida.",
+    padrao: "A regra 1 líquida torna o chute aleatório neutro no valor esperado (50% × +1 mais 50% × −1 = 0), mas com variância alta e custo real de tempo. O ganho não vem de chutar mais: vem de usar as heurísticas de padrão para sair do 50/50 antes de decidir.",
+    passos: [
+      "Classifique o item: domino / tenho indício / não faço ideia.",
+      "'Domino' e 'tenho indício' ⇒ responda.",
+      "'Não faço ideia' ⇒ aplique um radar (absoluto, condição, número, sujeito).",
+      "Se nenhum radar acender, deixe em branco e siga — o tempo vale mais.",
+    ],
+    ganho: "Protege a pontuação líquida e devolve tempo para os itens em que seu conhecimento decide.",
+    armadilha: "Branco em excesso também reprova. Fundamento parcial não é chute: se um radar acendeu, você já não está em 50/50 e deve responder.",
+    contraDNA: [],
+    exemplo: null, trecho: null, porqueTrecho: null,
+  },
 ];
 
 /* Correção estilo CEBRASPE: 1 errada anula 1 certa */

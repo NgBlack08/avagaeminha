@@ -440,6 +440,17 @@ let bancoModoVisual = localStorage.getItem("questlab-banco-modo") || "scroll";
 let bancoIndice = 0;
 let bancoListaCache = null; /* {chave, lista} — evita reembaralhar a cada Anterior/Próxima */
 
+/* Destaque vindo da aba Estratégias: {qid, trecho, estrategia} — faz o
+   card da questão-exemplo realçar o recorte que materializa a técnica. */
+let destaqueEstrategia = null;
+function destaqueDaQuestao(qid) {
+  return destaqueEstrategia && destaqueEstrategia.qid === qid ? destaqueEstrategia : null;
+}
+function limparDestaqueEstrategia() {
+  destaqueEstrategia = null;
+  renderBanco();
+}
+
 function listaBancoAtual() {
   const chave = JSON.stringify(bancoFiltros);
   if (!bancoListaCache || bancoListaCache.chave !== chave) {
@@ -548,7 +559,16 @@ function questaoCardHtml(q, opts) {
   const modo = opts.modo || "banco";
   const diff = "●".repeat(q.dificuldade) + "○".repeat(3 - q.dificuldade);
   qUI[q.id] = { confianca: null, respondida: false, inicio: Date.now(), modo };
-  return `<div class="card q-card ${opts.ampliada ? "ampliada" : ""}" id="qc-${q.id}">
+  const dest = destaqueDaQuestao(q.id);
+  const e = dest && dest.estrategia;
+  return `<div class="card q-card ${opts.ampliada ? "ampliada" : ""} ${dest ? "com-destaque" : ""}" id="qc-${q.id}">
+    ${dest ? `<div class="estrategia-flag">
+      <div class="ef-top">
+        <span class="tag accent">✦ ${escapeHtml(e.nome)}</span>
+        <button class="btn ghost small" onclick="limparDestaqueEstrategia()" title="Remover o destaque">✕ limpar destaque</button>
+      </div>
+      <p class="ef-why">${escapeHtml(e.porqueTrecho)}</p>
+    </div>` : ""}
     <div class="q-head">
       <span class="tag accent">${q.id}</span>
       <span class="tag">${q.concurso} · ${q.cargo.join("/")}</span>
@@ -560,7 +580,9 @@ function questaoCardHtml(q, opts) {
       <span class="tag" title="tempo ideal de resolução">⏱ ideal: ${q.tempoIdealSeg}s</span>
     </div>
     ${q.textoApoio ? `<div class="q-texto-apoio">${escapeHtml(q.textoApoio)}</div>` : ""}
-    <div class="q-enunciado" id="qe-${q.id}">${escapeHtml(q.enunciado)}</div>
+    <div class="q-enunciado" id="qe-${q.id}">${dest
+      ? marcarTrechoEstrategia(q.enunciado, dest.trecho, "Trecho que materializa a estratégia: " + e.nome)
+      : escapeHtml(q.enunciado)}</div>
     <div class="q-actions" id="qa-${q.id}">
       <button class="btn ok" onclick="responder('${q.id}','C')">CERTO</button>
       <button class="btn bad" onclick="responder('${q.id}','E')">ERRADO</button>
@@ -612,8 +634,12 @@ function responder(qid, resposta) {
     if (id !== qid && qUI[id] && !qUI[id].respondida) qUI[id].inicio = agora;
   }
 
-  /* revela destaques de palavras perigosas no enunciado */
-  $("#qe-" + qid).innerHTML = highlightPerigos(q.enunciado);
+  /* revela destaques de palavras perigosas no enunciado, preservando o
+     recorte da estratégia quando o usuário veio da aba Estratégias */
+  const dest = destaqueDaQuestao(qid);
+  $("#qe-" + qid).innerHTML = dest
+    ? highlightEnunciado(q.enunciado, dest.trecho, "Trecho que materializa a estratégia: " + dest.estrategia.nome)
+    : highlightPerigos(q.enunciado);
   $("#qa-" + qid).style.display = "none";
 
   const dna = DNA_BANCA.find(d => d.slug === q.pegadinha);
@@ -1278,35 +1304,120 @@ function renderPredicao() {
 /* ================================================================
    ESTRATÉGIAS (Módulo 10)
    ================================================================ */
-function renderEstrategias() {
-  MAIN().innerHTML = topbar("Estratégias CEBRASPE",
-    "Biblioteca de técnicas de resolução com exemplos reais do banco") +
-  `<div class="card">
-    ${ESTRATEGIAS.map(e => `
-      <div class="estrategia">
-        <h4>✦ ${e.nome}</h4>
-        <p>${e.desc}</p>
-        <div class="aplicar">Quando aplicar: ${e.aplicar}
-          ${e.exemplo ? ` · <a href="#" style="color:var(--accent)" onclick="verExemplo('${e.exemplo}');return false;">ver questão-exemplo (${e.exemplo})</a>` : ""}</div>
-      </div>`).join("")}
+let estrategiaCat = null; /* null = todas as categorias */
+function setEstrategiaCat(cat) { estrategiaCat = cat || null; renderEstrategias(); }
+
+/* Bloco da questão-exemplo com o recorte da estratégia já destacado —
+   é a demonstração central da aba: mostra, no texto real do item, qual
+   oração dispara a técnica. */
+function exemploEstrategiaHtml(e) {
+  const q = QUESTOES.find(x => x.id === e.exemplo);
+  if (!q) return "";
+  const liberada = questaoLiberada(q);
+  const gabOk = q.gabarito === "C";
+  return `<div class="estr-exemplo">
+    <div class="ee-head">
+      <span class="tag accent">${q.id}</span>
+      <span class="tag">${escapeHtml(q.disciplina)}</span>
+      <span class="tag">${escapeHtml(q.assunto)}</span>
+      <span class="tag ${gabOk ? "ok" : "bad"}">gabarito: ${gabOk ? "CERTO" : "ERRADO"}</span>
+    </div>
+    <blockquote class="ee-enunciado">${marcarTrechoEstrategia(q.enunciado, e.trecho, "Trecho que materializa a estratégia")}</blockquote>
+    <p class="ee-porque"><b>Por que este trecho:</b> ${escapeHtml(e.porqueTrecho)}</p>
+    ${liberada
+      ? `<button class="btn ghost small" onclick="verExemploEstrategia('${e.id}')">Resolver esta questão no banco →</button>`
+      : `<p class="ee-bloqueio">🔒 Esta questão faz parte do banco completo. <a href="#" onclick="navigate('planos');return false;">Ver planos</a> para resolvê-la com comentário e engenharia cognitiva.</p>`}
   </div>`;
 }
-function verExemplo(qid) {
-  bancoFiltros = { busca: null };
-  navigate("banco");
-  const q = QUESTOES.find(x => x.id === qid);
+
+function estrategiaCardHtml(e) {
+  const dnas = (e.contraDNA || []).map(slug => DNA_BANCA.find(d => d.slug === slug)).filter(Boolean);
+  return `<div class="estrategia">
+    <div class="estr-top">
+      <h4>✦ ${escapeHtml(e.nome)}</h4>
+      ${dnas.map(d => `<span class="tag dna" title="${escapeHtml(d.desc)}">neutraliza: ${escapeHtml(d.nome)} · ${d.incidencia}%</span>`).join("")}
+    </div>
+    <p class="estr-desc">${escapeHtml(e.desc)}</p>
+
+    <div class="estr-bloco padrao">
+      <b>📐 Padrão observado nas provas</b>
+      <p>${escapeHtml(e.padrao)}</p>
+    </div>
+
+    <div class="estr-bloco">
+      <b>▸ Como aplicar</b>
+      <ol class="estr-passos">${e.passos.map(p => `<li>${escapeHtml(p)}</li>`).join("")}</ol>
+    </div>
+
+    <div class="estr-duo">
+      <div class="estr-bloco ganho"><b>✔ O que você ganha</b><p>${escapeHtml(e.ganho)}</p></div>
+      <div class="estr-bloco risco"><b>⚠ Quando a técnica falha</b><p>${escapeHtml(e.armadilha)}</p></div>
+    </div>
+
+    <div class="aplicar">Quando aplicar: ${escapeHtml(e.aplicar)}</div>
+    ${e.exemplo ? exemploEstrategiaHtml(e) : ""}
+  </div>`;
+}
+
+function renderEstrategias() {
+  const cats = estrategiaCat ? ESTRATEGIA_CATEGORIAS.filter(c => c.id === estrategiaCat) : ESTRATEGIA_CATEGORIAS;
+  const nTotal = ESTRATEGIAS.length;
+  const nExemplos = ESTRATEGIAS.filter(e => e.exemplo).length;
+
+  MAIN().innerHTML = topbar("Estratégias CEBRASPE",
+    `${nTotal} técnicas de resolução derivadas de padrões recorrentes da banca — com o trecho exato que dispara cada uma`) +
+  `<div class="card estr-intro">
+    <h3>🔬 Como esta biblioteca foi construída</h3>
+    <p>Cada técnica abaixo parte de um <b>comportamento recorrente e verificável</b> nas provas CEBRASPE de domínio público
+    (cadernos e gabaritos oficiais divulgados pela banca). Para cada uma você encontra o padrão explorado, o procedimento
+    de aplicação, o ganho esperado e — igualmente importante — <b>em que situação a própria técnica falha</b>.</p>
+    <p>Em ${nExemplos} das ${nTotal} estratégias há uma questão-exemplo do banco com o <mark class="trecho-estrategia">trecho
+    destacado</mark> que materializa o padrão: é ali que a banca age.</p>
+    <p class="hint">Os percentuais de incidência são estimativas do QuestLab a partir do perfil histórico da banca —
+    servem para priorizar estudo, não como previsão de prova.</p>
+  </div>
+
+  <div class="estr-filtros">
+    <button class="chip ${!estrategiaCat ? "active" : ""}" onclick="setEstrategiaCat(null)">Todas (${nTotal})</button>
+    ${ESTRATEGIA_CATEGORIAS.map(c => {
+      const n = ESTRATEGIAS.filter(e => e.categoria === c.id).length;
+      return `<button class="chip ${estrategiaCat === c.id ? "active" : ""}" onclick="setEstrategiaCat('${c.id}')">${c.ico} ${escapeHtml(c.nome)} (${n})</button>`;
+    }).join("")}
+  </div>
+
+  ${cats.map(c => {
+    const lista = ESTRATEGIAS.filter(e => e.categoria === c.id);
+    if (!lista.length) return "";
+    return `<div class="card estr-cat">
+      <h3>${c.ico} ${escapeHtml(c.nome)}</h3>
+      <p class="hint estr-cat-desc">${escapeHtml(c.desc)}</p>
+      ${lista.map(estrategiaCardHtml).join("")}
+    </div>`;
+  }).join("")}`;
+}
+
+/* Abre a questão-exemplo no Banco com o trecho da estratégia destacado. */
+function verExemploEstrategia(idEstrategia) {
+  const e = ESTRATEGIAS.find(x => x.id === idEstrategia);
+  if (!e || !e.exemplo) return;
+  const q = QUESTOES.find(x => x.id === e.exemplo);
   if (!q) return;
+  if (!questaoLiberada(q)) { navigate("planos"); return; }
+
+  destaqueEstrategia = { qid: q.id, trecho: e.trecho, estrategia: e };
   bancoFiltros = { disciplina: q.disciplina, assunto: q.assunto };
+  bancoIndice = 0;
+  navigate("banco");
+
   if (bancoModoVisual === "unica") {
-    const idx = listaBancoAtual().findIndex(x => x.id === qid);
+    const idx = listaBancoAtual().findIndex(x => x.id === q.id);
     bancoIndice = idx >= 0 ? idx : 0;
     renderBanco();
     return;
   }
-  renderBanco();
   setTimeout(() => {
-    const el = document.getElementById("qc-" + qid);
-    if (el) { el.scrollIntoView({ behavior: "smooth", block: "start" }); el.style.outline = "2px solid var(--accent)"; }
+    const el = document.getElementById("qc-" + q.id);
+    if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
   }, 60);
 }
 
