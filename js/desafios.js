@@ -191,8 +191,8 @@ function podiosHtml(ranking, pontuadores, eu) {
       sufixo: " vit.", vazio: "Ainda não há vencedores de duelos. Desafie alguém!",
     })}
     ${podioHtml(pontuadoresTop, {
-      titulo: "Top 3 maiores pontuadores", icone: "💯",
-      sufixo: " pts", vazio: "Ainda não há pontuação registrada em desafios.",
+      titulo: "Top 3 maiores pontuadores em questões", icone: "💯",
+      sufixo: " ✔", vazio: "Ainda não há questões respondidas em desafios.",
     })}
   </div>`;
 }
