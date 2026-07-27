@@ -8,14 +8,22 @@
 
 let DUELO = null; /* estado do duelo em andamento */
 
+/* Período do ranking exibido: "semana" (desde segunda 00h, mesmo corte
+   de calcularMetaSemanal()), "mes" (desde o dia 1) ou "geral" (histórico
+   completo). Mantém competição viva para quem chegou depois do início
+   da plataforma, sem exigir nenhum job de reset — é só um filtro de
+   data no RPC. */
+let rankingPeriodo = "semana";
+function setRankingPeriodo(p) { rankingPeriodo = p; renderRanking(); }
+
 /* ---------------- Wrappers de dados (Supabase) ---------------- */
-async function carregarRanking() {
-  const { data, error } = await supa.rpc("ranking_desafios");
+async function carregarRanking(periodo) {
+  const { data, error } = await supa.rpc("ranking_desafios", { p_periodo: periodo });
   if (error) { console.error("Erro ao carregar ranking:", error); return []; }
   return data || [];
 }
-async function carregarRankingPontuadores() {
-  const { data, error } = await supa.rpc("ranking_pontuadores_desafios");
+async function carregarRankingPontuadores(periodo) {
+  const { data, error } = await supa.rpc("ranking_pontuadores_desafios", { p_periodo: periodo });
   if (error) { console.error("Erro ao carregar ranking de pontuadores:", error); return []; }
   return data || [];
 }
@@ -74,7 +82,7 @@ async function renderRanking() {
 
   /* Sem nickname: precisa criar para participar */
   if (!APP_STATE.config.nickname) {
-    const [ranking, pontuadores] = await Promise.all([carregarRanking(), carregarRankingPontuadores()]);
+    const [ranking, pontuadores] = await Promise.all([carregarRanking(rankingPeriodo), carregarRankingPontuadores(rankingPeriodo)]);
     MAIN().querySelector("#ranking-load")?.remove();
     MAIN().insertAdjacentHTML("beforeend", `
       <div class="card" style="margin-bottom:16px">
@@ -89,13 +97,14 @@ async function renderRanking() {
         </div>
         <div id="nick-msg" style="margin-top:8px;font-size:13px;min-height:18px" role="status" aria-live="polite"></div>
       </div>
+      ${periodoFiltroHtml()}
       ${podiosHtml(ranking, pontuadores, null)}
       ${rankingTabelaHtml(ranking, null)}`);
     return;
   }
 
   const [ranking, pontuadores, pendentes, enviados, historico] = await Promise.all([
-    carregarRanking(), carregarRankingPontuadores(), carregarDesafiosPendentes(), carregarDesafiosEnviados(), carregarHistoricoDesafios()
+    carregarRanking(rankingPeriodo), carregarRankingPontuadores(rankingPeriodo), carregarDesafiosPendentes(), carregarDesafiosEnviados(), carregarHistoricoDesafios()
   ]);
   const eu = APP_STATE.config.nickname;
   MAIN().querySelector("#ranking-load")?.remove();
@@ -120,7 +129,8 @@ async function renderRanking() {
     </div>`;
   }
 
-  /* Pódios em destaque: top 3 vencedores e top 3 maiores pontuadores */
+  /* Filtro de período + pódios em destaque: top 3 vencedores e top 3 maiores pontuadores */
+  html += periodoFiltroHtml();
   html += podiosHtml(ranking, pontuadores, eu);
 
   /* Ranking completo (tabela) */
@@ -144,6 +154,24 @@ async function renderRanking() {
   }
 
   MAIN().insertAdjacentHTML("beforeend", html);
+}
+
+/* ---------------- Filtro de período ---------------- */
+const RANKING_PERIODOS = [
+  { id: "semana", nome: "Esta semana", prep: "nesta semana" },
+  { id: "mes", nome: "Este mês", prep: "neste mês" },
+  { id: "geral", nome: "Geral", prep: "" },
+];
+function periodoLabel(periodo) {
+  return (RANKING_PERIODOS.find(p => p.id === periodo) || {}).nome || "";
+}
+function periodoPrep(periodo) {
+  return (RANKING_PERIODOS.find(p => p.id === periodo) || {}).prep || "";
+}
+function periodoFiltroHtml() {
+  return `<div class="estr-filtros" style="margin-bottom:16px">
+    ${RANKING_PERIODOS.map(p => `<button class="chip ${rankingPeriodo === p.id ? "active" : ""}" onclick="setRankingPeriodo('${p.id}')">${escapeHtml(p.nome)}</button>`).join("")}
+  </div>`;
 }
 
 /* ---------------- Pódios em destaque (top 3) ---------------- */
@@ -181,30 +209,37 @@ function podioHtml(lista, { titulo, icone, sufixo, vazio }) {
   </div>`;
 }
 function podiosHtml(ranking, pontuadores, eu) {
+  const rotulo = periodoLabel(rankingPeriodo);
   const vencedores = ranking.filter(r => Number(r.vitorias) > 0).slice(0, 3)
     .map(r => ({ nickname: r.nickname, valor: r.vitorias, sub: `${r.derrotas}D · ${r.empates}E`, souEu: eu && r.nickname === eu }));
   const pontuadoresTop = pontuadores.slice(0, 3)
     .map(r => ({ nickname: r.nickname, valor: r.pontos, sub: `${r.duelos} duelo${r.duelos == 1 ? "" : "s"}`, souEu: eu && r.nickname === eu }));
+  const vazioPeriodo = rankingPeriodo === "geral" ? "" : ` (${rotulo.toLowerCase()})`;
   return `<div class="grid cols-2 podios-grid" style="margin-bottom:16px">
     ${podioHtml(vencedores, {
-      titulo: "Top 3 vencedores de confronto", icone: "⚔",
-      sufixo: " vit.", vazio: "Ainda não há vencedores de duelos. Desafie alguém!",
+      titulo: `Top 3 vencedores de confronto — ${rotulo}`, icone: "⚔",
+      sufixo: " vit.", vazio: `Ainda não há vencedores de duelos${vazioPeriodo}. Desafie alguém!`,
     })}
     ${podioHtml(pontuadoresTop, {
-      titulo: "Top 3 maiores pontuadores em questões", icone: "💯",
-      sufixo: " ✔", vazio: "Ainda não há questões respondidas em desafios.",
+      titulo: `Top 3 maiores pontuadores em questões — ${rotulo}`, icone: "💯",
+      sufixo: " ✔", vazio: `Ainda não há questões respondidas em desafios${vazioPeriodo}.`,
     })}
   </div>`;
 }
 
-function rankingTabelaHtml(ranking, eu) {
+function rankingTabelaHtml(rankingCompleto, eu) {
+  const rotulo = periodoLabel(rankingPeriodo);
+  const vazioPeriodo = rankingPeriodo === "geral" ? "" : ` ${periodoPrep(rankingPeriodo)}`;
+  /* Fora do "geral", esconde quem não jogou no período — senão a tabela
+     vira a lista inteira de nicknames cadastrados, quase toda zerada. */
+  const ranking = rankingPeriodo === "geral" ? rankingCompleto : rankingCompleto.filter(r => Number(r.total) > 0);
   if (!ranking.length) {
-    return `<div class="card"><h3>🏆 Ranking dos maiores vencedores</h3>
-      <div class="empty"><div class="big">🥇</div>Ainda não há duelos concluídos. Seja o primeiro a desafiar alguém!</div></div>`;
+    return `<div class="card"><h3>🏆 Ranking dos maiores vencedores — ${rotulo}</h3>
+      <div class="empty"><div class="big">🥇</div>Ainda não há duelos concluídos${vazioPeriodo}. Seja o primeiro a desafiar alguém!</div></div>`;
   }
   const medalha = i => i === 0 ? "🥇" : i === 1 ? "🥈" : i === 2 ? "🥉" : `${i + 1}º`;
   return `<div class="card">
-    <h3>🏆 Ranking dos maiores vencedores</h3>
+    <h3>🏆 Ranking dos maiores vencedores — ${rotulo}</h3>
     <div class="chart-scroll">
     <table class="ranking-tab">
       <thead><tr><th>#</th><th>Nickname</th><th>Vitórias</th><th>Derrotas</th><th>Empates</th><th>Aproveit.</th></tr></thead>
