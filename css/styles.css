@@ -673,6 +673,9 @@ details.cog summary:hover { opacity: .8; }
 .modal-titulo { font-size: 16px; font-weight: 700; color: var(--text); margin-bottom: 8px; }
 .modal-msg { font-size: 14px; color: var(--text); line-height: 1.5; }
 .modal-actions { display: flex; justify-content: flex-end; gap: 10px; margin-top: 20px; }
+.modal-prompt-wrap { display: flex; align-items: center; gap: 10px; margin-top: 14px; }
+.modal-prompt-input { width: 90px; text-align: center; font-size: 16px; font-weight: 700; }
+.modal-prompt-sufixo { font-size: 13px; color: var(--muted); }
 
 /* ===================== Ranking & Desafios ===================== */
 .ranking-tab { width: 100%; border-collapse: collapse; font-size: 14px; min-width: 460px; }

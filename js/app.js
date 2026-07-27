@@ -191,6 +191,66 @@ function mostrarConfirm(mensagem, titulo) {
     { label: "Confirmar", value: true, cls: "" },
   ] });
 }
+/* Modal com campo numérico (ex.: definir uma meta) — retorna o número
+   digitado, ou null se cancelado. */
+function mostrarPromptNumero({ titulo, mensagem, valorInicial, min = 0, max = 100, sufixo = "" }) {
+  return new Promise(resolve => {
+    const overlay = document.createElement("div");
+    overlay.className = "modal-overlay";
+    overlay.innerHTML = `
+      <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modal-titulo">
+        ${titulo ? `<div class="modal-titulo" id="modal-titulo">${escapeHtml(titulo)}</div>` : ""}
+        <div class="modal-msg">${escapeHtml(mensagem)}</div>
+        <div class="modal-prompt-wrap">
+          <input type="number" class="modal-prompt-input" id="modal-prompt-input" min="${min}" max="${max}" value="${valorInicial}">
+          ${sufixo ? `<span class="modal-prompt-sufixo">${escapeHtml(sufixo)}</span>` : ""}
+        </div>
+        <div class="modal-actions"></div>
+      </div>`;
+    const input = overlay.querySelector("#modal-prompt-input");
+    const actions = overlay.querySelector(".modal-actions");
+    let resolvido = false;
+    function fechar(valor) {
+      if (resolvido) return;
+      resolvido = true;
+      document.removeEventListener("keydown", onKey);
+      overlay.remove();
+      resolve(valor);
+    }
+    function confirmar() {
+      let v = Number(input.value);
+      if (isNaN(v)) return input.focus();
+      v = Math.min(max, Math.max(min, v));
+      fechar(v);
+    }
+    [{ label: "Cancelar", value: null, cls: "ghost", cancelavel: true }, { label: "Salvar", value: "confirmar", cls: "" }].forEach(b => {
+      const btn = document.createElement("button");
+      btn.className = "btn small " + b.cls;
+      btn.textContent = b.label;
+      btn.onclick = () => b.value === "confirmar" ? confirmar() : fechar(null);
+      actions.appendChild(btn);
+    });
+    function onKey(e) {
+      if (e.key === "Escape") fechar(null);
+      if (e.key === "Enter") confirmar();
+    }
+    document.addEventListener("keydown", onKey);
+    overlay.addEventListener("click", e => { if (e.target === overlay) fechar(null); });
+    document.body.appendChild(overlay);
+    setTimeout(() => { input.focus(); input.select(); }, 20);
+  });
+}
+async function editarMetaTaxa() {
+  const atual = Math.round((APP_STATE.config.metaTaxa ?? 0.75) * 100);
+  const valor = await mostrarPromptNumero({
+    titulo: "Meta do Radar de Aprovação",
+    mensagem: "Defina a taxa de acerto que você quer atingir como meta de aprovação.",
+    valorInicial: atual, min: 10, max: 100, sufixo: "% de acertos",
+  });
+  if (valor === null) return;
+  definirMetaTaxa(valor / 100);
+  renderDashboard();
+}
 async function confirmarResetarDados() {
   const ok = await mostrarConfirm("Apagar todo o seu histórico de respostas e estatísticas? Esta ação não pode ser desfeita.", "Zerar histórico");
   if (ok) { resetarDados(); navigate("perfil"); }
@@ -328,11 +388,13 @@ function renderDashboard() {
   </div>
   <div class="grid cols-2">
     <div class="card">
-      <h3>🎯 Radar de Aprovação <span class="hint">termômetro heurístico do seu preparo</span></h3>
+      <h3>🎯 Radar de Aprovação <span class="hint">termômetro heurístico do seu preparo</span>
+        <button class="btn ghost small" style="margin-left:auto" onclick="editarMetaTaxa()" title="Definir sua meta de aprovação">✎ Meta</button>
+      </h3>
       <div style="display:flex;justify-content:center">${chartGauge(radar.score, { sub: "índice de preparo", meta: radar.metaTaxa * 100 })}</div>
       <div style="text-align:center;font-size:13px;color:var(--muted);margin-top:4px">
-        ${g.taxa === null ? "Responda questões para calibrar o radar."
-          : `Meta de referência: <b>${Math.round(radar.metaTaxa * 100)}% de acertos</b> (perfil típico de aprovados). ` +
+        ${g.taxa === null ? `Responda questões para calibrar o radar. Meta atual: <b>${Math.round(radar.metaTaxa * 100)}% de acertos</b>.`
+          : `Sua meta: <b>${Math.round(radar.metaTaxa * 100)}% de acertos</b>. ` +
             (radar.horasEstimadas > 0 ? `Estimativa de estudo dirigido restante: <b>≈ ${radar.horasEstimadas}h líquidas</b>.` : `Você está no patamar da meta — mantenha o ritmo. ✔`)}
       </div>
       ${AVISO_ESTATISTICO}

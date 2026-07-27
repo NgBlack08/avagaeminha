@@ -21,7 +21,7 @@ function loadLocalState() {
     const raw = localStorage.getItem(STORAGE_KEY);
     if (raw) return JSON.parse(raw);
   } catch (e) { /* estado corrompido: recomeça */ }
-  return { respostas: {}, srs: {}, sessoes: [], config: { tema: "dark", concursoFoco: null, cargoFoco: "Escrivão", isAdmin: false, plano: "gratuito", onboardingVisitas: {} } };
+  return { respostas: {}, srs: {}, sessoes: [], config: { tema: "dark", concursoFoco: null, cargoFoco: "Escrivão", isAdmin: false, plano: "gratuito", onboardingVisitas: {}, metaTaxa: 0.75 } };
 }
 function saveLocalState() { localStorage.setItem(STORAGE_KEY, JSON.stringify(APP_STATE)); }
 const APP_STATE = loadLocalState();
@@ -71,7 +71,23 @@ async function carregarEstadoNuvem(user) {
     plano: (perfil?.plano === "completo" || assinaturaAtiva) ? "completo" : "gratuito",
     assinaturaTipo: assinaturaAtiva?.plano_tipo || null,
     onboardingVisitas: perfil?.onboarding_visitas || {},
+    metaTaxa: perfil?.meta_taxa ?? 0.75,
   };
+}
+
+/* Define a meta de taxa de acerto do Radar de Aprovação (0.10–1.00) e
+   sincroniza na nuvem — mesmo padrão de marcarVisitaOnboarding(). */
+function definirMetaTaxa(valor) {
+  const meta = Math.min(1, Math.max(0.1, valor));
+  APP_STATE.config.metaTaxa = meta;
+  if (MODO === "cloud" && CURRENT_USER) {
+    supa.from("profiles").update({
+      meta_taxa: meta,
+      updated_at: new Date().toISOString(),
+    }).eq("id", CURRENT_USER.id).then(({ error }) => { if (error) console.error("Erro ao salvar meta de aprovação:", error); });
+  } else {
+    saveLocalState();
+  }
 }
 
 /* Marca uma "visita" de onboarding (ex.: Raio-X, Perfil) e sincroniza na
@@ -269,8 +285,9 @@ function radarAprovacao() {
   const calib = g.calibracao ?? taxa;
   const score = Math.round(100 * (0.60 * taxa + 0.25 * cobertura + 0.15 * calib));
   /* referência: nota de corte típica CEBRASPE ≈ acima de 50% líquido;
-     aprovados em carreiras policiais costumam ter 70%+ de acerto bruto */
-  const metaTaxa = 0.75;
+     aprovados em carreiras policiais costumam ter 70%+ de acerto bruto —
+     mas o usuário pode ajustar essa meta (APP_STATE.config.metaTaxa). */
+  const metaTaxa = APP_STATE.config.metaTaxa ?? 0.75;
   const horasEstimadas = Math.max(0, Math.round((metaTaxa - taxa) * 400));
   return { dominadas, atencao, risco, naoIniciadas, score, taxa, cobertura, calibracao: g.calibracao,
     liquida: g.liquida, horasEstimadas, metaTaxa };
