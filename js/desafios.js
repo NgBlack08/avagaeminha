@@ -14,6 +14,11 @@ async function carregarRanking() {
   if (error) { console.error("Erro ao carregar ranking:", error); return []; }
   return data || [];
 }
+async function carregarRankingPontuadores() {
+  const { data, error } = await supa.rpc("ranking_pontuadores_desafios");
+  if (error) { console.error("Erro ao carregar ranking de pontuadores:", error); return []; }
+  return data || [];
+}
 async function carregarDesafiosPendentes() {
   const { data, error } = await supa.from("desafios").select("*")
     .eq("desafiado_id", CURRENT_USER.id).eq("status", "pendente")
@@ -69,7 +74,7 @@ async function renderRanking() {
 
   /* Sem nickname: precisa criar para participar */
   if (!APP_STATE.config.nickname) {
-    const ranking = await carregarRanking();
+    const [ranking, pontuadores] = await Promise.all([carregarRanking(), carregarRankingPontuadores()]);
     MAIN().querySelector("#ranking-load")?.remove();
     MAIN().insertAdjacentHTML("beforeend", `
       <div class="card" style="margin-bottom:16px">
@@ -84,12 +89,13 @@ async function renderRanking() {
         </div>
         <div id="nick-msg" style="margin-top:8px;font-size:13px;min-height:18px" role="status" aria-live="polite"></div>
       </div>
+      ${podiosHtml(ranking, pontuadores, null)}
       ${rankingTabelaHtml(ranking, null)}`);
     return;
   }
 
-  const [ranking, pendentes, enviados, historico] = await Promise.all([
-    carregarRanking(), carregarDesafiosPendentes(), carregarDesafiosEnviados(), carregarHistoricoDesafios()
+  const [ranking, pontuadores, pendentes, enviados, historico] = await Promise.all([
+    carregarRanking(), carregarRankingPontuadores(), carregarDesafiosPendentes(), carregarDesafiosEnviados(), carregarHistoricoDesafios()
   ]);
   const eu = APP_STATE.config.nickname;
   MAIN().querySelector("#ranking-load")?.remove();
@@ -114,7 +120,10 @@ async function renderRanking() {
     </div>`;
   }
 
-  /* Ranking */
+  /* Pódios em destaque: top 3 vencedores e top 3 maiores pontuadores */
+  html += podiosHtml(ranking, pontuadores, eu);
+
+  /* Ranking completo (tabela) */
   html += rankingTabelaHtml(ranking, eu);
 
   /* Enviados aguardando resposta */
@@ -135,6 +144,57 @@ async function renderRanking() {
   }
 
   MAIN().insertAdjacentHTML("beforeend", html);
+}
+
+/* ---------------- Pódios em destaque (top 3) ---------------- */
+/* Alturas fixas (visual clássico de pódio: 1º ao centro e mais alto),
+   a magnitude real de cada um fica no número exibido, não na barra —
+   evita barras desproporcionais quando os valores são pequenos ou empatados. */
+const PODIO_POSICOES = [
+  { idx: 1, medalha: "🥈", cls: "p2", alturaPx: 84 },
+  { idx: 0, medalha: "🥇", cls: "p1", alturaPx: 116 },
+  { idx: 2, medalha: "🥉", cls: "p3", alturaPx: 62 },
+];
+function podioHtml(lista, { titulo, icone, sufixo, vazio }) {
+  if (!lista.length) {
+    return `<div class="card podio-card">
+      <h3>${icone} ${escapeHtml(titulo)}</h3>
+      <div class="empty"><div class="big">🏅</div>${escapeHtml(vazio)}</div>
+    </div>`;
+  }
+  const posicoes = PODIO_POSICOES.filter(p => lista[p.idx]);
+  return `<div class="card podio-card">
+    <h3>${icone} ${escapeHtml(titulo)}</h3>
+    <div class="podio">
+      ${posicoes.map(p => {
+        const r = lista[p.idx];
+        return `<div class="podio-col ${p.cls} ${r.souEu ? "souEu" : ""}">
+          <div class="podio-nome" title="${escapeHtml(r.nickname)}">${escapeHtml(r.nickname)}${r.souEu ? ' <span class="tag accent">você</span>' : ""}</div>
+          <div class="podio-valor">${r.valor}${sufixo || ""}</div>
+          <div class="podio-barra" style="height:${p.alturaPx}px">
+            <span class="podio-medalha">${p.medalha}</span>
+          </div>
+          <div class="podio-sub">${escapeHtml(r.sub)}</div>
+        </div>`;
+      }).join("")}
+    </div>
+  </div>`;
+}
+function podiosHtml(ranking, pontuadores, eu) {
+  const vencedores = ranking.filter(r => Number(r.vitorias) > 0).slice(0, 3)
+    .map(r => ({ nickname: r.nickname, valor: r.vitorias, sub: `${r.derrotas}D · ${r.empates}E`, souEu: eu && r.nickname === eu }));
+  const pontuadoresTop = pontuadores.slice(0, 3)
+    .map(r => ({ nickname: r.nickname, valor: r.pontos, sub: `${r.duelos} duelo${r.duelos == 1 ? "" : "s"}`, souEu: eu && r.nickname === eu }));
+  return `<div class="grid cols-2 podios-grid" style="margin-bottom:16px">
+    ${podioHtml(vencedores, {
+      titulo: "Top 3 vencedores de confronto", icone: "⚔",
+      sufixo: " vit.", vazio: "Ainda não há vencedores de duelos. Desafie alguém!",
+    })}
+    ${podioHtml(pontuadoresTop, {
+      titulo: "Top 3 maiores pontuadores", icone: "💯",
+      sufixo: " pts", vazio: "Ainda não há pontuação registrada em desafios.",
+    })}
+  </div>`;
 }
 
 function rankingTabelaHtml(ranking, eu) {
