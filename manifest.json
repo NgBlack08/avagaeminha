@@ -1,0 +1,16 @@
+{
+  "name": "QuestLab — Laboratório de Engenharia Reversa da Banca",
+  "short_name": "QuestLab",
+  "description": "Plataforma independente de preparação para concursos com engenharia reversa da banca CEBRASPE.",
+  "start_url": "./?utm_source=pwa",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#070d1a",
+  "theme_color": "#070d1a",
+  "lang": "pt-BR",
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" }
+  ]
+}
