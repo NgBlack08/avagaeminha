@@ -406,7 +406,6 @@ function setBancoModoVisual(modo) {
 function irQuestaoBanco(delta) {
   bancoIndice += delta;
   renderBanco();
-  window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
 function renderBanco() {
