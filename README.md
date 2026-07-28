@@ -84,11 +84,16 @@ porque cache evita o *download*, não o *parse* — eram 2,25 MB de JS reinterpr
 a cada visita. Hoje o boot carrega 0,96 MB e os detalhes entram sob demanda, por
 disciplina (`carregarDetalhes()` em `js/engine.js`).
 
-**Ao criar um lote novo:** salve o arquivo em `js/`, acrescente o nome a
-`scripts/lotes.json` (na ordem de carga) e rode `node scripts/versionar.js`. Se
-esquecer do `lotes.json`, o build falha avisando — o lote não é ignorado em
-silêncio. O diretório `js/gerado/` é versionado no git, porque o GitHub Pages
-serve direto do repositório.
+**Ao criar um lote novo:** salve o arquivo em `js/` e rode `node scripts/versionar.js`.
+Só isso — o build detecta o arquivo, registra em `scripts/lotes.json` e o inclui.
+Apagar um lote também se resolve sozinho. Esse manifesto é mantido pelo script;
+não precisa ser editado à mão.
+
+A única restrição de ordem é o `data.js` vir primeiro, porque é ele que declara
+`QUESTOES`; os demais apenas dão `push` e não dependem uns dos outros.
+
+O diretório `js/gerado/` **é versionado no git**, porque o GitHub Pages serve
+direto do repositório.
 
 ## Integridade pedagógica
 

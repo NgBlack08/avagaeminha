@@ -1,5 +1,5 @@
 {
-  "_comentario": "Ordem de carga dos arquivos-fonte de questoes. data.js declara QUESTOES; os demais fazem push. Ao criar um lote novo, acrescente o nome aqui e rode: node scripts/versionar.js",
+  "_comentario": "Ordem de carga dos arquivos-fonte de questoes. Mantido automaticamente por scripts/dividir-dados.js: lotes novos em js/ entram sozinhos no fim, e arquivos apagados saem daqui. Nao precisa editar a mao. data.js fica sempre em primeiro porque e ele que declara QUESTOES; os demais so fazem push, e nao ha dependencia entre lotes.",
   "arquivos": [
     "data.js",
     "data-pcal2026-basicos.js",

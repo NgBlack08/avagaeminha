@@ -71,26 +71,41 @@ function hashDe(conteudo) {
 function dividirDados({ silencioso = false } = {}) {
   const log = silencioso ? () => {} : console.log;
 
-  /* ---------- 1. conferir o manifesto contra o disco ---------- */
+  /* ---------- 1. sincronizar o manifesto com o disco ---------- */
 
-  const manifesto = JSON.parse(
-    fs.readFileSync(path.join(__dirname, "lotes.json"), "utf8")
-  ).arquivos;
+  /* A ordem de carga só tem uma restrição real: data.js precisa vir
+     primeiro, porque é ele que declara QUESTOES/PREDICOES; todos os outros
+     apenas dão push. Não há nenhuma dependência entre lotes (verificado:
+     nenhum arquivo referencia identificador declarado em outro), então
+     lotes novos podem simplesmente entrar no fim — o script os registra
+     sozinho, em vez de exigir edição manual. */
+
+  const ARQ_MANIFESTO = path.join(__dirname, "lotes.json");
+  const manifestoSalvo = JSON.parse(fs.readFileSync(ARQ_MANIFESTO, "utf8"));
 
   const noDisco = fs.readdirSync(DIR_JS).filter(f => /^data.*\.js$/.test(f));
-  const faltando = noDisco.filter(f => !manifesto.includes(f));
-  if (faltando.length) {
-    throw new Error(
-      "Arquivos de dados fora do manifesto (nunca seriam carregados):\n  " +
-      faltando.join("\n  ") +
-      "\nAcrescente-os a scripts/lotes.json, na ordem de carga."
-    );
+  const conhecidos = manifestoSalvo.arquivos.filter(f => noDisco.includes(f));
+  const novos = noDisco.filter(f => !manifestoSalvo.arquivos.includes(f)).sort();
+
+  const sumiram = manifestoSalvo.arquivos.filter(f => !noDisco.includes(f));
+  if (sumiram.length) {
+    log(`  aviso: removidos do manifesto (não existem mais em js/): ${sumiram.join(", ")}`);
   }
-  const ausentes = manifesto.filter(f => !noDisco.includes(f));
-  if (ausentes.length) {
-    throw new Error(
-      "Manifesto cita arquivos inexistentes:\n  " + ausentes.join("\n  ")
-    );
+
+  const manifesto = [
+    ...conhecidos.filter(f => f === "data.js"),
+    ...conhecidos.filter(f => f !== "data.js"),
+    ...novos,
+  ];
+
+  if (manifesto[0] !== "data.js") {
+    throw new Error("js/data.js não encontrado — é ele que declara QUESTOES.");
+  }
+  if (novos.length) log(`  registrados automaticamente: ${novos.join(", ")}`);
+
+  if (novos.length || sumiram.length) {
+    const atualizado = { ...manifestoSalvo, arquivos: manifesto };
+    if (!silencioso) fs.writeFileSync(ARQ_MANIFESTO, JSON.stringify(atualizado, null, 2) + "\n");
   }
 
   /* ---------- 2. avaliar os fontes ---------- */
