@@ -231,9 +231,54 @@ input[type="email"], input[type="password"], textarea {
   transition: border-color var(--t-fast), box-shadow var(--t-fast), background var(--t-fast);
 }
 select:focus, input:focus, textarea:focus { border-color: var(--accent); box-shadow: var(--ring); }
-label.f { display: flex; flex-direction: column; gap: 5px; font-size: 12px; color: var(--muted); font-weight: 500; }
+/* min-width:0 é o que permite o filtro encolher em telas estreitas. Sem
+   ele, o flex item assume min-width:auto e trava na largura intrínseca do
+   <select>, que se dimensiona pela opção mais longa ("Crimes contra a
+   Administração...") — o Banco de Questões estourava 16px para fora da
+   viewport de 375px e a página inteira deslizava lateralmente. */
+label.f {
+  display: flex; flex-direction: column; gap: 5px; font-size: 12px;
+  color: var(--muted); font-weight: 500; min-width: 0; max-width: 100%;
+}
+label.f select, label.f input { max-width: 100%; }
 .filters { display: flex; flex-wrap: wrap; gap: 10px; align-items: end; }
 .check { display: flex; align-items: center; gap: 7px; font-size: 13px; color: var(--text); cursor: pointer; padding-bottom: 9px; }
+
+/* Bloco de filtros recolhível do Banco de Questões. */
+.filtros-card > .filters { margin-top: 14px; }
+.filtros-resumo {
+  display: flex; align-items: center; gap: 10px; cursor: pointer; list-style: none;
+  font-size: 13.5px; font-weight: 600; color: var(--text); min-height: 32px;
+  position: relative; padding-right: 24px;
+}
+.filtros-resumo::-webkit-details-marker { display: none; }
+.filtros-resumo::after {
+  content: "▾"; position: absolute; right: 4px; color: var(--muted);
+  font-size: 12px; transition: transform var(--t-fast);
+}
+.filtros-card[open] > .filtros-resumo::after { transform: rotate(180deg); }
+.filtros-resumo:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+@media (prefers-reduced-motion: reduce) { .filtros-resumo::after { transition: none; } }
+
+/* Alvos de toque de 44px (WCAG 2.5.5). A lista separada por vírgula é um
+   OU: vale para ponteiro impreciso (celular, tablet, notebook com toque) e
+   também para janela estreita. Só "pointer: coarse" deixaria de fora o
+   desktop em janela reduzida — e é inverificável em navegador redimensionado,
+   que reporta "pointer: fine". No desktop largo os controles seguem
+   compactos; inflá-los ali só gastaria espaço vertical.
+   O pior caso era o <input type="date"> do Plano de Estudo, que o navegador
+   renderiza com 21px de altura. */
+@media (pointer: coarse), (max-width: 640px) {
+  select, input, textarea { min-height: 44px; }
+  input[type="checkbox"], input[type="radio"] { min-height: 0; width: 18px; height: 18px; }
+  .btn, .btn.small, .chip, .vt-btn { min-height: 44px; }
+  .check { min-height: 44px; padding-bottom: 0; }
+  /* Os botões de confiança ficam lado a lado no rodapé da questão — são
+     os mais difíceis de acertar com o dedo. */
+  .conf button { min-height: 44px; padding: 6px 14px; }
+  .filtros-resumo { min-height: 44px; }
+  .onboarding-item { min-height: 44px; }
+}
 
 .tag {
   display: inline-flex; align-items: center; gap: 5px; font-size: 11.5px; font-weight: 600;
@@ -365,7 +410,22 @@ details.cog summary:hover { opacity: .8; }
 .estr-cat { margin-bottom: 16px; }
 .estr-cat-desc { margin: -6px 0 4px; font-size: 12.5px; line-height: 1.55; }
 
-.estr-top { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-bottom: 6px; }
+/* Cabeçalho clicável da estratégia (elemento <summary>). Alvo de toque de
+   44px conforme WCAG 2.5.5, já que fechado ele é a única forma de abrir. */
+.estr-top {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-bottom: 6px;
+  cursor: pointer; list-style: none; min-height: 44px; padding-right: 26px;
+  position: relative; border-radius: var(--r-sm);
+}
+.estr-top::-webkit-details-marker { display: none; }
+.estr-top::after {
+  content: "▾"; position: absolute; right: 6px; top: 50%; transform: translateY(-50%);
+  color: var(--muted); font-size: 13px; transition: transform var(--t-fast);
+}
+.estrategia[open] > .estr-top::after { transform: translateY(-50%) rotate(180deg); }
+.estr-top:hover h4 { color: var(--accent); }
+.estr-top:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+@media (prefers-reduced-motion: reduce) { .estr-top::after { transition: none; } }
 .tag.dna { background: rgba(124,58,237,.14); color: #a78bfa; border-color: transparent; cursor: help; }
 :root[data-theme="light"] .tag.dna { background: rgba(124,58,237,.1); color: #6d28d9; }
 .estr-desc { margin-bottom: 14px; line-height: 1.6; }

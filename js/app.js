@@ -443,9 +443,19 @@ let bancoListaCache = null; /* {chave, lista} — evita reembaralhar a cada Ante
 
 /* Paginação do modo "Lista" — renderizar centenas de cards de uma vez
    (um banco com ~1000 questões) deixava a troca de filtro visivelmente
-   lenta. Só o HTML da página atual é montado a cada render. */
-const BANCO_TAMANHO_PAGINA = 10;
+   lenta. Só o HTML da página atual é montado a cada render.
+
+   No celular cada card ocupa muito mais altura: 10 questões davam mais de
+   6.000px de rolagem, então a página cai para 5 em telas estreitas. */
+function tamanhoPaginaBanco() {
+  return window.innerWidth <= 640 ? 5 : 10;
+}
 let bancoPagina = 0;
+
+/* null = ainda não houve escolha do usuário; decide pela largura da tela.
+   Depois que ele abre ou fecha, a preferência sobrevive aos re-renders
+   disparados por cada troca de filtro. */
+let bancoFiltrosAbertos = null;
 function irPaginaBanco(delta) {
   bancoPagina += delta;
   renderBanco();
@@ -495,9 +505,24 @@ function renderBanco() {
     <button class="vt-btn ${bancoModoVisual === "unica" ? "active" : ""}" onclick="setBancoModoVisual('unica')">📄 Questão única</button>
   </div>`;
 
+  /* Os 7 seletores empilhados empurravam a primeira questão para muito
+     abaixo da dobra no celular. Ficam recolhidos lá, abertos no desktop —
+     e o resumo informa quantos filtros estão ativos, para que o estado
+     não fique escondido junto com os controles. */
+  const nAtivos = Object.entries(bancoFiltros)
+    .filter(([, v]) => v !== null && v !== undefined && v !== false && v !== "").length;
+  const filtrosAbertos = bancoFiltrosAbertos === null
+    ? window.innerWidth > 640
+    : bancoFiltrosAbertos;
+
   MAIN().innerHTML = topbar("Banco Inteligente de Questões",
     `${QUESTOES.length} questões inéditas em estilo CEBRASPE · filtros combinados`, toggleVisual) +
-  `<div class="card" style="margin-bottom:18px">
+  `<details class="card filtros-card" style="margin-bottom:18px" ${filtrosAbertos ? "open" : ""}
+           ontoggle="bancoFiltrosAbertos = this.open">
+    <summary class="filtros-resumo">
+      <span>⚙ Filtros</span>
+      ${nAtivos ? `<span class="tag accent">${nAtivos} ativo${nAtivos > 1 ? "s" : ""}</span>` : ""}
+    </summary>
     <div class="filters">
       <label class="f">Concurso<select id="f-concurso" onchange="setFiltroBanco()">
         <option value="">Todos</option>${CONCURSOS.map(c => `<option value="${c.id}" ${bancoFiltros.concurso === c.id ? "selected" : ""}>${c.id}</option>`).join("")}
@@ -524,7 +549,7 @@ function renderBanco() {
       <label class="check"><input type="checkbox" id="f-novas" ${bancoFiltros.somenteNaoRespondidas ? "checked" : ""} onchange="setFiltroBanco()"> só não respondidas</label>
       <label class="check"><input type="checkbox" id="f-edital" ${bancoFiltros.ocultarForaEdital ? "checked" : ""} onchange="setFiltroBanco()"> só edital PC-AL 2026</label>
     </div>
-  </div>
+  </details>
   ${bancoModoVisual === "unica" ? renderBancoUnica(lista) : renderBancoLista(lista)}`;
   iniciarTimersVisiveis();
 }
@@ -534,18 +559,19 @@ function renderBancoLista(lista) {
     return `<div style="font-size:13px;color:var(--muted);margin-bottom:12px"><b>0</b> questão(ões) encontrada(s)</div>
     <div class="card empty"><div class="big">🔍</div>Nenhuma questão com esses filtros.</div>`;
   }
-  const totalPaginas = Math.max(1, Math.ceil(lista.length / BANCO_TAMANHO_PAGINA));
+  const porPagina = tamanhoPaginaBanco();
+  const totalPaginas = Math.max(1, Math.ceil(lista.length / porPagina));
   if (bancoPagina >= totalPaginas) bancoPagina = totalPaginas - 1;
   if (bancoPagina < 0) bancoPagina = 0;
-  const inicio = bancoPagina * BANCO_TAMANHO_PAGINA;
-  const pagina = lista.slice(inicio, inicio + BANCO_TAMANHO_PAGINA);
+  const inicio = bancoPagina * porPagina;
+  const pagina = lista.slice(inicio, inicio + porPagina);
   const paginacao = totalPaginas > 1 ? `<div class="banco-nav">
     <button class="btn ghost small" onclick="irPaginaBanco(-1)" ${bancoPagina <= 0 ? "disabled" : ""}>← Anterior</button>
     <span class="banco-nav-pos">Página ${bancoPagina + 1} de ${totalPaginas}</span>
     <button class="btn ghost small" onclick="irPaginaBanco(1)" ${bancoPagina >= totalPaginas - 1 ? "disabled" : ""}>Próxima →</button>
   </div>` : "";
   return `<div style="font-size:13px;color:var(--muted);margin-bottom:12px">
-    <b>${lista.length}</b> questão(ões) encontrada(s)${totalPaginas > 1 ? ` · exibindo ${inicio + 1}–${Math.min(inicio + BANCO_TAMANHO_PAGINA, lista.length)}` : ""}
+    <b>${lista.length}</b> questão(ões) encontrada(s)${totalPaginas > 1 ? ` · exibindo ${inicio + 1}–${Math.min(inicio + porPagina, lista.length)}` : ""}
   </div>
   ${paginacao}
   <div id="q-lista">${pagina.map(q => questaoCardHtml(q, { modo: "banco" })).join("")}</div>
@@ -1464,13 +1490,17 @@ function exemploEstrategiaHtml(e) {
   </div>`;
 }
 
+/* Cada estratégia é um <details> fechado: as 16 técnicas somavam mais de
+   23.000px de rolagem no celular, o equivalente a ~29 telas. Fechadas,
+   viram uma lista escaneável e o candidato abre só a que interessa —
+   mesmo padrão já usado no bloco "Engenharia cognitiva" das questões. */
 function estrategiaCardHtml(e) {
   const dnas = (e.contraDNA || []).map(slug => DNA_BANCA.find(d => d.slug === slug)).filter(Boolean);
-  return `<div class="estrategia">
-    <div class="estr-top">
+  return `<details class="estrategia">
+    <summary class="estr-top">
       <h4>✦ ${escapeHtml(e.nome)}</h4>
       ${dnas.map(d => `<span class="tag dna" title="${escapeHtml(d.desc)}">neutraliza: ${escapeHtml(d.nome)} · ${d.incidencia}%</span>`).join("")}
-    </div>
+    </summary>
     <p class="estr-desc">${escapeHtml(e.desc)}</p>
 
     <div class="estr-bloco padrao">
@@ -1490,7 +1520,7 @@ function estrategiaCardHtml(e) {
 
     <div class="aplicar">Quando aplicar: ${escapeHtml(e.aplicar)}</div>
     ${e.exemplo ? exemploEstrategiaHtml(e) : ""}
-  </div>`;
+  </details>`;
 }
 
 function renderEstrategias() {
@@ -1542,7 +1572,7 @@ function verExemploEstrategia(idEstrategia) {
   bancoFiltros = { disciplina: q.disciplina, assunto: q.assunto };
   const idx = listaBancoAtual().findIndex(x => x.id === q.id);
   bancoIndice = idx >= 0 ? idx : 0;
-  bancoPagina = idx >= 0 ? Math.floor(idx / BANCO_TAMANHO_PAGINA) : 0;
+  bancoPagina = idx >= 0 ? Math.floor(idx / tamanhoPaginaBanco()) : 0;
   navigate("banco");
 
   if (bancoModoVisual !== "unica") {
