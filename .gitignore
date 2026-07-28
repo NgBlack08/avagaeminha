@@ -1,0 +1,19 @@
+# Credenciais e segredos — nunca versionar.
+# O site é público (GitHub Pages), então qualquer arquivo commitado aqui
+# fica acessível na internet.
+*.pem
+*.key
+*.p12
+.env
+.env.*
+*chave*
+*credencial*
+*secret*
+*service-account*
+
+# Sistema operacional / editor
+Thumbs.db
+desktop.ini
+.DS_Store
+.vscode/
+.idea/

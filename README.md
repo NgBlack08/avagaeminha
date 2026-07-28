@@ -35,7 +35,30 @@ js/data.js          → camada de dados (questões, DNA, frequências, prediçõ
 js/engine.js        → motor: perfil, SRS, seleção adaptativa, filtros, detector, estatística
 js/charts.js        → gráficos SVG nativos (barras, linhas, gauge, heatmap)
 js/app.js           → telas/rotas da aplicação
+scripts/            → utilitários de build (cache-busting, geração de ícones)
 ```
+
+## Como publicar uma versão
+
+Depois de alterar qualquer arquivo de `js/`, `css/` ou `icons/`, rode:
+
+```bash
+node scripts/versionar.js
+```
+
+O script incrementa a versão da aplicação (`7.20` → `7.21`) e reescreve o `?v=` de
+cada asset em `index.html` e `manifest.json` com o **hash do conteúdo do próprio
+arquivo**. Nunca edite esses `?v=` à mão.
+
+- `node scripts/versionar.js 8.0` — define a versão explicitamente.
+- `node scripts/versionar.js --dry` — mostra o que mudaria, sem gravar.
+
+Por que hash em vez da versão da aplicação: com um `?v=` único para tudo, corrigir
+uma linha do CSS obrigava cada usuário a rebaixar os ~478 KB (gzip) do banco de
+questões. Com hash por arquivo, só a URL de quem realmente mudou é invalidada.
+
+A versão da aplicação continua em `version.json` e em `APP_VERSION` (`index.html`),
+mas agora serve só ao *check* que força recarregamento quando há release nova.
 
 ## Integridade pedagógica
 
