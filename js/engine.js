@@ -377,7 +377,47 @@ const PLANO_STATUS = {
   atencao:     { fator: 0.85, nome: "Precisa melhorar" },
   dominada:    { fator: 0.25, nome: "Domina" },
 };
-const PLANO_PESO_PADRAO = 65; /* peso de predição para disciplinas sem entrada em PREDICOES */
+/* Itens que cada disciplina vale na prova, conforme o Edital nº 1 - PC/AL,
+   de 2 de julho de 2026 (Cebraspe): 120 itens ao todo, sendo 50 na prova
+   objetiva P1 (conhecimentos básicos, 5 disciplinas) e 70 na P2
+   (conhecimentos específicos, 9 disciplinas).
+
+   Isso corrige uma inversão: o plano antes derivava o peso da média dos
+   scores de PREDICOES, que só cobre disciplinas específicas — as básicas
+   caíam num padrão genérico de 65 e eram sistematicamente despriorizadas.
+   Pelo edital acontece o contrário: cada disciplina de P1 vale ~10 itens
+   contra ~7,8 de cada disciplina de P2.
+
+   O edital dá o total por prova, não a divisão interna, então a repartição
+   igual dentro de cada uma é a hipótese neutra — e ainda assim muito mais
+   ancorada que um número arbitrário. "Atualidades e Ética no Serviço
+   Público" é um único bloco de 10 itens no edital e aparece como duas
+   disciplinas no banco, então cada uma leva metade. */
+const EDITAL_PCAL2026 = {
+  fonte: "Edital nº 1 - PC/AL, de 2 de julho de 2026 (Cebraspe)",
+  itensPorDisciplina: {
+    /* P1 — conhecimentos básicos: 50 itens */
+    "Língua Portuguesa": 10,
+    "TI e Segurança Cibernética": 10,
+    "Raciocínio Lógico-Matemático": 10,
+    "Direitos Humanos": 10,
+    "Atualidades": 5,
+    "Ética no Serviço Público": 5,
+    /* P2 — conhecimentos específicos: 70 itens */
+    "Direito Penal": 7.8,
+    "Processo Penal": 7.8,
+    "Direito Constitucional": 7.8,
+    "Direito Administrativo": 7.8,
+    "Legislação Institucional (AL)": 7.8,
+    "Legislação Especial": 7.8,
+    "Contabilidade e Análise Financeira": 7.8,
+    "Estatística": 7.8,
+    "Crimes Cibernéticos e Segurança Digital": 7.8,
+  },
+};
+
+/* Disciplina fora do edital (treino complementar) pesa pouco, mas não zero. */
+const PLANO_ITENS_PADRAO = 2;
 
 function planoEstudoDirigido() {
   const dataProva = APP_STATE.config.dataProva || null;
@@ -388,18 +428,10 @@ function planoEstudoDirigido() {
     diasRestantes = Math.ceil((alvo - hoje) / 864e5);
   }
 
-  const mediaPredicaoPorDisc = {};
-  for (const p of PREDICOES) {
-    if (!mediaPredicaoPorDisc[p.disciplina]) mediaPredicaoPorDisc[p.disciplina] = { soma: 0, n: 0 };
-    mediaPredicaoPorDisc[p.disciplina].soma += p.score;
-    mediaPredicaoPorDisc[p.disciplina].n++;
-  }
-
   const itens = statsPorDisciplina().map(d => {
     const restantes = d.total - d.respondidas;
-    const peso = mediaPredicaoPorDisc[d.disciplina]
-      ? Math.round(mediaPredicaoPorDisc[d.disciplina].soma / mediaPredicaoPorDisc[d.disciplina].n)
-      : PLANO_PESO_PADRAO;
+    /* Peso = quantos itens a disciplina vale na prova, direto do edital. */
+    const peso = EDITAL_PCAL2026.itensPorDisciplina[d.disciplina] ?? PLANO_ITENS_PADRAO;
     let statusId;
     if (d.taxa === null) statusId = "naoIniciada";
     else if (d.taxa < 0.6) statusId = "risco";

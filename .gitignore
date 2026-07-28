@@ -17,3 +17,7 @@ desktop.ini
 .DS_Store
 .vscode/
 .idea/
+
+# Material de estudo baixado (fonte de consulta, nao faz parte do site).
+# O deploy e publico: nada aqui deve ir ao repositorio.
+material/

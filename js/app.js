@@ -1445,7 +1445,7 @@ function renderPlanoEstudo() {
       <div class="pe-item">
         <div class="pe-item-top">
           <span class="tag ${statusCls[it.statusId]}">${statusIco[it.statusId]} ${escapeHtml(it.statusNome)}</span>
-          <span class="tag" title="Peso médio na Predição de Cobrança">peso ${it.peso}</span>
+          <span class="tag" title="Itens que esta disciplina vale na prova, conforme o Edital nº 1 - PC/AL de 2 de julho de 2026">≈ ${it.peso} itens na prova</span>
           <b class="pe-disc">${escapeHtml(it.disciplina)}</b>
           <span class="pe-cota">${it.questoesSugeridas} ${it.questoesSugeridas === 1 ? "questão" : "questões"} hoje</span>
         </div>
