@@ -144,27 +144,27 @@ const QUESTOES_PCAL_LOTE56 = [
     }
   },
   {
-    id: "LI-050", disciplina: "Legislação Institucional (AL)", assunto: "Estatuto da PC-AL (Lei 3.437/1975)", subassunto: "Estágio probatório e estabilidade (art. 55)",
+    id: "LI-050", disciplina: "Legislação Institucional (AL)", assunto: "Estatuto da PC-AL (Lei 3.437/1975)", subassunto: "Estabilidade — art. 55 x art. 41 da CF",
     concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (Estatuto PC-AL, Lei 3.437/1975)",
-    tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.95,
-    enunciado: "Segundo o Estatuto da Polícia Civil de Alagoas, o policial civil nomeado por concurso será estável após três anos de exercício no cargo, uma vez preenchidos os requisitos do estágio probatório.",
-    gabarito: "E", pegadinha: "literalidade", palavraChave: "estável após três anos de exercício",
+    origem: "Inédita — estilo CEBRASPE (Estatuto PC-AL x CF/88)",
+    tipo: "CE", dificuldade: 3, tempoIdealSeg: 70, probReaparecer: 0.95,
+    enunciado: "Embora o Estatuto da Polícia Civil de Alagoas, editado em 1975, mencione a aquisição de estabilidade após um ano de exercício, tal prazo não prevalece sobre o art. 41 da Constituição Federal, que exige três anos de efetivo exercício e avaliação especial de desempenho para a aquisição da estabilidade pelo servidor de cargo efetivo.",
+    gabarito: "C", pegadinha: "verdade-mais-falso", palavraChave: "não prevalece ... três anos de efetivo exercício e avaliação especial de desempenho",
     cognitivo: {
-      motivo: "Explorar a diferença entre a regra estadual e o padrão federal.",
-      mede: "Lei 3.437/1975, art. 55.",
-      pegadinhaDesc: "Usa o prazo federal de 3 anos, que o candidato tende a assumir por hábito.",
-      ondeErra: "Aplica a estabilidade constitucional (3 anos) à lei estadual, que traz prazo próprio.",
-      palavraCritica: "três anos",
-      tecnica: "Cuidado: o Estatuto da PC-AL diz UM ano, e não os três anos do art. 41 da CF. Lei estadual antiga pode ter prazo próprio.",
-      regraMental: "Estabilidade na PC-AL: 1 ano (art. 55), não 3."
+      motivo: "Cobrar a prevalência da norma constitucional sobre o prazo do estatuto estadual anterior a 1988.",
+      mede: "CF, art. 41, caput e §4º; Lei 3.437/1975, art. 55 (não recepcionado quanto ao prazo).",
+      pegadinhaDesc: "A banca costuma oferecer o prazo literal do estatuto (1 ano) como se fosse aplicável, ignorando a recepção constitucional.",
+      ondeErra: "Decora 'o Estatuto diz 1 ano' e responde pela literalidade da lei estadual, sem confrontá-la com a CF.",
+      palavraCritica: "não prevalece ... três anos ... avaliação especial de desempenho",
+      tecnica: "A estabilidade é matéria de norma central de reprodução obrigatória (art. 41, CF): 3 anos para todos os entes. Prazo menor em lei estadual anterior à CF não foi recepcionado.",
+      regraMental: "Estabilidade: 3 anos (art. 41, CF), acima de qualquer prazo estadual antigo."
     },
     comentario: {
-      resolucao: "ERRADO. O art. 55 da Lei 3.437/1975 estabelece que o policial civil nomeado por concurso será estável após 1 (um) ano de exercício, preenchidos os requisitos do estágio probatório (idoneidade moral, assiduidade, pontualidade, disciplina e eficiência). O prazo de três anos é o da estabilidade constitucional geral, não o desta lei.",
-      fundamento: "Lei 3.437/1975, art. 55.",
-      macete: "PC-AL: estável em 1 ano.",
-      erroComum: "Transportar o prazo de 3 anos da CF para a lei estadual.",
-      comoBancaPensa: "Aposta que o candidato responde pelo automatismo do prazo federal."
+      resolucao: "CERTO. O art. 55 da Lei 3.437/1975, anterior à Constituição de 1988, prevê estabilidade em um ano, mas esse prazo não foi recepcionado. Prevalece o art. 41 da CF (redação da EC 19/1998): estabilidade após três anos de efetivo exercício, sendo obrigatória a avaliação especial de desempenho por comissão (art. 41, §4º). A regra constitucional é de observância obrigatória por todos os entes federativos, de modo que o Estado não pode fixar prazo inferior. STF e STJ, inclusive, alinharam o período do estágio probatório aos três anos da estabilidade.",
+      fundamento: "CF, art. 41, caput e §4º (EC 19/1998); Lei 3.437/1975, art. 55 (não recepcionado quanto ao prazo).",
+      macete: "Estabilidade sempre 3 anos; prazo estadual de 1975 caiu com a CF.",
+      erroComum: "Responder pela literalidade do estatuto estadual (1 ano), ignorando a Constituição.",
+      comoBancaPensa: "Oferece o prazo antigo do estatuto como isca para quem não confronta a lei estadual com o art. 41 da CF."
     }
   },
   {
