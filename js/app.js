@@ -441,6 +441,17 @@ let bancoModoVisual = localStorage.getItem("questlab-banco-modo") || "scroll";
 let bancoIndice = 0;
 let bancoListaCache = null; /* {chave, lista} — evita reembaralhar a cada Anterior/Próxima */
 
+/* Paginação do modo "Lista" — renderizar centenas de cards de uma vez
+   (um banco com ~1000 questões) deixava a troca de filtro visivelmente
+   lenta. Só o HTML da página atual é montado a cada render. */
+const BANCO_TAMANHO_PAGINA = 10;
+let bancoPagina = 0;
+function irPaginaBanco(delta) {
+  bancoPagina += delta;
+  renderBanco();
+  window.scrollTo(0, 0);
+}
+
 /* Destaque vindo da aba Estratégias: {qid, trecho, estrategia} — faz o
    card da questão-exemplo realçar o recorte que materializa a técnica. */
 let destaqueEstrategia = null;
@@ -465,6 +476,7 @@ function setBancoModoVisual(modo) {
   bancoModoVisual = modo;
   localStorage.setItem("questlab-banco-modo", modo);
   bancoIndice = 0;
+  bancoPagina = 0;
   renderBanco();
 }
 
@@ -518,9 +530,26 @@ function renderBanco() {
 }
 
 function renderBancoLista(lista) {
-  return `<div style="font-size:13px;color:var(--muted);margin-bottom:12px"><b>${lista.length}</b> questão(ões) encontrada(s)</div>
-  <div id="q-lista">${lista.map(q => questaoCardHtml(q, { modo: "banco" })).join("") ||
-    `<div class="card empty"><div class="big">🔍</div>Nenhuma questão com esses filtros.</div>`}</div>`;
+  if (!lista.length) {
+    return `<div style="font-size:13px;color:var(--muted);margin-bottom:12px"><b>0</b> questão(ões) encontrada(s)</div>
+    <div class="card empty"><div class="big">🔍</div>Nenhuma questão com esses filtros.</div>`;
+  }
+  const totalPaginas = Math.max(1, Math.ceil(lista.length / BANCO_TAMANHO_PAGINA));
+  if (bancoPagina >= totalPaginas) bancoPagina = totalPaginas - 1;
+  if (bancoPagina < 0) bancoPagina = 0;
+  const inicio = bancoPagina * BANCO_TAMANHO_PAGINA;
+  const pagina = lista.slice(inicio, inicio + BANCO_TAMANHO_PAGINA);
+  const paginacao = totalPaginas > 1 ? `<div class="banco-nav">
+    <button class="btn ghost small" onclick="irPaginaBanco(-1)" ${bancoPagina <= 0 ? "disabled" : ""}>← Anterior</button>
+    <span class="banco-nav-pos">Página ${bancoPagina + 1} de ${totalPaginas}</span>
+    <button class="btn ghost small" onclick="irPaginaBanco(1)" ${bancoPagina >= totalPaginas - 1 ? "disabled" : ""}>Próxima →</button>
+  </div>` : "";
+  return `<div style="font-size:13px;color:var(--muted);margin-bottom:12px">
+    <b>${lista.length}</b> questão(ões) encontrada(s)${totalPaginas > 1 ? ` · exibindo ${inicio + 1}–${Math.min(inicio + BANCO_TAMANHO_PAGINA, lista.length)}` : ""}
+  </div>
+  ${paginacao}
+  <div id="q-lista">${pagina.map(q => questaoCardHtml(q, { modo: "banco" })).join("")}</div>
+  ${paginacao}`;
 }
 
 function renderBancoUnica(lista) {
@@ -550,6 +579,7 @@ function setFiltroBanco(resetAssunto) {
     ocultarForaEdital: $("#f-edital").checked,
   };
   bancoIndice = 0;
+  bancoPagina = 0;
   renderBanco();
 }
 
@@ -1323,6 +1353,7 @@ async function limparDataProva() {
 function estudarDisciplinaAgora(disciplina) {
   bancoFiltros = { disciplina };
   bancoIndice = 0;
+  bancoPagina = 0;
   navigate("banco");
 }
 function renderPlanoEstudo() {
@@ -1476,19 +1507,17 @@ function verExemploEstrategia(idEstrategia) {
 
   destaqueEstrategia = { qid: q.id, trecho: e.trecho, estrategia: e };
   bancoFiltros = { disciplina: q.disciplina, assunto: q.assunto };
-  bancoIndice = 0;
+  const idx = listaBancoAtual().findIndex(x => x.id === q.id);
+  bancoIndice = idx >= 0 ? idx : 0;
+  bancoPagina = idx >= 0 ? Math.floor(idx / BANCO_TAMANHO_PAGINA) : 0;
   navigate("banco");
 
-  if (bancoModoVisual === "unica") {
-    const idx = listaBancoAtual().findIndex(x => x.id === q.id);
-    bancoIndice = idx >= 0 ? idx : 0;
-    renderBanco();
-    return;
+  if (bancoModoVisual !== "unica") {
+    setTimeout(() => {
+      const el = document.getElementById("qc-" + q.id);
+      if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+    }, 60);
   }
-  setTimeout(() => {
-    const el = document.getElementById("qc-" + q.id);
-    if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
-  }, 60);
 }
 
 /* ================================================================
