@@ -9,6 +9,7 @@ const MAIN = () => $("#main");
 
 const VIEWS = [
   { id: "dashboard",  nome: "Dashboard",             ico: "◧" },
+  { id: "planoestudo",nome: "Plano de Estudo",       ico: "📅" },
   { id: "banco",      nome: "Banco de Questões",     ico: "▤" },
   { id: "simulado",   nome: "Simulado Adaptativo",   ico: "▶" },
   { id: "prova",      nome: "Modo Prova",            ico: "◈" },
@@ -72,13 +73,13 @@ function renderSidebar() {
   const nav = $("#nav");
   nav.innerHTML =
     '<div class="nav-sep">Treinamento</div>' +
-    VIEWS.slice(0, 4).map(navBtn).join("") +
+    VIEWS.slice(0, 5).map(navBtn).join("") +
     '<div class="nav-sep">Competição</div>' +
-    VIEWS.slice(4, 5).map(navBtn).join("") +
+    VIEWS.slice(5, 6).map(navBtn).join("") +
     '<div class="nav-sep">Inteligência</div>' +
-    VIEWS.slice(5, 9).map(navBtn).join("") +
+    VIEWS.slice(6, 10).map(navBtn).join("") +
     '<div class="nav-sep">Você</div>' +
-    VIEWS.slice(9).map(navBtn).join("") +
+    VIEWS.slice(10).map(navBtn).join("") +
     (APP_STATE.config.isAdmin
       ? '<div class="nav-sep">Administração</div>' + navBtn({ id: "admin", nome: "Usuários & Convites", ico: "🛡" })
       : "");
@@ -131,7 +132,7 @@ async function navigate(view, opts = {}) {
   renderSidebar();
   closeSidebar();
   const fn = {
-    dashboard: renderDashboard, banco: renderBanco, simulado: renderSimulado,
+    dashboard: renderDashboard, planoestudo: renderPlanoEstudo, banco: renderBanco, simulado: renderSimulado,
     prova: renderProva, ranking: renderRanking, raiox: renderRaioX, pegadinhas: renderPegadinhas,
     predicao: renderPredicao, estrategias: renderEstrategias, perfil: renderPerfil, admin: renderAdmin,
     planos: renderPlanos,
@@ -1299,6 +1300,75 @@ function renderPredicao() {
       <div class="bloco" style="background:var(--surface2);border-radius:9px;padding:11px 14px">📜 <b>Lei 14.245/2021 (Lei Mariana Ferrer)</b> — proteção da vítima em audiências; conecta-se à vitimização secundária.</div>
     </div>
   </div>`;
+}
+
+/* ================================================================
+   PLANO DE ESTUDO DIRIGIDO
+   Cruza dias até a prova + Predição de Cobrança + desempenho por
+   disciplina (radar/diagnóstico) numa lista única do que priorizar
+   hoje, com cota sugerida de questões por disciplina.
+   ================================================================ */
+async function salvarDataProva() {
+  const val = $("#pe-data-input").value;
+  if (!val) return;
+  definirDataProva(val);
+  renderPlanoEstudo();
+}
+async function limparDataProva() {
+  const ok = await mostrarConfirm("Remover a data da prova? O plano volta a mostrar só as prioridades, sem contagem de dias.", "Remover data da prova");
+  if (!ok) return;
+  definirDataProva(null);
+  renderPlanoEstudo();
+}
+function estudarDisciplinaAgora(disciplina) {
+  bancoFiltros = { disciplina };
+  bancoIndice = 0;
+  navigate("banco");
+}
+function renderPlanoEstudo() {
+  const plano = planoEstudoDirigido();
+  const statusCls = { naoIniciada: "idle", risco: "bad", atencao: "warn", dominada: "ok" };
+  const statusIco = { naoIniciada: "○", risco: "✖", atencao: "⚠", dominada: "✔" };
+
+  const contagemHtml = plano.dataProva
+    ? `<div class="pe-contagem">
+        <div class="pe-dias ${plano.diasRestantes <= 7 ? "urgente" : ""}">${plano.diasRestantes >= 0 ? plano.diasRestantes : 0}</div>
+        <div class="pe-dias-lbl">dia${plano.diasRestantes === 1 ? "" : "s"} até a prova
+          <div class="hint">${new Date(plano.dataProva + "T00:00:00").toLocaleDateString("pt-BR")} · <a href="#" onclick="limparDataProva();return false;">alterar</a></div>
+        </div>
+      </div>`
+    : `<div class="pe-sem-data">
+        <label class="f">Data da sua prova (opcional — ativa a contagem regressiva)
+          <input type="date" id="pe-data-input" min="${new Date().toISOString().slice(0, 10)}"></label>
+        <button class="btn small" onclick="salvarDataProva()">Definir data</button>
+      </div>`;
+
+  MAIN().innerHTML = topbar("Plano de Estudo Dirigido",
+    "O que priorizar hoje, cruzando dias até a prova, peso da Predição de Cobrança e seu desempenho por disciplina") +
+  `<div class="card" style="margin-bottom:16px">
+    <h3>📅 Contagem regressiva</h3>
+    ${contagemHtml}
+  </div>
+  <div class="card">
+    <h3>🎯 Prioridades de hoje <span class="hint">cota sugerida somando ${plano.metaDiaria} questões/dia (sua meta semanal ÷ 7)</span></h3>
+    ${plano.foco.length ? plano.foco.map(it => `
+      <div class="pe-item">
+        <div class="pe-item-top">
+          <span class="tag ${statusCls[it.statusId]}">${statusIco[it.statusId]} ${escapeHtml(it.statusNome)}</span>
+          <span class="tag" title="Peso médio na Predição de Cobrança">peso ${it.peso}</span>
+          <b class="pe-disc">${escapeHtml(it.disciplina)}</b>
+          <span class="pe-cota">${it.questoesSugeridas} ${it.questoesSugeridas === 1 ? "questão" : "questões"} hoje</span>
+        </div>
+        <div class="diag-bar ${statusCls[it.statusId]}"><i style="width:${it.taxa === null ? 100 : Math.round(it.taxa * 100)}%"></i></div>
+        <div class="pe-item-bottom">
+          <span class="hint">${it.taxa === null ? "Ainda não iniciada" : Math.round(it.taxa * 100) + "% de acerto"} · ${it.restantes} ${it.restantes === 1 ? "questão não explorada" : "questões não exploradas"}</span>
+          <button class="btn ghost small" onclick="estudarDisciplinaAgora('${it.disciplina}')">Estudar agora →</button>
+        </div>
+      </div>`).join("")
+    : `<div class="empty"><div class="big">🎉</div>Você já explorou todo o banco de questões disponível. Continue revisando pelo Simulado Adaptativo!</div>`}
+    ${plano.totalDisciplinasPendentes > plano.foco.length ? `<div class="hint" style="margin-top:10px">+ ${plano.totalDisciplinasPendentes - plano.foco.length} outra(s) disciplina(s) com questões não exploradas, de menor prioridade agora.</div>` : ""}
+  </div>
+  ${AVISO_ESTATISTICO}`;
 }
 
 /* ================================================================

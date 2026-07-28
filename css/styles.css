@@ -185,6 +185,27 @@ body {
 .diag-linha:has(.diag-bar.idle) .diag-nome,
 .diag-linha:has(.diag-bar.idle) .diag-pct { color: var(--muted); }
 
+/* ---------- Plano de Estudo Dirigido ---------- */
+.pe-contagem { display: flex; align-items: center; gap: 16px; }
+.pe-dias {
+  font-size: 40px; font-weight: 800; color: var(--accent); font-variant-numeric: tabular-nums;
+  line-height: 1; min-width: 64px; text-align: center;
+}
+.pe-dias.urgente { color: var(--bad); }
+.pe-dias-lbl { font-size: 14px; color: var(--text); }
+.pe-dias-lbl .hint { margin-top: 2px; }
+.pe-dias-lbl .hint a { color: var(--accent); }
+.pe-sem-data { display: flex; gap: 10px; flex-wrap: wrap; align-items: flex-end; }
+.pe-sem-data label.f { flex: 1; min-width: 220px; }
+
+.pe-item { padding: 14px 0; border-bottom: 1px solid var(--border); }
+.pe-item:last-child { border-bottom: none; }
+.pe-item-top { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin-bottom: 8px; }
+.pe-disc { font-size: 14px; }
+.pe-cota { margin-left: auto; font-size: 12.5px; font-weight: 700; color: var(--accent); white-space: nowrap; }
+.pe-item .diag-bar { margin-bottom: 8px; }
+.pe-item-bottom { display: flex; align-items: center; justify-content: space-between; gap: 10px; flex-wrap: wrap; }
+
 .btn {
   display: inline-flex; align-items: center; justify-content: center; gap: 8px;
   font: inherit; font-size: 14px; font-weight: 600;

@@ -21,7 +21,7 @@ function loadLocalState() {
     const raw = localStorage.getItem(STORAGE_KEY);
     if (raw) return JSON.parse(raw);
   } catch (e) { /* estado corrompido: recomeça */ }
-  return { respostas: {}, srs: {}, sessoes: [], config: { tema: "dark", concursoFoco: null, cargoFoco: "Escrivão", isAdmin: false, plano: "gratuito", onboardingVisitas: {}, metaTaxa: 0.75 } };
+  return { respostas: {}, srs: {}, sessoes: [], config: { tema: "dark", concursoFoco: null, cargoFoco: "Escrivão", isAdmin: false, plano: "gratuito", onboardingVisitas: {}, metaTaxa: 0.75, dataProva: null } };
 }
 function saveLocalState() { localStorage.setItem(STORAGE_KEY, JSON.stringify(APP_STATE)); }
 const APP_STATE = loadLocalState();
@@ -72,6 +72,7 @@ async function carregarEstadoNuvem(user) {
     assinaturaTipo: assinaturaAtiva?.plano_tipo || null,
     onboardingVisitas: perfil?.onboarding_visitas || {},
     metaTaxa: perfil?.meta_taxa ?? 0.75,
+    dataProva: perfil?.data_prova || null,
   };
 }
 
@@ -85,6 +86,20 @@ function definirMetaTaxa(valor) {
       meta_taxa: meta,
       updated_at: new Date().toISOString(),
     }).eq("id", CURRENT_USER.id).then(({ error }) => { if (error) console.error("Erro ao salvar meta de aprovação:", error); });
+  } else {
+    saveLocalState();
+  }
+}
+
+/* Define (ou limpa, com valor null) a data-alvo da prova, usada pelo
+   Plano de Estudo Dirigido para calcular dias restantes e ritmo diário. */
+function definirDataProva(valorISO) {
+  APP_STATE.config.dataProva = valorISO || null;
+  if (MODO === "cloud" && CURRENT_USER) {
+    supa.from("profiles").update({
+      data_prova: valorISO || null,
+      updated_at: new Date().toISOString(),
+    }).eq("id", CURRENT_USER.id).then(({ error }) => { if (error) console.error("Erro ao salvar data da prova:", error); });
   } else {
     saveLocalState();
   }
@@ -291,6 +306,63 @@ function radarAprovacao() {
   const horasEstimadas = Math.max(0, Math.round((metaTaxa - taxa) * 400));
   return { dominadas, atencao, risco, naoIniciadas, score, taxa, cobertura, calibracao: g.calibracao,
     liquida: g.liquida, horasEstimadas, metaTaxa };
+}
+
+/* ---------------- Plano de Estudo Dirigido ----------------
+   Cruza três coisas que já existiam isoladas no app: dias até a prova
+   (config.dataProva), o quanto cada disciplina "pesa" na banca segundo
+   a Predição de Cobrança (PREDICOES, por tema) e o desempenho real do
+   usuário por disciplina (statsPorDisciplina). O resultado é uma lista
+   priorizada do que estudar hoje, com uma cota sugerida de questões —
+   não é mágica: é a meta semanal de sempre, só redistribuída pelo que
+   mais pesa e pelo que está mais fraco. */
+const PLANO_STATUS = {
+  naoIniciada: { fator: 1.00, nome: "Não iniciada" },
+  risco:       { fator: 1.35, nome: "Maior risco" },
+  atencao:     { fator: 0.85, nome: "Precisa melhorar" },
+  dominada:    { fator: 0.25, nome: "Domina" },
+};
+const PLANO_PESO_PADRAO = 65; /* peso de predição para disciplinas sem entrada em PREDICOES */
+
+function planoEstudoDirigido() {
+  const dataProva = APP_STATE.config.dataProva || null;
+  let diasRestantes = null;
+  if (dataProva) {
+    const hoje = new Date(); hoje.setHours(0, 0, 0, 0);
+    const alvo = new Date(dataProva + "T00:00:00");
+    diasRestantes = Math.ceil((alvo - hoje) / 864e5);
+  }
+
+  const mediaPredicaoPorDisc = {};
+  for (const p of PREDICOES) {
+    if (!mediaPredicaoPorDisc[p.disciplina]) mediaPredicaoPorDisc[p.disciplina] = { soma: 0, n: 0 };
+    mediaPredicaoPorDisc[p.disciplina].soma += p.score;
+    mediaPredicaoPorDisc[p.disciplina].n++;
+  }
+
+  const itens = statsPorDisciplina().map(d => {
+    const restantes = d.total - d.respondidas;
+    const peso = mediaPredicaoPorDisc[d.disciplina]
+      ? Math.round(mediaPredicaoPorDisc[d.disciplina].soma / mediaPredicaoPorDisc[d.disciplina].n)
+      : PLANO_PESO_PADRAO;
+    let statusId;
+    if (d.taxa === null) statusId = "naoIniciada";
+    else if (d.taxa < 0.6) statusId = "risco";
+    else if (d.taxa < 0.8) statusId = "atencao";
+    else statusId = "dominada";
+    const prioridade = restantes > 0 ? peso * PLANO_STATUS[statusId].fator : 0;
+    return { disciplina: d.disciplina, restantes, taxa: d.taxa, statusId,
+      statusNome: PLANO_STATUS[statusId].nome, peso, prioridade };
+  }).filter(it => it.restantes > 0).sort((a, b) => b.prioridade - a.prioridade);
+
+  const metaDiaria = Math.max(5, Math.round(META_SEMANAL_QUESTOES / 7));
+  const somaPrioridade = itens.reduce((s, it) => s + it.prioridade, 0) || 1;
+  const foco = itens.slice(0, 5).map(it => ({
+    ...it,
+    questoesSugeridas: Math.max(1, Math.round((it.prioridade / somaPrioridade) * metaDiaria)),
+  }));
+
+  return { dataProva, diasRestantes, metaDiaria, foco, totalDisciplinasPendentes: itens.length };
 }
 
 /* ---------------- Seleção adaptativa (Módulo 7) ----------------
