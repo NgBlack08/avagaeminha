@@ -45,6 +45,24 @@ function proximaVersao(atual) {
 const versaoAtual = JSON.parse(fs.readFileSync(ARQ_VERSAO, "utf8")).v;
 const versaoNova = versaoExplicita || proximaVersao(versaoAtual);
 
+/* ---------- validar o banco ---------- */
+/* Antes de tudo: um banco com gabarito inválido ou campo faltando não pode
+   chegar a js/gerado/, muito menos ao ar. Os avisos estatísticos ficam para
+   `node scripts/validar.js`, que mostra o relatório completo. */
+
+const { validar } = require("./validar.js");
+const { erros, avisos, metricas } = validar({ quieto: true });
+
+if (erros.length) {
+  console.error(`Banco inválido — ${erros.length} erro(s). Nada foi gerado nem publicado:\n`);
+  for (const e of erros.slice(0, 15)) console.error(`  x ${e}`);
+  if (erros.length > 15) console.error(`  ... e mais ${erros.length - 15}.`);
+  console.error("\nRode `node scripts/validar.js` para o relatório completo.");
+  process.exit(1);
+}
+console.log(`Banco validado: ${metricas.questoes} questões, nenhum erro` +
+  (avisos.length ? `, ${avisos.length} aviso(s) — veja \`node scripts/validar.js\`.` : "."));
+
 /* ---------- regenerar o banco dividido ---------- */
 /* Roda antes de qualquer hash: dados-base.js é referenciado pelo
    index.html, então precisa estar em sua forma final. Editar um lote e

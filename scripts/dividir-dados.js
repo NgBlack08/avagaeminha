@@ -29,40 +29,16 @@
 
 const fs = require("fs");
 const path = require("path");
-const vm = require("vm");
 const crypto = require("crypto");
 
-const RAIZ = path.resolve(__dirname, "..");
-const DIR_JS = path.join(RAIZ, "js");
-const DIR_SAIDA = path.join(DIR_JS, "gerado");
+const {
+  DIR_JS, GLOBAIS_PUBLICAS, sincronizarManifesto, carregarDados, slug,
+} = require("./fontes.js");
 
-/* Globais que o código da aplicação lê. Os demais identificadores dos
-   arquivos-fonte (QUESTOES_PCAL_LOTE*, TXT_BLOCO*, TA_*) são temporários
-   que já foram despejados dentro de QUESTOES — reemiti-los duplicaria o
-   banco inteiro. */
-const GLOBAIS_PUBLICAS = [
-  "CONCURSOS",
-  "CARGOS",
-  "DNA_BANCA",
-  "PALAVRAS_PERIGOSAS",
-  "QUESTOES",
-  "FREQUENCIA_TEMAS",
-  "TIMELINE_DISCIPLINAS",
-  "PREDICOES",
-  "ESTRATEGIA_CATEGORIAS",
-  "ESTRATEGIAS",
-  "REGRA_CORRECAO",
-  "FORA_EDITAL_PCAL2026",
-];
+const DIR_SAIDA = path.join(DIR_JS, "gerado");
 
 /* Campos adiáveis: só são exibidos depois que o usuário responde. */
 const CAMPOS_PESADOS = ["comentario", "cognitivo"];
-
-function slug(texto) {
-  return texto
-    .normalize("NFD").replace(/[̀-ͯ]/g, "")
-    .toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
-}
 
 function hashDe(conteudo) {
   return crypto.createHash("sha1").update(conteudo).digest("hex").slice(0, 8);
@@ -71,60 +47,10 @@ function hashDe(conteudo) {
 function dividirDados({ silencioso = false } = {}) {
   const log = silencioso ? () => {} : console.log;
 
-  /* ---------- 1. sincronizar o manifesto com o disco ---------- */
+  /* ---------- 1. carregar os fontes ---------- */
 
-  /* A ordem de carga só tem uma restrição real: data.js precisa vir
-     primeiro, porque é ele que declara QUESTOES/PREDICOES; todos os outros
-     apenas dão push. Não há nenhuma dependência entre lotes (verificado:
-     nenhum arquivo referencia identificador declarado em outro), então
-     lotes novos podem simplesmente entrar no fim — o script os registra
-     sozinho, em vez de exigir edição manual. */
-
-  const ARQ_MANIFESTO = path.join(__dirname, "lotes.json");
-  const manifestoSalvo = JSON.parse(fs.readFileSync(ARQ_MANIFESTO, "utf8"));
-
-  const noDisco = fs.readdirSync(DIR_JS).filter(f => /^data.*\.js$/.test(f));
-  const conhecidos = manifestoSalvo.arquivos.filter(f => noDisco.includes(f));
-  const novos = noDisco.filter(f => !manifestoSalvo.arquivos.includes(f)).sort();
-
-  const sumiram = manifestoSalvo.arquivos.filter(f => !noDisco.includes(f));
-  if (sumiram.length) {
-    log(`  aviso: removidos do manifesto (não existem mais em js/): ${sumiram.join(", ")}`);
-  }
-
-  const manifesto = [
-    ...conhecidos.filter(f => f === "data.js"),
-    ...conhecidos.filter(f => f !== "data.js"),
-    ...novos,
-  ];
-
-  if (manifesto[0] !== "data.js") {
-    throw new Error("js/data.js não encontrado — é ele que declara QUESTOES.");
-  }
-  if (novos.length) log(`  registrados automaticamente: ${novos.join(", ")}`);
-
-  if (novos.length || sumiram.length) {
-    const atualizado = { ...manifestoSalvo, arquivos: manifesto };
-    if (!silencioso) fs.writeFileSync(ARQ_MANIFESTO, JSON.stringify(atualizado, null, 2) + "\n");
-  }
-
-  /* ---------- 2. avaliar os fontes ---------- */
-
-  /* Concatenados num único script porque as globais são declaradas com
-     `const`, que não vira propriedade do contexto do vm — só continua
-     visível dentro do mesmo escopo de script. */
-  const fonte =
-    manifesto.map(f => fs.readFileSync(path.join(DIR_JS, f), "utf8")).join("\n;\n") +
-    `\n;globalThis.__EXPORTS = { ${GLOBAIS_PUBLICAS.join(", ")} };`;
-
-  const ctx = { console, globalThis: {} };
-  vm.createContext(ctx);
-  vm.runInContext(fonte, ctx, { filename: "fontes-concatenados.js" });
-
-  const dados = ctx.globalThis.__EXPORTS;
-  for (const nome of GLOBAIS_PUBLICAS) {
-    if (dados[nome] === undefined) throw new Error(`Global ausente nos fontes: ${nome}`);
-  }
+  const manifesto = sincronizarManifesto({ gravar: !silencioso, log });
+  const dados = carregarDados(manifesto);
 
   const questoes = dados.QUESTOES;
   log(`Fontes: ${manifesto.length} arquivos, ${questoes.length} questões.`);

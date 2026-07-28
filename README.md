@@ -36,7 +36,7 @@ js/gerado/          → o que o navegador carrega; produzido por scripts/dividir
 js/engine.js        → motor: perfil, SRS, seleção adaptativa, filtros, detector, estatística
 js/charts.js        → gráficos SVG nativos (barras, linhas, gauge, heatmap)
 js/app.js           → telas/rotas da aplicação
-scripts/            → utilitários de build (cache-busting, geração de ícones)
+scripts/            → build: validação do banco, divisão leve/pesado, cache-busting, ícones
 ```
 
 ## Como publicar uma versão
@@ -47,11 +47,13 @@ Depois de alterar qualquer arquivo de `js/`, `css/` ou `icons/`, rode:
 node scripts/versionar.js
 ```
 
-O script faz duas coisas:
+O script faz três coisas, nesta ordem:
 
-1. **Regenera o banco dividido** (chama `scripts/dividir-dados.js`) — ver
+1. **Valida o banco** (`scripts/validar.js`). Se houver erro, aborta sem gerar
+   nem publicar nada — ver *Validação* abaixo.
+2. **Regenera o banco dividido** (`scripts/dividir-dados.js`) — ver
    *Banco de questões* abaixo.
-2. **Incrementa a versão** (`7.21` → `7.22`) e reescreve o `?v=` de cada asset em
+3. **Incrementa a versão** (`7.23` → `7.24`) e reescreve o `?v=` de cada asset em
    `index.html` e `manifest.json` com o **hash do conteúdo do próprio arquivo**.
    Nunca edite esses `?v=` à mão.
 
@@ -94,6 +96,42 @@ A única restrição de ordem é o `data.js` vir primeiro, porque é ele que dec
 
 O diretório `js/gerado/` **é versionado no git**, porque o GitHub Pages serve
 direto do repositório.
+
+## Validação do banco
+
+```bash
+node scripts/validar.js
+```
+
+Separa duas coisas diferentes:
+
+**Erros** — quebram o build, porque são defeitos objetivos que só apareceriam
+em produção, na frente do aluno: campo obrigatório ausente, gabarito fora de
+`{C,E}`, dificuldade fora de `{1,2,3}`, `cargo` que não é array, `probReaparecer`
+fora de `0..1`, ID repetido, enunciado idêntico a outro, e `pegadinha` que não
+existe em `DNA_BANCA` (slug órfão some da tela sem erro nenhum).
+
+**Avisos** — não bloqueiam nada. Medem o quanto o banco ainda imita a banca de
+verdade, que é o tipo de coisa que se degrada em silêncio, lote a lote, e não
+aparece olhando uma questão por vez:
+
+- **Padrão previsível**: padrão que cai no mesmo gabarito em ≥90% dos itens. É o
+  sinal mais importante — quando isso acontece, o rótulo vira paráfrase do
+  gabarito, e o bloco "Padrão da banca detectado" deixa de ensinar algo
+  transferível. Hoje 7 padrões estão nessa faixa (`literalidade` em 95,9% CERTO,
+  `generalizacao` em 100% ERRADO).
+- **Viés de comprimento** entre enunciados CERTO e ERRADO — vira pista.
+- **Equilíbrio C/E global** fora da faixa 45–55%.
+- **Cobertura desalinhada**: disciplina com peso alto na Predição de Cobrança e
+  banco raso.
+- **Disciplina sem entrada em `PREDICOES`**, que o Plano de Estudo acaba
+  priorizando pelo peso padrão.
+
+Os avisos são intencionalmente não-bloqueantes: transcrição fiel da lei *deve*
+mesmo ser CERTO, então "consertar" o desequilíbrio forçando o gabarito seria
+pior que o problema. O caminho é escrever os itens que faltam — no caso da
+`literalidade`, o item pseudo-literal: aparência de transcrição fiel com uma
+única alteração cirúrgica.
 
 ## Integridade pedagógica
 
