@@ -28,23 +28,23 @@ const QUESTOES_PCAL_LOTE56 = [
     concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Estatuto PC-AL, Lei 3.437/1975)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.85,
-    enunciado: "De acordo com o Estatuto da Polícia Civil de Alagoas, os cargos de natureza policial são providos por nomeação, promoção, acesso, reintegração, aproveitamento, reversão e transferência.",
+    enunciado: "De acordo com o texto do Estatuto da Polícia Civil de Alagoas, os cargos de natureza policial são providos por nomeação, promoção, acesso, reintegração, aproveitamento, reversão e transferência.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "nomeação, promoção, acesso, reintegração, aproveitamento, reversão e transferência",
     cognitivo: {
-      motivo: "Fixar o rol de formas de provimento do Estatuto estadual.",
-      mede: "Lei 3.437/1975, art. 36.",
-      pegadinhaDesc: "A banca costuma retirar ou acrescentar uma forma; aqui o rol está completo e correto.",
-      ondeErra: "Confunde com o rol de outra lei estatutária, esquecendo 'acesso' ou 'transferência'.",
-      palavraCritica: "acesso ... reversão e transferência",
-      tecnica: "São sete formas no art. 36. 'Acesso' e 'transferência' são as mais esquecidas.",
-      regraMental: "Provimento na PC-AL: 7 formas, incluindo acesso e transferência."
+      motivo: "Fixar o rol literal de formas de provimento do Estatuto estadual, atento à ressalva constitucional.",
+      mede: "Lei 3.437/1975, art. 36; CF, art. 37, II; Súmula 685 do STF.",
+      pegadinhaDesc: "O enunciado é fiel ao texto da lei (por isso CERTO), mas 'acesso' e 'transferência' como provimento derivativo para carreira diversa foram declarados inconstitucionais.",
+      ondeErra: "Ou esquece 'acesso'/'transferência' do rol literal, ou marca ERRADO por saber da inconstitucionalidade — mas o enunciado pede o texto da lei.",
+      palavraCritica: "De acordo com o texto do Estatuto",
+      tecnica: "Distinga o que a lei DIZ do que a CF admite: o rol do art. 36 tem sete formas; 'acesso' (ascensão) e 'transferência' não sobrevivem ao art. 37, II, da CF.",
+      regraMental: "Texto da lei: 7 formas. Válidas hoje: sem acesso nem transferência."
     },
     comentario: {
-      resolucao: "CERTO. O art. 36 da Lei 3.437/1975 arrola exatamente essas sete formas de provimento dos cargos de natureza policial: nomeação, promoção, acesso, reintegração, aproveitamento, reversão e transferência.",
-      fundamento: "Lei 3.437/1975 (Estatuto da PC-AL), art. 36, I a VII.",
-      macete: "Sete formas de provimento — acesso e transferência entram.",
-      erroComum: "Omitir 'acesso' por analogia com estatutos que não o preveem.",
-      comoBancaPensa: "Testa se o candidato decorou o rol completo, incluindo as formas menos usuais."
+      resolucao: "CERTO. O art. 36 da Lei 3.437/1975 arrola literalmente essas sete formas de provimento. Atenção, porém: 'acesso' (ascensão) e 'transferência', como formas de provimento derivativo que levariam o servidor a cargo de carreira diversa sem novo concurso, foram declarados inconstitucionais pelo STF (Súmula 685; ADI 231), por violarem a exigência de concurso público (art. 37, II, da CF). O item é verdadeiro porque se refere expressamente ao TEXTO do Estatuto; se cobrasse a validade atual dessas formas, seria falso.",
+      fundamento: "Lei 3.437/1975, art. 36, I a VII; CF, art. 37, II; Súmula 685 do STF.",
+      macete: "Texto da lei: 7 formas. Mas acesso e transferência caíram com a CF.",
+      erroComum: "Marcar ERRADO por lembrar da inconstitucionalidade, quando o enunciado pede o texto da lei.",
+      comoBancaPensa: "Separa quem confunde 'o que a lei diz' com 'o que ainda vale', nas duas direções."
     }
   },
   {
@@ -96,27 +96,27 @@ const QUESTOES_PCAL_LOTE56 = [
     }
   },
   {
-    id: "LI-048", disciplina: "Legislação Institucional (AL)", assunto: "Estatuto da PC-AL (Lei 3.437/1975)", subassunto: "Nomeação de Delegados (art. 40)",
+    id: "LI-048", disciplina: "Legislação Institucional (AL)", assunto: "Estatuto da PC-AL (Lei 3.437/1975)", subassunto: "Direção da polícia por delegado de carreira (art. 40 x CF art. 144)",
     concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (Estatuto PC-AL, Lei 3.437/1975)",
-    tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.8,
-    enunciado: "No interesse do serviço policial, os cargos de Delegados Regionais e Especializados poderão ser exercidos por oficiais superiores da Polícia Militar ou por capitães portadores do CAO; ao policial militar na graduação de cabo, por sua vez, é vedado em hipótese alguma exercer cargo de Delegado de Polícia.",
-    gabarito: "C", pegadinha: "literalidade", palavraChave: "oficiais superiores da Polícia Militar ou capitães portadores do CAO ... cabo, é vedado em hipótese alguma",
+    origem: "Inédita — estilo CEBRASPE (Estatuto PC-AL x CF/88)",
+    tipo: "CE", dificuldade: 3, tempoIdealSeg: 70, probReaparecer: 0.8,
+    enunciado: "Ainda que o Estatuto da PC-AL, de 1975, preveja que Delegados Regionais e Especializados possam ser exercidos por oficiais superiores da Polícia Militar, tal previsão não se compatibiliza com a Constituição de 1988, segundo a qual a polícia civil é dirigida por delegados de polícia de carreira.",
+    gabarito: "C", pegadinha: "verdade-mais-falso", palavraChave: "não se compatibiliza ... dirigida por delegados de polícia de carreira",
     cognitivo: {
-      motivo: "Cobrar as duas regras do art. 40 sobre nomeação de delegados vindos da PM.",
-      mede: "Lei 3.437/1975, art. 40, §§ 1º e 2º.",
-      pegadinhaDesc: "Junta as duas regras (permissão para oficiais/capitães CAO e vedação ao cabo), ambas corretas.",
-      ondeErra: "Nega a possibilidade de PM ocupar delegacia, esquecendo o §1º.",
-      palavraCritica: "capitães portadores do CAO ... cabo ... em hipótese alguma",
-      tecnica: "Oficiais superiores e capitães com CAO podem; cabo não pode em hipótese alguma.",
-      regraMental: "Oficial/CAO pode virar delegado regional; cabo nunca."
+      motivo: "Confrontar a previsão do estatuto de 1975 com o modelo constitucional de direção da polícia civil.",
+      mede: "CF, art. 144, §4º; Lei 3.437/1975, art. 40, §1º (não recepcionado).",
+      pegadinhaDesc: "A banca pode oferecer a previsão literal do estatuto (PM na delegacia) como se ainda valesse.",
+      ondeErra: "Responde pela literalidade do estatuto antigo, ignorando o art. 144, §4º, da CF.",
+      palavraCritica: "delegados de polícia de carreira",
+      tecnica: "A CF de 1988 reservou a direção da polícia civil a delegados de carreira; norma estadual anterior que admitia oficial da PM na função não foi recepcionada nesse ponto.",
+      regraMental: "Polícia civil: dirigida por delegado de carreira (art. 144, §4º, CF)."
     },
     comentario: {
-      resolucao: "CERTO. O art. 40, §1º, permite que Delegados Regionais e Especializados sejam exercidos por oficiais superiores da PM ou capitães portadores do CAO; o §2º veda, em hipótese alguma, a nomeação de cabo da PM para o cargo de Delegado de Polícia.",
-      fundamento: "Lei 3.437/1975, art. 40, §§ 1º e 2º.",
-      macete: "Oficial/CAO sobe; cabo, nunca.",
-      erroComum: "Negar a atuação de PM em delegacia.",
-      comoBancaPensa: "Combina duas regras verdadeiras do mesmo artigo para testar a leitura integral."
+      resolucao: "CERTO. O art. 144, §4º, da CF estabelece que a polícia civil é dirigida por delegados de polícia de carreira. A previsão do art. 40, §1º, da Lei 3.437/1975, que admitia oficiais superiores da PM no exercício de cargos de Delegado Regional e Especializado, é anterior à Constituição e não foi recepcionada nesse ponto. A exigência de delegado de carreira é reforçada pela Lei Orgânica Nacional das Polícias Civis, também objeto do edital.",
+      fundamento: "CF, art. 144, §4º; Lei 3.437/1975, art. 40, §1º (não recepcionado).",
+      macete: "Delegado é de carreira; PM não dirige polícia civil.",
+      erroComum: "Aceitar a previsão literal de 1975 como válida hoje.",
+      comoBancaPensa: "Oferece o dispositivo estadual antigo como isca para quem não confronta com o art. 144, §4º, da CF."
     }
   },
   {
