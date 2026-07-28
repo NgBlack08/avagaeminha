@@ -580,6 +580,14 @@ function setFiltroBanco(resetAssunto) {
   };
   bancoIndice = 0;
   bancoPagina = 0;
+
+  /* A busca textual varre também a resolução do comentário, que vive nos
+     arquivos de detalhe carregados sob demanda. Sem isto, procurar por um
+     termo que só aparece na explicação não acharia nada. */
+  if (bancoFiltros.busca) {
+    carregarTodosDetalhes().then(renderBanco, renderBanco);
+    return;
+  }
   renderBanco();
 }
 
@@ -648,7 +656,7 @@ function iniciarTimersVisiveis() {
   }, 1000);
 }
 
-function responder(qid, resposta) {
+async function responder(qid, resposta) {
   const ui = qUI[qid];
   if (!ui || ui.respondida) return;
   ui.respondida = true;
@@ -680,31 +688,49 @@ function responder(qid, resposta) {
     : res.correta ? `✔ Você ACERTOU — gabarito: <b>${res.gabarito === "C" ? "CERTO" : "ERRADO"}</b>`
     : `✖ Você ERROU — gabarito: <b>${res.gabarito === "C" ? "CERTO" : "ERRADO"}</b> (no sistema líquido, este erro anula um acerto)`;
 
-  const c = q.comentario, cog = q.cognitivo;
-  $("#qr-" + qid).innerHTML = `
-    <div class="resultado ${cls}">${msg} · seu tempo: ${tSeg}s (ideal: ${q.tempoIdealSeg}s)</div>
-    <div class="comentario">
-      <div class="bloco"><b>Resolução</b>${escapeHtml(c.resolucao)}</div>
-      <div class="bloco"><b>Fundamento legal</b>${escapeHtml(c.fundamento)}</div>
-      ${c.jurisprudencia ? `<div class="bloco"><b>Jurisprudência</b>${escapeHtml(c.jurisprudencia)}</div>` : ""}
-      <div class="bloco"><b>Macete</b>${escapeHtml(c.macete)}</div>
-      <div class="bloco"><b>Erro mais comum</b>${escapeHtml(c.erroComum)}</div>
-      <div class="bloco"><b>Como a banca pensa</b>${escapeHtml(c.comoBancaPensa)}</div>
-      ${dna ? `<div class="bloco"><b>Padrão da banca detectado: ${escapeHtml(dna.nome)} (incidência ${dna.incidencia}%)</b>${escapeHtml(dna.gatilho)}</div>` : ""}
-    </div>
-    <details class="cog"><summary>🧠 Engenharia cognitiva da questão (mapa da lógica)</summary>
-      <div class="cog-grid">
-        <div class="item"><b>1 · Por que esta questão existe</b>${escapeHtml(cog.motivo)}</div>
-        <div class="item"><b>2 · O que a banca mede</b>${escapeHtml(cog.mede)}</div>
-        <div class="item"><b>3 · A pegadinha utilizada</b>${escapeHtml(cog.pegadinhaDesc)}</div>
-        <div class="item"><b>4 · Onde o candidato erra</b>${escapeHtml(cog.ondeErra)}</div>
-        <div class="item"><b>5 · Palavra que muda tudo</b>${escapeHtml(cog.palavraCritica)}</div>
-        <div class="item"><b>6 · Técnica de eliminação</b>${escapeHtml(cog.tecnica)}</div>
-        <div class="item"><b>7 · Regra mental rápida</b>${escapeHtml(cog.regraMental)}</div>
-        <div class="item"><b>8 · Reaparecimento estimado</b>≈ ${Math.round(q.probReaparecer * 100)}% de probabilidade (estimativa histórica)</div>
-      </div>
-    </details>`;
+  /* O acerto/erro aparece na hora; só a explicação espera, porque
+     comentario/cognitivo vêm de um arquivo carregado sob demanda. */
+  const alvo = $("#qr-" + qid);
+  const resultadoHtml = `<div class="resultado ${cls}">${msg} · seu tempo: ${tSeg}s (ideal: ${q.tempoIdealSeg}s)</div>`;
 
+  let falhouDetalhe = false;
+  if (!q.comentario) {
+    alvo.innerHTML = resultadoHtml + `<div class="comentario-carregando">Carregando a explicação…</div>`;
+    try { await carregarDetalhes(q.disciplina); }
+    catch { falhouDetalhe = true; }
+  }
+
+  if (falhouDetalhe) {
+    alvo.innerHTML = resultadoHtml +
+      `<div class="resultado bad">Não foi possível carregar a explicação desta questão. Verifique sua conexão e recarregue a página.</div>`;
+  } else {
+    const c = q.comentario, cog = q.cognitivo;
+    alvo.innerHTML = resultadoHtml + `
+      <div class="comentario">
+        <div class="bloco"><b>Resolução</b>${escapeHtml(c.resolucao)}</div>
+        <div class="bloco"><b>Fundamento legal</b>${escapeHtml(c.fundamento)}</div>
+        ${c.jurisprudencia ? `<div class="bloco"><b>Jurisprudência</b>${escapeHtml(c.jurisprudencia)}</div>` : ""}
+        <div class="bloco"><b>Macete</b>${escapeHtml(c.macete)}</div>
+        <div class="bloco"><b>Erro mais comum</b>${escapeHtml(c.erroComum)}</div>
+        <div class="bloco"><b>Como a banca pensa</b>${escapeHtml(c.comoBancaPensa)}</div>
+        ${dna ? `<div class="bloco"><b>Padrão da banca detectado: ${escapeHtml(dna.nome)} (incidência ${dna.incidencia}%)</b>${escapeHtml(dna.gatilho)}</div>` : ""}
+      </div>
+      <details class="cog"><summary>🧠 Engenharia cognitiva da questão (mapa da lógica)</summary>
+        <div class="cog-grid">
+          <div class="item"><b>1 · Por que esta questão existe</b>${escapeHtml(cog.motivo)}</div>
+          <div class="item"><b>2 · O que a banca mede</b>${escapeHtml(cog.mede)}</div>
+          <div class="item"><b>3 · A pegadinha utilizada</b>${escapeHtml(cog.pegadinhaDesc)}</div>
+          <div class="item"><b>4 · Onde o candidato erra</b>${escapeHtml(cog.ondeErra)}</div>
+          <div class="item"><b>5 · Palavra que muda tudo</b>${escapeHtml(cog.palavraCritica)}</div>
+          <div class="item"><b>6 · Técnica de eliminação</b>${escapeHtml(cog.tecnica)}</div>
+          <div class="item"><b>7 · Regra mental rápida</b>${escapeHtml(cog.regraMental)}</div>
+          <div class="item"><b>8 · Reaparecimento estimado</b>≈ ${Math.round(q.probReaparecer * 100)}% de probabilidade (estimativa histórica)</div>
+        </div>
+      </details>`;
+  }
+
+  /* Fica fora do if: mesmo sem a explicação, o usuário precisa do botão
+     para seguir no simulado. */
   if (ui.modo === "simulado" && SIM) {
     SIM.respostas.push({ qid, resposta, correta: res.correta, branco: resposta === "B", tempoMs });
     $("#qr-" + qid).innerHTML += `<div style="margin-top:14px">
@@ -1050,9 +1076,15 @@ function finalizarProva(porTempo) {
   renderProvaResultado({ detalhe, acertos, erros, brancos, liquida, taxa, tempoTotal, porTempo });
 }
 
-function renderProvaResultado(r) {
+async function renderProvaResultado(r) {
   const { detalhe, acertos, erros, brancos, liquida, taxa, tempoTotal, porTempo } = r;
   const n = detalhe.length;
+
+  /* No Modo Prova o usuário responde tudo sem ver comentário, então os
+     detalhes destas disciplinas provavelmente ainda não foram carregados —
+     e o gabarito comentado logo abaixo depende deles. */
+  try { await carregarDetalhes(detalhe.map(d => d.q.disciplina)); }
+  catch { /* provaRevisaoHtml degrada sozinho quando o detalhe não veio */ }
 
   /* desempenho por disciplina */
   const porDisc = {};
@@ -1153,6 +1185,7 @@ function provaRevisaoHtml(d, i) {
     <div class="resultado ${cls}">
       Sua resposta: <b>${suaTxt}</b> · Gabarito: <b>${gabTxt}</b>${d.branco ? " (em branco não pontua nem desconta)" : d.correta ? " — você acertou" : " — este erro anulou um acerto"}
     </div>
+    ${!c ? `<div class="comentario"><div class="bloco">Explicação indisponível — não foi possível carregar os comentários desta disciplina. Recarregue a página para tentar de novo.</div></div>` : `
     <div class="comentario">
       <div class="bloco"><b>Resolução</b>${escapeHtml(c.resolucao)}</div>
       <div class="bloco"><b>Fundamento legal</b>${escapeHtml(c.fundamento)}</div>
@@ -1168,7 +1201,7 @@ function provaRevisaoHtml(d, i) {
         <div class="item"><b>Técnica</b>${escapeHtml(cog.tecnica)}</div>
         <div class="item"><b>Regra mental</b>${escapeHtml(cog.regraMental)}</div>
       </div>
-    </details>
+    </details>`}
   </div>`;
 }
 

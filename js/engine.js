@@ -7,6 +7,61 @@
 
 const STORAGE_KEY = "questlab-v1";
 
+/* ---------------- Detalhes das questões sob demanda ----------------
+   "comentario" e "cognitivo" respondem por 71% do banco (333 KB de 468 KB
+   gzip) e só aparecem DEPOIS que o usuário responde. Carregá-los no boot
+   custava caro mesmo com cache quente, porque cache evita o download, não
+   o parse dos 2,25 MB de JS.
+
+   Ficam então em js/gerado/detalhes-<disciplina>.js, gerados por
+   scripts/dividir-dados.js e trazidos por injeção de <script> — e não por
+   fetch(), que o navegador bloqueia em file://, cenário que o README ainda
+   documenta como forma de abrir o app. */
+
+const QUESTOES_POR_ID = new Map(QUESTOES.map(q => [q.id, q]));
+const detalhesCarregados = new Set();
+const detalhesEmVoo = new Map();
+
+/* Chamada pelos próprios arquivos de detalhe assim que carregam. */
+function registrarDetalhes(mapa) {
+  for (const id in mapa) {
+    const q = QUESTOES_POR_ID.get(id);
+    if (q) Object.assign(q, mapa[id]);
+  }
+}
+
+function slugDisciplina(texto) {
+  return String(texto)
+    .normalize("NFD").replace(/[̀-ͯ]/g, "")
+    .toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+}
+
+/* Aceita uma disciplina ou uma lista. Resolve imediatamente se já estiver
+   tudo em memória, então é barato chamar antes de qualquer render. */
+function carregarDetalhes(disciplinas) {
+  const pendentes = [...new Set([].concat(disciplinas).map(slugDisciplina))]
+    .filter(s => DETALHES_CHUNKS[s] && !detalhesCarregados.has(s));
+  if (!pendentes.length) return Promise.resolve();
+
+  return Promise.all(pendentes.map(s => {
+    if (detalhesEmVoo.has(s)) return detalhesEmVoo.get(s);
+    const p = new Promise((resolve, reject) => {
+      const el = document.createElement("script");
+      el.src = "js/gerado/" + DETALHES_CHUNKS[s];
+      el.onload = () => { detalhesCarregados.add(s); detalhesEmVoo.delete(s); resolve(); };
+      el.onerror = () => { detalhesEmVoo.delete(s); reject(new Error("Falha ao carregar os detalhes de " + s)); };
+      document.head.appendChild(el);
+    });
+    detalhesEmVoo.set(s, p);
+    return p;
+  })).then(() => undefined);
+}
+
+/* Usado pela busca textual, que varre a resolução de todas as questões. */
+function carregarTodosDetalhes() {
+  return carregarDetalhes(Object.keys(DETALHES_CHUNKS));
+}
+
 /* ---------------- Persistência ----------------
    Login obrigatório: o app só é exibido após autenticação (Supabase),
    e todo o progresso é salvo e sincronizado na nuvem (MODO "cloud").
@@ -436,7 +491,10 @@ function filtrarQuestoes(f) {
     }
     if (f.ocultarForaEdital && q.foraEdital) return false;
     if (f.busca) {
-      const alvo = (q.enunciado + " " + q.assunto + " " + q.subassunto + " " + (q.comentario.resolucao || "")).toLowerCase();
+      /* q.comentario pode ainda não ter chegado (carga sob demanda); quem
+         chama a busca dispara carregarTodosDetalhes() antes de renderizar,
+         então isto é só uma rede de segurança. */
+      const alvo = (q.enunciado + " " + q.assunto + " " + q.subassunto + " " + ((q.comentario && q.comentario.resolucao) || "")).toLowerCase();
       if (!alvo.includes(f.busca.toLowerCase())) return false;
     }
     return true;

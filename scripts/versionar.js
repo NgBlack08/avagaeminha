@@ -45,6 +45,15 @@ function proximaVersao(atual) {
 const versaoAtual = JSON.parse(fs.readFileSync(ARQ_VERSAO, "utf8")).v;
 const versaoNova = versaoExplicita || proximaVersao(versaoAtual);
 
+/* ---------- regenerar o banco dividido ---------- */
+/* Roda antes de qualquer hash: dados-base.js é referenciado pelo
+   index.html, então precisa estar em sua forma final. Editar um lote e
+   esquecer de regenerar publicaria o banco antigo. */
+
+const { dividirDados } = require("./dividir-dados.js");
+dividirDados({ silencioso: dryRun });
+console.log("");
+
 /* ---------- hash por arquivo ---------- */
 
 const cacheHash = new Map();

@@ -14,7 +14,7 @@
     // Garante que a aplicação sempre inicie na versão mais recente:
     // consulta version.json sem cache e força reload se a página
     // carregada (possivelmente em cache do navegador/CDN) estiver desatualizada.
-    var APP_VERSION = "7.21";
+    var APP_VERSION = "7.22";
     if (sessionStorage.getItem("_appVersionRefreshed") === APP_VERSION) return;
     fetch("version.json?_=" + Date.now(), { cache: "no-store" })
       .then(function (r) { return r.ok ? r.json() : null; })
@@ -32,7 +32,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css?v=bdcf37d3">
+  <link rel="stylesheet" href="css/styles.css?v=8c9670d2">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%234f8cff'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='white' font-family='Arial' font-weight='bold'>QL</text></svg>">
   <link rel="manifest" href="manifest.json?v=6fc4fddd">
   <link rel="apple-touch-icon" href="icons/icon-180.png?v=95010e6a">
@@ -62,67 +62,13 @@
     </main>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
-  <script src="js/data.js?v=436883cb"></script>
-  <script src="js/data-pcal2026-basicos.js?v=a52dc65e"></script>
-  <script src="js/data-pcal2026-especificos.js?v=5a3e7f9f"></script>
-  <script src="js/data-pcal2026-lote3.js?v=4e294d15"></script>
-  <script src="js/data-pcal2026-lote4.js?v=215b6174"></script>
-  <script src="js/data-pcal2026-lote5.js?v=15b3dd95"></script>
-  <script src="js/data-pcal2026-lote6.js?v=a1036b51"></script>
-  <script src="js/data-pcal2026-lote7.js?v=4a1ed449"></script>
-  <script src="js/data-pcal2026-lote8.js?v=3ecc30c4"></script>
-  <script src="js/data-pcal2026-lote9-qualidade.js?v=bbbf5cad"></script>
-  <script src="js/data-pcal2026-lote10-qualidade.js?v=32be445a"></script>
-  <script src="js/data-pcal2026-lote11-simulado.js?v=9e230153"></script>
-  <script src="js/data-pcal2026-lote12-simulado.js?v=f7455d64"></script>
-  <script src="js/data-pcal2026-lote13-lonpc.js?v=31d49408"></script>
-  <script src="js/data-pcal2026-lote14-constal.js?v=a95809ca"></script>
-  <script src="js/data-pcal2026-lote15-penalespecial1.js?v=b14501b7"></script>
-  <script src="js/data-pcal2026-lote16-penalespecial2.js?v=4ab41071"></script>
-  <script src="js/data-pcal2026-lote17-direitoshumanos.js?v=9c6c760b"></script>
-  <script src="js/data-pcal2026-lote18-licitacoes.js?v=bbbae2e0"></script>
-  <script src="js/data-pcal2026-lote19-penal-atualizado.js?v=a5c4a11f"></script>
-  <script src="js/data-pcal2026-lote20-jurisprudencia.js?v=adfc3229"></script>
-  <script src="js/data-pcal2026-lote21-pegadinhas.js?v=34fe6d99"></script>
-  <script src="js/data-pcal2026-lote22-blocos.js?v=ac8a4cc4"></script>
-  <script src="js/data-pcal2026-lote23-lacunas.js?v=eefcbe35"></script>
-  <script src="js/data-pcal2026-lote24-balanco.js?v=d93c5487"></script>
-  <script src="js/data-pcal2026-lote25-fora-edital.js?v=026a9060"></script>
-  <script src="js/data-pcal2026-lote26-federais.js?v=9b9b00c6"></script>
-  <script src="js/data-pcal2026-lote27-estatistica.js?v=58cfa1e5"></script>
-  <script src="js/data-pcal2026-lote28-ciberseguranca.js?v=050f9570"></script>
-  <script src="js/data-pcal2026-lote29-portugues.js?v=0717f77e"></script>
-  <script src="js/data-pcal2026-lote30-raciocinio.js?v=c962bd1c"></script>
-  <script src="js/data-pcal2026-lote31-etica-dh.js?v=d2a4947b"></script>
-  <script src="js/data-pcal2026-lote32-constitucional.js?v=82c2d0af"></script>
-  <script src="js/data-pcal2026-lote33-administrativo.js?v=37575d2e"></script>
-  <script src="js/data-pcal2026-lote34-penal.js?v=feb2411a"></script>
-  <script src="js/data-pcal2026-lote35-processopenal.js?v=57b5b490"></script>
-  <script src="js/data-pcal2026-lote36-legislacaoespecial.js?v=3026e3b7"></script>
-  <script src="js/data-pcal2026-lote37-contabilidade.js?v=3d987cc9"></script>
-  <script src="js/data-pcal2026-lote38-ti-extra.js?v=162b6748"></script>
-  <script src="js/data-pcal2026-lote39-etica-al.js?v=dea31a10"></script>
-  <script src="js/data-pcal2026-lote40-seguranca-info.js?v=02935ebd"></script>
-  <script src="js/data-pcal2026-lote41-ia.js?v=ac436920"></script>
-  <script src="js/data-pcal2026-lote42-windows.js?v=d3101966"></script>
-  <script src="js/data-pcal2026-lote43-internet.js?v=e3c62226"></script>
-  <script src="js/data-pcal2026-lote44-constitucional2.js?v=893ad4a0"></script>
-  <script src="js/data-pcal2026-lote45-constitucional3.js?v=e31429a4"></script>
-  <script src="js/data-pcal2026-lote46-constitucional4.js?v=c41a6be8"></script>
-  <script src="js/data-pcal2026-lote47-constitucional5.js?v=ef6682e5"></script>
-  <script src="js/data-pcal2026-lote48-tributario.js?v=502f2941"></script>
-  <script src="js/data-pcal2026-lote49-lavagem.js?v=5c1143f1"></script>
-  <script src="js/data-pcal2026-lote50-eda.js?v=9e7f8d71"></script>
-  <script src="js/data-pcal2026-lote51-mtc.js?v=e3aa286b"></script>
-  <script src="js/data-pcal2026-lote52-atualidades.js?v=ab7824da"></script>
-  <script src="js/data-pcal2026-lote53-organizacaoadm.js?v=5b3ac5b1"></script>
-  <script src="js/data-pcal2026-lote54-processopenal2.js?v=6499e9b5"></script>
+  <script src="js/gerado/dados-base.js?v=25ca0531"></script>
   <script src="js/plano-gratis.js?v=7d0ce746"></script>
   <script src="js/supabase-client.js?v=cd5cf8e4"></script>
-  <script src="js/engine.js?v=bec8f0a2"></script>
+  <script src="js/engine.js?v=851eda92"></script>
   <script src="js/auth.js?v=2722e5f7"></script>
   <script src="js/charts.js?v=88cda6b4"></script>
-  <script src="js/app.js?v=a0fb4463"></script>
+  <script src="js/app.js?v=87af07e1"></script>
   <script src="js/desafios.js?v=abef25fc"></script>
   <script src="js/admin.js?v=72cd23ec"></script>
   <script>

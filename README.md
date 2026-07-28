@@ -31,7 +31,8 @@ Abra o arquivo **`index.html`** em qualquer navegador (duplo clique). Não preci
 ```
 index.html          → shell da SPA
 css/styles.css      → design system (temas via CSS variables)
-js/data.js          → camada de dados (questões, DNA, frequências, predições, estratégias)
+js/data*.js         → FONTE editável dos dados (questões, DNA, frequências, predições, estratégias)
+js/gerado/          → o que o navegador carrega; produzido por scripts/dividir-dados.js
 js/engine.js        → motor: perfil, SRS, seleção adaptativa, filtros, detector, estatística
 js/charts.js        → gráficos SVG nativos (barras, linhas, gauge, heatmap)
 js/app.js           → telas/rotas da aplicação
@@ -46,9 +47,13 @@ Depois de alterar qualquer arquivo de `js/`, `css/` ou `icons/`, rode:
 node scripts/versionar.js
 ```
 
-O script incrementa a versão da aplicação (`7.20` → `7.21`) e reescreve o `?v=` de
-cada asset em `index.html` e `manifest.json` com o **hash do conteúdo do próprio
-arquivo**. Nunca edite esses `?v=` à mão.
+O script faz duas coisas:
+
+1. **Regenera o banco dividido** (chama `scripts/dividir-dados.js`) — ver
+   *Banco de questões* abaixo.
+2. **Incrementa a versão** (`7.21` → `7.22`) e reescreve o `?v=` de cada asset em
+   `index.html` e `manifest.json` com o **hash do conteúdo do próprio arquivo**.
+   Nunca edite esses `?v=` à mão.
 
 - `node scripts/versionar.js 8.0` — define a versão explicitamente.
 - `node scripts/versionar.js --dry` — mostra o que mudaria, sem gravar.
@@ -59,6 +64,31 @@ questões. Com hash por arquivo, só a URL de quem realmente mudou é invalidada
 
 A versão da aplicação continua em `version.json` e em `APP_VERSION` (`index.html`),
 mas agora serve só ao *check* que força recarregamento quando há release nova.
+
+## Banco de questões: fonte × gerado
+
+Os arquivos **`js/data*.js` são a fonte editável** — é neles que se escreve uma
+questão nova. Eles **não são mais carregados pelo navegador**: `scripts/dividir-dados.js`
+os lê e gera `js/gerado/`, que é o que o `index.html` serve.
+
+```
+js/data*.js  (fonte, 55 arquivos)
+      ↓ scripts/dividir-dados.js
+js/gerado/dados-base.js       → globais + questões SEM comentario/cognitivo
+js/gerado/detalhes-<disc>.js  → comentario/cognitivo, um por disciplina
+```
+
+Motivo: `comentario` e `cognitivo` são 71% do banco e só aparecem **depois** que o
+usuário responde. Carregá-los no boot custava caro mesmo com o cache quente,
+porque cache evita o *download*, não o *parse* — eram 2,25 MB de JS reinterpretados
+a cada visita. Hoje o boot carrega 0,96 MB e os detalhes entram sob demanda, por
+disciplina (`carregarDetalhes()` em `js/engine.js`).
+
+**Ao criar um lote novo:** salve o arquivo em `js/`, acrescente o nome a
+`scripts/lotes.json` (na ordem de carga) e rode `node scripts/versionar.js`. Se
+esquecer do `lotes.json`, o build falha avisando — o lote não é ignorado em
+silêncio. O diretório `js/gerado/` é versionado no git, porque o GitHub Pages
+serve direto do repositório.
 
 ## Integridade pedagógica
 
