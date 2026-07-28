@@ -14,7 +14,7 @@
     // Garante que a aplicação sempre inicie na versão mais recente:
     // consulta version.json sem cache e força reload se a página
     // carregada (possivelmente em cache do navegador/CDN) estiver desatualizada.
-    var APP_VERSION = "7.20";
+    var APP_VERSION = "7.21";
     if (sessionStorage.getItem("_appVersionRefreshed") === APP_VERSION) return;
     fetch("version.json?_=" + Date.now(), { cache: "no-store" })
       .then(function (r) { return r.ok ? r.json() : null; })
@@ -103,7 +103,7 @@
   <script src="js/data-pcal2026-lote38-ti-extra.js?v=162b6748"></script>
   <script src="js/data-pcal2026-lote39-etica-al.js?v=dea31a10"></script>
   <script src="js/data-pcal2026-lote40-seguranca-info.js?v=02935ebd"></script>
-  <script src="js/data-pcal2026-lote41-ia.js?v=9c01983b"></script>
+  <script src="js/data-pcal2026-lote41-ia.js?v=ac436920"></script>
   <script src="js/data-pcal2026-lote42-windows.js?v=d3101966"></script>
   <script src="js/data-pcal2026-lote43-internet.js?v=e3c62226"></script>
   <script src="js/data-pcal2026-lote44-constitucional2.js?v=893ad4a0"></script>

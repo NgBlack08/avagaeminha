@@ -97,7 +97,7 @@ const QUESTOES_PCAL_LOTE41 = [
     origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Inteligência Artificial)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.86,
     enunciado: "Os Modelos de Linguagem de Grande Porte (LLMs) possuem compreensão semântica plena e consciência contextual equivalentes à cognição humana, produzindo respostas totalmente determinísticas e invariáveis, independentemente do contexto fornecido pelo usuário.",
-    gabarito: "E", pegadinse: "termo-absoluto", pegadinha: "termo-absoluto", palavraChave: "compreensão semântica plena ... totalmente determinísticas",
+    gabarito: "E", pegadinha: "termo-absoluto", palavraChave: "compreensão semântica plena ... totalmente determinísticas",
     cognitivo: {
       motivo: "Cobrar, na forma invertida, que os LLMs não têm consciência humana nem respostas totalmente determinísticas.",
       mede: "Inteligência Artificial — funcionamento e limitações dos LLMs.",
