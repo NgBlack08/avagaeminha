@@ -419,6 +419,21 @@ const EDITAL_PCAL2026 = {
 /* Disciplina fora do edital (treino complementar) pesa pouco, mas não zero. */
 const PLANO_ITENS_PADRAO = 2;
 
+/* Fases do plano em função dos dias até a prova. A estratégia muda: longe
+   da prova, ampliar cobertura; perto, parar de ver conteúdo novo e revisar
+   erros e questões vencidas na repetição espaçada. */
+const PLANO_FASES = {
+  base:    { id: "base",    nome: "Base",       desc: "Ampliar a cobertura do edital, sem descuidar do que já errou." },
+  reforco: { id: "reforco", nome: "Reforço",   desc: "Reforçar os pontos fracos sem parar de cobrir o que falta." },
+  reta:    { id: "reta",    nome: "Reta final", desc: "Só revisão: erros e questões vencidas. Nada de conteúdo novo." },
+};
+function faseDoPlano(diasRestantes) {
+  if (diasRestantes === null) return PLANO_FASES.base;
+  if (diasRestantes <= 7) return PLANO_FASES.reta;
+  if (diasRestantes <= 30) return PLANO_FASES.reforco;
+  return PLANO_FASES.base;
+}
+
 function planoEstudoDirigido() {
   const dataProva = APP_STATE.config.dataProva || null;
   let diasRestantes = null;
@@ -427,20 +442,51 @@ function planoEstudoDirigido() {
     const alvo = new Date(dataProva + "T00:00:00");
     diasRestantes = Math.ceil((alvo - hoje) / 864e5);
   }
+  const fase = faseDoPlano(diasRestantes);
+  const agora = Date.now();
 
-  const itens = statsPorDisciplina().map(d => {
-    const restantes = d.total - d.respondidas;
-    /* Peso = quantos itens a disciplina vale na prova, direto do edital. */
+  /* Uma passada só, classificando cada questão liberada em "nova" (nunca
+     respondida) ou "erro" (última resposta errada — mesma semântica do
+     filtro 'só as que errei' do Banco, para o botão bater com a contagem). */
+  const porDisc = {};
+  for (const q of QUESTOES) {
+    if (!questaoLiberada(q)) continue;
+    const d = porDisc[q.disciplina] || (porDisc[q.disciplina] =
+      { disciplina: q.disciplina, novas: 0, erros: 0, acertos: 0, totErros: 0 });
+    const hist = APP_STATE.respostas[q.id] || [];
+    if (!hist.length) { d.novas++; continue; }
+    for (const h of hist) { if (h.branco) continue; else if (h.correta) d.acertos++; else d.totErros++; }
+    const ultima = hist[hist.length - 1];
+    if (!ultima.branco && !ultima.correta) d.erros++;
+  }
+
+  const naReta = fase.id === "reta";
+  const itens = Object.values(porDisc).map(d => {
+    const taxa = (d.acertos + d.totErros) ? d.acertos / (d.acertos + d.totErros) : null;
     const peso = EDITAL_PCAL2026.itensPorDisciplina[d.disciplina] ?? PLANO_ITENS_PADRAO;
     let statusId;
-    if (d.taxa === null) statusId = "naoIniciada";
-    else if (d.taxa < 0.6) statusId = "risco";
-    else if (d.taxa < 0.8) statusId = "atencao";
+    if (taxa === null) statusId = "naoIniciada";
+    else if (taxa < 0.6) statusId = "risco";
+    else if (taxa < 0.8) statusId = "atencao";
     else statusId = "dominada";
-    const prioridade = restantes > 0 ? peso * PLANO_STATUS[statusId].fator : 0;
-    return { disciplina: d.disciplina, restantes, taxa: d.taxa, statusId,
-      statusNome: PLANO_STATUS[statusId].nome, peso, prioridade };
-  }).filter(it => it.restantes > 0).sort((a, b) => b.prioridade - a.prioridade);
+    /* Na reta final, conteúdo novo é descartado: só entra quem tem erro a
+       revisar. Nas demais fases, novas e erros contam. */
+    const pendentes = naReta ? d.erros : d.novas + d.erros;
+    /* Modo do botão varia por fase, criando um gradiente real:
+       - Base (>30d): cobertura primeiro — explora conteúdo novo se houver.
+       - Reforço (8-30d): disciplina fraca com erro pendente vira revisão;
+         as demais continuam cobrindo.
+       - Reta (<=7d): só revisão. */
+    const ehFraca = statusId === "risco" || statusId === "atencao";
+    let modo;
+    if (fase.id === "reta") modo = "revisar";
+    else if (fase.id === "reforco" && ehFraca && d.erros > 0) modo = "revisar";
+    else if (d.novas > 0) modo = "explorar";
+    else modo = "revisar";
+    const prioridade = pendentes > 0 ? peso * PLANO_STATUS[statusId].fator : 0;
+    return { disciplina: d.disciplina, novas: d.novas, erros: d.erros, pendentes,
+      taxa, statusId, statusNome: PLANO_STATUS[statusId].nome, peso, modo, prioridade };
+  }).filter(it => it.pendentes > 0).sort((a, b) => b.prioridade - a.prioridade);
 
   const metaDiaria = Math.max(5, Math.round(META_SEMANAL_QUESTOES / 7));
   const somaPrioridade = itens.reduce((s, it) => s + it.prioridade, 0) || 1;
@@ -449,7 +495,12 @@ function planoEstudoDirigido() {
     questoesSugeridas: Math.max(1, Math.round((it.prioridade / somaPrioridade) * metaDiaria)),
   }));
 
-  return { dataProva, diasRestantes, metaDiaria, foco, totalDisciplinasPendentes: itens.length };
+  /* Revisão do dia, agregada: erros acumulados e questões vencidas no SRS. */
+  const totalErros = Object.values(porDisc).reduce((s, d) => s + d.erros, 0);
+  const devidasSRS = questoesDevidas().length;
+
+  return { dataProva, diasRestantes, fase, metaDiaria, foco,
+    totalDisciplinasPendentes: itens.length, totalErros, devidasSRS };
 }
 
 /* ---------------- Seleção adaptativa (Módulo 7) ----------------

@@ -1409,8 +1409,18 @@ async function limparDataProva() {
   definirDataProva(null);
   renderPlanoEstudo();
 }
-function estudarDisciplinaAgora(disciplina) {
+function estudarDisciplinaAgora(disciplina, modo) {
   bancoFiltros = { disciplina };
+  if (modo === "revisar") bancoFiltros.somenteErradas = true;
+  else if (modo === "explorar") bancoFiltros.somenteNaoRespondidas = true;
+  bancoIndice = 0;
+  bancoPagina = 0;
+  navigate("banco");
+}
+/* Revisão agregada: manda ao Banco só os itens que o usuário errou, em
+   todas as disciplinas — é o modo mais direto de atacar os erros. */
+function revisarErrosAgora() {
+  bancoFiltros = { somenteErradas: true };
   bancoIndice = 0;
   bancoPagina = 0;
   navigate("banco");
@@ -1433,12 +1443,37 @@ function renderPlanoEstudo() {
         <button class="btn small" onclick="salvarDataProva()">Definir data</button>
       </div>`;
 
+  const modoBadge = { revisar: '<span class="tag warn">↻ revisar erros</span>', explorar: '<span class="tag">＋ conteúdo novo</span>' };
+  const modoBottom = it => it.modo === "revisar"
+    ? `${it.erros} ${it.erros === 1 ? "questão errada para revisar" : "questões erradas para revisar"}`
+    : `${it.novas} ${it.novas === 1 ? "questão não explorada" : "questões não exploradas"}`;
+  const modoBtn = it => it.modo === "revisar" ? "Revisar erros →" : "Estudar agora →";
+
+  /* Card de revisão do dia — só aparece se há o que revisar. */
+  const revisaoHtml = (plano.totalErros > 0 || plano.devidasSRS > 0) ? `
+  <div class="card pe-revisao" style="margin-bottom:16px">
+    <h3>↻ Revisão de hoje</h3>
+    <div class="pe-revisao-nums">
+      ${plano.totalErros > 0 ? `<div class="pe-rev-num"><b>${plano.totalErros}</b><span>${plano.totalErros === 1 ? "questão errada" : "questões erradas"} acumulada(s)</span></div>` : ""}
+      ${plano.devidasSRS > 0 ? `<div class="pe-rev-num"><b>${plano.devidasSRS}</b><span>vencida(s) na repetição espaçada</span></div>` : ""}
+    </div>
+    <div class="pe-revisao-acoes">
+      ${plano.totalErros > 0 ? `<button class="btn small" onclick="revisarErrosAgora()">Revisar meus erros →</button>` : ""}
+      ${plano.devidasSRS > 0 ? `<button class="btn ghost small" onclick="navigate('simulado')">Simulado de revisão (SRS) →</button>` : ""}
+    </div>
+  </div>` : "";
+
   MAIN().innerHTML = topbar("Plano de Estudo Dirigido",
-    "O que priorizar hoje, cruzando dias até a prova, peso da Predição de Cobrança e seu desempenho por disciplina") +
+    "O que priorizar hoje, cruzando dias até a prova, peso do edital e seu desempenho por disciplina") +
   `<div class="card" style="margin-bottom:16px">
     <h3>📅 Contagem regressiva</h3>
     ${contagemHtml}
+    <div class="pe-fase pe-fase-${plano.fase.id}">
+      <span class="pe-fase-nome">Fase: ${plano.fase.nome}</span>
+      <span class="pe-fase-desc">${plano.fase.desc}</span>
+    </div>
   </div>
+  ${revisaoHtml}
   <div class="card">
     <h3>🎯 Prioridades de hoje <span class="hint">cota sugerida somando ${plano.metaDiaria} questões/dia (sua meta semanal ÷ 7)</span></h3>
     ${plano.foco.length ? plano.foco.map(it => `
@@ -1446,17 +1481,20 @@ function renderPlanoEstudo() {
         <div class="pe-item-top">
           <span class="tag ${statusCls[it.statusId]}">${statusIco[it.statusId]} ${escapeHtml(it.statusNome)}</span>
           <span class="tag" title="Itens que esta disciplina vale na prova, conforme o Edital nº 1 - PC/AL de 2 de julho de 2026">≈ ${it.peso} itens na prova</span>
+          ${modoBadge[it.modo] || ""}
           <b class="pe-disc">${escapeHtml(it.disciplina)}</b>
           <span class="pe-cota">${it.questoesSugeridas} ${it.questoesSugeridas === 1 ? "questão" : "questões"} hoje</span>
         </div>
         <div class="diag-bar ${statusCls[it.statusId]}"><i style="width:${it.taxa === null ? 100 : Math.round(it.taxa * 100)}%"></i></div>
         <div class="pe-item-bottom">
-          <span class="hint">${it.taxa === null ? "Ainda não iniciada" : Math.round(it.taxa * 100) + "% de acerto"} · ${it.restantes} ${it.restantes === 1 ? "questão não explorada" : "questões não exploradas"}</span>
-          <button class="btn ghost small" onclick="estudarDisciplinaAgora('${it.disciplina}')">Estudar agora →</button>
+          <span class="hint">${it.taxa === null ? "Ainda não iniciada" : Math.round(it.taxa * 100) + "% de acerto"} · ${modoBottom(it)}</span>
+          <button class="btn ghost small" onclick="estudarDisciplinaAgora('${it.disciplina}','${it.modo}')">${modoBtn(it)}</button>
         </div>
       </div>`).join("")
-    : `<div class="empty"><div class="big">🎉</div>Você já explorou todo o banco de questões disponível. Continue revisando pelo Simulado Adaptativo!</div>`}
-    ${plano.totalDisciplinasPendentes > plano.foco.length ? `<div class="hint" style="margin-top:10px">+ ${plano.totalDisciplinasPendentes - plano.foco.length} outra(s) disciplina(s) com questões não exploradas, de menor prioridade agora.</div>` : ""}
+    : plano.fase.id === "reta"
+      ? `<div class="empty"><div class="big">✅</div>Nenhum erro pendente para revisar. Use o simulado de revisão (SRS) acima para manter o conteúdo fresco até a prova.</div>`
+      : `<div class="empty"><div class="big">🎉</div>Você já explorou todo o banco disponível e não há erros pendentes. Continue revisando pelo Simulado Adaptativo!</div>`}
+    ${plano.totalDisciplinasPendentes > plano.foco.length ? `<div class="hint" style="margin-top:10px">+ ${plano.totalDisciplinasPendentes - plano.foco.length} outra(s) disciplina(s) pendente(s), de menor prioridade agora.</div>` : ""}
   </div>
   ${AVISO_ESTATISTICO}`;
 }
