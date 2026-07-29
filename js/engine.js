@@ -452,7 +452,8 @@ function planoEstudoDirigido() {
   for (const q of QUESTOES) {
     if (!questaoLiberada(q)) continue;
     const d = porDisc[q.disciplina] || (porDisc[q.disciplina] =
-      { disciplina: q.disciplina, novas: 0, erros: 0, acertos: 0, totErros: 0 });
+      { disciplina: q.disciplina, total: 0, novas: 0, erros: 0, acertos: 0, totErros: 0 });
+    d.total++;
     const hist = APP_STATE.respostas[q.id] || [];
     if (!hist.length) { d.novas++; continue; }
     for (const h of hist) { if (h.branco) continue; else if (h.correta) d.acertos++; else d.totErros++; }
@@ -499,8 +500,34 @@ function planoEstudoDirigido() {
   const totalErros = Object.values(porDisc).reduce((s, d) => s + d.erros, 0);
   const devidasSRS = questoesDevidas().length;
 
+  /* Trajetória (item 4): quanto do edital já foi ao menos visto uma vez, e
+     em que estado estão as disciplinas. */
+  const discs = Object.values(porDisc);
+  const totalQuestoes = discs.reduce((s, d) => s + d.total, 0);
+  const novasRestantes = discs.reduce((s, d) => s + d.novas, 0);
+  const progresso = {
+    total: totalQuestoes,
+    vistas: totalQuestoes - novasRestantes,
+    cobertura: totalQuestoes ? (totalQuestoes - novasRestantes) / totalQuestoes : 0,
+    emRisco: itens.filter(it => it.statusId === "risco").length,
+    dominadas: discs.filter(d => (d.acertos + d.totErros) && d.acertos / (d.acertos + d.totErros) >= 0.8).length,
+  };
+
+  /* Ritmo (item 3): só faz sentido com data marcada, dias pela frente e
+     conteúdo novo a cobrir. Compara a meta diária com o ritmo necessário
+     para ver tudo de novo antes da prova. */
+  let ritmo = null;
+  if (diasRestantes !== null && diasRestantes > 0 && novasRestantes > 0) {
+    const ritmoNecessario = Math.ceil(novasRestantes / diasRestantes);
+    const diasParaCobrir = Math.ceil(novasRestantes / metaDiaria);
+    ritmo = {
+      novasRestantes, ritmoNecessario, diasParaCobrir,
+      noRitmo: diasParaCobrir <= diasRestantes,
+    };
+  }
+
   return { dataProva, diasRestantes, fase, metaDiaria, foco,
-    totalDisciplinasPendentes: itens.length, totalErros, devidasSRS };
+    totalDisciplinasPendentes: itens.length, totalErros, devidasSRS, progresso, ritmo };
 }
 
 /* ---------------- Seleção adaptativa (Módulo 7) ----------------

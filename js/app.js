@@ -1449,6 +1449,29 @@ function renderPlanoEstudo() {
     : `${it.novas} ${it.novas === 1 ? "questão não explorada" : "questões não exploradas"}`;
   const modoBtn = it => it.modo === "revisar" ? "Revisar erros →" : "Estudar agora →";
 
+  /* Card de progresso (item 4) + linha de ritmo (item 3). */
+  const pg = plano.progresso;
+  const rt = plano.ritmo;
+  const coberturaPct = Math.round(pg.cobertura * 100);
+  const ritmoHtml = rt ? (rt.noRitmo
+    ? `<div class="pe-ritmo ok">✓ No ritmo: com ${plano.metaDiaria} questões/dia, você cobre as ${rt.novasRestantes} não vistas em ~${rt.diasParaCobrir} dia${rt.diasParaCobrir === 1 ? "" : "s"}, dentro do prazo.</div>`
+    : `<div class="pe-ritmo bad">⚠ Fora do ritmo: no passo atual (${plano.metaDiaria}/dia) as ${rt.novasRestantes} não vistas levariam ~${rt.diasParaCobrir} dias, mas faltam ${plano.diasRestantes}. Para cobrir tudo, faça ~${rt.ritmoNecessario}/dia — ou priorize pelo peso e aceite deixar o menos cobrado de fora.</div>`)
+    : "";
+  const progressoHtml = pg.total ? `
+  <div class="card pe-progresso" style="margin-bottom:16px">
+    <h3>📈 Sua trajetória</h3>
+    <div class="pe-prog-top">
+      <span class="pe-prog-pct">${coberturaPct}%</span>
+      <span class="hint">do banco já visto ao menos uma vez · ${pg.vistas} de ${pg.total} questões</span>
+    </div>
+    <div class="gami-bar" style="margin-top:8px"><i style="width:${coberturaPct}%"></i></div>
+    <div class="pe-prog-nums">
+      <span class="tag ${pg.emRisco ? "bad" : ""}">${pg.emRisco} em risco</span>
+      <span class="tag ${pg.dominadas ? "ok" : ""}">${pg.dominadas} dominada${pg.dominadas === 1 ? "" : "s"}</span>
+    </div>
+    ${ritmoHtml}
+  </div>` : "";
+
   /* Card de revisão do dia — só aparece se há o que revisar. */
   const revisaoHtml = (plano.totalErros > 0 || plano.devidasSRS > 0) ? `
   <div class="card pe-revisao" style="margin-bottom:16px">
@@ -1473,6 +1496,7 @@ function renderPlanoEstudo() {
       <span class="pe-fase-desc">${plano.fase.desc}</span>
     </div>
   </div>
+  ${progressoHtml}
   ${revisaoHtml}
   <div class="card">
     <h3>🎯 Prioridades de hoje <span class="hint">cota sugerida somando ${plano.metaDiaria} questões/dia (sua meta semanal ÷ 7)</span></h3>
@@ -1491,9 +1515,11 @@ function renderPlanoEstudo() {
           <button class="btn ghost small" onclick="estudarDisciplinaAgora('${it.disciplina}','${it.modo}')">${modoBtn(it)}</button>
         </div>
       </div>`).join("")
-    : plano.fase.id === "reta"
-      ? `<div class="empty"><div class="big">✅</div>Nenhum erro pendente para revisar. Use o simulado de revisão (SRS) acima para manter o conteúdo fresco até a prova.</div>`
-      : `<div class="empty"><div class="big">🎉</div>Você já explorou todo o banco disponível e não há erros pendentes. Continue revisando pelo Simulado Adaptativo!</div>`}
+    : plano.devidasSRS > 0
+      ? `<div class="empty"><div class="big">↻</div>Sem novas nem erros pendentes — mas você tem <b>${plano.devidasSRS}</b> questão(ões) vencida(s) na repetição espaçada. Faça o simulado de revisão (SRS) acima para não esquecer o que já domina.</div>`
+      : plano.fase.id === "reta"
+        ? `<div class="empty"><div class="big">✅</div>Nada pendente para revisar hoje. Você está com tudo em dia para a reta final — mantenha o descanso e revise pontos-chave.</div>`
+        : `<div class="empty"><div class="big">🎉</div>Você já explorou todo o banco disponível e não há erros nem revisões pendentes. Continue mantendo o ritmo pelo Simulado Adaptativo!</div>`}
     ${plano.totalDisciplinasPendentes > plano.foco.length ? `<div class="hint" style="margin-top:10px">+ ${plano.totalDisciplinasPendentes - plano.foco.length} outra(s) disciplina(s) pendente(s), de menor prioridade agora.</div>` : ""}
   </div>
   ${AVISO_ESTATISTICO}`;

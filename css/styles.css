@@ -215,6 +215,15 @@ body {
 .pe-fase-reta { border-left-color: var(--bad); }
 .pe-fase-reta .pe-fase-nome { color: var(--bad); }
 
+/* Card de trajetória (progresso + ritmo) */
+.pe-prog-top { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }
+.pe-prog-pct { font-size: 26px; font-weight: 750; letter-spacing: -.02em; font-variant-numeric: tabular-nums; }
+.pe-prog-nums { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px; }
+.pe-ritmo { margin-top: 12px; padding: 10px 14px; border-radius: var(--r-md); font-size: 13px; line-height: 1.5;
+  background: var(--surface2); border-left: 3px solid var(--muted); }
+.pe-ritmo.ok { border-left-color: var(--ok); }
+.pe-ritmo.bad { border-left-color: var(--bad); }
+
 /* Card de revisão do dia */
 .pe-revisao-nums { display: flex; gap: 24px; flex-wrap: wrap; margin: 4px 0 14px; }
 .pe-rev-num { display: flex; flex-direction: column; }
