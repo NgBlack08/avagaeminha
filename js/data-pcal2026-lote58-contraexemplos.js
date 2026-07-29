@@ -469,7 +469,7 @@ const QUESTOES_PCAL_LOTE58 = [
     concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (contraexemplo de padrão)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.85,
-    enunciado: "A coesão diz respeito à articulação formal entre os elementos do texto, por meio de conectivos e retomadas, enquanto a coerência refere-se à unidade lógica de sentido do conjunto.",
+    enunciado: "A coesão diz respeito à articulação formal entre elementos textuais, por meio de conectivos e retomadas, enquanto a coerência refere-se à unidade lógica de sentido do conjunto.",
     gabarito: "C", pegadinha: "troca-conceito", palavraChave: "coesão ... articulação formal ... coerência ... unidade lógica de sentido",
     cognitivo: {
       motivo: "Fixar a distinção entre os dois mecanismos textuais.",

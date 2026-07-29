@@ -36,6 +36,25 @@ const CAMPOS_COGNITIVO = [
   "motivo", "mede", "pegadinhaDesc", "ondeErra", "palavraCritica", "tecnica", "regraMental",
 ];
 
+/* Um enunciado que remete a um parágrafo específico ou ao "texto" como
+   objeto externo ("no segundo parágrafo...", "predomina no texto...")
+   pressupõe uma passagem anexada em `textoApoio` para o candidato
+   analisar o contexto e julgar a oração. Sem ela, a questão é
+   irrespondível — e passa despercebida porque `textoApoio` é campo
+   opcional no schema, não pego pelos CAMPOS_OBRIGATORIOS.
+
+   Achado real: 12 itens do lote 29 (Língua Portuguesa) tinham o texto
+   escrito no fonte sob o nome de campo errado (`textoBase` em vez de
+   `textoApoio`) — o texto existia, mas o app nunca o renderizava. Só a
+   referência explícita a "segundo parágrafo" etc. expôs o problema.
+
+   Restrito a citação de PARÁGRAFO ORDINAL ou a "o texto" como objeto
+   bruto (não citação entre aspas, que já traz o trecho necessário junto
+   ao enunciado — self-contained). Testado contra as 1141 questões do
+   banco: zero falsos positivos com essas duas formas. */
+const PADRAO_EXIGE_TEXTO_APOIO =
+  /\b(primeiro|segundo|terceiro|quarto|quinto|último|penúltimo)\s+par[aá]grafo\b|\b(no|do|ao)\s+texto\b|predomina no texto|período final do texto|início do texto|ao longo do texto/i;
+
 /* Limiares dos avisos. Não são leis da natureza — são o ponto em que um
    desequilíbrio deixa de ser ruído e passa a ensinar o reflexo errado. */
 const LIMIAR_PADRAO_ENVIESADO = 0.90; /* padrão que quase sempre cai no mesmo gabarito */
@@ -74,6 +93,10 @@ function validar({ quieto = false } = {}) {
     }
     for (const c of CAMPOS_COGNITIVO) {
       if (!q.cognitivo || !q.cognitivo[c]) erros.push(`${onde}: cognitivo.${c} ausente`);
+    }
+
+    if (PADRAO_EXIGE_TEXTO_APOIO.test(q.enunciado) && !q.textoApoio) {
+      erros.push(`${onde}: enunciado remete a um parágrafo/texto externo, mas textoApoio está vazio`);
     }
 
     if (!["C", "E"].includes(q.gabarito)) erros.push(`${onde}: gabarito inválido — "${q.gabarito}" (esperado C ou E)`);

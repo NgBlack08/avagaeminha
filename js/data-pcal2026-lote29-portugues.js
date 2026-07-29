@@ -24,7 +24,7 @@ const QUESTOES_PCAL_LOTE29 = [
     concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (texto-base autoral: perícia e cadeia de custódia)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 60, probReaparecer: 0.8,
-    textoBase: TEXTO_BASE_LOTE29,
+    textoApoio: TEXTO_BASE_LOTE29,
     enunciado: "No primeiro parágrafo, a expressão \"ou seja\" introduz uma reformulação explicativa do termo imediatamente anterior (\"cadeia de custódia\"), retomando-o para defini-lo em termos mais acessíveis ao leitor.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "ou seja ... reformulação explicativa",
     cognitivo: {
@@ -49,7 +49,7 @@ const QUESTOES_PCAL_LOTE29 = [
     concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (texto-base autoral: perícia e cadeia de custódia)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 60, probReaparecer: 0.76,
-    textoBase: TEXTO_BASE_LOTE29,
+    textoApoio: TEXTO_BASE_LOTE29,
     enunciado: "No período que inicia o segundo parágrafo, a oração \"Quando essa cadeia é rompida\" classifica-se como oração subordinada adverbial temporal, indicando o momento em que se verifica o fato expresso na oração principal.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "Quando ... adverbial temporal",
     cognitivo: {
@@ -74,7 +74,7 @@ const QUESTOES_PCAL_LOTE29 = [
     concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (texto-base autoral: perícia e cadeia de custódia)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.74,
-    textoBase: TEXTO_BASE_LOTE29,
+    textoApoio: TEXTO_BASE_LOTE29,
     enunciado: "No trecho \"para que a defesa questione a idoneidade da prova\", o verbo \"questionar\" exige complemento regido de preposição, classificando-se como transitivo indireto.",
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "questione a idoneidade ... transitivo indireto",
     cognitivo: {
@@ -99,7 +99,7 @@ const QUESTOES_PCAL_LOTE29 = [
     concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (texto-base autoral: perícia e cadeia de custódia)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.82,
-    textoBase: TEXTO_BASE_LOTE29,
+    textoApoio: TEXTO_BASE_LOTE29,
     enunciado: "O acento indicativo de crase em \"devem sujeitar-se à disciplina metodológica\" (segundo parágrafo) justifica-se pela regência do verbo pronominal \"sujeitar-se\", que exige a preposição \"a\", combinada com o artigo feminino que precede o substantivo \"disciplina\".",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "sujeitar-se à disciplina ... regência + artigo feminino",
     cognitivo: {
@@ -124,7 +124,7 @@ const QUESTOES_PCAL_LOTE29 = [
     concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (texto-base autoral: perícia e cadeia de custódia)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 60, probReaparecer: 0.7,
-    textoBase: TEXTO_BASE_LOTE29,
+    textoApoio: TEXTO_BASE_LOTE29,
     enunciado: "No terceiro parágrafo, o verbo \"substitui\", em \"nenhuma inovação substitui a disciplina metodológica\", deveria flexionar-se no plural (\"substituem\"), uma vez que seu sujeito é composto pelos elementos \"tecnologia\" e \"inovação\", ambos mencionados no período.",
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "sujeito composto ... substituem",
     cognitivo: {
@@ -149,7 +149,7 @@ const QUESTOES_PCAL_LOTE29 = [
     concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (texto-base autoral: perícia e cadeia de custódia)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.72,
-    textoBase: TEXTO_BASE_LOTE29,
+    textoApoio: TEXTO_BASE_LOTE29,
     enunciado: "No trecho \"— a exemplo dos exames de DNA e das ferramentas de análise digital —\", o par de travessões isola um aposto que contém informação essencial à compreensão do período, razão pela qual sua supressão comprometeria a estrutura sintática da frase.",
     gabarito: "E", pegadinha: "restricao-indevida", palavraChave: "informação essencial ... comprometeria",
     cognitivo: {
@@ -174,7 +174,7 @@ const QUESTOES_PCAL_LOTE29 = [
     concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (texto-base autoral: perícia e cadeia de custódia)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.72,
-    textoBase: TEXTO_BASE_LOTE29,
+    textoApoio: TEXTO_BASE_LOTE29,
     enunciado: "O vocábulo \"Afinal\", que inicia o período final do texto, introduz uma justificativa para a afirmação anterior, apresentando valor semântico conclusivo/explicativo no contexto em que ocorre.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "Afinal ... justificativa ... conclusivo/explicativo",
     cognitivo: {
@@ -199,7 +199,7 @@ const QUESTOES_PCAL_LOTE29 = [
     concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (texto-base autoral: perícia e cadeia de custódia)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.7,
-    textoBase: TEXTO_BASE_LOTE29,
+    textoApoio: TEXTO_BASE_LOTE29,
     enunciado: "No trecho \"idoneidade da prova\" (segundo parágrafo), o substantivo \"idoneidade\" rege-se pela preposição \"a\", e não \"de\", de modo que a combinação \"da prova\" configura um desvio de regência nominal em relação à norma-padrão.",
     gabarito: "E", pegadinha: "exigencia-inexistente", palavraChave: "idoneidade ... preposição 'a' ... desvio de regência",
     cognitivo: {
@@ -224,7 +224,7 @@ const QUESTOES_PCAL_LOTE29 = [
     concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (texto-base autoral: perícia e cadeia de custódia)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.7,
-    textoBase: TEXTO_BASE_LOTE29,
+    textoApoio: TEXTO_BASE_LOTE29,
     enunciado: "A oração reduzida \"registrando cada etapa em formulários específicos\" (segundo parágrafo) expressa circunstância concessiva em relação à oração principal, equivalendo a \"embora registrem cada etapa em formulários específicos\".",
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "registrando ... concessiva",
     cognitivo: {
@@ -249,7 +249,7 @@ const QUESTOES_PCAL_LOTE29 = [
     concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (texto-base autoral: perícia e cadeia de custódia)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.72,
-    textoBase: TEXTO_BASE_LOTE29,
+    textoApoio: TEXTO_BASE_LOTE29,
     enunciado: "No primeiro parágrafo, as vírgulas que isolam \"ou seja, o conjunto de procedimentos que garante a rastreabilidade de um vestígio desde a sua coleta até o descarte final\" cumprem a função de isolar um aposto explicativo que retoma e define o termo antecedente.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "vírgulas ... aposto explicativo",
     cognitivo: {
@@ -274,7 +274,7 @@ const QUESTOES_PCAL_LOTE29 = [
     concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (texto-base autoral: perícia e cadeia de custódia)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.74,
-    textoBase: TEXTO_BASE_LOTE29,
+    textoApoio: TEXTO_BASE_LOTE29,
     enunciado: "Em \"abre-se margem para que a defesa questione a idoneidade da prova\" (segundo parágrafo), o pronome \"se\" indica sujeito indeterminado, uma vez que o verbo \"abrir\" tem, nesse contexto, valor intransitivo.",
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "abre-se margem ... sujeito indeterminado",
     cognitivo: {
@@ -299,7 +299,7 @@ const QUESTOES_PCAL_LOTE29 = [
     concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (texto-base autoral: perícia e cadeia de custódia)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 60, probReaparecer: 0.76,
-    textoBase: TEXTO_BASE_LOTE29,
+    textoApoio: TEXTO_BASE_LOTE29,
     enunciado: "Predomina no texto a tipologia dissertativo-argumentativa, evidenciada, sobretudo, pelo período final, em que o autor defende, por meio de uma justificativa lógica, a tese de que a disciplina metodológica na cena do crime é insubstituível.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "dissertativo-argumentativa ... tese ... insubstituível",
     cognitivo: {
