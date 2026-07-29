@@ -51,7 +51,7 @@ function normalizar(texto) {
 
 function validar({ quieto = false } = {}) {
   const manifesto = sincronizarManifesto({ gravar: false });
-  const { QUESTOES, DNA_BANCA, PREDICOES } = carregarDados(manifesto);
+  const { QUESTOES, DNA_BANCA, EDITAL_PCAL2026 } = carregarDados(manifesto);
 
   const erros = [];
   const avisos = [];
@@ -140,31 +140,37 @@ function validar({ quieto = false } = {}) {
     avisos.push(`Enunciados CERTO têm ${Math.round(mediaC)} caracteres contra ${Math.round(mediaE)} dos ERRADO (${(viesTam * 100).toFixed(0)}% de diferença) — vira pista de comprimento.`);
   }
 
-  /* Cobertura x peso: disciplina de peso alto e banco raso é onde o aluno
-     mais perde ponto. */
-  const pesoPorDisc = new Map();
-  for (const p of PREDICOES) {
-    if (!pesoPorDisc.has(p.disciplina)) pesoPorDisc.set(p.disciplina, []);
-    pesoPorDisc.get(p.disciplina).push(p.score);
-  }
+  /* Cobertura x peso: disciplina que vale muitos itens na prova e tem banco
+     raso é onde o aluno mais perde ponto.
+
+     A referência é EDITAL_PCAL2026 — a MESMA tabela que o Plano de Estudo
+     usa para priorizar (js/engine.js, planoEstudoDirigido). Antes isto media
+     por PREDICOES, que só cobre disciplinas específicas e deixou de ser a
+     fonte de peso do app: o painel apontava déficit por um critério que a
+     aplicação não usava mais. */
+  const itensEdital = EDITAL_PCAL2026.itensPorDisciplina;
   const discNoBanco = new Map();
   for (const q of QUESTOES) discNoBanco.set(q.disciplina, (discNoBanco.get(q.disciplina) || 0) + 1);
 
-  const semPredicao = [...discNoBanco.keys()].filter(d => !pesoPorDisc.has(d));
-  if (semPredicao.length) {
-    avisos.push(`${semPredicao.length} disciplina(s) sem entrada em PREDICOES — o Plano de Estudo as prioriza pelo peso padrão: ${semPredicao.join(", ")}.`);
+  const foraDoEdital = [...discNoBanco.keys()].filter(d => !(d in itensEdital));
+  if (foraDoEdital.length) {
+    avisos.push(`${foraDoEdital.length} disciplina(s) do banco sem peso no edital — tratadas como treino complementar: ${foraDoEdital.join(", ")}.`);
+  }
+  const semQuestao = Object.keys(itensEdital).filter(d => !discNoBanco.has(d));
+  if (semQuestao.length) {
+    avisos.push(`${semQuestao.length} disciplina(s) do edital sem nenhuma questão no banco: ${semQuestao.join(", ")}.`);
   }
 
-  const comPeso = [...pesoPorDisc.entries()]
+  const comPeso = Object.entries(itensEdital)
     .filter(([d]) => discNoBanco.has(d))
-    .map(([d, scores]) => ({ d, peso: media(scores) }));
-  const somaPesos = comPeso.reduce((s, x) => s + x.peso, 0);
-  for (const { d, peso } of comPeso.sort((a, b) => b.peso - a.peso)) {
-    const ideal = peso / somaPesos;
+    .map(([d, itens]) => ({ d, itens }));
+  const somaItens = comPeso.reduce((s, x) => s + x.itens, 0);
+  for (const { d, itens } of comPeso.sort((a, b) => b.itens - a.itens)) {
+    const ideal = itens / somaItens;
     const real = discNoBanco.get(d) / total;
     const desvio = (real - ideal) * 100;
-    if (desvio < -5) {
-      avisos.push(`"${d}" tem peso ${peso.toFixed(0)} mas só ${pct(discNoBanco.get(d), total)} do banco (${discNoBanco.get(d)} itens) — ${Math.abs(desvio).toFixed(1)}pp abaixo do que o peso pediria.`);
+    if (desvio < -3) {
+      avisos.push(`"${d}" vale ~${itens} itens na prova (${pct(ideal, 1)} dela) mas é só ${pct(discNoBanco.get(d), total)} do banco (${discNoBanco.get(d)} questões) — ${Math.abs(desvio).toFixed(1)}pp abaixo do proporcional.`);
     }
   }
 
