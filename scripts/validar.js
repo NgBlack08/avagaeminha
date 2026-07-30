@@ -74,7 +74,8 @@ function normalizar(texto) {
 
 function validar({ quieto = false } = {}) {
   const manifesto = sincronizarManifesto({ gravar: false });
-  const { QUESTOES, DNA_BANCA, EDITAL_PCAL2026 } = carregarDados(manifesto);
+  const { QUESTOES, DNA_BANCA, EDITAL_PCAL2026, ESTRATEGIAS, DISCIPLINAS_JURIDICAS } =
+    carregarDados(manifesto);
 
   const erros = [];
   const avisos = [];
@@ -123,6 +124,21 @@ function validar({ quieto = false } = {}) {
     const chave = normalizar(q.enunciado);
     if (vistosEnunciado.has(chave)) erros.push(`${onde}: enunciado idêntico ao de ${vistosEnunciado.get(chave)}`);
     else vistosEnunciado.set(chave, q.id);
+  }
+
+  /* O bloco pós-resposta é hoje inteiramente montado a partir das
+     estratégias casadas por `pegadinha` (+ `escopo`). Uma questão sem
+     nenhuma correspondência renderiza um painel vazio — o candidato
+     responde e não recebe orientação alguma. Como o escopo é declarativo
+     e tende a ser apertado com o tempo, o risco é real e silencioso. */
+  for (const q of QUESTOES) {
+    const casadas = ESTRATEGIAS.filter(e =>
+      (e.contraDNA || []).includes(q.pegadinha) &&
+      !(e.escopo === "juridica" && !DISCIPLINAS_JURIDICAS.includes(q.disciplina))
+    );
+    if (!casadas.length) {
+      erros.push(`${q.id}: nenhuma estratégia casa com "${q.pegadinha}" em ${q.disciplina} — bloco pós-resposta ficaria vazio`);
+    }
   }
 
   /* ================= AVISOS ================= */

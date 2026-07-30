@@ -1163,7 +1163,7 @@ const ESTRATEGIAS = [
     porqueTrecho: "A definição descreve phishing com precisão técnica — engenharia social, mensagem fraudulenta, captura de credenciais. Nada nela está errado, exceto o rótulo colado na primeira palavra. Ransomware sequestra dados por criptografia e exige resgate.",
   },
   {
-    id: "sumula-existe", categoria: "conteudo", nome: "A súmula existe mesmo?",
+    id: "sumula-existe", categoria: "conteudo", escopo: "juridica", nome: "A súmula existe mesmo?",
     desc: "Número de súmula que você não reconhece é sinal de alerta. A banca inventa enunciados com aparência de autoridade.",
     aplicar: "Itens abertos por 'Conforme a Súmula nº X', 'Segundo entendimento sumulado', 'Nos termos da SV nº X'.",
     padrao: "A citação numerada transfere autoridade e desliga a checagem: o candidato passa a julgar se o conteúdo é razoável, não se a fonte existe. A banca explora isso de duas formas — número fictício com conteúdo plausível, ou número real com enunciado adulterado.",
@@ -1179,7 +1179,7 @@ const ESTRATEGIAS = [
     porqueTrecho: "A súmula não existe — e o conteúdo entrega a fraude sozinho: a insignificância nunca é de aplicação 'obrigatória e automática', pois depende dos vetores fixados pelo STF (mínima ofensividade, ausência de periculosidade social, reduzido grau de reprovabilidade e inexpressividade da lesão).",
   },
   {
-    id: "juris-mais-lei", categoria: "conteudo", nome: "Jurisprudência + lei: confira as duas pontas",
+    id: "juris-mais-lei", categoria: "conteudo", escopo: "juridica", nome: "Jurisprudência + lei: confira as duas pontas",
     desc: "Itens que misturam texto legal e entendimento dos tribunais só fecham para quem conhece os dois lados. Valide separadamente.",
     aplicar: "Busca domiciliar, insignificância, Maria da Penha, porte de arma.",
     padrao: "A banca combina um dispositivo legal com uma tese do STF/STJ, e altera apenas uma das pontas. Quem domina só a lei valida a parte legal e aceita a jurisprudencial; quem domina só a jurisprudência faz o inverso. O item é construído para separar quem estudou os dois.",
@@ -1212,7 +1212,7 @@ const ESTRATEGIAS = [
     porqueTrecho: "Basta um contraexemplo: a licença é ato vinculado de polícia administrativa — preenchidos os requisitos legais, a Administração deve concedê-la. Um único caso derruba o 'todos'.",
   },
   {
-    id: "atualizacao-legislativa", categoria: "conteudo", nome: "Radar de atualização legislativa",
+    id: "atualizacao-legislativa", categoria: "conteudo", escopo: "juridica", nome: "Radar de atualização legislativa",
     desc: "Lei ou decisão dos últimos 2 anos tem alta chance de cobrança literal — e, nesses casos, com viés de gabarito CERTO.",
     aplicar: "Revisão pré-prova: liste as novidades do edital e leia a letra da lei nova.",
     padrao: "Novidade legislativa é material de prova de baixo custo para a banca: o texto é curto, ainda não tem jurisprudência consolidada e discrimina bem quem manteve a revisão em dia. Na estreia de um dispositivo, a cobrança tende a ser mais literal do que interpretativa — o que aumenta a proporção de itens CERTO.",
@@ -1288,3 +1288,27 @@ const EDITAL_PCAL2026 = {
     "Crimes Cibernéticos e Segurança Digital": 7.8,
   },
 };
+
+/* Disciplinas cujo conteúdo é norma jurídica. Serve para escopar as
+   estratégias que só fazem sentido diante de lei — "Radar de atualização
+   legislativa", "A súmula existe mesmo?" e "Jurisprudência + lei".
+
+   Sem esse recorte, o casamento por `pegadinha` sozinho produzia absurdos:
+   189 questões de Português, Estatística, RLM e TI recebiam a orientação de
+   "ler a letra da lei nova", porque compartilham com o Direito o padrão
+   `literalidade` — que ali significa conferir a fórmula, não o artigo.
+
+   Crimes Cibernéticos e Contabilidade entram na lista por terem base legal
+   real no edital (Marco Civil, LGPD, art. 154-A; Lei 4.320). */
+const DISCIPLINAS_JURIDICAS = [
+  "Direito Penal",
+  "Processo Penal",
+  "Direito Constitucional",
+  "Direito Administrativo",
+  "Legislação Institucional (AL)",
+  "Legislação Especial",
+  "Direitos Humanos",
+  "Ética no Serviço Público",
+  "Crimes Cibernéticos e Segurança Digital",
+  "Contabilidade e Análise Financeira",
+];

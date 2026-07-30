@@ -587,7 +587,16 @@ function filtrarQuestoes(f) {
    que torna a técnica mais reconhecível. */
 function estrategiasDaQuestao(q) {
   if (!q || !q.pegadinha) return [];
-  const casadas = ESTRATEGIAS.filter(e => (e.contraDNA || []).includes(q.pegadinha));
+  const casadas = ESTRATEGIAS.filter(e => {
+    if (!(e.contraDNA || []).includes(q.pegadinha)) return false;
+    /* Casar só por padrão produzia recomendação sem sentido: `literalidade`
+       em Direito quer dizer "confira o artigo", mas em Estatística quer
+       dizer "confira a fórmula" — e 189 questões de Português, RLM, TI e
+       Estatística acabavam recebendo "leia a letra da lei nova". Por isso
+       a estratégia pode declarar `escopo: "juridica"`. */
+    if (e.escopo === "juridica" && !DISCIPLINAS_JURIDICAS.includes(q.disciplina)) return false;
+    return true;
+  });
   return casadas.sort((a, b) => {
     const disc = e => {
       const ex = QUESTOES_POR_ID.get(e.exemplo);

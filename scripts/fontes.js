@@ -31,6 +31,7 @@ const GLOBAIS_PUBLICAS = [
   "REGRA_CORRECAO",
   "FORA_EDITAL_PCAL2026",
   "EDITAL_PCAL2026",
+  "DISCIPLINAS_JURIDICAS",
 ];
 
 /* A ordem de carga só tem uma restrição real: data.js precisa vir primeiro,
