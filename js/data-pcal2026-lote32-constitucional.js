@@ -22,12 +22,7 @@ const QUESTOES_PCAL_LOTE32 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "tráfico ... ainda que posterior à naturalização",
     cognitivo: {
       motivo: "Cobrar a exceção específica de extradição por tráfico de drogas, sem restrição temporal.",
-      mede: "Direito Constitucional — nacionalidade (extradição).",
-      pegadinhaDesc: "A banca pode estender indevidamente a restrição temporal (antes da naturalização) também à hipótese de tráfico de drogas.",
-      ondeErra: "Aplica ao tráfico de drogas a mesma restrição temporal exigida para crime comum.",
       palavraCritica: "ainda que posterior à naturalização",
-      tecnica: "Art. 5º, LI, CF: o naturalizado só pode ser extraditado por crime comum se praticado ANTES da naturalização; já por tráfico ilícito de entorpecentes, a extradição cabe independentemente do momento da prática (antes ou depois da naturalização).",
-      regraMental: "Naturalizado: crime comum = só antes da naturalização. Tráfico de drogas = a qualquer tempo."
     },
     comentario: {
       resolucao: "CERTO. Diferentemente do crime comum (que exige prática anterior à naturalização), a extradição do brasileiro naturalizado por tráfico ilícito de entorpecentes e drogas afins cabe independentemente do momento da prática do crime, ainda que posterior à naturalização, conforme o art. 5º, LI, da CF.",
@@ -46,12 +41,7 @@ const QUESTOES_PCAL_LOTE32 = [
     gabarito: "E", pegadinha: "exigencia-inexistente", palavraChave: "crime comum ... após a naturalização",
     cognitivo: {
       motivo: "Cobrar a restrição temporal exigida para extradição de naturalizado por crime comum.",
-      mede: "Direito Constitucional — nacionalidade (extradição).",
-      pegadinhaDesc: "A banca cria uma exceção (tratado vigente) que não supre a exigência constitucional de anterioridade.",
-      ondeErra: "Acha que a existência de tratado de extradição autoriza a extradição por crime comum praticado após a naturalização.",
       palavraCritica: "após a naturalização",
-      tecnica: "Pelo art. 5º, LI, CF, a extradição do naturalizado por crime comum só é possível se o crime foi praticado ANTES da naturalização — não há exceção constitucional para crimes comuns posteriores, independentemente da existência de tratado.",
-      regraMental: "Crime comum + naturalizado = extradição só se o crime for anterior à naturalização, sem exceções."
     },
     comentario: {
       resolucao: "ERRADO. A Constituição não admite a extradição de brasileiro naturalizado por crime comum praticado APÓS a naturalização, em nenhuma hipótese — a existência de tratado de extradição não supre essa vedação constitucional, que é absoluta para crimes comuns.",
@@ -70,12 +60,7 @@ const QUESTOES_PCAL_LOTE32 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "incompatível com a Constituição ... direito ao esquecimento",
     cognitivo: {
       motivo: "Cobrar a tese fixada pelo STF sobre o chamado 'direito ao esquecimento'.",
-      mede: "Direito Constitucional — direitos fundamentais (liberdade de expressão e informação).",
-      pegadinhaDesc: "A banca pode inverter a tese, afirmando que o STF reconheceu o direito ao esquecimento.",
-      ondeErra: "Presume que o STF validou o direito ao esquecimento como regra geral, quando na verdade o rejeitou.",
       palavraCritica: "incompatível com a Constituição",
-      tecnica: "No RE 1.010.606 (Tema 786), o STF fixou a tese de que o direito ao esquecimento, entendido como o poder de impedir a divulgação de fatos verídicos e licitamente obtidos, é incompatível com a CF — eventuais excessos devem ser resolvidos por outras vias (responsabilidade civil, proteção à honra/imagem).",
-      regraMental: "STF: NÃO existe direito ao esquecimento genérico contra fato verídico e licitamente obtido."
     },
     comentario: {
       resolucao: "CERTO. O STF, em repercussão geral (RE 1.010.606, Tema 786, 2021), fixou a tese de que é incompatível com a Constituição a ideia de um direito ao esquecimento capaz de obstar, pela mera passagem do tempo, a divulgação de fatos ou dados verídicos e licitamente obtidos e publicados — eventuais abusos devem ser tratados pelos instrumentos já existentes de proteção à honra, imagem e privacidade.",
@@ -94,12 +79,7 @@ const QUESTOES_PCAL_LOTE32 = [
     gabarito: "E", pegadinha: "generalizacao", palavraChave: "a qualquer hora do dia ou da noite",
     cognitivo: {
       motivo: "Cobrar a restrição temporal (apenas durante o dia) para o ingresso por determinação judicial.",
-      mede: "Direito Constitucional — direitos fundamentais (inviolabilidade de domicílio).",
-      pegadinhaDesc: "A banca generaliza a autorização judicial para qualquer horário, inclusive noturno.",
-      ondeErra: "Não percebe que a determinação judicial só autoriza o ingresso DURANTE O DIA.",
       palavraCritica: "a qualquer hora do dia ou da noite",
-      tecnica: "Art. 5º, XI, CF: ninguém pode entrar na casa alheia sem consentimento, salvo em flagrante delito, desastre, para prestar socorro, ou, DURANTE O DIA, por determinação judicial. À noite, só cabem as três primeiras hipóteses — nunca por determinação judicial isoladamente.",
-      regraMental: "Determinação judicial para entrar em casa alheia: só de DIA. À noite, só flagrante/desastre/socorro."
     },
     comentario: {
       resolucao: "ERRADO. A determinação judicial autoriza o ingresso em domicílio alheio apenas DURANTE O DIA. À noite, o ingresso sem consentimento do morador só é permitido em caso de flagrante delito, desastre ou para prestar socorro — nunca por mera determinação judicial. O STF (RE 603.616, Tema 280) firmou que a entrada forçada sem mandado, mesmo à noite, só é lícita quando amparada em fundadas razões, devidamente justificadas, de flagrante delito no interior da residência.",
@@ -118,12 +98,7 @@ const QUESTOES_PCAL_LOTE32 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "flagrante ... desastre ... socorro ... durante o dia, por determinação judicial",
     cognitivo: {
       motivo: "Cobrar a redação literal e completa do art. 5º, XI, da CF.",
-      mede: "Direito Constitucional — direitos fundamentais (inviolabilidade de domicílio).",
-      pegadinhaDesc: "A banca pode omitir uma das quatro hipóteses ou alterar a restrição temporal.",
-      ondeErra: "Não memoriza as quatro hipóteses exatas nem a restrição 'durante o dia' exclusiva da determinação judicial.",
       palavraCritica: "durante o dia, por determinação judicial",
-      tecnica: "Reprodução literal do art. 5º, XI, CF: quatro hipóteses de exceção à inviolabilidade — flagrante delito, desastre, prestação de socorro (a qualquer hora) e determinação judicial (só de dia).",
-      regraMental: "Quatro hipóteses: flagrante, desastre, socorro (sempre) + determinação judicial (só de dia)."
     },
     comentario: {
       resolucao: "CERTO. O item reproduz corretamente o art. 5º, XI, da CF: a inviolabilidade domiciliar cede em quatro hipóteses — flagrante delito, desastre, prestação de socorro (a qualquer hora) e determinação judicial (restrita ao período diurno).",
@@ -142,12 +117,7 @@ const QUESTOES_PCAL_LOTE32 = [
     gabarito: "E", pegadinha: "restricao-indevida", palavraChave: "exclusivamente ... não se aplicando",
     cognitivo: {
       motivo: "Cobrar a amplitude constitucional do cabimento do mandado de injunção.",
-      mede: "Direito Constitucional — remédios constitucionais.",
-      pegadinhaDesc: "A banca restringe indevidamente o cabimento do writ, excluindo hipóteses previstas na própria CF.",
-      ondeErra: "Não reconhece que a CF também prevê o mandado de injunção para nacionalidade, soberania e cidadania.",
       palavraCritica: "exclusivamente ... não se aplicando",
-      tecnica: "Art. 5º, LXXI, CF: o mandado de injunção cabe quando a falta de norma regulamentadora tornar inviável o exercício de direitos e liberdades constitucionais E TAMBÉM das prerrogativas inerentes à nacionalidade, à soberania e à cidadania.",
-      regraMental: "Mandado de injunção: direitos/liberdades constitucionais + nacionalidade + soberania + cidadania."
     },
     comentario: {
       resolucao: "ERRADO. O art. 5º, LXXI, da CF expressamente estende o cabimento do mandado de injunção também às prerrogativas inerentes à nacionalidade, à soberania e à cidadania, e não apenas aos direitos e liberdades constitucionais em geral — a assertiva restringe indevidamente o alcance do instituto.",
@@ -166,12 +136,7 @@ const QUESTOES_PCAL_LOTE32 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "conhecimento ... retificação ... processo sigiloso, judicial ou administrativo",
     cognitivo: {
       motivo: "Cobrar a redação literal e completa do art. 5º, LXXII, da CF.",
-      mede: "Direito Constitucional — remédios constitucionais.",
-      pegadinhaDesc: "A banca pode omitir a ressalva do processo sigiloso ou restringir os bancos de dados apenas aos governamentais.",
-      ondeErra: "Esquece a hipótese de retificação ou a ressalva sobre o processo sigiloso.",
       palavraCritica: "quando não se prefira fazê-lo por processo sigiloso",
-      tecnica: "Art. 5º, LXXII, CF: habeas data cabe (a) para conhecimento de informações sobre a própria pessoa em bancos de dados governamentais ou de caráter público, e (b) para retificação de dados, quando não se prefira fazê-lo por processo sigiloso, judicial ou administrativo.",
-      regraMental: "Habeas data: conhecer + retificar dados próprios, com ressalva do processo sigiloso."
     },
     comentario: {
       resolucao: "CERTO. O item reproduz corretamente as duas hipóteses de cabimento do habeas data previstas no art. 5º, LXXII, da CF: conhecimento de informações pessoais em bancos de dados governamentais ou de caráter público, e retificação desses dados, ressalvada a preferência pelo processo sigiloso.",
@@ -190,12 +155,7 @@ const QUESTOES_PCAL_LOTE32 = [
     gabarito: "E", pegadinha: "generalizacao", palavraChave: "partido político ... um ano ... requisito idêntico",
     cognitivo: {
       motivo: "Cobrar os diferentes requisitos de legitimidade ativa no mandado de segurança coletivo.",
-      mede: "Direito Constitucional — remédios constitucionais.",
-      pegadinhaDesc: "A banca generaliza um requisito (um ano de funcionamento) que só vale para parte dos legitimados.",
-      ondeErra: "Aplica a todos os legitimados uma exigência que a CF restringe a apenas alguns deles.",
       palavraCritica: "requisito idêntico",
-      tecnica: "Art. 5º, LXX, CF: o partido político com representação no Congresso Nacional não precisa comprovar tempo mínimo de funcionamento; já organizações sindicais, entidades de classe e associações precisam estar legalmente constituídas e em funcionamento há pelo menos um ano.",
-      regraMental: "Partido político: só representação no Congresso. Sindicato/entidade/associação: + 1 ano de funcionamento."
     },
     comentario: {
       resolucao: "ERRADO. O requisito de funcionamento há pelo menos um ano aplica-se apenas a organizações sindicais, entidades de classe e associações — o partido político, para impetrar mandado de segurança coletivo, precisa apenas ter representação no Congresso Nacional, sem exigência de tempo mínimo de funcionamento.",
@@ -214,12 +174,7 @@ const QUESTOES_PCAL_LOTE32 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "independe de autorização expressa",
     cognitivo: {
       motivo: "Cobrar o entendimento sumulado do STF sobre a dispensa de autorização expressa dos associados.",
-      mede: "Direito Constitucional — remédios constitucionais (jurisprudência do STF).",
-      pegadinhaDesc: "A banca pode negar essa dispensa, exigindo autorização expressa dos associados.",
-      ondeErra: "Confunde o regime do mandado de segurança coletivo (dispensa autorização) com o de ações ordinárias de representação processual.",
       palavraCritica: "independe de autorização expressa",
-      tecnica: "Súmula 629, STF: 'A impetração de mandado de segurança coletivo por entidade de classe em favor dos associados independe da autorização destes.' A legitimidade decorre diretamente da representação institucional da entidade.",
-      regraMental: "MS coletivo por entidade de classe: dispensa autorização expressa dos associados (Súmula 629, STF)."
     },
     comentario: {
       resolucao: "CERTO. Conforme a Súmula 629 do STF, a entidade de classe pode impetrar mandado de segurança coletivo em defesa de seus associados independentemente de autorização expressa destes, já que a legitimidade decorre da própria natureza representativa da entidade.",
@@ -238,12 +193,7 @@ const QUESTOES_PCAL_LOTE32 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "Ministro de Estado da Defesa",
     cognitivo: {
       motivo: "Cobrar o rol taxativo de cargos privativos de brasileiro nato.",
-      mede: "Direito Constitucional — nacionalidade.",
-      pegadinhaDesc: "A banca pode omitir um dos sete cargos do rol ou incluir cargo que não conste dele.",
-      ondeErra: "Esquece o Ministro de Estado da Defesa (incluído pela EC nº 23/1999) ou algum dos demais cargos.",
       palavraCritica: "Ministro de Estado da Defesa",
-      tecnica: "Art. 12, §3º, CF: rol taxativo de sete cargos privativos de brasileiro nato — PR/VP, Presidente da Câmara, Presidente do Senado, Ministro do STF, carreira diplomática, oficial das Forças Armadas e Ministro de Estado da Defesa.",
-      regraMental: "Decore os 7 cargos privativos de nato — inclui só o Ministério da Defesa, entre os ministérios."
     },
     comentario: {
       resolucao: "CERTO. O item reproduz corretamente o rol taxativo do art. 12, §3º, da CF, incluindo o Ministro de Estado da Defesa, cargo cuja exclusividade para brasileiro nato foi introduzida pela Emenda Constitucional nº 23/1999.",
@@ -262,12 +212,7 @@ const QUESTOES_PCAL_LOTE32 = [
     gabarito: "E", pegadinha: "generalizacao", palavraChave: "todos os cargos de Ministro de Estado",
     cognitivo: {
       motivo: "Cobrar que apenas o Ministério da Defesa, entre os ministérios, é privativo de nato.",
-      mede: "Direito Constitucional — nacionalidade.",
-      pegadinhaDesc: "A banca generaliza indevidamente a exclusividade de um único ministério para todos os demais.",
-      ondeErra: "Presume que a restrição de nacionalidade se estende a todos os cargos ministeriais.",
       palavraCritica: "todos os cargos de Ministro de Estado",
-      tecnica: "O art. 12, §3º, VII, CF restringe a exclusividade de brasileiro nato apenas ao Ministro de Estado da DEFESA — os demais ministérios podem ser ocupados por brasileiro naturalizado, sem restrição de nacionalidade.",
-      regraMental: "Entre os ministérios, só o da Defesa é privativo de brasileiro nato — os demais, não."
     },
     comentario: {
       resolucao: "ERRADO. Apenas o cargo de Ministro de Estado da Defesa é privativo de brasileiro nato, entre todos os ministérios (art. 12, §3º, VII, CF, com redação dada pela EC nº 23/1999) — os demais cargos ministeriais podem ser exercidos por brasileiro naturalizado.",
@@ -286,12 +231,7 @@ const QUESTOES_PCAL_LOTE32 = [
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "autorizar previamente ... apenas aprovar ... estado de sítio",
     cognitivo: {
       motivo: "Cobrar a distinção entre 'aprovar' (controle posterior) e 'autorizar' (controle prévio) no art. 49, IV, da CF.",
-      mede: "Direito Constitucional — organização dos poderes (competências do Congresso Nacional).",
-      pegadinhaDesc: "A banca inverte os verbos constitucionais entre as duas medidas excepcionais.",
-      ondeErra: "Troca 'aprovar' por 'autorizar' (e vice-versa) entre estado de defesa/intervenção federal e estado de sítio.",
       palavraCritica: "autorizar previamente ... apenas aprovar",
-      tecnica: "Art. 49, IV, CF: compete ao Congresso Nacional APROVAR o estado de defesa e a intervenção federal (que já são decretados pelo Presidente, cabendo controle posterior) e AUTORIZAR o estado de sítio (que depende de autorização prévia do Congresso antes da decretação). O item inverteu os dois verbos.",
-      regraMental: "Estado de defesa/intervenção: decreta e depois APROVA. Estado de sítio: AUTORIZA antes de decretar."
     },
     comentario: {
       resolucao: "ERRADO. Os verbos constitucionais foram invertidos: o Congresso Nacional APROVA (controle posterior) o estado de defesa e a intervenção federal, já decretados pelo Presidente, e AUTORIZA (controle prévio) o estado de sítio, que depende de autorização do Congresso antes de sua decretação — o inverso do que afirma o item.",

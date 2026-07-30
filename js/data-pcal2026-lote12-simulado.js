@@ -32,12 +32,7 @@ const QUESTOES_PCAL_LOTE12 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "dispensa / competição viável",
     cognitivo: {
       motivo: "Aplicar a distinção dispensa × inexigibilidade a um caso concreto.",
-      mede: "Contratação direta (item 5.2 do edital).",
-      pegadinhaDesc: "A banca costuma rotular a emergência como inexigibilidade.",
-      ondeErra: "Confunde o fundamento de cada instituto.",
       palavraCritica: "competição viável = dispensa",
-      tecnica: "Emergência/calamidade é hipótese legal de DISPENSA (rol taxativo). Inexigibilidade pressupõe competição inviável.",
-      regraMental: "Dá para competir, mas a lei libera? Dispensa. Não dá para competir? Inexigibilidade."
     },
     comentario: {
       resolucao: "CERTO. A emergência é hipótese de DISPENSA de licitação (Lei 14.133/2021, art. 75), em que a competição seria possível, mas a lei autoriza a contratação direta. A inexigibilidade (art. 74) exige a INVIABILIDADE de competição, o que não é o caso do fornecimento de equipamentos disponíveis no mercado.",
@@ -57,12 +52,7 @@ const QUESTOES_PCAL_LOTE12 = [
     gabarito: "E", pegadinha: "exigencia-inexistente", palavraChave: "dispensável a razão da escolha",
     cognitivo: {
       motivo: "Cobrar os requisitos formais da contratação direta.",
-      mede: "Contratação direta — instrução do processo.",
-      pegadinhaDesc: "Suprime exigências formais que a lei impõe mesmo na contratação direta.",
-      ondeErra: "Acha que dispensa de licitação significa dispensa de formalidades.",
       palavraCritica: "dispensável (falso)",
-      tecnica: "Contratação direta ≠ contratação informal: exige processo instruído com razão da escolha, justificativa de preço e demais elementos legais.",
-      regraMental: "Dispensa a licitação, não o processo. A formalização continua obrigatória."
     },
     comentario: {
       resolucao: "ERRADO. A Lei 14.133/2021 (art. 72) exige que o processo de contratação direta seja instruído, entre outros elementos, com a razão da escolha do contratado e a justificativa de preço. A dispensa afasta o certame, mas não as formalidades do processo administrativo — cuja ausência pode gerar responsabilização.",
@@ -82,12 +72,7 @@ const QUESTOES_PCAL_LOTE12 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "demonstração de dolo",
     cognitivo: {
       motivo: "Aplicar o novo elemento subjetivo da LIA a um caso concreto.",
-      mede: "Improbidade administrativa (reforma da Lei 14.230/2021).",
-      pegadinhaDesc: "A banca costuma admitir a modalidade culposa (regime revogado).",
-      ondeErra: "Responde com a redação original da LIA, que previa improbidade culposa.",
       palavraCritica: "dolo (exigido após 2021)",
-      tecnica: "Pós-Lei 14.230/2021: não há improbidade culposa. O caso descreve conduta deliberada — dolo presente.",
-      regraMental: "Improbidade hoje = só dolo. 'Atuação deliberada' no enunciado sinaliza o dolo."
     },
     comentario: {
       resolucao: "CERTO. A Lei 14.230/2021 passou a exigir DOLO (vontade livre e consciente de alcançar o resultado ilícito) para a configuração da improbidade, abolindo a modalidade culposa. A atuação deliberada para favorecer parente evidencia o elemento subjetivo exigido.",
@@ -107,12 +92,7 @@ const QUESTOES_PCAL_LOTE12 = [
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "subjetiva",
     cognitivo: {
       motivo: "Cobrar a responsabilidade objetiva do Estado por atos comissivos de seus agentes.",
-      mede: "Responsabilidade civil do Estado (item 7 do edital).",
-      pegadinhaDesc: "Troca a responsabilidade objetiva (regra) pela subjetiva.",
-      ondeErra: "Confunde a responsabilidade perante a vítima (objetiva) com a do agente em regresso (subjetiva).",
       palavraCritica: "subjetiva (deveria ser objetiva)",
-      tecnica: "Art. 37, § 6º: perante o terceiro, a responsabilidade é OBJETIVA (risco administrativo). A culpa/dolo só importa na ação REGRESSIVA contra o agente.",
-      regraMental: "Vítima × Estado: objetiva. Estado × agente (regresso): subjetiva."
     },
     comentario: {
       resolucao: "ERRADO. CF, art. 37, § 6º: as pessoas jurídicas de direito público respondem OBJETIVAMENTE pelos danos que seus agentes causarem a terceiros — a vítima não precisa provar culpa, bastando conduta, dano e nexo. A comprovação de dolo ou culpa é exigida apenas na ação regressiva contra o agente.",
@@ -132,12 +112,7 @@ const QUESTOES_PCAL_LOTE12 = [
     gabarito: "E", pegadinha: "termo-absoluto", palavraChave: "não se sujeita a controle",
     cognitivo: {
       motivo: "Cobrar os limites do controle judicial sobre atos discricionários.",
-      mede: "Atos administrativos + controle da Administração.",
-      pegadinhaDesc: "Torna o ato discricionário imune ao controle de legalidade e de pressupostos fáticos.",
-      ondeErra: "Confunde a impossibilidade de rever o mérito com imunidade total.",
       palavraCritica: "não se sujeita a controle (falso)",
-      tecnica: "O Judiciário controla legalidade, competência, forma, finalidade e a EXISTÊNCIA dos motivos alegados (teoria dos motivos determinantes).",
-      regraMental: "Mérito não se revê; legalidade e veracidade dos motivos, sim."
     },
     comentario: {
       resolucao: "ERRADO. Ainda que discricionário o juízo sobre a emergência, o ato submete-se ao controle judicial de LEGALIDADE, inclusive quanto à existência e veracidade dos motivos invocados (teoria dos motivos determinantes). Se a emergência alegada não existir, o ato é inválido. O que o Judiciário não faz é substituir o mérito administrativo.",
@@ -159,12 +134,7 @@ const QUESTOES_PCAL_LOTE12 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "phishing / engenharia social",
     cognitivo: {
       motivo: "Identificar phishing em um cenário concreto de incidente.",
-      mede: "Golpes virtuais (item do edital de Segurança Digital).",
-      pegadinhaDesc: "A banca costuma rotular o caso como ransomware ou vírus.",
-      ondeErra: "Confunde a etapa de captura de credenciais com a de cifragem.",
       palavraCritica: "página falsa para obter credenciais",
-      tecnica: "Phishing: isca por mensagem que simula fonte legítima. Quando direcionado a alvo específico, chama-se spear phishing.",
-      regraMental: "Phishing captura credenciais pela enganação; o malware vem depois."
     },
     comentario: {
       resolucao: "CERTO. A conduta descrita — mensagem que simula comunicação legítima e induz o fornecimento de credenciais em página clonada — é o phishing, técnica de engenharia social. Por simular a comunicação interna e visar alvo determinado, aproxima-se do spear phishing.",
@@ -184,12 +154,7 @@ const QUESTOES_PCAL_LOTE12 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "cifragem + resgate",
     cognitivo: {
       motivo: "Identificar ransomware em cenário concreto.",
-      mede: "Noções de vírus, worms e pragas virtuais (item 5.2 do edital).",
-      pegadinhaDesc: "A banca costuma nomear a conduta como spyware ou worm.",
-      ondeErra: "Não associa 'cifrar + exigir resgate' ao ransomware.",
       palavraCritica: "resgate (ransom)",
-      tecnica: "Ransomware sequestra dados por criptografia e cobra resgate — frequentemente em criptoativos, pela dificuldade de rastreio.",
-      regraMental: "Cifrou e pediu resgate = ransomware. É o 'sequestro' de dados."
     },
     comentario: {
       resolucao: "CERTO. O ransomware é o código malicioso que cifra (ou bloqueia) os dados da vítima e exige pagamento de resgate para a liberação. O uso de criptoativos é característico, por dificultar o rastreamento financeiro.",
@@ -209,12 +174,7 @@ const QUESTOES_PCAL_LOTE12 = [
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "irrelevante",
     cognitivo: {
       motivo: "Cobrar o papel do becape como principal medida de recuperação contra ransomware.",
-      mede: "Procedimentos de backup (item 5.4 do edital de TI).",
-      pegadinhaDesc: "Nega a utilidade do becape justamente no cenário em que ele é decisivo.",
-      ondeErra: "Confunde prevenção da infecção com recuperação dos dados.",
       palavraCritica: "irrelevante (falso)",
-      tecnica: "O becape não impede o ataque, mas permite RESTAURAR os dados sem pagar resgate — é a principal medida de continuidade.",
-      regraMental: "Contra ransomware, becape íntegro e isolado é a melhor defesa: restaura sem pagar."
     },
     comentario: {
       resolucao: "ERRADO. O becape é justamente a principal medida de mitigação contra ransomware: permite restaurar os dados sem ceder à extorsão. Recomenda-se que as cópias sejam íntegras, testadas e mantidas isoladas da rede (offline), para que não sejam também cifradas.",
@@ -234,12 +194,7 @@ const QUESTOES_PCAL_LOTE12 = [
     gabarito: "E", pegadinha: "exigencia-inexistente", palavraChave: "deixam de se submeter",
     cognitivo: {
       motivo: "Cobrar que o incidente não afasta a incidência da LGPD, mas gera deveres adicionais.",
-      mede: "LGPD (item 7 do edital de TI).",
-      pegadinhaDesc: "Cria uma causa de exclusão da LGPD inexistente.",
-      ondeErra: "Supõe que ser vítima de ataque isenta o controlador de obrigações.",
       palavraCritica: "deixam de se submeter (falso)",
-      tecnica: "O incidente ATIVA deveres: comunicar à ANPD e aos titulares, adotar medidas de segurança e mitigar efeitos.",
-      regraMental: "Sofrer ataque não isenta: a LGPD continua e ainda impõe comunicar o incidente."
     },
     comentario: {
       resolucao: "ERRADO. O incidente de segurança não afasta a aplicação da LGPD — ao contrário, faz incidir deveres específicos: o controlador deve comunicar à ANPD e aos titulares a ocorrência que possa acarretar risco ou dano relevante (art. 48) e responde por não adotar medidas de segurança adequadas (arts. 46 a 50).",
@@ -259,12 +214,7 @@ const QUESTOES_PCAL_LOTE12 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "cadeia de custódia / reconhecimento",
     cognitivo: {
       motivo: "Aplicar a cadeia de custódia ao vestígio digital.",
-      mede: "Busca e apreensão de itens digitais + provas (arts. 158-A e ss. do CPP).",
-      pegadinhaDesc: "A banca costuma restringir a cadeia de custódia a vestígios físicos tradicionais.",
-      ondeErra: "Supõe que o vestígio digital estaria fora do regime da cadeia de custódia.",
       palavraCritica: "inicia com o reconhecimento",
-      tecnica: "A cadeia de custódia aplica-se a todo vestígio, inclusive digital. Início: reconhecimento (art. 158-B, I).",
-      regraMental: "Vestígio digital também tem cadeia de custódia: reconhecer, isolar, fixar, coletar, acondicionar…"
     },
     comentario: {
       resolucao: "CERTO. Os arts. 158-A a 158-F do CPP (Pacote Anticrime) aplicam-se a todo vestígio, inclusive o digital. A cadeia inicia-se com o RECONHECIMENTO do vestígio (art. 158-B, I), seguindo-se isolamento, fixação, coleta, acondicionamento, transporte, recebimento, processamento, armazenamento e descarte. A quebra da cadeia compromete a confiabilidade da prova.",
@@ -286,12 +236,7 @@ const QUESTOES_PCAL_LOTE12 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "obter confissão",
     cognitivo: {
       motivo: "Aplicar o art. 1º, I, 'a', da Lei 9.455/1997 a um caso concreto.",
-      mede: "Lei de Tortura (Dia 29 do plano).",
-      pegadinhaDesc: "A banca costuma desclassificar a conduta para abuso de autoridade ou lesão corporal.",
-      ondeErra: "Não identifica a finalidade probatória como elementar da tortura.",
       palavraCritica: "sofrimento físico + fim de obter confissão",
-      tecnica: "Tortura-prova: constranger com violência/grave ameaça, causando sofrimento, para obter informação, declaração ou confissão.",
-      regraMental: "Sofrimento imposto para arrancar confissão = tortura (não mero abuso de autoridade)."
     },
     comentario: {
       resolucao: "CERTO. Lei 9.455/1997, art. 1º, I, “a”: constranger alguém com emprego de violência ou grave ameaça, causando-lhe sofrimento físico ou mental, com o fim de obter informação, declaração ou confissão — é a chamada tortura-prova. A finalidade probatória é elementar do tipo.",
@@ -311,12 +256,7 @@ const QUESTOES_PCAL_LOTE12 = [
     gabarito: "E", pegadinha: "exigencia-inexistente", palavraChave: "admite-se fiança",
     cognitivo: {
       motivo: "Cobrar a inafiançabilidade da tortura.",
-      mede: "Lei de Tortura + vedações constitucionais.",
-      pegadinhaDesc: "Cria a possibilidade de fiança condicionada à fundamentação.",
-      ondeErra: "Confunde a exigência de fundamentação com autorização legal.",
       palavraCritica: "admite-se fiança (falso)",
-      tecnica: "CF, art. 5º, XLIII: tortura é INAFIANÇÁVEL e insuscetível de graça ou anistia. A fundamentação não supre a vedação constitucional.",
-      regraMental: "Tortura: inafiançável. Nenhuma decisão fundamentada pode conceder o que a CF veda."
     },
     comentario: {
       resolucao: "ERRADO. CF, art. 5º, XLIII: a tortura é crime INAFIANÇÁVEL e insuscetível de graça e anistia. A vedação é constitucional e não pode ser afastada por decisão fundamentada. Isso não impede, contudo, a concessão de liberdade provisória sem fiança, se ausentes os requisitos da prisão preventiva.",
@@ -336,12 +276,7 @@ const QUESTOES_PCAL_LOTE12 = [
     gabarito: "C", pegadinha: "juris-mais-lei", palavraChave: "uso excepcional de algemas",
     cognitivo: {
       motivo: "Aplicar a Súmula Vinculante 11 a um caso concreto.",
-      mede: "Abuso de autoridade e garantias na atuação policial.",
-      pegadinhaDesc: "A banca costuma tratar o uso de algemas como discricionariedade ampla do agente.",
-      ondeErra: "Supõe que algemar é ato livre da autoridade.",
       palavraCritica: "excepcional / justificada por escrito",
-      tecnica: "SV 11: uso lícito só em resistência, receio de fuga ou perigo, com justificativa ESCRITA da excepcionalidade, sob pena de responsabilização.",
-      regraMental: "Algema é exceção e exige justificativa escrita — não é rotina."
     },
     comentario: {
       resolucao: "CERTO. Súmula Vinculante 11/STF: só é lícito o uso de algemas em caso de resistência, fundado receio de fuga ou perigo à integridade física própria ou alheia, justificada a excepcionalidade por escrito, sob pena de responsabilidade disciplinar, civil e penal do agente, além de nulidade da prisão e do ato processual.",
@@ -361,12 +296,7 @@ const QUESTOES_PCAL_LOTE12 = [
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "porte / interior da residência",
     cognitivo: {
       motivo: "Distinguir posse de porte no caso concreto.",
-      mede: "Estatuto do Desarmamento (Dias 18-19 do plano).",
-      pegadinhaDesc: "Rotula como porte a conduta praticada dentro da residência, que é posse.",
-      ondeErra: "Ignora que o local (interior do imóvel) define a figura da posse.",
       palavraCritica: "no interior da residência = posse (art. 12)",
-      tecnica: "Posse: arma na residência ou local de trabalho (art. 12). Porte: trazer consigo fora desses locais (art. 14).",
-      regraMental: "Arma dentro de casa = posse. O registro vencido é irregularidade que se discute na posse, não no porte."
     },
     comentario: {
       resolucao: "ERRADO. Manter arma no interior da residência caracteriza POSSE irregular (Lei 10.826/2003, art. 12), e não porte (art. 14), que pressupõe trazer a arma consigo fora da residência ou local de trabalho. Registre-se que há precedentes que reconhecem a atipicidade material na mera desatualização do registro de arma de uso permitido em domicílio.",
@@ -386,12 +316,7 @@ const QUESTOES_PCAL_LOTE12 = [
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "perda automática",
     cognitivo: {
       motivo: "Contrapor o efeito automático da Lei de Tortura à regra geral do art. 92 do CP.",
-      mede: "Lei de Tortura — efeitos da condenação.",
-      pegadinhaDesc: "Aplica à tortura a regra geral do CP, que exige motivação específica.",
-      ondeErra: "Desconhece que a lei especial prevê efeito automático.",
       palavraCritica: "não automática (falso na tortura)",
-      tecnica: "Lei 9.455/1997, art. 1º, § 5º: a condenação ACARRETA a perda do cargo e a interdição pelo dobro do prazo da pena — efeito automático.",
-      regraMental: "Tortura: perde o cargo automaticamente. No CP comum (art. 92), precisa fundamentar."
     },
     comentario: {
       resolucao: "ERRADO. Na Lei de Tortura, a perda do cargo, função ou emprego público é efeito AUTOMÁTICO da condenação, acompanhada da interdição para seu exercício pelo dobro do prazo da pena aplicada (art. 1º, § 5º). A exigência de declaração motivada é a regra geral do art. 92 do CP, que não se aplica aqui.",
@@ -413,12 +338,7 @@ const QUESTOES_PCAL_LOTE12 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "modus tollens",
     cognitivo: {
       motivo: "Aplicar o modus tollens a proposições de um caso concreto.",
-      mede: "Lógica de argumentação (item 10 do edital).",
-      pegadinhaDesc: "Exige encadear a condicional com a negação do consequente.",
-      ondeErra: "Tenta concluir pela negação do antecedente (falácia) ou não vê a inferência.",
       palavraCritica: "nega o consequente → nega o antecedente",
-      tecnica: "I: A → C. II: ~C. Logo, ~A (modus tollens) — inferência válida.",
-      regraMental: "Se A então C; não C; logo, não A. Conclusão necessária."
     },
     comentario: {
       resolucao: "CERTO. Seja A = “o documento foi assinado” e C = “o processo foi concluído”. O Servidor I afirma A → C; o Servidor II afirma ~C. Pelo modus tollens, conclui-se ~A: o documento não foi assinado. A inferência é válida.",
@@ -438,12 +358,7 @@ const QUESTOES_PCAL_LOTE12 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "silogismo disjuntivo",
     cognitivo: {
       motivo: "Encadear modus tollens e silogismo disjuntivo.",
-      mede: "Lógica de argumentação — inferências encadeadas.",
-      pegadinhaDesc: "Exige duas etapas de raciocínio; a banca costuma oferecer conclusão inválida.",
-      ondeErra: "Para na primeira inferência e não conclui sobre a disjunção.",
       palavraCritica: "A ∨ P, com ~A → P",
-      tecnica: "Etapa 1 (modus tollens): ~A. Etapa 2 (silogismo disjuntivo): de A ∨ P e ~A, conclui-se P.",
-      regraMental: "Numa disjunção verdadeira, se um lado é falso, o outro é necessariamente verdadeiro."
     },
     comentario: {
       resolucao: "CERTO. Do modus tollens (I e II) conclui-se que o documento NÃO foi assinado (~A). O Servidor III afirma a disjunção A ∨ P (“assinado ou prazo prorrogado”), que é verdadeira. Sendo A falsa, pelo silogismo disjuntivo P é necessariamente verdadeira: o prazo foi prorrogado.",
@@ -463,12 +378,7 @@ const QUESTOES_PCAL_LOTE12 = [
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "negação da condicional",
     cognitivo: {
       motivo: "Cobrar que a negação de uma condicional não é outra condicional.",
-      mede: "Equivalências e negações (item 11.3 do edital).",
-      pegadinhaDesc: "Oferece como negação uma condicional com o consequente negado.",
-      ondeErra: "Mantém a estrutura 'se...então' ao negar.",
       palavraCritica: "negação = A ∧ ~C (conjunção)",
-      tecnica: "~(A → C) equivale a A ∧ ~C: afirma o antecedente e nega o consequente.",
-      regraMental: "Negar 'se A então C' = 'A e não C'. Some o 'se...então'."
     },
     comentario: {
       resolucao: "ERRADO. A negação de uma condicional A → C é a CONJUNÇÃO A ∧ ~C. Assim, a negação correta seria: “O documento foi assinado E o processo não foi concluído”. A proposição apresentada continua sendo uma condicional, e não a negação da original.",
@@ -488,12 +398,7 @@ const QUESTOES_PCAL_LOTE12 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "lealdade e probidade",
     cognitivo: {
       motivo: "Cobrar os deveres éticos aplicáveis ao servidor em procedimento disciplinar.",
-      mede: "Ética e função pública (item 4 do edital).",
-      pegadinhaDesc: "A banca costuma reduzir a veracidade a mera recomendação moral.",
-      ondeErra: "Trata os deveres éticos como não exigíveis.",
       palavraCritica: "infração disciplinar autônoma",
-      tecnica: "Os códigos de ética impõem lealdade, probidade e veracidade — deveres funcionais, cuja violação é punível.",
-      regraMental: "Mentir no PAD não é só falta ética: pode ser infração disciplinar por si só."
     },
     comentario: {
       resolucao: "CERTO. A lealdade às instituições e a probidade são deveres funcionais e éticos do servidor público. Prestar informação falsa em procedimento disciplinar viola esses deveres e pode configurar infração disciplinar autônoma, sem prejuízo de eventual repercussão penal.",
@@ -513,12 +418,7 @@ const QUESTOES_PCAL_LOTE12 = [
     gabarito: "E", pegadinha: "generalizacao", palavraChave: "afasta necessariamente",
     cognitivo: {
       motivo: "Cobrar a regra da independência das instâncias e suas exceções.",
-      mede: "Ética e responsabilidade do servidor (itens 4 e 5 do edital).",
-      pegadinhaDesc: "Generaliza a repercussão da absolvição penal na esfera administrativa.",
-      ondeErra: "Ignora que só a absolvição por inexistência do fato ou negativa de autoria vincula.",
       palavraCritica: "insuficiência de provas não vincula",
-      tecnica: "Instâncias são INDEPENDENTES. Vinculam a esfera administrativa apenas a absolvição por inexistência do fato ou negativa de autoria.",
-      regraMental: "Absolveu por falta de provas? A Administração pode punir do mesmo jeito."
     },
     comentario: {
       resolucao: "ERRADO. Vigora a INDEPENDÊNCIA entre as instâncias civil, penal e administrativa. A absolvição penal por insuficiência de provas NÃO repercute na esfera disciplinar, que exige apenas prova administrativa suficiente. Somente a absolvição por inexistência do fato ou negativa de autoria vincula a Administração.",

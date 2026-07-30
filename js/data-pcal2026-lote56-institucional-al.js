@@ -32,12 +32,7 @@ const QUESTOES_PCAL_LOTE56 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "nomeação, promoção, acesso, reintegração, aproveitamento, reversão e transferência",
     cognitivo: {
       motivo: "Fixar o rol literal de formas de provimento do Estatuto estadual, atento à ressalva constitucional.",
-      mede: "Lei 3.437/1975, art. 36; CF, art. 37, II; Súmula 685 do STF.",
-      pegadinhaDesc: "O enunciado é fiel ao texto da lei (por isso CERTO), mas 'acesso' e 'transferência' como provimento derivativo para carreira diversa foram declarados inconstitucionais.",
-      ondeErra: "Ou esquece 'acesso'/'transferência' do rol literal, ou marca ERRADO por saber da inconstitucionalidade — mas o enunciado pede o texto da lei.",
       palavraCritica: "De acordo com o texto do Estatuto",
-      tecnica: "Distinga o que a lei DIZ do que a CF admite: o rol do art. 36 tem sete formas; 'acesso' (ascensão) e 'transferência' não sobrevivem ao art. 37, II, da CF.",
-      regraMental: "Texto da lei: 7 formas. Válidas hoje: sem acesso nem transferência."
     },
     comentario: {
       resolucao: "CERTO. O art. 36 da Lei 3.437/1975 arrola literalmente essas sete formas de provimento. Atenção, porém: 'acesso' (ascensão) e 'transferência', como formas de provimento derivativo que levariam o servidor a cargo de carreira diversa sem novo concurso, foram declarados inconstitucionais pelo STF (Súmula 685; ADI 231), por violarem a exigência de concurso público (art. 37, II, da CF). O item é verdadeiro porque se refere expressamente ao TEXTO do Estatuto; se cobrasse a validade atual dessas formas, seria falso.",
@@ -56,12 +51,7 @@ const QUESTOES_PCAL_LOTE56 = [
     gabarito: "E", pegadinha: "literalidade", palavraChave: "em qualquer hipótese, inclusive ao funcionário público e aos cargos em comissão",
     cognitivo: {
       motivo: "Cobrar a exceção ao limite de idade máxima.",
-      mede: "Lei 3.437/1975, art. 38, III.",
-      pegadinhaDesc: "O limite de 30 anos existe, mas a lei o excepciona; o enunciado suprime a exceção.",
-      ondeErra: "Memoriza 'máximo 30 anos' e trata como regra absoluta.",
       palavraCritica: "em qualquer hipótese",
-      tecnica: "O teto de 30 anos NÃO se aplica ao funcionário público nem ao cargo em comissão — é o próprio texto do inciso III.",
-      regraMental: "Idade máxima 30 anos, salvo funcionário público ou cargo em comissão."
     },
     comentario: {
       resolucao: "ERRADO. O art. 38, III, exige a idade máxima de trinta anos apenas 'se não for funcionário público ou não se tratar de cargo em comissão'. O enunciado transforma a regra em absoluta ao suprimir a ressalva.",
@@ -80,12 +70,7 @@ const QUESTOES_PCAL_LOTE56 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "ser brasileiro ... dezoito anos ... direitos políticos ... obrigações militares e eleitorais",
     cognitivo: {
       motivo: "Fixar o núcleo dos requisitos de investidura.",
-      mede: "Lei 3.437/1975, art. 38, I a VI.",
-      pegadinhaDesc: "Todos os requisitos citados constam do artigo, na forma correta.",
-      ondeErra: "Desconfia por não constar a idade máxima, que é requisito à parte com exceção.",
       palavraCritica: "obrigações militares e eleitorais",
-      tecnica: "O art. 38 lista requisitos cumulativos; os citados estão todos presentes.",
-      regraMental: "Brasileiro, 18 anos, direitos políticos, quites com quartel e urna."
     },
     comentario: {
       resolucao: "CERTO. Os requisitos mencionados constam do art. 38 (incisos I, II, IV, V e VI): ser brasileiro, ter completado dezoito anos, gozar dos direitos políticos e estar quite com as obrigações militares e eleitorais.",
@@ -104,12 +89,7 @@ const QUESTOES_PCAL_LOTE56 = [
     gabarito: "C", pegadinha: "verdade-mais-falso", palavraChave: "não se compatibiliza ... dirigida por delegados de polícia de carreira",
     cognitivo: {
       motivo: "Confrontar a previsão do estatuto de 1975 com o modelo constitucional de direção da polícia civil.",
-      mede: "CF, art. 144, §4º; Lei 3.437/1975, art. 40, §1º (não recepcionado).",
-      pegadinhaDesc: "A banca pode oferecer a previsão literal do estatuto (PM na delegacia) como se ainda valesse.",
-      ondeErra: "Responde pela literalidade do estatuto antigo, ignorando o art. 144, §4º, da CF.",
       palavraCritica: "delegados de polícia de carreira",
-      tecnica: "A CF de 1988 reservou a direção da polícia civil a delegados de carreira; norma estadual anterior que admitia oficial da PM na função não foi recepcionada nesse ponto.",
-      regraMental: "Polícia civil: dirigida por delegado de carreira (art. 144, §4º, CF)."
     },
     comentario: {
       resolucao: "CERTO. O art. 144, §4º, da CF estabelece que a polícia civil é dirigida por delegados de polícia de carreira. A previsão do art. 40, §1º, da Lei 3.437/1975, que admitia oficiais superiores da PM no exercício de cargos de Delegado Regional e Especializado, é anterior à Constituição e não foi recepcionada nesse ponto. A exigência de delegado de carreira é reforçada pela Lei Orgânica Nacional das Polícias Civis, também objeto do edital.",
@@ -128,12 +108,7 @@ const QUESTOES_PCAL_LOTE56 = [
     gabarito: "E", pegadinha: "literalidade", palavraChave: "prazo de quinze dias",
     cognitivo: {
       motivo: "Fixar o prazo de posse no Estatuto estadual.",
-      mede: "Lei 3.437/1975, art. 42.",
-      pegadinhaDesc: "Troca o prazo de 30 por 15 dias, mantendo a estrutura da frase.",
-      ondeErra: "Confunde com prazos de posse de outros estatutos.",
       palavraCritica: "quinze dias",
-      tecnica: "No Estatuto da PC-AL, tanto a posse quanto o início de exercício correm em 30 dias.",
-      regraMental: "PC-AL: posse em 30 dias, exercício em 30 dias."
     },
     comentario: {
       resolucao: "ERRADO. O prazo de posse é de 30 (trinta) dias, nos termos do art. 42 da Lei 3.437/1975. O início do exercício também se dá no prazo de 30 dias (art. 49).",
@@ -152,12 +127,7 @@ const QUESTOES_PCAL_LOTE56 = [
     gabarito: "C", pegadinha: "verdade-mais-falso", palavraChave: "não prevalece ... três anos de efetivo exercício e avaliação especial de desempenho",
     cognitivo: {
       motivo: "Cobrar a prevalência da norma constitucional sobre o prazo do estatuto estadual anterior a 1988.",
-      mede: "CF, art. 41, caput e §4º; Lei 3.437/1975, art. 55 (não recepcionado quanto ao prazo).",
-      pegadinhaDesc: "A banca costuma oferecer o prazo literal do estatuto (1 ano) como se fosse aplicável, ignorando a recepção constitucional.",
-      ondeErra: "Decora 'o Estatuto diz 1 ano' e responde pela literalidade da lei estadual, sem confrontá-la com a CF.",
       palavraCritica: "não prevalece ... três anos ... avaliação especial de desempenho",
-      tecnica: "A estabilidade é matéria de norma central de reprodução obrigatória (art. 41, CF): 3 anos para todos os entes. Prazo menor em lei estadual anterior à CF não foi recepcionado.",
-      regraMental: "Estabilidade: 3 anos (art. 41, CF), acima de qualquer prazo estadual antigo."
     },
     comentario: {
       resolucao: "CERTO. O art. 55 da Lei 3.437/1975, anterior à Constituição de 1988, prevê estabilidade em um ano, mas esse prazo não foi recepcionado. Prevalece o art. 41 da CF (redação da EC 19/1998): estabilidade após três anos de efetivo exercício, sendo obrigatória a avaliação especial de desempenho por comissão (art. 41, §4º). A regra constitucional é de observância obrigatória por todos os entes federativos, de modo que o Estado não pode fixar prazo inferior. STF e STJ, inclusive, alinharam o período do estágio probatório aos três anos da estabilidade.",
@@ -176,12 +146,7 @@ const QUESTOES_PCAL_LOTE56 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "idoneidade moral, assiduidade, pontualidade, disciplina e eficiência",
     cognitivo: {
       motivo: "Fixar os fatores apurados no estágio probatório.",
-      mede: "Lei 3.437/1975, art. 55.",
-      pegadinhaDesc: "Enumera os cinco fatores exatamente como na lei.",
-      ondeErra: "Acrescenta ou omite um fator por comparação com outros estatutos.",
       palavraCritica: "idoneidade moral ... eficiência",
-      tecnica: "Cinco fatores: idoneidade moral, assiduidade, pontualidade, disciplina e eficiência.",
-      regraMental: "Estágio: idoneidade, assiduidade, pontualidade, disciplina, eficiência."
     },
     comentario: {
       resolucao: "CERTO. O art. 55 da Lei 3.437/1975 elenca precisamente esses cinco requisitos apurados no estágio probatório.",
@@ -202,12 +167,7 @@ const QUESTOES_PCAL_LOTE56 = [
     gabarito: "E", pegadinha: "literalidade", palavraChave: "curso superior em qualquer área científica",
     cognitivo: {
       motivo: "Cobrar o requisito específico do cargo de Perito Criminal.",
-      mede: "Lei 3.437/1975, art. 21, parágrafo único.",
-      pegadinhaDesc: "Substitui a exigência de curso de Direito por 'qualquer área científica', que soa razoável para perícia.",
-      ondeErra: "Associa perícia a formação técnica genérica, não jurídica.",
       palavraCritica: "qualquer área científica",
-      tecnica: "No Estatuto da PC-AL, o Perito Criminal exige curso de DIREITO e curso de Perícia Criminal — não formação científica genérica.",
-      regraMental: "Perito Criminal na PC-AL: Direito + curso de perícia."
     },
     comentario: {
       resolucao: "ERRADO. O art. 21, parágrafo único, exige, para o provimento do cargo de Perito Criminal, a conclusão do curso de Direito e de curso em Perícia Criminal em estabelecimento idôneo. Não basta formação superior em qualquer área científica.",
@@ -226,12 +186,7 @@ const QUESTOES_PCAL_LOTE56 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "curso de Direito",
     cognitivo: {
       motivo: "Fixar o requisito de habilitação do Inspetor de Polícia.",
-      mede: "Lei 3.437/1975, art. 15, parágrafo único.",
-      pegadinhaDesc: "Requisito reproduzido fielmente; o candidato pode duvidar por parecer exigência alta.",
-      ondeErra: "Acha que ensino médio bastaria, por analogia com outros cargos.",
       palavraCritica: "curso de Direito",
-      tecnica: "Inspetor de Polícia exige curso de Direito, assim como Perito Criminal.",
-      regraMental: "Inspetor de Polícia: exige Direito."
     },
     comentario: {
       resolucao: "CERTO. O art. 15, parágrafo único, exige, para o provimento do cargo de Inspetor de Polícia, o curso de Direito como habilitação.",
@@ -250,12 +205,7 @@ const QUESTOES_PCAL_LOTE56 = [
     gabarito: "E", pegadinha: "restricao-indevida", palavraChave: "pode recusar a ordem ... se limitam à escrituração interna",
     cognitivo: {
       motivo: "Delimitar as atribuições do Escrivão Auxiliar de Polícia.",
-      mede: "Lei 3.437/1975, art. 17.",
-      pegadinhaDesc: "Restringe indevidamente as atribuições ao serviço interno.",
-      ondeErra: "Imagina que 'auxiliar' e 'cartório' significam trabalho só de gabinete.",
       palavraCritica: "limitam à escrituração interna",
-      tecnica: "O art. 17 inclui expressamente 'acompanhar a autoridade policial, quando determinado, nas diligências extras'.",
-      regraMental: "Escrivão Auxiliar também vai a diligência externa."
     },
     comentario: {
       resolucao: "ERRADO. Entre as atribuições básicas do Escrivão Auxiliar de Polícia, o art. 17 prevê 'acompanhar a autoridade policial, quando determinado, nas diligências extras'. Logo, não pode recusar a ordem sob o argumento de que atuaria apenas internamente.",
@@ -276,12 +226,7 @@ const QUESTOES_PCAL_LOTE56 = [
     gabarito: "E", pegadinha: "literalidade", palavraChave: "primeiro critério ... maior tempo de serviço público",
     cognitivo: {
       motivo: "Fixar a ordem dos critérios de precedência.",
-      mede: "Lei 3.437/1975, art. 67.",
-      pegadinhaDesc: "Inverte a ordem dos critérios: coloca o quarto critério como primeiro.",
-      ondeErra: "Presume que tempo de serviço público encabeça a hierarquia.",
       palavraCritica: "primeiro critério ... tempo de serviço público",
-      tecnica: "A ordem do art. 67 começa pelo nível/símbolo de vencimento-base; tempo de serviço público é o quarto critério.",
-      regraMental: "Precedência: 1º vencimento; 2º antiguidade na classe; 3º tempo policial; 4º tempo público; 5º idade."
     },
     comentario: {
       resolucao: "ERRADO. Pelo art. 67, o primeiro critério é o maior nível ou símbolo de vencimento-base percebido em função da atividade policial. O maior tempo de serviço público é o quarto critério, e não o primeiro.",
@@ -300,12 +245,7 @@ const QUESTOES_PCAL_LOTE56 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "mais idoso",
     cognitivo: {
       motivo: "Fixar o critério de desempate final da precedência.",
-      mede: "Lei 3.437/1975, art. 67, V.",
-      pegadinhaDesc: "Critério final reproduzido corretamente.",
-      ondeErra: "Imagina sorteio ou maior tempo de serviço como desempate final.",
       palavraCritica: "mais idoso",
-      tecnica: "O quinto e último critério do art. 67 é a idade: prevalece o mais idoso.",
-      regraMental: "Último desempate da precedência: idade."
     },
     comentario: {
       resolucao: "CERTO. O art. 67, V, estabelece que, esgotados os critérios anteriores, prevalece o mais idoso.",
@@ -324,12 +264,7 @@ const QUESTOES_PCAL_LOTE56 = [
     gabarito: "E", pegadinha: "literalidade", palavraChave: "inclusive as de transporte",
     cognitivo: {
       motivo: "Cobrar a exata destinação da ajuda de custo.",
-      mede: "Lei 3.437/1975, art. 70, §2º.",
-      pegadinhaDesc: "O limite de um mês de vencimento está correto; a inclusão das despesas de transporte inverte a exceção legal.",
-      ondeErra: "Presume que despesa de transporte é a principal a ser ressarcida.",
       palavraCritica: "inclusive as de transporte",
-      tecnica: "O §2º ressarce despesas de viagem EXCETO as de transporte. Onde o item diz 'inclusive', a lei diz 'exceto'.",
-      regraMental: "Ajuda de custo cobre viagem, menos transporte; teto de 1 mês."
     },
     comentario: {
       resolucao: "ERRADO. O art. 70, §2º, destina a ajuda de custo ao ressarcimento das despesas de viagem à nova instalação, EXCETO as de transporte, e limita o valor a um mês de vencimento. O enunciado inverte a exceção ao dizer 'inclusive as de transporte'.",
@@ -350,12 +285,7 @@ const QUESTOES_PCAL_LOTE56 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "cargo policial técnico ou científico com o de professor ... correlação de matérias e compatibilidade de horários",
     cognitivo: {
       motivo: "Fixar a exceção à vedação de acumulação.",
-      mede: "Lei 3.437/1975, art. 85.",
-      pegadinhaDesc: "Reproduz a exceção legal com fidelidade, o que pode gerar dúvida por parecer generosa.",
-      ondeErra: "Acha que qualquer cargo pode acumular com magistério.",
       palavraCritica: "técnico ou científico ... correlação de matérias e compatibilidade de horários",
-      tecnica: "A exceção exige cargo técnico/científico + professor, com correlação de matérias e compatibilidade de horários.",
-      regraMental: "Acumular só: técnico/científico + professor, com correlação e horário compatível."
     },
     comentario: {
       resolucao: "CERTO. O art. 85 fixa a vedação como regra e admite, como exceção, a acumulação de cargo policial técnico ou científico com o de professor, exigindo correlação de matérias e compatibilidade de horários.",
@@ -376,12 +306,7 @@ const QUESTOES_PCAL_LOTE56 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "repreensão, a multa, a suspensão, a detenção disciplinar, a destituição de função, a demissão e a cassação",
     cognitivo: {
       motivo: "Fixar o rol de penas disciplinares.",
-      mede: "Lei 3.437/1975, art. 91.",
-      pegadinhaDesc: "Rol completo e na ordem legal, incluindo a detenção disciplinar, que é peculiar deste estatuto.",
-      ondeErra: "Duvida da 'detenção disciplinar' por não existir em estatutos comuns.",
       palavraCritica: "detenção disciplinar ... cassação de aposentadoria ou disponibilidade",
-      tecnica: "São sete penas do art. 91; a detenção disciplinar é característica da PC-AL.",
-      regraMental: "Sete penas: repreensão, multa, suspensão, detenção, destituição, demissão, cassação."
     },
     comentario: {
       resolucao: "CERTO. O art. 91 arrola as sete penas: repreensão, multa, suspensão, detenção disciplinar, destituição de função, demissão e cassação de aposentadoria ou disponibilidade.",
@@ -400,12 +325,7 @@ const QUESTOES_PCAL_LOTE56 = [
     gabarito: "E", pegadinha: "literalidade", palavraChave: "repreensão verbal ... sem registro",
     cognitivo: {
       motivo: "Fixar a forma obrigatória da repreensão.",
-      mede: "Lei 3.437/1975, art. 93.",
-      pegadinhaDesc: "Descreve a repreensão como verbal e sem registro, contrariando a exigência legal de forma escrita.",
-      ondeErra: "Associa 'falta leve' a advertência informal.",
       palavraCritica: "verbal ... sem registro",
-      tecnica: "A repreensão é SEMPRE aplicada por escrito e deve constar do assentamento individual.",
-      regraMental: "Repreensão: sempre escrita e registrada."
     },
     comentario: {
       resolucao: "ERRADO. O art. 93 determina que a repreensão será SEMPRE aplicada por escrito e deverá constar do assentamento individual do funcionário. Não existe repreensão verbal nem sem registro.",
@@ -424,12 +344,7 @@ const QUESTOES_PCAL_LOTE56 = [
     gabarito: "E", pegadinha: "literalidade", palavraChave: "não excederá de sessenta dias",
     cognitivo: {
       motivo: "Fixar o limite máximo da suspensão.",
-      mede: "Lei 3.437/1975, art. 94.",
-      pegadinhaDesc: "A hipótese de aplicação está correta; só o teto foi dobrado.",
-      ondeErra: "Confunde com prazos de suspensão de outros regimes.",
       palavraCritica: "sessenta dias",
-      tecnica: "O teto da suspensão no Estatuto da PC-AL é de 30 dias.",
-      regraMental: "Suspensão na PC-AL: máximo 30 dias."
     },
     comentario: {
       resolucao: "ERRADO. O art. 94 fixa o teto da suspensão em 30 (trinta) dias. A hipótese de aplicação — falta grave ou reincidência em faltas de qualquer natureza — está correta.",
@@ -448,12 +363,7 @@ const QUESTOES_PCAL_LOTE56 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "convertida em multa na base máxima de 50% ... permanecer em serviço",
     cognitivo: {
       motivo: "Fixar a lógica da conversão da suspensão em multa.",
-      mede: "Lei 3.437/1975, art. 95.",
-      pegadinhaDesc: "Descreve fielmente a conversão, o percentual e a permanência em serviço.",
-      ondeErra: "Acha que a multa afasta o servidor ou que o percentual é outro.",
       palavraCritica: "50% ... permanecer em serviço",
-      tecnica: "A multa é conversão da suspensão: 50% no máximo, e o servidor continua trabalhando.",
-      regraMental: "Multa = suspensão convertida: 50% e continua em serviço."
     },
     comentario: {
       resolucao: "CERTO. O art. 95 permite converter a suspensão em multa de até 50% do vencimento ou remuneração, por conveniência do serviço, obrigando o policial a permanecer em serviço.",
@@ -472,12 +382,7 @@ const QUESTOES_PCAL_LOTE56 = [
     gabarito: "E", pegadinha: "literalidade", palavraChave: "qualquer Delegado de Polícia",
     cognitivo: {
       motivo: "Fixar a competência para converter suspensão em detenção disciplinar.",
-      mede: "Lei 3.437/1975, art. 96.",
-      pegadinhaDesc: "Amplia a competência para 'qualquer Delegado', quando a lei a reserva a duas autoridades.",
-      ondeErra: "Presume que quem preside o feito pode converter a pena.",
       palavraCritica: "qualquer Delegado de Polícia",
-      tecnica: "A conversão em detenção disciplinar exige ordem escrita do Secretário de Segurança Pública ou do Governador.",
-      regraMental: "Detenção disciplinar: só por ordem do Secretário SSP ou do Governador."
     },
     comentario: {
       resolucao: "ERRADO. O art. 96 exige ordem baixada por escrito pelo Secretário de Segurança Pública ou pelo Governador do Estado. Delegado de polícia não tem competência para converter suspensão em detenção disciplinar.",
@@ -496,12 +401,7 @@ const QUESTOES_PCAL_LOTE56 = [
     gabarito: "E", pegadinha: "literalidade", palavraChave: "acarreta a perda dos vencimentos",
     cognitivo: {
       motivo: "Cobrar o efeito remuneratório da detenção disciplinar.",
-      mede: "Lei 3.437/1975, art. 96, §2º.",
-      pegadinhaDesc: "Afirma perda de vencimentos, quando a lei expressamente afasta esse efeito.",
-      ondeErra: "Associa qualquer restrição de liberdade a corte de remuneração.",
       palavraCritica: "perda dos vencimentos",
-      tecnica: "O §2º diz que a detenção disciplinar NÃO acarreta a perda dos vencimentos.",
-      regraMental: "Detenção disciplinar não corta vencimento."
     },
     comentario: {
       resolucao: "ERRADO. O art. 96, §2º, dispõe que a detenção disciplinar não acarretará a perda dos vencimentos.",
@@ -520,12 +420,7 @@ const QUESTOES_PCAL_LOTE56 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "não exceder de quarenta e oito horas ... na própria residência",
     cognitivo: {
       motivo: "Fixar a regra de local de cumprimento da detenção disciplinar.",
-      mede: "Lei 3.437/1975, art. 96, §2º, I.",
-      pegadinhaDesc: "Regra reproduzida fielmente; o candidato pode duvidar por parecer branda.",
-      ondeErra: "Acha que toda detenção ocorre em repartição policial.",
       palavraCritica: "quarenta e oito horas ... residência",
-      tecnica: "Até 48h, cumpre-se na residência; acima disso, em sala especial da SSP ou repartição designada.",
-      regraMental: "Até 48h: em casa. Mais que isso: sala especial."
     },
     comentario: {
       resolucao: "CERTO. O art. 96, §2º, I, prevê o cumprimento da detenção disciplinar na residência do funcionário quando não exceder de quarenta e oito horas; acima disso, em sala especial na sede da SSP ou repartição policial designada (inciso II).",
@@ -544,12 +439,7 @@ const QUESTOES_PCAL_LOTE56 = [
     gabarito: "E", pegadinha: "literalidade", palavraChave: "é vedado ... receber visitas",
     cognitivo: {
       motivo: "Cobrar o regime de visitas na detenção disciplinar.",
-      mede: "Lei 3.437/1975, art. 104.",
-      pegadinhaDesc: "Nega o direito de visita, que a lei assegura em horário determinado.",
-      ondeErra: "Associa detenção a isolamento total.",
       palavraCritica: "é vedado ... visitas",
-      tecnica: "O art. 104 permite visitas de familiares ou amigos em horário determinado pelo titular do órgão.",
-      regraMental: "Detenção disciplinar admite visita em horário fixado."
     },
     comentario: {
       resolucao: "ERRADO. O art. 104 assegura que, durante a detenção disciplinar, o funcionário poderá receber visita de familiares ou amigos, em horário determinado pelo titular do órgão, de modo a não perturbar o expediente.",
@@ -568,12 +458,7 @@ const QUESTOES_PCAL_LOTE56 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "Chefe de Gabinete da SSP, o Corregedor Geral ... prazo não superior a cinco dias",
     cognitivo: {
       motivo: "Fixar quem pode aplicar detenção preventiva e por quanto tempo.",
-      mede: "Lei 3.437/1975, art. 101.",
-      pegadinhaDesc: "Autoridades e prazo reproduzidos corretamente.",
-      ondeErra: "Confunde o prazo preventivo (5 dias) com o teto geral da suspensão.",
       palavraCritica: "cinco dias",
-      tecnica: "A preventiva emergencial dessas autoridades tem teto de 5 dias.",
-      regraMental: "Detenção preventiva emergencial: até 5 dias."
     },
     comentario: {
       resolucao: "CERTO. O art. 101 autoriza o Chefe de Gabinete da SSP, o Corregedor Geral da Polícia e os Diretores de Departamentos a determinar, em emergência e como medida preventiva, detenção disciplinar de subordinados, por prazo não superior a cinco dias.",
@@ -594,12 +479,7 @@ const QUESTOES_PCAL_LOTE56 = [
     gabarito: "E", pegadinha: "literalidade", palavraChave: "trinta dias intercalados",
     cognitivo: {
       motivo: "Fixar o número de faltas intercaladas que enseja demissão.",
-      mede: "Lei 3.437/1975, art. 106, IX.",
-      pegadinhaDesc: "Mantém 'intercalados' e 'doze meses' e altera só a quantidade de dias.",
-      ondeErra: "Confunde com o número de faltas de outros estatutos.",
       palavraCritica: "trinta dias intercalados",
-      tecnica: "A demissão por faltas intercaladas exige sessenta dias em doze meses, e não trinta.",
-      regraMental: "Demissão por falta: 60 dias intercalados em 12 meses."
     },
     comentario: {
       resolucao: "ERRADO. O art. 106, IX, prevê a demissão por falta ao serviço por sessenta dias intercalados, sem justa causa, durante o período de doze meses. O enunciado reduz o número para trinta.",
@@ -618,12 +498,7 @@ const QUESTOES_PCAL_LOTE56 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "demissão e de cassação ... privativa do Governador",
     cognitivo: {
       motivo: "Fixar a competência privativa do Governador para as penas máximas.",
-      mede: "Lei 3.437/1975, art. 109, I e II.",
-      pegadinhaDesc: "Reproduz a reserva de competência do Governador para demissão e cassação.",
-      ondeErra: "Estende essa competência ao Secretário de Segurança Pública.",
       palavraCritica: "privativa do Governador",
-      tecnica: "O Secretário SSP aplica todas as penas, SALVO demissão e cassação, que são privativas do Governador.",
-      regraMental: "Demissão e cassação: só o Governador."
     },
     comentario: {
       resolucao: "CERTO. O art. 109, I, reserva ao Governador, privativamente, a aplicação das penas de demissão e cassação de aposentadoria ou disponibilidade; o inciso II confere ao Secretário de Segurança Pública competência para todos os demais casos, salvo esses.",
@@ -642,12 +517,7 @@ const QUESTOES_PCAL_LOTE56 = [
     gabarito: "E", pegadinha: "literalidade", palavraChave: "suspensão até trinta dias",
     cognitivo: {
       motivo: "Fixar o limite de suspensão aplicável por delegados.",
-      mede: "Lei 3.437/1975, art. 109, IV.",
-      pegadinhaDesc: "Usa o teto geral da suspensão (30 dias) no lugar do limite de competência do delegado (10 dias).",
-      ondeErra: "Confunde o teto máximo da pena com o teto de competência da autoridade.",
       palavraCritica: "até trinta dias",
-      tecnica: "Delegados e Diretores de repartições só aplicam suspensão até 10 dias; o Chefe de Gabinete/Corregedor/Diretores de Departamento vão até 20 dias.",
-      regraMental: "Delegado: repreensão e suspensão até 10 dias."
     },
     comentario: {
       resolucao: "ERRADO. O art. 109, IV, limita a competência dos Delegados em geral e Diretores de repartições à repreensão e à suspensão até dez dias. O teto de trinta dias é o máximo da própria pena de suspensão (art. 94), não o limite de competência dessas autoridades.",
@@ -666,12 +536,7 @@ const QUESTOES_PCAL_LOTE56 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "até trinta dias, podendo ser prorrogada até noventa dias",
     cognitivo: {
       motivo: "Fixar o prazo e a prorrogação da suspensão preventiva.",
-      mede: "Lei 3.437/1975, arts. 110 e 112.",
-      pegadinhaDesc: "Prazo inicial e prorrogação reproduzidos corretamente.",
-      ondeErra: "Confunde 30/90 dias ou acha que a preventiva dura enquanto durar o processo.",
       palavraCritica: "trinta dias ... noventa dias",
-      tecnica: "Preventiva de 30 dias, prorrogável até 90; findo o prazo, cessa mesmo sem conclusão do processo.",
-      regraMental: "Preventiva: 30 dias, prorroga até 90, e acaba."
     },
     comentario: {
       resolucao: "CERTO. O art. 110 prevê a suspensão preventiva de até trinta dias; o art. 112 permite prorrogá-la até noventa dias, após o que cessam os efeitos, ainda que o processo não esteja concluído.",
@@ -692,12 +557,7 @@ const QUESTOES_PCAL_LOTE56 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "suspensão por mais de quinze dias, destituição, demissão e cassação",
     cognitivo: {
       motivo: "Fixar quando o processo disciplinar é obrigatório.",
-      mede: "Lei 3.437/1975, art. 115.",
-      pegadinhaDesc: "Reproduz corretamente o patamar de 15 dias e as demais penas graves.",
-      ondeErra: "Confunde o marco (mais de 15 dias) com o teto da suspensão (30 dias).",
       palavraCritica: "por mais de quinze dias",
-      tecnica: "Acima de 15 dias de suspensão, ou nas penas graves, exige-se processo disciplinar.",
-      regraMental: "Processo disciplinar: suspensão > 15 dias, destituição, demissão, cassação."
     },
     comentario: {
       resolucao: "CERTO. O art. 115 exige processo disciplinar prévio para suspensão por mais de quinze dias, destituição de função, demissão e cassação de disponibilidade, servindo também para apurar dano à Fazenda Estadual por procedimento doloso ou culposo.",
@@ -716,12 +576,7 @@ const QUESTOES_PCAL_LOTE56 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "dois funcionários policiais de categoria igual ou superior",
     cognitivo: {
       motivo: "Fixar quando cabe sindicância e sua composição.",
-      mede: "Lei 3.437/1975, art. 117.",
-      pegadinhaDesc: "Hipótese e composição reproduzidas fielmente.",
-      ondeErra: "Confunde a composição da sindicância (2) com a da Comissão de Disciplina (3).",
       palavraCritica: "dois funcionários policiais",
-      tecnica: "Sindicância = 2 policiais; Comissão de Disciplina (inquérito) = 3 membros.",
-      regraMental: "Sindicância: 2. Comissão de Disciplina: 3."
     },
     comentario: {
       resolucao: "CERTO. O art. 117 prevê a sindicância quando as irregularidades não forem evidentes ou a autoria for incerta, conduzida por dois funcionários policiais de categoria igual ou superior.",
@@ -740,12 +595,7 @@ const QUESTOES_PCAL_LOTE56 = [
     gabarito: "E", pegadinha: "literalidade", palavraChave: "composta de cinco membros",
     cognitivo: {
       motivo: "Fixar a composição numérica da Comissão de Disciplina.",
-      mede: "Lei 3.437/1975, art. 118.",
-      pegadinhaDesc: "A preferência por bacharéis e a designação pelo Secretário estão corretas; só o número foi alterado.",
-      ondeErra: "Confunde com colegiados de cinco membros.",
       palavraCritica: "cinco membros",
-      tecnica: "A Comissão de Disciplina tem três membros, de preferência bacharéis em Direito.",
-      regraMental: "Comissão de Disciplina: 3 membros."
     },
     comentario: {
       resolucao: "ERRADO. O art. 118 prevê Comissão de Disciplina composta de três membros, de preferência bacharéis em Direito, designada pelo Secretário de Segurança Pública. O número correto é três, não cinco.",
@@ -764,12 +614,7 @@ const QUESTOES_PCAL_LOTE56 = [
     gabarito: "E", pegadinha: "literalidade", palavraChave: "substituição será definitiva ... todos os processos ... futuros",
     cognitivo: {
       motivo: "Delimitar o alcance da substituição por suspeição.",
-      mede: "Lei 3.437/1975, art. 123.",
-      pegadinhaDesc: "Estende a substituição a todos os processos, quando a lei a restringe ao processo em que arguida.",
-      ondeErra: "Presume que suspeição acolhida afasta o membro em definitivo.",
       palavraCritica: "todos os processos ... futuros",
-      tecnica: "A substituição por suspeição ocorre apenas no processo a que ela se refere.",
-      regraMental: "Suspeição substitui só naquele processo."
     },
     comentario: {
       resolucao: "ERRADO. O art. 123 determina que, procedente a suspeição, o membro será substituído apenas no processo a que ela se refere — não em todos os futuros.",
@@ -788,12 +633,7 @@ const QUESTOES_PCAL_LOTE56 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "a qualquer tempo ... justificar a inocência",
     cognitivo: {
       motivo: "Fixar o cabimento da revisão do processo disciplinar.",
-      mede: "Lei 3.437/1975, art. 125.",
-      pegadinhaDesc: "Reproduz fielmente o cabimento e o pressuposto da revisão.",
-      ondeErra: "Imagina prazo decadencial para a revisão.",
       palavraCritica: "a qualquer tempo",
-      tecnica: "A revisão não tem prazo: cabe a qualquer tempo, desde que haja fatos novos que justifiquem a inocência.",
-      regraMental: "Revisão: a qualquer tempo, com fato novo pró-inocência."
     },
     comentario: {
       resolucao: "CERTO. O art. 125 admite a revisão a qualquer tempo, quando se aduzam fatos ou circunstâncias suscetíveis de justificar a inocência do requerente.",
@@ -812,12 +652,7 @@ const QUESTOES_PCAL_LOTE56 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "concurso de dois ou mais funcionários policiais",
     cognitivo: {
       motivo: "Fixar a agravante genérica das faltas disciplinares.",
-      mede: "Lei 3.437/1975, art. 92, parágrafo único.",
-      pegadinhaDesc: "Reproduz fielmente a agravante do concurso de agentes.",
-      ondeErra: "Confunde 'dois ou mais' com 'três ou mais'.",
       palavraCritica: "dois ou mais funcionários policiais",
-      tecnica: "A agravante configura-se a partir de dois funcionários policiais em concurso.",
-      regraMental: "Agravante disciplinar: dois ou mais policiais."
     },
     comentario: {
       resolucao: "CERTO. O art. 92, parágrafo único, prevê como causa agravante o cometimento da falta com o concurso de dois ou mais funcionários policiais.",
@@ -836,12 +671,7 @@ const QUESTOES_PCAL_LOTE56 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "natureza e a gravidade ... danos ... repercussão ... antecedentes ... reincidência",
     cognitivo: {
       motivo: "Fixar os critérios de dosimetria da pena disciplinar.",
-      mede: "Lei 3.437/1975, art. 92.",
-      pegadinhaDesc: "Enumera os cinco critérios exatamente como na lei.",
-      ondeErra: "Acrescenta ou omite um critério.",
       palavraCritica: "antecedentes ... reincidência",
-      tecnica: "Cinco critérios: natureza/gravidade, danos ao serviço, repercussão, antecedentes e reincidência.",
-      regraMental: "Dosimetria: gravidade, dano, repercussão, antecedentes, reincidência."
     },
     comentario: {
       resolucao: "CERTO. O art. 92 elenca esses cinco critérios para a aplicação das penas disciplinares.",

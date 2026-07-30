@@ -19,12 +19,7 @@ const QUESTOES_PCAL_LOTE4 = [
     gabarito: "E", pegadinha: "exigencia-inexistente", palavraChave: "Fazem cinco anos",
     cognitivo: {
       motivo: "Cobrar a impessoalidade do verbo 'fazer' indicando tempo decorrido.",
-      mede: "Concordância verbal (item 5.5 do edital).",
-      pegadinhaDesc: "Sugere concordância com 'cinco anos', quando 'fazer' de tempo é impessoal e fica no singular.",
-      ondeErra: "Trata 'cinco anos' como sujeito, mas não há sujeito — é oração sem sujeito.",
       palavraCritica: "Fazem (deveria ser 'Faz')",
-      tecnica: "'Fazer', 'haver' e 'ir' indicando tempo são impessoais → sempre no singular.",
-      regraMental: "Tempo decorrido: FAZ / HÁ (nunca 'fazem'/'hão'). O mesmo vale para 'houve' × 'houveram' vítimas."
     },
     comentario: {
       resolucao: "ERRADO. O verbo 'fazer' indicando tempo decorrido é impessoal (sem sujeito) e permanece invariável na 3ª pessoa do singular: 'Faz cinco anos'. 'Cinco anos' é objeto, não sujeito. A verbalização no plural viola a norma-padrão.",
@@ -42,12 +37,7 @@ const QUESTOES_PCAL_LOTE4 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "a distância (sem especificação)",
     cognitivo: {
       motivo: "Cobrar a regra da crase facultativa/vedada em 'a distância' × 'à distância de'.",
-      mede: "Emprego do sinal indicativo de crase (item 5.7).",
-      pegadinhaDesc: "A banca costuma exigir crase em 'a distância' sem especificação (onde não cabe).",
-      ondeErra: "Aplica crase por 'distância' ser feminino, ignorando que falta a preposição/artigo determinante.",
       palavraCritica: "a distância × à distância de",
-      tecnica: "'A distância' genérica: sem crase. 'À distância de 50 metros' (especificada): com crase.",
-      regraMental: "Sem especificar, sem crase. Se disser de QUANTO é a distância, aí acentua."
     },
     comentario: {
       resolucao: "CERTO. Segundo a norma-padrão, não se emprega crase em 'a distância' quando a expressão não está determinada por adjunto especificador. A crase seria obrigatória em 'à distância de cinquenta metros'. Portanto, a ausência de acento está correta.",
@@ -65,12 +55,7 @@ const QUESTOES_PCAL_LOTE4 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "nunca (palavra atrativa)",
     cognitivo: {
       motivo: "Cobrar as palavras atrativas que exigem próclise.",
-      mede: "Colocação dos pronomes átonos (item 5.8).",
-      pegadinhaDesc: "A banca costuma propor ênclise ('viu-se') após palavra atrativa, o que é erro.",
-      ondeErra: "Ignora que advérbios de negação atraem o pronome para antes do verbo.",
       palavraCritica: "nunca / se viu",
-      tecnica: "Palavras atrativas (não, nunca, jamais, que, quem, advérbios) → próclise obrigatória.",
-      regraMental: "Negação, advérbio, pronome relativo/indefinido, conjunção subordinativa: puxam o pronome para ANTES."
     },
     comentario: {
       resolucao: "CERTO. Advérbios de negação como 'nunca' são palavras atrativas que impõem a próclise: 'Nunca se viu'. A ênclise ('viu-se') seria incorreta nesse contexto.",
@@ -88,12 +73,7 @@ const QUESTOES_PCAL_LOTE4 = [
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "assistiram o laudo",
     cognitivo: {
       motivo: "Cobrar a dupla regência do verbo 'assistir' conforme o sentido.",
-      mede: "Regência verbal (item 5.6).",
-      pegadinhaDesc: "Afirma que 'assistir' (presenciar) é transitivo direto — quando é transitivo indireto (assistir A algo).",
-      ondeErra: "Confunde 'assistir' (ver/presenciar → indireto) com 'assistir' (ajudar/prestar assistência → direto).",
       palavraCritica: "assistir a (presenciar) × assistir (ajudar)",
-      tecnica: "Presenciar = assistir A (indireto). Prestar socorro = assistir (direto). O sentido define a regência.",
-      regraMental: "Assisti AO filme (vi). O médico assistiu O paciente (ajudou)."
     },
     comentario: {
       resolucao: "ERRADO. No sentido de presenciar/ver, 'assistir' é transitivo indireto e exige a preposição 'a': 'assistiram AO laudo'. Como transitivo direto, 'assistir' significa prestar assistência ('assistir o doente'). A frase inverteu a regência.",
@@ -112,12 +92,7 @@ const QUESTOES_PCAL_LOTE4 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "foi instaurado pela autoridade",
     cognitivo: {
       motivo: "Cobrar a conversão ativa→passiva analítica, tema recorrente de reescritura.",
-      mede: "Reorganização de orações / voz verbal (itens 4.2 e 6.3).",
-      pegadinhaDesc: "A banca costuma trocar o agente da passiva ou o tempo verbal na conversão.",
-      ondeErra: "Erra o auxiliar ('foi') ou inverte quem pratica a ação.",
       palavraCritica: "objeto vira sujeito; sujeito vira agente da passiva",
-      tecnica: "Ativa: sujeito + VTD + objeto. Passiva: objeto→sujeito + ser + particípio + 'por' + agente.",
-      regraMental: "'A polícia instaurou o IP' → 'O IP foi instaurado pela polícia'. Mantém o tempo (pretérito)."
     },
     comentario: {
       resolucao: "CERTO. Na voz passiva analítica, o objeto direto ('o inquérito') torna-se sujeito, o verbo assume a forma 'ser + particípio' no mesmo tempo ('foi instaurado') e o sujeito original vira agente da passiva ('pela autoridade policial'). O sentido é preservado.",
@@ -137,12 +112,7 @@ const QUESTOES_PCAL_LOTE4 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "contrapositiva",
     cognitivo: {
       motivo: "Cobrar a equivalência entre condicional e sua contrapositiva.",
-      mede: "Equivalências lógicas (item 11.3).",
-      pegadinhaDesc: "A banca costuma oferecer a recíproca (Q→P) ou a inversa (~P→~Q), que NÃO equivalem.",
-      ondeErra: "Confunde contrapositiva (equivalente) com recíproca/inversa (não equivalentes).",
       palavraCritica: "~Q → ~P",
-      tecnica: "P→Q equivale a ~Q→~P (contrapositiva): inverte e nega os dois termos.",
-      regraMental: "Contrapositiva = 'nega os dois e troca a ordem'. Recíproca (só troca) NÃO equivale."
     },
     comentario: {
       resolucao: "CERTO. A condicional P→Q é logicamente equivalente à sua contrapositiva ~Q→~P. Aqui: P='há indícios', Q='inquérito instaurado'. A contrapositiva 'se não instaurado, então não há indícios' preserva o valor lógico.",
@@ -160,12 +130,7 @@ const QUESTOES_PCAL_LOTE4 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "negação de P→Q",
     cognitivo: {
       motivo: "Cobrar a negação correta da condicional (P ∧ ~Q).",
-      mede: "Equivalências e negações (item 11.3).",
-      pegadinhaDesc: "A banca costuma negar como '~P→~Q' ou 'se cumpriu, então não foi preso' (mantendo a condicional).",
-      ondeErra: "Nega mantendo a estrutura 'se...então', quando a negação vira uma conjunção.",
       palavraCritica: "P e não Q",
-      tecnica: "~(P→Q) = P ∧ ~Q: afirma o antecedente e nega o consequente.",
-      regraMental: "Negar 'se P então Q' = 'P e não Q'. Some o 'se...então', vira 'e'."
     },
     comentario: {
       resolucao: "CERTO. A negação de uma condicional P→Q é P ∧ ~Q (o antecedente ocorre e o consequente não). Logo: 'O agente cumpriu o mandado E o suspeito NÃO foi preso'. A negação não é outra condicional.",
@@ -183,12 +148,7 @@ const QUESTOES_PCAL_LOTE4 = [
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "Nenhum",
     cognitivo: {
       motivo: "Cobrar a negação correta do quantificador universal.",
-      mede: "Lógica de primeira ordem / diagramas (itens 11.5 e 12).",
-      pegadinhaDesc: "Oferece o contrário ('nenhum') no lugar da negação lógica ('pelo menos um não').",
-      ondeErra: "Confunde 'negar' com 'afirmar o oposto extremo'.",
       palavraCritica: "Nenhum (deveria ser 'Pelo menos um não')",
-      tecnica: "Negar 'todo A é B' = 'existe A que não é B' (algum A não é B).",
-      regraMental: "Negação de 'todo' é 'algum não'; negação de 'algum' é 'nenhum'. Não é o oposto extremo."
     },
     comentario: {
       resolucao: "ERRADO. A negação de 'Todos os policiais são armados' é 'Pelo menos um policial não é armado' (existe policial não armado). 'Nenhum policial é armado' é a contrária, não a negação (basta um contraexemplo para negar o 'todos').",
@@ -206,12 +166,7 @@ const QUESTOES_PCAL_LOTE4 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "De Morgan",
     cognitivo: {
       motivo: "Cobrar a aplicação das Leis de De Morgan.",
-      mede: "Equivalências / Leis de De Morgan (item 11.4).",
-      pegadinhaDesc: "A banca costuma manter o conectivo ('e') ou negar só uma das partes.",
-      ondeErra: "Não troca o 'e' por 'ou' ao negar a conjunção.",
       palavraCritica: "nega os dois e troca 'e' por 'ou'",
-      tecnica: "~(P ∧ Q) = ~P ∨ ~Q; ~(P ∨ Q) = ~P ∧ ~Q.",
-      regraMental: "De Morgan: 'nega tudo e vira o conectivo'. E vira OU; OU vira E."
     },
     comentario: {
       resolucao: "CERTO. Lei de De Morgan: a negação de uma conjunção (P ∧ Q) é a disjunção das negações (~P ∨ ~Q). Logo, negar 'culpado E lícita' = 'não culpado OU não lícita'.",
@@ -229,12 +184,7 @@ const QUESTOES_PCAL_LOTE4 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "dado que (condicional)",
     cognitivo: {
       motivo: "Cobrar o cálculo de probabilidade condicional em espaço amostral reduzido.",
-      mede: "Probabilidade condicional (itens 13 e 2.x de Estatística).",
-      pegadinhaDesc: "A banca costuma usar o espaço amostral total (52) em vez do reduzido (12 figuras).",
-      ondeErra: "Divide por 52 em vez de restringir ao universo das figuras.",
       palavraCritica: "dado que é figura → universo = 12",
-      tecnica: "P(A|B) = casos favoráveis dentro de B ÷ total de B. Reduza o espaço amostral ao evento condicionante.",
-      regraMental: "'Dado que' encolhe o universo: figuras = 12 (4 reis, 4 damas, 4 valetes). Reis = 4. 4/12 = 1/3."
     },
     comentario: {
       resolucao: "CERTO. Há 12 figuras (4 valetes, 4 damas, 4 reis). Condicionada a ser figura, a probabilidade de ser rei é P(rei | figura) = 4/12 = 1/3. O universo reduz-se às 12 figuras, não às 52 cartas.",
@@ -254,12 +204,7 @@ const QUESTOES_PCAL_LOTE4 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "imprescritibilidade",
     cognitivo: {
       motivo: "Cobrar as características dos direitos humanos.",
-      mede: "Teoria geral dos DH (item 1 do edital).",
-      pegadinhaDesc: "Item correto; a banca costuma trocar por 'prescritíveis' ou confundir com 'inalienáveis'.",
-      ondeErra: "Confunde imprescritibilidade (tempo) com irrenunciabilidade (vontade) ou inalienabilidade (transferência).",
       palavraCritica: "não se perdem pelo tempo",
-      tecnica: "Imprescritível = não caduca. Inalienável = não se vende/transfere. Irrenunciável = não se abre mão.",
-      regraMental: "DH são universais, indivisíveis, imprescritíveis, inalienáveis, irrenunciáveis — e RELATIVOS (não absolutos)."
     },
     comentario: {
       resolucao: "CERTO. A imprescritibilidade é característica dos direitos humanos: eles não se extinguem pelo decurso do tempo nem pelo não uso. Não confundir com inalienabilidade (não podem ser transferidos) e irrenunciabilidade (não se pode renunciar a eles).",
@@ -277,12 +222,7 @@ const QUESTOES_PCAL_LOTE4 = [
     gabarito: "E", pegadinha: "exigencia-inexistente", palavraChave: "depositário infiel",
     cognitivo: {
       motivo: "Cobrar a Súmula Vinculante 25 e o efeito do Pacto de São José (Decreto 678/1992).",
-      mede: "Convenção Americana / DH na CF (itens 6 do edital).",
-      pegadinhaDesc: "Mantém a prisão do depositário infiel, que foi afastada pela jurisprudência.",
-      ondeErra: "Aplica a literalidade do art. 5º, LXVII, da CF sem o filtro do controle de convencionalidade.",
       palavraCritica: "depositário infiel (não cabe)",
-      tecnica: "Só cabe prisão civil do DEVEDOR DE ALIMENTOS. Depositário infiel: proibido (SV 25).",
-      regraMental: "Pacto de São José + SV 25: única prisão civil admitida é a do devedor de alimentos."
     },
     comentario: {
       resolucao: "ERRADO. Súmula Vinculante 25/STF: 'É ilícita a prisão civil de depositário infiel, qualquer que seja a modalidade do depósito.' Por força do Pacto de São José (status supralegal), subsiste apenas a prisão civil do devedor voluntário e inescusável de alimentos.",
@@ -300,12 +240,7 @@ const QUESTOES_PCAL_LOTE4 = [
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "primeira dimensão / sociais",
     cognitivo: {
       motivo: "Cobrar a correspondência entre dimensões e valores da Revolução Francesa.",
-      mede: "Afirmação histórica dos DH (item 2).",
-      pegadinhaDesc: "Atribui à 1ª dimensão o conteúdo da 2ª (direitos sociais / igualdade).",
-      ondeErra: "Troca liberdade (1ª) por igualdade (2ª).",
       palavraCritica: "primeira dimensão = liberdade (não igualdade)",
-      tecnica: "1ª = Liberdade (civis/políticos, prestação negativa). 2ª = Igualdade (sociais, prestação positiva). 3ª = Fraternidade (difusos).",
-      regraMental: "Liberté, Égalité, Fraternité = 1ª, 2ª, 3ª dimensões, nessa ordem."
     },
     comentario: {
       resolucao: "ERRADO. A primeira dimensão abrange os direitos civis e políticos (liberdade), com prestação NEGATIVA do Estado. Os direitos sociais, econômicos e culturais (igualdade, prestação positiva) são de SEGUNDA dimensão. A assertiva cruzou as dimensões.",
@@ -323,12 +258,7 @@ const QUESTOES_PCAL_LOTE4 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "legalidade, necessidade e proporcionalidade",
     cognitivo: {
       motivo: "Cobrar os princípios do uso diferenciado da força (Código de Conduta da ONU / princípios básicos).",
-      mede: "Direitos humanos e responsabilidade do Estado (item 3).",
-      pegadinhaDesc: "Item correto; a banca costuma inverter para tornar a arma de fogo regra ou dispensar a proporcionalidade.",
-      ondeErra: "Trata o uso da força como discricionário e ilimitado.",
       palavraCritica: "excepcional / proporcionalidade",
-      tecnica: "Força: legal + necessária + proporcional. Arma de fogo é último recurso.",
-      regraMental: "Uso da força é escalonado e excepcional — arma de fogo só quando indispensável para proteger a vida."
     },
     comentario: {
       resolucao: "CERTO. Os princípios internacionais (Código de Conduta para os Encarregados da Aplicação da Lei e Princípios Básicos sobre o Uso da Força, da ONU) exigem legalidade, necessidade e proporcionalidade, com o emprego de arma de fogo como medida excepcional, voltada à proteção da vida.",
@@ -348,12 +278,7 @@ const QUESTOES_PCAL_LOTE4 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "reflexão crítica",
     cognitivo: {
       motivo: "Cobrar a distinção conceitual entre ética e moral.",
-      mede: "Ética e moral (item 1 do edital).",
-      pegadinhaDesc: "Item correto; a banca costuma inverter (dizer que a moral reflete sobre a ética).",
-      ondeErra: "Inverte os papéis: moral (prática vivida) × ética (teoria/reflexão).",
       palavraCritica: "moral = costume vivido; ética = reflexão",
-      tecnica: "Moral = conjunto de regras praticadas. Ética = ciência/reflexão sobre a moral.",
-      regraMental: "Moral 'faz'; ética 'pensa sobre o que se faz'."
     },
     comentario: {
       resolucao: "CERTO. Distinção clássica: a moral é o conjunto de valores e costumes efetivamente praticados por um grupo; a ética é a disciplina filosófica que reflete criticamente sobre esses valores (a 'teoria' da conduta).",
@@ -371,12 +296,7 @@ const QUESTOES_PCAL_LOTE4 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "impessoalidade",
     cognitivo: {
       motivo: "Cobrar o conteúdo do princípio da impessoalidade (CF, art. 37, caput e § 1º).",
-      mede: "Ética e função pública (item 4).",
-      pegadinhaDesc: "Item correto; a banca costuma confundir impessoalidade com moralidade ou publicidade.",
-      ondeErra: "Troca o conteúdo dos princípios do LIMPE.",
       palavraCritica: "veda promoção pessoal",
-      tecnica: "Impessoalidade = ausência de favoritismo/perseguição + vedação à autopromoção (art. 37, §1º).",
-      regraMental: "LIMPE: Legalidade, Impessoalidade, Moralidade, Publicidade, Eficiência."
     },
     comentario: {
       resolucao: "CERTO. A impessoalidade determina que o agente atue em nome do interesse público, sem favorecer ou prejudicar pessoas, e proíbe a promoção pessoal do servidor por meio de obras e campanhas públicas (CF, art. 37, § 1º).",
@@ -394,12 +314,7 @@ const QUESTOES_PCAL_LOTE4 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "deveres éticos",
     cognitivo: {
       motivo: "Cobrar a natureza cogente dos deveres éticos de urbanidade do servidor.",
-      mede: "Ética no setor público (item 5).",
-      pegadinhaDesc: "A banca costuma rebaixar tais condutas a mera cortesia facultativa.",
-      ondeErra: "Trata urbanidade como opção, não como dever funcional.",
       palavraCritica: "deveres éticos (não liberalidades)",
-      tecnica: "Urbanidade/cortesia são deveres funcionais — sua ausência configura desídia ética.",
-      regraMental: "Tratar bem o cidadão é DEVER, não favor do servidor."
     },
     comentario: {
       resolucao: "CERTO. Os códigos de ética do serviço público tratam a cortesia, a presteza e o zelo como deveres funcionais, e não como gentilezas facultativas. A qualidade do atendimento é elemento da moralidade administrativa e da eficiência.",
@@ -419,12 +334,7 @@ const QUESTOES_PCAL_LOTE4 = [
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "replica automaticamente",
     cognitivo: {
       motivo: "Distinguir trojan, vírus e worm.",
-      mede: "Noções de vírus, worms e pragas virtuais (item 5.2).",
-      pegadinhaDesc: "Atribui ao trojan a característica do WORM (autorreplicação pela rede).",
-      ondeErra: "Confunde as três pragas: vírus (hospedeiro), worm (autorreplica), trojan (disfarce).",
       palavraCritica: "replica automaticamente = worm (não trojan)",
-      tecnica: "Vírus: precisa de hospedeiro + ação. Worm: autorreplica sozinho na rede. Trojan: se disfarça de programa legítimo.",
-      regraMental: "Trojan = 'presente de grego' (disfarce). Worm = 'verme que se multiplica'. Vírus = 'gruda em arquivo'."
     },
     comentario: {
       resolucao: "ERRADO. Quem se replica automaticamente pela rede, sem hospedeiro nem ação do usuário, é o WORM. O cavalo de Troia (trojan) disfarça-se de programa legítimo para induzir a execução e abrir portas/rouba dados, mas não se autorreplica.",
@@ -442,12 +352,7 @@ const QUESTOES_PCAL_LOTE4 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "par de chaves",
     cognitivo: {
       motivo: "Cobrar o funcionamento da criptografia de chave pública.",
-      mede: "Criptografia e ferramentas (item 4 da Segurança Cibernética).",
-      pegadinhaDesc: "A banca costuma dizer que a mesma chave cifra e decifra (isso é a simétrica).",
-      ondeErra: "Confunde assimétrica (par de chaves) com simétrica (chave única).",
       palavraCritica: "pública cifra / privada decifra",
-      tecnica: "Simétrica: 1 chave (rápida, problema de distribuição). Assimétrica: 2 chaves (pública + privada).",
-      regraMental: "Sigilo: cifra com a PÚBLICA do destinatário. Autenticidade/assinatura: cifra com a PRIVADA do emissor."
     },
     comentario: {
       resolucao: "CERTO. A criptografia assimétrica usa um par matematicamente relacionado (chave pública e chave privada). O que é cifrado por uma só é decifrado pela outra. Para sigilo, cifra-se com a pública do destinatário; para assinatura digital, cifra-se (assina-se) com a privada do emissor.",
@@ -465,12 +370,7 @@ const QUESTOES_PCAL_LOTE4 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "IDS detecta / IPS bloqueia",
     cognitivo: {
       motivo: "Distinguir IDS (detecção) de IPS (prevenção) e de firewall.",
-      mede: "Firewalls, IDS/IPS, segmentação de rede (item 3.1).",
-      pegadinhaDesc: "A banca costuma inverter — dizer que o IDS bloqueia e o IPS só alerta.",
-      ondeErra: "Troca o papel detectar × bloquear.",
       palavraCritica: "IDS = detecta; IPS = previne/bloqueia",
-      tecnica: "IDS = câmera de segurança (alerta). IPS = porta que tranca (bloqueia). Firewall = filtra por regras.",
-      regraMental: "A letra D de IDS = Detecção. A letra P de IPS = Prevenção (bloqueio ativo)."
     },
     comentario: {
       resolucao: "CERTO. O IDS monitora e alerta sobre atividades suspeitas (papel passivo/reativo); o IPS, além de detectar, atua ativamente bloqueando o tráfego malicioso. O firewall, por sua vez, filtra o tráfego conforme regras predefinidas.",
@@ -488,12 +388,7 @@ const QUESTOES_PCAL_LOTE4 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "SaaS",
     cognitivo: {
       motivo: "Cobrar os modelos de serviço em nuvem (IaaS, PaaS, SaaS).",
-      mede: "Computação na nuvem (item 3.6 e Segurança em Nuvem).",
-      pegadinhaDesc: "A banca costuma trocar SaaS por IaaS ou atribuir ao SaaS a gestão da infraestrutura.",
-      ondeErra: "Confunde os três modelos e o que cada um entrega ao usuário.",
       palavraCritica: "aplicação pronta (SaaS)",
-      tecnica: "IaaS = infraestrutura (máquinas). PaaS = plataforma (para desenvolver). SaaS = software pronto (usuário final).",
-      regraMental: "SaaS = 'usa o app' (Gmail). PaaS = 'programa no ambiente'. IaaS = 'aluga o servidor'."
     },
     comentario: {
       resolucao: "CERTO. No SaaS, o provedor entrega a aplicação pronta pela Internet (ex.: webmail, suítes online) e o usuário apenas a utiliza, sem responsabilidade sobre infraestrutura, SO ou manutenção. IaaS entrega infraestrutura; PaaS, plataforma de desenvolvimento.",
@@ -511,12 +406,7 @@ const QUESTOES_PCAL_LOTE4 = [
     gabarito: "E", pegadinha: "verdade-mais-falso", palavraChave: "duas senhas diferentes",
     cognitivo: {
       motivo: "Cobrar o conceito preciso de MFA (fatores de categorias distintas).",
-      mede: "Autenticação, MFA e SSO (item 6 e Segurança Digital).",
-      pegadinhaDesc: "Começa com a definição correta e emenda a conclusão falsa (duas senhas = MFA).",
-      ondeErra: "Aceita duas senhas (mesmo fator 'conhecimento') como multifator.",
       palavraCritica: "duas senhas (mesmo fator)",
-      tecnica: "MFA exige fatores de CATEGORIAS diferentes. Duas senhas são o mesmo fator (algo que se sabe).",
-      regraMental: "MFA = combinar categorias: saber (senha) + possuir (token/celular) + ser (biometria)."
     },
     comentario: {
       resolucao: "ERRADO. A primeira parte está correta, mas a conclusão é falsa: duas senhas pertencem ao MESMO fator (algo que o usuário sabe), logo não configuram MFA. A autenticação multifator exige combinar fatores de categorias distintas (ex.: senha + código no celular).",
@@ -534,12 +424,7 @@ const QUESTOES_PCAL_LOTE4 = [
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "acessível e disponível",
     cognitivo: {
       motivo: "Distinguir os pilares da tríade CID (Confidencialidade, Integridade, Disponibilidade).",
-      mede: "Princípios de confidencialidade, integridade e disponibilidade (item 1).",
-      pegadinhaDesc: "Descreve a DISPONIBILIDADE e a rotula como integridade.",
-      ondeErra: "Troca os pilares da tríade.",
       palavraCritica: "acessível/disponível = disponibilidade (não integridade)",
-      tecnica: "Confidencialidade: só quem pode vê. Integridade: não foi alterada indevidamente. Disponibilidade: acessível quando preciso.",
-      regraMental: "CID: Confidencialidade (sigilo), Integridade (exatidão), Disponibilidade (acesso)."
     },
     comentario: {
       resolucao: "ERRADO. A descrição (informação acessível quando necessária) corresponde à DISPONIBILIDADE. A integridade garante que a informação não seja alterada de forma indevida ou não autorizada, preservando sua exatidão e completude.",
@@ -559,12 +444,7 @@ const QUESTOES_PCAL_LOTE4 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "polícias penais",
     cognitivo: {
       motivo: "Cobrar a inclusão das polícias penais no art. 144 (EC 104/2019).",
-      mede: "Segurança pública — Título V, Cap. III (item do edital).",
-      pegadinhaDesc: "A banca costuma omitir as polícias penais ou negar sua previsão constitucional.",
-      ondeErra: "Desconhece a atualização do rol pela EC 104/2019.",
       palavraCritica: "polícias penais (EC 104/2019)",
-      tecnica: "O rol do art. 144 é taxativo. Memorize os órgãos, incluindo as polícias penais.",
-      regraMental: "Art. 144: PF, PRF, PFF (ferroviária), Polícias Civis, Militares, Bombeiros e Polícias Penais."
     },
     comentario: {
       resolucao: "CERTO. A EC 104/2019 incluiu as polícias penais (federal, estaduais e distrital) no art. 144 da CF, vinculadas ao órgão administrador do sistema penal. O rol constitucional dos órgãos de segurança pública é considerado taxativo pelo STF.",
@@ -582,12 +462,7 @@ const QUESTOES_PCAL_LOTE4 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "habeas data",
     cognitivo: {
       motivo: "Cobrar a finalidade do habeas data (art. 5º, LXXII).",
-      mede: "Direitos e garantias fundamentais — remédios constitucionais.",
-      pegadinhaDesc: "A banca costuma trocar habeas data por mandado de segurança ou por habeas corpus.",
-      ondeErra: "Confunde os remédios ou o objeto de cada um.",
       palavraCritica: "informações da própria pessoa",
-      tecnica: "HD: acesso/retificação de dados PESSOAIS do impetrante. MS: direito líquido e certo não amparado por HC/HD.",
-      regraMental: "Habeas DATA = seus DADOS. Habeas CORPUS = liberdade de locomoção. MI = norma faltante."
     },
     comentario: {
       resolucao: "CERTO. CF, art. 5º, LXXII: o habeas data assegura o conhecimento e a retificação de informações relativas à pessoa do impetrante em registros de entidades governamentais ou de caráter público. É personalíssimo quanto aos próprios dados.",
@@ -605,12 +480,7 @@ const QUESTOES_PCAL_LOTE4 = [
     gabarito: "E", pegadinha: "exigencia-inexistente", palavraChave: "prévia autorização",
     cognitivo: {
       motivo: "Cobrar a literalidade do art. 5º, XVI (aviso prévio × autorização).",
-      mede: "Direitos e garantias fundamentais.",
-      pegadinhaDesc: "Troca 'prévio aviso' por 'prévia autorização', criando exigência inexistente.",
-      ondeErra: "Confunde comunicar (aviso) com pedir permissão (autorização).",
       palavraCritica: "autorização (o correto é 'prévio aviso')",
-      tecnica: "Reunião: exige apenas AVISO prévio à autoridade — nunca autorização.",
-      regraMental: "Reunião pacífica, sem armas: independe de autorização; basta AVISAR antes."
     },
     comentario: {
       resolucao: "ERRADO. CF, art. 5º, XVI: a reunião pacífica, sem armas, em locais abertos ao público, independe de AUTORIZAÇÃO, exigindo-se apenas prévio AVISO à autoridade competente, e desde que não frustre outra reunião anteriormente convocada para o mesmo local. Exigir autorização é inconstitucional.",
@@ -630,12 +500,7 @@ const QUESTOES_PCAL_LOTE4 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "criadas por lei",
     cognitivo: {
       motivo: "Cobrar o regime de criação das autarquias (art. 37, XIX, CF).",
-      mede: "Organização administrativa — Administração indireta (item 1).",
-      pegadinhaDesc: "A banca costuma dizer que a autarquia é 'autorizada' por lei (regime das estatais) ou de direito privado.",
-      ondeErra: "Confunde criação por lei (autarquia/fundação pública de D. Público) com autorização por lei (EP/SEM/fundação privada).",
       palavraCritica: "criadas diretamente por lei",
-      tecnica: "Autarquia: lei CRIA. Empresa pública/SEM: lei AUTORIZA a criação (depende de registro).",
-      regraMental: "Direito público (autarquia) = a lei já cria. Direito privado (estatais) = a lei só autoriza."
     },
     comentario: {
       resolucao: "CERTO. As autarquias são pessoas jurídicas de direito público, criadas diretamente por lei específica (CF, art. 37, XIX), adquirindo personalidade com a vigência da lei — sem necessidade de registro. Já as empresas públicas e sociedades de economia mista têm sua criação apenas autorizada por lei.",
@@ -653,12 +518,7 @@ const QUESTOES_PCAL_LOTE4 = [
     gabarito: "E", pegadinha: "termo-absoluto", palavraChave: "todos os atos",
     cognitivo: {
       motivo: "Cobrar os limites da autoexecutoriedade.",
-      mede: "Atos administrativos — atributos (item 2.1).",
-      pegadinhaDesc: "Generaliza a autoexecutoriedade para TODOS os atos e dispensa lei/urgência.",
-      ondeErra: "Não sabe que a autoexecutoriedade só existe quando há previsão legal ou urgência.",
       palavraCritica: "todos / independentemente de previsão legal",
-      tecnica: "Autoexecutoriedade não é atributo de todo ato — depende de lei ou de urgência.",
-      regraMental: "Nem todo ato se autoexecuta: cobrança de multa, por exemplo, exige ação judicial."
     },
     comentario: {
       resolucao: "ERRADO. A autoexecutoriedade NÃO está presente em todos os atos: só se admite quando prevista em lei ou diante de situação de urgência. Ex.: a Administração não pode cobrar multa coercitivamente sem processo — precisa de execução judicial. A generalização torna o item falso.",
@@ -676,12 +536,7 @@ const QUESTOES_PCAL_LOTE4 = [
     gabarito: "E", pegadinha: "exigencia-inexistente", palavraChave: "tomada de preços e convite",
     cognitivo: {
       motivo: "Cobrar as modalidades de licitação da nova lei (art. 28).",
-      mede: "Licitações — modalidades (item 5.3).",
-      pegadinhaDesc: "Mantém tomada de preços e convite, que foram EXTINTAS pela Lei 14.133/2021.",
-      ondeErra: "Responde com as modalidades da lei antiga (8.666/1993).",
       palavraCritica: "tomada de preços e convite (extintas)",
-      tecnica: "Modalidades atuais (art. 28): pregão, concorrência, concurso, leilão e diálogo competitivo.",
-      regraMental: "A 14.133 MATOU tomada de preços e convite; CRIOU o diálogo competitivo."
     },
     comentario: {
       resolucao: "ERRADO. A Lei 14.133/2021 EXTINGUIU a tomada de preços e o convite. As modalidades atuais (art. 28) são: pregão, concorrência, concurso, leilão e diálogo competitivo. O diálogo competitivo é a novidade da lei.",
@@ -699,12 +554,7 @@ const QUESTOES_PCAL_LOTE4 = [
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "sanção pode ser delegada",
     cognitivo: {
       motivo: "Cobrar o ciclo de polícia e os limites de delegação (STF, RE 633.782).",
-      mede: "Poderes administrativos — poder de polícia (item 4.1).",
-      pegadinhaDesc: "Afirma que a SANÇÃO é delegável, quando o STF admite delegar consentimento e fiscalização, mas não ordem e sanção.",
-      ondeErra: "Não distingue as fases delegáveis das indelegáveis.",
       palavraCritica: "sanção (indelegável)",
-      tecnica: "Delegáveis a PJ de direito privado estatal: consentimento e fiscalização. Indelegáveis: ordem e sanção.",
-      regraMental: "Ciclo O-C-F-S: o 'miolo' (Consentimento e Fiscalização) delega; as 'pontas' (Ordem e Sanção) não."
     },
     comentario: {
       resolucao: "ERRADO. STF (RE 633.782, Tema 532): é constitucional a delegação, a estatais de capital majoritariamente público que prestem serviço exclusivo do Estado, apenas das fases de CONSENTIMENTO e FISCALIZAÇÃO. As fases de ORDEM (legislar) e SANÇÃO permanecem indelegáveis. A assertiva inverteu.",

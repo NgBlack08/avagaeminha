@@ -21,12 +21,7 @@ const QUESTOES_PCAL_LOTE3 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "assume o risco",
     cognitivo: {
       motivo: "Distinguir dolo eventual (art. 18, I, 2ª parte) de culpa consciente (art. 18, II) — divisor clássico em homicídios de trânsito.",
-      mede: "Elemento subjetivo nos crimes contra a pessoa.",
-      pegadinhaDesc: "Item conceitual correto; a banca costuma inverter — dizer que na culpa consciente o agente 'assume o risco'.",
-      ondeErra: "Confunde 'prever o resultado' (comum aos dois) com 'aceitar o resultado' (só o dolo eventual).",
       palavraCritica: "assume o risco × acredita que não ocorrerá",
-      tecnica: "Ambos PREVEEM. A diferença é a ATITUDE diante da previsão: aceita (dolo eventual) ou confia que evita (culpa consciente).",
-      regraMental: "Dolo eventual: 'foda-se, aconteça o que acontecer'. Culpa consciente: 'vai dar certo, eu controlo'."
     },
     comentario: {
       resolucao: "CERTO. CP, art. 18: no dolo eventual (I) o agente assume o risco de produzir o resultado; na culpa consciente (II) prevê o resultado mas confia que não se produzirá. A previsão é comum aos dois — o que muda é a aceitação (consentimento no resultado).",
@@ -44,12 +39,7 @@ const QUESTOES_PCAL_LOTE3 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "preterdoloso",
     cognitivo: {
       motivo: "Cobrar a natureza preterdolosa do art. 129, § 3º, e a incompatibilidade com a tentativa.",
-      mede: "Crimes qualificados pelo resultado / preterdolo.",
-      pegadinhaDesc: "Item correto; a banca costuma afirmar que o resultado morte também é doloso, ou que admite tentativa.",
-      ondeErra: "Confunde lesão seguida de morte (preterdolo) com homicídio (dolo na morte).",
       palavraCritica: "dolo na lesão + culpa na morte",
-      tecnica: "Se a morte fosse desejada/aceita = homicídio. Se sobreveio por culpa = lesão seguida de morte.",
-      regraMental: "Preterdolo = 'dolo no antecedente, culpa no consequente'. Sem dolo no resultado, não há o que 'tentar' nele."
     },
     comentario: {
       resolucao: "CERTO. CP, art. 129, § 3º: crime preterdoloso — dolo na lesão e culpa na morte. Como a tentativa exige dolo quanto ao resultado não alcançado, e a morte aqui é culposa, não se admite a forma tentada.",
@@ -69,12 +59,7 @@ const QUESTOES_PCAL_LOTE3 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "logo depois de subtraída",
     cognitivo: {
       motivo: "Diferenciar roubo próprio (violência ANTES/DURANTE) de roubo impróprio (violência DEPOIS da subtração) — art. 157, § 1º.",
-      mede: "Crimes contra o patrimônio (item 3 do edital).",
-      pegadinhaDesc: "Item literal correto; a banca costuma trocar 'logo depois' por 'antes' ou exigir grave ameaça (o impróprio só admite violência).",
-      ondeErra: "Não percebe que o momento da violência define próprio × impróprio.",
       palavraCritica: "logo depois de subtraída",
-      tecnica: "Violência ANTES para subtrair = roubo próprio. Violência DEPOIS para garantir = roubo impróprio.",
-      regraMental: "Impróprio: começou como furto e 'virou' roubo pela violência posterior. Só admite VIOLÊNCIA (não grave ameaça)."
     },
     comentario: {
       resolucao: "CERTO. CP, art. 157, § 1º: o roubo impróprio ocorre quando o agente, logo depois de subtraída a coisa, emprega violência ou grave ameaça contra pessoa para assegurar a impunidade do crime ou a detenção da coisa. (Obs.: doutrina majoritária exige que a subtração já tenha se iniciado.)",
@@ -92,12 +77,7 @@ const QUESTOES_PCAL_LOTE3 = [
     gabarito: "E", pegadinha: "exigencia-inexistente", palavraChave: "posse mansa, pacífica e desvigiada",
     cognitivo: {
       motivo: "Cobrar a Súmula 582 do STJ — teoria da apprehensio/amotio.",
-      mede: "Momento consumativo dos crimes patrimoniais.",
-      pegadinhaDesc: "Cria a exigência (superada) da 'posse mansa e pacífica' — teoria da ablatio, rejeitada pelo STJ.",
-      ondeErra: "Aplica a antiga exigência de retirada da esfera de vigilância.",
       palavraCritica: "somente ... posse mansa e pacífica",
-      tecnica: "Basta a inversão da posse, ainda que por breve tempo e mesmo sob perseguição imediata.",
-      regraMental: "Roubo/furto: consuma com a APREENSÃO (tirou da vítima), não precisa fugir em paz com o bem."
     },
     comentario: {
       resolucao: "ERRADO. Súmula 582/STJ: consuma-se o roubo com a inversão da posse mediante violência ou grave ameaça, ainda que por breve tempo e em seguida à perseguição imediata, sendo PRESCINDÍVEL a posse mansa e pacífica ou desvigiada. Adota-se a teoria da apprehensio (amotio).",
@@ -116,12 +96,7 @@ const QUESTOES_PCAL_LOTE3 = [
     gabarito: "C", pegadinha: "juris-mais-lei", palavraChave: "independentemente da obtenção",
     cognitivo: {
       motivo: "Cobrar a natureza formal da extorsão (Súmula 96 STJ) e o critério que a separa do roubo.",
-      mede: "Distinção roubo × extorsão nos crimes patrimoniais.",
-      pegadinhaDesc: "A banca costuma dizer que a extorsão exige a efetiva obtenção da vantagem (crime material) — o oposto do correto.",
-      ondeErra: "Trata a extorsão como material e exige o resultado patrimonial.",
       palavraCritica: "independentemente da obtenção",
-      tecnica: "Extorsão: a vítima COLABORA (faz/tolera/deixa de fazer). Roubo: o agente SUBTRAI diretamente. Extorsão é formal.",
-      regraMental: "Súmula 96 STJ: extorsão consuma sem a vantagem. Comportamento imprescindível da vítima = extorsão."
     },
     comentario: {
       resolucao: "CERTO. CP, art. 158; Súmula 96/STJ: 'O crime de extorsão consuma-se independentemente da obtenção da vantagem indevida.' É crime formal. Diferencia-se do roubo porque, na extorsão, a conduta da vítima é imprescindível (ela é constrangida a colaborar).",
@@ -139,12 +114,7 @@ const QUESTOES_PCAL_LOTE3 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "condicionada à representação",
     cognitivo: {
       motivo: "Cobrar a mudança do Pacote Anticrime no art. 171, § 5º, do CP — tema de alta atualidade.",
-      mede: "Ação penal nos crimes patrimoniais + alteração legislativa recente.",
-      pegadinhaDesc: "A banca costuma manter 'incondicionada' (regime antigo) ou omitir as exceções.",
-      ondeErra: "Responde com o regime anterior à Lei 13.964/2019 (era incondicionada).",
       palavraCritica: "condicionada à representação (regra) + exceções",
-      tecnica: "Novidade legislativa recente = cobrança literal. Guarde as exceções (vítimas vulneráveis / Administração).",
-      regraMental: "Estelionato hoje: em regra depende de representação. Vítima frágil ou o Estado → incondicionada."
     },
     comentario: {
       resolucao: "CERTO. CP, art. 171, § 5º (incluído pela Lei 13.964/2019): a ação penal é pública condicionada à representação, salvo se a vítima for a Administração Pública (direta ou indireta), criança/adolescente, pessoa com deficiência mental, maior de 70 anos ou incapaz.",
@@ -165,12 +135,7 @@ const QUESTOES_PCAL_LOTE3 = [
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "perseguido, logo após",
     cognitivo: {
       motivo: "Distinguir as modalidades do art. 302 do CPP — próprio, impróprio e presumido.",
-      mede: "Prisão em flagrante (tema campeão em provas de carreira policial).",
-      pegadinhaDesc: "Descreve corretamente o flagrante IMPRÓPRIO (inciso III) e o rotula como PRÓPRIO.",
-      ondeErra: "Sabe a definição, mas não pareia com o nome certo da modalidade.",
       palavraCritica: "perseguido, logo após = impróprio (não próprio)",
-      tecnica: "Está cometendo / acaba de cometer = próprio (I e II). Perseguido logo após = impróprio (III). Encontrado logo depois = presumido (IV).",
-      regraMental: "Próprio = 'no ato'. Impróprio = 'perseguição'. Presumido = 'achado com a prova'."
     },
     comentario: {
       resolucao: "ERRADO. A situação descrita (perseguido, logo após, em presunção de autoria) é o flagrante IMPRÓPRIO (quase-flagrante), do art. 302, III, do CPP. O flagrante próprio (I e II) ocorre quando o agente está cometendo ou acaba de cometer a infração.",
@@ -188,12 +153,7 @@ const QUESTOES_PCAL_LOTE3 = [
     gabarito: "C", pegadinha: "juris-mais-lei", palavraChave: "torna impossível a consumação",
     cognitivo: {
       motivo: "Cobrar a Súmula 145 do STF (flagrante preparado/provocado = crime impossível) e a distinção do flagrante esperado.",
-      mede: "Validade das espécies anômalas de flagrante.",
-      pegadinhaDesc: "A banca costuma inverter — dizer que o flagrante esperado gera crime impossível, ou que o preparado é válido.",
-      ondeErra: "Confunde flagrante preparado (inválido) com flagrante esperado (válido).",
       palavraCritica: "preparação pela polícia torna impossível a consumação",
-      tecnica: "Preparado/provocado (agente é induzido) = crime impossível. Esperado (polícia só aguarda) = válido.",
-      regraMental: "Súmula 145 STF: se a polícia PROVOCOU e blindou o resultado, não há crime."
     },
     comentario: {
       resolucao: "CERTO. Súmula 145/STF: 'Não há crime, quando a preparação do flagrante pela polícia torna impossível a sua consumação.' É o flagrante preparado (provocado) — crime impossível (CP, art. 17). Diferente é o flagrante esperado, em que a polícia apenas aguarda a ação já em curso: este é válido.",
@@ -211,12 +171,7 @@ const QUESTOES_PCAL_LOTE3 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "enquanto não cessar a permanência",
     cognitivo: {
       motivo: "Cobrar o art. 303 do CPP e a relação com a inviolabilidade domiciliar (art. 5º, XI, CF).",
-      mede: "Flagrante em crime permanente + ingresso domiciliar.",
-      pegadinhaDesc: "Item correto; a banca costuma exigir mandado ou restringir ao período diurno mesmo no crime permanente.",
-      ondeErra: "Aplica a regra do 'durante o dia' (que vale para mandado) ao flagrante permanente.",
       palavraCritica: "enquanto não cessar a permanência",
-      tecnica: "Crime permanente = flagrância contínua = flagrante a qualquer hora, inclusive em domicílio.",
-      regraMental: "Tráfico (guardar/ter em depósito) e cárcere privado: flagrante 24h, ingresso lícito para cessar."
     },
     comentario: {
       resolucao: "CERTO. CPP, art. 303: nas infrações permanentes, o agente está em flagrante enquanto não cessar a permanência. Como o flagrante autoriza o ingresso domiciliar a qualquer hora (CF, art. 5º, XI), é lícito entrar para fazer cessar o tráfico na modalidade permanente ('ter em depósito', 'guardar').",
@@ -235,12 +190,7 @@ const QUESTOES_PCAL_LOTE3 = [
     gabarito: "E", pegadinha: "troca-numerica", palavraChave: "setenta e duas horas",
     cognitivo: {
       motivo: "Cobrar o prazo da audiência de custódia (art. 310 do CPP).",
-      mede: "Controle judicial da prisão em flagrante.",
-      pegadinhaDesc: "Troca o prazo de 24h por 72h — pegadinha numérica típica.",
-      ondeErra: "Não memorizou o prazo exato (24 horas).",
       palavraCritica: "setenta e duas horas (o correto é 24)",
-      tecnica: "Prazos são ponto de checagem obrigatório: audiência de custódia = 24h da prisão.",
-      regraMental: "Flagrante → juiz em 24h. Não confundir com o prazo do IP ou com outras 72h."
     },
     comentario: {
       resolucao: "ERRADO. CPP, art. 310: o juiz deve promover a audiência de custódia em até 24 (vinte e quatro) horas após a prisão, com a apresentação do preso, ocasião em que decidirá pelo relaxamento, conversão em preventiva, concessão de liberdade (com ou sem cautelares) ou fiança.",

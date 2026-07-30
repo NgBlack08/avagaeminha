@@ -24,12 +24,7 @@ const QUESTOES_PCAL_LOTE45 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "segurança ... expressamente previsto no art. 6º",
     cognitivo: {
       motivo: "Cobrar a literalidade do rol do art. 6º da CF, no qual a segurança figura expressamente como direito social.",
-      mede: "Direito Constitucional — direitos sociais (rol do art. 6º).",
-      pegadinhaDesc: "A banca pode afirmar que a segurança é apenas direito individual (art. 5º) ou direito implícito, não constando expressamente do art. 6º.",
-      ondeErra: "Acha que a segurança só aparece no caput do art. 5º, ignorando sua previsão expressa também no art. 6º como direito social.",
       palavraCritica: "expressamente previsto no art. 6º",
-      tecnica: "O art. 6º da CF elenca, de forma expressa e não exaustiva, os direitos sociais: educação, saúde, alimentação, trabalho, moradia, transporte, lazer, segurança, previdência social, proteção à maternidade e à infância e assistência aos desamparados. A segurança não é direito implícito nesse rol — o constituinte a nomeou literalmente no caput.",
-      regraMental: "Segurança aparece duas vezes na CF: art. 5º (garantia individual) e art. 6º (direito social) — ambas expressas."
     },
     comentario: {
       resolucao: "CERTO. A segurança integra expressamente o rol de direitos sociais do art. 6º da CF, ao lado da educação, saúde, alimentação, trabalho, moradia, transporte, lazer, previdência social, proteção à maternidade e à infância e assistência aos desamparados — não se trata de direito implícito.",
@@ -48,12 +43,7 @@ const QUESTOES_PCAL_LOTE45 = [
     gabarito: "E", pegadinha: "termo-absoluto", palavraChave: "não consta expressamente ... direito implícito",
     cognitivo: {
       motivo: "Cobrar, na forma invertida, que a segurança consta expressamente (e não implicitamente) do rol do art. 6º.",
-      mede: "Direito Constitucional — direitos sociais (rol do art. 6º).",
-      pegadinhaDesc: "A banca nega a previsão expressa da segurança no art. 6º, tratando-a como direito meramente implícito.",
-      ondeErra: "Acredita que a segurança só decorre de interpretação sistemática, sem estar literalmente prevista no caput do art. 6º.",
       palavraCritica: "não consta expressamente ... direito implícito",
-      tecnica: "O art. 6º da CF menciona a segurança de forma expressa e literal no seu caput, ao lado dos demais direitos sociais (educação, saúde, alimentação, trabalho, moradia, transporte, lazer, previdência social, proteção à maternidade e à infância e assistência aos desamparados) — não se trata de direito implícito ou decorrente de interpretação sistemática.",
-      regraMental: "A segurança está escrita literalmente no art. 6º — não é preciso 'interpretar' para encontrá-la."
     },
     comentario: {
       resolucao: "ERRADO. A segurança consta expressamente do rol de direitos sociais do art. 6º da CF, mencionada literalmente no caput do dispositivo — não se trata de direito implícito nem decorrente de interpretação sistemática, como afirma o item.",
@@ -74,12 +64,7 @@ const QUESTOES_PCAL_LOTE45 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "renda básica familiar ... programa permanente ... determinados em lei",
     cognitivo: {
       motivo: "Cobrar a literalidade do parágrafo único do art. 6º, incluído pela EC 114/2021, sobre a renda básica familiar.",
-      mede: "Direito Constitucional — direitos sociais (renda básica familiar).",
-      pegadinhaDesc: "A banca pode afirmar que a renda básica familiar é um benefício automático, sem necessidade de regulamentação legal.",
-      ondeErra: "Ignora que a norma é de eficácia limitada, dependendo de lei para definir normas e requisitos de acesso.",
       palavraCritica: "cujas normas e requisitos de acesso serão determinados em lei",
-      tecnica: "O parágrafo único do art. 6º da CF, acrescido pela EC 114/2021, assegura a todo brasileiro em situação de vulnerabilidade social o direito a uma renda básica familiar, garantida pelo poder público em programa permanente de transferência de renda. Trata-se de norma de eficácia limitada: as normas e os requisitos de acesso são determinados em lei, observada a legislação fiscal e orçamentária — dá lastro constitucional a programas como o Bolsa Família.",
-      regraMental: "Renda básica familiar (art. 6º, p. único): direito constitucional, mas eficácia limitada — depende de lei."
     },
     comentario: {
       resolucao: "CERTO. O parágrafo único do art. 6º da CF, acrescido pela EC 114/2021, assegura a todo brasileiro em situação de vulnerabilidade social o direito a uma renda básica familiar, garantida pelo poder público em programa permanente de transferência de renda, cujas normas e requisitos de acesso são determinados em lei, observada a legislação fiscal e orçamentária.",
@@ -98,12 +83,7 @@ const QUESTOES_PCAL_LOTE45 = [
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "eficácia plena e imediata ... independentemente de regulamentação",
     cognitivo: {
       motivo: "Cobrar, na forma invertida, que o direito à renda básica familiar é norma de eficácia limitada, dependente de lei.",
-      mede: "Direito Constitucional — direitos sociais (renda básica familiar).",
-      pegadinhaDesc: "A banca classifica a norma como de eficácia plena e imediata, quando na verdade é de eficácia limitada.",
-      ondeErra: "Ignora a expressão constitucional 'cujas normas e requisitos de acesso serão determinados em lei', que caracteriza eficácia limitada.",
       palavraCritica: "eficácia plena e imediata ... independentemente de regulamentação",
-      tecnica: "O parágrafo único do art. 6º da CF condiciona expressamente a renda básica familiar à definição, em lei, das normas e requisitos de acesso, observada a legislação fiscal e orçamentária — trata-se, portanto, de norma de eficácia limitada, e não de eficácia plena ou imediata.",
-      regraMental: "'Determinados em lei' na Constituição = eficácia limitada, nunca plena/imediata."
     },
     comentario: {
       resolucao: "ERRADO. O direito à renda básica familiar (art. 6º, parágrafo único, da CF) é norma de eficácia limitada, e não de eficácia plena e imediata — suas normas e requisitos de acesso dependem de definição em lei, observada a legislação fiscal e orçamentária.",
@@ -124,12 +104,7 @@ const QUESTOES_PCAL_LOTE45 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "oito horas diárias ... quarenta e quatro semanais ... acordo ou convenção coletiva",
     cognitivo: {
       motivo: "Cobrar a literalidade do art. 7º, XIII, sobre a jornada de trabalho e sua flexibilização por negociação coletiva.",
-      mede: "Direito Constitucional — direitos sociais (jornada de trabalho).",
-      pegadinhaDesc: "A banca pode negar a possibilidade de flexibilização por acordo/convenção coletiva, tratando o limite como absoluto e imutável.",
-      ondeErra: "Acha que a jornada de 8h/44h é rígida, sem qualquer possibilidade de compensação ou redução via negociação coletiva.",
       palavraCritica: "facultada a compensação ... acordo ou convenção coletiva",
-      tecnica: "O art. 7º, XIII, da CF fixa a duração do trabalho normal em não superior a 8 horas diárias e 44 semanais, mas a própria Constituição admite flexibilização: são facultadas a compensação de horários e a redução da jornada mediante acordo ou convenção coletiva de trabalho.",
-      regraMental: "8h/44h é o teto, mas pode ser flexibilizado por acordo ou convenção coletiva — a CF já prevê essa via."
     },
     comentario: {
       resolucao: "CERTO. O art. 7º, XIII, da CF garante a duração do trabalho normal não superior a 8 horas diárias e 44 semanais, facultando a compensação de horários e a redução da jornada mediante acordo ou convenção coletiva de trabalho — a própria Constituição admite essa flexibilização.",
@@ -148,12 +123,7 @@ const QUESTOES_PCAL_LOTE45 = [
     gabarito: "E", pegadinha: "termo-absoluto", palavraChave: "limite rígido e inflexível ... não sendo admitida ... compensação ou redução",
     cognitivo: {
       motivo: "Cobrar, na forma invertida, que a jornada de 8h/44h admite compensação e redução por acordo ou convenção coletiva.",
-      mede: "Direito Constitucional — direitos sociais (jornada de trabalho).",
-      pegadinhaDesc: "A banca trata o limite constitucional como absolutamente rígido, negando a flexibilização prevista no próprio inciso.",
-      ondeErra: "Ignora a parte final do art. 7º, XIII, que faculta a compensação de horários e a redução da jornada mediante negociação coletiva.",
       palavraCritica: "limite rígido e inflexível ... não sendo admitida",
-      tecnica: "O art. 7º, XIII, da CF, além de fixar o limite de 8 horas diárias e 44 semanais, faculta expressamente a compensação de horários e a redução da jornada mediante acordo ou convenção coletiva de trabalho — o limite não é rígido nem inflexível.",
-      regraMental: "A CF já prevê a flexibilização da jornada no próprio inciso — nunca é 'inflexível'."
     },
     comentario: {
       resolucao: "ERRADO. O art. 7º, XIII, da CF admite expressamente a compensação de horários e a redução da jornada de trabalho mediante acordo ou convenção coletiva — o limite de 8h/44h não é rígido nem inflexível, ao contrário do que afirma o item.",
@@ -174,12 +144,7 @@ const QUESTOES_PCAL_LOTE45 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "proporcional ao tempo de serviço ... no mínimo, trinta dias",
     cognitivo: {
       motivo: "Cobrar a literalidade do art. 7º, XXI: aviso prévio proporcional ao tempo de serviço, com piso (não teto) de 30 dias.",
-      mede: "Direito Constitucional — direitos sociais (aviso prévio).",
-      pegadinhaDesc: "A banca pode inverter a lógica, tratando os 30 dias como teto máximo e o direito como independente do tempo de serviço.",
-      ondeErra: "Troca 'no mínimo' por 'no máximo' e ignora a proporcionalidade ao tempo de serviço.",
       palavraCritica: "no mínimo, trinta dias ... não um teto ... nem independente do tempo de serviço",
-      tecnica: "O art. 7º, XXI, da CF garante aviso prévio proporcional ao tempo de serviço, sendo o piso de, no mínimo, 30 dias, nos termos da lei. A Lei nº 12.506/2011 acresce dias ao aviso prévio conforme os anos trabalhados — quanto maior o tempo de serviço, maior o aviso prévio, sempre a partir do piso constitucional.",
-      regraMental: "Aviso prévio: piso de 30 dias (mínimo, não máximo), proporcional ao tempo de serviço — quanto mais tempo, mais dias."
     },
     comentario: {
       resolucao: "CERTO. O art. 7º, XXI, da CF garante aviso prévio proporcional ao tempo de serviço, sendo o piso constitucional de, no mínimo, 30 dias — e não um teto máximo, nem um direito independente do tempo de serviço prestado, conforme reforça a Lei nº 12.506/2011.",
@@ -198,12 +163,7 @@ const QUESTOES_PCAL_LOTE45 = [
     gabarito: "E", pegadinha: "troca-numerica", palavraChave: "no máximo, trinta dias ... independentemente do tempo de serviço",
     cognitivo: {
       motivo: "Cobrar, na forma invertida, que os 30 dias são piso (mínimo) e o aviso prévio é proporcional ao tempo de serviço, não um teto fixo.",
-      mede: "Direito Constitucional — direitos sociais (aviso prévio).",
-      pegadinhaDesc: "A banca inverte a lógica constitucional em dois pontos simultâneos: 'mínimo' vira 'máximo', e a proporcionalidade ao tempo de serviço é negada.",
-      ondeErra: "Aceita que 30 dias seja o teto do aviso prévio e que o tempo de serviço seja irrelevante para seu cálculo.",
       palavraCritica: "no máximo, trinta dias ... independentemente do tempo de serviço",
-      tecnica: "O art. 7º, XXI, da CF garante aviso prévio PROPORCIONAL ao tempo de serviço, sendo o piso de, no MÍNIMO, 30 dias — e não um teto máximo. A Lei 12.506/2011 acresce dias conforme os anos trabalhados, podendo o aviso prévio ultrapassar largamente os 30 dias iniciais.",
-      regraMental: "Nunca é 'no máximo 30 dias' — é sempre 'no mínimo 30 dias', crescendo com o tempo de serviço."
     },
     comentario: {
       resolucao: "ERRADO. O art. 7º, XXI, da CF garante aviso prévio PROPORCIONAL ao tempo de serviço, sendo o piso de, no MÍNIMO, 30 dias — e não um teto máximo, nem um direito independente do tempo de serviço, como afirma o item. A questão inverte a lógica constitucional em dois pontos.",
@@ -224,12 +184,7 @@ const QUESTOES_PCAL_LOTE45 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "vedado ... noturno, perigoso ou insalubre ... menores de dezoito",
     cognitivo: {
       motivo: "Cobrar o tripé etário do art. 7º, XXXIII: aprendiz a partir de 14, trabalho como regra a partir de 16, proibição de noturno/perigoso/insalubre até os 18.",
-      mede: "Direito Constitucional — direitos sociais (trabalho do menor).",
-      pegadinhaDesc: "A banca pode afirmar que o menor entre 16 e 18 anos pode exercer trabalho noturno, já que a idade mínima geral é 16.",
-      ondeErra: "Confunde a idade mínima geral para o trabalho (16 anos) com a proibição específica de trabalho noturno/perigoso/insalubre (até 18 anos).",
       palavraCritica: "vedado ... noturno, perigoso ou insalubre ... menores de dezoito",
-      tecnica: "O art. 7º, XXXIII, da CF proíbe trabalho noturno, perigoso ou insalubre a menores de 18 anos, e qualquer trabalho a menores de 16, salvo na condição de aprendiz a partir dos 14. Assim, mesmo o menor entre 16 e 18 anos — que já pode trabalhar como regra — permanece proibido de exercer trabalho noturno, perigoso ou insalubre.",
-      regraMental: "Tripé etário: 14 (só aprendiz), 16 (trabalho permitido como regra), 18 (proibido noturno/perigoso/insalubre até essa idade)."
     },
     comentario: {
       resolucao: "CERTO. O art. 7º, XXXIII, da CF veda o trabalho noturno, perigoso ou insalubre a menores de 18 anos — proibição que alcança inclusive o menor entre 16 e 18 anos, ainda que este já possa exercer trabalho em regra a partir dos 16 anos de idade.",
@@ -248,12 +203,7 @@ const QUESTOES_PCAL_LOTE45 = [
     gabarito: "E", pegadinha: "generalizacao", palavraChave: "permitido ... trabalho noturno ... cessam todas as restrições",
     cognitivo: {
       motivo: "Cobrar, na forma invertida, que a proibição de trabalho noturno/perigoso/insalubre persiste até os 18 anos, mesmo após completados os 16.",
-      mede: "Direito Constitucional — direitos sociais (trabalho do menor).",
-      pegadinhaDesc: "A banca generaliza que, ao atingir a idade mínima de 16 anos, todas as restrições especiais de trabalho desaparecem.",
-      ondeErra: "Não distingue a idade mínima geral para o trabalho (16 anos) da proibição específica de trabalho noturno/perigoso/insalubre, que persiste até os 18.",
       palavraCritica: "cessam todas as restrições ... entre dezesseis e dezoito",
-      tecnica: "Embora o menor possa trabalhar, como regra, a partir dos 16 anos, a proibição de trabalho noturno, perigoso ou insalubre (art. 7º, XXXIII) persiste até os 18 anos completos — a idade mínima geral (16) e o limite da proibição especial (18) são marcos distintos, que a banca costuma embaralhar.",
-      regraMental: "16 anos libera o trabalho em regra, mas não libera noturno/perigoso/insalubre — isso só cessa aos 18."
     },
     comentario: {
       resolucao: "ERRADO. É vedado, e não permitido, o trabalho noturno ao menor entre 16 e 18 anos de idade (art. 7º, XXXIII, da CF). A proibição de trabalho noturno, perigoso ou insalubre persiste até os 18 anos completos, ainda que o menor já possa trabalhar em regra a partir dos 16.",
@@ -274,12 +224,7 @@ const QUESTOES_PCAL_LOTE45 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "não se estende ... integralidade ... rol específico de incisos",
     cognitivo: {
       motivo: "Cobrar que os trabalhadores domésticos não possuem a integralidade dos direitos do caput do art. 7º, apesar da ampliação trazida pela EC 72/2013.",
-      mede: "Direito Constitucional — direitos sociais (trabalhadores domésticos).",
-      pegadinhaDesc: "A banca pode afirmar que a EC 72/2013 igualou totalmente os direitos dos domésticos aos dos demais trabalhadores urbanos e rurais.",
-      ondeErra: "Acha que a EC 72/2013 estendeu a integralidade dos direitos do caput aos trabalhadores domésticos.",
       palavraCritica: "não se estende ... integralidade",
-      tecnica: "O parágrafo único do art. 7º da CF estende aos trabalhadores domésticos apenas um rol específico de incisos do caput — e não a totalidade dos direitos assegurados aos trabalhadores urbanos e rurais. Embora a EC 72/2013 tenha ampliado significativamente essa proteção, não houve equiparação plena.",
-      regraMental: "Domésticos: rol específico de incisos estendidos (EC 72/2013 ampliou, mas não igualou por completo)."
     },
     comentario: {
       resolucao: "CERTO. O parágrafo único do art. 7º da CF estende aos trabalhadores domésticos apenas um rol específico de incisos do caput, e não a integralidade dos direitos trabalhistas assegurados aos trabalhadores urbanos e rurais — mesmo após a ampliação promovida pela EC 72/2013.",
@@ -298,12 +243,7 @@ const QUESTOES_PCAL_LOTE45 = [
     gabarito: "E", pegadinha: "termo-absoluto", palavraChave: "integralidade dos direitos ... equiparando-se por completo",
     cognitivo: {
       motivo: "Cobrar, na forma invertida, que a EC 72/2013 ampliou, mas não igualou por completo, os direitos dos trabalhadores domésticos.",
-      mede: "Direito Constitucional — direitos sociais (trabalhadores domésticos).",
-      pegadinhaDesc: "A banca afirma uma equiparação total que não ocorreu, mesmo após a EC 72/2013.",
-      ondeErra: "Assume que a EC 72/2013 eliminou toda e qualquer diferença de tratamento entre trabalhadores domésticos e urbanos/rurais.",
       palavraCritica: "integralidade dos direitos ... equiparando-se por completo",
-      tecnica: "O parágrafo único do art. 7º da CF, mesmo após a EC 72/2013, continua estendendo aos trabalhadores domésticos apenas um rol específico de incisos do caput — não há equiparação plena com os trabalhadores urbanos e rurais, que gozam da integralidade dos direitos do artigo.",
-      regraMental: "EC 72/2013 ampliou muito, mas 'integralidade' e 'equiparação completa' continuam sendo erro."
     },
     comentario: {
       resolucao: "ERRADO. Mesmo após a EC 72/2013, não se estende aos trabalhadores domésticos a integralidade dos direitos trabalhistas assegurados aos urbanos e rurais — o parágrafo único do art. 7º continua limitando a extensão a um rol específico de incisos do caput, sem equiparação completa entre as categorias.",
@@ -324,12 +264,7 @@ const QUESTOES_PCAL_LOTE45 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "compete aos trabalhadores ... à lei ... definir os serviços ... essenciais",
     cognitivo: {
       motivo: "Cobrar que a definição de serviços/atividades essenciais durante a greve é reserva legal, e não atribuição do sindicato.",
-      mede: "Direito Constitucional — direitos sociais (direito de greve).",
-      pegadinhaDesc: "A banca pode atribuir ao sindicato da categoria a competência de definir os serviços essenciais durante a greve.",
-      ondeErra: "Confunde a competência dos trabalhadores (decidir sobre a oportunidade e os interesses da greve) com a competência da lei (definir serviços essenciais).",
       palavraCritica: "à lei ... e não ao sindicato",
-      tecnica: "O art. 9º, caput, da CF assegura o direito de greve, competindo aos trabalhadores decidir sobre a oportunidade de exercê-lo e sobre os interesses a defender. Já o § 1º atribui à LEI — e não ao sindicato da categoria — a definição dos serviços ou atividades essenciais e a disciplina do atendimento das necessidades inadiáveis da comunidade.",
-      regraMental: "Trabalhadores decidem SE e POR QUÊ fazer greve. A LEI (não o sindicato) decide o que é serviço essencial."
     },
     comentario: {
       resolucao: "CERTO. Compete aos trabalhadores decidir sobre a oportunidade de exercer a greve e sobre os interesses a defender (art. 9º, caput, da CF), cabendo à lei — e não ao sindicato da categoria — definir os serviços ou atividades essenciais e dispor sobre o atendimento das necessidades inadiáveis da comunidade (art. 9º, § 1º).",
@@ -348,12 +283,7 @@ const QUESTOES_PCAL_LOTE45 = [
     gabarito: "E", pegadinha: "troca-sujeito", palavraChave: "cabe ao sindicato ... sem interferência do Poder Legislativo",
     cognitivo: {
       motivo: "Cobrar, na forma invertida, que é a lei — e não o sindicato — quem define os serviços essenciais durante a greve.",
-      mede: "Direito Constitucional — direitos sociais (direito de greve).",
-      pegadinhaDesc: "A banca troca o sujeito competente (lei) pelo sindicato da categoria, invertendo a reserva legal do art. 9º, § 1º.",
-      ondeErra: "Acredita que o sindicato, por representar a categoria em greve, tem competência para definir os serviços essenciais.",
       palavraCritica: "cabe ao sindicato ... sem interferência do Poder Legislativo",
-      tecnica: "O art. 9º, § 1º, da CF atribui à LEI — e não ao sindicato da categoria — a definição dos serviços ou atividades essenciais e a disciplina do atendimento das necessidades inadiáveis da comunidade. Se essa definição ficasse a critério de quem faz a greve, haveria risco de abuso, o que a própria Constituição busca evitar por meio da reserva legal.",
-      regraMental: "Serviços essenciais na greve: sempre reserva de LEI, nunca decisão do sindicato."
     },
     comentario: {
       resolucao: "ERRADO. Quem define os serviços ou atividades essenciais e dispõe sobre o atendimento das necessidades inadiáveis da comunidade é a LEI, e não o sindicato da categoria (art. 9º, § 1º, da CF) — a questão troca o sujeito competente, atribuindo ao sindicato uma reserva legal.",

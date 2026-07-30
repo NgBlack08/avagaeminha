@@ -24,12 +24,7 @@ const QUESTOES_PCAL_LOTE42 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "arrastar um ícone sobre outro ... criar automaticamente uma pasta",
     cognitivo: {
       motivo: "Cobrar o recurso de criação de pastas no Menu Iniciar do Windows 11 e a diferença em relação ao Windows 10.",
-      mede: "Informática — Sistemas Operacionais (Windows 11, Menu Iniciar).",
-      pegadinhaDesc: "A banca pode negar a existência desse recurso ou atribuí-lo também ao Windows 10.",
-      ondeErra: "Acha que o recurso de pastas por arraste já existia da mesma forma no Windows 10.",
       palavraCritica: "criar automaticamente uma pasta ... Live Tiles",
-      tecnica: "No Windows 11, arrastar um ícone de app fixado sobre outro cria uma pasta automaticamente (que pode ser renomeada), de forma semelhante a smartphones. O Windows 10 não tinha essa estrutura de pastas compactas, organizando os apps fixados apenas em grupos de blocos dinâmicos (Live Tiles).",
-      regraMental: "Windows 11: arrastar ícone sobre ícone = pasta. Windows 10: só Live Tiles, sem pastas assim."
     },
     comentario: {
       resolucao: "CERTO. No Windows 11, arrastar um ícone sobre outro na seção de aplicativos fixados cria automaticamente uma pasta, recurso que não existia dessa forma no Windows 10, que organizava os aplicativos fixados apenas em grupos de blocos dinâmicos (Live Tiles).",
@@ -48,12 +43,7 @@ const QUESTOES_PCAL_LOTE42 = [
     gabarito: "E", pegadinha: "troca-sujeito", palavraChave: "não permite ... exclusivo do Windows 10",
     cognitivo: {
       motivo: "Cobrar, na forma invertida, que é justamente o Windows 11 (e não o 10) que introduziu as pastas de aplicativos fixados.",
-      mede: "Informática — Sistemas Operacionais (Windows 11, Menu Iniciar).",
-      pegadinhaDesc: "A banca inverte a atribuição do recurso, colocando no Windows 10 uma funcionalidade do Windows 11.",
-      ondeErra: "Troca o sistema que possui o recurso: atribui ao Windows 10 uma novidade que é do Windows 11.",
       palavraCritica: "exclusivo do Windows 10",
-      tecnica: "É o Windows 11 que permite criar pastas por arraste de ícones no Menu Iniciar. O Windows 10, por sua vez, organizava os aplicativos fixados apenas em grupos de blocos dinâmicos (Live Tiles), sem essa estrutura de pastas.",
-      regraMental: "Pastas no Menu Iniciar = Windows 11. Live Tiles sem pastas = Windows 10."
     },
     comentario: {
       resolucao: "ERRADO. É o Windows 11, e não o Windows 10, que permite a criação de pastas para organizar os ícones dos aplicativos fixados no Menu Iniciar. O Windows 10 organizava os aplicativos fixados apenas em grupos de blocos dinâmicos (Live Tiles), sem essa estrutura de pastas.",
@@ -74,12 +64,7 @@ const QUESTOES_PCAL_LOTE42 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "centralizados por padrão ... realinhar à esquerda",
     cognitivo: {
       motivo: "Cobrar o novo design centralizado da barra de tarefas do Windows 11 e a possibilidade de personalização.",
-      mede: "Informática — Sistemas Operacionais (Windows 11, barra de tarefas).",
-      pegadinhaDesc: "A banca pode negar a possibilidade de realinhamento à esquerda, tratando o layout centralizado como fixo.",
-      ondeErra: "Acha que o layout centralizado é definitivo e não pode ser alterado pelo usuário.",
       palavraCritica: "por padrão ... possível ... realinhar",
-      tecnica: "No Windows 11, os ícones da barra de tarefas, incluindo o botão Iniciar, vêm centralizados por padrão. É possível realinhá-los à esquerda por meio de Configurações → Personalização → Barra de tarefas → Comportamentos da barra de tarefas → Alinhamento.",
-      regraMental: "Windows 11: centralizado é o padrão, mas dá para voltar à esquerda nas configurações."
     },
     comentario: {
       resolucao: "CERTO. No Windows 11, os ícones da barra de tarefas, incluindo o botão Iniciar, vêm centralizados por padrão, sendo possível realinhá-los à esquerda por meio das configurações da barra de tarefas, para quem prefere o estilo tradicional do Windows 10.",
@@ -98,12 +83,7 @@ const QUESTOES_PCAL_LOTE42 = [
     gabarito: "E", pegadinha: "termo-absoluto", palavraChave: "exclusivamente ... não havendo ... qualquer opção",
     cognitivo: {
       motivo: "Cobrar, na forma invertida, que o alinhamento centralizado do Windows 11 pode ser alterado pelo usuário.",
-      mede: "Informática — Sistemas Operacionais (Windows 11, barra de tarefas).",
-      pegadinhaDesc: "A banca afirma que a centralização é exclusiva e imutável, ignorando a opção de personalização.",
-      ondeErra: "Aceita a ideia de que o layout do Windows 11 não pode ser configurado pelo usuário.",
       palavraCritica: "exclusivamente ... não havendo ... qualquer opção",
-      tecnica: "Embora o layout centralizado seja o padrão do Windows 11, o sistema oferece, em Configurações → Personalização → Barra de tarefas, a opção de realinhar os ícones à esquerda, revertendo ao estilo usado no Windows 10.",
-      regraMental: "Centralizado é padrão, não é exclusivo — a opção de mudar para a esquerda existe."
     },
     comentario: {
       resolucao: "ERRADO. Embora o layout centralizado seja o padrão do Windows 11, o sistema permite, por meio das configurações da barra de tarefas, realinhar os ícones à esquerda — a centralização não é exclusiva nem imutável, ao contrário do que afirma o item.",
@@ -124,12 +104,7 @@ const QUESTOES_PCAL_LOTE42 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "Snap Layouts ... Windows+Z ... botão Maximizar",
     cognitivo: {
       motivo: "Cobrar a definição correta do Snap Layouts e suas formas de acionamento.",
-      mede: "Informática — Sistemas Operacionais (Windows 11, Snap Layouts).",
-      pegadinhaDesc: "A banca pode trocar o atalho de acionamento (ex.: Windows+Tab, que é a Visão de Tarefas).",
-      ondeErra: "Confunde o atalho do Snap Layouts (Windows+Z) com o da Visão de Tarefas (Windows+Tab).",
       palavraCritica: "Windows+Z ... botão Maximizar",
-      tecnica: "O Snap Layouts organiza várias janelas em layouts predefinidos na tela, sem necessidade de redimensionamento manual, podendo ser acionado pelo atalho Windows+Z, ao passar o mouse sobre o botão Maximizar, ou arrastando a janela até o topo da tela.",
-      regraMental: "Snap Layouts = Win+Z ou mouse no Maximizar. Não confundir com Win+Tab (Visão de Tarefas)."
     },
     comentario: {
       resolucao: "CERTO. O Snap Layouts oferece opções predefinidas para organizar várias janelas na tela de forma eficiente, podendo ser acionado pelo atalho Windows+Z ou ao posicionar o cursor sobre o botão Maximizar de uma janela, entre outras formas.",
@@ -148,12 +123,7 @@ const QUESTOES_PCAL_LOTE42 = [
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "Windows+Tab ... Visão de Tarefas",
     cognitivo: {
       motivo: "Cobrar, na forma invertida, que o Snap Layouts é acionado por Windows+Z, e não por Windows+Tab (atalho da Visão de Tarefas).",
-      mede: "Informática — Sistemas Operacionais (Windows 11, Snap Layouts x Visão de Tarefas).",
-      pegadinhaDesc: "A banca troca o atalho correto do Snap Layouts pelo atalho de outro recurso (Visão de Tarefas).",
-      ondeErra: "Confunde Snap Layouts (organização de janelas em layouts) com Visão de Tarefas (alternância entre janelas/áreas de trabalho).",
       palavraCritica: "Windows+Tab",
-      tecnica: "O atalho Windows+Z é que aciona o Snap Layouts. O atalho Windows+Tab abre a Visão de Tarefas, recurso distinto, usado para alternar entre janelas abertas e áreas de trabalho virtuais — não para organizar janelas em layouts predefinidos.",
-      regraMental: "Win+Z = Snap Layouts. Win+Tab = Visão de Tarefas. São recursos diferentes."
     },
     comentario: {
       resolucao: "ERRADO. O Snap Layouts é acionado pelo atalho Windows+Z (entre outras formas), e não por Windows+Tab. Este último abre a Visão de Tarefas, recurso distinto, destinado à alternância entre janelas abertas e áreas de trabalho virtuais.",
@@ -174,12 +144,7 @@ const QUESTOES_PCAL_LOTE42 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "apenas modifica o rótulo ... sem converter o conteúdo",
     cognitivo: {
       motivo: "Cobrar que renomear a extensão de um arquivo não converte seu conteúdo real.",
-      mede: "Informática — Sistemas Operacionais (Windows Explorer, extensões de arquivo).",
-      pegadinhaDesc: "A banca pode afirmar que o Windows ajusta os metadados e a estrutura do arquivo ao renomear a extensão.",
-      ondeErra: "Acha que renomear a extensão converte automaticamente o formato real do arquivo.",
       palavraCritica: "apenas modifica o rótulo ... sem converter",
-      tecnica: "Renomear a extensão de um arquivo no Windows Explorer altera apenas o texto do nome exibido — não converte o conteúdo binário nem ajusta a estrutura interna do arquivo. Um .jpg renomeado para .png continua sendo, internamente, um arquivo JPEG, podendo apresentar problemas ao ser aberto por programas que esperam o formato PNG.",
-      regraMental: "Trocar extensão = trocar só o nome. O conteúdo interno do arquivo não muda."
     },
     comentario: {
       resolucao: "CERTO. Renomear a extensão de um arquivo no Windows Explorer apenas altera o rótulo do nome exibido, sem converter seu conteúdo nem ajustar sua estrutura interna — o arquivo pode, inclusive, ficar inconsistente ou não abrir corretamente no novo formato indicado pelo nome.",
@@ -198,12 +163,7 @@ const QUESTOES_PCAL_LOTE42 = [
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "ajusta automaticamente ... convertendo seu conteúdo",
     cognitivo: {
       motivo: "Cobrar, na forma invertida, que o Windows não converte o conteúdo do arquivo apenas por renomear a extensão.",
-      mede: "Informática — Sistemas Operacionais (Windows Explorer, extensões de arquivo).",
-      pegadinhaDesc: "A banca afirma que a simples troca de extensão no nome converte automaticamente o conteúdo do arquivo.",
-      ondeErra: "Confunde a alteração do rótulo do nome do arquivo com uma conversão real de formato.",
       palavraCritica: "ajusta automaticamente ... convertendo seu conteúdo",
-      tecnica: "O Windows Explorer apenas altera o texto do nome do arquivo ao renomear sua extensão, sem ajustar metadados nem converter o conteúdo interno. A conversão real de formato exige um software apropriado (por exemplo, um editor de imagens), e não ocorre apenas ao renomear o arquivo.",
-      regraMental: "Renomear extensão nunca converte o arquivo de verdade — sempre precisa de software específico."
     },
     comentario: {
       resolucao: "ERRADO. Renomear a extensão de um arquivo no Windows Explorer apenas altera o rótulo do nome — não converte o conteúdo nem ajusta metadados ou estrutura interna. A conversão real de formato exige um software apropriado, e não ocorre automaticamente apenas com a renomeação.",
@@ -224,12 +184,7 @@ const QUESTOES_PCAL_LOTE42 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "chaves de acesso ... sem necessidade de digitar senhas ... mais seguro",
     cognitivo: {
       motivo: "Cobrar o funcionamento correto das passkeys integradas ao Windows Hello.",
-      mede: "Informática — Sistemas Operacionais (Windows 11, Windows Hello e passkeys).",
-      pegadinhaDesc: "A banca pode afirmar que esse processo torna a autenticação menos segura, invertendo a lógica do recurso.",
-      ondeErra: "Acha que dispensar a senha, por si só, torna o processo menos seguro.",
       palavraCritica: "sem necessidade de digitar senhas ... mais seguro",
-      tecnica: "O Windows Hello permite autenticação por biometria (impressão digital, reconhecimento facial) ou PIN. As chaves de acesso (passkeys) permitem entrar em sites e aplicativos sem digitar senha, sendo essa combinação considerada mais rápida e mais segura do que a autenticação tradicional por senha.",
-      regraMental: "Passkeys + Windows Hello = login sem senha, mais rápido e mais seguro (não o contrário)."
     },
     comentario: {
       resolucao: "CERTO. As chaves de acesso (passkeys), integradas ao Windows Hello, permitem iniciar sessão em sites e aplicativos por biometria ou PIN, sem necessidade de digitar senhas — tornando o processo de autenticação mais rápido e mais seguro do que o uso tradicional de senhas.",
@@ -248,12 +203,7 @@ const QUESTOES_PCAL_LOTE42 = [
     gabarito: "E", pegadinha: "verdade-mais-falso", palavraChave: "tornam o processo ... menos seguro",
     cognitivo: {
       motivo: "Cobrar, na forma invertida, que as passkeys tornam o login mais seguro, e não menos.",
-      mede: "Informática — Sistemas Operacionais (Windows 11, Windows Hello e passkeys).",
-      pegadinhaDesc: "A banca parte de uma premissa verdadeira (dispensa de senha) para chegar a uma conclusão falsa (menos segurança).",
-      ondeErra: "Assume que eliminar a senha necessariamente reduz a segurança do processo de autenticação.",
       palavraCritica: "tornam o processo ... menos seguro",
-      tecnica: "As chaves de acesso (passkeys) substituem a senha por biometria (impressão digital, reconhecimento facial) ou PIN vinculados ao dispositivo, o que é considerado mais seguro do que senhas tradicionais — que podem ser furtadas, reutilizadas ou descobertas por engenharia social.",
-      regraMental: "Passkey substitui senha por biometria/PIN — isso aumenta a segurança, não diminui."
     },
     comentario: {
       resolucao: "ERRADO. As chaves de acesso (passkeys) tornam o processo de autenticação mais seguro, e não menos — a dispensa da senha ocorre porque a biometria ou o PIN vinculado ao dispositivo oferece proteção superior às senhas tradicionais, que podem ser furtadas ou reutilizadas indevidamente.",
@@ -274,12 +224,7 @@ const QUESTOES_PCAL_LOTE42 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "continua aplicando atualizações automaticamente ... pausar temporariamente",
     cognitivo: {
       motivo: "Cobrar que o Windows Update automático permanece ativo no Windows 11, com opção apenas de pausa temporária.",
-      mede: "Informática — Sistemas Operacionais (Windows 11, Windows Update).",
-      pegadinhaDesc: "A banca pode afirmar que o Windows 11 não instala mais atualizações automaticamente.",
-      ondeErra: "Acha que o Windows 11 eliminou o processo automático de atualização, exigindo ação manual do usuário.",
       palavraCritica: "continua aplicando ... automaticamente ... pausar temporariamente",
-      tecnica: "O Windows 11 mantém as atualizações automáticas por meio do Windows Update (Configurações → Windows Update), permitindo apenas verificar manualmente a disponibilidade de novas atualizações ou pausar o processo por um período — sem uma forma simples de desativá-lo definitivamente.",
-      regraMental: "Windows 11 sempre atualiza sozinho — só dá para pausar por um tempo, não desligar de vez."
     },
     comentario: {
       resolucao: "CERTO. O Windows 11 continua aplicando atualizações automaticamente por meio do Windows Update, sendo possível ao usuário apenas verificar manualmente novas atualizações ou pausar temporariamente o processo — não havendo forma simples de desativá-lo por completo.",
@@ -298,12 +243,7 @@ const QUESTOES_PCAL_LOTE42 = [
     gabarito: "E", pegadinha: "termo-absoluto", palavraChave: "não permite mais ... obrigatoriamente ... de forma manual",
     cognitivo: {
       motivo: "Cobrar, na forma invertida, que o Windows Update automático não foi removido do Windows 11.",
-      mede: "Informática — Sistemas Operacionais (Windows 11, Windows Update).",
-      pegadinhaDesc: "A banca afirma que as atualizações automáticas foram eliminadas por questões de segurança, o que é falso.",
-      ondeErra: "Aceita a premissa de que a verificação manual substituiu totalmente o processo automático de atualização.",
       palavraCritica: "não permite mais ... obrigatoriamente",
-      tecnica: "O Windows 11 mantém o processo de atualizações automáticas por meio do Windows Update. A verificação manual em Configurações → Windows Update é apenas uma opção adicional, e não uma obrigação decorrente da suposta eliminação do processo automático — que, na realidade, não ocorreu.",
-      regraMental: "Windows 11 nunca deixou de atualizar sozinho — a verificação manual é só uma opção extra."
     },
     comentario: {
       resolucao: "ERRADO. O Windows 11 mantém as atualizações automáticas por meio do Windows Update. A afirmação de que ele 'não permite mais' atualizações automáticas é falsa — a verificação manual existe como opção adicional, mas não substitui nem foi motivada pela eliminação do processo automático.",
@@ -324,12 +264,7 @@ const QUESTOES_PCAL_LOTE42 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "aplicativo Relógio ... Sessões de foco ... Assistente de Foco",
     cognitivo: {
       motivo: "Cobrar a localização correta do recurso Sessões de foco (app Relógio) e sua integração com o Assistente de Foco.",
-      mede: "Informática — Sistemas Operacionais (Windows 11, Sessões de foco).",
-      pegadinhaDesc: "A banca pode atribuir o recurso a outro local do sistema, como o Painel de Controle.",
-      ondeErra: "Acha que o recurso de bloqueio de notificações fica no Painel de Controle, e não no app Relógio.",
       palavraCritica: "aplicativo Relógio",
-      tecnica: "O recurso Sessões de foco está disponível no aplicativo Relógio do Windows 11, permitindo bloquear temporariamente notificações, sons e alertas de aplicativos por um período definido pelo usuário, integrando-se ao Assistente de Foco (também chamado de Não Perturbe).",
-      regraMental: "Sessões de foco ficam no app Relógio, integradas ao Assistente de Foco/Não Perturbe."
     },
     comentario: {
       resolucao: "CERTO. O aplicativo Relógio do Windows 11 disponibiliza o recurso Sessões de foco, que permite bloquear temporariamente notificações, sons e alertas de aplicativos por um período definido, integrando-se ao Assistente de Foco (Não Perturbe).",
@@ -348,12 +283,7 @@ const QUESTOES_PCAL_LOTE42 = [
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "exclusivamente no Painel de Controle",
     cognitivo: {
       motivo: "Cobrar, na forma invertida, que as Sessões de foco ficam no app Relógio, e não no Painel de Controle.",
-      mede: "Informática — Sistemas Operacionais (Windows 11, Sessões de foco).",
-      pegadinhaDesc: "A banca localiza o recurso em um local desatualizado (Painel de Controle clássico), incompatível com a proposta.",
-      ondeErra: "Confunde o Painel de Controle clássico (herdado de versões antigas do Windows) com os aplicativos nativos modernos do Windows 11.",
       palavraCritica: "exclusivamente no Painel de Controle",
-      tecnica: "As Sessões de foco são um recurso do aplicativo Relógio, um app nativo moderno do Windows 11 — e não do Painel de Controle clássico, que reúne configurações herdadas de versões anteriores do sistema.",
-      regraMental: "Sessões de foco = app Relógio (moderno), não Painel de Controle (clássico)."
     },
     comentario: {
       resolucao: "ERRADO. O recurso Sessões de foco está disponível no aplicativo Relógio, um app nativo moderno do Windows 11, e não no Painel de Controle clássico, que reúne configurações herdadas de versões anteriores do sistema.",
@@ -374,12 +304,7 @@ const QUESTOES_PCAL_LOTE42 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "renomeação em lote ... tecla F2 ... sem programas adicionais",
     cognitivo: {
       motivo: "Cobrar que o Windows possui renomeação em lote nativa, sem depender de software de terceiros.",
-      mede: "Informática — Sistemas Operacionais (Windows Explorer, renomeação de arquivos em lote).",
-      pegadinhaDesc: "A banca pode afirmar que esse recurso exige a instalação de um programa adicional.",
-      ondeErra: "Acha que renomear vários arquivos com um padrão de nome só é possível com software externo.",
       palavraCritica: "sem necessidade de instalar programas adicionais",
-      tecnica: "No Windows Explorer, ao selecionar vários arquivos e pressionar F2, é possível definir um nome-base para todos eles; o sistema numera automaticamente os itens em sequência (nome (1), nome (2)...), recurso nativo que dispensa qualquer programa adicional.",
-      regraMental: "Selecionar vários + F2 = renomeação em lote nativa do Windows, sem programa externo."
     },
     comentario: {
       resolucao: "CERTO. O Windows possui função nativa de renomeação em lote: ao selecionar vários arquivos e pressionar F2, o usuário define um nome-base, e o sistema numera automaticamente os itens em sequência, sem necessidade de instalar programas adicionais.",
@@ -398,12 +323,7 @@ const QUESTOES_PCAL_LOTE42 = [
     gabarito: "E", pegadinha: "exigencia-inexistente", palavraChave: "não possui função nativa ... necessário ... programas adicionais",
     cognitivo: {
       motivo: "Cobrar, na forma invertida, que o Windows já tem renomeação em lote nativa, sem exigir software externo.",
-      mede: "Informática — Sistemas Operacionais (Windows Explorer, renomeação de arquivos em lote).",
-      pegadinhaDesc: "A banca cria uma exigência inexistente (necessidade de programa de terceiros) para uma tarefa já suportada nativamente.",
-      ondeErra: "Ignora que selecionar vários arquivos e pressionar F2 já resolve a renomeação em lote sem qualquer instalação.",
       palavraCritica: "necessário ... programas adicionais",
-      tecnica: "O Windows Explorer permite renomear vários arquivos simultaneamente com um padrão comum de nomes de forma nativa: basta selecionar os arquivos, pressionar F2 e definir um nome-base — o sistema numera automaticamente os itens, sem qualquer necessidade de programas de terceiros.",
-      regraMental: "Renomear em lote é nativo do Windows — não precisa de programa nenhum."
     },
     comentario: {
       resolucao: "ERRADO. O Windows possui, sim, função nativa de renomeação em lote: basta selecionar vários arquivos, pressionar F2 e definir um nome-base, que o sistema numerará automaticamente — não há necessidade de instalar programas de terceiros para essa finalidade.",
@@ -424,12 +344,7 @@ const QUESTOES_PCAL_LOTE42 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "nomes genéricos ... dificulta ... nomes descritivos e padronizados",
     cognitivo: {
       motivo: "Cobrar a boa prática de nomeação descritiva de arquivos para facilitar busca e organização.",
-      mede: "Informática — Gestão e organização de arquivos (boas práticas de nomeação).",
-      pegadinhaDesc: "A banca pode afirmar que nomes genéricos facilitam a busca, invertendo a lógica da boa prática.",
-      ondeErra: "Acha que nomes curtos e genéricos, por serem simples, favorecem a localização rápida do arquivo.",
       palavraCritica: "dificulta ... mais adequado ... descritivos e padronizados",
-      tecnica: "Nomes genéricos como 'documento1', 'teste' ou 'final' não indicam o conteúdo do arquivo, dificultando a busca e a organização, especialmente quando há muitos arquivos semelhantes. Nomes descritivos e padronizados (assunto, data, versão) facilitam a localização rápida e a organização geral.",
-      regraMental: "Nome genérico = difícil de achar depois. Nome descritivo (assunto+data+versão) = fácil de achar."
     },
     comentario: {
       resolucao: "CERTO. Nomear arquivos com termos genéricos como 'documento1', 'teste' ou 'final' dificulta a localização e a organização no Windows, sendo mais adequado o uso de nomes descritivos e padronizados, que indiquem assunto, data e versão do arquivo.",
@@ -448,12 +363,7 @@ const QUESTOES_PCAL_LOTE42 = [
     gabarito: "E", pegadinha: "verdade-mais-falso", palavraChave: "prática eficiente ... facilitam a busca rápida",
     cognitivo: {
       motivo: "Cobrar, na forma invertida, que nomes genéricos dificultam, e não facilitam, a busca e a organização.",
-      mede: "Informática — Gestão e organização de arquivos (boas práticas de nomeação).",
-      pegadinhaDesc: "A banca classifica como 'eficiente' e 'padronizado' uma prática que, na realidade, é reconhecida como inadequada.",
-      ondeErra: "Confunde nomes curtos e genéricos com nomes padronizados, tratando-os como sinônimos de boa prática.",
       palavraCritica: "prática eficiente ... facilitam a busca rápida",
-      tecnica: "Nomes genéricos como 'documento1', 'teste' ou 'final' não descrevem o conteúdo do arquivo, dificultando a busca — especialmente quando há muitos arquivos com nomes semelhantes. A boa prática recomendada envolve nomes descritivos e padronizados, que indiquem assunto, data e versão.",
-      regraMental: "Nome genérico não é padronizado — é vago. Isso dificulta, não facilita, a busca."
     },
     comentario: {
       resolucao: "ERRADO. Nomear arquivos como 'documento1', 'teste' ou 'final' é prática pouco eficiente, pois esses nomes genéricos não descrevem o conteúdo do arquivo, dificultando a busca e a organização — especialmente quando há muitos arquivos semelhantes armazenados.",
@@ -474,12 +384,7 @@ const QUESTOES_PCAL_LOTE42 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "suporte nativo ... ZIP ... RAR e 7z ... exigem software específico",
     cognitivo: {
       motivo: "Cobrar que o Windows compacta/descompacta ZIP nativamente, ao contrário de RAR e 7z.",
-      mede: "Informática — Sistemas Operacionais (Windows, compactação de arquivos).",
-      pegadinhaDesc: "A banca pode afirmar que RAR e 7z também têm suporte nativo, ou que o ZIP exige programas externos.",
-      ondeErra: "Confunde o suporte nativo ao ZIP com os formatos RAR e 7z, que realmente exigem software adicional.",
       palavraCritica: "suporte nativo ... RAR e 7z ... exigem software específico",
-      tecnica: "O Windows compacta e descompacta arquivos no formato ZIP de forma nativa, por meio da opção 'Enviar para → Pasta compactada' (ou extração direta ao abrir o arquivo). Já os formatos RAR e 7z exigem a instalação de programas adicionais, como WinRAR ou 7-Zip.",
-      regraMental: "ZIP é nativo do Windows. RAR e 7z precisam de programa externo (WinRAR, 7-Zip)."
     },
     comentario: {
       resolucao: "CERTO. O Windows possui suporte nativo ao formato ZIP, permitindo compactar e descompactar arquivos sem programas adicionais — ao contrário dos formatos RAR e 7z, que exigem a instalação de softwares específicos, como o WinRAR e o 7-Zip.",
@@ -498,12 +403,7 @@ const QUESTOES_PCAL_LOTE42 = [
     gabarito: "E", pegadinha: "exigencia-inexistente", palavraChave: "não possui suporte nativo ... nenhum formato ... inclusive para arquivos ZIP",
     cognitivo: {
       motivo: "Cobrar, na forma invertida, que o Windows já compacta e descompacta ZIP nativamente, sem depender de terceiros.",
-      mede: "Informática — Sistemas Operacionais (Windows, compactação de arquivos).",
-      pegadinhaDesc: "A banca nega totalmente o suporte nativo do Windows à compactação, mesmo para o formato ZIP.",
-      ondeErra: "Ignora que o ZIP é justamente o formato com suporte nativo no Windows, ao contrário de RAR e 7z.",
       palavraCritica: "inclusive para arquivos ZIP",
-      tecnica: "O Windows possui suporte nativo ao formato ZIP, permitindo compactar e descompactar arquivos sem instalar nenhum programa adicional. Apenas para formatos como RAR e 7z é que a instalação de softwares de terceiros, como WinRAR e 7-Zip, é necessária.",
-      regraMental: "ZIP sempre foi nativo do Windows — a exigência de programa é só para RAR/7z."
     },
     comentario: {
       resolucao: "ERRADO. O Windows possui suporte nativo ao formato ZIP, permitindo compactar e descompactar arquivos sem qualquer programa adicional. A exigência de softwares de terceiros, como WinRAR ou 7-Zip, aplica-se apenas a formatos como RAR e 7z — não ao ZIP.",
@@ -524,12 +424,7 @@ const QUESTOES_PCAL_LOTE42 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "unidades diferentes ... herda as permissões ... copiar e apagar",
     cognitivo: {
       motivo: "Cobrar que mover arquivos entre volumes diferentes faz o arquivo herdar as permissões do destino (por ser, tecnicamente, copiar+apagar).",
-      mede: "Informática — Sistemas Operacionais (Windows, sistema de arquivos NTFS, permissões).",
-      pegadinhaDesc: "A banca pode afirmar que as permissões originais são sempre mantidas, independentemente do volume de origem e destino.",
-      ondeErra: "Não sabe que mover entre volumes diferentes tecnicamente equivale a copiar e apagar o original.",
       palavraCritica: "unidades diferentes ... herda as permissões ... copiar e apagar",
-      tecnica: "Ao mover um arquivo entre unidades (volumes) diferentes, o Windows, tecnicamente, copia o arquivo para o destino e apaga o original — por isso, o arquivo passa a herdar as permissões NTFS da pasta de destino. Apenas quando o movimento ocorre dentro do MESMO volume é que as permissões originais são preservadas.",
-      regraMental: "Mover entre volumes diferentes = copiar+apagar = herda permissão do destino. Mesmo volume = preserva permissão original."
     },
     comentario: {
       resolucao: "CERTO. Ao mover um arquivo entre unidades (volumes) diferentes, a operação equivale, tecnicamente, a copiar o arquivo para o destino e apagar o original — por isso, o arquivo passa a herdar as permissões NTFS da pasta de destino, e não mantém as permissões originais.",
@@ -548,12 +443,7 @@ const QUESTOES_PCAL_LOTE42 = [
     gabarito: "E", pegadinha: "generalizacao", palavraChave: "mantém integralmente ... independentemente do volume ... sempre idêntica",
     cognitivo: {
       motivo: "Cobrar, na forma invertida, que mover entre volumes diferentes NÃO preserva as permissões originais (o arquivo herda as do destino).",
-      mede: "Informática — Sistemas Operacionais (Windows, sistema de arquivos NTFS, permissões).",
-      pegadinhaDesc: "A banca generaliza indevidamente a preservação de permissões para qualquer situação de movimentação de arquivos.",
-      ondeErra: "Ignora a distinção entre mover dentro do mesmo volume (preserva permissões) e mover entre volumes diferentes (herda as do destino).",
       palavraCritica: "mantém integralmente ... independentemente do volume",
-      tecnica: "Apenas quando o arquivo é movido DENTRO do mesmo volume as permissões NTFS originais são preservadas. Ao mover entre volumes (unidades) diferentes, a operação equivale, tecnicamente, a copiar e apagar o original, fazendo o arquivo herdar as permissões da pasta de destino.",
-      regraMental: "Mesmo volume: preserva permissão. Volumes diferentes: herda permissão do destino. Nunca é 'sempre igual'."
     },
     comentario: {
       resolucao: "ERRADO. Ao mover um arquivo entre unidades (volumes) diferentes, o arquivo NÃO mantém suas permissões NTFS originais — ele passa a herdar as permissões da pasta de destino, já que essa operação equivale, tecnicamente, a copiar o arquivo e apagar o original. A preservação das permissões só ocorre quando o movimento é feito dentro do mesmo volume.",

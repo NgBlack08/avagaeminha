@@ -24,12 +24,7 @@ const QUESTOES_PCAL_LOTE31 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "princípio autônomo ... legal e imoral",
     cognitivo: {
       motivo: "Cobrar a autonomia do princípio da moralidade administrativa em relação à legalidade.",
-      mede: "Ética no Serviço Público — princípios da Administração Pública (art. 37, CF).",
-      pegadinhaDesc: "A banca pode reduzir a moralidade a mero sinônimo de legalidade.",
-      ondeErra: "Acha que todo ato legal é automaticamente moral, negando a autonomia do princípio.",
       palavraCritica: "princípio autônomo",
-      tecnica: "A moralidade administrativa é princípio constitucional autônomo (art. 37, caput, CF): um ato pode observar estritamente a lei e, mesmo assim, violar padrões éticos de honestidade, boa-fé e lealdade institucional, sendo passível de anulação por imoralidade (ex.: ação popular, art. 5º, LXXIII, CF).",
-      regraMental: "Legalidade e moralidade são princípios distintos — legal nem sempre é moral."
     },
     comentario: {
       resolucao: "CERTO. A moralidade administrativa é princípio autônomo, distinto da legalidade: um ato pode atender formalmente à lei e, ainda assim, ser reputado imoral (ex.: nepotismo cruzado sem vedação legal expressa à época), sujeitando-se a controle judicial, inclusive por ação popular.",
@@ -48,12 +43,7 @@ const QUESTOES_PCAL_LOTE31 = [
     gabarito: "E", pegadinha: "generalizacao", palavraChave: "se esgota ... eticamente inquestionável",
     cognitivo: {
       motivo: "Cobrar a distinção entre legalidade e moralidade administrativa.",
-      mede: "Ética no Serviço Público — princípios da Administração Pública.",
-      pegadinhaDesc: "A banca generaliza indevidamente que legalidade formal esgota a exigência ética.",
-      ondeErra: "Aceita a equivalência entre 'legal' e 'ético' sem perceber que são planos distintos.",
       palavraCritica: "se esgota ... por definição",
-      tecnica: "A moralidade administrativa é princípio distinto da legalidade — vai além do cumprimento formal da norma, exigindo também honestidade, boa-fé, decoro e lealdade às finalidades institucionais.",
-      regraMental: "'Se esgota em X' e 'por definição' são expressões de generalização típicas de pegadinha — desconfie."
     },
     comentario: {
       resolucao: "ERRADO. A moralidade administrativa não se esgota na legalidade: um ato pode ser formalmente legal e, ainda assim, violar padrões éticos exigidos do agente público, sujeitando-se a controle por imoralidade administrativa, autonomamente da legalidade.",
@@ -72,12 +62,7 @@ const QUESTOES_PCAL_LOTE31 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "ética ... reflexão teórica ... moral ... regras práticas",
     cognitivo: {
       motivo: "Cobrar a distinção clássica entre ética (teoria) e moral (prática/costumes).",
-      mede: "Ética no Serviço Público — fundamentos conceituais.",
-      pegadinhaDesc: "A banca pode inverter os dois conceitos entre si.",
-      ondeErra: "Troca a definição de ética pela de moral, ou vice-versa.",
       palavraCritica: "ética ... reflexão teórica. Moral ... regras práticas",
-      tecnica: "Classicamente (do grego 'ethos' e do latim 'mos/mores'): ÉTICA é a reflexão filosófica sobre os valores e fundamentos da conduta humana; MORAL é o conjunto concreto de normas e costumes vigentes em determinada sociedade, historicamente situado.",
-      regraMental: "Ética = teoria/reflexão. Moral = prática/costumes concretos."
     },
     comentario: {
       resolucao: "CERTO. Essa é a distinção clássica na literatura de filosofia moral: a ética é a disciplina teórica que reflete sobre os fundamentos e valores da conduta humana, ao passo que a moral corresponde ao conjunto prático de normas de conduta vigentes em um grupo social, ligadas aos seus costumes históricos.",
@@ -96,12 +81,7 @@ const QUESTOES_PCAL_LOTE31 = [
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "moral ... reflexão teórica ... ética ... regras práticas",
     cognitivo: {
       motivo: "Cobrar a distinção clássica entre ética (teoria) e moral (prática/costumes), na forma invertida.",
-      mede: "Ética no Serviço Público — fundamentos conceituais.",
-      pegadinhaDesc: "A banca inverte as definições de ética e moral entre si.",
-      ondeErra: "Aceita a troca sem perceber a inversão dos dois conceitos.",
       palavraCritica: "moral ... reflexão teórica",
-      tecnica: "Na verdade é o INVERSO: ÉTICA é a reflexão teórica/filosófica, e MORAL é o conjunto prático de regras de conduta ligadas aos costumes de um grupo social. O enunciado trocou os dois termos entre si.",
-      regraMental: "Ética = teoria. Moral = prática (mos/mores = costumes)."
     },
     comentario: {
       resolucao: "ERRADO. As definições foram invertidas: é a ÉTICA (e não a moral) que compreende a reflexão teórica e filosófica sobre os valores humanos, ao passo que a MORAL (e não a ética) é o conjunto prático de regras de conduta vigentes em um grupo social.",
@@ -120,12 +100,7 @@ const QUESTOES_PCAL_LOTE31 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "transcendem a mera obediência formal ... probidade, zelo e decoro",
     cognitivo: {
       motivo: "Cobrar a natureza deontológica da ética profissional do servidor público.",
-      mede: "Ética no Serviço Público — deontologia profissional.",
-      pegadinhaDesc: "A banca pode restringir a ética profissional apenas ao cumprimento formal de normas.",
-      ondeErra: "Reduz a deontologia à mera observância de regras escritas.",
       palavraCritica: "transcendem a mera obediência formal",
-      tecnica: "A deontologia profissional do servidor público estabelece deveres de conduta (probidade, zelo, decoro, lealdade institucional) que vão além do simples cumprimento formal das normas jurídicas, orientando o comportamento mesmo em situações não expressamente reguladas.",
-      regraMental: "Deontologia = deveres de conduta que vão além da letra fria da lei."
     },
     comentario: {
       resolucao: "CERTO. A ética profissional do servidor público, de natureza deontológica, estabelece deveres de conduta que vão além da obediência formal às normas, abrangendo também valores como probidade, zelo, decoro e lealdade às finalidades institucionais.",
@@ -144,12 +119,7 @@ const QUESTOES_PCAL_LOTE31 = [
     gabarito: "E", pegadinha: "restricao-indevida", palavraChave: "exclusivamente ... não guardando relação",
     cognitivo: {
       motivo: "Cobrar a amplitude do princípio da impessoalidade.",
-      mede: "Ética no Serviço Público — princípios da Administração Pública.",
-      pegadinhaDesc: "A banca restringe indevidamente o princípio a apenas uma de suas duas dimensões.",
-      ondeErra: "Não reconhece que a impessoalidade também abrange o tratamento isonômico aos administrados, além da vedação à promoção pessoal.",
       palavraCritica: "exclusivamente ... não guardando relação",
-      tecnica: "A impessoalidade tem dupla dimensão: (1) vedação à promoção pessoal de agentes públicos (art. 37, §1º, CF) e (2) exigência de tratamento isonômico e sem favoritismo aos administrados, atuando a Administração sempre em nome do interesse público, e não de interesses pessoais.",
-      regraMental: "Impessoalidade: vedação à autopromoção + tratamento isonômico aos administrados (dupla face)."
     },
     comentario: {
       resolucao: "ERRADO. O princípio da impessoalidade possui dupla dimensão: além de vedar a promoção pessoal de agentes públicos em publicidade institucional (art. 37, §1º, CF), exige também tratamento isonômico e imparcial dos administrados, sem favoritismos ou perseguições pessoais. A assertiva restringe indevidamente o princípio a apenas uma dessas dimensões.",
@@ -169,12 +139,7 @@ const QUESTOES_PCAL_LOTE31 = [
     gabarito: "E", pegadinha: "exigencia-inexistente", palavraChave: "diretamente à ... Corte",
     cognitivo: {
       motivo: "Cobrar a legitimidade ativa correta para submissão de casos à Corte IDH.",
-      mede: "Direitos Humanos — Sistema Interamericano (CADH).",
-      pegadinhaDesc: "A banca atribui a indivíduos uma legitimidade que a Convenção não confere.",
-      ondeErra: "Confunde o direito de peticionar à Comissão (amplo, de qualquer pessoa) com a legitimidade para submeter casos à Corte (restrita).",
       palavraCritica: "diretamente à ... Corte",
-      tecnica: "Qualquer pessoa, grupo ou ONG pode peticionar à COMISSÃO Interamericana (art. 44, CADH). Somente os ESTADOS-PARTE e a própria COMISSÃO têm legitimidade para submeter um caso à CORTE Interamericana (art. 61, CADH) — indivíduos não têm acesso direto à Corte.",
-      regraMental: "Petição individual → Comissão. Submissão de caso → Corte (só Estados e Comissão)."
     },
     comentario: {
       resolucao: "ERRADO. Indivíduos e grupos de pessoas podem peticionar à Comissão Interamericana de Direitos Humanos (art. 44, CADH), mas não têm legitimidade para submeter casos diretamente à Corte Interamericana — essa legitimidade é restrita aos Estados-parte e à própria Comissão (art. 61, CADH).",
@@ -193,12 +158,7 @@ const QUESTOES_PCAL_LOTE31 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "qualquer pessoa ... Comissão Interamericana",
     cognitivo: {
       motivo: "Cobrar a ampla legitimidade para peticionar à Comissão Interamericana.",
-      mede: "Direitos Humanos — Sistema Interamericano (CADH).",
-      pegadinhaDesc: "A banca pode restringir essa legitimidade apenas às vítimas diretas.",
-      ondeErra: "Acha que só a própria vítima pode peticionar, ignorando a amplitude do art. 44 da CADH.",
       palavraCritica: "qualquer pessoa ... Comissão",
-      tecnica: "O art. 44 da CADH confere ampla legitimidade: qualquer pessoa, grupo de pessoas ou ONG reconhecida em Estado-membro da OEA pode peticionar à Comissão, independentemente de ser a própria vítima da violação alegada.",
-      regraMental: "Petição à Comissão: legitimidade ampla, não se restringe à vítima direta."
     },
     comentario: {
       resolucao: "CERTO. Nos termos do art. 44 da CADH, a legitimidade para peticionar à Comissão Interamericana de Direitos Humanos é ampla, abrangendo qualquer pessoa, grupo de pessoas ou entidade não governamental legalmente reconhecida em Estado-membro da OEA, independentemente de ser a vítima direta da violação.",
@@ -217,12 +177,7 @@ const QUESTOES_PCAL_LOTE31 = [
     gabarito: "E", pegadinha: "troca-numerica", palavraChave: "cinco eixos ... não se inclui",
     cognitivo: {
       motivo: "Cobrar o número correto de eixos orientadores do PNDH-3 e a existência do eixo de segurança pública.",
-      mede: "Direitos Humanos — Política Nacional de Direitos Humanos (PNDH-3).",
-      pegadinhaDesc: "A banca troca o número de eixos (seis) por outro (cinco) e nega a existência do eixo de segurança pública.",
-      ondeErra: "Não memoriza o número exato de eixos nem a existência do Eixo IV específico sobre segurança pública.",
       palavraCritica: "cinco eixos ... não se inclui",
-      tecnica: "O PNDH-3 estrutura-se em SEIS eixos orientadores, entre os quais o Eixo Orientador IV, dedicado especificamente à 'Segurança Pública, Acesso à Justiça e Combate à Violência'.",
-      regraMental: "PNDH-3: 6 eixos. Eixo IV = Segurança Pública, Acesso à Justiça e Combate à Violência."
     },
     comentario: {
       resolucao: "ERRADO. O PNDH-3 estrutura-se em SEIS eixos orientadores (e não cinco), sendo o Eixo Orientador IV dedicado especificamente à 'Segurança Pública, Acesso à Justiça e Combate à Violência' — contrariando a dupla afirmação do item.",
@@ -241,12 +196,7 @@ const QUESTOES_PCAL_LOTE31 = [
     gabarito: "E", pegadinha: "troca-numerica", palavraChave: "maioria simples ... turno único",
     cognitivo: {
       motivo: "Cobrar o rito específico exigido para que tratados de direitos humanos equivalham a emendas constitucionais.",
-      mede: "Direitos Humanos — incorporação de tratados internacionais (art. 5º, §3º, CF).",
-      pegadinhaDesc: "A banca troca o quórum e o número de turnos exigidos pela CF por requisitos mais brandos.",
-      ondeErra: "Não memoriza o rito específico exigido (dois turnos, três quintos) e aceita um quórum mais simples.",
       palavraCritica: "maioria simples ... turno único",
-      tecnica: "Pelo art. 5º, §3º, da CF, os tratados de direitos humanos equivalem a emendas constitucionais apenas quando aprovados, EM CADA CASA do Congresso Nacional, em DOIS TURNOS, por TRÊS QUINTOS dos votos dos respectivos membros — e não por maioria simples em turno único.",
-      regraMental: "Equivalência a emenda: 2 turnos + 3/5 dos votos, em cada Casa (mesmo rito de PEC)."
     },
     comentario: {
       resolucao: "ERRADO. O rito exigido pelo art. 5º, §3º, da CF para que o tratado de direitos humanos equivalha a emenda constitucional é: aprovação em CADA Casa do Congresso Nacional, em DOIS turnos, por TRÊS QUINTOS dos votos dos respectivos membros — e não maioria simples em turno único, como afirmado. Os tratados que não observam esse rito, segundo o STF (RE 466.343/SP, rel. Min. Cezar Peluso), possuem status supralegal, e não de lei ordinária.",
@@ -265,12 +215,7 @@ const QUESTOES_PCAL_LOTE31 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "não poderá restabelecê-la ... menor de 18 ... maior de 70 ... gravidez",
     cognitivo: {
       motivo: "Cobrar as restrições específicas da CADH à aplicação da pena de morte.",
-      mede: "Direitos Humanos — Sistema Interamericano (CADH, art. 4).",
-      pegadinhaDesc: "A banca pode alterar as idades-limite ou omitir a vedação ao restabelecimento.",
-      ondeErra: "Erra as idades específicas (18 e 70 anos) ou nega a vedação ao restabelecimento da pena.",
       palavraCritica: "menor de dezoito anos ou maior de setenta anos",
-      tecnica: "Art. 4º da CADH: Estados que aboliram a pena de morte não podem restabelecê-la; a pena não pode ser imposta a quem tinha menos de 18 anos ou mais de 70 anos ao tempo do delito, nem à mulher em estado de gravidez.",
-      regraMental: "CADH art. 4: abolição é irreversível + veda pena de morte para <18, >70 anos e gestantes."
     },
     comentario: {
       resolucao: "CERTO. O art. 4º da CADH estabelece exatamente essas três garantias: irreversibilidade da abolição da pena de morte, vedação de sua imposição a quem tinha menos de 18 ou mais de 70 anos ao tempo do delito, e vedação à sua aplicação a mulher em estado de gravidez.",
@@ -289,12 +234,7 @@ const QUESTOES_PCAL_LOTE31 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "competência contenciosa ... consultiva ... Estados-parte e Comissão",
     cognitivo: {
       motivo: "Cobrar as duas competências da Corte IDH e a legitimidade restrita para a via contenciosa.",
-      mede: "Direitos Humanos — Sistema Interamericano (competências da Corte IDH).",
-      pegadinhaDesc: "A banca pode negar uma das duas competências ou ampliar indevidamente a legitimidade ativa.",
-      ondeErra: "Confunde a competência consultiva com a contenciosa, ou amplia a legitimidade para indivíduos.",
       palavraCritica: "apenas os Estados-parte e a Comissão",
-      tecnica: "A Corte IDH tem competência CONTENCIOSA (julgar casos concretos de violação) e CONSULTIVA (emitir pareceres interpretativos, inclusive sobre outros tratados). Apenas Estados-parte e a Comissão podem submeter casos à via contenciosa (art. 61, CADH).",
-      regraMental: "Corte IDH: contenciosa (julga) + consultiva (opina). Só Estados/Comissão acionam a via contenciosa."
     },
     comentario: {
       resolucao: "CERTO. A Corte Interamericana exerce competência contenciosa (julgamento de casos concretos de violação da Convenção) e competência consultiva (emissão de pareceres sobre a interpretação de tratados de direitos humanos), sendo que apenas os Estados-parte e a Comissão Interamericana têm legitimidade para submeter casos à via contenciosa, conforme o art. 61 da CADH.",

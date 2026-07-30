@@ -22,12 +22,7 @@ const QUESTOES_PCAL_LOTE28 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "fatores de natureza distinta",
     cognitivo: {
       motivo: "Cobrar o conceito correto de MFA (fatores de categorias diferentes).",
-      mede: "Segurança digital — autenticação.",
-      pegadinhaDesc: "A banca pode reduzir a MFA a 'duas senhas', o que descaracteriza o conceito.",
-      ondeErra: "Acha que qualquer segunda verificação (mesmo que da mesma natureza) já é MFA.",
       palavraCritica: "fatores de natureza distinta ... não sendo suficiente ... duas senhas",
-      tecnica: "MFA exige fatores de categorias DIFERENTES: conhecimento (senha), posse (token/celular) e inerência (biometria). Duas senhas são o mesmo fator (conhecimento) repetido — não configura MFA.",
-      regraMental: "MFA: fatores DIFERENTES (saber + ter + ser). Duas senhas = 1 fator só, repetido."
     },
     comentario: {
       resolucao: "CERTO. A autenticação multifator exige a combinação de fatores de natureza distinta — algo que o usuário sabe (senha/PIN), algo que possui (token, aplicativo autenticador) e algo que é (biometria). O uso de duas senhas, ainda que diferentes, representa apenas o fator 'conhecimento' duplicado, não caracterizando MFA.",
@@ -46,12 +41,7 @@ const QUESTOES_PCAL_LOTE28 = [
     gabarito: "C", pegadinha: "restricao-indevida", palavraChave: "constitui medida relevante",
     cognitivo: {
       motivo: "Cobrar a existência real de metadados EXIF de geolocalização em fotos.",
-      mede: "Segurança digital — privacidade e cuidados com redes sociais.",
-      pegadinhaDesc: "A banca pode negar que os dispositivos incorporem tais metadados, tornando a medida 'irrelevante' — o que é falso.",
-      ondeErra: "Acredita que fotos modernas não carregam dados de localização.",
       palavraCritica: "constitui medida relevante",
-      tecnica: "Smartphones modernos, por padrão, gravam metadados EXIF (incluindo coordenadas de GPS) nas fotos, salvo se a geolocalização estiver desativada. Desativar essa opção é, portanto, uma medida real de proteção da privacidade.",
-      regraMental: "Foto de celular carrega EXIF com GPS, salvo se desativado. Desativar é medida útil, não irrelevante."
     },
     comentario: {
       resolucao: "CERTO. Dispositivos móveis modernos costumam gravar metadados EXIF — incluindo coordenadas de geolocalização — nos arquivos de imagem capturados, salvo quando essa função é desativada nas configurações. Por isso, desativar a geolocalização é medida relevante de segurança e privacidade, e não irrelevante.",
@@ -70,12 +60,7 @@ const QUESTOES_PCAL_LOTE28 = [
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "falhas técnicas ... não ... engenharia social",
     cognitivo: {
       motivo: "Cobrar o conceito básico de phishing.",
-      mede: "Segurança digital — golpes virtuais.",
-      pegadinhaDesc: "A banca classifica o phishing como falha técnica, negando sua natureza de engenharia social.",
-      ondeErra: "Aceita a afirmação de que phishing explora falha técnica do sistema, e não a confiança da vítima.",
       palavraCritica: "falhas técnicas ... não ... engenharia social",
-      tecnica: "Phishing é técnica de ENGENHARIA SOCIAL: explora a confiança/descuido da vítima, e não uma falha técnica do sistema ou do servidor da instituição.",
-      regraMental: "Phishing = engano humano (engenharia social), não invasão técnica."
     },
     comentario: {
       resolucao: "ERRADO. O phishing é justamente uma técnica de engenharia social, e não de exploração de falhas técnicas — o golpista se faz passar por instituição ou pessoa confiável (via e-mail, mensagem ou site falso) para induzir a vítima a fornecer dados sensíveis ou clicar em links maliciosos, explorando o engano humano, não uma vulnerabilidade de servidor.",
@@ -94,12 +79,7 @@ const QUESTOES_PCAL_LOTE28 = [
     gabarito: "C", pegadinha: "juris-mais-lei", palavraChave: "continua exigindo ... violação indevida de mecanismo de segurança",
     cognitivo: {
       motivo: "Cobrar a permanência da elementar 'violação de mecanismo de segurança' após a Lei 14.155/2021.",
-      mede: "Crimes Cibernéticos — invasão de dispositivo informático.",
-      pegadinhaDesc: "A banca pode dizer que a lei de 2021 dispensou essa elementar, o que é falso.",
-      ondeErra: "Confunde o AUMENTO DE PENA e as qualificadoras trazidas pela Lei 14.155/2021 com uma alteração da conduta típica do caput.",
       palavraCritica: "continua exigindo",
-      tecnica: "A Lei 14.155/2021 tornou a pena do art. 154-A mais grave (reclusão) e criou qualificadoras (vítima idosa, instituições financeiras, infraestruturas críticas, administração pública), mas MANTEVE a elementar do caput: invadir mediante violação indevida de mecanismo de segurança.",
-      regraMental: "14.155/2021: mudou a pena e criou qualificadoras — não removeu a elementar da violação de segurança."
     },
     comentario: {
       resolucao: "CERTO. A Lei 14.155/2021 agravou a pena do art. 154-A (de detenção para reclusão) e incluiu qualificadoras (vítima idosa ou vulnerável, instituições financeiras, infraestruturas críticas, administração pública), mas não alterou a elementar do caput: o crime continua exigindo a invasão mediante violação indevida de mecanismo de segurança do dispositivo.",
@@ -118,12 +98,7 @@ const QUESTOES_PCAL_LOTE28 = [
     gabarito: "E", pegadinha: "restricao-indevida", palavraChave: "finalidade exclusiva ... não se ocupando da harmonização",
     cognitivo: {
       motivo: "Cobrar a finalidade geral da Convenção de Budapeste.",
-      mede: "Crimes Cibernéticos — cooperação internacional.",
-      pegadinhaDesc: "A banca restringe a Convenção a um único objetivo (só cooperação, negando a harmonização).",
-      ondeErra: "Não reconhece a dupla finalidade (harmonização + cooperação).",
       palavraCritica: "finalidade exclusiva ... não se ocupando da harmonização",
-      tecnica: "A Convenção de Budapeste busca harmonizar as legislações penais dos países signatários quanto a crimes cibernéticos E estabelecer mecanismos de cooperação internacional (assistência mútua, preservação expedita de dados, extradição) — é uma dupla finalidade, não exclusiva.",
-      regraMental: "Budapeste: harmoniza tipos penais + facilita cooperação internacional em provas eletrônicas."
     },
     comentario: {
       resolucao: "ERRADO. A Convenção de Budapeste, internalizada pelo Decreto 11.491/2023, tem dupla finalidade: harmonizar a tipificação de condutas cibernéticas entre os países signatários E estabelecer mecanismos de cooperação internacional para a investigação e obtenção de provas eletrônicas. A assertiva restringe indevidamente a Convenção a apenas uma dessas finalidades.",
@@ -144,12 +119,7 @@ const QUESTOES_PCAL_LOTE28 = [
     gabarito: "E", pegadinha: "restricao-indevida", palavraChave: "prescindindo de ... recuperação",
     cognitivo: {
       motivo: "Cobrar as funções centrais do NIST CSF.",
-      mede: "TI/Segurança — frameworks de segurança da informação.",
-      pegadinhaDesc: "A banca omite a função 'recuperar', dando a entender que o framework para em 'responder'.",
-      ondeErra: "Não memoriza as cinco funções centrais do framework e aceita a omissão da última.",
       palavraCritica: "prescindindo de ... recuperação",
-      tecnica: "NIST CSF: 5 funções centrais — Identify (identificar), Protect (proteger), Detect (detectar), Respond (responder), Recover (recuperar). A função Recover é parte essencial do framework, não dispensável.",
-      regraMental: "NIST CSF: IPDRR — Identificar, Proteger, Detectar, Responder, Recuperar."
     },
     comentario: {
       resolucao: "ERRADO. O NIST Cybersecurity Framework inclui, sim, uma quinta função essencial: Recuperar (Recover), além de Identificar, Proteger, Detectar e Responder (IPDRR). O framework não prescinde dessa função — ela orienta o retorno à normalidade após o incidente.",
@@ -168,12 +138,7 @@ const QUESTOES_PCAL_LOTE28 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "única autenticação inicial ... múltiplos sistemas",
     cognitivo: {
       motivo: "Cobrar o conceito de SSO.",
-      mede: "TI/Segurança — gestão de identidades e acesso.",
-      pegadinhaDesc: "A banca pode confundir SSO com MFA ou exigir múltiplas autenticações.",
-      ondeErra: "Acha que o SSO exige nova autenticação em cada sistema.",
       palavraCritica: "única autenticação ... múltiplos sistemas",
-      tecnica: "SSO: uma única autenticação dá acesso a vários sistemas integrados, sem repetir login em cada um. Frequentemente implementado com protocolos como SAML, OAuth2 ou OpenID Connect.",
-      regraMental: "SSO: logou uma vez, acessa tudo (sem repetir senha em cada sistema)."
     },
     comentario: {
       resolucao: "CERTO. O Single Sign-On (SSO) permite que, mediante uma única autenticação inicial, o usuário tenha acesso a múltiplos sistemas ou aplicações integradas, sem necessidade de nova inserção de credenciais a cada acesso — geralmente implementado com protocolos como SAML, OAuth2 ou OpenID Connect.",
@@ -192,12 +157,7 @@ const QUESTOES_PCAL_LOTE28 = [
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "assimétrica ... mesma chave ... simétrica ... par de chaves",
     cognitivo: {
       motivo: "Cobrar a distinção entre criptografia simétrica e assimétrica.",
-      mede: "TI/Segurança — criptografia.",
-      pegadinhaDesc: "A banca inverte os conceitos de simétrica e assimétrica.",
-      ondeErra: "Aceita a troca sem perceber a inversão dos nomes.",
       palavraCritica: "mesma chave ... par de chaves distintas",
-      tecnica: "Simétrica: 1 chave (cifra e decifra). Assimétrica: par de chaves (pública/privada) — uma cifra, a outra decifra. O enunciado trocou os dois nomes entre si.",
-      regraMental: "Simétrica: 1 chave para tudo. Assimétrica: par de chaves (pública + privada)."
     },
     comentario: {
       resolucao: "ERRADO. Os conceitos foram invertidos. Na criptografia simétrica (e não assimétrica) a mesma chave cifra e decifra a informação. Na criptografia assimétrica (e não simétrica) utiliza-se um par de chaves — pública e privada —, de modo que uma cifra e a outra decifra.",
@@ -216,12 +176,7 @@ const QUESTOES_PCAL_LOTE28 = [
     gabarito: "E", pegadinha: "troca-numerica", palavraChave: "duas cópias ... três tipos de mídia",
     cognitivo: {
       motivo: "Cobrar a regra 3-2-1 de backup.",
-      mede: "TI/Segurança — procedimentos de backup.",
-      pegadinhaDesc: "A banca troca os números da regra (3 cópias/2 mídias vira 2 cópias/3 mídias).",
-      ondeErra: "Não retém os três números da regra (3, 2, 1) e aceita a troca.",
       palavraCritica: "duas cópias ... três tipos de mídia",
-      tecnica: "Regra 3-2-1: 3 cópias dos dados, em 2 mídias diferentes, com 1 cópia off-site (fora do local) — e não 2 cópias em 3 mídias.",
-      regraMental: "3 cópias, 2 mídias, 1 fora do local."
     },
     comentario: {
       resolucao: "ERRADO. Os números foram trocados. A regra correta é: 3 cópias dos dados (e não 2), armazenadas em 2 tipos diferentes de mídia (e não 3), com pelo menos 1 cópia mantida em local externo (off-site).",
@@ -240,12 +195,7 @@ const QUESTOES_PCAL_LOTE28 = [
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "IPS ... detectar e alertar ... IDS ... bloquear",
     cognitivo: {
       motivo: "Cobrar a distinção entre IDS (passivo) e IPS (ativo).",
-      mede: "TI/Segurança — segurança de rede.",
-      pegadinhaDesc: "A banca inverte as funções, atribuindo o papel passivo ao IPS e o ativo ao IDS.",
-      ondeErra: "Aceita a troca sem perceber a inversão entre IDS e IPS.",
       palavraCritica: "detectar e alertar ... bloquear",
-      tecnica: "IDS: monitora e ALERTA (passivo). IPS: monitora e BLOQUEIA automaticamente (ativo, geralmente em linha com o tráfego). O enunciado trocou os dois nomes entre si.",
-      regraMental: "IDS: só avisa. IPS: além de avisar, também age/bloqueia."
     },
     comentario: {
       resolucao: "ERRADO. Os papéis foram invertidos. O IDS (e não o IPS) atua de forma passiva, detectando e alertando sobre atividades suspeitas sem bloqueá-las. Já o IPS (e não o IDS) atua de forma ativa, podendo bloquear automaticamente o tráfego identificado como malicioso.",
@@ -264,12 +214,7 @@ const QUESTOES_PCAL_LOTE28 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "provedor ... infraestrutura ... cliente ... configuração e dados",
     cognitivo: {
       motivo: "Cobrar o modelo de responsabilidade compartilhada em nuvem.",
-      mede: "TI/Segurança — segurança em nuvem.",
-      pegadinhaDesc: "A banca pode atribuir toda a responsabilidade só ao provedor ou só ao cliente.",
-      ondeErra: "Acha que o provedor de nuvem é responsável por tudo, inclusive a configuração do cliente.",
       palavraCritica: "provedor ... infraestrutura. Cliente ... configuração e dados",
-      tecnica: "Modelo de responsabilidade compartilhada: o provedor cuida da segurança 'DA nuvem' (infraestrutura física, hardware, virtualização); o cliente cuida da segurança 'NA nuvem' (configurações de acesso, dados, aplicações).",
-      regraMental: "Segurança DA nuvem = provedor. Segurança NA nuvem = cliente."
     },
     comentario: {
       resolucao: "CERTO. No modelo de responsabilidade compartilhada, o provedor de nuvem responde pela segurança da infraestrutura física subjacente (segurança 'da' nuvem), enquanto o cliente é responsável pela segurança das configurações de acesso, dos dados e das aplicações que utiliza (segurança 'na' nuvem).",
@@ -288,12 +233,7 @@ const QUESTOES_PCAL_LOTE28 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "confidencialidade ... integridade ... disponibilidade",
     cognitivo: {
       motivo: "Cobrar a tríade CID (fundamentos de segurança).",
-      mede: "TI/Segurança — fundamentos de segurança da informação.",
-      pegadinhaDesc: "A banca pode trocar os conceitos entre si (ex.: integridade = acesso restrito).",
-      ondeErra: "Confunde confidencialidade (quem acessa) com integridade (dado correto).",
       palavraCritica: "confidencialidade ... integridade ... disponibilidade",
-      tecnica: "Tríade CID: Confidencialidade (só quem é autorizado acessa), Integridade (dado correto/não alterado indevidamente), Disponibilidade (acesso quando necessário).",
-      regraMental: "CID: Confidencial (quem vê), Íntegro (dado certo), Disponível (quando precisar)."
     },
     comentario: {
       resolucao: "CERTO. A tríade CID resume os fundamentos da segurança da informação: confidencialidade (acesso restrito a pessoas autorizadas), integridade (exatidão dos dados, sem alteração indevida) e disponibilidade (acesso garantido sempre que necessário aos usuários autorizados).",

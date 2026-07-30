@@ -21,12 +21,7 @@ const QUESTOES_PCAL_LOTE38 = [
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "chmod ... exclusivamente ... proprietário",
     cognitivo: {
       motivo: "Cobrar a real função do comando chmod, distinta do comando chown.",
-      mede: "TI/Segurança — sistemas operacionais Linux (permissões).",
-      pegadinhaDesc: "A banca troca a função do chmod (permissões) pela do chown (proprietário).",
-      ondeErra: "Confunde os dois comandos clássicos de administração de arquivos no Linux.",
       palavraCritica: "exclusivamente ... proprietário",
-      tecnica: "O comando CHMOD ('change mode') altera as permissões de leitura (r), escrita (w) e execução (x) de um arquivo ou diretório para proprietário, grupo e outros. Quem altera o PROPRIETÁRIO é o comando CHOWN ('change owner') — são comandos distintos.",
-      regraMental: "chmod = permissões (rwx). chown = dono do arquivo."
     },
     comentario: {
       resolucao: "ERRADO. O comando chmod é utilizado exatamente para alterar as permissões de leitura, escrita e execução de um arquivo ou diretório — quem altera o proprietário é o comando chown, e não o chmod.",
@@ -45,12 +40,7 @@ const QUESTOES_PCAL_LOTE38 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "permissões de leitura, escrita e execução",
     cognitivo: {
       motivo: "Cobrar a função correta do comando chmod.",
-      mede: "TI/Segurança — sistemas operacionais Linux (permissões).",
-      pegadinhaDesc: "A banca pode restringir a aplicação apenas ao proprietário, ignorando grupo e outros usuários.",
-      ondeErra: "Esquece que o chmod também altera permissões para grupo e para os demais usuários ('outros').",
       palavraCritica: "proprietário, o grupo e os demais usuários",
-      tecnica: "O comando chmod altera as permissões de leitura (r), escrita (w) e execução (x) de um arquivo ou diretório, aplicáveis separadamente a três categorias: proprietário (user), grupo (group) e outros usuários (others).",
-      regraMental: "chmod: três categorias (user, group, others) × três permissões (r, w, x)."
     },
     comentario: {
       resolucao: "CERTO. O comando chmod altera as permissões de leitura, escrita e execução de um arquivo ou diretório, podendo ser aplicadas separadamente às três categorias de usuários: proprietário, grupo e demais usuários.",
@@ -69,12 +59,7 @@ const QUESTOES_PCAL_LOTE38 = [
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "modelo conceitual ... estrutura física de armazenamento",
     cognitivo: {
       motivo: "Cobrar a real finalidade do modelo conceitual, distinta do modelo físico.",
-      mede: "TI/Segurança — banco de dados (modelagem).",
-      pegadinhaDesc: "A banca atribui ao modelo conceitual (DER) uma finalidade típica do modelo físico.",
-      ondeErra: "Confunde o nível conceitual (entidades, atributos, relacionamentos) com o nível físico (índices, arquivos, parâmetros do SGBD).",
       palavraCritica: "estrutura física de armazenamento",
-      tecnica: "O modelo CONCEITUAL (DER) descreve entidades, atributos e relacionamentos de forma abstrata, independente de tecnologia — é quem descreve a estrutura FÍSICA (índices, tipos de arquivo, parâmetros do SGBD) é o modelo FÍSICO, etapa posterior da modelagem.",
-      regraMental: "DER/conceitual: entidades e relacionamentos (abstrato). Modelo físico: índices e armazenamento real (SGBD específico)."
     },
     comentario: {
       resolucao: "ERRADO. O modelo conceitual, representado pelo DER, descreve entidades, atributos e relacionamentos de forma abstrata e independente de tecnologia — quem descreve a estrutura física de armazenamento (índices, tipos de arquivo, parâmetros do SGBD) é o modelo FÍSICO, e não o conceitual.",
@@ -93,12 +78,7 @@ const QUESTOES_PCAL_LOTE38 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "forma abstrata ... sem se preocupar com ... implementação física",
     cognitivo: {
       motivo: "Cobrar a real finalidade do modelo conceitual (DER).",
-      mede: "TI/Segurança — banco de dados (modelagem).",
-      pegadinhaDesc: "A banca pode negar essa abstração, exigindo detalhes de implementação já no modelo conceitual.",
-      ondeErra: "Não distingue os três níveis de modelagem: conceitual, lógico e físico.",
       palavraCritica: "sem se preocupar com ... implementação física",
-      tecnica: "O modelo conceitual (DER) é o nível mais abstrato de modelagem: descreve entidades, atributos e relacionamentos relevantes ao negócio, sem qualquer preocupação com o SGBD específico ou com detalhes de armazenamento físico — esses detalhes só aparecem no modelo lógico (parcialmente) e no modelo físico (integralmente).",
-      regraMental: "Conceitual → lógico → físico: do mais abstrato ao mais concreto/tecnológico."
     },
     comentario: {
       resolucao: "CERTO. O modelo conceitual, representado pelo DER, é o nível mais abstrato de modelagem de dados, descrevendo entidades, atributos e relacionamentos relevantes ao negócio, sem qualquer preocupação com detalhes de implementação física ou com o SGBD específico a ser utilizado.",
@@ -117,12 +97,7 @@ const QUESTOES_PCAL_LOTE38 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "SELECT, INSERT, UPDATE e DELETE ... DML",
     cognitivo: {
       motivo: "Cobrar a classificação correta dos comandos básicos de manipulação de dados em SQL.",
-      mede: "TI/Segurança — linguagem SQL (categorias de comandos).",
-      pegadinhaDesc: "A banca pode classificar esses comandos como DDL (Data Definition Language).",
-      ondeErra: "Confunde DML (manipulação de dados) com DDL (definição de estruturas, como CREATE, ALTER, DROP).",
       palavraCritica: "DML",
-      tecnica: "SELECT, INSERT, UPDATE e DELETE são comandos de DML (Data Manipulation Language) — usados para consultar e manipular os dados já armazenados. DDL (CREATE, ALTER, DROP) define a estrutura das tabelas; DCL (GRANT, REVOKE) controla permissões de acesso.",
-      regraMental: "DML: SELECT/INSERT/UPDATE/DELETE (dados). DDL: CREATE/ALTER/DROP (estrutura). DCL: GRANT/REVOKE (permissões)."
     },
     comentario: {
       resolucao: "CERTO. Os comandos SELECT, INSERT, UPDATE e DELETE pertencem à categoria DML (Data Manipulation Language) da linguagem SQL, empregados para consultar e manipular os dados armazenados nas tabelas de um banco de dados relacional.",
@@ -141,12 +116,7 @@ const QUESTOES_PCAL_LOTE38 = [
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "DDoS ... compromete ... confidencialidade",
     cognitivo: {
       motivo: "Cobrar que o DDoS compromete a disponibilidade, e não a confidencialidade, da tríade CID.",
-      mede: "TI/Segurança — fundamentos de segurança (tríade CID).",
-      pegadinhaDesc: "A banca troca o princípio comprometido pelo ataque DDoS (disponibilidade) por outro (confidencialidade).",
-      ondeErra: "Confunde 'impedir o acesso' com 'quebra de confidencialidade' (que trata de acesso indevido por quem NÃO deveria acessar, não de indisponibilidade para quem deveria).",
       palavraCritica: "confidencialidade",
-      tecnica: "Na tríade CID: Confidencialidade é violada quando pessoas NÃO autorizadas acessam a informação. Disponibilidade é violada quando usuários AUTORIZADOS ficam impedidos de acessar. O DDoS, ao tornar o sistema indisponível, compromete a DISPONIBILIDADE, não a confidencialidade.",
-      regraMental: "DDoS = ataque de DISPONIBILIDADE (impede acesso de quem deveria acessar), não de confidencialidade."
     },
     comentario: {
       resolucao: "ERRADO. O ataque DDoS compromete o princípio da DISPONIBILIDADE (e não da confidencialidade), pois impede que usuários legítimos e autorizados acessem o sistema ou os dados — a confidencialidade seria violada apenas se pessoas não autorizadas obtivessem acesso indevido às informações.",
@@ -165,12 +135,7 @@ const QUESTOES_PCAL_LOTE38 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "após a aplicação dos controles ... não sendo eliminado por completo",
     cognitivo: {
       motivo: "Cobrar o conceito correto de risco residual, posterior aos controles.",
-      mede: "TI/Segurança — gestão de riscos em segurança da informação.",
-      pegadinhaDesc: "A banca pode inverter o momento (risco residual seria antes dos controles) ou afirmar que ele é totalmente eliminado.",
-      ondeErra: "Confunde risco residual (após os controles) com risco inerente (antes dos controles).",
       palavraCritica: "após a aplicação dos controles ... não sendo eliminado por completo",
-      tecnica: "Risco RESIDUAL é o risco que PERMANECE após a aplicação de controles de segurança — nenhum controle elimina 100% do risco. Risco INERENTE (ou risco bruto) é o nível de risco ANTES da aplicação de qualquer controle.",
-      regraMental: "Risco inerente = antes dos controles. Risco residual = depois dos controles, e nunca é zero."
     },
     comentario: {
       resolucao: "CERTO. O risco residual é o nível de risco que permanece após a implementação de controles de segurança — nenhum conjunto de controles elimina totalmente o risco, restando sempre um resíduo a ser gerenciado (aceito, monitorado ou mitigado ainda mais).",
@@ -189,12 +154,7 @@ const QUESTOES_PCAL_LOTE38 = [
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "String é uma estrutura mutável ... sem a criação de um novo objeto",
     cognitivo: {
       motivo: "Cobrar a imutabilidade da classe String em Java.",
-      mede: "TI/Segurança — linguagem de programação Java.",
-      pegadinhaDesc: "A banca afirma que a String é mutável, quando na verdade é uma das classes imutáveis mais conhecidas do Java.",
-      ondeErra: "Confunde StringBuilder/StringBuffer (mutáveis) com String (imutável).",
       palavraCritica: "estrutura mutável ... sem a criação de um novo objeto",
-      tecnica: "Em Java, String é IMUTÁVEL: qualquer operação como concat() ou replace() NÃO altera o objeto original — ela cria e retorna um NOVO objeto String em memória, mantendo o original inalterado. Quem permite alteração direta (mutabilidade) são as classes StringBuilder e StringBuffer.",
-      regraMental: "String em Java: sempre imutável. concat()/replace() criam objeto novo, não alteram o original."
     },
     comentario: {
       resolucao: "ERRADO. A classe String em Java é IMUTÁVEL — métodos como concat() e replace() não alteram o objeto original, mas retornam um NOVO objeto String em memória. A mutabilidade direta é característica de StringBuilder e StringBuffer, não de String.",
@@ -213,12 +173,7 @@ const QUESTOES_PCAL_LOTE38 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "OAuth2 ... autorizar ... OpenID Connect ... camada de autenticação",
     cognitivo: {
       motivo: "Cobrar a distinção correta entre autorização (OAuth2) e autenticação (OpenID Connect).",
-      mede: "TI/Segurança — gestão de identidades e acesso.",
-      pegadinhaDesc: "A banca pode inverter as finalidades ou classificar o OpenID Connect como protocolo obsoleto.",
-      ondeErra: "Confunde autorização (conceder acesso a recursos) com autenticação (verificar identidade).",
       palavraCritica: "autorizar ... camada de autenticação",
-      tecnica: "OAuth2 é um protocolo de AUTORIZAÇÃO: permite que uma aplicação acesse recursos em nome do usuário, sem necessariamente confirmar quem é esse usuário. O OpenID Connect é uma camada de AUTENTICAÇÃO construída sobre o OAuth2, adicionando a verificação padronizada da identidade — é tecnologia atual e amplamente utilizada, não obsoleta.",
-      regraMental: "OAuth2 = autorização (acesso a recursos). OpenID Connect = autenticação (confirma identidade), sobre o OAuth2."
     },
     comentario: {
       resolucao: "CERTO. O OAuth2 é protocolo de autorização, voltado a conceder acesso de aplicações a recursos do usuário sem necessariamente autenticar sua identidade. O OpenID Connect é uma camada de autenticação construída sobre o OAuth2, permitindo verificar a identidade do usuário de forma padronizada — tecnologia atual, não obsoleta.",
@@ -237,12 +192,7 @@ const QUESTOES_PCAL_LOTE38 = [
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "SIEM ... gerenciar identidades e privilégios ... substituindo ... PAM",
     cognitivo: {
       motivo: "Cobrar que SIEM e PAM têm funções distintas e complementares, não substituíveis entre si.",
-      mede: "TI/Segurança — soluções de segurança da informação (SIEM, PAM).",
-      pegadinhaDesc: "A banca atribui ao SIEM a função que é, na verdade, do PAM.",
-      ondeErra: "Confunde a função de monitoramento e correlação de eventos (SIEM) com a de gestão de acessos privilegiados (PAM).",
       palavraCritica: "gerenciar identidades e privilégios ... substituindo",
-      tecnica: "SIEM (Security Information and Event Management) coleta, correlaciona e monitora eventos e logs de segurança de toda a organização, gerando alertas. PAM (Privileged Access Management) é quem gerencia especificamente as identidades e os privilégios de acesso de usuários privilegiados (administradores). São soluções complementares, não substitutas uma da outra.",
-      regraMental: "SIEM = monitora e correlaciona eventos/logs. PAM = gerencia acessos privilegiados. Não se substituem."
     },
     comentario: {
       resolucao: "ERRADO. O SIEM tem como função principal coletar, correlacionar e monitorar eventos e logs de segurança de toda a organização, gerando alertas — quem gerencia especificamente as identidades e os privilégios de acesso de usuários privilegiados é o PAM. São soluções complementares, e o SIEM não substitui a necessidade de um PAM.",
@@ -262,12 +212,7 @@ const QUESTOES_PCAL_LOTE38 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "interceptação ... sem autorização judicial ... reclusão",
     cognitivo: {
       motivo: "Cobrar a tipificação da interceptação ilegal de comunicações.",
-      mede: "Crimes Cibernéticos — interceptação de comunicações (Lei 9.296/1996).",
-      pegadinhaDesc: "A banca pode negar a natureza criminosa da interceptação sem autorização judicial.",
-      ondeErra: "Acha que a interceptação sem autorização judicial configura apenas irregularidade administrativa, e não crime.",
       palavraCritica: "sem autorização judicial ... reclusão",
-      tecnica: "Art. 10, Lei 9.296/1996: constitui crime realizar interceptação de comunicações telefônicas, de informática ou telemática, ou quebrar segredo de Justiça, sem autorização judicial ou com objetivos não autorizados em lei, sujeitando o agente à pena de reclusão.",
-      regraMental: "Interceptação sem autorização judicial ou fora dos fins legais = crime, com pena de reclusão (art. 10, Lei 9.296/1996)."
     },
     comentario: {
       resolucao: "CERTO. O art. 10 da Lei 9.296/1996 tipifica como crime, com pena de reclusão, a realização de interceptação de comunicações telefônicas, de informática ou telemática sem autorização judicial, ou com objetivos não autorizados em lei.",
@@ -286,12 +231,7 @@ const QUESTOES_PCAL_LOTE38 = [
     gabarito: "E", pegadinha: "exigencia-inexistente", palavraChave: "sem autorização judicial ... dispensando-se ... qualquer controle jurisdicional",
     cognitivo: {
       motivo: "Cobrar que a interceptação de comunicações sempre exige controle jurisdicional, mesmo em casos urgentes.",
-      mede: "Crimes Cibernéticos — interceptação de comunicações (Lei 9.296/1996; CF, art. 5º, XII).",
-      pegadinhaDesc: "A banca cria uma exceção de urgência que dispensaria totalmente o controle judicial, o que não existe no ordenamento.",
-      ondeErra: "Presume que a urgência investigativa, por si só, autoriza a interceptação sem qualquer intervenção judicial.",
       palavraCritica: "dispensando-se ... qualquer controle jurisdicional",
-      tecnica: "A interceptação de comunicações é hipótese de reserva de jurisdição (art. 5º, XII, CF; Lei 9.296/1996): depende sempre de autorização judicial, para investigação criminal ou instrução processual penal, na forma da lei. Não há hipótese que dispense totalmente o controle jurisdicional, mesmo em investigações urgentes.",
-      regraMental: "Interceptação de comunicações: sempre reserva de jurisdição — nenhuma urgência dispensa a autorização judicial."
     },
     comentario: {
       resolucao: "ERRADO. A interceptação de comunicações telefônicas ou telemáticas é hipótese de reserva de jurisdição (art. 5º, XII, CF), dependendo sempre de autorização judicial para investigação criminal ou instrução processual penal — não existe hipótese de urgência que dispense totalmente o controle jurisdicional.",

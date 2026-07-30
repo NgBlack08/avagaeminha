@@ -19,12 +19,7 @@ const QUESTOES_PCAL_LOTE21 = [
     gabarito: "C", pegadinha: "termo-absoluto", palavraChave: "não admite exceção",
     cognitivo: {
       motivo: "Ensinar que 'termo absoluto' pode tornar a assertiva VERDADEIRA.",
-      mede: "Direito Penal/Constitucional — direitos absolutos.",
-      pegadinhaDesc: "O candidato marca ERRADO por instinto ('não admite exceção' parece pegadinha).",
-      ondeErra: "Aplica mecanicamente 'termo absoluto = errado'.",
       palavraCritica: "não admite exceção",
-      tecnica: "A vedação à tortura (art. 5º, III) é das pouquíssimas garantias tratadas como absolutas — não cede nem em estado de defesa/sítio (art. 136 e 139).",
-      regraMental: "Nem todo 'nunca/sempre' é falso. Tortura: vedação absoluta mesmo."
     },
     comentario: {
       resolucao: "CERTO. A proibição de tortura e de tratamento desumano ou degradante (art. 5º, III) é considerada absoluta e integra o núcleo intangível dos direitos fundamentais, não podendo ser afastada nem durante estado de defesa ou de sítio. Aqui, o termo absoluto está correto.",
@@ -43,12 +38,7 @@ const QUESTOES_PCAL_LOTE21 = [
     gabarito: "E", pegadinha: "generalizacao", palavraChave: "caráter absoluto",
     cognitivo: {
       motivo: "Cobrar a relatividade (regra) dos direitos fundamentais.",
-      mede: "Constitucional — teoria dos direitos fundamentais.",
-      pegadinhaDesc: "Generaliza a característica absoluta a todos os direitos.",
-      ondeErra: "Ignora que a regra é a relatividade (limites, colisão, ponderação).",
       palavraCritica: "caráter absoluto",
-      tecnica: "Regra: os direitos fundamentais são RELATIVOS (podem colidir e ser ponderados). Apenas raríssimas exceções são absolutas (ex.: vedação à tortura).",
-      regraMental: "Direitos fundamentais são, em regra, relativos — não absolutos."
     },
     comentario: {
       resolucao: "ERRADO. Segundo o STF, os direitos e garantias fundamentais, em regra, são relativos: podem sofrer restrições e ser ponderados em caso de colisão. O caráter absoluto é exceção rara (como a vedação à tortura). Generalizar a característica absoluta é incorreto.",
@@ -68,12 +58,7 @@ const QUESTOES_PCAL_LOTE21 = [
     gabarito: "E", pegadinha: "restricao-indevida", palavraChave: "esgota-se na atividade repressiva",
     cognitivo: {
       motivo: "Cobrar as fases/dimensões do poder de polícia.",
-      mede: "Administrativo — poder de polícia.",
-      pegadinhaDesc: "Restringe o poder de polícia à repressão.",
-      ondeErra: "Esquece as fases de ordem, consentimento e fiscalização.",
       palavraCritica: "esgota-se na repressiva",
-      tecnica: "O poder de polícia abrange ordem, consentimento, fiscalização e sanção — dimensões preventivas e repressivas. Não se esgota na repressão.",
-      regraMental: "Polícia administrativa: previne, fiscaliza E reprime."
     },
     comentario: {
       resolucao: "ERRADO. O poder de polícia compreende as fases de ordem de polícia (normas), consentimento (licenças/autorizações), fiscalização e sanção. Tem atuação preventiva, fiscalizatória e repressiva — não se esgota na atividade repressiva.",
@@ -92,12 +77,7 @@ const QUESTOES_PCAL_LOTE21 = [
     gabarito: "E", pegadinha: "verdade-mais-falso", palavraChave: "indispensável",
     cognitivo: {
       motivo: "Cobrar a dispensabilidade do inquérito policial.",
-      mede: "Processo Penal — natureza do inquérito.",
-      pegadinhaDesc: "Emenda um item falso (indispensável) a três verdadeiros.",
-      ondeErra: "Aceita a assertiva por reconhecer as três primeiras características.",
       palavraCritica: "indispensável",
-      tecnica: "O IP é administrativo, inquisitivo e sigiloso — mas DISPENSÁVEL: o MP pode oferecer denúncia com base em outros elementos (peças de informação).",
-      regraMental: "Inquérito é dispensável. As demais características são verdadeiras."
     },
     comentario: {
       resolucao: "ERRADO. O inquérito policial é procedimento administrativo, inquisitivo e sigiloso — porém DISPENSÁVEL. A ação penal pode ser proposta com base em outros elementos de convicção (peças de informação, CPI etc.). O erro está apenas na palavra 'indispensável'.",
@@ -116,12 +96,7 @@ const QUESTOES_PCAL_LOTE21 = [
     gabarito: "E", pegadinha: "troca-sujeito", palavraChave: "querelado",
     cognitivo: {
       motivo: "Cobrar os polos da ação penal privada.",
-      mede: "Processo Penal/Penal — ação penal privada.",
-      pegadinhaDesc: "Troca querelante (autor) por querelado (réu).",
-      ondeErra: "Confunde os polos da relação processual.",
       palavraCritica: "querelado",
-      tecnica: "Querelante é o ofendido (autor), que oferece a queixa. Querelado é o réu. A queixa cabe ao QUERELANTE.",
-      regraMental: "Querelante acusa; querelado é acusado. Queixa é do querelante."
     },
     comentario: {
       resolucao: "ERRADO. Na ação penal privada, o ofendido (ou seu representante) é o querelante e oferece a queixa-crime; o querelado é o réu. Logo, a queixa cabe ao querelante, não ao querelado.",
@@ -140,12 +115,7 @@ const QUESTOES_PCAL_LOTE21 = [
     gabarito: "E", pegadinha: "restricao-indevida", palavraChave: "exclusivamente ... indivíduo e o Estado",
     cognitivo: {
       motivo: "Cobrar a eficácia horizontal dos direitos fundamentais.",
-      mede: "Direitos Humanos/Constitucional — eficácia dos direitos.",
-      pegadinhaDesc: "Restringe a eficácia à dimensão vertical (Estado-indivíduo).",
-      ondeErra: "Desconhece a eficácia horizontal (entre particulares).",
       palavraCritica: "exclusivamente",
-      tecnica: "O STF reconhece a eficácia horizontal (Drittwirkung): os direitos fundamentais também vinculam as relações privadas, não só as relações com o Estado.",
-      regraMental: "Direitos fundamentais valem também entre particulares (eficácia horizontal)."
     },
     comentario: {
       resolucao: "ERRADO. Além da eficácia vertical (Estado-indivíduo), os direitos fundamentais possuem eficácia horizontal, incidindo também nas relações entre particulares, conforme reconhecido pelo STF. Restringi-los à relação com o Estado é incorreto.",
@@ -165,12 +135,7 @@ const QUESTOES_PCAL_LOTE21 = [
     gabarito: "E", pegadinha: "verdade-mais-falso", palavraChave: "e a publicidade",
     cognitivo: {
       motivo: "Cobrar os cinco requisitos do ato administrativo.",
-      mede: "Administrativo — elementos/requisitos do ato.",
-      pegadinhaDesc: "Acrescenta a publicidade (princípio, não requisito) à lista correta.",
-      ondeErra: "Confunde princípio (publicidade) com requisito de validade.",
       palavraCritica: "publicidade",
-      tecnica: "Os requisitos são cinco (COM-FI-FO-MO-OB): Competência, Finalidade, Forma, Motivo e Objeto. A publicidade é princípio/condição de eficácia, não requisito de validade.",
-      regraMental: "5 requisitos: Competência, Finalidade, Forma, Motivo, Objeto."
     },
     comentario: {
       resolucao: "ERRADO. Os requisitos (elementos) do ato administrativo são cinco: competência, finalidade, forma, motivo e objeto (art. 2º da Lei 4.717/1965). A publicidade é princípio da Administração e condição de eficácia — não integra o rol dos requisitos de validade.",
@@ -189,12 +154,7 @@ const QUESTOES_PCAL_LOTE21 = [
     gabarito: "C", pegadinha: "troca-sujeito", palavraChave: "privativo do delegado",
     cognitivo: {
       motivo: "Cobrar a privatividade do indiciamento (distrator: MP/juiz).",
-      mede: "Processo Penal — indiciamento.",
-      pegadinhaDesc: "O candidato tende a achar que o MP ou o juiz podem indiciar/determinar indiciamento.",
-      ondeErra: "Confunde as atribuições do delegado com as do MP/juiz.",
       palavraCritica: "privativo do delegado",
-      tecnica: "Lei 12.830/2013, art. 2º, § 6º: o indiciamento é ato PRIVATIVO do delegado de polícia, por despacho fundamentado. O juiz não pode requisitar indiciamento.",
-      regraMental: "Indiciar é só do delegado (ato privativo)."
     },
     comentario: {
       resolucao: "CERTO. Conforme o art. 2º, § 6º, da Lei 12.830/2013, o indiciamento é ato privativo do delegado de polícia, mediante análise técnico-jurídica do fato e por despacho fundamentado. O magistrado não pode determinar o indiciamento (posição do STF).",
@@ -214,12 +174,7 @@ const QUESTOES_PCAL_LOTE21 = [
     gabarito: "E", pegadinha: "generalizacao", palavraChave: "inclusive ... prerrogativa de função",
     cognitivo: {
       motivo: "Cobrar a exceção do foro por prerrogativa de função ao júri.",
-      mede: "Penal/Processo Penal — competência do júri.",
-      pegadinhaDesc: "Generaliza a competência do júri, ignorando o foro constitucional.",
-      ondeErra: "Não distingue prerrogativa fixada na CF de prerrogativa apenas em constituição estadual.",
       palavraCritica: "inclusive ... prerrogativa",
-      tecnica: "A competência do júri é a regra, mas cede ao foro por prerrogativa previsto na PRÓPRIA Constituição Federal (Súmula 721 STF / SV 45): prevalece o foro constitucional.",
-      regraMental: "Foro por prerrogativa na CF prevalece sobre o júri."
     },
     comentario: {
       resolucao: "ERRADO. Embora o júri seja competente para os crimes dolosos contra a vida, o foro por prerrogativa de função estabelecido na própria Constituição Federal prevalece sobre a competência do júri (Súmula 721 do STF e SV 45). Só a prerrogativa prevista exclusivamente em constituição estadual cede ao júri.",
@@ -239,12 +194,7 @@ const QUESTOES_PCAL_LOTE21 = [
     gabarito: "C", pegadinha: "restricao-indevida", palavraChave: "não é punido com pena privativa de liberdade",
     cognitivo: {
       motivo: "Cobrar as penas do art. 28 (usuário) — distrator: prisão.",
-      mede: "Legislação Especial — Lei de Drogas.",
-      pegadinhaDesc: "O candidato tende a supor prisão para o usuário.",
-      ondeErra: "Confunde o tratamento do usuário (art. 28) com o do traficante (art. 33).",
       palavraCritica: "não é punido com pena privativa de liberdade",
-      tecnica: "Art. 28: ao usuário aplicam-se advertência, prestação de serviços à comunidade e medida educativa de comparecimento a programa — jamais pena privativa de liberdade.",
-      regraMental: "Usuário (art. 28): não vai preso. Só medidas alternativas."
     },
     comentario: {
       resolucao: "CERTO. O art. 28 da Lei 11.343/2006 comina ao porte para consumo pessoal apenas advertência sobre os efeitos das drogas, prestação de serviços à comunidade e medida educativa de comparecimento a programa ou curso educativo — nunca pena privativa de liberdade.",
@@ -263,12 +213,7 @@ const QUESTOES_PCAL_LOTE21 = [
     gabarito: "C", pegadinha: "restricao-indevida", palavraChave: "somente os legitimados arrolados",
     cognitivo: {
       motivo: "Cobrar a taxatividade do rol do art. 103 (distrator: 'somente' parece pegadinha).",
-      mede: "Constitucional — controle concentrado.",
-      pegadinhaDesc: "O 'somente' induz o candidato a marcar errado por reflexo.",
-      ondeErra: "Aplica mecanicamente 'restrição = errado'.",
       palavraCritica: "somente",
-      tecnica: "O art. 103 traz rol TAXATIVO de legitimados (ex.: Presidente, PGR, OAB, partidos com representação, governadores etc.). O cidadão comum não tem legitimidade para ADI.",
-      regraMental: "ADI: só os legitimados do art. 103. 'Somente' aqui é verdade."
     },
     comentario: {
       resolucao: "CERTO. A legitimação para a ADI é restrita aos entes e autoridades expressamente arrolados no art. 103 da CF. O rol é taxativo — o cidadão comum não pode propor ADI. A palavra 'somente', aqui, torna a assertiva correta.",
@@ -287,12 +232,7 @@ const QUESTOES_PCAL_LOTE21 = [
     gabarito: "E", pegadinha: "troca-sujeito", palavraChave: "própria autoridade administrativa",
     cognitivo: {
       motivo: "Cobrar a competência para aplicar as sanções de improbidade.",
-      mede: "Administrativo — improbidade.",
-      pegadinhaDesc: "Atribui à Administração a aplicação das sanções (é do Judiciário).",
-      ondeErra: "Confunde o PAD com a ação de improbidade.",
       palavraCritica: "própria autoridade administrativa",
-      tecnica: "As sanções da Lei 8.429/1992 (perda da função, suspensão de direitos políticos, multa etc.) são aplicadas pelo PODER JUDICIÁRIO, em ação de improbidade proposta pelo MP.",
-      regraMental: "Sanção de improbidade: quem aplica é o juiz, não a Administração."
     },
     comentario: {
       resolucao: "ERRADO. As sanções por improbidade administrativa (perda da função pública, suspensão dos direitos políticos, multa civil, proibição de contratar etc.) são aplicadas pelo Poder Judiciário, em ação específica de titularidade do Ministério Público, e não pela autoridade administrativa em PAD.",
@@ -311,12 +251,7 @@ const QUESTOES_PCAL_LOTE21 = [
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "natureza jurídica de tratado",
     cognitivo: {
       motivo: "Cobrar a natureza jurídica da DUDH.",
-      mede: "Direitos Humanos — sistema global.",
-      pegadinhaDesc: "Trata a Declaração como tratado convencional vinculante.",
-      ondeErra: "Confunde Declaração (resolução) com tratado (convenção).",
       palavraCritica: "tratado internacional",
-      tecnica: "A DUDH é uma RESOLUÇÃO/Declaração da Assembleia Geral da ONU — não é tratado. Sua força hoje advém do costume internacional e do reconhecimento como jus cogens, mas não da natureza convencional.",
-      regraMental: "DUDH = Declaração (resolução), não tratado."
     },
     comentario: {
       resolucao: "ERRADO. A DUDH (1948) é uma declaração adotada por resolução da Assembleia Geral da ONU, e não um tratado internacional. Embora tenha enorme força moral e seja considerada norma costumeira/de jus cogens, não é, por si só, um tratado convencional diretamente vinculante.",

@@ -17,12 +17,7 @@ const QUESTOES_PCAL_BASICOS = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "equivalente",
     cognitivo: {
       motivo: "Cobrar a contrapositiva, a equivalência mais explorada pela banca em lógica.",
-      mede: "Equivalência lógica do condicional (P→Q ≡ ~Q→~P).",
-      pegadinhaDesc: "O candidato confunde contrapositiva (válida) com recíproca ou inversa (inválidas).",
-      ondeErra: "Marca E achando que qualquer inversão do condicional é falácia.",
       palavraCritica: "não confia → não cumpre",
-      tecnica: "P→Q só equivale a: ~Q→~P (contrapositiva) e ~P∨Q. Recíproca (Q→P) e inversa (~P→~Q) NÃO equivalem.",
-      regraMental: "“Nega e inverte” = equivalente. “Só inverte” ou “só nega” = errado."
     },
     comentario: {
       resolucao: "CERTO. P→Q é logicamente equivalente à sua contrapositiva ~Q→~P: ambas possuem a mesma tabela-verdade. A assertiva negou o consequente e o transformou em antecedente, negando também o antecedente original.",
@@ -40,12 +35,7 @@ const QUESTOES_PCAL_BASICOS = [
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "negação",
     cognitivo: {
       motivo: "Negação de proposição categórica universal — clássico absoluto da banca.",
-      mede: "Quantificadores e suas negações.",
-      pegadinhaDesc: "Oferece o 'contrário' (nenhum) no lugar da negação lógica (pelo menos um não).",
-      ondeErra: "Confunde negação com proposição contrária.",
       palavraCritica: "nenhum",
-      tecnica: "Negar 'todos são' = 'pelo menos um não é'. Negar 'nenhum é' = 'pelo menos um é'.",
-      regraMental: "A negação de TODO não é NENHUM — é ALGUM... NÃO."
     },
     comentario: {
       resolucao: "ERRADO. A negação de “todos os investigados foram indiciados” é “pelo menos um investigado não foi indiciado” (ou “algum investigado não foi indiciado”). “Nenhum foi indiciado” é a proposição contrária, não a contraditória.",
@@ -63,12 +53,7 @@ const QUESTOES_PCAL_BASICOS = [
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "e",
     cognitivo: {
       motivo: "Aplicação direta das Leis de De Morgan, item expresso do edital (11.4).",
-      mede: "Negação de conjunção.",
-      pegadinhaDesc: "Nega as parcelas mas mantém o conectivo 'e', quando deveria trocá-lo por 'ou'.",
-      ondeErra: "Esquece a troca do conectivo ao negar.",
       palavraCritica: "e (deveria virar ou)",
-      tecnica: "~(P∧Q) = ~P∨~Q e ~(P∨Q) = ~P∧~Q — nega as duas e TROCA o conectivo.",
-      regraMental: "De Morgan: 'nega tudo e vira a chave' (e↔ou)."
     },
     comentario: {
       resolucao: "ERRADO. Pelas Leis de De Morgan, a negação de uma conjunção é a disjunção das negações: “O suspeito não estava armado OU não fugiu do local”. Manter o 'e' produz proposição que não é a contraditória.",
@@ -86,12 +71,7 @@ const QUESTOES_PCAL_BASICOS = [
     gabarito: "C", pegadinha: "termo-absoluto", palavraChave: "somente",
     cognitivo: {
       motivo: "Regra nuclear da tabela-verdade do condicional.",
-      mede: "Valoração do conectivo →.",
-      pegadinhaDesc: "O 'somente' está correto aqui — pune quem usa a heurística do termo absoluto sem verificar o conteúdo.",
-      ondeErra: "Marca E por reflexo diante do 'somente'.",
       palavraCritica: "V → F",
-      tecnica: "Condicional: só 'quebra a promessa' V→F. Antecedente falso torna tudo verdadeiro (vacuidade).",
-      regraMental: "Vera Fischer é linda, mas V→F é o único caso FALSO."
     },
     comentario: {
       resolucao: "CERTO. O condicional P→Q assume valor falso exclusivamente na combinação P verdadeiro e Q falso; nas demais três linhas da tabela-verdade, é verdadeiro.",
@@ -109,12 +89,7 @@ const QUESTOES_PCAL_BASICOS = [
     gabarito: "E", pegadinha: "generalizacao", palavraChave: "igual ao valor original",
     cognitivo: {
       motivo: "Percentuais sucessivos sobre bases diferentes — armadilha aritmética recorrente.",
-      mede: "Porcentagem e variação percentual composta.",
-      pegadinhaDesc: "Induz a soma algébrica (+20% −20% = 0), ignorando a mudança de base.",
-      ondeErra: "Aplica o desconto sobre a base original em vez do montante aumentado.",
       palavraCritica: "sobre o novo montante",
-      tecnica: "Multiplicadores: 1,20 × 0,80 = 0,96 → o valor final é 96% do original (perda de 4%).",
-      regraMental: "Aumento e desconto de mesma taxa NUNCA se anulam — sempre sobra perda."
     },
     comentario: {
       resolucao: "ERRADO. Com valor inicial V: após +20%, tem-se 1,2V; o desconto de 20% incide sobre 1,2V, resultando 1,2V × 0,8 = 0,96V. Há redução de 4% em relação ao original.",
@@ -132,12 +107,7 @@ const QUESTOES_PCAL_BASICOS = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "distintos",
     cognitivo: {
       motivo: "Princípio fundamental da contagem com restrição de não repetição.",
-      mede: "Arranjos simples.",
-      pegadinhaDesc: "A banca costuma trocar 'distintos' por repetição permitida (10³=1000) — aqui o cálculo bate.",
-      ondeErra: "Ignora a palavra 'distintos' e calcula 1000, marcando E.",
       palavraCritica: "distintos",
-      tecnica: "Posições: 10 × 9 × 8 = 720 (a cada escolha, um algarismo sai do estoque).",
-      regraMental: "'Distintos' = estoque diminui. Com repetição = estoque cheio sempre."
     },
     comentario: {
       resolucao: "CERTO. Para o 1º algarismo há 10 opções; para o 2º, 9 (não pode repetir); para o 3º, 8. Pelo princípio multiplicativo: 10×9×8 = 720 senhas.",
@@ -157,12 +127,7 @@ const QUESTOES_PCAL_BASICOS = [
     gabarito: "C", pegadinha: "verdade-mais-falso", palavraChave: "não impede",
     cognitivo: {
       motivo: "Características clássicas dos direitos humanos + relatividade.",
-      mede: "Teoria geral dos direitos humanos (item 1 do edital).",
-      pegadinhaDesc: "A parte final parece contradizer a lista solene do início — mas está correta.",
-      ondeErra: "Marca E achando que irrenunciável e imprescritível implicariam caráter absoluto.",
       palavraCritica: "limitação recíproca",
-      tecnica: "Titular não pode renunciar nem o tempo apagar — mas o EXERCÍCIO pode ser limitado por outros direitos.",
-      regraMental: "Direitos humanos: absolutos NÃO; relativos SIM (ponderação)."
     },
     comentario: {
       resolucao: "CERTO. A doutrina consagra universalidade (valem para todos), indivisibilidade (formam bloco único), imprescritibilidade (não se perdem pelo tempo) e irrenunciabilidade. A relatividade/limitabilidade convive com essas notas: colisões resolvem-se por ponderação.",
@@ -180,12 +145,7 @@ const QUESTOES_PCAL_BASICOS = [
     gabarito: "E", pegadinha: "troca-numerica", palavraChave: "turno único / maioria absoluta",
     cognitivo: {
       motivo: "Literalidade do art. 5º, § 3º, com o rito trocado pelo de lei complementar.",
-      mede: "Incorporação qualificada de tratados de direitos humanos.",
-      pegadinhaDesc: "Substitui 'dois turnos' e 'três quintos' por 'turno único' e 'maioria absoluta'.",
-      ondeErra: "Valida o conjunto sem conferir os dois números do rito.",
       palavraCritica: "dois turnos / três quintos",
-      tecnica: "Rito de EC: 2 Casas × 2 turnos × 3/5. Qualquer outro quórum = item errado.",
-      regraMental: "Tratado-emenda = 2-2-3/5 (o mesmo caminho da emenda constitucional)."
     },
     comentario: {
       resolucao: "ERRADO. CF, art. 5º, § 3º: os tratados de direitos humanos aprovados 'em cada Casa do Congresso Nacional, em DOIS TURNOS, por TRÊS QUINTOS dos votos dos respectivos membros' equivalem às emendas constitucionais. Maioria absoluta em turno único é rito de lei complementar.",
@@ -203,12 +163,7 @@ const QUESTOES_PCAL_BASICOS = [
     gabarito: "E", pegadinha: "juris-mais-lei", palavraChave: "permanece lícita",
     cognitivo: {
       motivo: "Cobrar o efeito paralisante do Pacto de São José (status supralegal) sobre a prisão do depositário infiel.",
-      mede: "Hierarquia dos tratados de DH e Súmula Vinculante 25.",
-      pegadinhaDesc: "A premissa é verdadeira (a CF prevê) — a conclusão é falsa (a prisão é ilícita).",
-      ondeErra: "Raciocina só com o texto constitucional, ignorando o bloco convencional.",
       palavraCritica: "ilícita (SV 25)",
-      tecnica: "CADH (art. 7.7) admite prisão por dívida só do devedor de alimentos; com status supralegal, paralisou a legislação do depositário infiel.",
-      regraMental: "Prisão civil no Brasil: SÓ alimentos. Depositário infiel: nunca mais (SV 25)."
     },
     comentario: {
       resolucao: "ERRADO. Súmula Vinculante 25/STF: 'É ilícita a prisão civil de depositário infiel, qualquer que seja a modalidade do depósito.' Embora a CF (art. 5º, LXVII) a mencione, o Pacto de São José da Costa Rica — com status supralegal (RE 466.343) — paralisou a eficácia da legislação infraconstitucional que a regulamentava.",
@@ -226,12 +181,7 @@ const QUESTOES_PCAL_BASICOS = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "obrigação alimentar",
     cognitivo: {
       motivo: "Literalidade do art. 7.7 da CADH, expressamente citada no edital.",
-      mede: "Direito à liberdade pessoal na CADH.",
-      pegadinhaDesc: "Item literal correto — a banca costuma trocar a ressalva (ex.: incluir depositário infiel).",
-      ondeErra: "Desconfia da única exceção e marca E.",
       palavraCritica: "ressalvados... alimentar",
-      tecnica: "A CADH admite UMA única prisão por dívida: a do devedor de alimentos.",
-      regraMental: "Pacto de São José: dívida não prende — exceto pensão alimentícia."
     },
     comentario: {
       resolucao: "CERTO. CADH, art. 7.7: 'Ninguém deve ser detido por dívidas. Este princípio não limita os mandados de autoridade judiciária competente expedidos em virtude de inadimplemento de obrigação alimentar.'",
@@ -249,12 +199,7 @@ const QUESTOES_PCAL_BASICOS = [
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "primeira × segunda",
     cognitivo: {
       motivo: "Inversão espelhada das duas primeiras dimensões de direitos.",
-      mede: "Evolução histórica dos direitos humanos.",
-      pegadinhaDesc: "As descrições estão corretas, mas com os rótulos trocados entre si.",
-      ondeErra: "Lê definições familiares sem conferir o pareamento dimensão↔valor.",
       palavraCritica: "igualdade / liberdade",
-      tecnica: "Monte o trio antes de ler: 1ª=Liberdade (abstenção), 2ª=Igualdade (prestação), 3ª=Fraternidade (difusos).",
-      regraMental: "Lema da Revolução Francesa na ordem: Liberté (1ª), Égalité (2ª), Fraternité (3ª)."
     },
     comentario: {
       resolucao: "ERRADO. É o inverso: a 1ª dimensão (direitos civis e políticos) liga-se à LIBERDADE e exige abstenção estatal (status negativo); a 2ª dimensão (direitos sociais, econômicos e culturais) liga-se à IGUALDADE e demanda prestações positivas.",
@@ -274,12 +219,7 @@ const QUESTOES_PCAL_BASICOS = [
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "idênticos",
     cognitivo: {
       motivo: "Distinção básica ética × moral — porta de entrada da disciplina.",
-      mede: "Conceitos fundamentais (itens 1 e 2 do edital).",
-      pegadinhaDesc: "Define corretamente a MORAL e estende o rótulo à ética.",
-      ondeErra: "Trata os termos como sinônimos, como no uso cotidiano.",
       palavraCritica: "idênticos",
-      tecnica: "Moral = conjunto de normas vividas por um grupo (prática). Ética = reflexão filosófica sobre a moral (teoria).",
-      regraMental: "Moral é o COSTUME; ética é o ESTUDO do costume."
     },
     comentario: {
       resolucao: "ERRADO. A definição apresentada corresponde à moral (normas de conduta de um grupo em certo tempo). A ética é a ciência/reflexão crítica sobre a moral, buscando fundamentar os juízos de valor. São noções relacionadas, mas não idênticas.",
@@ -297,12 +237,7 @@ const QUESTOES_PCAL_BASICOS = [
     gabarito: "E", pegadinha: "restricao-indevida", palavraChave: "restringe-se",
     cognitivo: {
       motivo: "Cobrar que a moralidade administrativa não se esgota na legalidade.",
-      mede: "Relação entre ética, legalidade e moralidade na função pública.",
-      pegadinhaDesc: "Equipara legalidade e honestidade, restringindo o padrão ético ao texto legal.",
-      ondeErra: "Aceita que cumprir a lei basta para agir eticamente.",
       palavraCritica: "restringe-se / por definição",
-      tecnica: "O servidor deve decidir não só entre legal e ilegal, mas entre honesto e desonesto, conveniente e inconveniente.",
-      regraMental: "Nem tudo que é legal é moral — a moralidade é princípio autônomo (CF, art. 37)."
     },
     comentario: {
       resolucao: "ERRADO. A moralidade administrativa é princípio autônomo (CF, art. 37, caput): o ato pode ser formalmente legal e ainda assim imoral (desvio de finalidade, favorecimento). O padrão ético do servidor abrange honestidade, lealdade às instituições e busca do bem comum, indo além da legalidade estrita.",
@@ -320,12 +255,7 @@ const QUESTOES_PCAL_BASICOS = [
     gabarito: "E", pegadinha: "restricao-indevida", palavraChave: "esgota-se",
     cognitivo: {
       motivo: "Conceito amplo de cidadania — item 3 do edital (ética e democracia).",
-      mede: "Cidadania como participação além do sufrágio.",
-      pegadinhaDesc: "Reduz cidadania à dimensão eleitoral.",
-      ondeErra: "Associa cidadania apenas a direitos políticos stricto sensu.",
       palavraCritica: "esgota-se",
-      tecnica: "Cidadania inclui participação, fiscalização e controle social (ação popular, denúncias a ouvidorias, conselhos, acesso à informação).",
-      regraMental: "Votar é o começo da cidadania, não o fim."
     },
     comentario: {
       resolucao: "ERRADO. A cidadania democrática é conceito amplo: além do voto, compreende o controle social da administração (ação popular — CF, art. 5º, LXXIII; direito de petição; acesso à informação; participação em conselhos e audiências públicas).",
@@ -345,12 +275,7 @@ const QUESTOES_PCAL_BASICOS = [
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "assimétrica",
     cognitivo: {
       motivo: "Troca de rótulos entre os dois grandes modelos criptográficos.",
-      mede: "Fundamentos de criptografia (item 4 de Segurança Cibernética).",
-      pegadinhaDesc: "A definição é perfeita — da criptografia SIMÉTRICA.",
-      ondeErra: "Valida a definição correta sem conferir o nome.",
       palavraCritica: "única chave",
-      tecnica: "Assimétrica = PAR de chaves (pública cifra, privada decifra). Simétrica = uma chave só, compartilhada.",
-      regraMental: "A-ssimétrica = 2 chaves (o 'A' de Ambas). Simétrica = Só uma."
     },
     comentario: {
       resolucao: "ERRADO. A definição corresponde à criptografia SIMÉTRICA (ex.: AES). Na assimétrica (ex.: RSA), cada parte possui um par de chaves matematicamente relacionadas: a pública, distribuível, e a privada, secreta — o que cifra com uma, decifra-se com a outra.",
@@ -368,12 +293,7 @@ const QUESTOES_PCAL_BASICOS = [
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "bloqueia automaticamente",
     cognitivo: {
       motivo: "Distinguir detecção (IDS) de prevenção (IPS) — item 3.1/9 do edital.",
-      mede: "Soluções de segurança de rede.",
-      pegadinhaDesc: "Atribui ao IDS a ação ativa que caracteriza o IPS.",
-      ondeErra: "Trata os dois como sinônimos por virem sempre juntos ('IDS/IPS').",
       palavraCritica: "Detection × Prevention",
-      tecnica: "IDS = sensor passivo: detecta e ALERTA. IPS = inline ativo: detecta e BLOQUEIA.",
-      regraMental: "D de Detectar (avisa). P de Prevenir (barra)."
     },
     comentario: {
       resolucao: "ERRADO. O IDS é ferramenta de DETECÇÃO: monitora o tráfego e gera alertas, sem intervir no fluxo. Quem atua inline bloqueando pacotes maliciosos automaticamente é o IPS (Intrusion Prevention System).",
@@ -391,12 +311,7 @@ const QUESTOES_PCAL_BASICOS = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "túnel criptografado",
     cognitivo: {
       motivo: "Conceito nuclear de VPN, cobrado de forma direta pela banca.",
-      mede: "Segurança de rede (item 3.1).",
-      pegadinhaDesc: "Item conceitual correto — a banca alterna itens limpos para calibrar.",
-      ondeErra: "Procura erro inexistente no exemplo do aeroporto.",
       palavraCritica: "mesmo sobre redes públicas",
-      tecnica: "VPN = privacidade construída POR CIMA de rede pública, via criptografia (tunelamento).",
-      regraMental: "VPN: cano blindado dentro de rio aberto."
     },
     comentario: {
       resolucao: "CERTO. A VPN cria um túnel lógico cifrado entre as extremidades, de modo que os dados trafegam protegidos ainda que a infraestrutura subjacente seja pública e insegura. É prática recomendada para acesso remoto corporativo.",
@@ -414,12 +329,7 @@ const QUESTOES_PCAL_BASICOS = [
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "sensível",
     cognitivo: {
       motivo: "Distinção entre dado pessoal e dado pessoal sensível — coração da LGPD em prova.",
-      mede: "Art. 5º, I e II, da LGPD.",
-      pegadinhaDesc: "O CPF 'parece' sensível por ser importante — mas o rol legal é específico.",
-      ondeErra: "Confunde relevância prática com a categoria jurídica 'sensível'.",
       palavraCritica: "rol do art. 5º, II",
-      tecnica: "Sensível = origem racial/étnica, convicção religiosa, opinião política, filiação sindical, saúde, vida sexual, genético, biométrico.",
-      regraMental: "Sensível é o que expõe QUEM VOCÊ É (crença, corpo, saúde) — não o número que te identifica."
     },
     comentario: {
       resolucao: "ERRADO. O CPF é dado pessoal comum (identifica a pessoa natural — art. 5º, I). Dado sensível é o rol do art. 5º, II: origem racial ou étnica, convicção religiosa, opinião política, filiação a sindicato ou organização religiosa/filosófica/política, saúde, vida sexual, dado genético ou biométrico.",
@@ -439,12 +349,7 @@ const QUESTOES_PCAL_BASICOS = [
     gabarito: "E", pegadinha: "juris-mais-lei", palavraChave: "somente / mecanismo de segurança",
     cognitivo: {
       motivo: "Cobrar a alteração da Lei 14.155/2021, que suprimiu a elementar 'violação de mecanismo de segurança'.",
-      mede: "Redação atual do art. 154-A do CP.",
-      pegadinhaDesc: "A exigência descrita era a redação ORIGINAL da Lei Carolina Dieckmann — foi removida em 2021.",
-      ondeErra: "Estudou o tipo pela redação antiga (pré-2021) e marca C com convicção.",
       palavraCritica: "com ou sem violação de mecanismo",
-      tecnica: "Redação atual: invadir dispositivo 'com o fim de obter, adulterar ou destruir dados... sem autorização' — a proteção do aparelho deixou de ser elementar.",
-      regraMental: "Pós-14.155/2021: invadiu sem autorização = crime, protegido ou não o dispositivo."
     },
     comentario: {
       resolucao: "ERRADO. A Lei 14.155/2021 alterou o art. 154-A do CP, retirando a elementar 'mediante violação indevida de mecanismo de segurança'. Hoje, invadir dispositivo informático de uso alheio, com o fim de obter, adulterar ou destruir dados ou informações sem autorização do usuário, ou de instalar vulnerabilidades, configura o crime — ainda que o aparelho não possua senha ou proteção.",
@@ -462,12 +367,7 @@ const QUESTOES_PCAL_BASICOS = [
     gabarito: "C", pegadinha: "juris-mais-lei", palavraChave: "autorização judicial",
     cognitivo: {
       motivo: "Limites da busca e apreensão de itens digitais (art. 240 e ss. do CPP) — item expresso do edital.",
-      mede: "Proteção do sigilo de dados armazenados e reserva de jurisdição.",
-      pegadinhaDesc: "O candidato-policial tende a achar que a apreensão legítima do aparelho autoriza a devassa.",
-      ondeErra: "Confunde apreender o objeto com acessar o conteúdo.",
       palavraCritica: "prévia autorização judicial",
-      tecnica: "Apreensão física ≠ acesso a dados: o conteúdo (conversas, arquivos) é protegido — exige ordem judicial.",
-      regraMental: "Pegou o celular? Pode. Ler as conversas? Só com o juiz."
     },
     comentario: {
       resolucao: "CERTO. O STJ consolidou que é ilícita a prova obtida pelo acesso direto da polícia, sem autorização judicial, a conversas e dados armazenados em celular apreendido, ainda que em flagrante (RHC 51.531; HC 51.531 e jurisprudência subsequente). A tutela decorre do sigilo de dados (CF, art. 5º, X e XII) e da Lei 9.472/1997.",
@@ -485,12 +385,7 @@ const QUESTOES_PCAL_BASICOS = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "categorias distintas",
     cognitivo: {
       motivo: "Conceito de MFA — item 3/2.1 de Segurança Digital do edital.",
-      mede: "Fatores de autenticação e mitigação de phishing.",
-      pegadinhaDesc: "Item conceitual correto; a banca costuma errar de propósito dizendo que duas senhas = MFA.",
-      ondeErra: "Desconfia do final ('insuficiente para o invasor') e marca E.",
       palavraCritica: "sabe / possui / é",
-      tecnica: "MFA exige categorias DIFERENTES: conhecimento (senha), posse (token/celular), inerência (biometria). Duas senhas = 1 fator repetido.",
-      regraMental: "Sabe + Tem + É — combine ao menos dois REINOS diferentes."
     },
     comentario: {
       resolucao: "CERTO. O MFA soma fatores de naturezas distintas: conhecimento, posse e inerência. Vazada a senha (fator 1), o atacante ainda precisa do dispositivo ou da biometria da vítima — por isso o MFA é a principal defesa contra o sucesso do phishing de credenciais.",
@@ -508,12 +403,7 @@ const QUESTOES_PCAL_BASICOS = [
     gabarito: "E", pegadinha: "termo-absoluto", palavraChave: "exclusivamente / ineficaz",
     cognitivo: {
       motivo: "Natureza sociotécnica do phishing — engenharia social como essência do golpe.",
-      mede: "Golpes virtuais e prevenção (item 3 de Segurança Digital).",
-      pegadinhaDesc: "Dupla absolutização: 'exclusivamente técnicas' e 'ineficaz'.",
-      ondeErra: "Não percebe que o phishing depende justamente da ação da vítima.",
       palavraCritica: "exclusivamente",
-      tecnica: "Phishing = engenharia social: induz a vítima a clicar, informar credenciais ou instalar malware. Conscientização é a principal defesa.",
-      regraMental: "Phishing pesca PESSOAS, não sistemas — o elo humano é o alvo."
     },
     comentario: {
       resolucao: "ERRADO. O phishing é, por essência, técnica de engenharia social: depende de induzir a vítima a agir (clicar no link, fornecer dados, abrir anexo). Justamente por isso, a conscientização e o treinamento de usuários estão entre as medidas MAIS eficazes de prevenção, ao lado de filtros técnicos e MFA.",

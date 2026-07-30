@@ -25,12 +25,7 @@ const QUESTOES_PCAL_LOTE22 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "flagrante próprio",
     cognitivo: {
       motivo: "Aplicar as espécies de flagrante ao caso concreto (art. 302, I).",
-      mede: "Processo Penal — prisão em flagrante.",
-      pegadinhaDesc: "A banca pode rotular o caso como flagrante impróprio ou presumido.",
-      ondeErra: "Confunde 'está cometendo' (próprio) com 'logo após' (impróprio).",
       palavraCritica: "no momento em que cometia",
-      tecnica: "Art. 302, I: flagrante próprio = quem está cometendo a infração. João foi visto no ato → flagrante próprio (real).",
-      regraMental: "Pego no ato = flagrante próprio (art. 302, I)."
     },
     comentario: {
       resolucao: "CERTO. João foi surpreendido no exato momento da subtração, o que caracteriza o flagrante próprio (real), previsto no art. 302, I, do CPP — está cometendo a infração penal.",
@@ -50,12 +45,7 @@ const QUESTOES_PCAL_LOTE22 = [
     gabarito: "E", pegadinha: "exigencia-inexistente", palavraChave: "prévia autorização judicial",
     cognitivo: {
       motivo: "Cobrar a dispensa de ordem judicial no flagrante.",
-      mede: "Processo Penal — prisão sem mandado.",
-      pegadinhaDesc: "Cria exigência de autorização judicial para o flagrante.",
-      ondeErra: "Ignora a exceção constitucional ao mandado (flagrante).",
       palavraCritica: "prévia autorização judicial",
-      tecnica: "Art. 5º, LXI, CF: ninguém será preso senão em flagrante ou por ordem judicial. O flagrante é exceção — dispensa mandado.",
-      regraMental: "Flagrante não precisa de mandado (é exceção constitucional)."
     },
     comentario: {
       resolucao: "ERRADO. A prisão em flagrante independe de ordem judicial prévia, conforme o art. 5º, LXI, da CF, que a coloca como exceção à exigência de mandado. Qualquer do povo pode e as autoridades policiais devem prender quem esteja em flagrante (CPP, art. 301).",
@@ -75,12 +65,7 @@ const QUESTOES_PCAL_LOTE22 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "silêncio",
     cognitivo: {
       motivo: "Aplicar o direito ao silêncio ao caso.",
-      mede: "Processo Penal — garantias do preso.",
-      pegadinhaDesc: "A banca pode dizer que o silêncio prejudica a defesa.",
-      ondeErra: "Trata o silêncio como confissão ficta.",
       palavraCritica: "não importa confissão",
-      tecnica: "CF, art. 5º, LXIII, e CPP, art. 186, parágrafo único: o silêncio é direito e não pode ser interpretado em prejuízo do réu.",
-      regraMental: "Silêncio é direito: não prejudica, não confessa."
     },
     comentario: {
       resolucao: "CERTO. O direito ao silêncio (art. 5º, LXIII, da CF; art. 186, parágrafo único, do CPP) assegura que o silêncio de João não seja interpretado em seu prejuízo nem valha como confissão.",
@@ -100,12 +85,7 @@ const QUESTOES_PCAL_LOTE22 = [
     gabarito: "E", pegadinha: "restricao-indevida", palavraChave: "dispensável",
     cognitivo: {
       motivo: "Cobrar a obrigatoriedade da nota de culpa.",
-      mede: "Processo Penal — formalidades do flagrante.",
-      pegadinhaDesc: "Dispensa uma garantia obrigatória do preso.",
-      ondeErra: "Confunde comunicação ao juiz com a nota de culpa (garantias distintas).",
       palavraCritica: "dispensável",
-      tecnica: "CPP, art. 306, § 2º: em até 24h da prisão, entrega-se ao preso a nota de culpa, assinada pela autoridade, com o motivo da prisão e os nomes do condutor e testemunhas. É obrigatória.",
-      regraMental: "Nota de culpa é obrigatória (24h). Não se dispensa."
     },
     comentario: {
       resolucao: "ERRADO. A nota de culpa é obrigatória: nos termos do art. 306, § 2º, do CPP, deve ser entregue ao preso em até 24 horas, com o motivo da prisão e a identificação do condutor e das testemunhas. É garantia distinta e cumulativa em relação à comunicação da prisão ao juiz.",
@@ -127,12 +107,7 @@ const QUESTOES_PCAL_LOTE22 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "crime autônomo",
     cognitivo: {
       motivo: "Aplicar o feminicídio autônomo (Lei 14.994/2024) ao caso.",
-      mede: "Direito Penal — feminicídio.",
-      pegadinhaDesc: "A banca pode negar a hediondez ou tratar como qualificadora.",
-      ondeErra: "Usa o regime anterior à Lei 14.994/2024.",
       palavraCritica: "crime autônomo ... hediondo",
-      tecnica: "Art. 121-A do CP (Lei 14.994/2024): feminicídio é crime autônomo e hediondo. Matar mulher por razões da condição do sexo feminino, em violência doméstica, subsume-se ao tipo.",
-      regraMental: "Feminicídio: tipo autônomo (121-A) e hediondo."
     },
     comentario: {
       resolucao: "CERTO. Matar mulher por razões da condição do sexo feminino, em contexto de violência doméstica, caracteriza o feminicídio (art. 121-A do CP, incluído pela Lei 14.994/2024), crime autônomo e hediondo.",
@@ -152,12 +127,7 @@ const QUESTOES_PCAL_LOTE22 = [
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "afastada a competência do júri",
     cognitivo: {
       motivo: "Cobrar a competência do júri para o feminicídio.",
-      mede: "Penal/Processo Penal — competência.",
-      pegadinhaDesc: "Desloca o julgamento para o juizado de violência doméstica.",
-      ondeErra: "Confunde as atribuições do juizado (medidas protetivas) com o julgamento do crime doloso contra a vida.",
       palavraCritica: "afastada a competência do júri",
-      tecnica: "O feminicídio é crime doloso contra a vida → competência do tribunal do júri (art. 5º, XXXVIII, CF). O juizado de violência doméstica cuida de medidas protetivas e de outros delitos, não do julgamento do feminicídio.",
-      regraMental: "Feminicídio (doloso contra a vida) = júri."
     },
     comentario: {
       resolucao: "ERRADO. O feminicídio é crime doloso contra a vida e, portanto, de competência do tribunal do júri (art. 5º, XXXVIII, da CF). O juizado de violência doméstica não julga o feminicídio; atua nas medidas protetivas e em outras infrações no âmbito doméstico.",
@@ -177,12 +147,7 @@ const QUESTOES_PCAL_LOTE22 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "crime autônomo, em concurso",
     cognitivo: {
       motivo: "Aplicar o concurso de crimes ao caso (duas vítimas, dois crimes).",
-      mede: "Direito Penal — concurso de crimes.",
-      pegadinhaDesc: "A banca pode absorver a lesão no feminicídio (consunção indevida).",
-      ondeErra: "Aplica consunção onde há bens jurídicos e vítimas distintos.",
       palavraCritica: "crime autônomo, em concurso",
-      tecnica: "A lesão grave no irmão atinge vítima e bem jurídico distintos — constitui crime autônomo, em concurso (formal ou material, conforme a análise) com o feminicídio contra Maria.",
-      regraMental: "Vítimas/bens distintos = crimes autônomos em concurso."
     },
     comentario: {
       resolucao: "CERTO. A lesão corporal grave contra o irmão de Maria atinge vítima e bem jurídico diversos, configurando crime autônomo em concurso com o feminicídio. Não há consunção, pois as condutas não integram um mesmo iter contra a mesma vítima.",
@@ -202,12 +167,7 @@ const QUESTOES_PCAL_LOTE22 = [
     gabarito: "E", pegadinha: "restricao-indevida", palavraChave: "integralmente em regime fechado",
     cognitivo: {
       motivo: "Cobrar a progressão nos crimes hediondos aplicada ao caso.",
-      mede: "Direito Penal — execução penal.",
-      pegadinhaDesc: "Repete o regime integralmente fechado (inconstitucional).",
-      ondeErra: "Desconhece o HC 82.959/STF e os percentuais da LEP.",
       palavraCritica: "integralmente em regime fechado",
-      tecnica: "O regime integralmente fechado foi declarado inconstitucional (HC 82.959). Há progressão nos crimes hediondos, observados os percentuais do art. 112 da LEP (Lei 13.964/2019).",
-      regraMental: "Hediondo progride (por percentuais). Integral fechado caiu."
     },
     comentario: {
       resolucao: "ERRADO. Ainda que hediondo, o feminicídio admite progressão de regime. A vedação ao regime integralmente fechado foi declarada inconstitucional pelo STF (HC 82.959), aplicando-se hoje os percentuais do art. 112 da LEP.",
@@ -230,12 +190,7 @@ const QUESTOES_PCAL_LOTE22 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "Constituição quanto na Convenção Americana",
     cognitivo: {
       motivo: "Relacionar garantias do preso na CF e na CADH.",
-      mede: "Direitos Humanos — garantias judiciais.",
-      pegadinhaDesc: "A banca pode negar a previsão em um dos diplomas.",
-      ondeErra: "Desconhece a dupla proteção (interna e convencional).",
       palavraCritica: "Constituição e Convenção Americana",
-      tecnica: "CF, art. 5º, LXIII (silêncio e assistência de advogado) e CADH, art. 8º (garantias judiciais) protegem essas garantias — dupla fonte.",
-      regraMental: "Silêncio e defesa técnica: garantidos na CF e na CADH."
     },
     comentario: {
       resolucao: "CERTO. O direito ao silêncio e à assistência de advogado está previsto no art. 5º, LXIII, da CF e nas garantias judiciais do art. 8º da Convenção Americana de Direitos Humanos, havendo dupla proteção (constitucional e convencional).",
@@ -255,12 +210,7 @@ const QUESTOES_PCAL_LOTE22 = [
     gabarito: "E", pegadinha: "termo-absoluto", palavraChave: "livre e discricionário",
     cognitivo: {
       motivo: "Cobrar a excepcionalidade do uso de algemas (SV 11).",
-      mede: "Direitos Humanos — dignidade da pessoa presa.",
-      pegadinhaDesc: "Trata o uso de algemas como livre e irrestrito.",
-      ondeErra: "Ignora a exigência de justificativa por escrito.",
       palavraCritica: "livre ... independentemente de justificativa",
-      tecnica: "Súmula Vinculante 11: o uso de algemas é excepcional, admitido apenas em caso de resistência, fundado receio de fuga ou perigo à integridade, com justificativa por escrito, sob pena de responsabilidade.",
-      regraMental: "Algema é exceção justificada por escrito (SV 11)."
     },
     comentario: {
       resolucao: "ERRADO. Conforme a Súmula Vinculante 11 do STF, o uso de algemas é medida excepcional, cabível apenas diante de resistência, fundado receio de fuga ou perigo à integridade física própria ou alheia, exigindo-se justificativa por escrito. Não é livre nem discricionário.",
@@ -281,12 +231,7 @@ const QUESTOES_PCAL_LOTE22 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "comunicação ao juiz e à família",
     cognitivo: {
       motivo: "Aplicar a garantia de comunicação da prisão (art. 5º, LXII).",
-      mede: "Direitos Humanos — proteção contra prisão arbitrária.",
-      pegadinhaDesc: "A banca pode restringir a comunicação apenas ao juiz.",
-      ondeErra: "Esquece a comunicação à família ou pessoa indicada.",
       palavraCritica: "juiz e à família",
-      tecnica: "Art. 5º, LXII: a prisão de qualquer pessoa será comunicada imediatamente ao juiz competente e à família do preso ou à pessoa por ele indicada.",
-      regraMental: "Prisão: comunica ao juiz E à família."
     },
     comentario: {
       resolucao: "CERTO. O art. 5º, LXII, da CF exige que a prisão seja comunicada imediatamente ao juiz competente e à família do preso ou a pessoa por ele indicada — garantia contra prisões arbitrárias e desaparecimentos.",
@@ -306,12 +251,7 @@ const QUESTOES_PCAL_LOTE22 = [
     gabarito: "E", pegadinha: "restricao-indevida", palavraChave: "não tem direito de ser conduzida",
     cognitivo: {
       motivo: "Cobrar o direito à apresentação sem demora à autoridade judicial (art. 7.5).",
-      mede: "Direitos Humanos — CADH e audiência de custódia.",
-      pegadinhaDesc: "Nega o direito de apresentação à autoridade judicial.",
-      ondeErra: "Desconhece o fundamento convencional da audiência de custódia.",
       palavraCritica: "não tem direito",
-      tecnica: "CADH, art. 7.5: toda pessoa presa deve ser conduzida, sem demora, à presença de um juiz — base da audiência de custódia no Brasil.",
-      regraMental: "CADH 7.5: preso vai, sem demora, ao juiz (custódia)."
     },
     comentario: {
       resolucao: "ERRADO. O art. 7.5 da CADH assegura que toda pessoa presa seja conduzida, sem demora, à presença de um juiz ou autoridade autorizada por lei a exercer funções judiciais — fundamento da audiência de custódia. Negar esse direito contraria a Convenção.",

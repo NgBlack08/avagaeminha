@@ -19,12 +19,7 @@ const QUESTOES_PCAL_LOTE5 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "inquisitiva",
     cognitivo: {
       motivo: "Cobrar a natureza inquisitiva e informativa do IP.",
-      mede: "Inquérito policial — características (item 2 do edital).",
-      pegadinhaDesc: "A banca costuma exigir contraditório pleno no IP, o que é incorreto na fase investigativa.",
-      ondeErra: "Aplica ao IP as garantias plenas do processo judicial.",
       palavraCritica: "inquisitiva / meramente informativa",
-      tecnica: "IP é inquisitivo: contraditório e ampla defesa são diferidos para a ação penal.",
-      regraMental: "IP: Inquisitivo, Sigiloso, Escrito, Oficial, Oficioso, Indisponível, Dispensável."
     },
     comentario: {
       resolucao: "CERTO. O IP é inquisitivo — não há contraditório e ampla defesa em plenitude, por ser peça informativa que embasa a opinio delicti do titular da ação penal. Isso não afasta direitos do investigado (ex.: Súmula Vinculante 14 — acesso aos autos já documentados; direito ao silêncio; assistência de advogado).",
@@ -42,12 +37,7 @@ const QUESTOES_PCAL_LOTE5 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "não de ofício",
     cognitivo: {
       motivo: "Cobrar a vedação à decretação de ofício da preventiva (art. 311 CPP).",
-      mede: "Prisão e liberdade provisória (item 3 do edital).",
-      pegadinhaDesc: "A banca costuma manter a possibilidade de decretação de ofício (regime pré-2019).",
-      ondeErra: "Responde com a redação antiga do art. 311.",
       palavraCritica: "não pode de ofício",
-      tecnica: "Pacote Anticrime reforçou o sistema acusatório: prisão exige provocação.",
-      regraMental: "Preventiva: nunca de ofício. Sempre depende de requerimento (MP) ou representação (delegado)."
     },
     comentario: {
       resolucao: "CERTO. CP­P, art. 311 (redação da Lei 13.964/2019): a preventiva pode ser decretada em qualquer fase da investigação ou do processo, a requerimento do MP, do querelante ou do assistente, ou por representação da autoridade policial — nunca de ofício pelo juiz.",
@@ -65,12 +55,7 @@ const QUESTOES_PCAL_LOTE5 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "cinco dias / trinta dias",
     cognitivo: {
       motivo: "Cobrar os prazos da prisão temporária (Lei 7.960/1989 e Lei 8.072/1990).",
-      mede: "Prisão e liberdade provisória.",
-      pegadinhaDesc: "A banca costuma trocar os prazos (ex.: 10 dias) ou admitir temporária na fase processual.",
-      ondeErra: "Não memoriza os prazos ou aplica a temporária depois da denúncia.",
       palavraCritica: "5+5 (comum) / 30+30 (hediondo)",
-      tecnica: "Temporária só na investigação. Comum: 5+5. Hediondo: 30+30.",
-      regraMental: "Temporária = fase de IP. Prazos: comum 5, hediondo 30 (ambos dobráveis)."
     },
     comentario: {
       resolucao: "CERTO. Lei 7.960/1989: prazo de 5 dias, prorrogável por mais 5 em caso de extrema e comprovada necessidade. Para crimes hediondos e equiparados, o prazo é de 30 dias, prorrogável por igual período (Lei 8.072/1990, art. 2º, § 4º). Só cabe na fase investigativa.",
@@ -88,12 +73,7 @@ const QUESTOES_PCAL_LOTE5 = [
     gabarito: "E", pegadinha: "troca-sujeito", palavraChave: "autoridade policial / detenção",
     cognitivo: {
       motivo: "Cobrar os requisitos da interceptação (Lei 9.296/1996) — reserva de jurisdição e crime punido com reclusão.",
-      mede: "Provas e disposições constitucionais (itens 4 e provas).",
-      pegadinhaDesc: "Atribui ao delegado a autorização (é do juiz) e troca 'reclusão' por 'detenção'.",
-      ondeErra: "Ignora a cláusula de reserva de jurisdição (CF, art. 5º, XII) e o requisito da reclusão.",
       palavraCritica: "autoridade policial (deveria ser o juiz) + detenção (deveria ser reclusão)",
-      tecnica: "Interceptação: só por ORDEM JUDICIAL, para crimes punidos com RECLUSÃO.",
-      regraMental: "Interceptação telefônica = reserva de jurisdição. Delegado não autoriza; e só cabe em crime de reclusão."
     },
     comentario: {
       resolucao: "ERRADO. A interceptação depende de ORDEM JUDICIAL (CF, art. 5º, XII; Lei 9.296/1996) e não é cabível quando o fato for punido, no máximo, com DETENÇÃO. O prazo é de 15 dias, renovável. A autoridade policial pode representar, mas não autorizar.",
@@ -111,12 +91,7 @@ const QUESTOES_PCAL_LOTE5 = [
     gabarito: "C", pegadinha: "juris-mais-lei", palavraChave: "não recepcionada",
     cognitivo: {
       motivo: "Cobrar a não recepção do art. 21 do CPP pela CF/88.",
-      mede: "Disposições preliminares do CPP + disposições constitucionais.",
-      pegadinhaDesc: "A banca costuma afirmar que a incomunicabilidade continua válida.",
-      ondeErra: "Lê o CPP isoladamente, sem o filtro constitucional.",
       palavraCritica: "não recepcionada",
-      tecnica: "CF assegura assistência de advogado e família — incompatível com incomunicabilidade.",
-      regraMental: "Nem no estado de defesa a incomunicabilidade é permitida (art. 136, §3º, IV, CF) — muito menos na normalidade."
     },
     comentario: {
       resolucao: "CERTO. A doutrina majoritária entende que o art. 21 do CPP (incomunicabilidade do preso) não foi recepcionado pela CF/88, que garante ao preso assistência da família e de advogado (art. 5º, LXIII). A própria CF veda a incomunicabilidade até no estado de defesa (art. 136, § 3º, IV).",
@@ -134,12 +109,7 @@ const QUESTOES_PCAL_LOTE5 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "respeitado o contraditório",
     cognitivo: {
       motivo: "Cobrar os requisitos de validade da prova emprestada (STJ).",
-      mede: "Provas.",
-      pegadinhaDesc: "A banca costuma exigir identidade de partes, o que a jurisprudência dispensa (basta o contraditório no destino).",
-      ondeErra: "Acredita ser necessária a mesma parte nos dois processos.",
       palavraCritica: "contraditório no processo de destino",
-      tecnica: "O que valida a prova emprestada é o contraditório no destino, não a identidade de partes.",
-      regraMental: "Prova emprestada: exige contraditório onde vai ser usada — não exige as mesmas partes."
     },
     comentario: {
       resolucao: "CERTO. Segundo o STJ, a prova emprestada é válida quando submetida ao contraditório no processo de destino, sendo dispensável a identidade de partes entre origem e destino. Garante-se economia processual sem sacrificar a ampla defesa.",
@@ -159,12 +129,7 @@ const QUESTOES_PCAL_LOTE5 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "efeito automático",
     cognitivo: {
       motivo: "Cobrar o efeito extrapenal automático da condenação por tortura (diferente do CP).",
-      mede: "Legislação penal especial — tortura.",
-      pegadinhaDesc: "A banca costuma exigir motivação específica (regra do art. 92 do CP), que não se aplica aqui.",
-      ondeErra: "Aplica à tortura a regra geral do CP (perda do cargo não automática).",
       palavraCritica: "efeito automático",
-      tecnica: "Na tortura, a perda do cargo é AUTOMÁTICA (não exige fundamentação específica), ao contrário do art. 92 do CP.",
-      regraMental: "Tortura: perde o cargo automaticamente + interdição pelo dobro da pena."
     },
     comentario: {
       resolucao: "CERTO. Lei 9.455/1997, art. 1º, § 5º: a condenação acarretará a perda do cargo, função ou emprego público e a interdição para seu exercício pelo dobro do prazo da pena aplicada — efeito automático, dispensando a motivação exigida pelo art. 92 do CP.",
@@ -182,12 +147,7 @@ const QUESTOES_PCAL_LOTE5 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "imprescritível e inafiançável",
     cognitivo: {
       motivo: "Cobrar a equiparação da injúria racial ao racismo — alteração recente de alta probabilidade.",
-      mede: "Legislação penal especial — racismo (Lei 7.716/1989).",
-      pegadinhaDesc: "A banca costuma manter a injúria racial como injúria comum (prescritível/afiançável), regime superado.",
-      ondeErra: "Responde com o entendimento anterior à Lei 14.532/2023.",
       palavraCritica: "imprescritível e inafiançável",
-      tecnica: "Injúria racial hoje = racismo (art. 2º-A da Lei 7.716/1989): imprescritível e inafiançável (CF, art. 5º, XLII).",
-      regraMental: "Pós-2023: injúria racial saiu do CP e virou racismo — não prescreve, não paga fiança."
     },
     comentario: {
       resolucao: "CERTO. A Lei 14.532/2023 inseriu a injúria racial como modalidade de racismo (art. 2º-A da Lei 7.716/1989), com pena de reclusão de 2 a 5 anos e multa. Como espécie de racismo, é imprescritível e inafiançável (CF, art. 5º, XLII). O STF já sinalizava essa equiparação (HC 154.248).",
@@ -205,12 +165,7 @@ const QUESTOES_PCAL_LOTE5 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "incondicionada",
     cognitivo: {
       motivo: "Cobrar a natureza da ação penal nos crimes contra a pessoa idosa.",
-      mede: "Legislação penal especial — Estatuto da Pessoa Idosa.",
-      pegadinhaDesc: "A banca costuma exigir representação (ação condicionada) para esses crimes.",
-      ondeErra: "Aplica a lógica de crimes condicionados a crimes de vítima vulnerável.",
       palavraCritica: "incondicionada",
-      tecnica: "Estatuto do Idoso, art. 95: crimes de ação penal pública incondicionada.",
-      regraMental: "Idoso é vulnerável → o Estado age de ofício (incondicionada), sem depender da vítima."
     },
     comentario: {
       resolucao: "CERTO. Lei 10.741/2003, art. 95: aos crimes previstos no Estatuto aplica-se a ação penal pública incondicionada, não se exigindo representação. Protege-se a pessoa idosa como vulnerável.",
@@ -228,12 +183,7 @@ const QUESTOES_PCAL_LOTE5 = [
     gabarito: "C", pegadinha: "juris-mais-lei", palavraChave: "não tem natureza hedionda",
     cognitivo: {
       motivo: "Cobrar o entendimento do STF sobre o tráfico privilegiado.",
-      mede: "Legislação penal especial — Lei de Drogas.",
-      pegadinhaDesc: "A banca costuma afirmar que o tráfico privilegiado é hediondo.",
-      ondeErra: "Estende a hediondez do tráfico comum ao privilegiado.",
       palavraCritica: "não hediondo",
-      tecnica: "STF (HC 118.533): tráfico privilegiado não é equiparado a hediondo. Lei 13.964/2019 confirmou.",
-      regraMental: "Tráfico privilegiado (§4º): réu primário + bons antecedentes + não se dedica ao crime = redução de 1/6 a 2/3, sem hediondez."
     },
     comentario: {
       resolucao: "CERTO. STF (HC 118.533) e a Lei 13.964/2019 (que alterou a Lei 8.072/1990) firmaram que o tráfico privilegiado (art. 33, § 4º, da Lei 11.343/2006) NÃO tem natureza hedionda. A causa de diminuição (1/6 a 2/3) exige primariedade, bons antecedentes e não dedicação a atividades criminosas.",
@@ -251,12 +201,7 @@ const QUESTOES_PCAL_LOTE5 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "lançamento definitivo",
     cognitivo: {
       motivo: "Cobrar a Súmula Vinculante 24 — condição para a tipificação dos crimes materiais tributários.",
-      mede: "Legislação penal especial / crimes contra a ordem tributária (item do edital).",
-      pegadinhaDesc: "A banca costuma dispensar o lançamento definitivo ou aplicar a súmula a crimes formais.",
-      ondeErra: "Ignora que o crime material tributário só se consuma após o lançamento definitivo.",
       palavraCritica: "antes do lançamento definitivo",
-      tecnica: "Crime material tributário (art. 1º, I a IV) depende do lançamento definitivo do tributo.",
-      regraMental: "Sem lançamento definitivo, não há crime material tributário — nem prescrição corre."
     },
     comentario: {
       resolucao: "CERTO. Súmula Vinculante 24/STF: 'Não se tipifica crime material contra a ordem tributária, previsto no art. 1º, I a IV, da Lei 8.137/1990, antes do lançamento definitivo do tributo.' O exaurimento da via administrativa é condição objetiva de punibilidade.",
@@ -274,12 +219,7 @@ const QUESTOES_PCAL_LOTE5 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "autolavagem",
     cognitivo: {
       motivo: "Cobrar a admissão da autolavagem e a autonomia do processo (Lei 9.613/1998).",
-      mede: "Lavagem de dinheiro (item do edital).",
-      pegadinhaDesc: "A banca costuma exigir condenação prévia pelo crime antecedente ou negar a autolavagem.",
-      ondeErra: "Acredita que o autor do crime antecedente não responde por lavagem.",
       palavraCritica: "autolavagem / desnecessária condenação prévia",
-      tecnica: "A lavagem é autônoma: basta indícios do crime antecedente. O próprio autor pode responder pelas duas.",
-      regraMental: "Autolavagem é punível. Processo por lavagem NÃO espera condenação do crime antecedente."
     },
     comentario: {
       resolucao: "CERTO. A Lei 9.613/1998 (art. 2º, II) permite o processo por lavagem independentemente do julgamento das infrações antecedentes, bastando indícios. Admite-se a autolavagem (o autor do crime antecedente também responde por lavagem quando pratica atos autônomos de ocultação/dissimulação).",
@@ -297,12 +237,7 @@ const QUESTOES_PCAL_LOTE5 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "discriminar em razão da deficiência",
     cognitivo: {
       motivo: "Cobrar o crime de discriminação do Estatuto da Pessoa com Deficiência.",
-      mede: "Legislação penal especial — Estatuto da PcD (item do edital).",
-      pegadinhaDesc: "A banca costuma negar a tipificação ou confundir com mera infração administrativa.",
-      ondeErra: "Desconhece a existência do tipo penal no Estatuto.",
       palavraCritica: "praticar, induzir ou incitar",
-      tecnica: "Art. 88 da Lei 13.146/2015 tipifica a discriminação por deficiência (crime, não só ilícito civil).",
-      regraMental: "Discriminação por deficiência = crime do Estatuto da PcD (art. 88)."
     },
     comentario: {
       resolucao: "CERTO. Lei 13.146/2015, art. 88: constitui crime praticar, induzir ou incitar discriminação de pessoa em razão de sua deficiência (pena de reclusão de 1 a 3 anos e multa), com causas de aumento previstas nos parágrafos.",
@@ -322,12 +257,7 @@ const QUESTOES_PCAL_LOTE5 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "violação de mecanismo de segurança",
     cognitivo: {
       motivo: "Cobrar os elementos do art. 154-A do CP (Lei 12.737/2012, alterado pela Lei 14.155/2021).",
-      mede: "Crimes cibernéticos — Lei 12.737/2012 (item I do edital).",
-      pegadinhaDesc: "A banca costuma dispensar a 'violação de mecanismo de segurança' (elemento essencial do tipo).",
-      ondeErra: "Acha que qualquer acesso não autorizado configura o crime, mesmo sem violar proteção.",
       palavraCritica: "violação indevida de mecanismo de segurança",
-      tecnica: "Sem violar mecanismo de segurança, não há o crime do art. 154-A (embora possa haver outro delito).",
-      regraMental: "Invasão exige 'quebrar' uma proteção. Dispositivo aberto/sem senha muda o enquadramento."
     },
     comentario: {
       resolucao: "CERTO. CP, art. 154-A (Lei 12.737/2012, com penas ampliadas pela Lei 14.155/2021): exige a invasão de dispositivo mediante violação indevida de mecanismo de segurança, com o fim de obter, adulterar ou destruir dados/informações sem autorização, ou instalar vulnerabilidades. A ação penal é, em regra, condicionada à representação.",
@@ -345,12 +275,7 @@ const QUESTOES_PCAL_LOTE5 = [
     gabarito: "C", pegadinha: "troca-conceito", palavraChave: "furto qualificado",
     cognitivo: {
       motivo: "Diferenciar furto mediante fraude eletrônica (art. 155, § 4º-B) do estelionato.",
-      mede: "Crimes cibernéticos + crimes contra o patrimônio (Lei 14.155/2021).",
-      pegadinhaDesc: "A banca costuma enquadrar como estelionato quando a vítima não 'entrega' o bem voluntariamente.",
-      ondeErra: "Confunde furto (subtração sem consentimento) com estelionato (vítima iludida entrega).",
       palavraCritica: "subtração (furto) × entrega voluntária (estelionato)",
-      tecnica: "Se o agente SUBTRAI valendo-se de fraude para burlar a vigilância = furto. Se a vítima é ILUDIDA e entrega = estelionato.",
-      regraMental: "Fraude para SUBTRAIR = furto qualificado (§4º-B). Fraude para a vítima ENTREGAR = estelionato."
     },
     comentario: {
       resolucao: "CERTO. CP, art. 155, § 4º-B (Lei 14.155/2021): a subtração mediante fraude por dispositivo eletrônico/informático configura furto qualificado (pena de 4 a 8 anos). No furto, a vítima não entrega o bem voluntariamente — a fraude serve para iludir a vigilância; no estelionato, a vítima, iludida, faz a entrega.",
@@ -368,12 +293,7 @@ const QUESTOES_PCAL_LOTE5 = [
     gabarito: "C", pegadinha: "juris-mais-lei", palavraChave: "sem autorização judicial",
     cognitivo: {
       motivo: "Cobrar o entendimento do STJ sobre acesso a dados de celular apreendido.",
-      mede: "Busca e apreensão de itens digitais (Art. 240 e ss. do CPP; item do edital).",
-      pegadinhaDesc: "A banca costuma afirmar que a apreensão lícita do aparelho autoriza, por si só, o acesso ao conteúdo.",
-      ondeErra: "Confunde apreender o aparelho (lícito no flagrante) com acessar o conteúdo (exige ordem judicial).",
       palavraCritica: "acesso ao conteúdo × apreensão do aparelho",
-      tecnica: "Apreender o celular ≠ acessar as mensagens. O conteúdo é protegido (dados/comunicações) e exige autorização judicial.",
-      regraMental: "Pode apreender no flagrante; para ler o WhatsApp, precisa do juiz."
     },
     comentario: {
       resolucao: "CERTO. O STJ firmou que, sem autorização judicial, é ilícito o acesso ao conteúdo (mensagens, conversas) de celular apreendido, por violação à intimidade e ao sigilo de dados (CF, art. 5º, X e XII). A apreensão lícita do aparelho não autoriza, por si só, a devassa do conteúdo.",
@@ -391,12 +311,7 @@ const QUESTOES_PCAL_LOTE5 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "fins exclusivos de segurança pública",
     cognitivo: {
       motivo: "Cobrar a exceção de aplicação da LGPD (art. 4º, III).",
-      mede: "LGPD (item do edital, TI e Crimes Cibernéticos).",
-      pegadinhaDesc: "A banca costuma afirmar que a LGPD se aplica integralmente à atividade policial investigativa.",
-      ondeErra: "Ignora a exclusão do art. 4º, III, da LGPD.",
       palavraCritica: "fins exclusivos de segurança pública",
-      tecnica: "LGPD não incide sobre tratamento para segurança pública/investigação penal — matéria de lei específica.",
-      regraMental: "Investigação penal e segurança pública ficam FORA da LGPD (art. 4º, III), embora exijam lei própria."
     },
     comentario: {
       resolucao: "CERTO. Lei 13.709/2018, art. 4º, III: a LGPD não se aplica ao tratamento de dados realizado para fins exclusivos de segurança pública, defesa nacional, segurança do Estado ou investigação e repressão penal, que serão regidos por legislação específica, observados o devido processo e os princípios de proteção.",
@@ -416,12 +331,7 @@ const QUESTOES_PCAL_LOTE5 = [
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "difamação × calúnia",
     cognitivo: {
       motivo: "Distinguir os três crimes contra a honra.",
-      mede: "Crimes contra a pessoa — honra (item 2 do edital).",
-      pegadinhaDesc: "Inverte as definições de calúnia e difamação.",
-      ondeErra: "Troca 'fato definido como crime' (calúnia) por difamação.",
       palavraCritica: "fato criminoso (calúnia) × fato ofensivo (difamação)",
-      tecnica: "Calúnia: fato CRIMINOSO falso. Difamação: fato OFENSIVO à reputação (não crime). Injúria: qualidade negativa (xingamento).",
-      regraMental: "Calúnia = crime; Difamação = fato desonroso; Injúria = ofensa à dignidade (sem imputar fato)."
     },
     comentario: {
       resolucao: "ERRADO. As definições estão invertidas. CALÚNIA (art. 138): imputar falsamente FATO DEFINIDO COMO CRIME. DIFAMAÇÃO (art. 139): imputar fato OFENSIVO à reputação (não criminoso). INJÚRIA (art. 140): ofender a dignidade/decoro, sem imputar fato.",
@@ -439,12 +349,7 @@ const QUESTOES_PCAL_LOTE5 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "posse lícita anterior",
     cognitivo: {
       motivo: "Distinguir apropriação indébita (art. 168) do furto (art. 155).",
-      mede: "Crimes contra o patrimônio (item 3 do edital).",
-      pegadinhaDesc: "A banca costuma dizer que a apropriação indébita exige posse obtida por fraude/subtração.",
-      ondeErra: "Não percebe que, na apropriação, a posse é lícita e anterior.",
       palavraCritica: "posse lícita anterior (apropriação) × subtração (furto)",
-      tecnica: "Apropriação: recebeu de boa-fé e depois se apropriou. Furto: nunca teve a posse legítima.",
-      regraMental: "Apropriação indébita = 'ficou com o que era pra devolver'. Furto = 'pegou o que nunca foi seu'."
     },
     comentario: {
       resolucao: "CERTO. CP, art. 168: na apropriação indébita, o agente já detém a posse/detenção LÍCITA da coisa e depois inverte o ânimo, passando a agir como dono. No furto (art. 155), a posse é obtida ilicitamente (subtração). O divisor é a licitude da posse inicial.",
@@ -464,12 +369,7 @@ const QUESTOES_PCAL_LOTE5 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "a priori / a posteriori",
     cognitivo: {
       motivo: "Cobrar o conceito e a aplicação do teorema de Bayes.",
-      mede: "Probabilidade condicional e regra de Bayes (item 2 do edital de Estatística).",
-      pegadinhaDesc: "A banca costuma inverter a priori × a posteriori ou negar a atualização pela evidência.",
-      ondeErra: "Confunde a probabilidade inicial (a priori) com a atualizada (a posteriori).",
       palavraCritica: "atualizar à luz de nova evidência",
-      tecnica: "Bayes: P(H|E) = P(E|H)·P(H)/P(E). A posteriori = verossimilhança × a priori ÷ evidência.",
-      regraMental: "A priori = antes da evidência. A posteriori = depois de observar a evidência."
     },
     comentario: {
       resolucao: "CERTO. O teorema de Bayes atualiza a crença sobre uma hipótese H após observar a evidência E: P(H|E) = P(E|H)·P(H)/P(E). Combina a probabilidade a priori P(H) com a verossimilhança P(E|H) para obter a probabilidade a posteriori. É base de raciocínio investigativo e de modelos como o Naive Bayes.",
@@ -487,12 +387,7 @@ const QUESTOES_PCAL_LOTE5 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "independentemente da distribuição da população",
     cognitivo: {
       motivo: "Cobrar o enunciado do Teorema Central do Limite.",
-      mede: "Distribuições amostrais / TCL (item 2 do edital de Estatística).",
-      pegadinhaDesc: "A banca costuma exigir que a população seja normal (o TCL justamente dispensa isso).",
-      ondeErra: "Acha que a população precisa ser normal para a média amostral ser normal.",
       palavraCritica: "independentemente da distribuição da população",
-      tecnica: "TCL: com n grande, a média amostral tende à normal, mesmo se a população não for normal.",
-      regraMental: "TCL: 'a média se comporta como normal' quando n cresce — não importa a forma da população."
     },
     comentario: {
       resolucao: "CERTO. O Teorema Central do Limite afirma que a distribuição da média amostral tende à normal conforme n cresce, qualquer que seja a distribuição da população de origem (com média e variância finitas). É o que fundamenta a inferência sobre médias.",
@@ -512,12 +407,7 @@ const QUESTOES_PCAL_LOTE5 = [
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "permutativo × modificativo",
     cognitivo: {
       motivo: "Distinguir fatos permutativos, modificativos e mistos.",
-      mede: "Atos e fatos administrativos (item 3 do edital de Contabilidade).",
-      pegadinhaDesc: "Inverte as definições de permutativo e modificativo.",
-      ondeErra: "Troca qual fato altera o patrimônio líquido.",
       palavraCritica: "permutativo NÃO altera PL; modificativo altera",
-      tecnica: "Permutativo: só permuta elementos, PL constante. Modificativo: altera o PL (receita/despesa). Misto: os dois.",
-      regraMental: "Permutativo = 'troca-troca' (PL igual). Modificativo = 'muda o PL' (aumenta/diminui)."
     },
     comentario: {
       resolucao: "ERRADO. As definições estão trocadas. O fato PERMUTATIVO apenas permuta elementos patrimoniais SEM alterar o patrimônio líquido (ex.: compra de bem à vista). O fato MODIFICATIVO altera a situação líquida (ex.: pagamento de despesa, recebimento de receita). O misto combina os dois efeitos.",

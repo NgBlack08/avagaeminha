@@ -29,12 +29,7 @@ const QUESTOES_PCAL_LOTE29 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "ou seja ... reformulação explicativa",
     cognitivo: {
       motivo: "Cobrar o valor semântico do conectivo 'ou seja'.",
-      mede: "Língua Portuguesa — coesão textual (conectivos).",
-      pegadinhaDesc: "A banca pode atribuir a 'ou seja' um valor diferente (ex.: adversativo, condicional).",
-      ondeErra: "Confunde conectivo explicativo com conectivo de outra natureza.",
       palavraCritica: "ou seja",
-      tecnica: "'Ou seja' é conjunção explicativa clássica: retoma o termo anterior para reformulá-lo/defini-lo em linguagem mais clara, sem contradizê-lo.",
-      regraMental: "'Ou seja', 'isto é', 'a saber': sempre explicativos, nunca adversativos."
     },
     comentario: {
       resolucao: "CERTO. A expressão 'ou seja' tem valor explicativo: retoma 'cadeia de custódia' e a define ('o conjunto de procedimentos que garante a rastreabilidade...'), função típica desse conectivo.",
@@ -54,12 +49,7 @@ const QUESTOES_PCAL_LOTE29 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "Quando ... adverbial temporal",
     cognitivo: {
       motivo: "Cobrar a classificação de orações subordinadas adverbiais.",
-      mede: "Língua Portuguesa — sintaxe do período composto.",
-      pegadinhaDesc: "A banca pode trocar 'temporal' por 'condicional' ou 'causal'.",
-      ondeErra: "Confunde 'quando' temporal com 'se' condicional.",
       palavraCritica: "Quando",
-      tecnica: "'Quando' introduzindo uma oração que situa no tempo o fato da oração principal é conjunção subordinativa adverbial TEMPORAL.",
-      regraMental: "'Quando' = tempo. 'Se' = condição. 'Porque' = causa."
     },
     comentario: {
       resolucao: "CERTO. 'Quando essa cadeia é rompida' é oração subordinada adverbial temporal, pois situa no tempo a circunstância em que ocorre o fato descrito na oração principal ('abre-se margem para que a defesa questione...').",
@@ -79,12 +69,7 @@ const QUESTOES_PCAL_LOTE29 = [
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "questione a idoneidade ... transitivo indireto",
     cognitivo: {
       motivo: "Cobrar a regência correta do verbo 'questionar'.",
-      mede: "Língua Portuguesa — regência verbal.",
-      pegadinhaDesc: "A banca classifica erroneamente um VTD como VTI.",
-      ondeErra: "Aceita a classificação errada sem verificar se há preposição antes do complemento.",
       palavraCritica: "transitivo indireto",
-      tecnica: "'Questionar algo' é verbo transitivo DIRETO — o complemento 'a idoneidade da prova' vem sem preposição exigida pelo verbo, confirmando a transitividade direta.",
-      regraMental: "Sem preposição exigida pelo verbo = transitivo direto."
     },
     comentario: {
       resolucao: "ERRADO. O verbo 'questionar', no trecho, é transitivo DIRETO ('questionar algo'), e não indireto — o complemento 'a idoneidade da prova' completa o verbo sem preposição exigida por ele.",
@@ -104,12 +89,7 @@ const QUESTOES_PCAL_LOTE29 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "sujeitar-se à disciplina ... regência + artigo feminino",
     cognitivo: {
       motivo: "Cobrar a justificativa correta do uso da crase.",
-      mede: "Língua Portuguesa — crase (fusão de preposição + artigo).",
-      pegadinhaDesc: "A banca pode negar a necessidade da crase ou atribuir motivo errado.",
-      ondeErra: "Não reconhece a regência de 'sujeitar-se a' como exigência de preposição.",
       palavraCritica: "à disciplina",
-      tecnica: "'Sujeitar-se A algo' exige a preposição 'a'; como 'disciplina' é substantivo feminino antecedido de artigo 'a', ocorre a fusão preposição+artigo = crase (à).",
-      regraMental: "Crase = preposição 'a' (exigida pelo termo regente) + artigo feminino 'a' do termo regido."
     },
     comentario: {
       resolucao: "CERTO. A crase em 'à disciplina' resulta da regência de 'sujeitar-se a' (que exige a preposição 'a') combinada com o artigo feminino que acompanha 'disciplina', configurando corretamente a fusão preposição+artigo.",
@@ -129,12 +109,7 @@ const QUESTOES_PCAL_LOTE29 = [
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "sujeito composto ... substituem",
     cognitivo: {
       motivo: "Cobrar a identificação correta do sujeito gramatical.",
-      mede: "Língua Portuguesa — concordância verbal.",
-      pegadinhaDesc: "A banca inventa um sujeito composto que não existe na oração analisada.",
-      ondeErra: "Confunde termos mencionados no período com o sujeito real da oração específica.",
       palavraCritica: "sujeito composto",
-      tecnica: "O sujeito da oração 'nenhuma inovação substitui a disciplina metodológica' é apenas 'nenhuma inovação' (sujeito simples, singular); 'tecnologia' pertence a outra oração do período. Verbo no singular está correto.",
-      regraMental: "Sujeito é sempre da oração específica, não de todo o período."
     },
     comentario: {
       resolucao: "ERRADO. O sujeito de 'substitui' é apenas 'nenhuma inovação' (sujeito simples, singular) — 'tecnologia' integra outra oração do mesmo período ('Ainda que a tecnologia tenha avançado...'), não compondo o sujeito da oração em análise. A concordância no singular está correta.",
@@ -154,12 +129,7 @@ const QUESTOES_PCAL_LOTE29 = [
     gabarito: "E", pegadinha: "restricao-indevida", palavraChave: "informação essencial ... comprometeria",
     cognitivo: {
       motivo: "Cobrar a distinção entre informação acessória (exemplificativa) e essencial.",
-      mede: "Língua Portuguesa — pontuação (travessão, aposto).",
-      pegadinhaDesc: "A banca classifica como 'essencial' um aposto meramente exemplificativo e acessório.",
-      ondeErra: "Não percebe que exemplos introduzidos por 'a exemplo de' são sempre acessórios, nunca essenciais à estrutura sintática.",
       palavraCritica: "informação essencial ... comprometeria",
-      tecnica: "O trecho isolado por travessões é um aposto explicativo/exemplificativo (introduzido por 'a exemplo de'): pode ser suprimido sem prejuízo à estrutura sintática do período, embora se perca a exemplificação.",
-      regraMental: "Aposto entre travessões: normalmente acessório e suprimível sintaticamente, ainda que relevante semanticamente."
     },
     comentario: {
       resolucao: "ERRADO. O trecho isolado pelos travessões é um aposto explicativo de natureza exemplificativa ('a exemplo de'), portanto acessório: sua supressão não compromete a estrutura sintática do período ('Ainda que a tecnologia tenha avançado significativamente nas últimas décadas, nenhuma inovação substitui...' permanece completo e correto).",
@@ -179,12 +149,7 @@ const QUESTOES_PCAL_LOTE29 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "Afinal ... justificativa ... conclusivo/explicativo",
     cognitivo: {
       motivo: "Cobrar o valor semântico do advérbio/conectivo 'afinal'.",
-      mede: "Língua Portuguesa — coesão textual (conectivos).",
-      pegadinhaDesc: "A banca pode atribuir a 'afinal' um valor adversativo ou temporal.",
-      ondeErra: "Confunde 'afinal' explicativo/conclusivo com 'afinal' de sentido temporal ('por fim').",
       palavraCritica: "Afinal",
-      tecnica: "No contexto, 'Afinal' introduz a razão/justificativa do que foi dito antes ('nenhuma inovação substitui a disciplina metodológica'), funcionando com valor explicativo-conclusivo equivalente a 'pois', 'com efeito'.",
-      regraMental: "'Afinal' explicativo = justifica o que foi dito; diferente de 'afinal' temporal ('por fim, ao final')."
     },
     comentario: {
       resolucao: "CERTO. 'Afinal', no período final, introduz a justificativa da afirmação anterior (a insubstituibilidade da disciplina metodológica), com valor semântico conclusivo/explicativo, equivalente a 'pois' ou 'com efeito'.",
@@ -204,12 +169,7 @@ const QUESTOES_PCAL_LOTE29 = [
     gabarito: "E", pegadinha: "exigencia-inexistente", palavraChave: "idoneidade ... preposição 'a' ... desvio de regência",
     cognitivo: {
       motivo: "Cobrar a regência nominal correta do substantivo 'idoneidade'.",
-      mede: "Língua Portuguesa — regência nominal.",
-      pegadinhaDesc: "A banca inventa uma exigência de regência que não existe na norma-padrão.",
-      ondeErra: "Aceita uma regra de regência fabricada sem confrontá-la com o uso padrão da língua.",
       palavraCritica: "desvio de regência",
-      tecnica: "'Idoneidade DE algo/alguém' é a regência consagrada na norma-padrão (ex.: 'idoneidade do candidato', 'idoneidade da prova'). Não há exigência de preposição 'a' para esse substantivo.",
-      regraMental: "Antes de apontar 'erro de regência', confirme a regra real — não presuma exigências inexistentes."
     },
     comentario: {
       resolucao: "ERRADO. O substantivo 'idoneidade' rege-se corretamente pela preposição 'de' ('idoneidade de algo'), como empregado no texto ('idoneidade da prova' = idoneidade + de + a prova). Não existe, na norma-padrão, exigência de regência pela preposição 'a' para esse substantivo — a afirmação cria uma exigência inexistente.",
@@ -229,12 +189,7 @@ const QUESTOES_PCAL_LOTE29 = [
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "registrando ... concessiva",
     cognitivo: {
       motivo: "Cobrar o valor circunstancial correto de orações reduzidas de gerúndio.",
-      mede: "Língua Portuguesa — sintaxe (orações reduzidas).",
-      pegadinhaDesc: "A banca atribui valor concessivo a um gerúndio que expressa modo/meio.",
-      ondeErra: "Não distingue o valor de modo (ação simultânea que caracteriza COMO se sujeita à disciplina) do valor concessivo (contraste/oposição).",
       palavraCritica: "concessiva",
-      tecnica: "O gerúndio 'registrando...' expressa o MODO pelo qual os peritos se sujeitam à disciplina metodológica — não há qualquer contraste ou oposição que justifique valor concessivo.",
-      regraMental: "Gerúndio expressando 'como se faz algo' = modo, não concessão (que exigiria contraste, como 'embora')."
     },
     comentario: {
       resolucao: "ERRADO. A oração reduzida de gerúndio expressa circunstância de MODO (indica como os peritos cumprem a disciplina metodológica), e não concessão — não há, no trecho, qualquer ideia de contraste ou oposição que justificasse a equivalência com 'embora registrem'.",
@@ -254,12 +209,7 @@ const QUESTOES_PCAL_LOTE29 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "vírgulas ... aposto explicativo",
     cognitivo: {
       motivo: "Cobrar a função das vírgulas na construção de apostos explicativos.",
-      mede: "Língua Portuguesa — pontuação (vírgula).",
-      pegadinhaDesc: "A banca pode negar a função apositiva ou atribuir outra função à pontuação.",
-      ondeErra: "Não reconhece a estrutura apositiva introduzida por 'ou seja' entre vírgulas.",
       palavraCritica: "aposto explicativo",
-      tecnica: "As vírgulas isolam um aposto explicativo introduzido por 'ou seja', que retoma 'cadeia de custódia' para defini-la — função clássica de pontuação apositiva.",
-      regraMental: "Vírgulas + 'ou seja'/'isto é' = aposto explicativo isolado."
     },
     comentario: {
       resolucao: "CERTO. As vírgulas isolam corretamente um aposto explicativo, introduzido pela expressão 'ou seja', que retoma e define o termo 'cadeia de custódia' mencionado anteriormente.",
@@ -279,12 +229,7 @@ const QUESTOES_PCAL_LOTE29 = [
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "abre-se margem ... sujeito indeterminado",
     cognitivo: {
       motivo: "Cobrar a distinção entre voz passiva sintética e indeterminação do sujeito.",
-      mede: "Língua Portuguesa — sintaxe (funções do 'se').",
-      pegadinhaDesc: "A banca classifica como indeterminação do sujeito uma construção de voz passiva sintética.",
-      ondeErra: "Não percebe que 'abrir margem' é verbo transitivo direto, com 'margem' funcionando como sujeito paciente concordando com o verbo.",
       palavraCritica: "sujeito indeterminado",
-      tecnica: "'Abrir margem' é locução verbal transitiva direta; na construção 'abre-se margem', 'margem' é sujeito paciente (concordando no singular com 'abre-se'), caracterizando voz passiva SINTÉTICA (pronome apassivador), não indeterminação do sujeito.",
-      regraMental: "Verbo transitivo direto + se + substantivo concordando com o verbo = voz passiva sintética, não indeterminação."
     },
     comentario: {
       resolucao: "ERRADO. Trata-se de voz passiva sintética (pronome apassivador 'se'), e não de indeterminação do sujeito: o verbo 'abrir' é transitivo direto ('abrir margem'), e 'margem' funciona como sujeito paciente, concordando corretamente no singular com 'abre-se'.",
@@ -304,12 +249,7 @@ const QUESTOES_PCAL_LOTE29 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "dissertativo-argumentativa ... tese ... insubstituível",
     cognitivo: {
       motivo: "Cobrar a identificação da tipologia textual predominante.",
-      mede: "Língua Portuguesa — tipologia textual.",
-      pegadinhaDesc: "A banca pode classificar o texto como puramente narrativo ou descritivo.",
-      ondeErra: "Não reconhece os elementos argumentativos (defesa de tese, justificativas) presentes no texto.",
       palavraCritica: "dissertativo-argumentativa",
-      tecnica: "O texto expõe informações técnicas e defende uma tese central (a insubstituibilidade da disciplina metodológica), com justificativas encadeadas ('Por essa razão...', 'Afinal...') — características do texto dissertativo-argumentativo.",
-      regraMental: "Defesa de tese + justificativas encadeadas = dissertativo-argumentativo."
     },
     comentario: {
       resolucao: "CERTO. O texto é predominantemente dissertativo-argumentativo: expõe informações técnicas sobre a cadeia de custódia e defende, com justificativas explícitas ('Por essa razão', 'Afinal'), a tese de que nenhuma tecnologia substitui a disciplina metodológica na cena do crime.",

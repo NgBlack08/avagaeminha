@@ -32,9 +32,13 @@ const CAMPOS_OBRIGATORIOS = [
   "gabarito", "enunciado", "pegadinha", "tempoIdealSeg", "probReaparecer",
 ];
 const CAMPOS_COMENTARIO = ["resolucao", "fundamento", "macete", "erroComum", "comoBancaPensa"];
-const CAMPOS_COGNITIVO = [
-  "motivo", "mede", "pegadinhaDesc", "ondeErra", "palavraCritica", "tecnica", "regraMental",
-];
+/* `cognitivo` foi reduzido a dois campos quando o bloco "Engenharia
+   cognitiva" cedeu lugar às Estratégias da banca: os outros cinco
+   parafraseavam `comentario` (mede≈fundamento, ondeErra≈erroComum,
+   regraMental≈macete, pegadinhaDesc≈comoBancaPensa) ou eram cobertos, de
+   forma mais rica, pela estratégia casada por `pegadinha` (tecnica).
+   Sobraram os dois que só a própria questão pode dizer. */
+const CAMPOS_COGNITIVO = ["motivo", "palavraCritica"];
 
 /* Um enunciado que remete a um parágrafo específico ou ao "texto" como
    objeto externo ("no segundo parágrafo...", "predomina no texto...")

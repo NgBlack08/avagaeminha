@@ -28,12 +28,7 @@ const QUESTOES_PCAL_LOTE46 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "optar formalmente, em juízo ... após atingida a maioridade",
     cognitivo: {
       motivo: "Cobrar que a nacionalidade potestativa da alínea 'c' exige ato expresso de opção em juízo, e não mera residência somada à maioridade.",
-      mede: "Direito Constitucional — nacionalidade (nacionalidade potestativa, art. 12, I, 'c').",
-      pegadinhaDesc: "A banca pode afirmar que a residência no Brasil somada à maioridade civil já basta, tornando a aquisição automática.",
-      ondeErra: "Acha que a nacionalidade nata, nesse caso, decorre automaticamente da residência e da maioridade, sem exigir um ato de vontade.",
       palavraCritica: "optar formalmente, em juízo",
-      tecnica: "O art. 12, I, 'c', da CF prevê duas portas para o nascido no exterior de pai ou mãe brasileiros: o registro em repartição brasileira competente (basta o registro) ou, na sua falta, a residência no Brasil somada à opção confirmativa, exercida em juízo, em qualquer tempo, após atingida a maioridade. Nada é automático nessa segunda via — residir e completar 18 anos não bastam.",
-      regraMental: "Sem registro: residir + maioridade NÃO bastam — falta o ato de opção em juízo, a qualquer tempo."
     },
     comentario: {
       resolucao: "CERTO. Nos termos do art. 12, I, 'c', da CF, o nascido no estrangeiro, de pai brasileiro ou mãe brasileira, sem registro em repartição brasileira competente, só adquire a condição de brasileiro nato se vier a residir no Brasil e optar formalmente, em juízo, em qualquer tempo após atingida a maioridade, pela nacionalidade brasileira — a opção confirmativa gera nacionalidade originária, e nada nesse processo é automático.",
@@ -52,12 +47,7 @@ const QUESTOES_PCAL_LOTE46 = [
     gabarito: "E", pegadinha: "exigencia-inexistente", palavraChave: "adquire automaticamente ... independentemente de qualquer manifestação formal",
     cognitivo: {
       motivo: "Cobrar, na forma invertida, que a nacionalidade nata, nessa hipótese, depende de um ato formal de opção em juízo, e não é automática.",
-      mede: "Direito Constitucional — nacionalidade (nacionalidade potestativa, art. 12, I, 'c').",
-      pegadinhaDesc: "A banca elimina a exigência da opção formal, tratando a residência somada à maioridade como suficiente por si só.",
-      ondeErra: "Ignora que a alínea 'c' exige, na falta de registro consular, um ato de opção manifestado em juízo.",
       palavraCritica: "adquire automaticamente ... independentemente de qualquer manifestação formal",
-      tecnica: "A mera residência no Brasil e o atingimento da maioridade civil não bastam para a aquisição da condição de brasileiro nato, na falta de registro consular. O art. 12, I, 'c', da CF exige um ato expresso de vontade: a opção formal pela nacionalidade brasileira, manifestada em juízo, em qualquer tempo, depois de atingida a maioridade.",
-      regraMental: "Nada é automático na nacionalidade potestativa — falta sempre o ato de opção em juízo."
     },
     comentario: {
       resolucao: "ERRADO. A mera residência no Brasil e o atingimento da maioridade civil não são suficientes para a aquisição da condição de brasileiro nato. O art. 12, I, 'c', da CF exige um ato expresso de vontade: a opção formal pela nacionalidade brasileira, manifestada em juízo, em qualquer tempo, depois de atingida a maioridade — nada é automático.",
@@ -78,12 +68,7 @@ const QUESTOES_PCAL_LOTE46 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "direito subjetivo ... impedido de presidir a Casa legislativa",
     cognitivo: {
       motivo: "Cobrar que a naturalização extraordinária é ato vinculado (direito subjetivo) e que o naturalizado pode ser deputado/senador, mas não presidir a respectiva Casa.",
-      mede: "Direito Constitucional — nacionalidade (naturalização extraordinária, cargos privativos de nato).",
-      pegadinhaDesc: "A banca pode negar o direito subjetivo à naturalização extraordinária ou afirmar que o naturalizado também não pode ser eleito deputado/senador.",
-      ondeErra: "Acha que a naturalização extraordinária é ato discricionário, ou que deputado/senador são cargos privativos de brasileiro nato.",
       palavraCritica: "direito subjetivo ... impedido de presidir",
-      tecnica: "Preenchidos os três requisitos do art. 12, II, 'b' (residência por mais de 15 anos ininterruptos, ausência de condenação penal e requerimento), há direito subjetivo à naturalização — o ato é vinculado. Deputado federal e senador não integram o rol do art. 12, § 3º, podendo ser ocupados por naturalizados; já as presidências da Câmara e do Senado são privativas de brasileiro nato, por integrarem a linha sucessória presidencial.",
-      regraMental: "Naturalização extraordinária: direito subjetivo. Naturalizado pode ser deputado/senador, mas nunca presidir a Casa."
     },
     comentario: {
       resolucao: "CERTO. Preenchidos os requisitos do art. 12, II, 'b' (residência por mais de 15 anos ininterruptos, ausência de condenação penal e requerimento), há direito subjetivo à naturalização extraordinária. O naturalizado pode candidatar-se e ser eleito deputado federal ou senador — cargos que não integram o rol do art. 12, § 3º —, mas está impedido de presidir a Câmara ou o Senado, cargos privativos de brasileiro nato por integrarem a linha sucessória presidencial.",
@@ -102,12 +87,7 @@ const QUESTOES_PCAL_LOTE46 = [
     gabarito: "E", pegadinha: "generalizacao", palavraChave: "não poderá candidatar-se ... cargos são privativos de brasileiro nato",
     cognitivo: {
       motivo: "Cobrar, na forma invertida, que deputado federal e senador não integram o rol de cargos privativos de brasileiro nato do art. 12, § 3º.",
-      mede: "Direito Constitucional — nacionalidade (naturalização extraordinária, cargos privativos de nato).",
-      pegadinhaDesc: "A banca estende indevidamente o rol taxativo do § 3º para incluir deputado federal e senador.",
-      ondeErra: "Confunde a vedação de PRESIDIR a Câmara/Senado (privativa de nato) com uma suposta vedação de SER deputado ou senador (inexistente para naturalizados).",
       palavraCritica: "não poderá candidatar-se ... cargos são privativos de brasileiro nato",
-      tecnica: "O rol do art. 12, § 3º, da CF é taxativo e não inclui os cargos de deputado federal e senador — apenas as presidências da Câmara dos Deputados e do Senado Federal são privativas de brasileiro nato. O naturalizado pode, portanto, candidatar-se e ser eleito deputado ou senador normalmente.",
-      regraMental: "Deputado e senador: qualquer brasileiro (nato ou naturalizado). Só a PRESIDÊNCIA da Casa é privativa de nato."
     },
     comentario: {
       resolucao: "ERRADO. Deputado federal e senador não integram o rol taxativo de cargos privativos de brasileiro nato do art. 12, § 3º, da CF — o naturalizado pode candidatar-se e ser eleito normalmente a esses cargos. A vedação alcança apenas a presidência da Câmara dos Deputados e do Senado Federal.",
@@ -128,12 +108,7 @@ const QUESTOES_PCAL_LOTE46 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "vedada ... cassação ... hipótese ... de perda ... e não de cassação",
     cognitivo: {
       motivo: "Cobrar a distinção entre cassação (sempre vedada) e perda de direitos políticos (hipótese constitucional prevista no art. 15, I).",
-      mede: "Direito Constitucional — nacionalidade (privação de direitos políticos, art. 15).",
-      pegadinhaDesc: "A banca pode rotular de 'cassação' o que, tecnicamente, é uma hipótese de perda dos direitos políticos.",
-      ondeErra: "Não distingue os três regimes do art. 15: cassação (sempre vedada), perda (definitiva) e suspensão (temporária).",
       palavraCritica: "vedada ... de perda ... e não de cassação",
-      tecnica: "O art. 15, caput, da CF veda a cassação de direitos políticos em qualquer hipótese — é a retirada arbitrária, fora das hipóteses constitucionais. O cancelamento da naturalização por sentença transitada em julgado (inciso I) é hipótese de PERDA definitiva dos direitos políticos, e não de cassação: rompido o vínculo de nacionalidade, não há mais cidadania brasileira a exercer.",
-      regraMental: "Cassação: sempre proibida. Perda/suspensão: só nas hipóteses taxativas do art. 15. Nunca confundir os termos."
     },
     comentario: {
       resolucao: "CERTO. A cassação de direitos políticos é vedada em qualquer hipótese (art. 15, caput, da CF). O cancelamento da naturalização por sentença judicial transitada em julgado é hipótese de PERDA dos direitos políticos (art. 15, I), e não de cassação — a Constituição jamais utiliza esse termo para as hipóteses legítimas de privação.",
@@ -152,12 +127,7 @@ const QUESTOES_PCAL_LOTE46 = [
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "cassação dos direitos políticos ... nos termos expressos",
     cognitivo: {
       motivo: "Cobrar, na forma invertida, que o cancelamento da naturalização gera perda — e nunca cassação — dos direitos políticos, sendo esta última vedada pela própria Constituição.",
-      mede: "Direito Constitucional — nacionalidade (privação de direitos políticos, art. 15).",
-      pegadinhaDesc: "A banca rotula de 'cassação' uma hipótese que a Constituição expressamente trata como perda, atribuindo-lhe, inclusive, respaldo textual inexistente.",
-      ondeErra: "Confunde os regimes de privação de direitos políticos, tratando a perda como se fosse a cassação vedada pelo caput do art. 15.",
       palavraCritica: "cassação ... nos termos expressos",
-      tecnica: "O art. 15, caput, da CF veda expressamente a cassação de direitos políticos, em qualquer hipótese. O cancelamento da naturalização por sentença transitada em julgado (inciso I) é hipótese de PERDA — e não de cassação — dos direitos políticos, já que, cancelada a naturalização, o indivíduo deixa de ser brasileiro e não há mais cidadania a exercer.",
-      regraMental: "O art. 15 nunca usa 'cassação' para suas hipóteses — usa perda ou suspensão. Cassação é sempre vedada."
     },
     comentario: {
       resolucao: "ERRADO. O erro está na palavra 'cassação'. A cassação de direitos políticos é vedada em qualquer hipótese (art. 15, caput, da CF). O cancelamento da naturalização por sentença transitada em julgado é hipótese de PERDA dos direitos políticos (art. 15, I), e a Constituição jamais a trata como cassação — pelo contrário, a proíbe expressamente.",
@@ -178,12 +148,7 @@ const QUESTOES_PCAL_LOTE46 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "renúncia ... não impede ... readquirir ... nacionalidade brasileira originária",
     cognitivo: {
       motivo: "Cobrar a novidade trazida pela EC 131/2023: a renúncia-abdicação da nacionalidade não fecha a porta para a reaquisição da nacionalidade originária.",
-      mede: "Direito Constitucional — nacionalidade (perda e reaquisição, EC 131/2023).",
-      pegadinhaDesc: "A banca pode afirmar que, uma vez renunciada, a nacionalidade brasileira jamais poderia ser readquirida, ou que a reaquisição seria apenas por naturalização.",
-      ondeErra: "Ignora o § 5º do art. 12, incluído pela EC 131/2023, que assegura a reaquisição da nacionalidade ORIGINÁRIA (e não por naturalização) após a renúncia.",
       palavraCritica: "readquirir ... nacionalidade brasileira originária",
-      tecnica: "O art. 12, § 4º, II, da CF (EC 131/2023) prevê a perda-renúncia: pedido expresso de perda da nacionalidade perante autoridade brasileira competente, ressalvadas situações que acarretem apatridia. O § 5º, por sua vez, assegura que essa renúncia não impede o interessado de readquirir sua nacionalidade brasileira ORIGINÁRIA, nos termos da lei — ele volta a ser nato, não naturalizado.",
-      regraMental: "EC 131/2023: renunciar não é definitivo — dá para readquirir a nacionalidade ORIGINÁRIA (nato) depois."
     },
     comentario: {
       resolucao: "CERTO. Nos termos do art. 12, § 4º, II, e § 5º, da CF (redação da EC 131/2023), a renúncia da nacionalidade brasileira por pedido expresso à autoridade competente — ressalvadas situações de apatridia — não impede o interessado de readquirir sua nacionalidade brasileira originária, nos termos da lei.",
@@ -202,12 +167,7 @@ const QUESTOES_PCAL_LOTE46 = [
     gabarito: "E", pegadinha: "termo-absoluto", palavraChave: "ato irreversível ... impedindo definitivamente",
     cognitivo: {
       motivo: "Cobrar, na forma invertida, que a EC 131/2023 assegura a reaquisição da nacionalidade originária após a renúncia, afastando a ideia de irreversibilidade.",
-      mede: "Direito Constitucional — nacionalidade (perda e reaquisição, EC 131/2023).",
-      pegadinhaDesc: "A banca trata a renúncia como definitiva e sem volta, contrariando a novidade trazida pela EC 131/2023.",
-      ondeErra: "Desconhece o § 5º do art. 12, que assegura expressamente a possibilidade de reaquisição da nacionalidade originária após a renúncia.",
       palavraCritica: "ato irreversível ... impedindo definitivamente",
-      tecnica: "O art. 12, § 5º, da CF (EC 131/2023) assegura que a renúncia da nacionalidade, prevista no § 4º, II, não impede o interessado de readquirir sua nacionalidade brasileira originária, nos termos da lei — a renúncia não é, portanto, ato irreversível ou definitivo.",
-      regraMental: "Desde a EC 131/2023, renunciar à nacionalidade não é 'sem volta' — a reaquisição da nacionalidade originária é garantida."
     },
     comentario: {
       resolucao: "ERRADO. A renúncia da nacionalidade brasileira não é ato irreversível: o art. 12, § 5º, da CF (EC 131/2023) assegura expressamente que essa renúncia não impede o interessado de readquirir sua nacionalidade brasileira originária, nos termos da lei.",
@@ -228,12 +188,7 @@ const QUESTOES_PCAL_LOTE46 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "jamais ... em nenhuma hipótese ... exclusivamente ao ... naturalizado",
     cognitivo: {
       motivo: "Cobrar que a vedação de extradição do brasileiro nato é absoluta, e que a exceção do tráfico de drogas se aplica somente ao naturalizado.",
-      mede: "Direito Constitucional — nacionalidade (extradição, art. 5º, LI).",
-      pegadinhaDesc: "A banca pode deslocar a exceção do tráfico de drogas (exclusiva do naturalizado) para o brasileiro nato.",
-      ondeErra: "Acha que a exceção do tráfico de entorpecentes também autoriza a extradição do brasileiro nato.",
       palavraCritica: "jamais ... exclusivamente ao ... naturalizado",
-      tecnica: "O art. 5º, LI, da CF veda a extradição de brasileiro nato em qualquer hipótese, sem exceção. A única exceção prevista no dispositivo — extradição por crime comum praticado antes da naturalização ou por comprovado envolvimento em tráfico ilícito de entorpecentes e drogas afins — aplica-se exclusivamente ao brasileiro NATURALIZADO, nunca ao nato.",
-      regraMental: "Nato: NUNCA extraditado, ponto final. A exceção do tráfico é só do naturalizado."
     },
     comentario: {
       resolucao: "CERTO. O brasileiro nato jamais poderá ser extraditado, em nenhuma hipótese, independentemente da gravidade do crime — a vedação constitucional é absoluta. A exceção relativa ao tráfico ilícito de entorpecentes e drogas afins, prevista no art. 5º, LI, da CF, aplica-se exclusivamente ao brasileiro naturalizado.",
@@ -252,12 +207,7 @@ const QUESTOES_PCAL_LOTE46 = [
     gabarito: "E", pegadinha: "troca-sujeito", palavraChave: "somente poderá ser extraditado ... mesma exceção ... brasileiro naturalizado",
     cognitivo: {
       motivo: "Cobrar, na forma invertida, que a exceção do tráfico de drogas para fins de extradição é exclusiva do naturalizado, e não se estende ao nato.",
-      mede: "Direito Constitucional — nacionalidade (extradição, art. 5º, LI).",
-      pegadinhaDesc: "A banca desloca para o brasileiro nato uma exceção de extradição que a Constituição reserva exclusivamente ao naturalizado.",
-      ondeErra: "Não sabe que o brasileiro nato tem vedação absoluta de extradição, sem qualquer exceção — nem mesmo por tráfico de drogas.",
       palavraCritica: "somente poderá ser extraditado ... mesma exceção",
-      tecnica: "O art. 5º, LI, da CF veda, em qualquer hipótese, a extradição de brasileiro nato — não há exceção, nem mesmo para tráfico de entorpecentes. Essa exceção (crime comum anterior à naturalização, ou tráfico de drogas a qualquer tempo) é reservada exclusivamente ao brasileiro naturalizado.",
-      regraMental: "A exceção do tráfico é sempre do naturalizado — o nato não tem nenhuma exceção."
     },
     comentario: {
       resolucao: "ERRADO. O brasileiro nato jamais poderá ser extraditado, em nenhuma hipótese — não existe exceção por tráfico de drogas aplicável a ele. A exceção constitucional (crime comum anterior à naturalização, ou tráfico de entorpecentes a qualquer tempo) é reservada exclusivamente ao brasileiro naturalizado, conforme o art. 5º, LI, da CF.",

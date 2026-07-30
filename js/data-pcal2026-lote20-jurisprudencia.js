@@ -22,12 +22,7 @@ const QUESTOES_PCAL_LOTE20 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "liberdade de locomoção",
     cognitivo: {
       motivo: "Cobrar o objeto do habeas corpus.",
-      mede: "Constitucional — remédios constitucionais.",
-      pegadinhaDesc: "A banca pode ampliar o HC para direitos que não envolvem locomoção.",
-      ondeErra: "Confunde o HC (liberdade de locomoção) com outros remédios.",
       palavraCritica: "liberdade de locomoção",
-      tecnica: "Art. 5º, LXVIII: HC protege a liberdade de locomoção (ir, vir e permanecer), contra ilegalidade ou abuso de poder.",
-      regraMental: "HC = liberdade de locomoção. Nada além disso."
     },
     comentario: {
       resolucao: "CERTO. O art. 5º, LXVIII, da CF assegura o habeas corpus sempre que alguém sofrer ou se achar ameaçado de sofrer violência ou coação em sua liberdade de locomoção, por ilegalidade ou abuso de poder. Protege o direito de ir, vir e permanecer.",
@@ -46,12 +41,7 @@ const QUESTOES_PCAL_LOTE20 = [
     gabarito: "E", pegadinha: "generalizacao", palavraChave: "mérito das punições disciplinares",
     cognitivo: {
       motivo: "Cobrar a vedação do HC quanto ao mérito disciplinar militar.",
-      mede: "Constitucional — habeas corpus.",
-      pegadinhaDesc: "Generaliza o cabimento do HC para o mérito da punição militar.",
-      ondeErra: "Ignora a vedação constitucional específica.",
       palavraCritica: "mérito",
-      tecnica: "Art. 142, § 2º: não cabe HC em relação a punições disciplinares militares. O STF admite HC apenas para controle de legalidade (competência, forma, pressupostos) — nunca o mérito.",
-      regraMental: "HC militar: só legalidade, nunca o mérito da punição."
     },
     comentario: {
       resolucao: "ERRADO. O art. 142, § 2º, da CF veda o habeas corpus em relação a punições disciplinares militares. O STF admite o HC somente para aferir a legalidade do ato (hierarquia, poder disciplinar, ato ligado à função e pena legal), mas não o mérito da punição.",
@@ -71,12 +61,7 @@ const QUESTOES_PCAL_LOTE20 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "direito líquido e certo",
     cognitivo: {
       motivo: "Cobrar o cabimento do mandado de segurança.",
-      mede: "Constitucional — remédios constitucionais.",
-      pegadinhaDesc: "A banca pode dispensar a liquidez e certeza do direito.",
-      ondeErra: "Confunde MS com ação de cobrança/prova a produzir.",
       palavraCritica: "líquido e certo",
-      tecnica: "Art. 5º, LXIX: MS protege direito líquido e certo (demonstrável de plano, sem dilação probatória), residual em relação a HC e HD.",
-      regraMental: "MS = direito líquido e certo, provado de plano."
     },
     comentario: {
       resolucao: "CERTO. O art. 5º, LXIX, da CF prevê o mandado de segurança para proteger direito líquido e certo, não amparado por habeas corpus ou habeas data, quando o responsável pela ilegalidade ou abuso de poder for autoridade pública ou agente de pessoa jurídica no exercício de atribuições do Poder Público.",
@@ -95,12 +80,7 @@ const QUESTOES_PCAL_LOTE20 = [
     gabarito: "E", pegadinha: "juris-mais-lei", palavraChave: "lei em tese",
     cognitivo: {
       motivo: "Cobrar a Súmula 266 do STF.",
-      mede: "Constitucional — mandado de segurança.",
-      pegadinhaDesc: "Admite MS contra norma abstrata (lei em tese).",
-      ondeErra: "Confunde controle de constitucionalidade com MS.",
       palavraCritica: "lei em tese",
-      tecnica: "Súmula 266 do STF: não cabe MS contra lei em tese. Exige-se ato concreto de autoridade que viole direito líquido e certo.",
-      regraMental: "MS não ataca lei em tese (Súmula 266 STF)."
     },
     comentario: {
       resolucao: "ERRADO. Conforme a Súmula 266 do STF, não cabe mandado de segurança contra lei em tese. O MS pressupõe ato concreto de autoridade, e não a impugnação abstrata da norma, própria do controle de constitucionalidade.",
@@ -120,12 +100,7 @@ const QUESTOES_PCAL_LOTE20 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "informações relativas à pessoa do impetrante",
     cognitivo: {
       motivo: "Cobrar o objeto do habeas data.",
-      mede: "Constitucional — remédios constitucionais.",
-      pegadinhaDesc: "A banca troca a titularidade (informações de terceiros).",
-      ondeErra: "Admite HD para informações de terceiros.",
       palavraCritica: "à pessoa do impetrante",
-      tecnica: "Art. 5º, LXXII: HD é personalíssimo — assegura conhecimento/retificação de informações relativas ao próprio impetrante.",
-      regraMental: "HD é sobre os SEUS dados, não os de terceiros."
     },
     comentario: {
       resolucao: "CERTO. O art. 5º, LXXII, da CF garante o habeas data para assegurar o conhecimento de informações relativas à pessoa do impetrante e para a retificação de dados. É remédio personalíssimo, voltado aos dados do próprio requerente.",
@@ -144,12 +119,7 @@ const QUESTOES_PCAL_LOTE20 = [
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "norma regulamentadora de lei ordinária",
     cognitivo: {
       motivo: "Cobrar o pressuposto do mandado de injunção.",
-      mede: "Constitucional — mandado de injunção.",
-      pegadinhaDesc: "Troca a omissão de norma constitucional por omissão de lei ordinária.",
-      ondeErra: "Confunde o objeto do MI com regulamentação de lei ordinária.",
       palavraCritica: "lei ordinária",
-      tecnica: "Art. 5º, LXXI: o MI pressupõe falta de norma regulamentadora que torne inviável o exercício de direitos e liberdades constitucionais e das prerrogativas inerentes à nacionalidade, soberania e cidadania — omissão de norma CONSTITUCIONAL, não de lei ordinária.",
-      regraMental: "MI combate omissão de regulamentação CONSTITUCIONAL."
     },
     comentario: {
       resolucao: "ERRADO. O mandado de injunção pressupõe a falta de norma regulamentadora que inviabilize o exercício de direitos e liberdades constitucionais e das prerrogativas inerentes à nacionalidade, à soberania e à cidadania (art. 5º, LXXI). Refere-se à omissão de regulamentação de norma constitucional, e não de lei ordinária.",
@@ -170,12 +140,7 @@ const QUESTOES_PCAL_LOTE20 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "desentranhadas",
     cognitivo: {
       motivo: "Cobrar a inadmissibilidade da prova ilícita.",
-      mede: "Processo Penal — teoria da prova.",
-      pegadinhaDesc: "A banca pode admitir a prova ilícita 'se relevante'.",
-      ondeErra: "Relativiza indevidamente a vedação constitucional.",
       palavraCritica: "desentranhadas",
-      tecnica: "CF, art. 5º, LVI, e CPP, art. 157: provas ilícitas são inadmissíveis e devem ser desentranhadas dos autos.",
-      regraMental: "Prova ilícita entra? Não. E sai dos autos (desentranha)."
     },
     comentario: {
       resolucao: "CERTO. Conforme o art. 5º, LVI, da CF e o art. 157 do CPP, são inadmissíveis as provas obtidas por meios ilícitos, devendo ser desentranhadas do processo. Consideram-se ilícitas as que violam normas constitucionais ou legais.",
@@ -194,12 +159,7 @@ const QUESTOES_PCAL_LOTE20 = [
     gabarito: "E", pegadinha: "termo-absoluto", palavraChave: "em qualquer hipótese, sem exceção",
     cognitivo: {
       motivo: "Cobrar as exceções à ilicitude por derivação.",
-      mede: "Processo Penal — prova ilícita por derivação.",
-      pegadinhaDesc: "Usa termo absoluto para negar as exceções legais.",
-      ondeErra: "Ignora a fonte independente e a descoberta inevitável.",
       palavraCritica: "sem exceção",
-      tecnica: "CPP, art. 157, § 1º: a prova derivada NÃO é contaminada quando não evidenciado o nexo de causalidade ou quando puder ser obtida por fonte independente (inclui a descoberta inevitável).",
-      regraMental: "Derivada ilícita tem exceções: fonte independente e descoberta inevitável."
     },
     comentario: {
       resolucao: "ERRADO. Embora a teoria dos frutos da árvore envenenada contamine, em regra, as provas derivadas, o art. 157, § 1º, do CPP prevê exceções: inexistência de nexo de causalidade e a fonte independente (abrangendo a descoberta inevitável). Logo, não é 'sem exceção'.",
@@ -218,12 +178,7 @@ const QUESTOES_PCAL_LOTE20 = [
     gabarito: "C", pegadinha: "juris-mais-lei", palavraChave: "elementos já documentados",
     cognitivo: {
       motivo: "Cobrar a Súmula Vinculante 14 do STF.",
-      mede: "Processo Penal — direito de defesa na investigação.",
-      pegadinhaDesc: "A banca pode estender o acesso a diligências em curso (não documentadas).",
-      ondeErra: "Confunde 'já documentado' com diligências sigilosas em andamento.",
       palavraCritica: "já documentados",
-      tecnica: "SV 14: o defensor tem acesso amplo aos elementos JÁ DOCUMENTADOS. Diligências em curso, ainda não documentadas, podem permanecer sigilosas.",
-      regraMental: "Acesso do defensor: ao que já está documentado nos autos."
     },
     comentario: {
       resolucao: "CERTO. A Súmula Vinculante 14 do STF assegura ao defensor acesso amplo aos elementos de prova já documentados em procedimento investigatório, no interesse do representado. Ressalvam-se as diligências em andamento, ainda não documentadas, que podem manter o sigilo.",
@@ -243,12 +198,7 @@ const QUESTOES_PCAL_LOTE20 = [
     gabarito: "E", pegadinha: "juris-mais-lei", palavraChave: "crime consumado e punível",
     cognitivo: {
       motivo: "Cobrar a Súmula 145 do STF (flagrante preparado = crime impossível).",
-      mede: "Processo Penal — modalidades de flagrante.",
-      pegadinhaDesc: "Trata o flagrante preparado como crime punível.",
-      ondeErra: "Confunde flagrante preparado (crime impossível) com esperado (válido).",
       palavraCritica: "consumado e punível",
-      tecnica: "Súmula 145 do STF: no flagrante preparado (delito putativo por obra do agente provocador), a consumação é impossível — não há crime. Diferente do flagrante esperado, que é válido.",
-      regraMental: "Preparado = crime impossível (Súmula 145). Esperado = válido."
     },
     comentario: {
       resolucao: "ERRADO. Segundo a Súmula 145 do STF, não há crime quando a preparação do flagrante pela autoridade torna impossível a sua consumação (flagrante preparado/provocado). A situação difere do flagrante esperado, em que a atuação policial apenas aguarda a ação do agente e é válida.",
@@ -268,12 +218,7 @@ const QUESTOES_PCAL_LOTE20 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "valor relativo",
     cognitivo: {
       motivo: "Cobrar o valor da confissão no processo penal.",
-      mede: "Processo Penal — sistema de provas.",
-      pegadinhaDesc: "A banca pode tratar a confissão como 'rainha das provas' (valor absoluto).",
-      ondeErra: "Atribui valor absoluto à confissão.",
       palavraCritica: "valor relativo",
-      tecnica: "CPP, art. 197: a confissão é divisível e retratável, e seu valor é RELATIVO — deve ser confrontada com as demais provas (livre convencimento motivado).",
-      regraMental: "Confissão não é rainha das provas: valor relativo."
     },
     comentario: {
       resolucao: "CERTO. O art. 197 do CPP estabelece que o valor da confissão se afere pelos critérios adotados para os demais elementos de prova, devendo ser confrontada com as demais provas. Seu valor é relativo, além de a confissão ser divisível e retratável.",
@@ -292,12 +237,7 @@ const QUESTOES_PCAL_LOTE20 = [
     gabarito: "E", pegadinha: "juris-mais-lei", palavraChave: "ainda que não haja prejuízo",
     cognitivo: {
       motivo: "Cobrar o princípio 'pas de nullité sans grief' (Súmula 523).",
-      mede: "Processo Penal — nulidades.",
-      pegadinhaDesc: "Dispensa a demonstração de prejuízo.",
-      ondeErra: "Ignora que sem prejuízo não há nulidade.",
       palavraCritica: "ainda que não haja prejuízo",
-      tecnica: "CPP, art. 563, e Súmula 523 do STF: não há nulidade sem prejuízo (pas de nullité sans grief). A nulidade da defesa só anula se houver prova de prejuízo.",
-      regraMental: "Sem prejuízo, não há nulidade (Súmula 523 STF)."
     },
     comentario: {
       resolucao: "ERRADO. Vigora o princípio 'pas de nullité sans grief': nenhum ato será declarado nulo se da nulidade não resultar prejuízo (CPP, art. 563). A Súmula 523 do STF reforça que a falta de defesa constitui nulidade absoluta, mas a sua deficiência só anula se houver prova de prejuízo.",
@@ -317,12 +257,7 @@ const QUESTOES_PCAL_LOTE20 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "permanecer calado",
     cognitivo: {
       motivo: "Cobrar a natureza do interrogatório e o direito ao silêncio.",
-      mede: "Processo Penal — interrogatório.",
-      pegadinhaDesc: "A banca pode dizer que o silêncio prejudica a defesa ou vale como confissão.",
-      ondeErra: "Trata o silêncio como confissão ficta.",
       palavraCritica: "não importa confissão nem prejuízo",
-      tecnica: "CPP, art. 186, e CF, art. 5º, LXIII: o interrogatório é meio de defesa; o silêncio é direito e não pode ser interpretado em prejuízo do réu.",
-      regraMental: "Silêncio é direito: não é confissão nem prejudica."
     },
     comentario: {
       resolucao: "CERTO. O interrogatório é predominantemente meio de defesa. O art. 186, parágrafo único, do CPP e o art. 5º, LXIII, da CF asseguram o direito ao silêncio, que não importa confissão nem pode ser interpretado em prejuízo da defesa.",
@@ -343,12 +278,7 @@ const QUESTOES_PCAL_LOTE20 = [
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "dolo ou de culpa",
     cognitivo: {
       motivo: "Cobrar a exigência de dolo na improbidade (reforma de 2021).",
-      mede: "Administrativo — improbidade administrativa.",
-      pegadinhaDesc: "Mantém a modalidade culposa, revogada pela Lei 14.230/2021.",
-      ondeErra: "Estuda pela redação anterior à reforma.",
       palavraCritica: "ou de culpa",
-      tecnica: "A Lei 14.230/2021 exige DOLO em todas as modalidades de improbidade (art. 1º, §§ 1º a 3º) — extinguiu a improbidade culposa (que existia para lesão ao erário).",
-      regraMental: "Improbidade agora é só DOLOSA. Culpa não configura."
     },
     comentario: {
       resolucao: "ERRADO. A Lei 14.230/2021 passou a exigir dolo (vontade livre e consciente de alcançar o resultado ilícito) em todas as modalidades de improbidade, afastando a modalidade culposa que antes se admitia para os atos que causam lesão ao erário. Logo, não há mais improbidade culposa.",
@@ -367,12 +297,7 @@ const QUESTOES_PCAL_LOTE20 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "vantagem patrimonial indevida",
     cognitivo: {
       motivo: "Cobrar a hipótese de enriquecimento ilícito (art. 9º).",
-      mede: "Administrativo — modalidades de improbidade.",
-      pegadinhaDesc: "A banca pode exigir efetivo dano ao erário para o enriquecimento ilícito.",
-      ondeErra: "Confunde enriquecimento ilícito (art. 9º) com lesão ao erário (art. 10).",
       palavraCritica: "vantagem patrimonial indevida",
-      tecnica: "Art. 9º: enriquecimento ilícito = auferir vantagem patrimonial indevida (independe de dano ao erário). O dano é elementar do art. 10.",
-      regraMental: "Art. 9º: ganhou indevidamente. Art. 10: causou dano."
     },
     comentario: {
       resolucao: "CERTO. O art. 9º da Lei 8.429/1992 tipifica como improbidade por enriquecimento ilícito auferir, mediante ato doloso, qualquer vantagem patrimonial indevida em razão do exercício de cargo, mandato, função, emprego ou atividade nas entidades referidas na lei. Independe de dano ao erário.",
@@ -391,12 +316,7 @@ const QUESTOES_PCAL_LOTE20 = [
     gabarito: "E", pegadinha: "generalizacao", palavraChave: "decretar a quebra do sigilo bancário",
     cognitivo: {
       motivo: "Cobrar os limites dos poderes do Tribunal de Contas (STF).",
-      mede: "Administrativo — controle externo.",
-      pegadinhaDesc: "Amplia os poderes do TC para decretar quebra de sigilo bancário.",
-      ondeErra: "Confunde acesso a dados de gestão pública com sigilo bancário.",
       palavraCritica: "decretar a quebra do sigilo bancário",
-      tecnica: "STF: o Tribunal de Contas NÃO tem competência para decretar, por autoridade própria, a quebra de sigilo bancário; tal medida depende, em regra, de autorização judicial.",
-      regraMental: "TC não quebra sigilo bancário sozinho (STF)."
     },
     comentario: {
       resolucao: "ERRADO. O STF firmou que o Tribunal de Contas não pode, por autoridade própria, decretar a quebra do sigilo bancário, que, como regra, depende de reserva de jurisdição. O TC pode requisitar informações de gestão e dados públicos, mas não afastar o sigilo bancário protegido.",
@@ -416,12 +336,7 @@ const QUESTOES_PCAL_LOTE20 = [
     gabarito: "C", pegadinha: "juris-mais-lei", palavraChave: "anular e revogar",
     cognitivo: {
       motivo: "Cobrar a autotutela (Súmula 473 do STF).",
-      mede: "Administrativo — controle interno e atos administrativos.",
-      pegadinhaDesc: "A banca troca anulação (ilegalidade) por revogação (conveniência) e vice-versa.",
-      ondeErra: "Confunde anulação (vício de legalidade) com revogação (mérito).",
       palavraCritica: "anular ... revogá-los",
-      tecnica: "Súmula 473 do STF: a Administração ANULA atos ilegais e REVOGA atos válidos por conveniência/oportunidade, respeitados os direitos adquiridos.",
-      regraMental: "Anula o ilegal; revoga o inconveniente. Respeita direito adquirido."
     },
     comentario: {
       resolucao: "CERTO. A Súmula 473 do STF consagra a autotutela: a Administração pode anular seus atos ilegais e revogar os atos válidos por motivo de conveniência ou oportunidade, sempre respeitados os direitos adquiridos e ressalvada a apreciação judicial.",

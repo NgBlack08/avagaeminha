@@ -31,12 +31,7 @@ const QUESTOES_PCAL_LOTE14 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "direta, autárquica e fundacional",
     cognitivo: {
       motivo: "Cobrar o alcance do regime jurídico único na Constituição estadual (art. 54).",
-      mede: "Constituição de Alagoas — servidores públicos.",
-      pegadinhaDesc: "A banca costuma incluir as empresas públicas e sociedades de economia mista no alcance do RJU.",
-      ondeErra: "Estende o RJU à administração indireta de direito privado.",
       palavraCritica: "direta, autárquica e fundacional",
-      tecnica: "RJU alcança direta + autarquias + fundações. Estatais (EP/SEM) seguem regime celetista.",
-      regraMental: "RJU = direito público. Empresa pública e SEM ficam de fora (são CLT)."
     },
     comentario: {
       resolucao: "CERTO. A Constituição do Estado de Alagoas (art. 54) determina a instituição de regime jurídico único para os servidores da administração direta, autárquica e fundacional, além de prever a obrigatoriedade de planos de carreira. As empresas públicas e sociedades de economia mista não são alcançadas, por se submeterem ao regime celetista.",
@@ -55,12 +50,7 @@ const QUESTOES_PCAL_LOTE14 = [
     gabarito: "E", pegadinha: "troca-numerica", palavraChave: "dois salários mínimos",
     cognitivo: {
       motivo: "Cobrar o piso remuneratório previsto na Constituição estadual (art. 55).",
-      mede: "Constituição de Alagoas — remuneração dos servidores.",
-      pegadinhaDesc: "Dobra o piso: troca 'salário mínimo' por 'dois salários mínimos'.",
-      ondeErra: "Não retém o número exato do piso.",
       palavraCritica: "dois (o correto é um salário mínimo)",
-      tecnica: "O piso é o salário mínimo nacional — mesma lógica do art. 7º, IV, da CF.",
-      regraMental: "Piso do servidor = 1 salário mínimo. Nunca 'dois'."
     },
     comentario: {
       resolucao: "ERRADO. A Constituição do Estado de Alagoas (art. 55) assegura piso salarial nunca inferior ao SALÁRIO MÍNIMO NACIONAL — e não a dois salários mínimos. A garantia acompanha o padrão do art. 7º, IV, da Constituição Federal.",
@@ -79,12 +69,7 @@ const QUESTOES_PCAL_LOTE14 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "8 horas diárias / 40 semanais",
     cognitivo: {
       motivo: "Cobrar os limites de jornada previstos na Constituição estadual.",
-      mede: "Constituição de Alagoas — jornada dos servidores.",
-      pegadinhaDesc: "A banca costuma alterar para 44 horas semanais (padrão celetista) ou 6 horas diárias.",
-      ondeErra: "Confunde com a jornada de 44 horas do art. 7º, XIII, da CF.",
       palavraCritica: "8 diárias / 40 semanais",
-      tecnica: "Atenção: o limite estadual para servidores é 40 semanais, e não 44.",
-      regraMental: "Servidor em AL: 8h/dia e 40h/semana, com compensação admitida."
     },
     comentario: {
       resolucao: "CERTO. A Constituição do Estado de Alagoas (art. 55) fixa jornada de até 8 horas diárias e 40 horas semanais, admitida a compensação de horários. Note-se a diferença em relação ao limite geral de 44 horas semanais do art. 7º, XIII, da CF, aplicável aos trabalhadores em geral.",
@@ -103,12 +88,7 @@ const QUESTOES_PCAL_LOTE14 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "no mínimo 50%",
     cognitivo: {
       motivo: "Cobrar o percentual mínimo do adicional na Constituição estadual.",
-      mede: "Constituição de Alagoas — adicionais.",
-      pegadinhaDesc: "A banca costuma reduzir para 20% ou 30%.",
-      ondeErra: "Não memoriza o percentual mínimo.",
       palavraCritica: "no mínimo 50%",
-      tecnica: "O adicional alcança tanto o serviço extraordinário quanto o noturno, com piso de 50%.",
-      regraMental: "Hora extra e noturna em AL: mínimo de 50% sobre a hora normal."
     },
     comentario: {
       resolucao: "CERTO. A Constituição do Estado de Alagoas (art. 55) prevê adicional mínimo de 50% sobre o valor da hora normal para os serviços extraordinários e noturnos, além de assegurar repouso semanal remunerado, preferencialmente aos domingos.",
@@ -129,12 +109,7 @@ const QUESTOES_PCAL_LOTE14 = [
     gabarito: "E", pegadinha: "exigencia-inexistente", palavraChave: "apenas os cônjuges",
     cognitivo: {
       motivo: "Cobrar o alcance subjetivo do art. 56 da Constituição estadual.",
-      mede: "Constituição de Alagoas — servidores públicos.",
-      pegadinhaDesc: "Restringe o direito aos cônjuges, excluindo os companheiros.",
-      ondeErra: "Ignora a equiparação da união estável à entidade familiar.",
       palavraCritica: "cônjuges E companheiros",
-      tecnica: "O dispositivo alcança cônjuges OU companheiros, em coerência com o art. 226, § 3º, da CF.",
-      regraMental: "Casamento e união estável: mesmo tratamento para a lotação conjunta."
     },
     comentario: {
       resolucao: "ERRADO. A Constituição do Estado de Alagoas (art. 56) assegura o direito à lotação na mesma localidade tanto para CÔNJUGES quanto para COMPANHEIROS que sejam servidores públicos, em consonância com o reconhecimento da união estável como entidade familiar (CF, art. 226, § 3º).",
@@ -153,12 +128,7 @@ const QUESTOES_PCAL_LOTE14 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "mais de uma Vara na comarca",
     cognitivo: {
       motivo: "Cobrar a ressalva específica do art. 56 para Magistratura e MP.",
-      mede: "Constituição de Alagoas — servidores públicos.",
-      pegadinhaDesc: "A banca costuma suprimir a condição ('mais de uma Vara') ou negar a exceção.",
-      ondeErra: "Aplica a regra geral sem observar a ressalva das carreiras jurídicas.",
       palavraCritica: "mais de uma Vara na comarca",
-      tecnica: "A restrição existe para preservar a organização judiciária: numa comarca de Vara única, não caberia a lotação conjunta.",
-      regraMental: "Magistratura/MP: lotação conjunta só se a comarca tiver mais de uma Vara."
     },
     comentario: {
       resolucao: "CERTO. A Constituição do Estado de Alagoas (art. 56) ressalva que, para membros da Magistratura ou do Ministério Público, o direito à lotação na mesma localidade fica condicionado à existência de mais de uma Vara na comarca, em respeito às especificidades da organização judiciária.",
@@ -177,12 +147,7 @@ const QUESTOES_PCAL_LOTE14 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "trinta dias / remuneração integral",
     cognitivo: {
       motivo: "Cobrar a garantia procedimental do art. 57, § 3º, da Constituição estadual.",
-      mede: "Constituição de Alagoas — servidores públicos.",
-      pegadinhaDesc: "A banca costuma alterar o prazo ou reduzir a remuneração a proporcional.",
-      ondeErra: "Não conhece essa garantia, que é peculiar da Constituição alagoana.",
       palavraCritica: "30 dias / remuneração integral",
-      tecnica: "É norma antimorosidade: a inércia da administração não pode prejudicar o servidor.",
-      regraMental: "Pediu aposentadoria e passaram 30 dias sem resposta: para de trabalhar e continua recebendo integral."
     },
     comentario: {
       resolucao: "CERTO. A Constituição do Estado de Alagoas (art. 57, § 3º) estabelece que, decorridos 30 dias do pedido de aposentadoria sem resposta da administração, o servidor fica desobrigado de trabalhar, mantendo a remuneração integral até a decisão final. Trata-se de garantia procedimental contra a morosidade administrativa, não atingida pelas reformas previdenciárias.",
@@ -201,12 +166,7 @@ const QUESTOES_PCAL_LOTE14 = [
     gabarito: "E", pegadinha: "troca-numerica", palavraChave: "dois anos",
     cognitivo: {
       motivo: "Cobrar o prazo de estabilidade.",
-      mede: "Constituição de Alagoas — estabilidade.",
-      pegadinhaDesc: "Reduz o prazo de 3 para 2 anos (redação anterior à EC 19/1998).",
-      ondeErra: "Usa o prazo antigo, revogado no plano federal.",
       palavraCritica: "dois (o correto é três anos)",
-      tecnica: "Estabilidade: 3 anos de efetivo exercício, na linha do art. 41 da CF (EC 19/1998).",
-      regraMental: "Estabilidade = 3 anos. Igual ao prazo da LONPC para o policial civil."
     },
     comentario: {
       resolucao: "ERRADO. A estabilidade é adquirida após 3 (TRÊS) anos de efetivo exercício no cargo, para os servidores nomeados em virtude de concurso público, conforme o art. 41 da CF (com a redação da EC 19/1998), observado pela ordem estadual. O prazo de 2 anos corresponde à redação originária, hoje superada.",
@@ -225,12 +185,7 @@ const QUESTOES_PCAL_LOTE14 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "remuneração proporcional",
     cognitivo: {
       motivo: "Cobrar o regime da disponibilidade do servidor estável.",
-      mede: "Constituição de Alagoas — estabilidade e disponibilidade.",
-      pegadinhaDesc: "A banca costuma trocar 'proporcional' por 'integral'.",
-      ondeErra: "Confunde a disponibilidade (proporcional) com outros institutos.",
       palavraCritica: "proporcional ao tempo de serviço",
-      tecnica: "Disponibilidade: o vínculo é mantido, com remuneração PROPORCIONAL, até o aproveitamento em cargo compatível.",
-      regraMental: "Cargo extinto: servidor estável vai para disponibilidade — proporcional, não integral."
     },
     comentario: {
       resolucao: "CERTO. Extinto o cargo ou declarada sua desnecessidade, o servidor estável é posto em disponibilidade com remuneração proporcional ao tempo de serviço, assegurado o aproveitamento prioritário em vaga compatível — em linha com o art. 41, § 3º, da CF.",
@@ -249,12 +204,7 @@ const QUESTOES_PCAL_LOTE14 = [
     gabarito: "E", pegadinha: "exigencia-inexistente", palavraChave: "participar simultaneamente",
     cognitivo: {
       motivo: "Cobrar a vedação à acumulação em órgãos colegiados remunerados.",
-      mede: "Constituição de Alagoas — vedações aos servidores.",
-      pegadinhaDesc: "Cria a condição de 'compatibilidade de horários', que não afasta a vedação.",
-      ondeErra: "Aplica a lógica da acumulação de cargos (que admite compatibilidade) a hipótese vedada.",
       palavraCritica: "vedada a participação em mais de um",
-      tecnica: "A vedação é objetiva: um único órgão colegiado remunerado, independentemente de horários.",
-      regraMental: "Órgão colegiado remunerado: só um. Compatibilidade de horário não salva."
     },
     comentario: {
       resolucao: "ERRADO. A Constituição do Estado de Alagoas veda que servidores civis ou militares participem simultaneamente de mais de um órgão colegiado remunerado. A vedação é objetiva e não é afastada por eventual compatibilidade de horários — o objetivo é impedir acumulações indevidas de remuneração.",
@@ -273,12 +223,7 @@ const QUESTOES_PCAL_LOTE14 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "nos lucros e na gestão",
     cognitivo: {
       motivo: "Cobrar o direito previsto no art. 62 da Constituição estadual.",
-      mede: "Constituição de Alagoas — empregados de estatais.",
-      pegadinhaDesc: "A banca costuma suprimir a 'participação na gestão', deixando só os lucros.",
-      ondeErra: "Reduz o direito à participação nos lucros.",
       palavraCritica: "lucros E gestão",
-      tecnica: "São dois direitos: participação nos lucros e participação na gestão, com percentual definido pelo órgão superior competente.",
-      regraMental: "Estatal em AL: empregado participa dos lucros e também da gestão."
     },
     comentario: {
       resolucao: "CERTO. A Constituição do Estado de Alagoas (art. 62) garante aos empregados das empresas públicas e sociedades de economia mista estaduais o direito à participação nos lucros e na gestão da empresa, cabendo a definição do percentual ao órgão superior competente, na forma da lei.",
@@ -299,12 +244,7 @@ const QUESTOES_PCAL_LOTE14 = [
     gabarito: "E", pegadinha: "troca-sujeito", palavraChave: "Comandante-Geral / apenas na atividade",
     cognitivo: {
       motivo: "Cobrar quem confere as patentes e o alcance das prerrogativas.",
-      mede: "Constituição de Alagoas — servidores militares.",
-      pegadinhaDesc: "Erra duas vezes: a autoridade e a extensão das prerrogativas.",
-      ondeErra: "Confunde o comando da corporação com a autoridade que confere a patente.",
       palavraCritica: "Governador / ativa, reserva e reforma",
-      tecnica: "Patentes: conferidas pelo GOVERNADOR, com prerrogativas na ativa, na reserva E na reforma.",
-      regraMental: "Quem dá a patente é o Governador — e ela acompanha o militar mesmo inativo."
     },
     comentario: {
       resolucao: "ERRADO. Segundo a Constituição do Estado de Alagoas, as patentes são conferidas pelo GOVERNADOR DO ESTADO, e as prerrogativas são asseguradas em todas as situações funcionais: ativa, reserva e reforma. A assertiva erra na autoridade competente e ao restringir as prerrogativas à atividade.",
@@ -323,12 +263,7 @@ const QUESTOES_PCAL_LOTE14 = [
     gabarito: "E", pegadinha: "exigencia-inexistente", palavraChave: "facultada a filiação",
     cognitivo: {
       motivo: "Cobrar a vedação à filiação partidária do militar em atividade.",
-      mede: "Constituição de Alagoas — servidores militares.",
-      pegadinhaDesc: "Cria uma condição ('fora do expediente') que aparenta legitimar o que é vedado.",
-      ondeErra: "Supõe que a vedação se limita ao exercício de atividade partidária no serviço.",
       palavraCritica: "vedação à filiação (não apenas à atividade)",
-      tecnica: "A vedação alcança a própria FILIAÇÃO enquanto o militar estiver em atividade, para preservar a neutralidade institucional.",
-      regraMental: "Militar da ativa não se filia a partido. Nem fora do expediente."
     },
     comentario: {
       resolucao: "ERRADO. A Constituição do Estado de Alagoas veda a filiação partidária do militar enquanto em atividade, preservando a neutralidade institucional — vedação que acompanha o art. 142, § 3º, V, da CF, aplicável aos militares estaduais por força do art. 42. A proibição alcança a própria filiação, e não apenas a prática de atos partidários no expediente.",
@@ -347,12 +282,7 @@ const QUESTOES_PCAL_LOTE14 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "julgado indigno / superior a dois anos",
     cognitivo: {
       motivo: "Cobrar o regime de perda de posto e patente do oficial.",
-      mede: "Constituição de Alagoas — servidores militares.",
-      pegadinhaDesc: "A banca costuma trocar o prazo da pena (2 anos) ou dispensar o julgamento pelo Conselho.",
-      ondeErra: "Supõe que a condenação criminal, por si só, acarreta a perda automática.",
       palavraCritica: "julgamento pelo colegiado / pena superior a 2 anos",
-      tecnica: "A perda não é automática: depende de julgamento pelo Conselho de Justiça competente.",
-      regraMental: "Condenação acima de 2 anos → vai a julgamento no Conselho. A perda não é automática."
     },
     comentario: {
       resolucao: "CERTO. O oficial só perde posto e patente se julgado indigno do oficialato ou com ele incompatível, por decisão de órgão colegiado militar competente (Conselho de Justiça). O oficial condenado a pena privativa de liberdade superior a 2 anos, por sentença transitada em julgado, é submetido a esse julgamento — que não é automático. A perda de graduação das praças é definida em legislação específica.",
@@ -373,12 +303,7 @@ const QUESTOES_PCAL_LOTE14 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "dever do Estado, direito e responsabilidade de todos",
     cognitivo: {
       motivo: "Cobrar o conceito de segurança pública na Constituição estadual, espelhado no art. 144 da CF.",
-      mede: "Constituição de Alagoas — sistema de segurança pública.",
-      pegadinhaDesc: "A banca costuma trocar 'responsabilidade de todos' por 'exclusividade estatal'.",
-      ondeErra: "Reduz a segurança pública a dever exclusivo do Estado.",
       palavraCritica: "responsabilidade de todos",
-      tecnica: "Mesma fórmula do art. 144, caput, da CF: dever do Estado, direito E responsabilidade de todos.",
-      regraMental: "Segurança pública: dever do Estado, mas também responsabilidade de todos."
     },
     comentario: {
       resolucao: "CERTO. A Constituição do Estado de Alagoas reproduz a fórmula do art. 144, caput, da Constituição Federal: a segurança pública é dever do Estado, direito e responsabilidade de todos, exercida para a preservação da ordem pública e da incolumidade das pessoas e do patrimônio.",
@@ -397,12 +322,7 @@ const QUESTOES_PCAL_LOTE14 = [
     gabarito: "E", pegadinha: "troca-sujeito", palavraChave: "Secretário de Segurança",
     cognitivo: {
       motivo: "Cobrar a subordinação constitucional das polícias.",
-      mede: "Constituição de Alagoas — segurança pública.",
-      pegadinhaDesc: "Troca o Governador pelo Secretário de Segurança na subordinação constitucional.",
-      ondeErra: "Confunde a vinculação administrativa cotidiana com a subordinação prevista na Constituição.",
       palavraCritica: "Governador (não Secretário)",
-      tecnica: "CF, art. 144, § 6º: as polícias subordinam-se aos GOVERNADORES. A Constituição estadual repete a fórmula.",
-      regraMental: "Constitucionalmente, a PC se subordina ao Governador — não ao Secretário."
     },
     comentario: {
       resolucao: "ERRADO. A Polícia Civil, como órgão de segurança pública, subordina-se ao GOVERNADOR DO ESTADO, conforme a fórmula do art. 144, § 6º, da CF, reproduzida na Constituição estadual. A primeira parte do item (polícia judiciária e apuração de infrações penais, exceto as militares) está correta; o erro está na autoridade a que se subordina.",
@@ -421,12 +341,7 @@ const QUESTOES_PCAL_LOTE14 = [
     gabarito: "E", pegadinha: "termo-absoluto", palavraChave: "sem restrições",
     cognitivo: {
       motivo: "Cobrar a restrição estadual ao porte de arma pelas guardas municipais.",
-      mede: "Constituição de Alagoas — segurança pública.",
-      pegadinhaDesc: "Absolutiza um direito que a Constituição estadual condiciona a autorização.",
-      ondeErra: "Ignora a exigência de autorização específica.",
       palavraCritica: "sem restrições (falso)",
-      tecnica: "A Constituição estadual veda o porte, salvo autorização específica do Secretário de Segurança.",
-      regraMental: "Guarda municipal em AL: porte vedado, salvo autorização específica do Secretário de Segurança."
     },
     comentario: {
       resolucao: "ERRADO. A Constituição do Estado de Alagoas veda o porte de arma de fogo pelos integrantes das guardas municipais, ressalvada a autorização específica do Secretário de Segurança. Não há, portanto, porte livre e irrestrito.",
@@ -445,12 +360,7 @@ const QUESTOES_PCAL_LOTE14 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "lei complementar estadual / supervisão da PM",
     cognitivo: {
       motivo: "Cobrar o regime de criação e supervisão das guardas municipais na Constituição estadual.",
-      mede: "Constituição de Alagoas — segurança pública.",
-      pegadinhaDesc: "A banca costuma trocar 'lei complementar estadual' por lei municipal ou negar a supervisão.",
-      ondeErra: "Não retém a exigência de lei complementar estadual nem a supervisão operacional.",
       palavraCritica: "lei complementar estadual + supervisão pela PM",
-      tecnica: "Dois pontos: a forma de criação (lei complementar estadual) e a supervisão operacional (Polícia Militar).",
-      regraMental: "Guarda municipal em AL: nasce por lei complementar estadual e é supervisionada pela PM."
     },
     comentario: {
       resolucao: "CERTO. A Constituição do Estado de Alagoas prevê que os municípios podem constituir guardas municipais na forma de lei complementar estadual, cabendo à Polícia Militar do Estado a supervisão operacional dessas guardas.",
@@ -469,12 +379,7 @@ const QUESTOES_PCAL_LOTE14 = [
     gabarito: "E", pegadinha: "exigencia-inexistente", palavraChave: "ativa ou da reserva",
     cognitivo: {
       motivo: "Cobrar a privatividade do comando para oficiais da ATIVA.",
-      mede: "Constituição de Alagoas — segurança pública.",
-      pegadinhaDesc: "Admite oficiais da reserva no comando, quando a exigência é de oficial da ativa.",
-      ondeErra: "Foca no requisito do último posto e esquece a exigência de estar na ativa.",
       palavraCritica: "da ativa (não da reserva)",
-      tecnica: "São dois requisitos cumulativos: oficial da ATIVA e do ÚLTIMO POSTO da hierarquia.",
-      regraMental: "Comandante-Geral: oficial da ativa E do último posto. Reserva não comanda."
     },
     comentario: {
       resolucao: "ERRADO. Os cargos de Comandante-Geral da Polícia Militar e do Corpo de Bombeiros Militar são privativos de oficiais da ATIVA do último posto da hierarquia. A assertiva erra ao admitir oficiais da reserva.",
@@ -493,12 +398,7 @@ const QUESTOES_PCAL_LOTE14 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "privativas das respectivas carreiras",
     cognitivo: {
       motivo: "Cobrar a privatividade das funções de polícia judiciária.",
-      mede: "Constituição de Alagoas — organização das carreiras policiais.",
-      pegadinhaDesc: "A banca costuma admitir o exercício por servidores de outras carreiras ou por cedidos.",
-      ondeErra: "Supõe que a função pode ser delegada a servidores estranhos à carreira.",
       palavraCritica: "privativas",
-      tecnica: "Dialoga com o art. 6º, § 1º, da LONPC: as atribuições são exercidas exclusivamente por policiais civis em atividade.",
-      regraMental: "Polícia judiciária é função privativa da carreira policial civil. Não se terceiriza."
     },
     comentario: {
       resolucao: "CERTO. A Constituição do Estado de Alagoas determina que lei específica organize os cargos da Polícia Civil em carreira, sendo as funções de polícia judiciária privativas das respectivas carreiras. A regra é reforçada pela Lei Orgânica Nacional das Polícias Civis (Lei 14.735/2023, art. 6º, § 1º), segundo a qual tais atribuições são exercidas exclusivamente por policiais civis em atividade.",

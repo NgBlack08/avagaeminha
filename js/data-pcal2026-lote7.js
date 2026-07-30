@@ -20,12 +20,7 @@ const QUESTOES_PCAL_LOTE7 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "diferença entre ativo e passivo",
     cognitivo: {
       motivo: "Cobrar a estrutura do balanço e a equação patrimonial.",
-      mede: "Balanço patrimonial (item 9 do edital de Contabilidade).",
-      pegadinhaDesc: "A banca costuma trocar a composição (ex.: dizer que o passivo são bens) ou inverter a equação.",
-      ondeErra: "Confunde a natureza de ativo, passivo e PL.",
       palavraCritica: "PL = Ativo − Passivo",
-      tecnica: "Ativo = bens + direitos. Passivo = obrigações. PL = Ativo − Passivo (situação líquida).",
-      regraMental: "A = P + PL. Logo, PL = A − P. Ativo à esquerda; Passivo + PL à direita."
     },
     comentario: {
       resolucao: "CERTO. O balanço patrimonial reflete a equação fundamental: Ativo = Passivo + Patrimônio Líquido. O ativo (bens e direitos) fica à esquerda; o passivo (obrigações) e o PL (situação líquida = A − P) à direita. O PL é a riqueza própria da entidade.",
@@ -43,12 +38,7 @@ const QUESTOES_PCAL_LOTE7 = [
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "posição patrimonial estática",
     cognitivo: {
       motivo: "Distinguir a DRE (dinâmica, resultado) do balanço (estático, posição).",
-      mede: "Demonstração de resultado do exercício (item 10 do edital).",
-      pegadinhaDesc: "Atribui à DRE a função do balanço patrimonial (posição estática).",
-      ondeErra: "Confunde demonstração de resultado (fluxo) com posição patrimonial (estoque).",
       palavraCritica: "posição estática = balanço (não DRE)",
-      tecnica: "DRE: apura o RESULTADO (lucro/prejuízo) do período (receitas − despesas). Balanço: posição em uma data.",
-      regraMental: "DRE = 'filme' do resultado do período. Balanço = 'foto' do patrimônio numa data."
     },
     comentario: {
       resolucao: "ERRADO. A descrição corresponde ao BALANÇO PATRIMONIAL (posição estática numa data). A DRE é dinâmica: confronta receitas e despesas do período para apurar o resultado (lucro ou prejuízo) do exercício.",
@@ -66,12 +56,7 @@ const QUESTOES_PCAL_LOTE7 = [
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "receita e despesa / patrimoniais",
     cognitivo: {
       motivo: "Distinguir contas patrimoniais das contas de resultado.",
-      mede: "Plano de contas (item 5 do edital de Contabilidade).",
-      pegadinhaDesc: "Classifica receita/despesa como patrimoniais, quando são contas de resultado.",
-      ondeErra: "Confunde contas de resultado (receita/despesa) com patrimoniais (ativo/passivo/PL).",
       palavraCritica: "receita e despesa = contas de resultado",
-      tecnica: "Patrimoniais: ativo, passivo, PL (vão ao balanço). Resultado: receitas e despesas (vão à DRE).",
-      regraMental: "Receita e despesa = DRE (resultado). Ativo, passivo e PL = balanço (patrimoniais)."
     },
     comentario: {
       resolucao: "ERRADO. Receitas e despesas são contas de RESULTADO, que compõem a DRE e, após a apuração, transferem o resultado ao patrimônio líquido. As contas patrimoniais são as de ativo, passivo e PL, que integram o balanço.",
@@ -89,12 +74,7 @@ const QUESTOES_PCAL_LOTE7 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "ativo circulante ÷ passivo circulante",
     cognitivo: {
       motivo: "Cobrar o cálculo e a interpretação da liquidez corrente.",
-      mede: "Métodos e ferramentas de análise (item II do edital de Análise Financeira).",
-      pegadinhaDesc: "A banca costuma inverter a fórmula (PC/AC) ou a interpretação do índice.",
-      ondeErra: "Inverte numerador e denominador ou interpreta ao contrário.",
       palavraCritica: "AC ÷ PC > 1 = boa liquidez de curto prazo",
-      tecnica: "Liquidez corrente = Ativo Circulante ÷ Passivo Circulante. > 1: sobra recurso de curto prazo.",
-      regraMental: "LC = AC/PC. Maior que 1 = consegue pagar o curto prazo com o que tem no curto prazo."
     },
     comentario: {
       resolucao: "CERTO. Liquidez Corrente = Ativo Circulante ÷ Passivo Circulante. Índice maior que 1 indica que, para cada unidade de obrigação de curto prazo, há mais de uma unidade de recursos de curto prazo — capacidade de honrar dívidas de curto prazo.",
@@ -114,12 +94,7 @@ const QUESTOES_PCAL_LOTE7 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "mesma pessoa jurídica × pessoa distinta",
     cognitivo: {
       motivo: "Distinguir descentralização de desconcentração.",
-      mede: "Organização administrativa (item 1.1 do edital; Dia 05 do plano).",
-      pegadinhaDesc: "A banca costuma inverter os conceitos (dizer que a desconcentração cria nova PJ).",
-      ondeErra: "Troca o critério da personalidade jurídica.",
       palavraCritica: "desconcentração = interna; descentralização = nova PJ",
-      tecnica: "Desconcentração: dentro da MESMA PJ (órgãos, há hierarquia). Descentralização: para OUTRA PJ (não há hierarquia, mas vinculação).",
-      regraMental: "Desconcentração = 'dentro de casa' (órgãos). Descentralização = 'para fora' (outra PJ)."
     },
     comentario: {
       resolucao: "CERTO. A desconcentração distribui competências internamente, entre órgãos de uma mesma pessoa jurídica (com hierarquia). A descentralização transfere atribuições a pessoa jurídica distinta (Administração indireta ou particular), sem hierarquia, mas com vinculação/controle finalístico.",
@@ -137,12 +112,7 @@ const QUESTOES_PCAL_LOTE7 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "falta do serviço / culpa administrativa",
     cognitivo: {
       motivo: "Cobrar o tratamento da responsabilidade por omissão (subjetiva/faute du service).",
-      mede: "Responsabilidade civil do Estado — omissão (item 7.2 do edital).",
-      pegadinhaDesc: "A banca costuma afirmar que a responsabilidade por omissão é sempre objetiva, dispensando culpa.",
-      ondeErra: "Aplica a responsabilidade objetiva pura também à omissão genérica.",
       palavraCritica: "falta do serviço (culpa)",
-      tecnica: "Ato comissivo: objetiva (risco administrativo). Omissão genérica: subjetiva (culpa/falta do serviço). Omissão específica: STF admite objetiva.",
-      regraMental: "Estado agiu e causou dano = objetiva. Estado se omitiu (genérico) = precisa provar a falha do serviço."
     },
     comentario: {
       resolucao: "CERTO. Para os atos comissivos, aplica-se a responsabilidade objetiva (art. 37, § 6º, CF). Já na omissão (genérica), predomina o entendimento de responsabilidade subjetiva, exigindo-se a demonstração da falta do serviço (faute du service), sem a qual não há dever de indenizar. Na omissão específica, o STF tem admitido a responsabilidade objetiva.",
@@ -160,12 +130,7 @@ const QUESTOES_PCAL_LOTE7 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "disciplinar × hierárquico",
     cognitivo: {
       motivo: "Distinguir poder disciplinar de poder hierárquico.",
-      mede: "Poderes administrativos (item 4.1 do edital).",
-      pegadinhaDesc: "A banca costuma inverter as funções ou dizer que o disciplinar só alcança servidores.",
-      ondeErra: "Troca as atribuições de cada poder.",
       palavraCritica: "disciplinar = sancionar; hierárquico = ordenar/controlar",
-      tecnica: "Hierárquico: escalonamento (ordenar, delegar, avocar, rever). Disciplinar: punir infrações funcionais.",
-      regraMental: "Hierárquico organiza a estrutura; disciplinar pune quem falha. Andam juntos, mas não se confundem."
     },
     comentario: {
       resolucao: "CERTO. O poder disciplinar permite apurar e punir infrações de servidores e de particulares com vínculo especial com a Administração. O poder hierárquico estrutura a atuação interna (ordenar, coordenar, controlar, delegar, avocar e rever atos dos subordinados). São poderes distintos e correlatos.",
@@ -183,12 +148,7 @@ const QUESTOES_PCAL_LOTE7 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "Legislativo com auxílio do Tribunal de Contas",
     cognitivo: {
       motivo: "Cobrar a titularidade e o alcance do controle externo (CF, arts. 70 e 71).",
-      mede: "Controle da administração pública (item 6 do edital).",
-      pegadinhaDesc: "A banca costuma dizer que o Tribunal de Contas é órgão do Judiciário ou que 'julga' o gestor definitivamente.",
-      ondeErra: "Confunde a natureza do TCU/TCE (auxiliar do Legislativo).",
       palavraCritica: "Legislativo + auxílio do Tribunal de Contas",
-      tecnica: "Controle externo: Legislativo + Tribunal de Contas. O TC auxilia — não pertence ao Judiciário.",
-      regraMental: "Tribunal de Contas = auxiliar do Legislativo (não é Judiciário, e suas decisões não fazem coisa julgada)."
     },
     comentario: {
       resolucao: "CERTO. CF, arts. 70 e 71: o controle externo é exercido pelo Congresso Nacional (Legislativo), com o auxílio do Tribunal de Contas, abrangendo a fiscalização contábil, financeira, orçamentária, operacional e patrimonial quanto à legalidade, legitimidade e economicidade.",
@@ -208,12 +168,7 @@ const QUESTOES_PCAL_LOTE7 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "não apenas nas declarações do colaborador",
     cognitivo: {
       motivo: "Cobrar a natureza e o valor probatório da colaboração premiada.",
-      mede: "Lei do Crime Organizado (Dia 22 do plano; item do edital).",
-      pegadinhaDesc: "A banca costuma afirmar que a colaboração, sozinha, basta para condenar.",
-      ondeErra: "Trata a colaboração premiada como prova plena e autossuficiente.",
       palavraCritica: "não apenas nas declarações do colaborador",
-      tecnica: "Colaboração premiada é meio de obtenção de prova; exige elementos de corroboração.",
-      regraMental: "Delação sozinha não condena — precisa de outras provas que a confirmem."
     },
     comentario: {
       resolucao: "CERTO. Lei 12.850/2013, art. 4º, § 16: nenhuma sentença condenatória será proferida com fundamento apenas nas declarações do colaborador. A colaboração premiada é meio de obtenção de prova e demanda corroboração por outros elementos.",
@@ -231,12 +186,7 @@ const QUESTOES_PCAL_LOTE7 = [
     gabarito: "E", pegadinha: "troca-numerica", palavraChave: "três ou mais pessoas",
     cognitivo: {
       motivo: "Cobrar o número mínimo de integrantes da organização criminosa (art. 1º, § 1º).",
-      mede: "Lei do Crime Organizado — conceito.",
-      pegadinhaDesc: "Troca '4 ou mais' por '3 ou mais' (número da associação criminosa do art. 288 do CP).",
-      ondeErra: "Confunde ORCRIM (4+) com associação criminosa (3+).",
       palavraCritica: "três (o correto é quatro)",
-      tecnica: "ORCRIM: 4 ou mais pessoas + estrutura + divisão de tarefas + penas máx. > 4 anos (ou transnacional).",
-      regraMental: "288 do CP = 3 (associação). Lei 12.850 = 4 (organização)."
     },
     comentario: {
       resolucao: "ERRADO. Lei 12.850/2013, art. 1º, § 1º: exige-se associação de 4 (QUATRO) ou mais pessoas. Três ou mais é o número da associação criminosa (CP, art. 288). O restante do conceito (estrutura, divisão de tarefas, penas máximas > 4 anos ou caráter transnacional) está correto.",
@@ -254,12 +204,7 @@ const QUESTOES_PCAL_LOTE7 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "anistia, graça e indulto / fiança",
     cognitivo: {
       motivo: "Cobrar as vedações constitucionais e legais aos crimes hediondos (CF, art. 5º, XLIII; Lei 8.072).",
-      mede: "Lei de Crimes Hediondos (Dia 27 do plano; item do edital).",
-      pegadinhaDesc: "A banca costuma incluir a 'imprescritibilidade' (que não se aplica) ou excluir o indulto.",
-      ondeErra: "Confunde as vedações dos hediondos com as do racismo (imprescritível/inafiançável).",
       palavraCritica: "anistia, graça, indulto e fiança",
-      tecnica: "Hediondos: sem anistia/graça/indulto e sem fiança. NÃO são imprescritíveis (isso é racismo e ação de grupos armados).",
-      regraMental: "Hediondo: 3 vedações de clemência (A-G-I) + fiança. Mas PRESCREVE (não é imprescritível)."
     },
     comentario: {
       resolucao: "CERTO. CF, art. 5º, XLIII, e Lei 8.072/1990: os crimes hediondos e equiparados (tráfico, tortura, terrorismo) são insuscetíveis de anistia, graça, indulto e fiança. Não são imprescritíveis — a imprescritibilidade alcança apenas o racismo e a ação de grupos armados contra a ordem constitucional.",
@@ -277,12 +222,7 @@ const QUESTOES_PCAL_LOTE7 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "conduta típica sem prisão",
     cognitivo: {
       motivo: "Cobrar a natureza do porte para consumo (despenalização, não descriminalização plena).",
-      mede: "Lei de Drogas (Dias 20-21 do plano).",
-      pegadinhaDesc: "A banca costuma afirmar que o art. 28 foi descriminalizado por completo.",
-      ondeErra: "Confunde a ausência de prisão com atipicidade da conduta.",
       palavraCritica: "conduta típica (sem prisão)",
-      tecnica: "Art. 28: houve DESPENALIZAÇÃO (sem prisão), mas a conduta permanece típica. Penas: advertência, PSC, medida educativa.",
-      regraMental: "Consumo pessoal: crime sem prisão. Para maconha, o STF (Tema 506) fixou parâmetro de 40g/6 plantas."
     },
     comentario: {
       resolucao: "CERTO. O art. 28 sofreu despenalização (não há pena privativa de liberdade), mas a conduta permanece típica, sujeitando o agente a advertência, prestação de serviços à comunidade e medida educativa. O STF (Tema 506, RE 635.659) fixou parâmetro objetivo de 40g de maconha / 6 plantas fêmeas para diferenciar usuário de traficante.",
@@ -302,12 +242,7 @@ const QUESTOES_PCAL_LOTE7 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "1948 / ONU",
     cognitivo: {
       motivo: "Cobrar o marco da Declaração Universal de 1948.",
-      mede: "Afirmação histórica dos direitos humanos (item 2 do edital).",
-      pegadinhaDesc: "A banca costuma trocar a data (1945/1966) ou o órgão.",
-      ondeErra: "Confunde a DUDH (1948) com a Carta da ONU (1945) ou os Pactos (1966).",
       palavraCritica: "1948 / Assembleia Geral da ONU",
-      tecnica: "DUDH: 1948, ONU. Marco da internacionalização dos DH após a 2ª Guerra.",
-      regraMental: "1945 Carta da ONU; 1948 Declaração Universal; 1966 Pactos Internacionais."
     },
     comentario: {
       resolucao: "CERTO. A Declaração Universal dos Direitos Humanos (DUDH) foi adotada pela Assembleia Geral da ONU em 10/12/1948, tornando-se o marco da internacionalização e da afirmação histórica dos direitos humanos, base do sistema global de proteção.",
@@ -325,12 +260,7 @@ const QUESTOES_PCAL_LOTE7 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "todas as pessoas",
     cognitivo: {
       motivo: "Cobrar o conceito de universalidade dos DH.",
-      mede: "Teoria geral dos direitos humanos.",
-      pegadinhaDesc: "A banca costuma restringir a universalidade a nacionais ou confundir com indivisibilidade.",
-      ondeErra: "Limita a titularidade dos DH a certos grupos.",
       palavraCritica: "independentemente de qualquer condição",
-      tecnica: "Universalidade: titularidade a TODOS, pela simples condição humana.",
-      regraMental: "Universal = de todo ser humano. Indivisível = não se fatiam (civis + sociais formam um bloco)."
     },
     comentario: {
       resolucao: "CERTO. A universalidade indica que os direitos humanos pertencem a todas as pessoas, pela sua simples condição humana, sem discriminação. Não se confunde com a indivisibilidade (os direitos formam um conjunto integrado).",
@@ -348,12 +278,7 @@ const QUESTOES_PCAL_LOTE7 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "três quintos / dois turnos",
     cognitivo: {
       motivo: "Cobrar o § 3º do art. 5º da CF (rito de equivalência a emenda).",
-      mede: "A Constituição e os tratados internacionais de DH (item 6 do edital).",
-      pegadinhaDesc: "A banca costuma trocar o quórum (maioria absoluta) ou o número de turnos.",
-      ondeErra: "Confunde o rito do § 3º (3/5, 2 turnos) com o de tratados comuns.",
       palavraCritica: "3/5, dois turnos, cada Casa",
-      tecnica: "Tratado de DH aprovado por 3/5 em 2 turnos nas duas Casas = status de emenda constitucional (§ 3º).",
-      regraMental: "Rito de emenda (3/5 + 2 turnos) → tratado de DH vira norma constitucional. Sem esse rito → status supralegal."
     },
     comentario: {
       resolucao: "CERTO. CF, art. 5º, § 3º (EC 45/2004): tratados e convenções sobre direitos humanos aprovados em cada Casa do Congresso, em dois turnos, por três quintos dos votos, equivalem a emendas constitucionais. Sem esse rito, os tratados de DH têm status supralegal (STF, RE 466.343).",
@@ -373,12 +298,7 @@ const QUESTOES_PCAL_LOTE7 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "não supervisionado / sem rótulos",
     cognitivo: {
       motivo: "Distinguir aprendizado supervisionado de não supervisionado.",
-      mede: "Técnicas de mineração / machine learning (item II do edital de Análise de Dados).",
-      pegadinhaDesc: "A banca costuma classificar a clusterização como supervisionada ou a classificação como não supervisionada.",
-      ondeErra: "Confunde clusterização (sem rótulo) com classificação (com rótulo).",
       palavraCritica: "clusterização = não supervisionado",
-      tecnica: "Supervisionado: dados rotulados (classificação, regressão). Não supervisionado: sem rótulos (clusterização, associação).",
-      regraMental: "Tem rótulo/resposta conhecida = supervisionado. Descobre grupos sozinho = não supervisionado."
     },
     comentario: {
       resolucao: "CERTO. A clusterização (análise de agrupamentos) é aprendizado NÃO supervisionado: agrupa observações semelhantes sem rótulos prévios. Já a classificação e a regressão são supervisionadas (usam dados rotulados/variável-alvo conhecida).",
@@ -396,12 +316,7 @@ const QUESTOES_PCAL_LOTE7 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "ajusta excessivamente / generalização",
     cognitivo: {
       motivo: "Cobrar o conceito de overfitting e o papel da regularização.",
-      mede: "Fontes de erro em modelos preditivos (item II do edital).",
-      pegadinhaDesc: "A banca costuma inverter overfitting × underfitting ou dizer que o overfitting melhora a generalização.",
-      ondeErra: "Confunde sobreajuste (treino) com subajuste (modelo simples demais).",
       palavraCritica: "ajuste excessivo ao treino / piora a generalização",
-      tecnica: "Overfitting: ótimo no treino, ruim no teste. Underfitting: ruim nos dois. Regularização penaliza a complexidade.",
-      regraMental: "Overfitting = 'decorou o treino'. Underfitting = 'não aprendeu'. Regularização = 'simplifica'."
     },
     comentario: {
       resolucao: "CERTO. No overfitting, o modelo memoriza o ruído dos dados de treino e generaliza mal em dados novos (bom no treino, ruim no teste). A regularização (ex.: L1/L2), a validação cruzada e mais dados ajudam a mitigar. O oposto é o underfitting (modelo simples demais).",
@@ -419,12 +334,7 @@ const QUESTOES_PCAL_LOTE7 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "entendimento do negócio antes da preparação",
     cognitivo: {
       motivo: "Cobrar a sequência de fases do CRISP-DM.",
-      mede: "Exploração de dados / modelo CRISP-DM (item II do edital).",
-      pegadinhaDesc: "A banca costuma inverter a ordem das fases ou dizer que a modelagem consome mais tempo.",
-      ondeErra: "Desconhece a sequência e o peso da preparação de dados.",
       palavraCritica: "preparação de dados = fase mais custosa",
-      tecnica: "CRISP-DM: negócio → dados → preparação → modelagem → avaliação → implantação. Preparação costuma dominar o tempo.",
-      regraMental: "Começa entendendo o NEGÓCIO. A PREPARAÇÃO dos dados é o gargalo de tempo."
     },
     comentario: {
       resolucao: "CERTO. O CRISP-DM tem seis fases: entendimento do negócio, entendimento dos dados, preparação dos dados, modelagem, avaliação e implantação. O entendimento do negócio antecede a preparação, e esta costuma ser a etapa mais demorada do processo.",
@@ -444,12 +354,7 @@ const QUESTOES_PCAL_LOTE7 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "teoria monista",
     cognitivo: {
       motivo: "Cobrar a teoria adotada no concurso de pessoas (art. 29).",
-      mede: "Concurso de pessoas (Parte Geral do CP).",
-      pegadinhaDesc: "A banca costuma dizer que o CP adotou a teoria pluralista (um crime para cada agente).",
-      ondeErra: "Confunde monista (um crime para todos) com pluralista (crimes distintos).",
       palavraCritica: "mesmo delito, na medida da culpabilidade",
-      tecnica: "Monista: um crime, todos respondem por ele (com individualização pela culpabilidade). Há exceções pluralistas pontuais.",
-      regraMental: "Regra: teoria MONISTA (um crime para todos). Exceções pluralistas: ex.: corrupção ativa × passiva."
     },
     comentario: {
       resolucao: "CERTO. CP, art. 29: 'Quem, de qualquer modo, concorre para o crime incide nas penas a este cominadas, na medida de sua culpabilidade' — teoria monista/unitária. Todos respondem pelo mesmo crime, com individualização das penas. Há exceções pluralistas (ex.: aborto consentido — gestante e terceiro em tipos distintos).",
@@ -467,12 +372,7 @@ const QUESTOES_PCAL_LOTE7 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "privação da liberdade / condição ou preço do resgate",
     cognitivo: {
       motivo: "Cobrar a natureza hedionda e o momento consumativo da extorsão mediante sequestro (art. 159).",
-      mede: "Crimes contra o patrimônio (item 3 do edital) + crimes hediondos.",
-      pegadinhaDesc: "A banca costuma condicionar a consumação ao pagamento do resgate.",
-      ondeErra: "Trata o crime como material dependente do resgate.",
       palavraCritica: "consuma com a privação da liberdade",
-      tecnica: "Extorsão mediante sequestro é formal: consuma-se com a privação da liberdade, independentemente do resgate.",
-      regraMental: "Sequestrou com fim de resgate = já consumou (formal e hediondo). Receber o resgate é exaurimento."
     },
     comentario: {
       resolucao: "CERTO. CP, art. 159: a extorsão mediante sequestro consuma-se com a privação da liberdade da vítima, visada a vantagem como condição ou preço do resgate — crime formal (independe do efetivo pagamento). É crime hediondo (Lei 8.072/1990, art. 1º, IV).",
@@ -492,12 +392,7 @@ const QUESTOES_PCAL_LOTE7 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "dono, grupo e outros",
     cognitivo: {
       motivo: "Cobrar o modelo de permissões do Linux.",
-      mede: "Noções de sistema operacional — Linux (item 1 do edital de TI).",
-      pegadinhaDesc: "A banca costuma alterar as categorias (ex.: 'administrador, convidado') ou os tipos de permissão.",
-      ondeErra: "Desconhece o modelo dono/grupo/outros e rwx.",
       palavraCritica: "dono, grupo, outros / rwx",
-      tecnica: "Linux: 3 categorias (u/g/o) × 3 permissões (r=leitura, w=escrita, x=execução).",
-      regraMental: "Permissões Linux: dono, grupo, outros — cada um com r, w, x (ex.: chmod 755)."
     },
     comentario: {
       resolucao: "CERTO. No Linux, cada arquivo/diretório tem permissões para três categorias: dono (user), grupo (group) e outros (others). Cada categoria pode ter leitura (r), escrita (w) e execução (x). Ex.: chmod 755 define rwx para o dono e r-x para grupo e outros.",
@@ -515,12 +410,7 @@ const QUESTOES_PCAL_LOTE7 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "$A$1 / referência absoluta",
     cognitivo: {
       motivo: "Cobrar o conceito de referência absoluta × relativa em planilhas.",
-      mede: "Edição de planilhas — pacote Office (item 2 do edital de TI).",
-      pegadinhaDesc: "A banca costuma dizer que $A$1 é referência relativa ou que muda ao copiar.",
-      ondeErra: "Confunde referência absoluta (fixa) com relativa (ajusta).",
       palavraCritica: "$ fixa a referência",
-      tecnica: "Sem cifrão = relativa (ajusta ao copiar). Com $ = absoluta (trava). $A1 e A$1 = mistas.",
-      regraMental: "$ = trava. $A$1 não muda; A1 muda ao copiar; $A1 trava a coluna; A$1 trava a linha."
     },
     comentario: {
       resolucao: "CERTO. O cifrão ($) fixa a referência: $A$1 é absoluta e não se altera ao copiar a fórmula. Sem cifrão (A1), a referência é relativa e se ajusta. $A1 e A$1 são mistas (travam, respectivamente, a coluna e a linha). Vale para Excel e Calc.",

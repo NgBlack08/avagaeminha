@@ -30,12 +30,7 @@ const QUESTOES_PCAL_LOTE57 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "número fixo de provas independentes ... probabilidade de sucesso constante",
     cognitivo: {
       motivo: "Fixar as condições que caracterizam um experimento binomial.",
-      mede: "Modelo binomial — pressupostos.",
-      pegadinhaDesc: "As quatro condições estão corretas; a banca costuma trocar 'constante' por 'variável'.",
-      ondeErra: "Confunde com a hipergeométrica, em que p varia por não haver reposição.",
       palavraCritica: "independentes ... constante",
-      tecnica: "Binomial: n fixo, provas independentes, dois resultados, p constante. Se p muda entre provas, é hipergeométrica.",
-      regraMental: "Binomial = com reposição (p constante). Hipergeométrica = sem reposição."
     },
     comentario: {
       resolucao: "CERTO. São exatamente os pressupostos do modelo binomial: número fixo de ensaios (n), independência entre eles, dicotomia dos resultados (sucesso/fracasso) e probabilidade de sucesso p constante. A amostragem com reposição garante essa constância.",
@@ -54,12 +49,7 @@ const QUESTOES_PCAL_LOTE57 = [
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "a variância também é np",
     cognitivo: {
       motivo: "Separar os momentos da binomial dos da Poisson.",
-      mede: "Binomial — E(X) e Var(X).",
-      pegadinhaDesc: "Acerta a esperança e atribui à binomial a igualdade média = variância, que é propriedade da Poisson.",
-      ondeErra: "Transfere para a binomial a marca registrada da Poisson.",
       palavraCritica: "variância também é np",
-      tecnica: "Var = np(1−p) = npq. Como q < 1, a variância é sempre MENOR que a média na binomial — é a Poisson que tem média igual à variância.",
-      regraMental: "Binomial: média np, variância npq (menor). Poisson: iguais."
     },
     comentario: {
       resolucao: "ERRADO. A esperança está correta, E(X) = np, mas a variância é Var(X) = np(1 − p) = npq. Como 0 < q < 1, na binomial a variância é sempre INFERIOR à média. A igualdade entre média e variância é característica da distribuição de Poisson, não da binomial.",
@@ -78,12 +68,7 @@ const QUESTOES_PCAL_LOTE57 = [
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "a variância é igual a λ²",
     cognitivo: {
       motivo: "Fixar a igualdade entre média e variância na Poisson.",
-      mede: "Modelo de Poisson — momentos.",
-      pegadinhaDesc: "Acerta a média e eleva a variância ao quadrado, quebrando a propriedade central do modelo.",
-      ondeErra: "Aplica a intuição da variância como 'quadrado de algo' (herança do desvio padrão).",
       palavraCritica: "λ²",
-      tecnica: "A marca da Poisson é E(X) = Var(X) = λ. Se a questão separar os dois valores, está errada.",
-      regraMental: "Poisson: média = variância = λ."
     },
     comentario: {
       resolucao: "ERRADO. Na distribuição de Poisson, média e variância são ambas iguais a λ: E(X) = Var(X) = λ. Essa igualdade é justamente a característica que identifica o modelo. O desvio padrão, sim, é √λ.",
@@ -102,12 +87,7 @@ const QUESTOES_PCAL_LOTE57 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "número de ocorrências ... intervalo fixo ... taxa média constante",
     cognitivo: {
       motivo: "Fixar o contexto de aplicação da Poisson.",
-      mede: "Modelo de Poisson — pressupostos.",
-      pegadinhaDesc: "Descrição fiel do modelo de contagem em intervalo contínuo.",
-      ondeErra: "Confunde com binomial, que conta sucessos em n provas fixas, não em intervalo.",
       palavraCritica: "intervalo fixo de tempo ou espaço",
-      tecnica: "Binomial conta sucessos em n ensaios; Poisson conta ocorrências por unidade de tempo/espaço, sem n definido.",
-      regraMental: "Poisson: quantos por hora/km/página."
     },
     comentario: {
       resolucao: "CERTO. A Poisson modela contagens de eventos raros e independentes em um intervalo fixo (tempo, área, volume), sob taxa média constante λ — como chamadas por hora ou defeitos por metro de tecido.",
@@ -126,12 +106,7 @@ const QUESTOES_PCAL_LOTE57 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "sem reposição ... não são independentes ... varia a cada extração",
     cognitivo: {
       motivo: "Fixar o critério que separa hipergeométrica de binomial.",
-      mede: "Modelo hipergeométrico — pressupostos.",
-      pegadinhaDesc: "Descrição correta; o candidato pode duvidar por associar 'dois resultados' automaticamente à binomial.",
-      ondeErra: "Aplica binomial a sorteios sem reposição.",
       palavraCritica: "sem reposição",
-      tecnica: "A pergunta decisiva é: houve reposição? Sem reposição em população finita → hipergeométrica.",
-      regraMental: "Sem reposição = hipergeométrica."
     },
     comentario: {
       resolucao: "CERTO. Na hipergeométrica, as extrações ocorrem sem reposição em população finita de tamanho N com K sucessos; a cada retirada a composição muda, de modo que as provas são dependentes e p não é constante — exatamente o que a distingue da binomial.",
@@ -150,12 +125,7 @@ const QUESTOES_PCAL_LOTE57 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "até a ocorrência do primeiro sucesso",
     cognitivo: {
       motivo: "Fixar o que a geométrica conta.",
-      mede: "Modelo geométrico.",
-      pegadinhaDesc: "Definição correta; a banca costuma trocar 'primeiro' por 'k-ésimo', que seria binomial negativa.",
-      ondeErra: "Confunde com a binomial negativa (r-ésimo sucesso).",
       palavraCritica: "primeiro sucesso",
-      tecnica: "Geométrica é o caso particular da binomial negativa com r = 1.",
-      regraMental: "Geométrica: espera o 1º sucesso."
     },
     comentario: {
       resolucao: "CERTO. A geométrica conta os ensaios independentes de Bernoulli até o primeiro sucesso, com P(X = k) = (1 − p)^(k−1)·p. É o caso particular da binomial negativa em que se aguarda apenas um sucesso.",
@@ -174,12 +144,7 @@ const QUESTOES_PCAL_LOTE57 = [
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "primeiro sucesso, sendo idêntica ... em qualquer situação",
     cognitivo: {
       motivo: "Separar binomial negativa de geométrica.",
-      mede: "Modelo binomial negativo.",
-      pegadinhaDesc: "Reduz a binomial negativa ao seu caso particular, afirmando identidade total.",
-      ondeErra: "Sabe que há parentesco entre as duas e conclui que são iguais.",
       palavraCritica: "idêntica ... em qualquer situação",
-      tecnica: "A binomial negativa aguarda o r-ésimo sucesso; a geométrica é o caso r = 1. A relação é de particularização, não de identidade.",
-      regraMental: "Geométrica ⊂ binomial negativa (r = 1)."
     },
     comentario: {
       resolucao: "ERRADO. A binomial negativa modela o número de ensaios até o r-ésimo sucesso. A geométrica é apenas o caso particular em que r = 1; para r > 1 as distribuições não coincidem.",
@@ -198,12 +163,7 @@ const QUESTOES_PCAL_LOTE57 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "soma ... igual a 1 ... entre 0 e 1",
     cognitivo: {
       motivo: "Fixar os axiomas da função de probabilidade.",
-      mede: "Variáveis aleatórias discretas.",
-      pegadinhaDesc: "Condições corretas de uma função de probabilidade.",
-      ondeErra: "Aceita soma diferente de 1 em tabelas de distribuição.",
       palavraCritica: "soma ... igual a 1",
-      tecnica: "Toda questão que apresenta tabela de distribuição pede, antes de tudo, conferir se a soma fecha em 1.",
-      regraMental: "Σp(x) = 1 e 0 ≤ p(x) ≤ 1."
     },
     comentario: {
       resolucao: "CERTO. São as duas condições que definem uma função de probabilidade de variável discreta: não negatividade limitada por 1 e soma unitária sobre todo o suporte.",
@@ -224,12 +184,7 @@ const QUESTOES_PCAL_LOTE57 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "simétrica em torno da média ... média, mediana e moda coincidem",
     cognitivo: {
       motivo: "Fixar as propriedades básicas da normal.",
-      mede: "Distribuição normal.",
-      pegadinhaDesc: "Propriedades corretas e centrais do modelo.",
-      ondeErra: "Duvida por lembrar que em distribuições assimétricas essas medidas divergem.",
       palavraCritica: "coincidem",
-      tecnica: "Simetria perfeita implica igualdade das três medidas de tendência central — é o oposto do que ocorre na assimétrica.",
-      regraMental: "Normal: média = mediana = moda."
     },
     comentario: {
       resolucao: "CERTO. A normal é simétrica em relação à média, tem forma de sino e apresenta coincidência entre média, mediana e moda. Assimetria e curtose de excesso são nulas.",
@@ -248,12 +203,7 @@ const QUESTOES_PCAL_LOTE57 = [
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "divisão pela variância",
     cognitivo: {
       motivo: "Fixar a fórmula correta de padronização.",
-      mede: "Escore Z.",
-      pegadinhaDesc: "Acerta os parâmetros da normal padrão e erra o denominador da padronização.",
-      ondeErra: "Troca desvio padrão por variância no denominador.",
       palavraCritica: "divisão pela variância",
-      tecnica: "Z = (X − μ)/σ. O denominador é o DESVIO PADRÃO, não a variância — só assim Z fica adimensional.",
-      regraMental: "Z divide por sigma, não por sigma²."
     },
     comentario: {
       resolucao: "ERRADO. A normal padrão realmente tem média 0 e desvio padrão 1, mas a padronização é Z = (X − μ)/σ, ou seja, divide-se pelo DESVIO PADRÃO, não pela variância. Dividir por σ² não produziria escore com desvio padrão unitário.",
@@ -272,12 +222,7 @@ const QUESTOES_PCAL_LOTE57 = [
     gabarito: "E", pegadinha: "troca-numerica", palavraChave: "95% ... um desvio padrão",
     cognitivo: {
       motivo: "Fixar a correspondência correta da regra empírica 68-95-99,7.",
-      mede: "Distribuição normal — dispersão.",
-      pegadinhaDesc: "Usa um percentual verdadeiro da escala com o número errado de desvios, o que soa familiar.",
-      ondeErra: "Lembra do 95% mas o associa ao primeiro sigma.",
       palavraCritica: "um desvio padrão",
-      tecnica: "Memorize a escada pareada: 1σ ≈ 68%, 2σ ≈ 95%, 3σ ≈ 99,7%. O 95% é do SEGUNDO desvio.",
-      regraMental: "68 – 95 – 99,7 para 1, 2 e 3 sigmas."
     },
     comentario: {
       resolucao: "ERRADO. Em um desvio padrão em torno da média (μ ± 1σ) concentram-se cerca de 68% das observações. Os 95% correspondem a μ ± 2σ, e aproximadamente 99,7% a μ ± 3σ.",
@@ -296,12 +241,7 @@ const QUESTOES_PCAL_LOTE57 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "tempo entre ocorrências ... falta de memória",
     cognitivo: {
       motivo: "Ligar exponencial e Poisson e fixar a propriedade característica.",
-      mede: "Distribuição exponencial.",
-      pegadinhaDesc: "Ambas as afirmações são corretas e complementares.",
-      ondeErra: "Não associa a exponencial ao processo de Poisson.",
       palavraCritica: "falta de memória",
-      tecnica: "Poisson conta ocorrências no intervalo; a exponencial mede o tempo ENTRE elas. Falta de memória: P(X > s+t | X > s) = P(X > t).",
-      regraMental: "Poisson conta; exponencial cronometra o intervalo."
     },
     comentario: {
       resolucao: "CERTO. Se as ocorrências seguem processo de Poisson com taxa λ, o tempo entre ocorrências consecutivas segue exponencial de parâmetro λ. A falta de memória significa que o tempo já decorrido não altera a probabilidade de espera adicional — é a única contínua com essa propriedade.",
@@ -320,12 +260,7 @@ const QUESTOES_PCAL_LOTE57 = [
     gabarito: "E", pegadinha: "troca-numerica", palavraChave: "variância ... (b − a)²/2",
     cognitivo: {
       motivo: "Fixar a variância da uniforme contínua.",
-      mede: "Distribuição uniforme.",
-      pegadinhaDesc: "A densidade constante está correta e o formato da variância é quase certo — só o divisor foi trocado.",
-      ondeErra: "Lembra do quadrado da amplitude mas não do divisor 12.",
       palavraCritica: "/2",
-      tecnica: "Densidade f(x) = 1/(b−a); média (a+b)/2; variância (b−a)²/12. O 2 aparece na média, o 12 na variância.",
-      regraMental: "Uniforme: média divide por 2, variância divide por 12."
     },
     comentario: {
       resolucao: "ERRADO. A densidade é de fato constante, f(x) = 1/(b − a) no intervalo, mas a variância da uniforme contínua é (b − a)²/12, e não (b − a)²/2. O divisor 2 pertence à média, que é o ponto médio (a + b)/2.",
@@ -344,12 +279,7 @@ const QUESTOES_PCAL_LOTE57 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "valor pontual específico é igual a zero",
     cognitivo: {
       motivo: "Fixar a diferença essencial entre variáveis discretas e contínuas.",
-      mede: "Variáveis aleatórias contínuas.",
-      pegadinhaDesc: "Propriedade correta, mas contraintuitiva — o candidato tende a rejeitar.",
-      ondeErra: "Transfere a lógica das discretas, em que P(X = x) > 0.",
       palavraCritica: "exatamente um valor pontual ... zero",
-      tecnica: "Em contínuas, probabilidade é área sob a curva; um ponto tem largura zero, logo área zero. Por isso P(X ≤ a) = P(X < a).",
-      regraMental: "Contínua: ponto tem probabilidade zero; só intervalo tem área."
     },
     comentario: {
       resolucao: "CERTO. Para variáveis contínuas, a probabilidade corresponde à área sob a função densidade em um intervalo; um único ponto delimita área nula, de modo que P(X = a) = 0. Consequência prática: incluir ou excluir o extremo não altera a probabilidade do intervalo.",
@@ -370,12 +300,7 @@ const QUESTOES_PCAL_LOTE57 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "P(A) + P(B) − P(A ∩ B)",
     cognitivo: {
       motivo: "Fixar a regra da adição em sua forma geral.",
-      mede: "Probabilidade — união de eventos.",
-      pegadinhaDesc: "Fórmula geral correta, válida inclusive para eventos não excludentes.",
-      ondeErra: "Omite o termo da interseção, que só é nulo em eventos mutuamente excludentes.",
       palavraCritica: "− P(A ∩ B)",
-      tecnica: "Subtrai-se a interseção para não contar duas vezes. Se A e B são excludentes, P(A ∩ B) = 0 e a fórmula simplifica.",
-      regraMental: "União: soma menos a interseção."
     },
     comentario: {
       resolucao: "CERTO. É a regra geral da adição: P(A ∪ B) = P(A) + P(B) − P(A ∩ B). O termo subtraído corrige a dupla contagem do espaço comum; em eventos mutuamente excludentes ele é zero.",
@@ -394,12 +319,7 @@ const QUESTOES_PCAL_LOTE57 = [
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "mutuamente excludentes ... necessariamente independentes",
     cognitivo: {
       motivo: "Separar exclusividade mútua de independência.",
-      mede: "Probabilidade — conceitos.",
-      pegadinhaDesc: "Confunde dois conceitos distintos que a banca adora sobrepor.",
-      ondeErra: "Trata 'não ocorrem juntos' como 'não se influenciam'.",
       palavraCritica: "necessariamente independentes",
-      tecnica: "Excludentes: P(A∩B)=0. Independentes: P(A∩B)=P(A)·P(B). Com P(A),P(B) > 0, o produto é positivo — logo não pode ser zero. São incompatíveis.",
-      regraMental: "Excludentes com prob. positiva são sempre DEPENDENTES."
     },
     comentario: {
       resolucao: "ERRADO. É o oposto: eventos mutuamente excludentes com probabilidades positivas são necessariamente DEPENDENTES. Se A ocorre, B não pode ocorrer, o que é a maior dependência possível. Formalmente, P(A ∩ B) = 0, mas P(A)·P(B) > 0, violando a condição de independência.",
@@ -418,12 +338,7 @@ const QUESTOES_PCAL_LOTE57 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "interseção de A e B ... probabilidade de B",
     cognitivo: {
       motivo: "Fixar a definição de probabilidade condicional.",
-      mede: "Probabilidade condicional.",
-      pegadinhaDesc: "Definição correta; a banca costuma inverter o denominador.",
-      ondeErra: "Divide pela probabilidade de A em vez de B.",
       palavraCritica: "probabilidade de B",
-      tecnica: "P(A|B) = P(A∩B)/P(B). O denominador é sempre o evento CONDICIONANTE, o que vem depois da barra.",
-      regraMental: "Divide pelo que veio depois da barra."
     },
     comentario: {
       resolucao: "CERTO. Por definição, P(A|B) = P(A ∩ B)/P(B), para P(B) > 0. O condicionamento restringe o espaço amostral a B, e por isso o denominador é a probabilidade de B.",
@@ -444,12 +359,7 @@ const QUESTOES_PCAL_LOTE57 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "rejeitar a hipótese nula quando ela é verdadeira ... nível de significância",
     cognitivo: {
       motivo: "Fixar a definição do erro tipo I e sua relação com α.",
-      mede: "Teste de hipóteses — erros.",
-      pegadinhaDesc: "Definição e associação corretas; a banca costuma inverter com o erro tipo II.",
-      ondeErra: "Troca rejeição por aceitação, ou associa α ao erro tipo II.",
       palavraCritica: "rejeitar ... verdadeira",
-      tecnica: "Tipo I é REJEIÇÃO INCORRETA (α). Tipo II é ACEITAÇÃO INCORRETA (β).",
-      regraMental: "Tipo I rejeita o que era verdade; α é sua probabilidade."
     },
     comentario: {
       resolucao: "CERTO. O erro tipo I é a rejeição incorreta de H₀ verdadeira, e sua probabilidade é justamente o nível de significância α — os testes são construídos para controlar esse erro.",
@@ -468,12 +378,7 @@ const QUESTOES_PCAL_LOTE57 = [
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "diminui simultaneamente",
     cognitivo: {
       motivo: "Cobrar o trade-off entre os dois tipos de erro.",
-      mede: "Teste de hipóteses — relação α × β.",
-      pegadinhaDesc: "Sugere ganho sem custo, ignorando a relação inversa entre α e β.",
-      ondeErra: "Supõe que basta ser mais rigoroso para errar menos em tudo.",
       palavraCritica: "diminui simultaneamente",
-      tecnica: "Com n fixo, α e β se movem em sentidos opostos. Reduzir os dois ao mesmo tempo exige AUMENTAR a amostra.",
-      regraMental: "α desce, β sobe — salvo se n crescer."
     },
     comentario: {
       resolucao: "ERRADO. Com o tamanho da amostra fixo, α e β variam em sentidos opostos: ao reduzir o nível de significância, exige-se evidência mais forte para rejeitar H₀, o que aumenta a probabilidade de erro tipo II. Reduzir ambos simultaneamente só é possível aumentando o tamanho da amostra.",
@@ -492,12 +397,7 @@ const QUESTOES_PCAL_LOTE57 = [
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "probabilidade de a hipótese nula ser verdadeira",
     cognitivo: {
       motivo: "Corrigir a interpretação equivocada mais comum do p-valor.",
-      mede: "Teste de hipóteses — nível descritivo.",
-      pegadinhaDesc: "Inverte o condicionamento: o p-valor condiciona-se a H₀ verdadeira, não mede a probabilidade dela.",
-      ondeErra: "Lê o p-valor como probabilidade da hipótese, e não dos dados.",
       palavraCritica: "probabilidade de a hipótese nula ser verdadeira",
-      tecnica: "p-valor = P(dados tão ou mais extremos | H₀ verdadeira). É probabilidade DOS DADOS dado H₀, nunca de H₀.",
-      regraMental: "p-valor condiciona a H₀; não mede H₀."
     },
     comentario: {
       resolucao: "ERRADO. O p-valor é a probabilidade de se observar um resultado tão ou mais extremo que o obtido, SUPONDO a hipótese nula verdadeira. Não é a probabilidade de H₀ ser verdadeira — a estatística clássica não atribui probabilidade a hipóteses. Rejeita-se H₀ quando o p-valor é inferior a α.",
@@ -516,12 +416,7 @@ const QUESTOES_PCAL_LOTE57 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "1 menos a probabilidade de erro do tipo II",
     cognitivo: {
       motivo: "Fixar a definição de poder do teste.",
-      mede: "Teste de hipóteses — poder.",
-      pegadinhaDesc: "Definição correta; a banca costuma trocar β por α.",
-      ondeErra: "Escreve 1 − α, confundindo com o nível de confiança.",
       palavraCritica: "erro do tipo II",
-      tecnica: "Poder = 1 − β: probabilidade de rejeitar H₀ quando ela é de fato falsa. Não confundir com 1 − α, que é o nível de confiança.",
-      regraMental: "Poder = 1 − β. Confiança = 1 − α."
     },
     comentario: {
       resolucao: "CERTO. O poder do teste é 1 − β, ou seja, a probabilidade de rejeitar corretamente uma hipótese nula falsa. Aumenta com o tamanho da amostra e com o afastamento entre o valor hipotético e o real.",
@@ -540,12 +435,7 @@ const QUESTOES_PCAL_LOTE57 = [
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "equivale a demonstrar que ela é verdadeira",
     cognitivo: {
       motivo: "Fixar o que a não rejeição de H₀ significa — e o que não significa.",
-      mede: "Teste de hipóteses — lógica da decisão.",
-      pegadinhaDesc: "Converte ausência de evidência contrária em prova a favor.",
-      ondeErra: "Lê 'aceitar H₀' como 'H₀ provada'.",
       palavraCritica: "equivale a demonstrar",
-      tecnica: "O teste só controla o erro de rejeitar H₀ verdadeira (α). Não rejeitar pode significar apenas amostra pequena ou teste de baixo poder.",
-      regraMental: "Não rejeitar ≠ provar. Falta de evidência não é evidência de falta."
     },
     comentario: {
       resolucao: "ERRADO. Não rejeitar H₀ significa apenas que a evidência amostral foi insuficiente para rejeitá-la ao nível de significância adotado — o que pode decorrer de amostra pequena ou baixo poder do teste. A hipótese nula nunca é provada; ela é apenas mantida por falta de evidência contrária.",
@@ -564,12 +454,7 @@ const QUESTOES_PCAL_LOTE57 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "variáveis qualitativas ... frequências observadas com ... esperadas",
     cognitivo: {
       motivo: "Fixar o campo de aplicação do qui-quadrado.",
-      mede: "Teste qui-quadrado.",
-      pegadinhaDesc: "Descrição correta; a banca costuma afirmar que exige variáveis quantitativas.",
-      ondeErra: "Supõe que todo teste estatístico requer variáveis numéricas.",
       palavraCritica: "qualitativas ... observadas ... esperadas",
-      tecnica: "Qui-quadrado trabalha com CONTAGENS em categorias. A estatística soma (O − E)²/E sobre as células.",
-      regraMental: "Qui-quadrado: variável qualitativa, compara observado com esperado."
     },
     comentario: {
       resolucao: "CERTO. O qui-quadrado de independência avalia associação entre duas variáveis qualitativas em tabela de contingência, confrontando frequências observadas e esperadas sob a hipótese de independência, pela soma de (O − E)²/E.",
@@ -590,12 +475,7 @@ const QUESTOES_PCAL_LOTE57 = [
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "aumento do nível de confiança ... menor amplitude",
     cognitivo: {
       motivo: "Fixar a relação entre confiança e amplitude.",
-      mede: "Estimação intervalar.",
-      pegadinhaDesc: "Inverte a relação: mais confiança exige intervalo mais largo, não mais estreito.",
-      ondeErra: "Associa 'melhor' a 'mais preciso' e conclui que ganha nos dois.",
       palavraCritica: "menor amplitude",
-      tecnica: "Mais confiança → maior valor crítico → intervalo mais LARGO. Só se ganha precisão e confiança ao mesmo tempo aumentando n.",
-      regraMental: "Mais confiança, mais largo. Para estreitar sem perder confiança, aumente n."
     },
     comentario: {
       resolucao: "ERRADO. É o contrário: elevar o nível de confiança (de 95% para 99%, por exemplo) exige valor crítico maior e, portanto, intervalo MAIS AMPLO. Só é possível estreitar o intervalo mantendo a confiança aumentando o tamanho da amostra ou reduzindo a variabilidade.",
@@ -614,12 +494,7 @@ const QUESTOES_PCAL_LOTE57 = [
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "95% de probabilidade de o parâmetro estar dentro daquele intervalo já calculado",
     cognitivo: {
       motivo: "Corrigir a interpretação frequentista do intervalo de confiança.",
-      mede: "Estimação intervalar — interpretação.",
-      pegadinhaDesc: "Atribui probabilidade a um parâmetro fixo e a um intervalo já observado.",
-      ondeErra: "Lê a confiança como probabilidade do parâmetro, e não do procedimento.",
       palavraCritica: "daquele intervalo já calculado",
-      tecnica: "Na inferência clássica o parâmetro é fixo; o que varia é o intervalo. A confiança é do MÉTODO: em 95% das amostras, o intervalo conteria o parâmetro.",
-      regraMental: "Confiança é do procedimento, não do intervalo específico."
     },
     comentario: {
       resolucao: "ERRADO. Na abordagem clássica, o parâmetro é uma constante desconhecida e o intervalo já calculado ou o contém ou não. A confiança de 95% refere-se ao procedimento: se o processo de amostragem fosse repetido muitas vezes, cerca de 95% dos intervalos construídos conteriam o parâmetro.",
@@ -638,12 +513,7 @@ const QUESTOES_PCAL_LOTE57 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "esperança matemática é igual ao parâmetro",
     cognitivo: {
       motivo: "Fixar a definição de não viés.",
-      mede: "Estimação pontual — propriedades.",
-      pegadinhaDesc: "Definição correta e formal.",
-      ondeErra: "Confunde não viés com consistência ou eficiência.",
       palavraCritica: "esperança ... igual ao parâmetro",
-      tecnica: "Não viés: E(estimador) = parâmetro. Consistência: converge com n → ∞. Eficiência: menor variância.",
-      regraMental: "Não viesado acerta na média."
     },
     comentario: {
       resolucao: "CERTO. Um estimador é não viesado (não tendencioso) quando sua esperança coincide com o parâmetro. A média amostral é estimador não viesado da média populacional; a variância amostral com denominador n − 1 é não viesada da variância populacional.",
@@ -662,12 +532,7 @@ const QUESTOES_PCAL_LOTE57 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "probabilidade conhecida e não nula",
     cognitivo: {
       motivo: "Fixar o critério que define amostragem probabilística.",
-      mede: "Amostragem — classificação.",
-      pegadinhaDesc: "Critério correto e sua consequência inferencial.",
-      ondeErra: "Confunde com amostragem por conveniência ou por julgamento.",
       palavraCritica: "conhecida e não nula",
-      tecnica: "Sem probabilidade conhecida de seleção não há como calcular erro amostral — por isso a não probabilística não permite inferência formal.",
-      regraMental: "Probabilística = todos têm chance conhecida e positiva."
     },
     comentario: {
       resolucao: "CERTO. A amostragem probabilística exige que cada elemento tenha probabilidade conhecida e maior que zero de integrar a amostra, condição que viabiliza o cálculo do erro amostral e a inferência para a população. As modalidades não probabilísticas (conveniência, julgamento, cotas) não atendem a esse requisito.",
@@ -686,12 +551,7 @@ const QUESTOES_PCAL_LOTE57 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "todos os estratos ... sorteiam-se grupos inteiros",
     cognitivo: {
       motivo: "Separar as duas técnicas probabilísticas mais confundidas.",
-      mede: "Amostragem — estratificada e conglomerados.",
-      pegadinhaDesc: "Ambas as descrições corretas, inclusive quanto à homogeneidade interna.",
-      ondeErra: "Inverte a homogeneidade ou supõe que na estratificada se sorteiam estratos.",
       palavraCritica: "homogêneos ... heterogêneos",
-      tecnica: "Estrato: homogêneo dentro, e TODOS entram. Conglomerado: heterogêneo dentro (mini-população), e só ALGUNS são sorteados.",
-      regraMental: "Estrato: todos participam. Conglomerado: sorteia-se o grupo."
     },
     comentario: {
       resolucao: "CERTO. Na estratificada busca-se homogeneidade interna nos estratos (e heterogeneidade entre eles), retirando-se elementos de cada estrato. Na amostragem por conglomerados, cada grupo idealmente reproduz a população (heterogêneo internamente) e sorteiam-se conglomerados inteiros, o que reduz custo mas tende a elevar o erro amostral.",
@@ -710,12 +570,7 @@ const QUESTOES_PCAL_LOTE57 = [
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "classifica-se como técnica não probabilística",
     cognitivo: {
       motivo: "Fixar a classificação da amostragem sistemática.",
-      mede: "Amostragem — classificação das técnicas.",
-      pegadinhaDesc: "Usa a regularidade do passo como argumento para negar a natureza probabilística.",
-      ondeErra: "Associa 'regra fixa' a 'sem sorteio', esquecendo que o ponto de partida é aleatório.",
       palavraCritica: "não probabilística",
-      tecnica: "É probabilística porque o primeiro elemento é sorteado, o que dá a todos chance conhecida de seleção. Não probabilísticas são conveniência, julgamento e cotas.",
-      regraMental: "Sistemática: sorteia o começo, depois anda de k em k — é probabilística."
     },
     comentario: {
       resolucao: "ERRADO. A amostragem sistemática é PROBABILÍSTICA: define-se o intervalo k = N/n, sorteia-se aleatoriamente o primeiro elemento entre os k iniciais e selecionam-se os demais de k em k. A aleatoriedade do ponto de partida garante probabilidade conhecida de seleção. São não probabilísticas as amostragens por conveniência, por julgamento e por cotas. Ressalva: a técnica pode gerar viés se a lista apresentar periodicidade coincidente com o intervalo.",
@@ -734,12 +589,7 @@ const QUESTOES_PCAL_LOTE57 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "ainda que a população de origem não siga distribuição normal",
     cognitivo: {
       motivo: "Fixar o alcance do teorema central do limite.",
-      mede: "Distribuições amostrais — TCL.",
-      pegadinhaDesc: "Enunciado correto, inclusive na parte que dispensa a normalidade da população.",
-      ondeErra: "Acredita que o TCL exige população normal.",
       palavraCritica: "ainda que a população ... não siga distribuição normal",
-      tecnica: "O TCL fala da distribuição da MÉDIA AMOSTRAL, não dos dados. É o que autoriza usar a normal em amostras grandes de populações quaisquer.",
-      regraMental: "TCL normaliza a média, não a população."
     },
     comentario: {
       resolucao: "CERTO. O teorema central do limite garante que, para n suficientemente grande, a distribuição da média amostral tende à normal, independentemente da distribuição da população de origem (desde que a variância seja finita). É esse resultado que sustenta a inferência baseada na normal em amostras grandes.",
@@ -758,12 +608,7 @@ const QUESTOES_PCAL_LOTE57 = [
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "pelo tamanho da amostra",
     cognitivo: {
       motivo: "Fixar a fórmula do erro padrão.",
-      mede: "Distribuições amostrais — erro padrão.",
-      pegadinhaDesc: "Omite a raiz quadrada, exagerando a redução do erro com o aumento de n.",
-      ondeErra: "Esquece que a divisão é por √n, não por n.",
       palavraCritica: "pelo tamanho da amostra",
-      tecnica: "Erro padrão = σ/√n. Para reduzir o erro pela metade é preciso QUADRUPLICAR a amostra.",
-      regraMental: "Divide por raiz de n."
     },
     comentario: {
       resolucao: "ERRADO. O erro padrão da média é σ/√n — divide-se pela RAIZ QUADRADA do tamanho da amostra, não por n. É por isso que ganhos de precisão são cada vez mais caros: reduzir o erro à metade exige amostra quatro vezes maior.",
@@ -782,12 +627,7 @@ const QUESTOES_PCAL_LOTE57 = [
     gabarito: "E", pegadinha: "generalizacao", palavraChave: "ausência de qualquer relação",
     cognitivo: {
       motivo: "Delimitar o que o coeficiente de Pearson mede.",
-      mede: "Correlação linear.",
-      pegadinhaDesc: "Acerta o intervalo e generaliza indevidamente a interpretação do valor nulo.",
-      ondeErra: "Toma 'sem correlação linear' por 'sem relação alguma'.",
       palavraCritica: "qualquer relação",
-      tecnica: "Pearson mede apenas relação LINEAR. Uma relação perfeitamente quadrática pode apresentar r ≈ 0.",
-      regraMental: "r ≈ 0 afasta reta, não afasta curva."
     },
     comentario: {
       resolucao: "ERRADO. O intervalo de −1 a 1 está correto, mas r próximo de zero indica ausência de relação LINEAR, e não de qualquer relação. Variáveis com associação não linear forte (parabólica, por exemplo) podem apresentar coeficiente de Pearson próximo de zero.",
@@ -806,12 +646,7 @@ const QUESTOES_PCAL_LOTE57 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "proporção da variabilidade ... explicada pelo modelo",
     cognitivo: {
       motivo: "Fixar a interpretação do R².",
-      mede: "Regressão linear — R².",
-      pegadinhaDesc: "Interpretação correta do coeficiente.",
-      ondeErra: "Confunde R² com o coeficiente angular ou com o próprio r.",
       palavraCritica: "proporção da variabilidade",
-      tecnica: "Na regressão simples, R² é o quadrado de r e varia de 0 a 1 — sempre não negativo, ao contrário de r.",
-      regraMental: "R² = quanto da variação Y o modelo explica."
     },
     comentario: {
       resolucao: "CERTO. O R² expressa a fração da variabilidade total da variável dependente explicada pela regressão, variando de 0 a 1. Na regressão linear simples equivale ao quadrado do coeficiente de correlação de Pearson.",
@@ -830,12 +665,7 @@ const QUESTOES_PCAL_LOTE57 = [
     gabarito: "E", pegadinha: "generalizacao", palavraChave: "suficiente para se concluir que uma delas causa a outra",
     cognitivo: {
       motivo: "Separar associação de causalidade.",
-      mede: "Correlação — interpretação.",
-      pegadinhaDesc: "Converte medida de associação em prova de causa.",
-      ondeErra: "Toma correlação alta como demonstração causal.",
       palavraCritica: "suficiente ... causa",
-      tecnica: "Correlação pode decorrer de terceira variável (confundidora), coincidência ou causalidade reversa. Causalidade exige delineamento adequado.",
-      regraMental: "Correlação não implica causalidade."
     },
     comentario: {
       resolucao: "ERRADO. Correlação mede associação, não causa. A relação observada pode resultar de variável confundidora, de causalidade em sentido inverso ou de mera coincidência (correlação espúria). A inferência causal exige delineamento experimental ou controle estatístico adequado.",

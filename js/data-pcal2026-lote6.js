@@ -20,12 +20,7 @@ const QUESTOES_PCAL_LOTE6 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "pena máxima não superior a dois anos",
     cognitivo: {
       motivo: "Cobrar o conceito legal de IMPO (art. 61 da Lei 9.099/1995).",
-      mede: "Lei 9.099/1995 (item 5 do edital de Processo Penal).",
-      pegadinhaDesc: "A banca costuma trocar 'pena máxima' por 'pena mínima' ou '2 anos' por '1 ano'.",
-      ondeErra: "Confunde o critério da IMPO (2 anos máx.) com o da suspensão condicional (1 ano mín.).",
       palavraCritica: "pena máxima ≤ 2 anos",
-      tecnica: "IMPO: contravenções + crimes com pena MÁXIMA de até 2 anos. É o critério de competência do JECRIM.",
-      regraMental: "Menor potencial = 2 anos (máxima). Suspensão do processo = 1 ano (mínima). Não confunda."
     },
     comentario: {
       resolucao: "CERTO. Lei 9.099/1995, art. 61: infrações de menor potencial ofensivo são as contravenções penais e os crimes com pena máxima não superior a 2 anos, cumulada ou não com multa. Define a competência do Juizado Especial Criminal.",
@@ -43,12 +38,7 @@ const QUESTOES_PCAL_LOTE6 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "renúncia ao direito de queixa ou representação",
     cognitivo: {
       motivo: "Cobrar o efeito da composição civil (art. 74, parágrafo único).",
-      mede: "Lei 9.099/1995 — institutos despenalizadores.",
-      pegadinhaDesc: "A banca costuma estender o efeito à ação penal pública incondicionada (onde não há renúncia).",
-      ondeErra: "Aplica a renúncia a crimes de ação penal pública incondicionada.",
       palavraCritica: "ação privada ou pública condicionada",
-      tecnica: "A renúncia só ocorre nos crimes que dependem da vítima (privada ou condicionada).",
-      regraMental: "Composição civil homologada = renúncia à queixa/representação — só nos crimes que dependem da vítima."
     },
     comentario: {
       resolucao: "CERTO. Lei 9.099/1995, art. 74, parágrafo único: nos crimes de ação penal privada ou pública condicionada à representação, o acordo civil homologado acarreta a renúncia ao direito de queixa ou representação. Em ação penal pública incondicionada, o acordo não impede a denúncia.",
@@ -66,12 +56,7 @@ const QUESTOES_PCAL_LOTE6 = [
     gabarito: "E", pegadinha: "exigencia-inexistente", palavraChave: "importa reconhecimento de culpa e gera reincidência",
     cognitivo: {
       motivo: "Cobrar a natureza da transação penal (art. 76) e seus efeitos.",
-      mede: "Lei 9.099/1995 — transação penal.",
-      pegadinhaDesc: "Afirma que a transação gera reincidência e reconhecimento de culpa — o oposto do correto.",
-      ondeErra: "Trata a transação como condenação.",
       palavraCritica: "não gera reincidência nem culpa",
-      tecnica: "Transação: não importa reincidência, não consta para maus antecedentes (salvo impedir novo benefício em 5 anos) e não gera efeitos civis.",
-      regraMental: "Transação penal ≠ condenação: sem culpa, sem reincidência, sem efeito civil."
     },
     comentario: {
       resolucao: "ERRADO. A transação penal (art. 76) aplica pena restritiva de direitos ou multa por acordo, mas NÃO importa reconhecimento de culpa nem gera reincidência, não consta em certidão de antecedentes (exceto para impedir novo benefício em 5 anos) e não produz efeitos civis.",
@@ -89,12 +74,7 @@ const QUESTOES_PCAL_LOTE6 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "pena mínima igual ou inferior a um ano",
     cognitivo: {
       motivo: "Cobrar os requisitos da suspensão condicional do processo (art. 89).",
-      mede: "Lei 9.099/1995 — sursis processual.",
-      pegadinhaDesc: "A banca costuma trocar 'mínima' por 'máxima' ou o período de prova (2-4 anos).",
-      ondeErra: "Confunde o critério (pena mínima) com o da IMPO (pena máxima).",
       palavraCritica: "pena mínima ≤ 1 ano / prova 2 a 4 anos",
-      tecnica: "Suspensão condicional do processo: pena MÍNIMA de até 1 ano; período de prova de 2 a 4 anos.",
-      regraMental: "Sursis processual: MÍNIMA ≤ 1 ano. Não se limita a crimes de menor potencial (Súmula 723 STF)."
     },
     comentario: {
       resolucao: "CERTO. Lei 9.099/1995, art. 89: cabe suspensão condicional do processo nos crimes com pena mínima igual ou inferior a 1 ano, mediante proposta do MP, com período de prova de 2 a 4 anos e condições legais. Aplica-se mesmo a crimes fora da competência do JECRIM (Súmula 723/STF exclui quando a pena mínima, somada a causas de aumento, superar 1 ano).",
@@ -112,12 +92,7 @@ const QUESTOES_PCAL_LOTE6 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "dependem de representação",
     cognitivo: {
       motivo: "Cobrar a alteração da natureza da ação penal na lesão leve/culposa (art. 88).",
-      mede: "Lei 9.099/1995 — ação penal.",
-      pegadinhaDesc: "A banca costuma manter esses crimes como ação penal pública incondicionada.",
-      ondeErra: "Ignora a exigência de representação introduzida pela Lei 9.099.",
       palavraCritica: "representação (condicionada)",
-      tecnica: "Lesão leve e culposa: ação penal pública CONDICIONADA à representação (art. 88).",
-      regraMental: "Lesão leve/culposa = precisa de representação. (Exceção relevante: violência doméstica — lesão é incondicionada, Súmula 542 STJ.)"
     },
     comentario: {
       resolucao: "CERTO. Lei 9.099/1995, art. 88: a ação penal relativa aos crimes de lesões corporais leves e culposas passou a depender de representação. Ressalva importante: na lesão corporal em contexto de violência doméstica contra a mulher, a ação é pública incondicionada (Súmula 542/STJ).",
@@ -137,12 +112,7 @@ const QUESTOES_PCAL_LOTE6 = [
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "no interior da própria residência / porte",
     cognitivo: {
       motivo: "Distinguir posse (art. 12) de porte (art. 14) de arma de fogo.",
-      mede: "Legislação penal especial — Estatuto do Desarmamento (Dias 18-19 do plano).",
-      pegadinhaDesc: "Rotula como 'porte' a conduta que é 'posse' (arma dentro de casa).",
-      ondeErra: "Não distingue guardar em casa (posse) de trazer consigo fora (porte).",
       palavraCritica: "residência = posse (não porte)",
-      tecnica: "Posse: dentro de casa/trabalho (art. 12). Porte: fora, trazendo consigo (art. 14).",
-      regraMental: "Arma em casa = POSSE. Arma na rua com você = PORTE. O porte tem pena maior."
     },
     comentario: {
       resolucao: "ERRADO. Manter arma no interior da residência configura POSSE irregular de arma de fogo (art. 12 da Lei 10.826/2003), e não porte. O porte (art. 14) pressupõe trazer a arma consigo fora da residência ou local de trabalho. As penas e a gravidade são distintas.",
@@ -160,12 +130,7 @@ const QUESTOES_PCAL_LOTE6 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "uso restrito mais severo",
     cognitivo: {
       motivo: "Cobrar a distinção de tratamento entre arma de uso permitido e restrito (art. 16).",
-      mede: "Legislação penal especial — Estatuto do Desarmamento.",
-      pegadinhaDesc: "Item correto; a banca costuma igualar as penas ou inverter a gravidade.",
-      ondeErra: "Trata uso permitido e restrito com a mesma pena.",
       palavraCritica: "uso restrito = pena maior",
-      tecnica: "Uso restrito (art. 16): reclusão de 3 a 6 anos — mais grave que posse/porte de uso permitido.",
-      regraMental: "Uso restrito > uso permitido. E arma de uso PROIBIDO (art. 16, §2º) é hedionda."
     },
     comentario: {
       resolucao: "CERTO. As condutas do art. 16 (uso restrito) são apenadas com reclusão de 3 a 6 anos, mais severamente que a posse (art. 12, detenção 1-3) e o porte de uso permitido (art. 14, reclusão 2-4). A posse/porte de arma de uso PROIBIDO (art. 16, § 2º) é, ainda, crime hediondo (Lei 8.072/1990).",
@@ -183,12 +148,7 @@ const QUESTOES_PCAL_LOTE6 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "SINARM / Polícia Federal",
     cognitivo: {
       motivo: "Cobrar a competência e as finalidades do SINARM (art. 1º e 2º).",
-      mede: "Legislação penal especial — Estatuto do Desarmamento.",
-      pegadinhaDesc: "A banca costuma atribuir o SINARM ao Exército (que gere o SIGMA, de uso restrito).",
-      ondeErra: "Confunde SINARM (PF, uso permitido) com SIGMA (Exército, uso restrito).",
       palavraCritica: "SINARM = Polícia Federal",
-      tecnica: "SINARM: Polícia Federal, armas de uso permitido. SIGMA: Exército, armas de uso restrito.",
-      regraMental: "SINARM = Polícia Federal (permitido). SIGMA = Exército (restrito)."
     },
     comentario: {
       resolucao: "CERTO. Lei 10.826/2003, arts. 1º e 2º: o SINARM funciona no âmbito da Polícia Federal, com abrangência nacional, destinando-se ao registro e controle das armas de uso permitido. As armas de uso restrito são controladas pelo SIGMA, do Comando do Exército.",
@@ -208,12 +168,7 @@ const QUESTOES_PCAL_LOTE6 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "gestão fraudulenta × temerária",
     cognitivo: {
       motivo: "Distinguir gestão fraudulenta (dolo/ardil) de gestão temerária (excesso de risco) — art. 4º.",
-      mede: "Crimes contra o Sistema Financeiro Nacional (Dia 23 do plano; item do edital).",
-      pegadinhaDesc: "A banca costuma inverter a gravidade ou as definições das duas modalidades.",
-      ondeErra: "Confunde fraude (ardil) com temeridade (risco excessivo).",
       palavraCritica: "fraudulenta = ardil; temerária = risco excessivo",
-      tecnica: "Fraudulenta (caput, 3-12 anos): há fraude/ardil. Temerária (parágrafo único, 2-8 anos): gestão arriscada, sem fraude.",
-      regraMental: "Fraudulenta = enganou (mais grave). Temerária = arriscou demais (menos grave)."
     },
     comentario: {
       resolucao: "CERTO. Lei 7.492/1986, art. 4º: a gestão fraudulenta (caput) — com emprego de ardil/artifício — é punida com reclusão de 3 a 12 anos; a gestão temerária (parágrafo único) — administração com risco excessivo e imprudente — com reclusão de 2 a 8 anos. A competência é da Justiça Federal.",
@@ -231,12 +186,7 @@ const QUESTOES_PCAL_LOTE6 = [
     gabarito: "E", pegadinha: "troca-sujeito", palavraChave: "Justiça Estadual",
     cognitivo: {
       motivo: "Cobrar a competência da Justiça Federal para os crimes da Lei 7.492.",
-      mede: "Crimes contra o Sistema Financeiro Nacional.",
-      pegadinhaDesc: "Atribui à Justiça Estadual a competência que é da Justiça Federal.",
-      ondeErra: "Ignora a regra expressa de competência federal (art. 26).",
       palavraCritica: "Justiça Estadual (deveria ser Federal)",
-      tecnica: "Crimes contra o SFN: competência da Justiça FEDERAL (art. 26 da Lei 7.492).",
-      regraMental: "Sistema Financeiro Nacional = interesse da União = Justiça Federal."
     },
     comentario: {
       resolucao: "ERRADO. Lei 7.492/1986, art. 26: a ação penal, nos crimes contra o Sistema Financeiro Nacional, é da competência da Justiça FEDERAL, promovida pelo Ministério Público Federal. A evasão de divisas (art. 22) enquadra-se nessa competência.",
@@ -256,12 +206,7 @@ const QUESTOES_PCAL_LOTE6 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "inviabilidade de competição",
     cognitivo: {
       motivo: "Distinguir inexigibilidade (art. 74) de dispensa (art. 75) de licitação.",
-      mede: "Licitações — contratação direta (item 5.2 do edital de Adm; Dias 05/10/15 do plano).",
-      pegadinhaDesc: "A banca costuma inverter — dizer que a dispensa decorre da inviabilidade de competição.",
-      ondeErra: "Troca o fundamento de cada instituto.",
       palavraCritica: "inexigibilidade = inviável competir; dispensa = competição viável",
-      tecnica: "Inexigível: competição INVIÁVEL (fornecedor exclusivo, notória especialização, artista consagrado). Dispensa: competição possível, mas a lei dispensa (rol taxativo).",
-      regraMental: "Inexigível = impossível competir (rol exemplificativo). Dispensa = possível, mas liberada (rol taxativo)."
     },
     comentario: {
       resolucao: "CERTO. Lei 14.133/2021: a inexigibilidade (art. 74) pressupõe INVIABILIDADE de competição (rol exemplificativo); a dispensa (art. 75) ocorre quando a competição é viável, mas a lei autoriza a contratação direta em hipóteses taxativas (valor, emergência etc.).",
@@ -279,12 +224,7 @@ const QUESTOES_PCAL_LOTE6 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "passaram a integrar o Código Penal",
     cognitivo: {
       motivo: "Cobrar a migração dos crimes licitatórios para o CP (arts. 337-E a 337-P).",
-      mede: "Licitações + crimes em licitações (Lei 14.133/2021, item do edital).",
-      pegadinhaDesc: "A banca costuma manter os crimes na Lei 8.666 (revogada nesse ponto).",
-      ondeErra: "Responde com a localização antiga dos crimes licitatórios.",
       palavraCritica: "Código Penal (arts. 337-E a 337-P)",
-      tecnica: "A Lei 14.133 transferiu os crimes de licitação para o CP, no capítulo 'Dos Crimes em Licitações e Contratos Administrativos'.",
-      regraMental: "Crimes de licitação hoje = Código Penal (337-E a 337-P), não mais na 8.666."
     },
     comentario: {
       resolucao: "CERTO. A Lei 14.133/2021 revogou os tipos penais da Lei 8.666/1993 e inseriu os crimes em licitações e contratos no Código Penal (arts. 337-E a 337-P), no Título XI (crimes contra a Administração Pública).",
@@ -302,12 +242,7 @@ const QUESTOES_PCAL_LOTE6 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "julgamento objetivo",
     cognitivo: {
       motivo: "Cobrar o princípio do julgamento objetivo (art. 5º).",
-      mede: "Licitações — princípios (item 5.1 do edital).",
-      pegadinhaDesc: "A banca costuma confundir julgamento objetivo com discricionariedade na escolha.",
-      ondeErra: "Admite critérios subjetivos na seleção da proposta.",
       palavraCritica: "veda critérios subjetivos",
-      tecnica: "Julgamento objetivo: a proposta vencedora sai de critérios do edital, mensuráveis e impessoais.",
-      regraMental: "Licitação se julga pelo edital, não pelo gosto do administrador (objetividade)."
     },
     comentario: {
       resolucao: "CERTO. A Lei 14.133/2021 (art. 5º) elenca o julgamento objetivo entre os princípios, exigindo que a seleção se baseie em critérios objetivos definidos no edital, afastando subjetivismos e favorecimentos. Conecta-se à vinculação ao instrumento convocatório.",
@@ -327,12 +262,7 @@ const QUESTOES_PCAL_LOTE6 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "trânsito em julgado",
     cognitivo: {
       motivo: "Cobrar a literalidade do art. 5º, LVII, da CF.",
-      mede: "Direitos e garantias fundamentais (Dia 01 do plano).",
-      pegadinhaDesc: "A banca costuma trocar 'trânsito em julgado' por 'sentença de primeiro grau' ou 'condenação em segunda instância'.",
-      ondeErra: "Antecipa a culpa para antes do trânsito em julgado.",
       palavraCritica: "até o trânsito em julgado",
-      tecnica: "Presunção de inocência vale até o TRÂNSITO EM JULGADO — marco literal do inciso LVII.",
-      regraMental: "Culpado só depois que 'não cabe mais recurso' (trânsito em julgado)."
     },
     comentario: {
       resolucao: "CERTO. CF, art. 5º, LVII: 'ninguém será considerado culpado até o trânsito em julgado de sentença penal condenatória'. É a presunção de inocência (não culpabilidade). O STF (ADCs 43, 44 e 54) reafirmou a impossibilidade de execução da pena antes do trânsito em julgado.",
@@ -350,12 +280,7 @@ const QUESTOES_PCAL_LOTE6 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "comunicados imediatamente",
     cognitivo: {
       motivo: "Cobrar a literalidade do art. 5º, LXII, da CF.",
-      mede: "Direitos e garantias fundamentais.",
-      pegadinhaDesc: "A banca costuma trocar 'imediatamente' por 'em 24 horas' ou omitir a família.",
-      ondeErra: "Confunde a comunicação imediata (LXII) com o prazo de entrega do auto (LXIII/CPP).",
       palavraCritica: "imediatamente ao juiz e à família",
-      tecnica: "Comunicação da prisão: IMEDIATA, ao juiz E à família/pessoa indicada.",
-      regraMental: "Prendeu = comunica na hora ao juiz e à família. Não é 'em 24h'."
     },
     comentario: {
       resolucao: "CERTO. CF, art. 5º, LXII: a prisão e o local onde se encontre o preso serão comunicados imediatamente ao juiz competente e à família do preso ou a pessoa por ele indicada. Garantia de controle da legalidade da prisão.",
@@ -373,12 +298,7 @@ const QUESTOES_PCAL_LOTE6 = [
     gabarito: "E", pegadinha: "troca-sujeito", palavraChave: "autoridade policial",
     cognitivo: {
       motivo: "Cobrar a competência para o relaxamento da prisão ilegal (art. 5º, LXV).",
-      mede: "Direitos e garantias fundamentais.",
-      pegadinhaDesc: "Atribui à autoridade policial o relaxamento, que é reservado à autoridade judiciária.",
-      ondeErra: "Confunde quem relaxa a prisão ilegal (juiz).",
       palavraCritica: "autoridade policial (deveria ser judiciária)",
-      tecnica: "Relaxamento da prisão ilegal = ato do JUIZ (autoridade judiciária), art. 5º, LXV.",
-      regraMental: "Prisão ilegal → RELAXA o juiz. Delegado não relaxa prisão."
     },
     comentario: {
       resolucao: "ERRADO. CF, art. 5º, LXV: 'a prisão ilegal será imediatamente relaxada pela autoridade JUDICIÁRIA'. O relaxamento é ato privativo do juiz, não da autoridade policial.",
@@ -396,12 +316,7 @@ const QUESTOES_PCAL_LOTE6 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "salvo nas hipóteses previstas em lei",
     cognitivo: {
       motivo: "Cobrar a literalidade do art. 5º, LVIII, da CF (relevante para papiloscopista).",
-      mede: "Direitos e garantias fundamentais.",
-      pegadinhaDesc: "A banca costuma tornar a regra absoluta ('nunca será identificado') ou suprimir a ressalva legal.",
-      ondeErra: "Ignora que a lei prevê exceções (Lei 12.037/2009).",
       palavraCritica: "salvo nas hipóteses previstas em lei",
-      tecnica: "Regra: civilmente identificado não sofre identificação criminal — EXCETO nos casos legais.",
-      regraMental: "Tem RG? Em regra não identifica criminalmente — salvo exceções da Lei 12.037/2009."
     },
     comentario: {
       resolucao: "CERTO. CF, art. 5º, LVIII: 'o civilmente identificado não será submetido a identificação criminal, salvo nas hipóteses previstas em lei'. A Lei 12.037/2009 disciplina as exceções (ex.: documento com rasura, indícios de falsificação, essencialidade à investigação).",
@@ -421,12 +336,7 @@ const QUESTOES_PCAL_LOTE6 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "integridade física, psíquica e moral",
     cognitivo: {
       motivo: "Cobrar o direito à integridade pessoal (art. 5º da CADH).",
-      mede: "Convenção Americana (Dias 03/08 do plano; item 6 do edital).",
-      pegadinhaDesc: "Item correto; a banca costuma restringir a integridade apenas à dimensão física.",
-      ondeErra: "Limita a proteção ao aspecto físico, esquecendo psíquico e moral.",
       palavraCritica: "física, psíquica e moral",
-      tecnica: "Integridade pessoal na CADH abrange as três dimensões: física, psíquica e moral.",
-      regraMental: "Pacto de São José: integridade é tripla (física + psíquica + moral) e veda tortura/tratos degradantes."
     },
     comentario: {
       resolucao: "CERTO. CADH (Decreto 678/1992), art. 5º: toda pessoa tem direito ao respeito de sua integridade física, psíquica e moral, sendo vedada a tortura e as penas ou tratos cruéis, desumanos ou degradantes. Dialoga com o art. 5º, III, da CF.",
@@ -444,12 +354,7 @@ const QUESTOES_PCAL_LOTE6 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "prazo razoável / duplo grau",
     cognitivo: {
       motivo: "Cobrar as garantias judiciais da CADH (art. 8º).",
-      mede: "Convenção Americana — garantias judiciais.",
-      pegadinhaDesc: "Item correto; a banca costuma negar o duplo grau como garantia convencional ou omitir o prazo razoável.",
-      ondeErra: "Desconhece que o duplo grau tem previsão convencional expressa.",
       palavraCritica: "prazo razoável + recurso a tribunal superior",
-      tecnica: "Art. 8º da CADH: presunção de inocência, prazo razoável, ampla defesa e direito de recorrer (duplo grau).",
-      regraMental: "Pacto de São José, art. 8º: julgamento em prazo razoável + duplo grau de jurisdição."
     },
     comentario: {
       resolucao: "CERTO. CADH, art. 8º (garantias judiciais): assegura o julgamento em prazo razoável por juiz competente, imparcial e independente, a presunção de inocência e o direito de recorrer da sentença a juiz ou tribunal superior (duplo grau de jurisdição).",
@@ -467,12 +372,7 @@ const QUESTOES_PCAL_LOTE6 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "não restabelecer a pena de morte",
     cognitivo: {
       motivo: "Cobrar a cláusula de vedação ao retrocesso quanto à pena de morte (art. 4º da CADH).",
-      mede: "Convenção Americana — direito à vida.",
-      pegadinhaDesc: "A banca costuma afirmar que a CADH proíbe a pena de morte em termos absolutos, para todos os países.",
-      ondeErra: "Confunde vedação ao retrocesso com proibição absoluta universal.",
       palavraCritica: "não restabelecer nos que aboliram",
-      tecnica: "CADH não proíbe a pena de morte em absoluto — veda seu restabelecimento e ampliação (efeito cliquet).",
-      regraMental: "Pacto de São José: quem aboliu a pena de morte não pode trazê-la de volta (não retrocesso)."
     },
     comentario: {
       resolucao: "CERTO. CADH, art. 4º: nos Estados que aboliram a pena de morte, não se pode restabelecê-la, nem estendê-la a novos delitos. Trata-se de cláusula de proibição ao retrocesso (efeito cliquet), e não de proibição universal e absoluta da pena capital.",
@@ -492,12 +392,7 @@ const QUESTOES_PCAL_LOTE6 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "interesse ou sentimento pessoal",
     cognitivo: {
       motivo: "Cobrar o elemento subjetivo especial da prevaricação (art. 319).",
-      mede: "Crimes contra a Administração Pública (Dia 17 do plano).",
-      pegadinhaDesc: "A banca costuma trocar 'interesse ou sentimento pessoal' por 'vantagem indevida' (que caracteriza corrupção).",
-      ondeErra: "Confunde prevaricação (sentimento pessoal) com corrupção (vantagem).",
       palavraCritica: "satisfazer interesse ou sentimento pessoal",
-      tecnica: "Prevaricação: motivação PESSOAL (sem vantagem econômica). Corrupção: vantagem indevida.",
-      regraMental: "Prevaricação = 'fez por preguiça/vingança/favor pessoal', sem grana. Corrupção = tem vantagem."
     },
     comentario: {
       resolucao: "CERTO. CP, art. 319: prevaricar é retardar ou deixar de praticar, indevidamente, ato de ofício, ou praticá-lo contra disposição expressa de lei, para satisfazer interesse ou sentimento pessoal. O especial fim de agir (interesse/sentimento pessoal) é o que a distingue de outros crimes funcionais.",
@@ -515,12 +410,7 @@ const QUESTOES_PCAL_LOTE6 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "particular / oferecer ou prometer",
     cognitivo: {
       motivo: "Cobrar a corrupção ativa (art. 333) e seu sujeito ativo (particular).",
-      mede: "Crimes contra a Administração — praticados por particular.",
-      pegadinhaDesc: "A banca costuma trocar 'oferecer/prometer' (ativa) por 'solicitar/receber' (passiva) ou o sujeito (funcionário).",
-      ondeErra: "Confunde corrupção ativa (particular oferece) com passiva (funcionário solicita/recebe).",
       palavraCritica: "particular oferece/promete",
-      tecnica: "Ativa: PARTICULAR oferece/promete (art. 333). Passiva: FUNCIONÁRIO solicita/recebe/aceita (art. 317).",
-      regraMental: "Ativa = quem dá (particular). Passiva = quem recebe (funcionário). Não precisa uma para a outra existir."
     },
     comentario: {
       resolucao: "CERTO. CP, art. 333: a corrupção ativa é praticada por particular que oferece ou promete vantagem indevida a funcionário público para determiná-lo a praticar, omitir ou retardar ato de ofício. É crime formal e independe da aceitação (a corrupção passiva, do art. 317, é autônoma).",

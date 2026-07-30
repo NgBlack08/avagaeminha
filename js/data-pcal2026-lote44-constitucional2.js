@@ -34,12 +34,7 @@ const QUESTOES_PCAL_LOTE44 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "livre a manifestação do pensamento ... vedado o anonimato",
     cognitivo: {
       motivo: "Cobrar a literalidade do art. 5º, IV, e a razão de ser da vedação ao anonimato (responsabilização e direito de resposta).",
-      mede: "Direito Constitucional — direitos fundamentais (liberdade de manifestação do pensamento).",
-      pegadinhaDesc: "A banca pode afirmar que a Constituição admite manifestação anônima como forma de proteção ao autor.",
-      ondeErra: "Acha que existe manifestação anônima protegida constitucionalmente.",
       palavraCritica: "vedado o anonimato ... responsabilização",
-      tecnica: "O art. 5º, IV, da CF assegura a livre manifestação do pensamento, mas veda expressamente o anonimato. A vedação existe para permitir a responsabilização do autor por eventuais abusos e para assegurar ao ofendido o direito de resposta proporcional ao agravo.",
-      regraMental: "Manifestação é livre, mas nunca anônima — quem fala, assume o que fala."
     },
     comentario: {
       resolucao: "CERTO. A Constituição assegura a livre manifestação do pensamento, mas veda o anonimato (art. 5º, IV) justamente para permitir a responsabilização do autor por eventuais abusos e assegurar ao ofendido o direito de resposta proporcional ao agravo.",
@@ -58,12 +53,7 @@ const QUESTOES_PCAL_LOTE44 = [
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "admite o anonimato do autor",
     cognitivo: {
       motivo: "Cobrar, na forma invertida, que a CF veda — e não admite — o anonimato na manifestação do pensamento.",
-      mede: "Direito Constitucional — direitos fundamentais (liberdade de manifestação do pensamento).",
-      pegadinhaDesc: "A banca inverte o comando constitucional, transformando uma vedação expressa em uma suposta permissão condicionada.",
-      ondeErra: "Acredita que o anonimato pode ser admitido em certas circunstâncias, como proteção contra retaliação.",
       palavraCritica: "admite o anonimato",
-      tecnica: "O art. 5º, IV, da CF veda expressamente o anonimato na manifestação do pensamento, sem prever exceções relacionadas a retaliações pessoais ou profissionais. A identificação do autor é sempre exigida, justamente para viabilizar sua responsabilização por eventuais abusos.",
-      regraMental: "A CF nunca admite anonimato na manifestação do pensamento — a vedação é sem exceções."
     },
     comentario: {
       resolucao: "ERRADO. A Constituição veda — e não admite — o anonimato na manifestação do pensamento (art. 5º, IV), sem prever exceção relacionada a proteção contra retaliações. A identificação do autor é sempre exigida, para viabilizar sua responsabilização por eventuais abusos.",
@@ -84,12 +74,7 @@ const QUESTOES_PCAL_LOTE44 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "independentemente de censura ou licença",
     cognitivo: {
       motivo: "Cobrar a literalidade do art. 5º, IX, e a vedação à exigência de autorização prévia (censura) para publicação de obras.",
-      mede: "Direito Constitucional — direitos fundamentais (liberdade de expressão intelectual, artística e científica).",
-      pegadinhaDesc: "A banca pode afirmar que órgãos públicos podem exigir autorização prévia para publicações em certos casos.",
-      ondeErra: "Acha que a liberdade de expressão intelectual/artística/científica admite licenciamento prévio por órgão estatal.",
       palavraCritica: "independentemente de censura ou licença",
-      tecnica: "O art. 5º, IX, da CF assegura a livre expressão da atividade intelectual, artística, científica e de comunicação, independentemente de censura ou licença. Exigir autorização prévia de órgão público para publicar uma obra caracteriza censura prévia, incompatível com a Constituição.",
-      regraMental: "Expressão intelectual/artística/científica: livre, sem censura nem licença prévia."
     },
     comentario: {
       resolucao: "CERTO. É livre a expressão da atividade intelectual, artística, científica e de comunicação, independentemente de censura ou licença (art. 5º, IX, da CF), sendo incompatível com a Constituição a exigência de autorização prévia de órgão público para a publicação de uma obra.",
@@ -108,12 +93,7 @@ const QUESTOES_PCAL_LOTE44 = [
     gabarito: "E", pegadinha: "exigencia-inexistente", palavraChave: "pode ser condicionada ... à obtenção de licença prévia",
     cognitivo: {
       motivo: "Cobrar, na forma invertida, que a CF não admite condicionamento da liberdade de expressão intelectual/artística/científica a licença prévia, nem mesmo por relevância do tema.",
-      mede: "Direito Constitucional — direitos fundamentais (liberdade de expressão intelectual, artística e científica).",
-      pegadinhaDesc: "A banca cria uma exceção inexistente no texto constitucional, condicionando a liberdade a critérios de 'relevância social'.",
-      ondeErra: "Aceita que a Constituição preveja uma hipótese de licenciamento prévio por relevância do tema, quando o texto não faz tal ressalva.",
       palavraCritica: "pode ser condicionada ... licença prévia ... temas de interesse social relevante",
-      tecnica: "O art. 5º, IX, da CF assegura a liberdade de expressão intelectual, artística, científica e de comunicação de forma incondicionada, independentemente de censura ou licença — não havendo exceção constitucional relacionada à relevância social do tema da obra.",
-      regraMental: "Não existe 'licença por relevância do tema' — a liberdade do art. 5º, IX é sem essa ressalva."
     },
     comentario: {
       resolucao: "ERRADO. A liberdade de expressão intelectual, artística, científica e de comunicação é assegurada pela CF independentemente de censura ou licença (art. 5º, IX), sem qualquer exceção relacionada à relevância social do tema da obra a ser publicada.",
@@ -134,12 +114,7 @@ const QUESTOES_PCAL_LOTE44 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "não comporta exceção ... operação sigilosa",
     cognitivo: {
       motivo: "Cobrar que o direito à identificação dos responsáveis pela prisão (art. 5º, LXIV) é garantia incondicional, sem exceção para operações sigilosas.",
-      mede: "Direito Constitucional — direitos fundamentais (direitos do preso).",
-      pegadinhaDesc: "A banca pode criar uma exceção inexistente para operações sigilosas ou situações análogas.",
-      ondeErra: "Aceita que o sigilo de uma operação policial afaste o direito do preso de saber quem o prendeu.",
       palavraCritica: "não comporta exceção ... operação sigilosa",
-      tecnica: "O art. 5º, LXIV, da CF assegura ao preso o direito à identificação dos responsáveis por sua prisão ou por seu interrogatório policial, sem qualquer ressalva. A garantia é precondição para a responsabilização de agentes estatais por eventuais abusos, e por isso não admite exceção — nem mesmo em operações sigilosas.",
-      regraMental: "Identificação dos responsáveis pela prisão: garantia incondicional, mesmo em operação sigilosa."
     },
     comentario: {
       resolucao: "CERTO. O art. 5º, LXIV, da CF assegura ao preso o direito à identificação dos responsáveis por sua prisão ou por seu interrogatório policial, sem qualquer exceção constitucional — nem mesmo quando a prisão decorrer de operação sigilosa autorizada por autoridade competente.",
@@ -158,12 +133,7 @@ const QUESTOES_PCAL_LOTE44 = [
     gabarito: "E", pegadinha: "exigencia-inexistente", palavraChave: "exceto quando ... operação sigilosa ... pode ser recusada",
     cognitivo: {
       motivo: "Cobrar, na forma invertida, que não existe exceção constitucional ao direito de identificação dos responsáveis pela prisão.",
-      mede: "Direito Constitucional — direitos fundamentais (direitos do preso).",
-      pegadinhaDesc: "A banca cria uma exceção (operação sigilosa) que simplesmente não existe no texto constitucional.",
-      ondeErra: "Acredita que razões de segurança institucional podem afastar uma garantia constitucional incondicional.",
       palavraCritica: "exceto quando ... operação sigilosa ... pode ser recusada",
-      tecnica: "O art. 5º, LXIV, da CF não prevê qualquer ressalva ao direito do preso de saber quem o prendeu ou interrogou. A identificação é garantia instrumental, precondição da responsabilização estatal, e não comporta exceção — nem por sigilo operacional, nem por segurança institucional.",
-      regraMental: "Onde a Constituição não abre exceção, a banca não pode inventar uma — identificação do preso é sempre garantida."
     },
     comentario: {
       resolucao: "ERRADO. A ressalva relativa a 'operação sigilosa' não existe no texto constitucional. O art. 5º, LXIV, assegura ao preso o direito à identificação dos responsáveis por sua prisão ou interrogatório policial sem qualquer exceção, seja por sigilo operacional, seja por segurança institucional.",
@@ -184,12 +154,7 @@ const QUESTOES_PCAL_LOTE44 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "trânsito em julgado ... apenas para a dissolução ... suspensão ... decisão recorrível",
     cognitivo: {
       motivo: "Cobrar que o trânsito em julgado é exigido apenas para a dissolução compulsória, e não para a suspensão de atividades.",
-      mede: "Direito Constitucional — direitos fundamentais (liberdade de associação).",
-      pegadinhaDesc: "A banca pode estender a exigência de trânsito em julgado também à suspensão de atividades.",
-      ondeErra: "Não distingue a natureza definitiva da dissolução (exige trânsito em julgado) da natureza reversível da suspensão (dispensa trânsito em julgado).",
       palavraCritica: "trânsito em julgado ... apenas para a dissolução",
-      tecnica: "O art. 5º, XIX, da CF exige decisão judicial tanto para a suspensão quanto para a dissolução compulsória de associações, mas o trânsito em julgado é exigido apenas no caso da dissolução — medida definitiva. A suspensão, por ser reversível, admite decisão judicial ainda recorrível.",
-      regraMental: "Suspender é provisório (decisão judicial simples); dissolver é definitivo (exige trânsito em julgado)."
     },
     comentario: {
       resolucao: "CERTO. Nos termos do art. 5º, XIX, da CF, as associações só podem ser compulsoriamente dissolvidas ou ter suas atividades suspensas por decisão judicial, exigindo-se o trânsito em julgado apenas para a dissolução compulsória — a suspensão, por ser medida reversível, admite decisão judicial ainda recorrível.",
@@ -208,12 +173,7 @@ const QUESTOES_PCAL_LOTE44 = [
     gabarito: "E", pegadinha: "generalizacao", palavraChave: "aplicável igualmente às duas medidas",
     cognitivo: {
       motivo: "Cobrar, na forma invertida, que o trânsito em julgado é exigido apenas para a dissolução, e não para a suspensão de atividades.",
-      mede: "Direito Constitucional — direitos fundamentais (liberdade de associação).",
-      pegadinhaDesc: "A banca generaliza a exigência de trânsito em julgado, aplicando-a também à suspensão de atividades.",
-      ondeErra: "Assume que, por ambas serem medidas graves contra a associação, o mesmo requisito processual (trânsito em julgado) se aplica a ambas.",
       palavraCritica: "aplicável igualmente às duas medidas",
-      tecnica: "O art. 5º, XIX, da CF exige o trânsito em julgado apenas para a dissolução compulsória de associações — medida definitiva. A suspensão de atividades, por ser reversível, admite decisão judicial ainda recorrível, não exigindo trânsito em julgado.",
-      regraMental: "Nunca generalizar o trânsito em julgado para a suspensão — ele é exclusivo da dissolução."
     },
     comentario: {
       resolucao: "ERRADO. O trânsito em julgado, nos termos do art. 5º, XIX, da CF, é exigido apenas para a dissolução compulsória de associações — medida definitiva. A suspensão das atividades, por ser reversível, admite decisão judicial ainda recorrível, sem necessidade de trânsito em julgado.",
@@ -234,12 +194,7 @@ const QUESTOES_PCAL_LOTE44 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "racismo ... admite graça e indulto ... terrorismo ... insuscetível de anistia, graça ou indulto",
     cognitivo: {
       motivo: "Cobrar o cruzamento fino entre imprescritibilidade (racismo, art. 5º, XLII) e vedação a graça/anistia (tortura, tráfico, terrorismo e hediondos, art. 5º, XLIII) — regimes jurídicos distintos.",
-      mede: "Direito Constitucional — direitos fundamentais (crimes inafiançáveis, imprescritíveis e insuscetíveis de graça ou anistia).",
-      pegadinhaDesc: "A banca pode misturar os regimes, afirmando que o racismo não admite graça (quando na verdade só é vedado a tortura/tráfico/terrorismo/hediondos) ou que o terrorismo é imprescritível (quando na verdade só racismo e ação de grupos armados são).",
-      ondeErra: "Decora os incisos sem entender que imprescritibilidade e vedação a graça/anistia são regimes jurídicos diferentes, aplicáveis a crimes diferentes.",
       palavraCritica: "racismo ... admite graça e indulto ... terrorismo ... insuscetível de anistia, graça ou indulto",
-      tecnica: "O art. 5º, XLII, torna o racismo inafiançável e imprescritível — mas não veda graça ou indulto. Já o art. 5º, XLIII, torna tortura, tráfico, terrorismo e hediondos inafiançáveis e insuscetíveis de graça ou anistia — mas esses crimes PRESCREVEM (só racismo e ação de grupos armados, do art. 5º, XLIV, são imprescritíveis).",
-      regraMental: "Macete: Imprescritíveis = RA-GA (Racismo e Ação de Grupos Armados). Sem graça/anistia, mas prescritíveis = 3T+H (Tortura, Tráfico, Terrorismo, Hediondos)."
     },
     comentario: {
       resolucao: "CERTO. O racismo (art. 5º, XLII) é inafiançável e imprescritível, mas a Constituição não veda a ele graça ou indulto. Já a tortura, o tráfico, o terrorismo e os hediondos (art. 5º, XLIII) são inafiançáveis e insuscetíveis de graça ou anistia, mas prescrevem — são regimes jurídicos distintos, e a assertiva reproduz corretamente essa distinção.",
@@ -258,12 +213,7 @@ const QUESTOES_PCAL_LOTE44 = [
     gabarito: "E", pegadinha: "juris-mais-lei", palavraChave: "racismo ... insuscetível de graça ... terrorismo ... admite anistia, graça ou indulto",
     cognitivo: {
       motivo: "Cobrar, na forma invertida, que imprescritibilidade e vedação a graça/anistia não caminham juntas — a lógica do item está exatamente trocada.",
-      mede: "Direito Constitucional — direitos fundamentais (crimes inafiançáveis, imprescritíveis e insuscetíveis de graça ou anistia).",
-      pegadinhaDesc: "A banca cria uma falsa relação de causalidade entre imprescritibilidade e vedação a graça, invertendo qual crime tem qual restrição.",
-      ondeErra: "Presume que 'imprescritível' e 'sem graça/anistia' são a mesma coisa e devem sempre andar juntas.",
       palavraCritica: "insuscetível de graça ... por força de sua imprescritibilidade ... admite anistia, graça ou indulto",
-      tecnica: "O racismo (art. 5º, XLII) é imprescritível, mas a CF NÃO veda a ele graça ou indulto. Já o terrorismo (art. 5º, XLIII) é prescritível, mas é expressamente insuscetível de graça ou anistia — exatamente o oposto do que afirma o item.",
-      regraMental: "Imprescritibilidade ≠ vedação a graça/anistia. São regimes jurídicos independentes, cada um aplicado a crimes diferentes."
     },
     comentario: {
       resolucao: "ERRADO. A relação está invertida: o racismo é imprescritível, mas a CF NÃO veda a ele graça ou indulto (art. 5º, XLII). Já o terrorismo, embora prescritível, é expressamente insuscetível de graça, indulto ou anistia (art. 5º, XLIII) — o oposto do que a assertiva afirma.",
@@ -284,12 +234,7 @@ const QUESTOES_PCAL_LOTE44 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "habeas corpus ... liberdade de locomoção ... mandado de segurança ... residual",
     cognitivo: {
       motivo: "Cobrar a correta distinção entre habeas corpus (liberdade de locomoção) e mandado de segurança (residual, direito líquido e certo).",
-      mede: "Direito Constitucional — remédios constitucionais (habeas corpus x mandado de segurança).",
-      pegadinhaDesc: "A banca pode indicar o mandado de segurança como o remédio cabível para tutelar a liberdade de locomoção, trocando os institutos.",
-      ondeErra: "Confunde os dois remédios, aplicando o mandado de segurança a uma hipótese que é, na verdade, de habeas corpus.",
       palavraCritica: "habeas corpus ... e não o mandado de segurança",
-      tecnica: "O habeas corpus (art. 5º, LXVIII) é cabível sempre que alguém sofrer ou se achar ameaçado de sofrer violência ou coação em sua liberdade de locomoção, por ilegalidade ou abuso de poder. O mandado de segurança (art. 5º, LXIX) é residual, protegendo direito líquido e certo não amparado por habeas corpus ou habeas data — nunca a liberdade de locomoção.",
-      regraMental: "Liberdade de ir e vir = habeas corpus, sempre. Mandado de segurança é o que sobra (residual)."
     },
     comentario: {
       resolucao: "CERTO. O remédio constitucional cabível para tutelar a liberdade de locomoção é o habeas corpus (art. 5º, LXVIII), e não o mandado de segurança (art. 5º, LXIX), que tem natureza residual, protegendo direito líquido e certo não amparado por habeas corpus ou habeas data.",
@@ -308,12 +253,7 @@ const QUESTOES_PCAL_LOTE44 = [
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "mandado de segurança ... tutelar a liberdade de locomoção",
     cognitivo: {
       motivo: "Cobrar, na forma invertida, que o remédio destinado à liberdade de locomoção é o habeas corpus, e não o mandado de segurança.",
-      mede: "Direito Constitucional — remédios constitucionais (habeas corpus x mandado de segurança).",
-      pegadinhaDesc: "A banca atribui ao mandado de segurança a função específica que pertence ao habeas corpus.",
-      ondeErra: "Não sabe que o mandado de segurança é residual e nunca tutela diretamente a liberdade de locomoção.",
       palavraCritica: "mandado de segurança ... tutelar a liberdade de locomoção",
-      tecnica: "O remédio constitucional cabível para anular prisão ilegal e tutelar a liberdade de locomoção é o habeas corpus (art. 5º, LXVIII), e não o mandado de segurança (art. 5º, LXIX) — este último é residual, protegendo direito líquido e certo não amparado por habeas corpus ou habeas data.",
-      regraMental: "Nunca é mandado de segurança quando o bem jurídico é a liberdade de locomoção — é sempre habeas corpus."
     },
     comentario: {
       resolucao: "ERRADO. O remédio constitucional cabível para anular prisão ilegal e tutelar a liberdade de locomoção é o habeas corpus (art. 5º, LXVIII), e não o mandado de segurança (art. 5º, LXIX), que é residual e protege direito líquido e certo não amparado por habeas corpus ou habeas data.",
@@ -334,12 +274,7 @@ const QUESTOES_PCAL_LOTE44 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "qualquer cidadão ... isento de custas ... salvo comprovada má-fé",
     cognitivo: {
       motivo: "Cobrar a legitimidade ativa (qualquer cidadão), o objeto e a isenção de custas/sucumbência da ação popular, salvo má-fé.",
-      mede: "Direito Constitucional — remédios constitucionais (ação popular).",
-      pegadinhaDesc: "A banca pode restringir a legitimidade ativa (por exemplo, exigindo capacidade postulatória de advogado) ou negar a isenção de custas.",
-      ondeErra: "Acha que a ação popular exige representação por advogado ou que o autor sempre arca com custas e sucumbência.",
       palavraCritica: "qualquer cidadão ... isento de custas ... salvo comprovada má-fé",
-      tecnica: "O art. 5º, LXXIII, da CF legitima qualquer cidadão a propor ação popular para anular ato lesivo ao patrimônio público ou de entidade de que o Estado participe, à moralidade administrativa, ao meio ambiente e ao patrimônio histórico e cultural, ficando o autor, salvo comprovada má-fé, isento de custas judiciais e do ônus da sucumbência.",
-      regraMental: "Ação popular: qualquer cidadão, objeto amplo (patrimônio público/moralidade/ambiente/histórico-cultural), sem custas salvo má-fé."
     },
     comentario: {
       resolucao: "CERTO. Nos termos do art. 5º, LXXIII, da CF, qualquer cidadão é parte legítima para propor ação popular visando anular ato lesivo ao patrimônio público, à moralidade administrativa, ao meio ambiente ou ao patrimônio histórico e cultural, ficando isento de custas judiciais e do ônus da sucumbência, salvo comprovada má-fé.",
@@ -358,12 +293,7 @@ const QUESTOES_PCAL_LOTE44 = [
     gabarito: "E", pegadinha: "troca-sujeito", palavraChave: "partido político ... entidade de classe ... não sendo facultado ao cidadão comum",
     cognitivo: {
       motivo: "Cobrar, na forma invertida, que o legitimado para a ação popular é qualquer cidadão, e não partidos políticos ou entidades de classe.",
-      mede: "Direito Constitucional — remédios constitucionais (ação popular).",
-      pegadinhaDesc: "A banca troca o legitimado ativo da ação popular (cidadão) pelos legitimados de outras ações constitucionais (partidos, entidades de classe — próprios do mandado de segurança coletivo).",
-      ondeErra: "Confunde a legitimidade ativa da ação popular com a do mandado de segurança coletivo.",
       palavraCritica: "não sendo facultado ao cidadão comum",
-      tecnica: "O art. 5º, LXXIII, da CF legitima justamente o cidadão — e não partidos políticos ou entidades de classe — a propor ação popular para anular ato lesivo ao patrimônio público, à moralidade administrativa, ao meio ambiente ou ao patrimônio histórico e cultural. A legitimidade de partidos e entidades de classe é típica do mandado de segurança coletivo, instituto distinto.",
-      regraMental: "Ação popular = cidadão. Mandado de segurança coletivo = partido político/entidade de classe/associação/organização sindical."
     },
     comentario: {
       resolucao: "ERRADO. A ação popular pode ser proposta por qualquer cidadão (art. 5º, LXXIII, da CF), e não apenas por partido político ou entidade de classe — legitimados próprios do mandado de segurança coletivo, instituto distinto que não se confunde com a ação popular.",
@@ -384,12 +314,7 @@ const QUESTOES_PCAL_LOTE44 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "entre 5 horas e 21 horas ... abuso de autoridade ... fora dessa janela",
     cognitivo: {
       motivo: "Cobrar o critério objetivo e temporal (5h às 21h) fixado pela Lei de Abuso de Autoridade para o cumprimento de mandado de busca domiciliar, superando a antiga divergência doutrinária sobre 'dia' e 'noite'.",
-      mede: "Direito Constitucional — direitos fundamentais (inviolabilidade de domicílio, critério objetivo de dia/noite).",
-      pegadinhaDesc: "A banca pode negar a existência desse critério objetivo, sugerindo que a definição de dia/noite permanece indefinida ou subjetiva.",
-      ondeErra: "Ignora que a Lei 13.869/2019 fixou um critério objetivo e temporal para o cumprimento de mandado de busca domiciliar.",
       palavraCritica: "entre 5 horas e 21 horas",
-      tecnica: "A definição de 'dia' e 'noite' para fins de cumprimento de mandado de busca domiciliar sempre gerou divergência doutrinária. Com o art. 22, § 1º, III, da Lei nº 13.869/2019 (Lei de Abuso de Autoridade), passou a ser válido o cumprimento do mandado entre 5h e 21h — cumprir a diligência fora desse período, sem consentimento do morador, configura abuso de autoridade (conforme, inclusive, o STJ, RHC 196.496/RN).",
-      regraMental: "Busca domiciliar com mandado: só entre 5h e 21h. Fora disso, sem consentimento, é abuso de autoridade."
     },
     comentario: {
       resolucao: "CERTO. Após o advento do art. 22, § 1º, III, da Lei nº 13.869/2019 (Lei de Abuso de Autoridade), passou a ser válido o cumprimento de mandado de busca e apreensão domiciliar entre 5h e 21h, configurando abuso de autoridade seu cumprimento fora dessa janela sem o consentimento do morador — entendimento reafirmado pelo STJ (RHC 196.496/RN).",
@@ -408,12 +333,7 @@ const QUESTOES_PCAL_LOTE44 = [
     gabarito: "E", pegadinha: "termo-absoluto", palavraChave: "sem qualquer critério objetivo ... avaliação subjetiva do agente",
     cognitivo: {
       motivo: "Cobrar, na forma invertida, que a Lei 13.869/2019 já fixou um critério objetivo e temporal (5h-21h) para a definição de dia/noite na busca domiciliar.",
-      mede: "Direito Constitucional — direitos fundamentais (inviolabilidade de domicílio, critério objetivo de dia/noite).",
-      pegadinhaDesc: "A banca nega a existência do critério legal objetivo, atribuindo a definição a uma avaliação subjetiva do agente.",
-      ondeErra: "Desconhece a superveniência do art. 22, § 1º, III, da Lei 13.869/2019, que resolveu a antiga divergência doutrinária.",
       palavraCritica: "sem qualquer critério objetivo ... avaliação subjetiva do agente",
-      tecnica: "Embora a definição de 'dia' e 'noite' para busca domiciliar tenha sido, no passado, objeto de divergência doutrinária, o art. 22, § 1º, III, da Lei nº 13.869/2019 (Lei de Abuso de Autoridade) fixou um critério objetivo e temporal: o cumprimento é válido entre 5h e 21h, não havendo mais espaço para avaliação subjetiva do agente.",
-      regraMental: "Desde 2019, dia/noite para busca domiciliar não é mais subjetivo — é objetivo: 5h às 21h."
     },
     comentario: {
       resolucao: "ERRADO. A Lei nº 13.869/2019 (Lei de Abuso de Autoridade), em seu art. 22, § 1º, III, fixou um critério objetivo e temporal para a definição de 'dia' e 'noite' na busca domiciliar (válido entre 5h e 21h), superando a antiga divergência doutrinária — a definição não depende mais de avaliação subjetiva do agente.",

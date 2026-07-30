@@ -34,12 +34,7 @@ const QUESTOES_PCAL_LOTE11 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "uma vez que / porquanto",
     cognitivo: {
       motivo: "Cobrar equivalência entre conectivos de mesmo valor semântico (causal).",
-      mede: "Coesão — emprego de conectores (item 4.1 do edital).",
-      pegadinhaDesc: "A banca alterna entre trocas legítimas (mesmo valor) e ilegítimas (valor diverso).",
-      ondeErra: "Rejeita a troca por desconhecer o valor causal de 'porquanto'.",
       palavraCritica: "porquanto = porque (causal)",
-      tecnica: "Só se troca conectivo por outro do MESMO valor lógico. Causais entre si: porque, uma vez que, porquanto, já que, visto que.",
-      regraMental: "Causal ↔ causal: troca válida. Causal ↔ adversativo/conclusivo: troca inválida."
     },
     comentario: {
       resolucao: "CERTO. “Uma vez que” e “porquanto” são conjunções de valor CAUSAL (equivalem a “porque”). A substituição mantém a correção gramatical e a relação de causa entre a necessidade de qualificação dos quadros e a compreensão técnica dos meios digitais.",
@@ -59,12 +54,7 @@ const QUESTOES_PCAL_LOTE11 = [
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "contudo / portanto",
     cognitivo: {
       motivo: "Distinguir conectivo adversativo de conclusivo.",
-      mede: "Coesão sequencial (item 4.1 do edital).",
-      pegadinhaDesc: "Troca um adversativo por um conclusivo, invertendo a articulação do argumento.",
-      ondeErra: "Julga a fluência da frase e ignora a mudança da relação lógica.",
       palavraCritica: "contudo (oposição) × portanto (conclusão)",
-      tecnica: "'Contudo' marca contraste com o parágrafo anterior; 'portanto' introduziria conclusão, o que desfaz o contraste.",
-      regraMental: "Adversativos: mas, porém, contudo, todavia, entretanto. Conclusivos: logo, portanto, por isso."
     },
     comentario: {
       resolucao: "ERRADO. “Contudo” é conectivo ADVERSATIVO: introduz a ressalva de que a técnica não substitui o raciocínio investigativo, contrapondo-se ao parágrafo anterior. “Portanto” é CONCLUSIVO e transformaria a ressalva em consequência, alterando a coerência argumentativa.",
@@ -84,12 +74,7 @@ const QUESTOES_PCAL_LOTE11 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "submeter-se a + observância",
     cognitivo: {
       motivo: "Cobrar a crase resultante de regência verbal + artigo feminino.",
-      mede: "Emprego do sinal indicativo de crase (item 5.7 do edital).",
-      pegadinhaDesc: "Exige identificar que o verbo mantém a regência em 'a' e que o novo termo é feminino e admite artigo.",
-      ondeErra: "Não percebe que a troca do termo regido cria a condição para a crase.",
       palavraCritica: "preposição 'a' (regência) + artigo 'a' (observância)",
-      tecnica: "Teste do masculino: 'submete-se AO cumprimento' → apareceu 'ao', logo há crase no feminino.",
-      regraMental: "Crase = preposição A (exigida pelo verbo) + artigo A (do substantivo feminino)."
     },
     comentario: {
       resolucao: "CERTO. O verbo “submeter-se” rege a preposição “a” (submeter-se A algo), e “observância” é substantivo feminino que admite o artigo “a”. Da fusão resulta a crase: “submete-se à observância do devido processo legal”. O teste do masculino confirma (“submete-se ao cumprimento”).",
@@ -109,12 +94,7 @@ const QUESTOES_PCAL_LOTE11 = [
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "tampouco / tão pouco",
     cognitivo: {
       motivo: "Distinguir 'tampouco' (= também não) de 'tão pouco' (intensidade/quantidade).",
-      mede: "Significação das palavras (item 6.1 do edital).",
-      pegadinhaDesc: "Iguala duas formas homófonas de sentidos distintos.",
-      ondeErra: "Confia na semelhança sonora e ignora a diferença semântica.",
       palavraCritica: "tampouco = também não",
-      tecnica: "Substitua por 'também não': se couber, é 'tampouco' (junto). Se a ideia for 'muito pouco', é 'tão pouco' (separado).",
-      regraMental: "Tampouco = também não (negação). Tão pouco = quantidade reduzida."
     },
     comentario: {
       resolucao: "ERRADO. No contexto, “tampouco” significa “também não” (o domínio das ferramentas não dispensa a análise crítica, nem tampouco a observância das garantias). Já “tão pouco” exprime pequena quantidade/intensidade. As formas não são intercambiáveis: a alteração comprometeria o sentido.",
@@ -134,12 +114,7 @@ const QUESTOES_PCAL_LOTE11 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "conjunção deslocada",
     cognitivo: {
       motivo: "Cobrar a regra de pontuação da conjunção intercalada/deslocada.",
-      mede: "Emprego dos sinais de pontuação (item 5.4 do edital).",
-      pegadinhaDesc: "A banca costuma atribuir as vírgulas a aposto ou a adjunto adverbial.",
-      ondeErra: "Não identifica 'contudo' como conjunção deslocada do início do período.",
       palavraCritica: "contudo intercalado entre vírgulas",
-      tecnica: "Conjunção adversativa deslocada para o interior do período é isolada por vírgulas.",
-      regraMental: "'Contudo/porém/todavia' no meio da frase: entre vírgulas (par obrigatório)."
     },
     comentario: {
       resolucao: "CERTO. Quando a conjunção adversativa é deslocada de sua posição inicial e intercalada no período, ela deve ser isolada por vírgulas — exatamente o caso de “Não se trata, contudo, de substituir”. A pontuação sinaliza o deslocamento.",
@@ -161,12 +136,7 @@ const QUESTOES_PCAL_LOTE11 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "flagrante próprio / permanente",
     cognitivo: {
       motivo: "Aplicar as modalidades do art. 302 do CPP a um caso concreto de crime permanente.",
-      mede: "Prisão em flagrante (item 3 do edital).",
-      pegadinhaDesc: "A banca costuma rotular a hipótese como flagrante presumido ou impróprio.",
-      ondeErra: "Não percebe que, no crime permanente, o agente 'está cometendo' o delito continuamente.",
       palavraCritica: "está cometendo (inciso I) + permanência",
-      tecnica: "Crime permanente: a consumação se protrai, logo o agente está sempre 'cometendo' — flagrante próprio a qualquer tempo.",
-      regraMental: "Guardar/ter em depósito droga = permanente = flagrante próprio enquanto durar."
     },
     comentario: {
       resolucao: "CERTO. O tráfico nas modalidades “guardar” e “ter em depósito” é crime PERMANENTE; a consumação se prolonga no tempo. Assim, o agente foi surpreendido enquanto cometia a infração, o que caracteriza o flagrante PRÓPRIO (CPP, art. 302, I), reforçado pelo art. 303 do CPP.",
@@ -186,12 +156,7 @@ const QUESTOES_PCAL_LOTE11 = [
     gabarito: "C", pegadinha: "juris-mais-lei", palavraChave: "fundadas razões / período noturno",
     cognitivo: {
       motivo: "Aplicar a tese do RE 603.616 do STF ao caso concreto.",
-      mede: "Busca domiciliar e disposições constitucionais (art. 5º, XI, da CF).",
-      pegadinhaDesc: "O 'período noturno' ativa o reflexo do 'durante o dia', que só vale para o mandado.",
-      ondeErra: "Aplica a restrição horária da ordem judicial à hipótese de flagrante.",
       palavraCritica: "flagrante autoriza a qualquer hora",
-      tecnica: "Aqui as fundadas razões são objetivas: visualização direta da conduta, sem artifício — não é mera denúncia anônima.",
-      regraMental: "Flagrante não tem hora. Mas exige fundadas razões demonstráveis a posteriori."
     },
     comentario: {
       resolucao: "CERTO. CF, art. 5º, XI: em caso de flagrante delito, o ingresso é lícito A QUALQUER HORA. Conforme o STF (RE 603.616), exige-se que haja fundadas razões, justificadas a posteriori, de que ocorre crime no interior do imóvel — o que se verifica pela visualização direta da conduta, sem artifício. Ressalte-se que a mera denúncia anônima, isolada, não bastaria (STJ, HC 598.051).",
@@ -211,12 +176,7 @@ const QUESTOES_PCAL_LOTE11 = [
     gabarito: "E", pegadinha: "verdade-mais-falso", palavraChave: "independentemente de ordem judicial",
     cognitivo: {
       motivo: "Separar a licitude da APREENSÃO da licitude do ACESSO ao conteúdo.",
-      mede: "Busca e apreensão de itens digitais (item do edital).",
-      pegadinhaDesc: "Parte de uma premissa verdadeira (apreensão lícita) para uma conclusão falsa (acesso livre).",
-      ondeErra: "Deduz que apreender legitimamente autoriza devassar o conteúdo.",
       palavraCritica: "apreender ≠ acessar conteúdo",
-      tecnica: "O conteúdo (dados e comunicações) é protegido pela intimidade e pelo sigilo — exige autorização judicial.",
-      regraMental: "Pode apreender no flagrante; para ler as mensagens, precisa do juiz."
     },
     comentario: {
       resolucao: "ERRADO. A apreensão lícita do aparelho NÃO autoriza, por si só, o acesso ao seu conteúdo. Conforme o STJ, a devassa de dados e conversas armazenadas em celular sem autorização judicial é ilícita, por violação à intimidade e ao sigilo de dados (CF, art. 5º, X e XII), contaminando a prova dela derivada.",
@@ -236,12 +196,7 @@ const QUESTOES_PCAL_LOTE11 = [
     gabarito: "E", pegadinha: "termo-absoluto", palavraChave: "por si só, impede automaticamente",
     cognitivo: {
       motivo: "Cobrar os requisitos do art. 33, § 4º, e o papel da quantidade como indício (não vedação automática).",
-      mede: "Lei de Drogas — tráfico privilegiado.",
-      pegadinhaDesc: "Transforma um elemento de valoração (quantidade) em causa automática de exclusão.",
-      ondeErra: "Cria vedação legal inexistente baseada apenas no volume apreendido.",
       palavraCritica: "por si só / automaticamente",
-      tecnica: "Requisitos do § 4º: primariedade, bons antecedentes, não dedicação a atividades criminosas e não integrar organização criminosa. A quantidade é indício a ser valorado, não vedação automática.",
-      regraMental: "Quantidade é indício de dedicação ao tráfico — pode afastar o privilégio, mas exige fundamentação, não é automática."
     },
     comentario: {
       resolucao: "ERRADO. A causa de diminuição do art. 33, § 4º, da Lei 11.343/2006 exige primariedade, bons antecedentes, não dedicação a atividades criminosas e não integrar organização criminosa. A quantidade e a natureza da droga podem ser valoradas como INDÍCIO de dedicação ao tráfico, mas não constituem, por si sós, causa automática de exclusão do benefício — exige-se fundamentação concreta.",
@@ -261,12 +216,7 @@ const QUESTOES_PCAL_LOTE11 = [
     gabarito: "E", pegadinha: "exigencia-inexistente", palavraChave: "efetiva venda",
     cognitivo: {
       motivo: "Cobrar que o tráfico é crime de ação múltipla, não exigindo a venda efetiva.",
-      mede: "Lei de Drogas — tipificação.",
-      pegadinhaDesc: "Cria a exigência de mercancia efetiva para a configuração do tráfico.",
-      ondeErra: "Ignora que 'guardar', 'ter em depósito' e 'transportar' já configuram o art. 33.",
       palavraCritica: "efetiva venda (não é exigida)",
-      tecnica: "Art. 33 é tipo misto alternativo com 18 verbos: guardar, ter em depósito, transportar etc. — a venda é apenas um deles.",
-      regraMental: "Não precisa vender para ser tráfico. Guardar ou ter em depósito já basta."
     },
     comentario: {
       resolucao: "ERRADO. O art. 33 da Lei 11.343/2006 é tipo de ação múltipla (misto alternativo), contemplando dezoito verbos — entre eles “guardar”, “ter em depósito” e “transportar”. Não se exige a efetiva mercancia. Ademais, as circunstâncias (quantidade, balança de precisão e material de embalagem) indicam destinação ao tráfico, conforme os critérios do art. 28, § 2º.",
@@ -288,12 +238,7 @@ const QUESTOES_PCAL_LOTE11 = [
     gabarito: "C", pegadinha: "termo-absoluto", palavraChave: "caráter absoluto",
     cognitivo: {
       motivo: "Cobrar a natureza absoluta (inderrogável) da vedação à tortura.",
-      mede: "Convenção Americana e DH na CF (item 6 do edital).",
-      pegadinhaDesc: "Usa um termo absoluto que, excepcionalmente, é VERDADEIRO — punindo quem aplica a heurística cegamente.",
-      ondeErra: "Marca 'errado' por reflexo, ao ver 'caráter absoluto'.",
       palavraCritica: "absoluto (aqui, correto)",
-      tecnica: "A vedação à tortura é norma inderrogável (jus cogens): não se suspende nem em estados de exceção.",
-      regraMental: "Regra: direitos são relativos. Exceção clássica: vedação à tortura é absoluta."
     },
     comentario: {
       resolucao: "CERTO. A vedação à tortura é inderrogável: a CADH (art. 27) não admite a suspensão do art. 5º nem em situações excepcionais, e a CF a trata como garantia insuscetível de relativização (art. 5º, III, e XLIII). Trata-se de norma de jus cogens no direito internacional.",
@@ -313,12 +258,7 @@ const QUESTOES_PCAL_LOTE11 = [
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "Comissão / órgão jurisdicional",
     cognitivo: {
       motivo: "Distinguir as competências da Comissão e da Corte Interamericana.",
-      mede: "Sistema interamericano de proteção (item 6 do edital).",
-      pegadinhaDesc: "Atribui à Comissão a função jurisdicional, que pertence à Corte.",
-      ondeErra: "Confunde os dois órgãos do sistema.",
       palavraCritica: "Comissão como órgão jurisdicional (falso)",
-      tecnica: "Comissão: recebe petições, investiga, recomenda e pode submeter o caso à Corte. Corte: julga e condena.",
-      regraMental: "Comissão recomenda e 'acusa'; a Corte julga e condena."
     },
     comentario: {
       resolucao: "ERRADO. A Comissão Interamericana NÃO é órgão jurisdicional: analisa petições, formula recomendações e pode submeter o caso à Corte. Quem profere sentenças condenatórias contra os Estados é a CORTE Interamericana de Direitos Humanos, órgão jurisdicional do sistema.",
@@ -338,12 +278,7 @@ const QUESTOES_PCAL_LOTE11 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "inadmissíveis / meios ilícitos",
     cognitivo: {
       motivo: "Vincular a ideia do texto à garantia do art. 5º, LVI, da CF.",
-      mede: "Direitos e garantias fundamentais.",
-      pegadinhaDesc: "A banca costuma negar a previsão constitucional, atribuindo a regra só ao CPP.",
-      ondeErra: "Desconhece que a vedação é expressa na Constituição.",
       palavraCritica: "inadmissíveis no processo",
-      tecnica: "Art. 5º, LVI, da CF é a base; o art. 157 do CPP regulamenta o desentranhamento e a prova derivada.",
-      regraMental: "Prova ilícita: vedação está na CF (LVI) e é detalhada no CPP (157)."
     },
     comentario: {
       resolucao: "CERTO. CF, art. 5º, LVI: “são inadmissíveis, no processo, as provas obtidas por meios ilícitos”. O CPP, art. 157, disciplina o desentranhamento e a contaminação das provas derivadas (frutos da árvore envenenada), ressalvadas a fonte independente e a descoberta inevitável.",
@@ -363,12 +298,7 @@ const QUESTOES_PCAL_LOTE11 = [
     gabarito: "E", pegadinha: "termo-absoluto", palavraChave: "independentemente do procedimento",
     cognitivo: {
       motivo: "Cobrar a distinção entre status constitucional (rito do § 3º) e supralegal.",
-      mede: "A Constituição e os tratados internacionais de DH (item 6 do edital).",
-      pegadinhaDesc: "Generaliza o status constitucional a todos os tratados de DH.",
-      ondeErra: "Ignora a exigência do rito qualificado do art. 5º, § 3º.",
       palavraCritica: "independentemente do procedimento (falso)",
-      tecnica: "Rito do § 3º (2 turnos, 3/5 em cada Casa) = equivalente a emenda. Sem ele = supralegal (STF, RE 466.343).",
-      regraMental: "Tratado de DH sem rito especial: acima da lei, abaixo da Constituição (supralegal)."
     },
     comentario: {
       resolucao: "ERRADO. Somente os tratados de direitos humanos aprovados pelo rito do art. 5º, § 3º, da CF (dois turnos, três quintos em cada Casa) equivalem a emendas constitucionais. Os demais — como a própria Convenção Americana, internalizada pelo Decreto 678/1992 — possuem status SUPRALEGAL, conforme firmou o STF.",
@@ -390,12 +320,7 @@ const QUESTOES_PCAL_LOTE11 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "smurfing / interpostas pessoas",
     cognitivo: {
       motivo: "Reconhecer tipologias de lavagem listadas nominalmente no edital.",
-      mede: "Indícios de fraude e ocultação patrimonial (item III do edital).",
-      pegadinhaDesc: "A banca costuma trocar o nome da tipologia ou negar a caracterização.",
-      ondeErra: "Não associa o fracionamento deliberado ao termo técnico 'smurfing'.",
       palavraCritica: "fracionamento para evitar detecção",
-      tecnica: "Smurfing: dividir a operação em várias menores para ficar abaixo do limite de reporte. Interpostas pessoas: 'laranjas'.",
-      regraMental: "Depósitos logo abaixo do limite + laranjas = smurfing clássico."
     },
     comentario: {
       resolucao: "CERTO. O fracionamento intencional de valores para permanecer abaixo do limite de comunicação obrigatória é a tipologia denominada SMURFING (ou structuring). O uso de contas de pessoas sem lastro econômico caracteriza a utilização de “laranjas” (interpostas pessoas) — ambas expressamente listadas no programa do certame.",
@@ -415,12 +340,7 @@ const QUESTOES_PCAL_LOTE11 = [
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "integração / ordem das fases",
     cognitivo: {
       motivo: "Cobrar a ordem e o conteúdo das fases da lavagem.",
-      mede: "Lavagem de dinheiro — fases (item do edital).",
-      pegadinhaDesc: "Inverte a ordem das fases e classifica erradamente o depósito em espécie.",
-      ondeErra: "Confunde colocação (entrada do dinheiro no sistema) com integração (reintrodução com aparência lícita).",
       palavraCritica: "integração (deveria ser colocação)",
-      tecnica: "Ordem: 1) COLOCAÇÃO (placement) — introduz o dinheiro no sistema; 2) OCULTAÇÃO (layering) — dificulta o rastreio; 3) INTEGRAÇÃO — retorna com aparência lícita.",
-      regraMental: "C-O-I: Colocação → Ocultação → Integração. Depósito em espécie é COLOCAÇÃO."
     },
     comentario: {
       resolucao: "ERRADO. Há dois erros. Primeiro, o depósito em espécie corresponde à fase de COLOCAÇÃO (placement), em que os valores ingressam no sistema financeiro. Segundo, a ordem correta das fases é colocação → ocultação (layering) → integração, e não a apresentada.",
@@ -440,12 +360,7 @@ const QUESTOES_PCAL_LOTE11 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "fluxos × capacidade econômica declarada",
     cognitivo: {
       motivo: "Reconhecer a comparação renda × movimentação como técnica investigativa do edital.",
-      mede: "Comparação entre fluxos financeiros e capacidade econômica (item III do edital).",
-      pegadinhaDesc: "A banca costuma negar a validade da técnica ou exigir prova pericial exclusiva.",
-      ondeErra: "Subestima a análise comparativa como indício idôneo.",
       palavraCritica: "incompatibilidade patrimonial",
-      tecnica: "Movimentação muito superior à renda declarada é red flag clássica de lavagem/ocultação patrimonial.",
-      regraMental: "Movimentou 10x o que declarou? Indício forte de incompatibilidade patrimonial."
     },
     comentario: {
       resolucao: "CERTO. A confrontação entre a movimentação financeira e a renda declarada é técnica expressamente prevista no programa (“comparação entre fluxos financeiros e capacidade econômica declarada”) e constitui indício relevante de ocultação patrimonial, a ser corroborado por outros elementos.",
@@ -465,12 +380,7 @@ const QUESTOES_PCAL_LOTE11 = [
     gabarito: "E", pegadinha: "termo-absoluto", palavraChave: "necessariamente igual a zero",
     cognitivo: {
       motivo: "Distinguir baixa dispersão de dispersão nula.",
-      mede: "Medidas de dispersão (item 2 do edital de Estatística).",
-      pegadinhaDesc: "Confunde 'valores próximos' (desvio pequeno) com 'valores idênticos' (desvio zero).",
-      ondeErra: "Assume que proximidade implica igualdade absoluta.",
       palavraCritica: "necessariamente zero (falso)",
-      tecnica: "Desvio padrão é zero SOMENTE quando todos os valores são exatamente iguais. Valores próximos geram desvio pequeno, porém positivo.",
-      regraMental: "Desvio zero = todos idênticos. Só 'parecidos' = desvio pequeno, mas maior que zero."
     },
     comentario: {
       resolucao: "ERRADO. O desvio padrão é igual a zero apenas quando TODOS os valores do conjunto são exatamente iguais. Valores meramente próximos entre si produzem desvio padrão pequeno, mas necessariamente positivo. A proximidade indica baixa dispersão, não dispersão nula.",

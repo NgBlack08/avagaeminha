@@ -24,12 +24,7 @@ const QUESTOES_PCAL_LOTE54 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "já documentados",
     cognitivo: {
       motivo: "Cobrar o alcance do contraditório/ampla defesa na fase investigatória — acesso à prova já produzida, não participação na produção da prova em andamento.",
-      mede: "Processo Penal — princípios constitucionais (contraditório e ampla defesa).",
-      pegadinhaDesc: "Item literal e correto, alinhado ao entendimento consolidado (Súmula Vinculante 14/STF) sobre o direito de acesso a elementos já documentados no inquérito.",
-      ondeErra: "Pode confundir 'direito de acesso ao já documentado' com um suposto direito de participar ativamente da investigação em curso (que continua sigilosa quanto às diligências futuras).",
       palavraCritica: "já documentados",
-      tecnica: "O defensor tem direito de acesso amplo aos elementos de prova já documentados que digam respeito ao exercício do direito de defesa — mas não a diligências investigatórias em andamento, ainda não documentadas.",
-      regraMental: "Acesso da defesa = ao que JÁ está nos autos, não ao que ainda está sendo apurado."
     },
     comentario: {
       resolucao: "CERTO. Os princípios do contraditório e da ampla defesa asseguram ao acusado o direito de ser ouvido e de apresentar provas, bem como — segundo entendimento consolidado na Súmula Vinculante 14 do STF — o direito de acesso amplo aos elementos de prova já documentados em procedimento investigatório realizado por órgão com competência de polícia judiciária, que digam respeito ao exercício do direito de defesa.",
@@ -48,12 +43,7 @@ const QUESTOES_PCAL_LOTE54 = [
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "em ambos os casos",
     cognitivo: {
       motivo: "Fixar a distinção entre cooperação meramente passiva (reconhecimento pessoal, que pode ser executado coercitivamente) e comportamento ativo/facere (fornecer senha, que não pode ser exigido).",
-      mede: "Processo Penal — princípios constitucionais (nemo tenetur se detegere).",
-      pegadinhaDesc: "Trata reconhecimento pessoal e cessão de senha como se fossem a mesma coisa (ambos 'comportamento ativo'), quando a doutrina os distingue precisamente por isso.",
-      ondeErra: "Não distingue cooperação passiva (tolerar o reconhecimento, admitido mesmo contra a vontade do investigado) de comportamento ativo (fornecer senha, que exige um facere do investigado).",
       palavraCritica: "em ambos os casos",
-      tecnica: "Segundo Renato Brasileiro, o nemo tenetur se detegere protege o investigado de produzir prova contra si mediante comportamento ATIVO (um facere) — por isso ele não é obrigado a fornecer senha de celular. Mas, quanto a provas que demandam apenas cooperação passiva (tolerar a realização), como o reconhecimento pessoal, admite-se a execução coercitiva.",
-      regraMental: "Reconhecimento pessoal = cooperação passiva, pode ser coercitivo. Senha de celular = comportamento ativo, NÃO pode ser exigido."
     },
     comentario: {
       resolucao: "ERRADO. O princípio da não autoincriminação (nemo tenetur se detegere) protege o investigado apenas contra a exigência de comportamento ATIVO (um facere), como o fornecimento da senha de desbloqueio do celular — nesse caso, ele não pode ser compelido. Já o reconhecimento pessoal, por exigir apenas cooperação passiva do investigado (tolerar sua realização), admite execução coercitiva, mesmo contra a vontade dele. Os dois casos, portanto, NÃO recebem o mesmo tratamento.",
@@ -72,12 +62,7 @@ const QUESTOES_PCAL_LOTE54 = [
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "viola o princípio da ampla defesa",
     cognitivo: {
       motivo: "Fixar que o art. 366 do CPP é medida constitucional voltada à preservação da prova, e não uma violação da ampla defesa.",
-      mede: "Processo Penal — princípios constitucionais (ampla defesa) e art. 366 do CPP.",
-      pegadinhaDesc: "Descreve corretamente a hipótese legal (art. 366, CPP), mas conclui, de forma invertida, que ela viola a ampla defesa.",
-      ondeErra: "Confunde uma medida prevista em lei, com participação de defesa técnica, com uma suposta violação de garantia constitucional.",
       palavraCritica: "viola",
-      tecnica: "O art. 366 do CPP prevê a suspensão do processo e do prazo prescricional quando o acusado citado por edital não comparece nem constitui advogado, autorizando o juiz a determinar a produção antecipada de provas urgentes — medida que preserva a prova (verdade real) e conta com defensor nomeado, sendo compatível com o devido processo legal, e não uma violação da ampla defesa.",
-      regraMental: "Produção antecipada de provas do art. 366 = exercício adaptado da ampla defesa, não violação dela."
     },
     comentario: {
       resolucao: "ERRADO. A produção antecipada de provas urgentes, nos casos em que o acusado citado por edital não comparece nem constitui advogado, está expressamente prevista no art. 366 do CPP e não viola o princípio da ampla defesa — ao contrário, é medida que visa preservar a prova (verdade real), sendo exercida com a participação de defesa técnica nomeada pelo juízo, o que a torna compatível com o devido processo legal.",
@@ -96,12 +81,7 @@ const QUESTOES_PCAL_LOTE54 = [
     gabarito: "E", pegadinha: "generalizacao", palavraChave: "em qualquer situação",
     cognitivo: {
       motivo: "Fixar que a única mitigação aceita à vedação de provas ilícitas é o uso em favor do réu (pro reo), nunca para fundamentar condenação (pro societate).",
-      mede: "Processo Penal — princípios constitucionais (inadmissibilidade das provas ilícitas).",
-      pegadinhaDesc: "Generaliza a possível mitigação da vedação (aceita pela doutrina só para absolver o inocente) para 'qualquer situação', incluindo a condenação.",
-      ondeErra: "Estende para a condenação uma exceção que a doutrina e a jurisprudência majoritária reconhecem apenas para a absolvição.",
       palavraCritica: "em qualquer situação",
-      tecnica: "A jurisprudência e a doutrina majoritária admitem prova ilícita apenas em favor do réu (pro reo), quando for a única forma de comprovar sua inocência — nunca para fundamentar uma condenação (pro societate), sob pena de violar o devido processo legal e a dignidade da pessoa humana.",
-      regraMental: "Prova ilícita só socorre o réu (para absolver) — nunca o Estado (para condenar)."
     },
     comentario: {
       resolucao: "ERRADO. A vedação constitucional às provas ilícitas (CF, art. 5º, LVI) é uma barreira contra o arbítrio estatal. A única mitigação aceita pela jurisprudência e pela doutrina majoritária, com base no princípio da proporcionalidade, ocorre quando a prova ilícita é o único caminho para evitar uma condenação injusta (em favor do réu) — nunca para fundamentar a condenação, como afirma incorretamente o item.",
@@ -120,12 +100,7 @@ const QUESTOES_PCAL_LOTE54 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "sem sentença condenatória transitada em julgado",
     cognitivo: {
       motivo: "Cobrar a Súmula 444/STJ e a tese de repercussão geral do STF (RE 591.054) sobre uso de inquéritos/ações em curso para agravar a pena-base.",
-      mede: "Processo Penal — princípios constitucionais (presunção de inocência).",
-      pegadinhaDesc: "Item literal e correto, reproduzindo o entendimento consolidado do STJ e do STF sobre o tema.",
-      ondeErra: "Pode achar que qualquer histórico de envolvimento criminal, mesmo sem condenação definitiva, pode agravar a pena-base, sem violar a presunção de inocência.",
       palavraCritica: "sem sentença condenatória transitada em julgado",
-      tecnica: "Súmula 444/STJ: 'É vedada a utilização de inquéritos policiais e ações penais em curso para agravar a pena-base.' O STF, em repercussão geral (RE 591.054), fixou tese no mesmo sentido: usar tais elementos, sem trânsito em julgado, configura antecipação de culpa, violando a presunção de inocência.",
-      regraMental: "Maus antecedentes exigem condenação com trânsito em julgado — inquérito/ação em curso NUNCA agrava a pena-base."
     },
     comentario: {
       resolucao: "CERTO. Utilizar inquéritos policiais ou ações penais em curso, sem trânsito em julgado, para caracterizar maus antecedentes e agravar a pena-base do réu configura antecipação de culpa, o que fere o princípio da presunção de inocência (ou não culpabilidade) — entendimento consolidado na Súmula 444 do STJ e na tese de repercussão geral fixada pelo STF no RE 591.054.",
@@ -144,12 +119,7 @@ const QUESTOES_PCAL_LOTE54 = [
     gabarito: "E", pegadinha: "termo-absoluto", palavraChave: "em nenhuma hipótese",
     cognitivo: {
       motivo: "Fixar que o princípio da publicidade admite exceções (publicidade restrita), previstas no próprio texto constitucional.",
-      mede: "Processo Penal — princípios constitucionais (publicidade).",
-      pegadinhaDesc: "Usa o termo absoluto 'em nenhuma hipótese', quando a própria Constituição autoriza a lei a restringir a publicidade em casos específicos.",
-      ondeErra: "Ignora que o art. 93, IX, da CF expressamente permite à lei limitar a presença em determinados atos, para preservar a intimidade ou quando o exigir o interesse social.",
       palavraCritica: "em nenhuma hipótese",
-      tecnica: "A publicidade ampla é a regra no processo penal, mas a doutrina reconhece também a publicidade restrita, admitida pelo art. 93, IX, da CF quando a preservação do direito à intimidade não prejudicar o interesse público à informação — como em processos que apuram crimes contra a dignidade sexual.",
-      regraMental: "Termo absoluto ('em nenhuma hipótese') + princípio que a CF expressamente excepciona = ERRADO."
     },
     comentario: {
       resolucao: "ERRADO. O princípio da publicidade admite exceções: o art. 93, IX, da CF autoriza a lei a limitar a presença em determinados atos processuais para preservar o direito à intimidade do interessado, desde que isso não prejudique o interesse público à informação — é a chamada publicidade restrita, como ocorre, por exemplo, em processos que apuram crimes contra a dignidade sexual.",
@@ -168,12 +138,7 @@ const QUESTOES_PCAL_LOTE54 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "autoridade competente",
     cognitivo: {
       motivo: "Cobrar o conteúdo literal do princípio do juiz natural, combinando os dois incisos constitucionais que o fundamentam.",
-      mede: "Processo Penal — princípios constitucionais (juiz natural).",
-      pegadinhaDesc: "Item literal e correto, combinando corretamente os arts. 5º, LIII e XXXVII, da CF.",
-      ondeErra: "Pode confundir juiz natural (autoridade competente + vedação a tribunal de exceção) com outros princípios processuais, como o devido processo legal em sentido amplo.",
       palavraCritica: "autoridade competente",
-      tecnica: "O juiz natural é o direito de cada cidadão de saber, previamente, qual autoridade irá processá-lo e julgá-lo — desdobra-se em preexistência do órgão julgador, competência legal e imparcialidade (distribuição aleatória).",
-      regraMental: "Juiz natural = autoridade competente (preexistente, por lei) + vedação a tribunal/juízo de exceção."
     },
     comentario: {
       resolucao: "CERTO. O princípio do juiz natural assegura que ninguém será processado nem sentenciado senão pela autoridade competente (CF, art. 5º, LIII), vedando-se a instituição de juízo ou tribunal de exceção (CF, art. 5º, XXXVII) — trata-se do direito de cada cidadão de saber previamente qual autoridade poderá processá-lo e julgá-lo, caso pratique conduta definida como infração penal.",
@@ -194,12 +159,7 @@ const QUESTOES_PCAL_LOTE54 = [
     gabarito: "E", pegadinha: "generalizacao", palavraChave: "nelas incluídas",
     cognitivo: {
       motivo: "Fixar as ressalvas taxativas do art. 1º do CPP à regra da territorialidade, especialmente a jurisdição política dos crimes de responsabilidade do Presidente.",
-      mede: "Processo Penal — disposições preliminares (territorialidade da lei processual penal).",
-      pegadinhaDesc: "Estende a regra geral da territorialidade (aplicação do CPP a todo o território nacional) também à hipótese do crime de responsabilidade do Presidente, que é justamente uma das ressalvas do art. 1º.",
-      ondeErra: "Ignora que o crime de responsabilidade do Presidente da República é processado e julgado pelo Senado Federal, em jurisdição política, e não pelo Poder Judiciário segundo o CPP.",
       palavraCritica: "nelas incluídas",
-      tecnica: "O art. 1º do CPP prevê a regra geral da territorialidade (lex fori), mas ressalva taxativamente: tratados/convenções internacionais, prerrogativas constitucionais do Presidente/ministros de Estado/ministros do STF nos crimes de responsabilidade, Justiça Militar, tribunal especial e crimes de imprensa. O crime de responsabilidade do Presidente é julgado pelo Senado Federal (CF, art. 52, I) — jurisdição política, não jurisdicional.",
-      regraMental: "Regra geral: CPP vale em todo o território. Exceção: crime de responsabilidade do Presidente vai para o Senado (jurisdição política), NÃO para o CPP."
     },
     comentario: {
       resolucao: "ERRADO. A regra geral, no espaço, é a territorialidade (lex fori): o processo penal rege-se, em todo o território brasileiro, pelo CPP. O erro do item está em incluir nessa regra geral o crime de responsabilidade do Presidente da República, que é justamente uma das ressalvas taxativas do art. 1º do CPP — nesse caso, quem processa e julga é o Senado Federal, em jurisdição política (CF, art. 52, I), e não o CPP.",
@@ -218,12 +178,7 @@ const QUESTOES_PCAL_LOTE54 = [
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "tal como ocorre com a lei penal material",
     cognitivo: {
       motivo: "Fixar a distinção entre tempus regit actum (lei processual, rege o ATO) e tempus delicti (lei penal material, rege o CRIME).",
-      mede: "Processo Penal — disposições preliminares (aplicação da lei processual no tempo).",
-      pegadinhaDesc: "Transfere à lei processual penal a lógica do tempus delicti, própria do direito penal material, condicionando sua aplicação à data do crime.",
-      ondeErra: "Confunde o marco temporal da lei processual (a data do ATO processual) com o marco temporal da lei penal material (a data do CRIME).",
       palavraCritica: "tal como ocorre com a lei penal material",
-      tecnica: "A lei processual penal aplica-se desde logo (CPP, art. 2º), inclusive aos processos em curso, por força do tempus regit actum — o que importa é a data do ato processual, não a data do crime. Já a lei penal material rege-se pelo tempus delicti (aplica-se a lei vigente ao tempo do crime). São lógicas OPOSTAS.",
-      regraMental: "Processo penal = tempus regit actum (data do ato). Direito penal material = tempus delicti (data do crime)."
     },
     comentario: {
       resolucao: "ERRADO. A lei processual penal aplica-se desde logo (CPP, art. 2º), inclusive aos processos em curso, em razão do princípio tempus regit actum: o que importa é a data do ato processual, e não a data do crime — a nova lei alcança os atos praticados após sua vigência, ainda que o crime seja anterior a ela. O item erra ao equiparar essa lógica à do direito penal material, que se rege pelo tempus delicti (lei vigente ao tempo do crime).",
@@ -242,12 +197,7 @@ const QUESTOES_PCAL_LOTE54 = [
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "retroage e impõe a renovação",
     cognitivo: {
       motivo: "Fixar a teoria do isolamento dos atos processuais: a lei processual não retroage, mesmo se mais benéfica, e não impõe renovação de atos já praticados.",
-      mede: "Processo Penal — disposições preliminares (não retroatividade e isolamento dos atos processuais).",
-      pegadinhaDesc: "Importa para o processo penal a lógica da retroatividade da lei penal mais benéfica (própria do direito penal material), que não se aplica à lei processual.",
-      ondeErra: "Confunde a retroatividade da lei penal mais benéfica (CP, art. 2º, parágrafo único) com o regime da lei processual, que é de aplicação imediata sem retroação.",
       palavraCritica: "retroage",
-      tecnica: "A lei puramente processual aplica-se de imediato (CPP, art. 2º), mas NÃO retroage, ainda que mais benéfica, nem impõe a renovação dos atos já praticados — é a teoria do isolamento dos atos processuais: o que foi praticado sob a lei anterior permanece válido, e o processo segue dali em diante pela lei nova.",
-      regraMental: "Lei processual: aplica-se de imediato, NÃO retroage, NÃO renova atos já praticados (isolamento dos atos)."
     },
     comentario: {
       resolucao: "ERRADO. A lei puramente processual aplica-se de imediato, mas não retroage, ainda que mais benéfica, e não impõe a renovação dos atos já praticados — é a teoria do isolamento dos atos processuais (CPP, art. 2º): o que foi praticado sob a lei anterior permanece válido, e o processo segue dali em diante pela lei nova. A ideia de que a lei mais benéfica retroage é do direito penal material (CP, art. 2º, parágrafo único), não do processo penal.",
@@ -266,12 +216,7 @@ const QUESTOES_PCAL_LOTE54 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "sem prejuízo da validade dos atos",
     cognitivo: {
       motivo: "Fixar, em sentido positivo, a combinação entre aplicação imediata (tempus regit actum), preservação dos atos anteriores e ausência de ofensa à irretroatividade.",
-      mede: "Processo Penal — disposições preliminares (aplicação imediata e isolamento dos atos processuais).",
-      pegadinhaDesc: "Item literal e correto, reproduzindo com precisão a redação do art. 2º do CPP e sua compatibilidade com o princípio da irretroatividade.",
-      ondeErra: "Pode achar que 'aplicação imediata' e 'irretroatividade' são conceitos incompatíveis entre si, quando na verdade a aplicação imediata da lei processual respeita a irretroatividade justamente por não atingir atos já praticados.",
       palavraCritica: "sem prejuízo da validade dos atos",
-      tecnica: "A aplicação imediata da lei processual (art. 2º, CPP) não fere a irretroatividade porque ela não atinge os atos já praticados sob a lei anterior (que permanecem válidos) — ela rege apenas os atos futuros do processo, dali em diante.",
-      regraMental: "Aplicação imediata + preservação dos atos anteriores = compatível com a irretroatividade, não uma exceção a ela."
     },
     comentario: {
       resolucao: "CERTO. Nos termos do art. 2º do CPP, a lei processual penal aplica-se desde logo, sem prejuízo da validade dos atos realizados sob a vigência da lei anterior. Essa aplicação imediata não constitui ofensa ao princípio da irretroatividade, pois os atos já praticados permanecem válidos (isolamento dos atos processuais) — a lei nova rege apenas os atos futuros do processo em curso.",

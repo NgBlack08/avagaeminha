@@ -572,6 +572,31 @@ function filtrarQuestoes(f) {
   });
 }
 
+/* ---------------- Estratégias aplicáveis a uma questão ----------------
+   O bloco pós-resposta antes trazia "Engenharia cognitiva", cujos campos
+   em grande parte repetiam o que `comentario` já dizia (mede≈fundamento,
+   ondeErra≈erroComum, regraMental≈macete, pegadinhaDesc≈comoBancaPensa).
+
+   Em vez de comentar a questão duas vezes, sobe-se um nível: mostra-se a
+   técnica geral que neutraliza aquele padrão. O elo já existia no dado —
+   `q.pegadinha` guarda o slug do padrão e cada estratégia declara em
+   `contraDNA` quais padrões ela combate. Todos os 12 padrões do DNA_BANCA
+   têm ao menos uma estratégia, então nenhuma questão fica sem retorno.
+
+   Ordenadas para dar primeiro a que tem exemplo na própria disciplina, o
+   que torna a técnica mais reconhecível. */
+function estrategiasDaQuestao(q) {
+  if (!q || !q.pegadinha) return [];
+  const casadas = ESTRATEGIAS.filter(e => (e.contraDNA || []).includes(q.pegadinha));
+  return casadas.sort((a, b) => {
+    const disc = e => {
+      const ex = QUESTOES_POR_ID.get(e.exemplo);
+      return ex && ex.disciplina === q.disciplina ? 0 : 1;
+    };
+    return disc(a) - disc(b);
+  });
+}
+
 /* ---------------- Detector de pegadinhas (Módulo 5) ---------------- */
 /* \b não funciona com acentos em JS — usamos limites unicode explícitos */
 function reTermo(termo, flags) {

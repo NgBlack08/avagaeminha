@@ -22,12 +22,7 @@ const QUESTOES_PCAL_LOTE16 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "no interesse ou benefício da entidade",
     cognitivo: {
       motivo: "Cobrar a responsabilidade penal da pessoa jurídica (art. 3º).",
-      mede: "Crimes Ambientais — sujeito ativo.",
-      pegadinhaDesc: "A banca pode negar a responsabilidade penal da PJ ou omitir os requisitos.",
-      ondeErra: "Acha que só pessoas físicas cometem crimes.",
       palavraCritica: "no interesse ou benefício da entidade",
-      tecnica: "Art. 3º: PJ responde penalmente quando o crime for por decisão de representante/órgão colegiado, no interesse ou benefício da entidade.",
-      regraMental: "PJ comete crime ambiental: decisão do representante + benefício da empresa."
     },
     comentario: {
       resolucao: "CERTO. O art. 3º da Lei 9.605/1998 admite a responsabilização penal da pessoa jurídica nos crimes ambientais, desde que a infração seja cometida por decisão de seu representante legal ou contratual, ou de órgão colegiado, no interesse ou benefício da entidade. A CF (art. 225, § 3º) dá suporte a essa responsabilização.",
@@ -46,12 +41,7 @@ const QUESTOES_PCAL_LOTE16 = [
     gabarito: "E", pegadinha: "juris-mais-lei", palavraChave: "necessariamente",
     cognitivo: {
       motivo: "Cobrar a superação da teoria da dupla imputação.",
-      mede: "Crimes Ambientais — jurisprudência do STF/STJ.",
-      pegadinhaDesc: "Mantém a exigência de dupla imputação, já abandonada.",
-      ondeErra: "Desconhece o RE 548.181/STF.",
       palavraCritica: "necessariamente",
-      tecnica: "STF (RE 548.181) abandonou a teoria da dupla imputação: a PJ pode ser processada isoladamente, sem imputação concomitante à pessoa física.",
-      regraMental: "PJ pode responder sozinha. Não precisa 'amarrar' uma pessoa física junto."
     },
     comentario: {
       resolucao: "ERRADO. O STF (RE 548.181) superou a teoria da dupla imputação: é possível responsabilizar penalmente a pessoa jurídica por crime ambiental ainda que não haja imputação simultânea da pessoa física. Logo, essa imputação conjunta não é requisito necessário.",
@@ -71,12 +61,7 @@ const QUESTOES_PCAL_LOTE16 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "obstáculo ao ressarcimento",
     cognitivo: {
       motivo: "Cobrar a desconsideração da PJ (art. 4º).",
-      mede: "Crimes Ambientais — desconsideração da personalidade.",
-      pegadinhaDesc: "A banca pode exigir requisitos adicionais (fraude, abuso).",
-      ondeErra: "Aplica os requisitos do CC/CDC à hipótese ambiental.",
       palavraCritica: "obstáculo ao ressarcimento",
-      tecnica: "Art. 4º: basta que a personalidade seja obstáculo ao ressarcimento dos prejuízos ambientais (teoria menor).",
-      regraMental: "Ambiental: desconsidera se a PJ atrapalha o ressarcimento (não precisa de fraude)."
     },
     comentario: {
       resolucao: "CERTO. O art. 4º da Lei 9.605/1998 autoriza a desconsideração da pessoa jurídica sempre que sua personalidade constituir obstáculo ao ressarcimento de prejuízos causados ao meio ambiente. Adota-se a teoria menor, dispensando-se a prova de fraude ou abuso.",
@@ -95,12 +80,7 @@ const QUESTOES_PCAL_LOTE16 = [
     gabarito: "E", pegadinha: "exigencia-inexistente", palavraChave: "privativa de liberdade",
     cognitivo: {
       motivo: "Cobrar as penas aplicáveis à PJ (art. 21).",
-      mede: "Crimes Ambientais — penas da pessoa jurídica.",
-      pegadinhaDesc: "Atribui à PJ pena de prisão, impossível por sua natureza.",
-      ondeErra: "Não percebe que a PJ não pode ser presa.",
       palavraCritica: "privativa de liberdade",
-      tecnica: "Art. 21: penas da PJ são multa, restritivas de direitos e prestação de serviços à comunidade. Nunca privativa de liberdade.",
-      regraMental: "PJ não vai presa: multa, restritivas e prestação de serviços."
     },
     comentario: {
       resolucao: "ERRADO. As penas aplicáveis às pessoas jurídicas nos crimes ambientais são, isolada, cumulativa ou alternativamente, a multa, as restritivas de direitos e a prestação de serviços à comunidade (art. 21). A pena privativa de liberdade é incompatível com a natureza da pessoa jurídica.",
@@ -119,12 +99,7 @@ const QUESTOES_PCAL_LOTE16 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "prévia composição do dano",
     cognitivo: {
       motivo: "Cobrar o requisito específico da transação penal ambiental (art. 27).",
-      mede: "Crimes Ambientais — institutos despenalizadores.",
-      pegadinhaDesc: "A banca pode dispensar a composição do dano como condição.",
-      ondeErra: "Aplica a transação penal comum, sem o requisito da reparação.",
       palavraCritica: "prévia composição do dano",
-      tecnica: "Art. 27: a transação penal ambiental exige prévia composição do dano (salvo impossibilidade comprovada).",
-      regraMental: "Transação ambiental: primeiro repara o dano, depois transaciona."
     },
     comentario: {
       resolucao: "CERTO. O art. 27 da Lei 9.605/1998 condiciona a proposta de transação penal, nos crimes ambientais de menor potencial ofensivo, à prévia composição do dano ambiental (art. 74 da Lei 9.099/95), salvo comprovada impossibilidade de fazê-lo. É requisito específico do microssistema ambiental.",
@@ -143,12 +118,7 @@ const QUESTOES_PCAL_LOTE16 = [
     gabarito: "E", pegadinha: "restricao-indevida", palavraChave: "exclui a responsabilidade",
     cognitivo: {
       motivo: "Cobrar a coexistência das responsabilidades (art. 3º, parágrafo único).",
-      mede: "Crimes Ambientais — concurso de responsabilidades.",
-      pegadinhaDesc: "Apresenta as responsabilidades como excludentes.",
-      ondeErra: "Trata PJ e pessoa física como alternativas.",
       palavraCritica: "exclui",
-      tecnica: "Art. 3º, parágrafo único: a responsabilidade da PJ NÃO exclui a das pessoas físicas autoras, coautoras ou partícipes.",
-      regraMental: "PJ e pessoa física respondem juntas. Uma não afasta a outra."
     },
     comentario: {
       resolucao: "ERRADO. O parágrafo único do art. 3º da Lei 9.605/1998 dispõe que a responsabilidade das pessoas jurídicas não exclui a das pessoas físicas, autoras, coautoras ou partícipes do mesmo fato. As responsabilidades coexistem, não se excluem.",
@@ -167,12 +137,7 @@ const QUESTOES_PCAL_LOTE16 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "baixo grau de instrução",
     cognitivo: {
       motivo: "Cobrar as atenuantes específicas (art. 14).",
-      mede: "Crimes Ambientais — dosimetria.",
-      pegadinhaDesc: "A banca pode apresentar o dispositivo como agravante.",
-      ondeErra: "Inverte atenuante por agravante.",
       palavraCritica: "atenua",
-      tecnica: "Art. 14, I: o baixo grau de instrução ou escolaridade do agente é atenuante.",
-      regraMental: "Baixa instrução do agente = atenua a pena ambiental."
     },
     comentario: {
       resolucao: "CERTO. O art. 14, I, da Lei 9.605/1998 prevê como circunstância atenuante da pena o baixo grau de instrução ou escolaridade do agente. Também são atenuantes o arrependimento com reparação e a colaboração com os agentes de fiscalização.",
@@ -191,12 +156,7 @@ const QUESTOES_PCAL_LOTE16 = [
     gabarito: "E", pegadinha: "generalizacao", palavraChave: "exige dano efetivo",
     cognitivo: {
       motivo: "Cobrar a existência de crimes ambientais de perigo (formais).",
-      mede: "Crimes Ambientais — classificação dos tipos.",
-      pegadinhaDesc: "Generaliza a exigência de dano efetivo a todos os crimes ambientais.",
-      ondeErra: "Ignora os crimes de perigo abstrato.",
       palavraCritica: "qualquer / exige dano efetivo",
-      tecnica: "Vários crimes ambientais são de perigo (formais/de mera conduta), consumando-se independentemente de dano efetivo (ex.: certas condutas de poluição e contra a flora).",
-      regraMental: "Nem todo crime ambiental precisa de dano concreto: há crimes de perigo."
     },
     comentario: {
       resolucao: "ERRADO. Muitos crimes ambientais são de perigo (abstrato ou concreto) ou de mera conduta, consumando-se independentemente da ocorrência de dano efetivo. Assim, a exigência genérica de dano concreto e mensurável para 'qualquer' crime ambiental é incorreta.",
@@ -217,12 +177,7 @@ const QUESTOES_PCAL_LOTE16 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "inafiançável e imprescritível",
     cognitivo: {
       motivo: "Cobrar o regime constitucional do racismo (art. 5º, XLII).",
-      mede: "Crimes de Racismo — tratamento constitucional.",
-      pegadinhaDesc: "A banca pode trocar 'imprescritível' por 'prescritível' ou 'afiançável'.",
-      ondeErra: "Confunde o regime do racismo com o de outros crimes.",
       palavraCritica: "inafiançável e imprescritível",
-      tecnica: "CF, art. 5º, XLII: o racismo é crime inafiançável e imprescritível, sujeito a reclusão.",
-      regraMental: "Racismo: inafiançável + imprescritível + reclusão."
     },
     comentario: {
       resolucao: "CERTO. O art. 5º, XLII, da Constituição Federal define a prática do racismo como crime inafiançável e imprescritível, sujeito à pena de reclusão, nos termos da lei (Lei 7.716/1989).",
@@ -241,12 +196,7 @@ const QUESTOES_PCAL_LOTE16 = [
     gabarito: "C", pegadinha: "juris-mais-lei", palavraChave: "modalidade de racismo",
     cognitivo: {
       motivo: "Cobrar a equiparação da injúria racial ao racismo (Lei 14.532/2023).",
-      mede: "Crimes de Racismo — atualização legislativa.",
-      pegadinhaDesc: "A banca pode manter a injúria racial como crime prescritível do CP.",
-      ondeErra: "Aplica o regime antigo (art. 140, § 3º, do CP).",
       palavraCritica: "imprescritível e inafiançável",
-      tecnica: "A Lei 14.532/2023 deslocou a injúria racial para a Lei 7.716/89 (art. 2º-A), tornando-a imprescritível e inafiançável, com pena de reclusão de 2 a 5 anos e multa.",
-      regraMental: "Injúria racial virou racismo: imprescritível e inafiançável (Lei 14.532/23)."
     },
     comentario: {
       resolucao: "CERTO. A Lei 14.532/2023 inseriu a injúria racial na Lei 7.716/1989 (art. 2º-A), equiparando-a ao racismo, com pena de reclusão de 2 a 5 anos e multa, submetendo-a ao regime da imprescritibilidade e da inafiançabilidade. Superou-se o antigo tratamento como injúria qualificada do CP (art. 140, § 3º).",
@@ -265,12 +215,7 @@ const QUESTOES_PCAL_LOTE16 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "obstar emprego",
     cognitivo: {
       motivo: "Cobrar a tipificação da discriminação no emprego (art. 4º).",
-      mede: "Crimes de Racismo — condutas típicas.",
-      pegadinhaDesc: "A banca pode restringir o tipo ao serviço público.",
-      ondeErra: "Acha que só a discriminação no setor público é crime.",
       palavraCritica: "empresa privada",
-      tecnica: "Art. 4º: negar ou obstar emprego em empresa privada por discriminação é crime.",
-      regraMental: "Discriminar no emprego, público ou privado, é racismo."
     },
     comentario: {
       resolucao: "CERTO. O art. 4º da Lei 7.716/1989 tipifica como crime negar ou obstar emprego em empresa privada por motivo de discriminação de raça, cor, etnia, religião ou procedência nacional. A conduta alcança expressamente o setor privado.",
@@ -289,12 +234,7 @@ const QUESTOES_PCAL_LOTE16 = [
     gabarito: "E", pegadinha: "restricao-indevida", palavraChave: "pessoa determinada",
     cognitivo: {
       motivo: "Cobrar a distinção clássica racismo (coletividade) × injúria (individual).",
-      mede: "Crimes de Racismo — bem jurídico e sujeito passivo.",
-      pegadinhaDesc: "Restringe o racismo à ofensa individualizada (que é típica da injúria).",
-      ondeErra: "Confunde o alcance coletivo do racismo com a ofensa individual da injúria.",
       palavraCritica: "somente / individualizada",
-      tecnica: "O racismo, em regra, atinge a coletividade/grupo (discriminação segregacionista). A ofensa a pessoa determinada tende a caracterizar injúria racial (hoje também no regime da 7.716).",
-      regraMental: "Racismo mira o grupo; injúria racial mira a pessoa. 'Somente individual' é falso."
     },
     comentario: {
       resolucao: "ERRADO. Os crimes de racismo da Lei 7.716/1989 têm caráter segregacionista e, tradicionalmente, atingem toda a coletividade ou um grupo, não exigindo vítima individualizada. A ofensa dirigida a pessoa determinada caracteriza, em regra, a injúria racial. Portanto, é incorreto afirmar que o racismo 'somente' se configura contra pessoa individualizada.",
@@ -313,12 +253,7 @@ const QUESTOES_PCAL_LOTE16 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "estabelecimento comercial",
     cognitivo: {
       motivo: "Cobrar a tipificação da negativa de atendimento (art. 5º).",
-      mede: "Crimes de Racismo — condutas típicas.",
-      pegadinhaDesc: "A banca pode enquadrar a conduta apenas como ilícito civil.",
-      ondeErra: "Trata a discriminação no atendimento como mero dano moral.",
       palavraCritica: "estabelecimento comercial",
-      tecnica: "Art. 5º: recusar ou impedir acesso a estabelecimento comercial por discriminação é crime.",
-      regraMental: "Barrar cliente por cor em loja = crime da Lei 7.716."
     },
     comentario: {
       resolucao: "CERTO. O art. 5º da Lei 7.716/1989 tipifica a conduta de recusar ou impedir o acesso a estabelecimento comercial, negando atendimento por discriminação. A conduta é crime, e não mero ilícito civil.",
@@ -337,12 +272,7 @@ const QUESTOES_PCAL_LOTE16 = [
     gabarito: "E", pegadinha: "exigencia-inexistente", palavraChave: "retratação extingue a punibilidade",
     cognitivo: {
       motivo: "Cobrar a inexistência de retratação extintiva no racismo.",
-      mede: "Crimes de Racismo — ação penal.",
-      pegadinhaDesc: "Cria hipótese extintiva inexistente.",
-      ondeErra: "Aplica lógica de crimes contra a honra ao racismo.",
       palavraCritica: "retratação extingue",
-      tecnica: "Os crimes de racismo são de ação penal pública incondicionada e imprescritíveis; não há previsão de retratação extintiva da punibilidade.",
-      regraMental: "Racismo: ação pública incondicionada. Retratação não apaga o crime."
     },
     comentario: {
       resolucao: "ERRADO. Os crimes de racismo são de ação penal pública incondicionada e imprescritíveis, não havendo previsão legal de extinção da punibilidade pela retratação do ofendido. A retratação extintiva é instituto próprio de outros crimes (ex.: calúnia e difamação, em certas hipóteses).",
@@ -361,12 +291,7 @@ const QUESTOES_PCAL_LOTE16 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "funcionário público no exercício",
     cognitivo: {
       motivo: "Cobrar a agravante introduzida pela Lei 14.532/2023 (art. 20-A).",
-      mede: "Crimes de Racismo — causas de aumento/agravantes.",
-      pegadinhaDesc: "A banca pode negar a existência da agravante.",
-      ondeErra: "Desconhece a atualização de 2023.",
       palavraCritica: "agrava a pena",
-      tecnica: "Art. 20-A (Lei 14.532/23): a pena é agravada quando o crime é cometido por funcionário público no exercício de suas funções ou a pretexto de exercê-las.",
-      regraMental: "Racismo por servidor no exercício da função = agravante."
     },
     comentario: {
       resolucao: "CERTO. A Lei 14.532/2023 inseriu o art. 20-A na Lei 7.716/1989, prevendo o agravamento da pena quando o crime for cometido por funcionário público no exercício de suas funções ou a pretexto de exercê-las, dentre outras hipóteses (ex.: em contexto esportivo, artístico ou cultural).",
@@ -387,12 +312,7 @@ const QUESTOES_PCAL_LOTE16 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "qualquer infração penal",
     cognitivo: {
       motivo: "Cobrar a evolução do crime antecedente (Lei 12.683/2012).",
-      mede: "Lavagem de Dinheiro — infração antecedente.",
-      pegadinhaDesc: "A banca pode manter o rol taxativo revogado.",
-      ondeErra: "Reproduz a redação original da Lei 9.613/98.",
       palavraCritica: "qualquer infração penal",
-      tecnica: "A Lei 12.683/2012 substituiu o rol de crimes antecedentes por 'infração penal' — hoje qualquer crime ou contravenção pode ser antecedente.",
-      regraMental: "Terceira geração: qualquer infração penal antecede a lavagem."
     },
     comentario: {
       resolucao: "CERTO. A Lei 12.683/2012 alterou a Lei 9.613/1998, abolindo o rol taxativo de crimes antecedentes. Passou-se a admitir qualquer infração penal (crime ou contravenção) como antecedente da lavagem — a chamada legislação de 'terceira geração'.",
@@ -411,12 +331,7 @@ const QUESTOES_PCAL_LOTE16 = [
     gabarito: "E", pegadinha: "exigencia-inexistente", palavraChave: "prévia condenação transitada",
     cognitivo: {
       motivo: "Cobrar a autonomia do crime de lavagem (art. 2º, II).",
-      mede: "Lavagem de Dinheiro — relação com o crime antecedente.",
-      pegadinhaDesc: "Exige condenação prévia do antecedente, o que a lei dispensa.",
-      ondeErra: "Trata a lavagem como acessória do crime antecedente.",
       palavraCritica: "prévia condenação transitada",
-      tecnica: "Art. 2º, II: o processo e julgamento da lavagem independem do processo/julgamento do crime antecedente. Basta indícios suficientes da infração antecedente.",
-      regraMental: "Lavagem é autônoma: não precisa de condenação prévia do antecedente."
     },
     comentario: {
       resolucao: "ERRADO. O art. 2º, II, da Lei 9.613/1998 consagra a autonomia do crime de lavagem: seu processo e julgamento independem do processo e julgamento das infrações penais antecedentes, bastando a existência de indícios suficientes da infração antecedente (art. 2º, § 1º).",
@@ -435,12 +350,7 @@ const QUESTOES_PCAL_LOTE16 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "ainda que em outro país",
     cognitivo: {
       motivo: "Cobrar a autonomia mesmo quando o antecedente ocorre no exterior.",
-      mede: "Lavagem de Dinheiro — autonomia e antecedente estrangeiro.",
-      pegadinhaDesc: "A banca pode exigir que o antecedente ocorra no Brasil.",
-      ondeErra: "Restringe o antecedente ao território nacional.",
       palavraCritica: "ainda que em outro país",
-      tecnica: "Art. 2º, II: a autonomia vale mesmo que a infração antecedente tenha sido cometida no estrangeiro.",
-      regraMental: "Antecedente pode ser lá fora — a lavagem aqui é autônoma."
     },
     comentario: {
       resolucao: "CERTO. O art. 2º, II, da Lei 9.613/1998 estabelece que o processo e julgamento da lavagem independem do processo e julgamento das infrações antecedentes, ainda que cometidas em outro país. Basta que a conduta antecedente também seja punível no local onde praticada.",
@@ -459,12 +369,7 @@ const QUESTOES_PCAL_LOTE16 = [
     gabarito: "E", pegadinha: "troca-numerica", palavraChave: "detenção de um a quatro anos",
     cognitivo: {
       motivo: "Cobrar a pena do crime de lavagem.",
-      mede: "Lavagem de Dinheiro — sanção.",
-      pegadinhaDesc: "Troca reclusão de 3 a 10 anos por detenção de 1 a 4 anos.",
-      ondeErra: "Não retém a pena correta.",
       palavraCritica: "detenção de um a quatro anos",
-      tecnica: "Art. 1º: pena de RECLUSÃO de 3 a 10 anos e multa. Aumenta de 1/3 a 2/3 se cometida de forma reiterada ou por organização criminosa.",
-      regraMental: "Lavagem: reclusão 3 a 10 + multa (não é detenção 1 a 4)."
     },
     comentario: {
       resolucao: "ERRADO. A lavagem de dinheiro é punida com reclusão de 3 a 10 anos e multa (art. 1º da Lei 9.613/1998), e não com detenção de 1 a 4 anos. A pena pode ser aumentada de 1/3 a 2/3 se os crimes forem cometidos de forma reiterada ou por meio de organização criminosa.",
@@ -483,12 +388,7 @@ const QUESTOES_PCAL_LOTE16 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "colaboração espontânea",
     cognitivo: {
       motivo: "Cobrar os efeitos da colaboração premiada na lavagem (art. 1º, § 5º).",
-      mede: "Lavagem de Dinheiro — colaboração premiada.",
-      pegadinhaDesc: "A banca pode limitar os benefícios só à redução de pena.",
-      ondeErra: "Desconhece a amplitude dos benefícios (inclusive perdão judicial).",
       palavraCritica: "regime aberto ou semiaberto, ou perdão judicial",
-      tecnica: "Art. 1º, § 5º: colaboração pode reduzir a pena (1/3 a 2/3), fixar regime inicial aberto/semiaberto, substituir por restritiva de direitos ou até conceder perdão judicial.",
-      regraMental: "Colaboração na lavagem: reduz pena, abranda regime ou perdoa."
     },
     comentario: {
       resolucao: "CERTO. O art. 1º, § 5º, da Lei 9.613/1998 prevê que a colaboração espontânea que conduza à apuração das infrações, à identificação dos autores ou à localização dos bens pode acarretar redução de pena de 1 a 2/3, início em regime aberto ou semiaberto, substituição por pena restritiva de direitos ou perdão judicial.",
@@ -507,12 +407,7 @@ const QUESTOES_PCAL_LOTE16 = [
     gabarito: "E", pegadinha: "troca-sujeito", palavraChave: "Ministério Público Federal",
     cognitivo: {
       motivo: "Cobrar a natureza e a função do COAF.",
-      mede: "Lavagem de Dinheiro — unidade de inteligência financeira.",
-      pegadinhaDesc: "Atribui ao COAF função persecutória e o vincula ao MPF.",
-      ondeErra: "Confunde o COAF (inteligência financeira) com órgão de persecução penal.",
       palavraCritica: "Ministério Público Federal / promover a ação penal",
-      tecnica: "O COAF é a unidade de inteligência financeira do Brasil, atualmente vinculado ao Banco Central; sua função é receber, examinar e identificar operações suspeitas — não promove ação penal.",
-      regraMental: "COAF = inteligência financeira (não é MP e não denuncia)."
     },
     comentario: {
       resolucao: "ERRADO. O COAF é a Unidade de Inteligência Financeira do Brasil, atualmente vinculado ao Banco Central. Sua função é receber, examinar e identificar ocorrências suspeitas de lavagem, comunicando as autoridades competentes. Não integra o Ministério Público Federal nem promove a ação penal.",
@@ -531,12 +426,7 @@ const QUESTOES_PCAL_LOTE16 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "alienação antecipada",
     cognitivo: {
       motivo: "Cobrar a alienação antecipada de bens (art. 4º-A).",
-      mede: "Lavagem de Dinheiro — medidas assecuratórias.",
-      pegadinhaDesc: "A banca pode dizer que a alienação só ocorre após o trânsito em julgado.",
-      ondeErra: "Confunde alienação antecipada com efeito da condenação definitiva.",
       palavraCritica: "alienação antecipada",
-      tecnica: "Art. 4º-A: alienação antecipada para preservar o valor dos bens sujeitos a deterioração/depreciação ou de difícil manutenção.",
-      regraMental: "Bem que estraga ou custa manter: aliena antes da sentença definitiva."
     },
     comentario: {
       resolucao: "CERTO. O art. 4º-A da Lei 9.613/1998 autoriza a alienação antecipada de bens sob medida assecuratória para preservação do respectivo valor, quando estejam sujeitos a deterioração ou depreciação ou quando houver dificuldade para sua manutenção. Não se aguarda o trânsito em julgado.",
@@ -557,12 +447,7 @@ const QUESTOES_PCAL_LOTE16 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "não superior a dois anos",
     cognitivo: {
       motivo: "Cobrar o conceito de menor potencial ofensivo (art. 61).",
-      mede: "JECRIM — competência.",
-      pegadinhaDesc: "A banca costuma trocar 'dois anos' por 'um ano' ou usar pena mínima.",
-      ondeErra: "Confunde pena máxima (competência) com pena mínima (suspensão do processo).",
       palavraCritica: "pena máxima não superior a dois anos",
-      tecnica: "Art. 61: IMPO = contravenções + crimes com pena MÁXIMA não superior a 2 anos (cumulada ou não com multa).",
-      regraMental: "Menor potencial: pena MÁXIMA ≤ 2 anos."
     },
     comentario: {
       resolucao: "CERTO. O art. 61 da Lei 9.099/1995 define como infrações de menor potencial ofensivo as contravenções penais e os crimes a que a lei comine pena máxima não superior a dois anos, cumulada ou não com multa. É o critério de competência dos Juizados Especiais Criminais.",
@@ -581,12 +466,7 @@ const QUESTOES_PCAL_LOTE16 = [
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "pena máxima não superior a um ano",
     cognitivo: {
       motivo: "Cobrar o requisito da suspensão condicional do processo (art. 89).",
-      mede: "JECRIM — sursis processual.",
-      pegadinhaDesc: "Troca pena mínima por pena máxima.",
-      ondeErra: "Confunde o parâmetro do art. 89 (pena mínima) com o do art. 61 (pena máxima).",
       palavraCritica: "pena máxima não superior a um ano",
-      tecnica: "Art. 89: a suspensão condicional do processo cabe quando a pena MÍNIMA cominada for igual ou inferior a um ano.",
-      regraMental: "Suspensão do processo: pena MÍNIMA ≤ 1 ano."
     },
     comentario: {
       resolucao: "ERRADO. O art. 89 da Lei 9.099/1995 admite a suspensão condicional do processo nos crimes em que a pena MÍNIMA cominada seja igual ou inferior a um ano. O erro está em usar a pena máxima como parâmetro — o correto é a pena mínima.",
@@ -605,12 +485,7 @@ const QUESTOES_PCAL_LOTE16 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "dois a quatro anos",
     cognitivo: {
       motivo: "Cobrar os requisitos e o período de prova do sursis processual (art. 89).",
-      mede: "JECRIM — suspensão condicional do processo.",
-      pegadinhaDesc: "A banca pode trocar o período de prova (2 a 4 anos) por outro.",
-      ondeErra: "Não retém o período de prova ou os requisitos subjetivos.",
       palavraCritica: "dois a quatro anos",
-      tecnica: "Art. 89: proposta pelo MP, período de prova de 2 a 4 anos, exigindo-se que o réu não esteja sendo processado/condenado por outro crime e os requisitos do sursis (CP, art. 77).",
-      regraMental: "Sursis processual: período de prova de 2 a 4 anos."
     },
     comentario: {
       resolucao: "CERTO. O art. 89 da Lei 9.099/1995 autoriza o Ministério Público, ao oferecer a denúncia, a propor a suspensão condicional do processo por período de prova de dois a quatro anos, desde que o acusado não esteja sendo processado ou não tenha sido condenado por outro crime e presentes os demais requisitos do art. 77 do CP.",
@@ -629,12 +504,7 @@ const QUESTOES_PCAL_LOTE16 = [
     gabarito: "E", pegadinha: "juris-mais-lei", palavraChave: "reconhecimento de culpa",
     cognitivo: {
       motivo: "Cobrar a natureza da transação penal (art. 76, § 4º e § 6º).",
-      mede: "JECRIM — efeitos da transação.",
-      pegadinhaDesc: "Atribui efeitos de condenação à transação penal.",
-      ondeErra: "Equipara a transação a uma sentença condenatória.",
       palavraCritica: "reconhecimento de culpa / reincidência",
-      tecnica: "Art. 76: a transação não importa reincidência, não consta de certidão de antecedentes (salvo para impedir novo benefício em 5 anos) e não implica reconhecimento de culpabilidade civil.",
-      regraMental: "Transação não é condenação: sem culpa, sem reincidência, sem maus antecedentes."
     },
     comentario: {
       resolucao: "ERRADO. A transação penal (art. 76) não importa reincidência nem maus antecedentes, sendo registrada apenas para impedir novo benefício no prazo de cinco anos. Também não implica reconhecimento de culpa ou de responsabilidade civil. Trata-se de acordo despenalizador, e não de condenação.",
@@ -653,12 +523,7 @@ const QUESTOES_PCAL_LOTE16 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "renúncia ao direito de queixa ou representação",
     cognitivo: {
       motivo: "Cobrar o efeito da composição civil homologada (art. 74, parágrafo único).",
-      mede: "JECRIM — composição civil dos danos.",
-      pegadinhaDesc: "A banca pode estender o efeito à ação penal pública incondicionada.",
-      ondeErra: "Aplica a renúncia também aos crimes de ação pública incondicionada.",
       palavraCritica: "privada ou condicionada",
-      tecnica: "Art. 74, parágrafo único: a composição civil homologada, nos crimes de ação privada ou pública condicionada, importa renúncia ao direito de queixa/representação. Na ação pública incondicionada, não tem esse efeito.",
-      regraMental: "Composição civil só extingue queixa/representação (privada ou condicionada)."
     },
     comentario: {
       resolucao: "CERTO. O parágrafo único do art. 74 da Lei 9.099/1995 dispõe que, nos crimes de ação penal privada ou pública condicionada à representação, o acordo de composição civil dos danos homologado acarreta a renúncia ao direito de queixa ou de representação. Nos crimes de ação pública incondicionada, a composição não gera esse efeito extintivo.",
@@ -677,12 +542,7 @@ const QUESTOES_PCAL_LOTE16 = [
     gabarito: "E", pegadinha: "verdade-mais-falso", palavraChave: "contraditório diferido obrigatório",
     cognitivo: {
       motivo: "Cobrar os critérios orientadores do JECRIM (art. 62).",
-      mede: "JECRIM — princípios.",
-      pegadinhaDesc: "Emenda um 'princípio' inexistente à lista correta.",
-      ondeErra: "Aceita o acréscimo por reconhecer os primeiros critérios como verdadeiros.",
       palavraCritica: "contraditório diferido obrigatório",
-      tecnica: "Art. 62: oralidade, simplicidade, informalidade, economia processual e celeridade. Não há 'contraditório diferido obrigatório' entre os critérios.",
-      regraMental: "Critérios do JECRIM: OSIEC (Oralidade, Simplicidade, Informalidade, Economia, Celeridade)."
     },
     comentario: {
       resolucao: "ERRADO. O art. 62 da Lei 9.099/1995 elenca os critérios da oralidade, simplicidade, informalidade, economia processual e celeridade. Não figura entre eles o 'contraditório diferido obrigatório', que foi indevidamente acrescentado. A parte inicial é verdadeira, mas o item final torna a assertiva incorreta.",
@@ -701,12 +561,7 @@ const QUESTOES_PCAL_LOTE16 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "termo circunstanciado",
     cognitivo: {
       motivo: "Cobrar o procedimento do termo circunstanciado (art. 69).",
-      mede: "JECRIM — fase policial.",
-      pegadinhaDesc: "A banca pode impor flagrante mesmo com compromisso de comparecimento.",
-      ondeErra: "Ignora a vedação ao flagrante quando há encaminhamento/compromisso.",
       palavraCritica: "não se imporá prisão em flagrante",
-      tecnica: "Art. 69, parágrafo único: quem é encaminhado ao juizado ou assume compromisso de comparecer não é preso em flagrante nem se exige fiança.",
-      regraMental: "Assumiu compromisso de comparecer? Não há flagrante nas IMPO."
     },
     comentario: {
       resolucao: "CERTO. O art. 69 da Lei 9.099/1995 determina que a autoridade policial lavre termo circunstanciado nas infrações de menor potencial ofensivo. Conforme o parágrafo único, ao autor do fato imediatamente encaminhado ao juizado ou que assuma o compromisso de comparecer não se imporá prisão em flagrante nem se exigirá fiança.",

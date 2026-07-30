@@ -662,6 +662,36 @@ function questaoCardHtml(q, opts) {
     <div id="qr-${q.id}"></div>
   </div>`;
 }
+/* Bloco pós-resposta que substituiu a "Engenharia cognitiva".
+   Em vez de reexplicar a questão — o que `comentario` já faz —, entrega a
+   técnica que neutraliza o padrão daquele item, casada por `pegadinha`.
+   Fica fechado por padrão: o candidato abre quando quiser treinar o
+   método, sem empurrar mais texto logo após o gabarito. */
+function estrategiasDaQuestaoHtml(q) {
+  const lista = estrategiasDaQuestao(q);
+  const motivo = q.cognitivo && q.cognitivo.motivo;
+  const palavra = q.cognitivo && q.cognitivo.palavraCritica;
+  if (!lista.length && !motivo) return "";
+
+  return `<details class="cog"><summary>🎯 Como não cair nessa de novo (${lista.length} ${lista.length === 1 ? "estratégia" : "estratégias"})</summary>
+    <div class="estr-q">
+      ${motivo ? `<div class="estr-q-motivo"><b>Por que esta questão existe</b>${escapeHtml(motivo)}</div>` : ""}
+      ${palavra ? `<div class="estr-q-palavra"><b>Palavra que muda tudo</b><mark>${escapeHtml(palavra)}</mark></div>` : ""}
+      ${lista.map(e => `
+        <div class="estr-q-item">
+          <div class="estr-q-nome">✦ ${escapeHtml(e.nome)}</div>
+          <p class="estr-q-desc">${escapeHtml(e.desc)}</p>
+          <ol class="estr-passos">${e.passos.map(p => `<li>${escapeHtml(p)}</li>`).join("")}</ol>
+          <div class="estr-q-risco"><b>⚠ Quando a técnica falha</b> ${escapeHtml(e.armadilha)}</div>
+        </div>`).join("")}
+      <div class="estr-q-rodape">
+        <span class="hint">Reaparecimento estimado: ≈ ${Math.round(q.probReaparecer * 100)}%</span>
+        <button class="btn ghost small" onclick="navigate('estrategias')">Ver todas as estratégias →</button>
+      </div>
+    </div>
+  </details>`;
+}
+
 function setConf(qid, n, btn) {
   qUI[qid].confianca = n;
   btn.parentElement.querySelectorAll("button").forEach(b => b.classList.remove("sel"));
@@ -730,7 +760,7 @@ async function responder(qid, resposta) {
     alvo.innerHTML = resultadoHtml +
       `<div class="resultado bad">Não foi possível carregar a explicação desta questão. Verifique sua conexão e recarregue a página.</div>`;
   } else {
-    const c = q.comentario, cog = q.cognitivo;
+    const c = q.comentario;
     alvo.innerHTML = resultadoHtml + `
       <div class="comentario">
         <div class="bloco"><b>Resolução</b>${escapeHtml(c.resolucao)}</div>
@@ -741,18 +771,7 @@ async function responder(qid, resposta) {
         <div class="bloco"><b>Como a banca pensa</b>${escapeHtml(c.comoBancaPensa)}</div>
         ${dna ? `<div class="bloco"><b>Padrão da banca detectado: ${escapeHtml(dna.nome)} (incidência ${dna.incidencia}%)</b>${escapeHtml(dna.gatilho)}</div>` : ""}
       </div>
-      <details class="cog"><summary>🧠 Engenharia cognitiva da questão (mapa da lógica)</summary>
-        <div class="cog-grid">
-          <div class="item"><b>1 · Por que esta questão existe</b>${escapeHtml(cog.motivo)}</div>
-          <div class="item"><b>2 · O que a banca mede</b>${escapeHtml(cog.mede)}</div>
-          <div class="item"><b>3 · A pegadinha utilizada</b>${escapeHtml(cog.pegadinhaDesc)}</div>
-          <div class="item"><b>4 · Onde o candidato erra</b>${escapeHtml(cog.ondeErra)}</div>
-          <div class="item"><b>5 · Palavra que muda tudo</b>${escapeHtml(cog.palavraCritica)}</div>
-          <div class="item"><b>6 · Técnica de eliminação</b>${escapeHtml(cog.tecnica)}</div>
-          <div class="item"><b>7 · Regra mental rápida</b>${escapeHtml(cog.regraMental)}</div>
-          <div class="item"><b>8 · Reaparecimento estimado</b>≈ ${Math.round(q.probReaparecer * 100)}% de probabilidade (estimativa histórica)</div>
-        </div>
-      </details>`;
+      ${estrategiasDaQuestaoHtml(q)}`;
   }
 
   /* Fica fora do if: mesmo sem a explicação, o usuário precisa do botão
@@ -1192,7 +1211,7 @@ async function renderProvaResultado(r) {
 }
 
 function provaRevisaoHtml(d, i) {
-  const q = d.q, c = q.comentario, cog = q.cognitivo;
+  const q = d.q, c = q.comentario;
   const dna = DNA_BANCA.find(x => x.slug === q.pegadinha);
   const gabTxt = d.gabarito === "C" ? "CERTO" : "ERRADO";
   const suaTxt = d.branco ? "Em branco" : (d.resp === "C" ? "CERTO" : "ERRADO");
@@ -1220,14 +1239,7 @@ function provaRevisaoHtml(d, i) {
       <div class="bloco"><b>Como a banca pensa</b>${escapeHtml(c.comoBancaPensa)}</div>
       ${dna ? `<div class="bloco"><b>Padrão detectado: ${escapeHtml(dna.nome)} (incidência ${dna.incidencia}%)</b>${escapeHtml(dna.gatilho)}</div>` : ""}
     </div>
-    <details class="cog"><summary>🧠 Engenharia cognitiva</summary>
-      <div class="cog-grid">
-        <div class="item"><b>Pegadinha</b>${escapeHtml(cog.pegadinhaDesc)}</div>
-        <div class="item"><b>Palavra que muda tudo</b>${escapeHtml(cog.palavraCritica)}</div>
-        <div class="item"><b>Técnica</b>${escapeHtml(cog.tecnica)}</div>
-        <div class="item"><b>Regra mental</b>${escapeHtml(cog.regraMental)}</div>
-      </div>
-    </details>`}
+    ${estrategiasDaQuestaoHtml(q)}`}
   </div>`;
 }
 

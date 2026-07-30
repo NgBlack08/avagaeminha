@@ -12,7 +12,7 @@ Abra o arquivo **`index.html`** em qualquer navegador (duplo clique). Não preci
 |---|---|
 | M1 — Banco Inteligente de Questões | Tela **Banco de Questões**: 43 questões C/E com concurso, cargo, disciplina, assunto, subassunto, dificuldade, gabarito, fonte; filtros combinados (inclusive "só as que errei") |
 | M2 — Engenharia Reversa | Tela **Raio-X da Banca**: frequência de temas, evolução histórica, perfil de redação, heatmap padrão × disciplina |
-| M3 — Engenharia Cognitiva | Em cada questão: painel "🧠 Engenharia cognitiva" com os 8 itens (motivo, o que mede, pegadinha, onde erra, palavra crítica, técnica, regra mental, reaparecimento) |
+| M3 — Engenharia Cognitiva | Em cada questão respondida: painel "🎯 Como não cair nessa de novo" — por que a questão existe, a palavra que muda tudo e as **estratégias da banca** que neutralizam aquele padrão (casadas por `pegadinha` ↔ `contraDNA`), com passos e limites de cada técnica |
 | M4 — Perfil da Banca (DNA) | **Raio-X**: 10 padrões com índice de incidência e gatilho mental |
 | M5 — Detector de Pegadinhas | Tela **Detector**: glossário de 21 palavras-perigosas + laboratório para colar qualquer enunciado; destaque automático nas questões |
 | M6 — IA Explicadora | Comentário completo por questão: resolução, fundamento legal, jurisprudência, macete, erro comum, como a banca pensa, tempo ideal |

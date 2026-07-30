@@ -26,12 +26,7 @@ const QUESTOES_PCAL_LOTE40 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "autopropagação automática ... sem arquivo hospedeiro",
     cognitivo: {
       motivo: "Cobrar a característica central e definidora do worm: autopropagação automática pela rede.",
-      mede: "Segurança da Informação — malwares (worm).",
-      pegadinhaDesc: "A banca pode negar a autopropagação automática ou exigir um hospedeiro/mídia removível.",
-      ondeErra: "Confunde o worm com o vírus (que depende de hospedeiro) ou presume que toda praga precisa de ação do usuário.",
       palavraCritica: "sem depender de um arquivo hospedeiro",
-      tecnica: "O worm se propaga SOZINHO pela rede, explorando falhas de segurança de software, sem precisar de um arquivo hospedeiro (diferença central para o vírus) nem de mídia removível.",
-      regraMental: "Worm = autopropagação automática pela rede, sem hospedeiro."
     },
     comentario: {
       resolucao: "CERTO. O worm é definido justamente pela capacidade de se replicar e se propagar automaticamente pela rede, de computador para computador, explorando vulnerabilidades de segurança — sem depender de um arquivo hospedeiro (como o vírus) nem de ação humana para se disseminar.",
@@ -50,12 +45,7 @@ const QUESTOES_PCAL_LOTE40 = [
     gabarito: "E", pegadinha: "termo-absoluto", palavraChave: "incapaz ... mídia removível",
     cognitivo: {
       motivo: "Cobrar, na forma invertida, a autopropagação automática do worm.",
-      mede: "Segurança da Informação — malwares (worm).",
-      pegadinhaDesc: "A banca nega a autopropagação em rede e atribui ao worm uma dependência que não é sua.",
-      ondeErra: "Aceita a inversão sem perceber que é exatamente o worm quem dispensa mídia removível.",
       palavraCritica: "incapaz",
-      tecnica: "O worm se propaga automaticamente pela rede (e-mail, falhas de segurança, compartilhamentos), sem qualquer necessidade de mídia removível — a palavra 'incapaz' já denuncia a inversão.",
-      regraMental: "Termos absolutos como 'incapaz' e 'sempre' costumam sinalizar item errado."
     },
     comentario: {
       resolucao: "ERRADO. O worm é justamente capaz de se propagar automaticamente pelas redes, sem depender de mídia removível — essa dependência de meio físico externo é característica mais próxima do vírus clássico, não do worm.",
@@ -74,12 +64,7 @@ const QUESTOES_PCAL_LOTE40 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "vírus ... depende de hospedeiro",
     cognitivo: {
       motivo: "Cobrar a distinção clássica entre vírus (dependente de hospedeiro) e worm (autônomo).",
-      mede: "Segurança da Informação — malwares (vírus x worm).",
-      pegadinhaDesc: "A banca pode inverter, atribuindo ao vírus a autopropagação do worm.",
-      ondeErra: "Troca as características de vírus e worm entre si.",
       palavraCritica: "depende de um arquivo ou programa hospedeiro",
-      tecnica: "O vírus precisa se anexar a um arquivo/programa hospedeiro para se replicar e depende, em regra, da execução desse hospedeiro pelo usuário — diferentemente do worm, que se propaga sozinho pela rede.",
-      regraMental: "Vírus = precisa de hospedeiro. Worm = autônomo, explora a rede."
     },
     comentario: {
       resolucao: "CERTO. O vírus de computador é definido pela dependência de um arquivo ou programa hospedeiro para se replicar e se disseminar — ao contrário do worm, que se autopropaga pela rede de forma independente, explorando vulnerabilidades de segurança.",
@@ -98,12 +83,7 @@ const QUESTOES_PCAL_LOTE40 = [
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "propaga-se automaticamente pela rede",
     cognitivo: {
       motivo: "Cobrar que o trojan NÃO se autopropaga pela rede (comportamento típico do worm).",
-      mede: "Segurança da Informação — malwares (trojan).",
-      pegadinhaDesc: "A banca atribui ao trojan o comportamento de autopropagação em rede, que é do worm.",
-      ondeErra: "Confunde o trojan (depende da ação do usuário) com o worm (autopropagação automática).",
       palavraCritica: "propaga-se automaticamente pela rede",
-      tecnica: "O trojan se disfarça de programa legítimo e depende da própria vítima para ser instalado/executado — ele não se autorreplica nem se propaga sozinho pela rede infectando outros dispositivos, ao contrário do worm.",
-      regraMental: "Quem se autopropaga pela rede é o worm. O trojan depende do usuário instalar."
     },
     comentario: {
       resolucao: "ERRADO. Autopropagar-se pela rede, enviando cópias de si mesmo e infectando outros dispositivos, é comportamento típico do worm, e não do trojan — este último depende da ação do próprio usuário, que o instala acreditando se tratar de um programa legítimo.",
@@ -122,12 +102,7 @@ const QUESTOES_PCAL_LOTE40 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "disfarça ... o próprio usuário a instalá-lo",
     cognitivo: {
       motivo: "Cobrar a característica correta do trojan: disfarce + instalação pelo próprio usuário.",
-      mede: "Segurança da Informação — malwares (trojan).",
-      pegadinhaDesc: "A banca pode negar o disfarce ou atribuir autopropagação ao trojan.",
-      ondeErra: "Confunde trojan com worm quanto à forma de disseminação.",
       palavraCritica: "não possuindo capacidade de se autopropagar",
-      tecnica: "O trojan se disfarça de software legítimo/útil para enganar a vítima, que o instala por conta própria — ele pode transportar outros malwares, mas não se autorreplica nem se propaga sozinho pela rede.",
-      regraMental: "Trojan engana e é instalado pelo usuário; worm se propaga sozinho."
     },
     comentario: {
       resolucao: "CERTO. O trojan se caracteriza pelo disfarce de programa legítimo, contando com a própria ação do usuário para ser instalado — diferentemente do worm, ele não possui capacidade de autopropagação automática pela rede.",
@@ -146,12 +121,7 @@ const QUESTOES_PCAL_LOTE40 = [
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "capturar dados pessoais ... enviar spam",
     cognitivo: {
       motivo: "Cobrar a definição correta do ransomware (criptografia + resgate), distinta da do spyware.",
-      mede: "Segurança da Informação — malwares (ransomware).",
-      pegadinhaDesc: "A banca atribui ao ransomware a função de captura de dados/spam, que é do spyware/adware.",
-      ondeErra: "Confunde ransomware (sequestro de dados mediante criptografia) com spyware (coleta de dados).",
       palavraCritica: "capturar dados pessoais ... enviar spam",
-      tecnica: "A característica central do ransomware é bloquear o acesso ou criptografar os dados da vítima e exigir pagamento de resgate — capturar dados pessoais para envio de spam é comportamento típico de spyware/adware, não de ransomware.",
-      regraMental: "Ransomware = criptografia + resgate. Captura de dados para spam = spyware/adware."
     },
     comentario: {
       resolucao: "ERRADO. O ransomware tem como característica definidora bloquear o acesso a um sistema ou criptografar os dados da vítima, exigindo pagamento de resgate para restabelecer o acesso — capturar dados pessoais para envio de spam sem autorização é comportamento típico do spyware/adware, e não do ransomware.",
@@ -172,12 +142,7 @@ const QUESTOES_PCAL_LOTE40 = [
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "verificação de seus arquivos",
     cognitivo: {
       motivo: "Cobrar que o firewall controla tráfego de rede, e não escaneia arquivos (função do antivírus).",
-      mede: "Segurança da Informação — firewall x antivírus.",
-      pegadinhaDesc: "A banca atribui ao firewall a função de escanear arquivos, que é do antivírus.",
-      ondeErra: "Confunde controle de tráfego de rede (firewall) com varredura de arquivos armazenados (antivírus).",
       palavraCritica: "verificação de seus arquivos",
-      tecnica: "O firewall é uma barreira que controla o tráfego de entrada e saída de uma rede, com base em regras predefinidas — ele não realiza varredura de arquivos armazenados em busca de malware; essa é a função do antivírus.",
-      regraMental: "Firewall = tráfego de rede. Antivírus = arquivos armazenados."
     },
     comentario: {
       resolucao: "ERRADO. O firewall controla o tráfego de dados que entra e sai de uma rede, com base em regras de filtragem — quem realiza a verificação de arquivos armazenados em busca de códigos maliciosos é o antivírus, e não o firewall.",
@@ -196,12 +161,7 @@ const QUESTOES_PCAL_LOTE40 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "controla o tráfego ... regras predefinidas",
     cognitivo: {
       motivo: "Cobrar a definição correta e completa do firewall.",
-      mede: "Segurança da Informação — firewall.",
-      pegadinhaDesc: "A banca pode restringir o firewall a apenas hardware ou apenas software.",
-      ondeErra: "Não reconhece que o firewall pode ser implementado em hardware, software ou de forma combinada.",
       palavraCritica: "hardware, em software ou em ambos",
-      tecnica: "O firewall é um mecanismo (físico, lógico ou híbrido) que filtra o tráfego de rede de entrada e saída, permitindo ou bloqueando pacotes de dados conforme regras de segurança predefinidas.",
-      regraMental: "Firewall: pode ser hardware, software ou os dois — sempre controlando tráfego por regras."
     },
     comentario: {
       resolucao: "CERTO. O firewall pode ser implementado em hardware, em software ou em uma combinação de ambos, exercendo a função de controlar o tráfego de dados de entrada e saída de uma rede, permitindo ou bloqueando conexões conforme regras de segurança predefinidas.",
@@ -220,12 +180,7 @@ const QUESTOES_PCAL_LOTE40 = [
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "restauração do firewall ... preservar cópias",
     cognitivo: {
       motivo: "Cobrar que a recuperação de falhas de armazenamento é função do backup, não do firewall.",
-      mede: "Segurança da Informação — firewall x backup.",
-      pegadinhaDesc: "A banca mistura dois conceitos sem relação direta (firewall e recuperação de dados).",
-      ondeErra: "Acha que o firewall, por ser uma ferramenta de segurança, também armazena e restaura dados.",
       palavraCritica: "restauração do firewall ... preservar cópias",
-      tecnica: "O firewall não armazena cópias de dados nem participa da recuperação de falhas de armazenamento — essa função é exercida pelos procedimentos de backup (cópias de segurança), que são conceitualmente distintos do firewall.",
-      regraMental: "Recuperar dados após falha catastrófica = função do backup, nunca do firewall."
     },
     comentario: {
       resolucao: "ERRADO. O firewall é mecanismo de controle de tráfego de rede e não possui qualquer função de armazenamento ou preservação de cópias de dados — a recuperação de falhas catastróficas de armazenamento é realizada por meio da restauração de backups, e não do firewall.",
@@ -244,12 +199,7 @@ const QUESTOES_PCAL_LOTE40 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "categorias especializadas ... tipo específico de ameaça",
     cognitivo: {
       motivo: "Cobrar a existência de categorias especializadas de ferramentas antimalware.",
-      mede: "Segurança da Informação — ferramentas antimalware.",
-      pegadinhaDesc: "A banca pode negar a especialização por categoria ou inventar uma categoria inexistente.",
-      ondeErra: "Estranha nomes menos comuns (antirootkit, antitrojan) e presume erro por desconhecimento do termo.",
       palavraCritica: "categorias especializadas",
-      tecnica: "As soluções antimalware se dividem em categorias especializadas conforme o tipo de ameaça combatida: antivírus (vírus), antispyware (spyware), antirootkit (rootkits) e antitrojan (trojans) — soluções integradas também existem, combinando várias dessas funções.",
-      regraMental: "Antimalware tem 'sobrenomes' — cada categoria mira uma ameaça específica."
     },
     comentario: {
       resolucao: "CERTO. As ferramentas antimalware realmente se organizam em categorias especializadas — antivírus, antispyware, antirootkit e antitrojan, entre outras —, cada uma voltada ao combate de um tipo específico de código malicioso, ainda que soluções integradas também sejam comuns no mercado.",
@@ -270,12 +220,7 @@ const QUESTOES_PCAL_LOTE40 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "último completo ... último diferencial",
     cognitivo: {
       motivo: "Cobrar a definição correta do backup diferencial e sua simplicidade de restauração.",
-      mede: "Segurança da Informação — procedimentos de backup (diferencial).",
-      pegadinhaDesc: "A banca pode exigir todos os diferenciais em sequência (confundindo com o incremental).",
-      ondeErra: "Troca o processo de restauração do diferencial pelo do incremental.",
       palavraCritica: "apenas ... o último backup diferencial",
-      tecnica: "O backup diferencial sempre copia tudo o que mudou desde o último backup COMPLETO (por isso cresce a cada execução) — logo, para restaurar, basta o último completo somado ao último diferencial, sem necessidade de diferenciais anteriores.",
-      regraMental: "Diferencial: restauração = último completo + último diferencial (simples)."
     },
     comentario: {
       resolucao: "CERTO. O backup diferencial copia todas as alterações ocorridas desde o último backup completo, de forma cumulativa. Por isso, sua restauração total é simples: exige apenas o último backup completo e o último backup diferencial, sem necessidade de diferenciais intermediários.",
@@ -294,12 +239,7 @@ const QUESTOES_PCAL_LOTE40 = [
     gabarito: "E", pegadinha: "verdade-mais-falso", palavraChave: "mais rápida ... menos espaço",
     cognitivo: {
       motivo: "Cobrar, na forma invertida, a comparação de espaço e velocidade entre diferencial e incremental.",
-      mede: "Segurança da Informação — procedimentos de backup (diferencial x incremental).",
-      pegadinhaDesc: "A banca inverte a comparação: quem é mais rápido e consome menos espaço é o incremental, não o diferencial.",
-      ondeErra: "Troca as vantagens de espaço/velocidade entre diferencial e incremental.",
       palavraCritica: "mais rápida ... menos espaço",
-      tecnica: "O backup diferencial ACUMULA tudo desde o último completo, crescendo a cada dia da semana — por isso é mais LENTO e consome MAIS espaço ao longo do tempo do que o incremental, que copia apenas as mudanças desde o último backup (de qualquer tipo), sendo mais rápido e enxuto.",
-      regraMental: "Diferencial cresce e acumula (mais espaço/mais lento). Incremental é enxuto (menos espaço/mais rápido)."
     },
     comentario: {
       resolucao: "ERRADO. É o inverso: o backup diferencial acumula as alterações desde o último completo, crescendo a cada execução ao longo da semana, sendo por isso mais lento e consumindo mais espaço do que o incremental — que copia apenas as mudanças desde o último backup realizado, sendo mais rápido e ocupando menos espaço.",
@@ -318,12 +258,7 @@ const QUESTOES_PCAL_LOTE40 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "menos espaço ... todos os incrementais em sequência",
     cognitivo: {
       motivo: "Cobrar a definição correta do backup incremental e a complexidade de sua restauração.",
-      mede: "Segurança da Informação — procedimentos de backup (incremental).",
-      pegadinhaDesc: "A banca pode simplificar indevidamente a restauração do incremental (como se bastasse o último).",
-      ondeErra: "Presume que a restauração do incremental é tão simples quanto a do diferencial.",
       palavraCritica: "todos os backups incrementais subsequentes, em sequência",
-      tecnica: "O incremental copia só o que mudou desde o ÚLTIMO backup (de qualquer tipo), por isso é o mais econômico em espaço e mais rápido de executar. Em compensação, sua restauração é mais trabalhosa: exige o último completo MAIS todos os incrementais subsequentes, em ordem.",
-      regraMental: "Incremental: economiza espaço/tempo no backup, mas complica a restauração (precisa de toda a cadeia)."
     },
     comentario: {
       resolucao: "CERTO. O backup incremental copia apenas as alterações desde o último backup (completo ou incremental), sendo o mais econômico em espaço de armazenamento — mas, justamente por isso, sua restauração completa exige o backup completo mais TODOS os incrementais subsequentes, aplicados em sequência.",
@@ -342,12 +277,7 @@ const QUESTOES_PCAL_LOTE40 = [
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "incremental ... mais consome espaço",
     cognitivo: {
       motivo: "Cobrar, na forma invertida, o ranking de consumo de espaço entre os tipos de backup.",
-      mede: "Segurança da Informação — procedimentos de backup (consumo de espaço).",
-      pegadinhaDesc: "A banca troca o incremental (mais enxuto) pelo completo (que mais consome espaço).",
-      ondeErra: "Não memoriza o ranking de consumo de espaço entre os três tipos de backup.",
       palavraCritica: "incremental ... mais consome espaço",
-      tecnica: "O ranking de consumo de espaço é: completo (copia tudo, mais espaço) > diferencial (acumula desde o último completo) > incremental (só as mudanças mais recentes, menos espaço). O incremental é, portanto, o mais ECONÔMICO, não o que mais consome.",
-      regraMental: "Espaço consumido: completo > diferencial > incremental."
     },
     comentario: {
       resolucao: "ERRADO. O tipo de backup que mais consome espaço de armazenamento é o completo, que copia todos os dados a cada execução. O incremental é, na verdade, o mais econômico em espaço, pois copia somente as alterações desde o último backup realizado.",
@@ -366,12 +296,7 @@ const QUESTOES_PCAL_LOTE40 = [
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "cópia exata e completa ... recuperação rápida e integral",
     cognitivo: {
       motivo: "Cobrar, na forma invertida, que o incremental não copia tudo a cada execução (isso é do backup completo).",
-      mede: "Segurança da Informação — procedimentos de backup (incremental x completo).",
-      pegadinhaDesc: "A banca atribui ao incremental a característica de 'cópia completa e recuperação rápida', que é do backup completo.",
-      ondeErra: "Confunde a economia de espaço do incremental com uma suposta cópia integral a cada execução.",
       palavraCritica: "cópia exata e completa ... recuperação rápida e integral",
-      tecnica: "O incremental copia SOMENTE as alterações desde o último backup, e não uma cópia completa a cada execução — quem oferece cópia integral e recuperação mais simples e rápida é o backup completo (full).",
-      regraMental: "Cópia completa a cada execução = backup completo. Só as mudanças = incremental."
     },
     comentario: {
       resolucao: "ERRADO. O backup incremental copia apenas os arquivos alterados desde o último backup, e não uma cópia exata e completa de tudo a cada execução — essa característica, associada à recuperação mais rápida e simples, é típica do backup completo (full), não do incremental.",
@@ -390,12 +315,7 @@ const QUESTOES_PCAL_LOTE40 = [
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "assim como ... apenas dois conjuntos",
     cognitivo: {
       motivo: "Cobrar que a restauração do incremental é mais complexa que a do diferencial, exigindo toda a cadeia.",
-      mede: "Segurança da Informação — procedimentos de backup (restauração).",
-      pegadinhaDesc: "A banca equipara indevidamente a simplicidade de restauração do diferencial à do incremental.",
-      ondeErra: "Não percebe que o incremental exige TODOS os incrementais em sequência, e não apenas o último.",
       palavraCritica: "assim como ... apenas dois conjuntos",
-      tecnica: "Diferente do diferencial (que exige apenas o último completo + último diferencial), a restauração do incremental exige o último completo MAIS TODOS os incrementais subsequentes, aplicados em ordem cronológica — um processo mais longo e mais sujeito a falhas.",
-      regraMental: "Diferencial: 2 peças. Incremental: completo + toda a cadeia de incrementais."
     },
     comentario: {
       resolucao: "ERRADO. Ao contrário do diferencial, a restauração completa a partir de backups incrementais exige o último backup completo E todos os backups incrementais realizados desde então, aplicados em sequência — não apenas dois conjuntos de arquivos.",
@@ -416,12 +336,7 @@ const QUESTOES_PCAL_LOTE40 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "reduzem o risco ... não são totalmente imunes",
     cognitivo: {
       motivo: "Cobrar que a nuvem reduz riscos, mas não elimina totalmente a ameaça de ransomware.",
-      mede: "Segurança da Informação — computação em nuvem.",
-      pegadinhaDesc: "A banca pode afirmar que a nuvem é totalmente imune a pragas virtuais.",
-      ondeErra: "Presume que o armazenamento em nuvem elimina por completo qualquer risco de segurança.",
       palavraCritica: "não são totalmente imunes",
-      tecnica: "A nuvem aumenta a resiliência dos dados (versionamento, cópias automáticas, redundância), mas não é totalmente imune — arquivos sincronizados podem ser afetados por ransomware que criptografa a pasta local espelhada, por exemplo.",
-      regraMental: "Nuvem reduz risco, não elimina — desconfie de 'totalmente imune'."
     },
     comentario: {
       resolucao: "CERTO. Os serviços de nuvem realmente reduzem o risco de perda de dados e aumentam a resiliência, por meio de versionamento e cópias automáticas, mas não conferem imunidade total contra ameaças como o ransomware, que pode afetar também arquivos sincronizados.",
@@ -440,12 +355,7 @@ const QUESTOES_PCAL_LOTE40 = [
     gabarito: "E", pegadinha: "termo-absoluto", palavraChave: "totalmente imunes ... eliminam por completo",
     cognitivo: {
       motivo: "Cobrar, na forma invertida, que a nuvem não é totalmente imune a ransomware.",
-      mede: "Segurança da Informação — computação em nuvem.",
-      pegadinhaDesc: "A banca usa palavras absolutas ('totalmente imunes', 'por completo') para induzir ao erro.",
-      ondeErra: "Aceita a afirmação de imunidade total sem questionar a plausibilidade técnica.",
       palavraCritica: "totalmente imunes",
-      tecnica: "Não existe imunidade total: arquivos sincronizados com pastas locais infectadas por ransomware podem ter suas versões na nuvem também comprometidas, ainda que o versionamento permita, em muitos casos, restaurar versões anteriores.",
-      regraMental: "Desconfie de 'totalmente imune' — a nuvem reduz risco, mas não zera."
     },
     comentario: {
       resolucao: "ERRADO. Os serviços de nuvem não são totalmente imunes a ransomware — eles reduzem o risco e aumentam a resiliência (por exemplo, via versionamento), mas não eliminam por completo a possibilidade de impacto em arquivos sincronizados.",
@@ -464,12 +374,7 @@ const QUESTOES_PCAL_LOTE40 = [
     gabarito: "E", pegadinha: "termo-absoluto", palavraChave: "sempre apagada",
     cognitivo: {
       motivo: "Cobrar que o recurso de Arquivos sob Demanda do OneDrive não apaga sempre a cópia local.",
-      mede: "Segurança da Informação — computação em nuvem (OneDrive).",
-      pegadinhaDesc: "A banca usa a palavra absoluta 'sempre' para descrever um comportamento que é apenas uma das três possibilidades.",
-      ondeErra: "Desconhece os três estados possíveis de um arquivo no recurso de Arquivos sob Demanda.",
       palavraCritica: "sempre apagada",
-      tecnica: "O recurso Arquivos sob Demanda do OneDrive admite três estados para cada arquivo: somente na nuvem, disponível localmente e sempre disponível — o espaço local só é liberado quando necessário, e não por padrão/sempre.",
-      regraMental: "OneDrive: 3 estados possíveis. Não existe 'sempre apaga a cópia local'."
     },
     comentario: {
       resolucao: "ERRADO. O recurso de Arquivos sob Demanda do OneDrive mantém três estados possíveis para cada arquivo (somente na nuvem, disponível localmente, sempre disponível), liberando o espaço local apenas quando necessário — a cópia local não é sempre apagada após a sincronização.",
@@ -488,12 +393,7 @@ const QUESTOES_PCAL_LOTE40 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "três estados possíveis ... apenas quando necessário",
     cognitivo: {
       motivo: "Cobrar corretamente os três estados do recurso Arquivos sob Demanda.",
-      mede: "Segurança da Informação — computação em nuvem (OneDrive).",
-      pegadinhaDesc: "A banca pode negar a existência de múltiplos estados ou inventar um comportamento fixo.",
-      ondeErra: "Desconhece o funcionamento real do recurso e presume um comportamento único.",
       palavraCritica: "três estados possíveis",
-      tecnica: "O OneDrive permite que o usuário escolha, por arquivo ou pasta, entre mantê-lo somente na nuvem (sem ocupar espaço local), disponível localmente (baixado, mas liberável) ou sempre disponível (mantido localmente de forma permanente).",
-      regraMental: "OneDrive: só na nuvem / disponível localmente / sempre disponível — três estados configuráveis."
     },
     comentario: {
       resolucao: "CERTO. O recurso de Arquivos sob Demanda do OneDrive realmente admite três estados possíveis para cada arquivo — somente na nuvem, disponível localmente e sempre disponível —, permitindo liberar espaço de armazenamento local apenas quando necessário, sem apagar arquivos por padrão.",
@@ -514,12 +414,7 @@ const QUESTOES_PCAL_LOTE40 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "volume massivo ... origens distribuídas ... disponibilidade",
     cognitivo: {
       motivo: "Cobrar a identificação correta de um ataque DDoS a partir de sua descrição técnica.",
-      mede: "Segurança da Informação — ataques de negação de serviço (DDoS).",
-      pegadinhaDesc: "A banca pode nomear corretamente a descrição ou trocar por outro tipo de ataque (ex.: ransomware).",
-      ondeErra: "Não associa a descrição técnica (volume + múltiplas origens + sobrecarga) ao nome correto do ataque.",
       palavraCritica: "DDoS",
-      tecnica: "O ataque de negação de serviço distribuído (DDoS) caracteriza-se pelo envio maciço e simultâneo de requisições, a partir de múltiplas origens (muitas vezes uma botnet), com o objetivo de esgotar os recursos do alvo e comprometer o princípio da disponibilidade.",
-      regraMental: "Volume massivo + múltiplas origens + sobrecarga = DDoS, atacando a disponibilidade."
     },
     comentario: {
       resolucao: "CERTO. A descrição corresponde exatamente a um ataque de negação de serviço distribuído (DDoS): volume massivo de conexões simultâneas, provenientes de múltiplas origens distribuídas, com o objetivo de exceder a capacidade do serviço-alvo e comprometer sua disponibilidade.",
@@ -538,12 +433,7 @@ const QUESTOES_PCAL_LOTE40 = [
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "volume massivo ... classificado como ... ransomware",
     cognitivo: {
       motivo: "Cobrar que a descrição de um ataque volumétrico/DDoS não deve ser nomeada como ransomware.",
-      mede: "Segurança da Informação — ataques de negação de serviço x ransomware.",
-      pegadinhaDesc: "A banca descreve um DDoS com precisão técnica, mas nomeia o ataque como 'ransomware'.",
-      ondeErra: "Concorda com o nome do ataque só porque a descrição técnica anterior parece coerente, sem verificar se o nome bate com a descrição.",
       palavraCritica: "classificado como ... ransomware",
-      tecnica: "A descrição (volume massivo, múltiplas origens, sobrecarga, interrupção do serviço) corresponde a um ataque de negação de serviço distribuído (DDoS), que compromete a disponibilidade — o ransomware, por sua vez, consiste em criptografar dados e exigir resgate, sem qualquer relação com volume de conexões.",
-      regraMental: "Descrição de sobrecarga de tráfego = DDoS, nunca ransomware."
     },
     comentario: {
       resolucao: "ERRADO. A situação descrita — volume massivo de conexões simultâneas de múltiplas origens, com o objetivo de sobrecarregar e derrubar um serviço — caracteriza um ataque de negação de serviço distribuído (DDoS), e não um ataque de ransomware, que consiste em criptografar dados e exigir resgate, sem relação com volume de tráfego.",
@@ -562,12 +452,7 @@ const QUESTOES_PCAL_LOTE40 = [
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "DoS ... múltiplos computadores ... DDoS ... única máquina",
     cognitivo: {
       motivo: "Cobrar, na forma invertida, a distinção entre DoS (origem única) e DDoS (origem distribuída).",
-      mede: "Segurança da Informação — DoS x DDoS (origem do ataque).",
-      pegadinhaDesc: "A banca inverte as definições de DoS e DDoS quanto à origem do ataque.",
-      ondeErra: "Troca a definição de DoS (origem única) pela de DDoS (origem distribuída), e vice-versa.",
       palavraCritica: "DoS ... múltiplos computadores",
-      tecnica: "O DoS (Denial of Service) parte de UMA ÚNICA origem/máquina atacante. Já o DDoS (Distributed Denial of Service) é justamente a versão distribuída, partindo de MÚLTIPLAS origens (frequentemente uma botnet) simultaneamente — o prefixo 'D' de DDoS indica exatamente essa distribuição.",
-      regraMental: "DoS = uma origem. DDoS = múltiplas origens distribuídas (o 'D' extra é disso)."
     },
     comentario: {
       resolucao: "ERRADO. As definições foram invertidas: o DoS (Denial of Service) tem origem em uma única máquina atacante, enquanto o DDoS (Distributed Denial of Service) é a versão distribuída do ataque, partindo de múltiplos computadores/origens coordenados simultaneamente.",
@@ -586,12 +471,7 @@ const QUESTOES_PCAL_LOTE40 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "autenticidade e o não repúdio ... assinatura digital",
     cognitivo: {
       motivo: "Cobrar a extensão da tríade CID com autenticidade e não repúdio, e o papel da assinatura digital.",
-      mede: "Segurança da Informação — fundamentos (tríade CID e princípios complementares).",
-      pegadinhaDesc: "A banca pode negar a existência desses princípios complementares ou atribuí-los a outra ferramenta.",
-      ondeErra: "Restringe a segurança da informação apenas aos três pilares da tríade CID, ignorando autenticidade e não repúdio.",
       palavraCritica: "autenticidade e o não repúdio",
-      tecnica: "Além da tríade CID (confidencialidade, integridade, disponibilidade), a doutrina reconhece a autenticidade (garantia da identidade de quem envia/assina a informação) e o não repúdio (impossibilidade de negar a autoria de um ato) como princípios complementares, ambos viabilizados tecnicamente pela assinatura digital.",
-      regraMental: "5 pilares: CID + autenticidade + não repúdio. Assinatura digital garante os dois últimos."
     },
     comentario: {
       resolucao: "CERTO. Além da tríade CID, a autenticidade (garantia da identidade do emissor) e o não repúdio (impossibilidade de negar a autoria de uma ação) completam o conjunto clássico de premissas da segurança da informação, sendo ambos assegurados, na prática, pelo uso da assinatura digital.",
@@ -610,12 +490,7 @@ const QUESTOES_PCAL_LOTE40 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "não sejam alterados indevidamente ... acessíveis quando necessários",
     cognitivo: {
       motivo: "Cobrar as definições corretas e completas de integridade e disponibilidade.",
-      mede: "Segurança da Informação — fundamentos (tríade CID).",
-      pegadinhaDesc: "A banca pode inverter as duas definições ou generalizar 'disponibilidade' para acesso irrestrito.",
-      ondeErra: "Interpreta 'disponibilidade' como acesso permanente e irrestrito a qualquer pessoa, e não apenas aos autorizados quando necessário.",
       palavraCritica: "acessíveis sempre que necessários ... autorizados",
-      tecnica: "Integridade: os dados devem permanecer exatos e não sofrer alteração indevida (garantida por hash e assinatura digital). Disponibilidade: o acesso deve ser garantido aos USUÁRIOS AUTORIZADOS sempre que necessário — não significa acesso ilimitado a qualquer pessoa, a qualquer momento.",
-      regraMental: "Integridade = dado correto. Disponibilidade = acesso a quem tem direito, quando precisar."
     },
     comentario: {
       resolucao: "CERTO. A integridade garante que os dados permaneçam completos e não sejam alterados indevidamente, enquanto a disponibilidade assegura que sistemas e informações estejam acessíveis sempre que necessário, mas apenas aos usuários devidamente autorizados — não a qualquer pessoa, de forma irrestrita.",
@@ -634,12 +509,7 @@ const QUESTOES_PCAL_LOTE40 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "confidencialidade, integridade e disponibilidade ... tríade CID",
     cognitivo: {
       motivo: "Cobrar o reconhecimento direto da tríade CID como fundamento básico da segurança da informação.",
-      mede: "Segurança da Informação — fundamentos (tríade CID).",
-      pegadinhaDesc: "A banca pode trocar um dos três atributos por outro conceito (ex.: autenticidade no lugar da disponibilidade).",
-      ondeErra: "Confunde os três pilares básicos com os princípios complementares (autenticidade e não repúdio).",
       palavraCritica: "confidencialidade, integridade e disponibilidade",
-      tecnica: "A tríade CID (ou CIA, em inglês) — confidencialidade, integridade e disponibilidade — constitui o conjunto de atributos mais básicos e fundamentais da segurança da informação, servindo de base para todos os controles e políticas de proteção de dados.",
-      regraMental: "CID: Confidencialidade, Integridade, Disponibilidade — os 3 pilares básicos e mais cobrados."
     },
     comentario: {
       resolucao: "CERTO. A confidencialidade, a integridade e a disponibilidade constituem, de fato, os atributos básicos e fundamentais da segurança da informação, formando a conhecida tríade CID (ou CIA), sobre a qual se apoiam os demais princípios e controles de proteção de dados.",

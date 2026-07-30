@@ -22,12 +22,7 @@ const QUESTOES_PCAL_LOTE43 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "não impede que sites ... e o provedor ... identifiquem",
     cognitivo: {
       motivo: "Cobrar que a navegação anônima só oferece privacidade local, sem ocultar a atividade perante sites e provedores.",
-      mede: "Informática — Internet (navegação anônima/privada).",
-      pegadinhaDesc: "A banca pode afirmar que a aba anônima também esconde a atividade de sites e do provedor de Internet.",
-      ondeErra: "Confunde 'não salvar histórico no dispositivo' com 'anonimato completo perante terceiros na rede'.",
       palavraCritica: "não impede ... identifiquem",
-      tecnica: "A aba anônima/privada oferece privacidade apenas local: não grava histórico, cookies nem cache no aparelho usado. Ela não esconde a atividade do usuário de sites visitados, do provedor de Internet ou da rede — anônimo não é sinônimo de anonimato completo na Internet.",
-      regraMental: "Aba anônima: privacidade só local. Sites e provedor continuam vendo tudo."
     },
     comentario: {
       resolucao: "CERTO. A navegação em abas anônimas/privadas evita apenas que o navegador salve, no dispositivo local, o histórico, os cookies e o cache da sessão — mas não impede que sites visitados e o provedor de Internet identifiquem as atividades do usuário.",
@@ -46,12 +41,7 @@ const QUESTOES_PCAL_LOTE43 = [
     gabarito: "E", pegadinha: "termo-absoluto", palavraChave: "completamente irrastreável ... impede que sites ... identifiquem",
     cognitivo: {
       motivo: "Cobrar, na forma invertida, que a navegação anônima não impede o rastreamento por sites e provedores.",
-      mede: "Informática — Internet (navegação anônima/privada).",
-      pegadinhaDesc: "A banca amplia o alcance da privacidade local para um suposto anonimato completo na rede.",
-      ondeErra: "Acredita que a ausência de histórico local implica invisibilidade perante toda a Internet.",
       palavraCritica: "completamente irrastreável ... impede que sites ... identifiquem",
-      tecnica: "A navegação anônima/privada apenas evita o registro local de histórico, cookies e cache. Sites visitados e o provedor de Internet continuam podendo identificar a atividade do usuário — o modo anônimo não garante anonimato completo na rede.",
-      regraMental: "Privacidade local ≠ invisibilidade na rede. Sites e provedor sempre veem a atividade."
     },
     comentario: {
       resolucao: "ERRADO. A navegação em abas anônimas/privadas não torna o usuário irrastreável na Internet — ela apenas evita o registro local de histórico, cookies e cache. Sites visitados e o provedor de Internet continuam podendo identificar as atividades realizadas.",
@@ -72,12 +62,7 @@ const QUESTOES_PCAL_LOTE43 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "infraestrutura ... compartilhada ... dados ... permanecem isolados",
     cognitivo: {
       motivo: "Cobrar que, apesar da infraestrutura compartilhada, os dados de cada organização permanecem isolados na nuvem pública.",
-      mede: "Informática — Internet e Computação em nuvem (nuvem pública, multi-inquilino).",
-      pegadinhaDesc: "A banca pode afirmar que outras organizações conseguem visualizar (mesmo sem alterar) os dados de terceiros.",
-      ondeErra: "Confunde 'infraestrutura pública/compartilhada' com 'dados visíveis a outros clientes'.",
       palavraCritica: "não podendo ser visualizados nem alterados",
-      tecnica: "A nuvem pública utiliza um modelo multi-inquilino (multitenant): a infraestrutura física é compartilhada entre clientes, mas cada um é logicamente isolado dos demais — o termo 'pública' refere-se à infraestrutura compartilhada, e não à exposição dos dados armazenados.",
-      regraMental: "Nuvem pública: infra compartilhada, dados isolados. 'Pública' é a infra, não os dados."
     },
     comentario: {
       resolucao: "CERTO. Na nuvem pública, apesar de a infraestrutura física ser compartilhada entre organizações (modelo multi-inquilino), os dados de cada cliente permanecem isolados, não podendo ser visualizados nem alterados por outras organizações que utilizam o mesmo provedor.",
@@ -96,12 +81,7 @@ const QUESTOES_PCAL_LOTE43 = [
     gabarito: "E", pegadinha: "verdade-mais-falso", palavraChave: "podem ser visualizados ... caráter 'público' ... se estende ... aos dados",
     cognitivo: {
       motivo: "Cobrar, na forma invertida, que o caráter público da nuvem se refere à infraestrutura, e não à visibilidade dos dados dos clientes.",
-      mede: "Informática — Internet e Computação em nuvem (nuvem pública, multi-inquilino).",
-      pegadinhaDesc: "A banca estende indevidamente o adjetivo 'pública' da infraestrutura para os dados armazenados.",
-      ondeErra: "Assume que 'nuvem pública' implica dados acessíveis a qualquer organização que compartilhe o provedor.",
       palavraCritica: "se estende também à visibilidade dos dados",
-      tecnica: "O termo 'nuvem pública' refere-se ao compartilhamento da infraestrutura física entre múltiplos clientes (modelo multi-inquilino), e não à exposição dos dados. Cada organização permanece isolada das demais, sem que outros clientes do mesmo provedor possam visualizar ou alterar seus dados.",
-      regraMental: "'Público' descreve a infraestrutura, nunca os dados — que ficam isolados por cliente."
     },
     comentario: {
       resolucao: "ERRADO. Os dados de uma organização armazenados em nuvem pública NÃO podem ser visualizados por outras organizações que utilizam o mesmo provedor — o caráter 'público' refere-se à infraestrutura física compartilhada (modelo multi-inquilino), e não à visibilidade dos dados, que permanecem isolados por cliente.",
@@ -122,12 +102,7 @@ const QUESTOES_PCAL_LOTE43 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "acesso remoto ... dinâmica e escalável ... sob demanda",
     cognitivo: {
       motivo: "Cobrar a definição correta e completa de computação em nuvem, incluindo o provisionamento sob demanda.",
-      mede: "Informática — Internet e Computação em nuvem (conceito).",
-      pegadinhaDesc: "A banca pode negar a elasticidade/escalabilidade dinâmica do modelo de nuvem.",
-      ondeErra: "Acha que a computação em nuvem ainda exige dimensionamento fixo e investimento prévio em infraestrutura própria.",
       palavraCritica: "sem a necessidade de investimento prévio ... dimensionada para o pico de uso",
-      tecnica: "A computação em nuvem permite acesso remoto a recursos compartilhados (servidores, armazenamento, aplicações) de forma dinâmica e escalável, geralmente via Internet. O provisionamento sob demanda dispensa o investimento prévio em infraestrutura própria dimensionada para o pico de uso, sendo uma de suas principais vantagens econômicas.",
-      regraMental: "Nuvem = acesso remoto, dinâmico, escalável, sob demanda — sem precisar comprar infra própria."
     },
     comentario: {
       resolucao: "CERTO. A computação em nuvem é um estilo de computação que permite acesso remoto a recursos compartilhados de forma dinâmica e escalável, geralmente via Internet, possibilitando o provisionamento sob demanda sem investimento prévio em infraestrutura própria dimensionada para o pico de uso.",
@@ -146,12 +121,7 @@ const QUESTOES_PCAL_LOTE43 = [
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "não permite ... dimensionamento dinâmico ... quantidade fixa ... dimensionada para o pico",
     cognitivo: {
       motivo: "Cobrar, na forma invertida, que a elasticidade/escalabilidade dinâmica é característica central da computação em nuvem.",
-      mede: "Informática — Internet e Computação em nuvem (conceito).",
-      pegadinhaDesc: "A banca nega justamente a característica que diferencia a nuvem da infraestrutura local tradicional.",
-      ondeErra: "Confunde o modelo de nuvem (elástico, sob demanda) com o modelo tradicional de infraestrutura própria (fixo, dimensionado previamente).",
       palavraCritica: "não permite ... quantidade fixa ... semelhante à infraestrutura local",
-      tecnica: "Uma das principais características da computação em nuvem é justamente permitir o provisionamento dinâmico e escalável de recursos, sob demanda, dispensando a necessidade de dimensionamento fixo prévio — ao contrário da infraestrutura local tradicional, que de fato exige esse planejamento antecipado.",
-      regraMental: "Nuvem é o oposto do dimensionamento fixo: ela é elástica e sob demanda."
     },
     comentario: {
       resolucao: "ERRADO. A computação em nuvem permite justamente o dimensionamento dinâmico e escalável de recursos sob demanda, dispensando a contratação prévia de uma capacidade fixa dimensionada para o pico de uso — essa é uma das principais vantagens da nuvem em relação à infraestrutura local tradicional.",
@@ -172,12 +142,7 @@ const QUESTOES_PCAL_LOTE43 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "mesmos protocolos ... rede mais restrita",
     cognitivo: {
       motivo: "Cobrar que a intranet usa a mesma tecnologia da Internet, mas com acesso restrito à organização.",
-      mede: "Informática — Internet e navegação (intranet e extranet).",
-      pegadinhaDesc: "A banca pode afirmar que a intranet usa protocolos proprietários, distintos dos da Internet.",
-      ondeErra: "Acha que, por ser restrita, a intranet precisa de tecnologia/protocolos diferentes dos usados na Internet.",
       palavraCritica: "mesmos protocolos ... rede mais restrita",
-      tecnica: "A intranet emprega os mesmos protocolos da Internet (TCP/IP, HTTP, entre outros), mas é uma rede restrita, de acesso limitado aos usuários de uma organização. Quando esse acesso é estendido a parceiros externos, de forma controlada, tem-se uma extranet.",
-      regraMental: "Intranet: mesma tecnologia da Internet, mas de uso interno e restrito."
     },
     comentario: {
       resolucao: "CERTO. A intranet utiliza os mesmos protocolos empregados na Internet (como TCP/IP e HTTP), mas constitui uma rede mais restrita, de acesso limitado aos usuários autorizados dentro de uma organização.",
@@ -196,12 +161,7 @@ const QUESTOES_PCAL_LOTE43 = [
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "protocolos ... proprietários e incompatíveis",
     cognitivo: {
       motivo: "Cobrar, na forma invertida, que a intranet usa os mesmos protocolos da Internet, e não protocolos proprietários.",
-      mede: "Informática — Internet e navegação (intranet e extranet).",
-      pegadinhaDesc: "A banca associa a restrição de acesso da intranet a uma suposta incompatibilidade tecnológica com a Internet.",
-      ondeErra: "Confunde 'acesso restrito' com 'tecnologia proprietária e incompatível'.",
       palavraCritica: "protocolos ... proprietários e incompatíveis",
-      tecnica: "A intranet utiliza exatamente os mesmos protocolos empregados na Internet, como TCP/IP e HTTP — a diferença está apenas no escopo de acesso, restrito aos usuários autorizados da organização, e não na tecnologia de rede utilizada.",
-      regraMental: "Intranet nunca usa protocolo proprietário — a restrição é de acesso, não de tecnologia."
     },
     comentario: {
       resolucao: "ERRADO. A intranet utiliza os mesmos protocolos empregados na Internet, como TCP/IP e HTTP, e não protocolos proprietários ou incompatíveis. A restrição da intranet está no escopo de acesso (limitado à organização), e não na tecnologia de comunicação utilizada.",
@@ -222,12 +182,7 @@ const QUESTOES_PCAL_LOTE43 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "PaaS ... desenvolva e gerencie suas próprias aplicações ... SaaS ... software já pronto",
     cognitivo: {
       motivo: "Cobrar a distinção correta entre PaaS (plataforma para o cliente desenvolver aplicações) e SaaS (software pronto para uso).",
-      mede: "Informática — Computação em nuvem (modelos de serviço: SaaS, PaaS, IaaS).",
-      pegadinhaDesc: "A banca pode chamar de SaaS o modelo em que o cliente desenvolve suas próprias aplicações (que é, na verdade, PaaS).",
-      ondeErra: "Confunde PaaS (plataforma de desenvolvimento) com SaaS (software pronto para uso final).",
       palavraCritica: "PaaS ... desenvolva e gerencie ... SaaS ... software já pronto",
-      tecnica: "No PaaS (Platform as a Service), o provedor oferece infraestrutura e ferramentas de desenvolvimento, cabendo ao cliente criar e gerenciar suas próprias aplicações. Já no SaaS (Software as a Service), o cliente apenas utiliza um software já pronto, como Gmail ou Office 365, sem desenvolvê-lo.",
-      regraMental: "PaaS: cliente desenvolve apps na plataforma fornecida. SaaS: cliente só usa o software pronto."
     },
     comentario: {
       resolucao: "CERTO. No PaaS (plataforma como serviço), o provedor disponibiliza infraestrutura e ferramentas de desenvolvimento para que o cliente desenvolva e gerencie suas próprias aplicações — diferentemente do SaaS, em que o cliente apenas utiliza um software já pronto fornecido pelo provedor.",
@@ -246,12 +201,7 @@ const QUESTOES_PCAL_LOTE43 = [
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "software como serviço (SaaS) ... desenvolver e gerenciar suas próprias aplicações",
     cognitivo: {
       motivo: "Cobrar, na forma invertida, que a descrição de 'infraestrutura e ferramentas para o cliente desenvolver aplicações' corresponde ao PaaS, e não ao SaaS.",
-      mede: "Informática — Computação em nuvem (modelos de serviço: SaaS, PaaS, IaaS).",
-      pegadinhaDesc: "A banca rotula como SaaS uma descrição que, na verdade, corresponde ao modelo PaaS.",
-      ondeErra: "Não percebe que 'desenvolver e gerenciar suas próprias aplicações' é a marca do PaaS, e não do SaaS.",
       palavraCritica: "software como serviço (SaaS) ... desenvolver e gerenciar suas próprias aplicações",
-      tecnica: "A descrição apresentada — infraestrutura e ferramentas de desenvolvimento para o cliente criar e gerenciar suas próprias aplicações — corresponde ao modelo PaaS (Platform as a Service), e não ao SaaS. No SaaS, o cliente apenas utiliza um software já pronto, sem desenvolvê-lo.",
-      regraMental: "'Cliente desenvolve aplicação' nunca é SaaS — é sempre PaaS."
     },
     comentario: {
       resolucao: "ERRADO. A descrição apresentada — provedor oferece infraestrutura e ferramentas para o cliente desenvolver e gerenciar suas próprias aplicações — corresponde ao modelo PaaS (Platform as a Service), e não ao SaaS. No SaaS, o cliente apenas utiliza um software já pronto, fornecido pelo provedor.",
@@ -272,12 +222,7 @@ const QUESTOES_PCAL_LOTE43 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "acessibilidade e escalabilidade ... depende da conexão à Internet",
     cognitivo: {
       motivo: "Cobrar as vantagens do armazenamento em nuvem e sua dependência de conexão à Internet e do provedor.",
-      mede: "Informática — Computação em nuvem (armazenamento em nuvem).",
-      pegadinhaDesc: "A banca pode omitir a dependência de Internet/provedor, tratando a nuvem como sempre disponível.",
-      ondeErra: "Ignora que o acesso ao armazenamento em nuvem depende de conexão à Internet e da disponibilidade do provedor.",
       palavraCritica: "depende da conexão à Internet e da infraestrutura do provedor",
-      tecnica: "O armazenamento em nuvem (cloud storage) permite salvar arquivos, bancos de dados e outras informações em servidores remotos, com vantagens de acessibilidade (de qualquer lugar) e escalabilidade (aumento sob demanda) em relação ao armazenamento local — mas depende de conexão à Internet e da infraestrutura do provedor contratado.",
-      regraMental: "Nuvem: acessível e escalável, mas sempre dependente de Internet e do provedor."
     },
     comentario: {
       resolucao: "CERTO. O armazenamento em nuvem permite salvar arquivos, bancos de dados e outras informações em servidores remotos, com vantagens de acessibilidade e escalabilidade frente ao armazenamento local — ainda que sua disponibilidade dependa da conexão à Internet e da infraestrutura do provedor contratado.",
@@ -296,12 +241,7 @@ const QUESTOES_PCAL_LOTE43 = [
     gabarito: "E", pegadinha: "termo-absoluto", palavraChave: "totalmente independentes de conexão à Internet ... ausência completa de conectividade",
     cognitivo: {
       motivo: "Cobrar, na forma invertida, que o armazenamento em nuvem depende de conexão à Internet para ser acessado.",
-      mede: "Informática — Computação em nuvem (armazenamento em nuvem).",
-      pegadinhaDesc: "A banca afirma que os arquivos na nuvem continuam acessíveis mesmo sem qualquer conectividade.",
-      ondeErra: "Ignora que o acesso a arquivos armazenados em servidores remotos exige conexão à Internet.",
       palavraCritica: "totalmente independentes ... ausência completa de conectividade",
-      tecnica: "O armazenamento em nuvem depende, por definição, de conexão à Internet para que o usuário acesse os arquivos salvos em servidores remotos. Na ausência completa de conectividade, o acesso a esses arquivos fica impossibilitado (salvo cópias sincronizadas localmente, quando disponíveis).",
-      regraMental: "Nuvem sem Internet = sem acesso. Não existe cloud storage 'independente de conexão'."
     },
     comentario: {
       resolucao: "ERRADO. O armazenamento em nuvem depende de conexão à Internet para que os arquivos armazenados em servidores remotos sejam acessados — na ausência completa de conectividade, o acesso a esses arquivos fica impossibilitado, ao contrário do que afirma o item.",
@@ -322,12 +262,7 @@ const QUESTOES_PCAL_LOTE43 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "provedor detém o controle ... responsável pela instalação, configuração e manutenção",
     cognitivo: {
       motivo: "Cobrar que, no SaaS, é o provedor (e não o cliente) quem controla a infraestrutura e mantém as aplicações.",
-      mede: "Informática — Computação em nuvem (SaaS, responsabilidade do provedor).",
-      pegadinhaDesc: "A banca pode inverter a responsabilidade, atribuindo ao cliente o controle da infraestrutura no SaaS.",
-      ondeErra: "Confunde as responsabilidades do cliente e do provedor no modelo SaaS.",
       palavraCritica: "provedor detém o controle ... responsável pela instalação, configuração e manutenção",
-      tecnica: "No SaaS, o provedor é responsável pela infraestrutura de rede, servidores, sistema operacional e pela instalação, configuração e manutenção das aplicações. O cliente apenas utiliza o software e seus dados, sem gerenciar nenhuma camada de infraestrutura subjacente.",
-      regraMental: "SaaS: provedor cuida de tudo (infra + SO + app). Cliente só usa."
     },
     comentario: {
       resolucao: "CERTO. No modelo SaaS, o provedor detém o controle sobre a infraestrutura de rede, os servidores e o sistema operacional, sendo responsável pela instalação, configuração e manutenção das aplicações — cabendo ao cliente apenas utilizar o software disponibilizado.",
@@ -346,12 +281,7 @@ const QUESTOES_PCAL_LOTE43 = [
     gabarito: "E", pegadinha: "troca-sujeito", palavraChave: "consumidor tem controle ... responsável pela instalação, configuração e manutenção",
     cognitivo: {
       motivo: "Cobrar, na forma invertida, que é o provedor — e não o consumidor — quem controla a infraestrutura no modelo SaaS.",
-      mede: "Informática — Computação em nuvem (SaaS, responsabilidade do provedor).",
-      pegadinhaDesc: "A banca inverte o sujeito responsável pela infraestrutura, atribuindo ao consumidor uma tarefa do provedor.",
-      ondeErra: "Troca as responsabilidades: acha que, no SaaS, é o cliente quem cuida de infraestrutura e manutenção.",
       palavraCritica: "consumidor tem controle ... responsável pela instalação",
-      tecnica: "No SaaS, é o provedor — e não o consumidor — quem detém o controle sobre a infraestrutura de rede, os servidores e o sistema operacional, sendo responsável pela instalação, configuração e manutenção das aplicações. O consumidor apenas utiliza o software e seus dados.",
-      regraMental: "No SaaS, quem cuida da infra é o provedor, nunca o consumidor."
     },
     comentario: {
       resolucao: "ERRADO. No modelo SaaS, é o provedor — e não o consumidor — quem detém o controle sobre a infraestrutura de rede, os servidores e o sistema operacional, sendo responsável pela instalação, configuração e manutenção das aplicações. O consumidor apenas utiliza o software fornecido.",
@@ -372,12 +302,7 @@ const QUESTOES_PCAL_LOTE43 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "transferência de arquivos ... compatibilidade entre diversos formatos",
     cognitivo: {
       motivo: "Cobrar que ferramentas de acesso remoto permitem transferência de arquivos e que as suítes de escritório oferecem compatibilidade entre formatos.",
-      mede: "Informática — Ferramentas de produtividade e acesso remoto.",
-      pegadinhaDesc: "A banca pode negar a possibilidade de transferência de arquivos nesses aplicativos de acesso remoto, ou negar a compatibilidade entre formatos das suítes.",
-      ondeErra: "Acha que ferramentas como TeamViewer só permitem visualizar a tela remota, sem transferir arquivos.",
       palavraCritica: "transferência de arquivos ... compatibilidade entre diversos formatos",
-      tecnica: "O Microsoft Remote Desktop e o TeamViewer permitem tanto o controle remoto de um computador quanto a transferência de arquivos entre as máquinas conectadas. Já o Microsoft Office e o LibreOffice, por sua vez, oferecem compatibilidade entre diversos formatos de arquivo (por exemplo, .docx e .odt).",
-      regraMental: "Remote Desktop/TeamViewer: controle remoto + transferir arquivo. Office/LibreOffice: compatíveis entre si."
     },
     comentario: {
       resolucao: "CERTO. O Microsoft Remote Desktop e o TeamViewer permitem acesso remoto a computadores, possibilitando a transferência de arquivos entre as máquinas conectadas, enquanto o Microsoft Office e o LibreOffice oferecem compatibilidade entre diversos formatos de documentos, planilhas e apresentações.",
@@ -396,12 +321,7 @@ const QUESTOES_PCAL_LOTE43 = [
     gabarito: "E", pegadinha: "termo-absoluto", palavraChave: "apenas a visualização ... não sendo possível ... transferência ... totalmente incompatíveis",
     cognitivo: {
       motivo: "Cobrar, na forma invertida, que ferramentas de acesso remoto permitem transferência de arquivos e que Office/LibreOffice mantêm compatibilidade entre formatos.",
-      mede: "Informática — Ferramentas de produtividade e acesso remoto.",
-      pegadinhaDesc: "A banca nega dois fatos corretos simultaneamente: a transferência de arquivos e a compatibilidade entre suítes.",
-      ondeErra: "Acha que ferramentas de acesso remoto se limitam à visualização de tela e que Office e LibreOffice não têm nenhuma compatibilidade.",
       palavraCritica: "apenas a visualização ... totalmente incompatíveis",
-      tecnica: "O Microsoft Remote Desktop e o TeamViewer permitem, além da visualização, a transferência de arquivos entre as máquinas conectadas. Já o Microsoft Office e o LibreOffice mantêm compatibilidade entre diversos formatos de arquivo (como .docx e .odt), não sendo totalmente incompatíveis entre si.",
-      regraMental: "Acesso remoto moderno sempre transfere arquivo; Office e LibreOffice sempre têm compatibilidade parcial/total entre formatos."
     },
     comentario: {
       resolucao: "ERRADO. Ferramentas como o Microsoft Remote Desktop e o TeamViewer permitem, sim, a transferência de arquivos entre as máquinas conectadas, além da visualização remota. E o Microsoft Office e o LibreOffice mantêm compatibilidade entre diversos formatos de arquivo, não sendo totalmente incompatíveis entre si.",
@@ -422,12 +342,7 @@ const QUESTOES_PCAL_LOTE43 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "resgatar informações ... usuário ... data ... nome do arquivo ... quantidade de folhas",
     cognitivo: {
       motivo: "Cobrar que a impressão em rede deixa registros recuperáveis, úteis em auditoria e perícia.",
-      mede: "Informática — Ferramentas de produtividade (impressão em rede, rastros digitais).",
-      pegadinhaDesc: "A banca pode negar a possibilidade de recuperação desses dados após a impressão.",
-      ondeErra: "Acha que, uma vez impresso o documento, nenhuma informação sobre a impressão pode ser recuperada.",
       palavraCritica: "resgatar informações ... usuário ... data ... nome do arquivo ... quantidade de folhas",
-      tecnica: "Ao imprimir documentos em uma impressora de rede, o servidor de impressão (spooler) registra informações como o usuário solicitante, a data e hora, o nome do arquivo impresso e a quantidade de folhas — dados que podem ser recuperados posteriormente e são úteis em auditorias e perícias forenses.",
-      regraMental: "Impressão em rede deixa rastro: usuário, data, arquivo, nº de folhas — tudo fica registrado."
     },
     comentario: {
       resolucao: "CERTO. Quando documentos são impressos em uma impressora de rede, é possível, por meio dos registros do servidor de impressão (spooler), resgatar informações como o usuário solicitante, a data da impressão, o nome do arquivo e a quantidade de folhas impressas — dados úteis, inclusive, em investigações periciais.",
@@ -446,12 +361,7 @@ const QUESTOES_PCAL_LOTE43 = [
     gabarito: "E", pegadinha: "termo-absoluto", palavraChave: "não deixam qualquer tipo de registro ... impossível ... identificar",
     cognitivo: {
       motivo: "Cobrar, na forma invertida, que a impressão em rede deixa registros recuperáveis pelo servidor de impressão.",
-      mede: "Informática — Ferramentas de produtividade (impressão em rede, rastros digitais).",
-      pegadinhaDesc: "A banca nega totalmente a existência de registros de impressão, o que é falso.",
-      ondeErra: "Ignora que o servidor de impressão (spooler) registra usuário, data, arquivo e quantidade de páginas.",
       palavraCritica: "não deixam qualquer tipo de registro ... impossível",
-      tecnica: "Os registros do servidor de impressão (spooler) armazenam informações como o usuário solicitante, a data, o nome do arquivo impresso e a quantidade de folhas — dados que podem, sim, ser recuperados após a impressão e utilizados em investigações periciais.",
-      regraMental: "Impressão de rede sempre deixa rastro no spooler — nunca é 'impossível' recuperar."
     },
     comentario: {
       resolucao: "ERRADO. Documentos impressos em uma impressora de rede deixam, sim, registros recuperáveis no servidor de impressão (spooler) — incluindo usuário solicitante, data, nome do arquivo e quantidade de folhas —, dados que podem ser utilizados em investigações periciais.",
@@ -472,12 +382,7 @@ const QUESTOES_PCAL_LOTE43 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "dados estruturados ... marcações ... ajudam ... exibir informações adicionais",
     cognitivo: {
       motivo: "Cobrar que a pesquisa aprimorada do Google pode depender de dados estruturados (schema) das páginas indexadas.",
-      mede: "Informática — Mecanismos de busca (pesquisa aprimorada, dados estruturados).",
-      pegadinhaDesc: "A banca pode negar que resultados de busca dependam de dados estruturados/marcações da página.",
-      ondeErra: "Acha que o resultado de busca depende exclusivamente do texto simples da página, ignorando marcações estruturadas.",
       palavraCritica: "dados estruturados (marcações do tipo schema)",
-      tecnica: "A pesquisa aprimorada do Google pode apresentar resultados ricos (rich results) — como avaliações, preços ou eventos — que dependem de dados estruturados (marcações schema) presentes nas páginas indexadas, ajudando o mecanismo de busca a organizar e exibir informações adicionais sobre o conteúdo.",
-      regraMental: "Resultados ricos do Google dependem de dados estruturados (schema) na página."
     },
     comentario: {
       resolucao: "CERTO. A pesquisa aprimorada do Google pode apresentar resultados ricos que dependem de dados estruturados (marcações do tipo schema) presentes nas páginas indexadas, os quais ajudam o mecanismo de busca a organizar e exibir informações adicionais sobre o conteúdo encontrado.",
@@ -496,12 +401,7 @@ const QUESTOES_PCAL_LOTE43 = [
     gabarito: "E", pegadinha: "termo-absoluto", palavraChave: "independem de qualquer marcação ... exclusivamente o texto simples",
     cognitivo: {
       motivo: "Cobrar, na forma invertida, que a pesquisa aprimorada do Google pode depender de dados estruturados (schema) da página.",
-      mede: "Informática — Mecanismos de busca (pesquisa aprimorada, dados estruturados).",
-      pegadinhaDesc: "A banca nega totalmente o papel dos dados estruturados na exibição de resultados de busca.",
-      ondeErra: "Ignora que marcações estruturadas (schema) influenciam a exibição de resultados ricos pelo Google.",
       palavraCritica: "independem de qualquer marcação ... exclusivamente o texto simples",
-      tecnica: "A pesquisa aprimorada do Google pode apresentar resultados ricos que dependem justamente de dados estruturados (marcações schema) presentes nas páginas indexadas — o mecanismo de busca não se limita ao texto simples do conteúdo.",
-      regraMental: "Google usa dados estruturados, sim — nunca é 'exclusivamente texto simples'."
     },
     comentario: {
       resolucao: "ERRADO. A pesquisa aprimorada do Google pode apresentar resultados ricos que dependem de dados estruturados (marcações do tipo schema) presentes nas páginas indexadas — o mecanismo de busca não considera exclusivamente o texto simples do conteúdo.",
@@ -522,12 +422,7 @@ const QUESTOES_PCAL_LOTE43 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "sequência exata de palavras ... ignore ... capitalização ... pontuação",
     cognitivo: {
       motivo: "Cobrar que as aspas duplas restringem à sequência exata de palavras, mas o mecanismo ainda ignora pontuação e capitalização.",
-      mede: "Informática — Mecanismos de busca (operadores de pesquisa, aspas duplas).",
-      pegadinhaDesc: "A banca pode afirmar que as aspas exigem também a mesma pontuação e capitalização do termo original.",
-      ondeErra: "Acha que 'sequência exata de palavras' implica exigir também a mesma pontuação e maiúsculas/minúsculas.",
       palavraCritica: "geralmente ignore ... capitalização ... pontuação",
-      tecnica: "As aspas duplas em mecanismos de busca como o Google restringem os resultados a páginas com a sequência exata das palavras delimitadas, mas o mecanismo geralmente ignora diferenças de capitalização e a maior parte da pontuação presentes na consulta original — o operador não exige correspondência literal caractere a caractere.",
-      regraMental: "Aspas = ordem exata das palavras. Mas maiúscula/minúscula e pontuação continuam sendo ignoradas."
     },
     comentario: {
       resolucao: "CERTO. Ao delimitar uma frase entre aspas duplas, o mecanismo de busca restringe os resultados à sequência exata de palavras, mas geralmente ignora diferenças de capitalização e a maior parte da pontuação presentes nos termos da consulta original.",
@@ -546,12 +441,7 @@ const QUESTOES_PCAL_LOTE43 = [
     gabarito: "E", pegadinha: "generalizacao", palavraChave: "incluindo-se a mesma pontuação e capitalização",
     cognitivo: {
       motivo: "Cobrar, na forma invertida, que o mecanismo de busca ignora pontuação e capitalização mesmo com o uso de aspas duplas.",
-      mede: "Informática — Mecanismos de busca (operadores de pesquisa, aspas duplas).",
-      pegadinhaDesc: "A banca estende indevidamente a exigência de 'sequência exata de palavras' também à pontuação e capitalização.",
-      ondeErra: "Generaliza a precisão do operador de aspas para elementos (pontuação, maiúsculas/minúsculas) que o mecanismo efetivamente ignora.",
       palavraCritica: "incluindo-se a mesma pontuação e capitalização",
-      tecnica: "As aspas duplas restringem a busca à sequência exata das palavras da frase, mas o mecanismo de busca geralmente ignora diferenças de pontuação e de capitalização (maiúsculas/minúsculas) presentes nos termos originais — a exigência de correspondência exata não se estende a esses dois elementos.",
-      regraMental: "Aspas garantem a ordem das palavras — nunca a pontuação e a capitalização idênticas."
     },
     comentario: {
       resolucao: "ERRADO. As aspas duplas restringem os resultados à sequência exata das palavras da frase pesquisada, mas o mecanismo de busca geralmente ignora a pontuação e a capitalização (maiúsculas/minúsculas) dos termos originais — ao contrário do que afirma o item.",
@@ -572,12 +462,7 @@ const QUESTOES_PCAL_LOTE43 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "endereço lógico ... DNS ... nomes de domínio em IP ... ARP ... IP em endereço físico",
     cognitivo: {
       motivo: "Cobrar a distinção correta entre endereço IP (lógico), DNS (nome→IP) e ARP (IP→MAC).",
-      mede: "Informática — Internet e Redes (endereço IP, DNS, ARP).",
-      pegadinhaDesc: "A banca pode atribuir ao próprio endereço IP a função de 'converter' nomes de domínio, confundindo-o com o DNS.",
-      ondeErra: "Confunde o endereço IP (um identificador lógico) com o protocolo DNS (responsável pela conversão de nomes).",
       palavraCritica: "endereço lógico ... DNS ... ARP",
-      tecnica: "O endereço IP é um endereço lógico que identifica um dispositivo em uma rede. A conversão de nomes de domínio (como 'exemplo.com') em endereços IP é função do protocolo DNS (Domain Name System). Já a conversão de um endereço IP em um endereço físico (MAC) da interface de rede é função do protocolo ARP (Address Resolution Protocol).",
-      regraMental: "IP = endereço lógico. DNS = nome → IP. ARP = IP → MAC (endereço físico)."
     },
     comentario: {
       resolucao: "CERTO. O endereço IP é um endereço lógico que identifica um dispositivo na rede. A conversão de nomes de domínio em endereços IP é realizada pelo protocolo DNS, enquanto a conversão de endereços IP em endereços físicos (MAC) é realizada pelo protocolo ARP.",
@@ -596,12 +481,7 @@ const QUESTOES_PCAL_LOTE43 = [
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "endereço IP é definido como o protocolo responsável pela conversão",
     cognitivo: {
       motivo: "Cobrar, na forma invertida, que o IP é um endereço lógico (não um protocolo conversor), e que essa conversão é feita por DNS e ARP.",
-      mede: "Informática — Internet e Redes (endereço IP, DNS, ARP).",
-      pegadinhaDesc: "A banca transforma o endereço IP em um 'protocolo conversor', função que na verdade pertence ao DNS e ao ARP.",
-      ondeErra: "Confunde o endereço IP (identificador lógico) com os protocolos responsáveis pela conversão de nomes/endereços (DNS e ARP).",
       palavraCritica: "endereço IP é definido como o protocolo responsável pela conversão",
-      tecnica: "O endereço IP não é um protocolo, mas um endereço lógico que identifica um dispositivo na rede. A conversão de nomes de domínio em endereços IP é função do DNS, e a conversão de endereços IP em endereços físicos (MAC) é função do ARP — não do próprio endereço IP.",
-      regraMental: "IP não converte nada — é só um endereço. Quem converte é o DNS (nome) e o ARP (MAC)."
     },
     comentario: {
       resolucao: "ERRADO. O endereço IP não é um protocolo, mas um endereço lógico que identifica um dispositivo na rede. A conversão de nomes de domínio em endereços IP é função do DNS, e a conversão de endereços IP em endereços físicos (MAC) é função do ARP — e não do próprio endereço IP.",

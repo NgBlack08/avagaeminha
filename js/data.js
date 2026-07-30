@@ -101,12 +101,7 @@ const QUESTOES = [
     gabarito: "C", pegadinha: "troca-conceito", palavraChave: "embora não tenha a posse",
     cognitivo: {
       motivo: "Testar se o candidato conhece o peculato-furto (art. 312, § 1º, CP), que dispensa a posse prévia do bem.",
-      mede: "Distinção entre peculato-apropriação, peculato-desvio e peculato-furto.",
-      pegadinhaDesc: "A expressão 'embora não tenha a posse' induz o candidato a pensar em furto comum e marcar E.",
-      ondeErra: "Quem decorou apenas o caput do art. 312 ('de que tem a posse') marca E.",
       palavraCritica: "posse",
-      tecnica: "Ao ver crime funcional + subtração sem posse, lembre do § 1º: peculato-furto.",
-      regraMental: "Tem posse → apropria/desvia. Não tem posse, mas se vale do cargo → peculato-furto. Sem vínculo com o cargo → furto comum."
     },
     comentario: {
       resolucao: "CERTO. O art. 312, § 1º, do CP tipifica o peculato-furto: aplica-se a mesma pena 'embora não tendo a posse do dinheiro, valor ou bem, o subtrai, ou concorre para que seja subtraído, em proveito próprio ou alheio, valendo-se de facilidade que lhe proporciona a qualidade de funcionário'.",
@@ -124,12 +119,7 @@ const QUESTOES = [
     gabarito: "E", pegadinha: "exigencia-inexistente", palavraChave: "somente",
     cognitivo: {
       motivo: "Aferir se o candidato sabe que a corrupção passiva é crime formal.",
-      mede: "Momento consumativo dos crimes formais contra a Administração.",
-      pegadinhaDesc: "Cria a exigência inexistente do 'efetivo recebimento' e a blinda com 'somente'.",
-      ondeErra: "O candidato imagina que sem dinheiro na mão não há crime consumado.",
       palavraCritica: "somente / efetivo recebimento",
-      tecnica: "Crimes formais consumam-se com a conduta, não com o resultado.",
-      regraMental: "SOLICITOU → consumou. Receber é mero exaurimento."
     },
     comentario: {
       resolucao: "ERRADO. A corrupção passiva (art. 317, CP) é crime formal: consuma-se com a simples solicitação ou aceitação da promessa de vantagem indevida, independentemente do recebimento. O recebimento posterior é exaurimento.",
@@ -147,12 +137,7 @@ const QUESTOES = [
     gabarito: "E", pegadinha: "juris-mais-lei", palavraChave: "violência ou grave ameaça",
     cognitivo: {
       motivo: "Cobrar os vetores da insignificância fixados pelo STF (HC 84.412).",
-      mede: "Limites jurisprudenciais do princípio da insignificância.",
-      pegadinhaDesc: "O 'desde que o valor seja ínfimo' soa razoável e desvia a atenção da violência/grave ameaça.",
-      ondeErra: "Foca no valor ínfimo e esquece que violência/grave ameaça afasta a atipicidade material.",
       palavraCritica: "violência ou grave ameaça",
-      tecnica: "Insignificância exige ausência de periculosidade e reduzido grau de reprovabilidade — incompatíveis com violência.",
-      regraMental: "Roubo NUNCA é insignificante (Jurisprudência pacífica: STF e STJ)."
     },
     comentario: {
       resolucao: "ERRADO. O STF exige, cumulativamente: mínima ofensividade, ausência de periculosidade social, reduzida reprovabilidade e inexpressividade da lesão. Crimes com violência ou grave ameaça (ex.: roubo) não admitem o princípio, ainda que o bem seja de valor ínfimo.",
@@ -171,12 +156,7 @@ const QUESTOES = [
     gabarito: "C", pegadinha: "termo-absoluto", palavraChave: "ainda que jamais",
     cognitivo: {
       motivo: "Confirmar o verbo nuclear da concussão (exigir) e sua natureza formal.",
-      mede: "Consumação da concussão.",
-      pegadinhaDesc: "O 'jamais' tenta ativar o reflexo de marcar E diante de termo absoluto — aqui ele está correto.",
-      ondeErra: "Quem aplica cegamente a regra 'termo absoluto = errado'.",
       palavraCritica: "exige",
-      tecnica: "As heurísticas de palavras são probabilísticas: sempre confirme com o conteúdo.",
-      regraMental: "EXIGIR = concussão (formal). SOLICITAR = corrupção passiva."
     },
     comentario: {
       resolucao: "CERTO. Concussão (art. 316, CP): 'exigir, para si ou para outrem, direta ou indiretamente, ainda que fora da função ou antes de assumi-la, mas em razão dela, vantagem indevida'. Crime formal: consuma-se com a exigência.",
@@ -194,12 +174,7 @@ const QUESTOES = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "se previsto em lei",
     cognitivo: {
       motivo: "Cobrar a estrutura do art. 20 do CP com precisão terminológica.",
-      mede: "Consequências do erro de tipo inevitável × evitável.",
-      pegadinhaDesc: "Não há pegadinha: é literalidade correta. A banca alterna itens 'limpos' para calibrar a prova.",
-      ondeErra: "Candidato desconfia demais e procura erro onde não existe.",
       palavraCritica: "inevitável / evitável",
-      tecnica: "Checar os dois pares: inevitável→exclui dolo E culpa; evitável→exclui só o dolo.",
-      regraMental: "Erro de TIPO mexe com o DOLO. Erro de PROIBIÇÃO mexe com a CULPABILIDADE."
     },
     comentario: {
       resolucao: "CERTO. Art. 20, CP: o erro sobre elemento constitutivo do tipo exclui o dolo, mas permite a punição por crime culposo, se previsto em lei. Sendo inevitável (escusável), exclui dolo e culpa — fato atípico.",
@@ -217,12 +192,7 @@ const QUESTOES = [
     gabarito: "E", pegadinha: "generalizacao", palavraChave: "em regra",
     cognitivo: {
       motivo: "Testar a incompatibilidade lógica entre tentativa e culpa.",
-      mede: "Infrações que não admitem tentativa.",
-      pegadinhaDesc: "A justificativa ('resultado não desejado') é verdadeira, mas prova exatamente o contrário da conclusão.",
-      ondeErra: "Valida a premissa correta e aceita a conclusão errada.",
       palavraCritica: "tentativa + culposos",
-      tecnica: "Tentar exige QUERER o resultado; na culpa, o agente não quer — logo, não há o que 'tentar'.",
-      regraMental: "CCPHUC não admitem tentativa: Culposos, Contravenções, Preterdolosos, Habituais, Unissubsistentes, Condicionados."
     },
     comentario: {
       resolucao: "ERRADO. Em regra, crimes culposos não admitem tentativa, justamente porque a tentativa pressupõe dolo (vontade dirigida ao resultado não alcançado por circunstâncias alheias — art. 14, II, CP). A doutrina só excepciona a culpa imprópria (art. 20, § 1º, 2ª parte).",
@@ -240,12 +210,7 @@ const QUESTOES = [
     gabarito: "E", pegadinha: "literalidade", palavraChave: "futura",
     cognitivo: {
       motivo: "Literalidade do art. 25 do CP com uma palavra trocada.",
-      mede: "Requisito da atualidade/iminência da agressão.",
-      pegadinhaDesc: "Troca 'atual ou iminente' por 'futura, porém certa'.",
-      ondeErra: "Leitura rápida: a frase inteira 'soa' como o art. 25.",
       palavraCritica: "futura",
-      tecnica: "Em itens 'literais', escaneie os 4 pontos críticos: sujeito, verbo, tempo e condição.",
-      regraMental: "Agressão FUTURA → não é legítima defesa (pode configurar inexigibilidade? Não: é fato típico e ilícito)."
     },
     comentario: {
       resolucao: "ERRADO. O art. 25 do CP exige agressão injusta ATUAL OU IMINENTE. Agressão futura, ainda que certa, não autoriza legítima defesa — o ordenamento espera que o agente busque a proteção estatal.",
@@ -263,12 +228,7 @@ const QUESTOES = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "anterior à sentença irrecorrível",
     cognitivo: {
       motivo: "Cobrar o § 3º do art. 312, um dos dispositivos mais recorrentes da banca.",
-      mede: "Efeitos da reparação do dano no peculato culposo.",
-      pegadinhaDesc: "Item literal correto — a banca costuma trocar 'metade' por 'um terço' ou aplicar a regra ao peculato doloso; aqui não trocou.",
-      ondeErra: "Confunde com arrependimento posterior (art. 16: redução de 1/3 a 2/3) ou aplica ao peculato doloso.",
       palavraCritica: "culposo",
-      tecnica: "Antes de julgar, confirme: o item fala do peculato CULPOSO? Só nele há extinção da punibilidade.",
-      regraMental: "Culposo + reparou antes do trânsito em julgado = punibilidade extinta. Doloso = mero arrependimento posterior."
     },
     comentario: {
       resolucao: "CERTO. Art. 312, § 3º, CP: 'No caso do parágrafo anterior [peculato culposo], a reparação do dano, se precede à sentença irrecorrível, extingue a punibilidade; se lhe é posterior, reduz de metade a pena imposta.'",
@@ -288,12 +248,7 @@ const QUESTOES = [
     gabarito: "C", pegadinha: "juris-mais-lei", palavraChave: "apresentação espontânea",
     cognitivo: {
       motivo: "Cobrar entendimento consolidado sobre apresentação espontânea.",
-      mede: "Limites do estado de flagrância.",
-      pegadinhaDesc: "O candidato pode achar que a apresentação espontânea 'blinda' contra qualquer prisão.",
-      ondeErra: "Marca E por acreditar que ainda caberia flagrante, ou por achar que nada mais caberia.",
       palavraCritica: "impede... mas não obsta",
-      tecnica: "Separe os dois períodos e julgue cada um: (1) impede flagrante? Sim. (2) cabe preventiva? Sim.",
-      regraMental: "Quem se apresenta não está 'sendo perseguido nem encontrado' — não há situação flagrancial; cautelares seguem possíveis."
     },
     comentario: {
       resolucao: "CERTO. Não há situação de flagrância (CPP, art. 302) quando o agente se apresenta espontaneamente. Contudo, nada impede a decretação de preventiva (CPP, arts. 312 e 313) ou outra cautelar, se presentes os requisitos.",
@@ -311,12 +266,7 @@ const QUESTOES = [
     gabarito: "E", pegadinha: "troca-sujeito", palavraChave: "autoridade policial + arquivar",
     cognitivo: {
       motivo: "Cobrar o art. 17 do CPP, recorrentíssimo em provas de carreiras policiais.",
-      mede: "Vedação ao arquivamento pelo delegado.",
-      pegadinhaDesc: "Atribui ao delegado ato privativo da esfera ministerial/judicial.",
-      ondeErra: "A 'atipicidade' parece justificar o arquivamento e desvia do sujeito da frase.",
       palavraCritica: "autoridade policial",
-      tecnica: "Em itens de IP, sempre pergunte QUEM pratica o ato.",
-      regraMental: "Delegado NÃO arquiva IP, em nenhuma hipótese (CPP, art. 17)."
     },
     comentario: {
       resolucao: "ERRADO. CPP, art. 17: 'A autoridade policial não poderá mandar arquivar autos de inquérito.' O juízo de atipicidade cabe ao titular da ação penal; ao delegado cabe relatar o apurado.",
@@ -334,12 +284,7 @@ const QUESTOES = [
     gabarito: "E", pegadinha: "termo-absoluto", palavraChave: "necessariamente",
     cognitivo: {
       motivo: "Diferenciar irregularidade procedimental de prova ilícita.",
-      mede: "Natureza informativa do IP e teoria das nulidades.",
-      pegadinhaDesc: "Mistura conceito verdadeiro (frutos da árvore envenenada) com consequência falsa (contaminação automática).",
-      ondeErra: "O nome bonito da teoria dá aparência de sofisticação e induz o C.",
       palavraCritica: "necessariamente",
-      tecnica: "IP é peça informativa: vício ali não anula a ação penal; prova ILÍCITA, sim, é desentranhada e contamina as derivadas.",
-      regraMental: "Irregularidade no IP → não anula ação penal. Prova ilícita → inadmissível (art. 5º, LVI, CF; art. 157, CPP)."
     },
     comentario: {
       resolucao: "ERRADO. O inquérito é peça meramente informativa; suas irregularidades não contaminam automaticamente a ação penal. Situação diversa é a da prova ilícita, inadmissível no processo, que contamina as provas dela derivadas (CPP, art. 157, § 1º), salvo fonte independente.",
@@ -357,12 +302,7 @@ const QUESTOES = [
     gabarito: "C", pegadinha: "juris-mais-lei", palavraChave: "fundadas razões",
     cognitivo: {
       motivo: "Cobrar a tese do RE 603.616 (repercussão geral), presença constante em provas policiais.",
-      mede: "Requisitos do ingresso domiciliar sem mandado.",
-      pegadinhaDesc: "O 'mesmo durante a noite' ativa o alarme do candidato — mas flagrante autoriza a qualquer hora.",
-      ondeErra: "Confunde a exigência de 'dia' (que vale para o cumprimento de mandado) com a hipótese de flagrante.",
       palavraCritica: "flagrante delito",
-      tecnica: "Divida o art. 5º, XI: flagrante/desastre/socorro = a qualquer hora; ordem judicial = durante o dia.",
-      regraMental: "Flagrante não tem hora. Mandado tem: dia."
     },
     comentario: {
       resolucao: "CERTO. Tese do STF (RE 603.616): a entrada forçada em domicílio sem mandado só é lícita quando amparada em fundadas razões, devidamente justificadas a posteriori, que indiquem que dentro da casa ocorre situação de flagrante delito. Flagrante autoriza o ingresso a qualquer hora (CF, art. 5º, XI).",
@@ -381,12 +321,7 @@ const QUESTOES = [
     gabarito: "E", pegadinha: "exigencia-inexistente", palavraChave: "desde que",
     cognitivo: {
       motivo: "Cobrar o art. 186, parágrafo único, do CPP.",
-      mede: "Alcance do direito ao silêncio (nemo tenetur se detegere).",
-      pegadinhaDesc: "O 'desde que corroborado' cria condição inexistente que dá aparência de razoabilidade.",
-      ondeErra: "A condição falsa faz a frase parecer equilibrada e tecnicamente correta.",
       palavraCritica: "em prejuízo",
-      tecnica: "Garantias fundamentais não admitem 'meio-termo' criado pela banca.",
-      regraMental: "Silêncio NUNCA prejudica. Não importa o 'desde que'."
     },
     comentario: {
       resolucao: "ERRADO. CPP, art. 186, parágrafo único: 'O silêncio, que não importará em confissão, não poderá ser interpretado em prejuízo da defesa.' Não há exceção condicionada.",
@@ -404,12 +339,7 @@ const QUESTOES = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "reconhecimento",
     cognitivo: {
       motivo: "Cobrar o art. 158-A e as 10 etapas incluídas pelo Pacote Anticrime — tema quente para peritos e papiloscopistas.",
-      mede: "Etapas da cadeia de custódia (Lei 13.964/2019).",
-      pegadinhaDesc: "A banca costuma trocar 'reconhecimento' por 'coleta' ou 'isolamento' como marco inicial; aqui manteve o correto.",
-      ondeErra: "Acha que a cadeia só começa quando o perito coleta o vestígio.",
       palavraCritica: "início com o reconhecimento",
-      tecnica: "Memorize a ordem das etapas; o início é sempre o RECONHECIMENTO.",
-      regraMental: "R-I-F-C-A-T-R-P-A-D: Reconhecimento, Isolamento, Fixação, Coleta, Acondicionamento, Transporte, Recebimento, Processamento, Armazenamento, Descarte."
     },
     comentario: {
       resolucao: "CERTO. CPP, art. 158-A, § 1º: 'O início da cadeia de custódia dá-se com a preservação do local de crime ou com procedimentos policiais ou periciais nos quais seja detectada a existência de vestígio.' E o art. 158-B, I, define o reconhecimento como 'ato de distinguir um elemento como de potencial interesse para a produção da prova pericial'.",
@@ -429,12 +359,7 @@ const QUESTOES = [
     gabarito: "E", pegadinha: "literalidade", palavraChave: "durante o dia × a qualquer hora",
     cognitivo: {
       motivo: "Literalidade do art. 5º, XI, com os períodos INVERTIDOS.",
-      mede: "Hipóteses e horários de mitigação da inviolabilidade domiciliar.",
-      pegadinhaDesc: "Inverte os complementos: flagrante/desastre/socorro valem A QUALQUER HORA; a ordem judicial, DURANTE O DIA.",
-      ondeErra: "Lê os elementos corretos (todos estão na CF) sem perceber a troca de posição.",
       palavraCritica: "a qualquer hora, por determinação judicial",
-      tecnica: "Nos incisos 'espelhados', confira o PAR (hipótese ↔ horário), não a lista.",
-      regraMental: "Emergência (flagrante/desastre/socorro) = qualquer hora. Papel do juiz = de dia."
     },
     comentario: {
       resolucao: "ERRADO. CF, art. 5º, XI: sem consentimento só se entra 'em caso de flagrante delito ou desastre, ou para prestar socorro, ou, durante o dia, por determinação judicial'. A assertiva inverteu os horários. Obs.: a Lei 13.869/2019 (art. 22, § 1º, III) referencia o período noturno como o compreendido entre 21h e 5h.",
@@ -452,12 +377,7 @@ const QUESTOES = [
     gabarito: "C", pegadinha: "juris-mais-lei", palavraChave: "quarto de hotel",
     cognitivo: {
       motivo: "Cobrar o conceito ampliado de 'casa' segundo o STF.",
-      mede: "Extensão jurisprudencial do art. 5º, XI.",
-      pegadinhaDesc: "O candidato restringe 'casa' à residência e marca E.",
-      ondeErra: "Aplica o senso comum ('hotel não é casa') em vez do conceito jurídico.",
       palavraCritica: "regularmente ocupado / não aberto ao público",
-      tecnica: "Conceito de casa = qualquer compartimento habitado ou espaço privado de trabalho.",
-      regraMental: "Casa = onde alguém MORA ou trabalha com privacidade, ainda que temporariamente."
     },
     comentario: {
       resolucao: "CERTO. O STF confere interpretação ampla ao conceito de casa, abrangendo quarto de hotel ocupado (RHC 90.376) e escritórios profissionais em suas áreas privadas. O CP, art. 150, § 4º, já aponta essa extensão.",
@@ -475,12 +395,7 @@ const QUESTOES = [
     gabarito: "E", pegadinha: "termo-absoluto", palavraChave: "absoluto",
     cognitivo: {
       motivo: "Cobrar a relatividade dos direitos fundamentais — item recorrente há mais de uma década.",
-      mede: "Características dos direitos fundamentais.",
-      pegadinhaDesc: "Absolutização direta, sem disfarce — a banca testa a base.",
-      ondeErra: "Confunde 'fundamental' com 'ilimitado'.",
       palavraCritica: "caráter absoluto",
-      tecnica: "Direitos fundamentais são RELATIVOS (limitáveis) — resolvem-se colisões por ponderação.",
-      regraMental: "Nem a vida é absoluta (guerra declarada, art. 5º, XLVII, a)."
     },
     comentario: {
       resolucao: "ERRADO. É pacífico que os direitos fundamentais são relativos, sujeitando-se a restrições recíprocas resolvidas por ponderação/proporcionalidade. Exemplo clássico: a própria CF admite pena de morte em guerra declarada.",
@@ -498,12 +413,7 @@ const QUESTOES = [
     gabarito: "E", pegadinha: "literalidade", palavraChave: "inclusive",
     cognitivo: {
       motivo: "Literalidade do art. 144, § 4º — o dispositivo mais provável de QUALQUER prova de polícia civil.",
-      mede: "Atribuições constitucionais da polícia civil.",
-      pegadinhaDesc: "Troca 'exceto as militares' por 'inclusive as militares'.",
-      ondeErra: "Lê 'infrações penais' e valida sem chegar ao final da frase.",
       palavraCritica: "inclusive",
-      tecnica: "Em literalidade do art. 144, leia até a última palavra: as trocas ficam no fim.",
-      regraMental: "PC apura infrações penais, EXCETO militares (e ressalvada a competência da União)."
     },
     comentario: {
       resolucao: "ERRADO. CF, art. 144, § 4º: 'às polícias civis... incumbem, ressalvada a competência da União, as funções de polícia judiciária e a apuração de infrações penais, EXCETO as militares.' Crimes militares são apurados pela polícia judiciária militar.",
@@ -521,12 +431,7 @@ const QUESTOES = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "antes da naturalização",
     cognitivo: {
       motivo: "Cobrar as duas hipóteses de extradição do naturalizado (art. 5º, LI).",
-      mede: "Regime constitucional da extradição.",
-      pegadinhaDesc: "O 'independentemente do momento do fato' (verdadeiro para o tráfico) parece contradizer o 'antes da naturalização' (que vale só para crime comum).",
-      ondeErra: "Aplica o marco temporal do crime comum também ao tráfico.",
       palavraCritica: "independentemente do momento",
-      tecnica: "Duas hipóteses, dois regimes: crime comum → só antes; tráfico → antes ou depois.",
-      regraMental: "Nato: NUNCA extraditado. Naturalizado: comum-antes / tráfico-sempre."
     },
     comentario: {
       resolucao: "CERTO. CF, art. 5º, LI: o naturalizado pode ser extraditado por crime comum praticado antes da naturalização OU por comprovado envolvimento em tráfico ilícito de entorpecentes e drogas afins, na forma da lei — nesta última hipótese, a qualquer tempo.",
@@ -544,12 +449,7 @@ const QUESTOES = [
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "mandado de segurança",
     cognitivo: {
       motivo: "Trocar habeas data por mandado de segurança na regra de gratuidade.",
-      mede: "Art. 5º, LXXVII.",
-      pegadinhaDesc: "MS é o remédio mais famoso — o cérebro completa a dupla 'HC + MS' automaticamente.",
-      ondeErra: "Memória por familiaridade, não por precisão.",
       palavraCritica: "mandado de segurança",
-      tecnica: "Grave o par exato: HC + HD gratuitos.",
-      regraMental: "Gratuidade = 2 H's (Habeas Corpus e Habeas Data)."
     },
     comentario: {
       resolucao: "ERRADO. CF, art. 5º, LXXVII: 'são gratuitas as ações de habeas corpus e habeas data, e, na forma da lei, os atos necessários ao exercício da cidadania.' O mandado de segurança não é gratuito.",
@@ -569,12 +469,7 @@ const QUESTOES = [
     gabarito: "E", pegadinha: "generalizacao", palavraChave: "todos",
     cognitivo: {
       motivo: "Testar se o candidato sabe que o poder de polícia também se expressa por atos vinculados.",
-      mede: "Atributos do poder de polícia e sua relatividade.",
-      pegadinhaDesc: "Generaliza um atributo frequente (discricionariedade) para TODOS os atos.",
-      ondeErra: "Decora 'atributos: discricionariedade, autoexecutoriedade, coercibilidade' e esquece que são tendenciais.",
       palavraCritica: "todos",
-      tecnica: "Contraexemplo mata generalização: a LICENÇA é ato vinculado de polícia.",
-      regraMental: "'Todos' + atributo tendencial = procure o contraexemplo (licença; alvará vinculado)."
     },
     comentario: {
       resolucao: "ERRADO. Embora a discricionariedade seja atributo comum do poder de polícia, há atos vinculados, como a licença (ex.: licença para construir e habilitação para dirigir, preenchidos os requisitos legais). A generalização torna a assertiva falsa.",
@@ -592,12 +487,7 @@ const QUESTOES = [
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "efeitos retroativos",
     cognitivo: {
       motivo: "Cobrar o par anulação (ex tunc) × revogação (ex nunc).",
-      mede: "Efeitos temporais do desfazimento dos atos administrativos.",
-      pegadinhaDesc: "Atribui à revogação o efeito da anulação.",
-      ondeErra: "Sabe os dois conceitos mas cruza os efeitos sob pressão de tempo.",
       palavraCritica: "retroativos",
-      tecnica: "Associe: ilegal→anula→apaga desde o início; inconveniente→revoga→daqui pra frente.",
-      regraMental: "Revogação = EX NUNC ('nunca mexe no passado'). Anulação = EX TUNC ('tira tudo')."
     },
     comentario: {
       resolucao: "ERRADO. A revogação atinge ato VÁLIDO por conveniência e oportunidade e produz efeitos EX NUNC (prospectivos), respeitados os direitos adquiridos (Súmula 473/STF). Quem retroage é a anulação (ato ilegal), com efeitos ex tunc.",
@@ -615,12 +505,7 @@ const QUESTOES = [
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "risco integral",
     cognitivo: {
       motivo: "Diferenciar risco administrativo (regra) de risco integral (exceção).",
-      mede: "Fundamento da responsabilidade objetiva do art. 37, § 6º.",
-      pegadinhaDesc: "Troca a teoria-regra pela teoria-exceção; a descrição do risco integral está correta, mas ele não é a regra.",
-      ondeErra: "Valida a definição correta de risco integral sem notar o 'como regra'.",
       palavraCritica: "como regra",
-      tecnica: "Risco ADMINISTRATIVO admite excludentes (culpa exclusiva da vítima, caso fortuito/força maior, fato de terceiro); INTEGRAL, não.",
-      regraMental: "Integral = casos extremos (dano nuclear; e, p/ doutrina, atentado terrorista em aeronave). Regra do dia a dia = administrativo."
     },
     comentario: {
       resolucao: "ERRADO. A regra do art. 37, § 6º, da CF é a teoria do RISCO ADMINISTRATIVO, que admite excludentes de causalidade. O risco integral é excepcional (ex.: dano nuclear — CF, art. 21, XXIII, 'd').",
@@ -638,12 +523,7 @@ const QUESTOES = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "dolo específico",
     cognitivo: {
       motivo: "Cobrar a principal mudança da reforma da LIA — tema com altíssima probabilidade por ser alteração legislativa recente.",
-      mede: "Novo elemento subjetivo da improbidade.",
-      pegadinhaDesc: "Sem pegadinha: literalidade da lei reformada. O risco é o candidato responder com a lei antiga.",
-      ondeErra: "Estudou por material desatualizado (regime anterior admitia culpa no art. 10).",
       palavraCritica: "abolida a modalidade culposa",
-      tecnica: "Alteração legislativa recente → a banca cobra o texto NOVO, literal.",
-      regraMental: "LIA pós-2021: só DOLO (com fim ilícito específico). Culpa acabou."
     },
     comentario: {
       resolucao: "CERTO. A Lei 14.230/2021 alterou a Lei 8.429/1992: o art. 1º, §§ 1º a 3º, passou a exigir dolo (vontade livre e consciente de alcançar o resultado ilícito), e o art. 17-C, entre outros, reforça que não há mais improbidade culposa.",
@@ -662,12 +542,7 @@ const QUESTOES = [
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "desvio × excesso",
     cognitivo: {
       motivo: "Inversão dos dois vícios que compõem o abuso de poder.",
-      mede: "Espécies de abuso de poder.",
-      pegadinhaDesc: "As definições estão corretas — apenas com os rótulos trocados entre si.",
-      ondeErra: "Lê definições familiares e não verifica o pareamento rótulo↔definição.",
       palavraCritica: "fora dos limites / finalidade diversa",
-      tecnica: "Monte o par certo antes de ler: EXCESSO = competência; DESVIO = finalidade. Depois compare.",
-      regraMental: "EXcesso EXtrapola a competência. DESvio DEStoa da finalidade."
     },
     comentario: {
       resolucao: "ERRADO. É o contrário: EXCESSO de poder = agente atua além de sua competência; DESVIO de poder (détournement de pouvoir) = agente competente persegue finalidade diversa da prevista (vício de finalidade).",
@@ -687,12 +562,7 @@ const QUESTOES = [
     gabarito: "E", pegadinha: "exigencia-inexistente", palavraChave: "exige a coabitação",
     cognitivo: {
       motivo: "Cobrar a Súmula 600 do STJ — presença quase obrigatória em provas policiais.",
-      mede: "Requisitos de incidência da Lei Maria da Penha.",
-      pegadinhaDesc: "Cria exigência de coabitação que a jurisprudência expressamente afasta.",
-      ondeErra: "O recorte 'no âmbito da unidade doméstica' dá aparência técnica à exigência falsa.",
       palavraCritica: "exige",
-      tecnica: "Súmula 600/STJ afasta a coabitação como requisito, em qualquer das hipóteses do art. 5º.",
-      regraMental: "Maria da Penha: vínculo (doméstico, familiar ou afetivo) SIM; morar junto, NÃO precisa."
     },
     comentario: {
       resolucao: "ERRADO. Súmula 600/STJ: 'Para a configuração da violência doméstica e familiar prevista no artigo 5º da Lei 11.340/2006 não se exige a coabitação entre autor e vítima.' O próprio art. 5º, III, fala em relação íntima de afeto 'independentemente de coabitação'.",
@@ -710,12 +580,7 @@ const QUESTOES = [
     gabarito: "C", pegadinha: "juris-mais-lei", palavraChave: "gênero da vítima",
     cognitivo: {
       motivo: "Testar quem define a incidência: a condição da vítima, não a do agressor.",
-      mede: "Sujeito ativo e passivo na Lei 11.340/2006.",
-      pegadinhaDesc: "O candidato pode achar que a lei exige agressor homem.",
-      ondeErra: "Foca no estereótipo da violência de gênero em vez do texto legal.",
       palavraCritica: "vítima mulher",
-      tecnica: "Cheque o polo passivo: mulher + contexto do art. 5º = lei incide, seja quem for o agressor.",
-      regraMental: "Vítima: sempre mulher. Agressor: qualquer pessoa."
     },
     comentario: {
       resolucao: "CERTO. O art. 5º, parágrafo único, da Lei 11.340/2006 dispõe que as relações pessoais ali previstas independem de orientação sexual. Sujeito ativo pode ser homem ou mulher; o que a lei exige é vítima mulher em contexto de violência doméstica/familiar/afetiva, com motivação de gênero.",
@@ -733,12 +598,7 @@ const QUESTOES = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "independentemente",
     cognitivo: {
       motivo: "Cobrar a novidade legislativa de 2023 (art. 19, § 5º) — probabilidade altíssima por recência.",
-      mede: "Autonomia das medidas protetivas de urgência.",
-      pegadinhaDesc: "A sequência de 'independentemente' parece exagerada — mas é o texto da lei.",
-      ondeErra: "Marca E por achar 'amplo demais' dispensar até o boletim de ocorrência.",
       palavraCritica: "independentemente da tipificação penal",
-      tecnica: "Lei nova = literalidade. Se a lista bate com o § 5º do art. 19, é C.",
-      regraMental: "Protetiva é AUTÔNOMA: não depende de crime, processo, IP nem B.O."
     },
     comentario: {
       resolucao: "CERTO. Lei 11.340/2006, art. 19, § 5º (incluído pela Lei 14.550/2023): as medidas protetivas serão concedidas 'independentemente da tipificação penal da violência, do ajuizamento de ação penal ou cível, da existência de inquérito policial ou do registro de boletim de ocorrência'.",
@@ -756,12 +616,7 @@ const QUESTOES = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "vedada a pena privativa",
     cognitivo: {
       motivo: "Cobrar o rol de penas do art. 28 da Lei 11.343/2006.",
-      mede: "Despenalização (não descriminalização) do porte para consumo.",
-      pegadinhaDesc: "O 'vedada' pode soar forte, mas reflete o art. 28: não há prisão para consumo.",
-      ondeErra: "Confunde despenalização com descriminalização e procura erro onde não há.",
       palavraCritica: "consumo pessoal",
-      tecnica: "Art. 28 = A-P-M: Advertência, Prestação de serviços, Medida educativa.",
-      regraMental: "Consumo: crime sem prisão. Tráfico: 5 a 15 anos."
     },
     comentario: {
       resolucao: "CERTO. Lei 11.343/2006, art. 28: as penas são advertência, prestação de serviços à comunidade e medida educativa de comparecimento a programa ou curso. Não há pena privativa de liberdade. O STF (RE 430.105) reconheceu que houve despenalização, permanecendo a natureza de crime.",
@@ -780,12 +635,7 @@ const QUESTOES = [
     gabarito: "E", pegadinha: "exigencia-inexistente", palavraChave: "forma culposa",
     cognitivo: {
       motivo: "Cobrar a exigência de dolo + finalidade específica na nova Lei de Abuso de Autoridade.",
-      mede: "Elemento subjetivo dos crimes de abuso de autoridade.",
-      pegadinhaDesc: "Inventa modalidade culposa com definição doutrinária correta de culpa (que não se aplica).",
-      ondeErra: "A definição correta de culpa 'legitima' a afirmação falsa.",
       palavraCritica: "culposa",
-      tecnica: "Lei 13.869: só DOLO, e com finalidade específica (prejudicar, beneficiar ou capricho/satisfação pessoal).",
-      regraMental: "Abuso de autoridade sem intenção específica = fato atípico (a divergência de interpretação não configura crime — art. 1º, § 2º)."
     },
     comentario: {
       resolucao: "ERRADO. A Lei 13.869/2019 exige dolo acrescido de finalidade específica: art. 1º, § 1º — as condutas devem ser praticadas 'com a finalidade específica de prejudicar outrem ou beneficiar a si mesmo ou a terceiro, ou, ainda, por mero capricho ou satisfação pessoal'. Não existe abuso de autoridade culposo.",
@@ -803,12 +653,7 @@ const QUESTOES = [
     gabarito: "C", pegadinha: "termo-absoluto", palavraChave: "prescindindo",
     cognitivo: {
       motivo: "Cobrar a natureza de perigo abstrato + o verbo 'prescindir' (pegadinha semântica clássica).",
-      mede: "Classificação dos crimes do Estatuto do Desarmamento e vocabulário jurídico.",
-      pegadinhaDesc: "'Prescindindo' é lido como 'precisando' por leitura apressada — inverteria o gabarito.",
-      ondeErra: "Erro de leitura do verbo, não de conteúdo.",
       palavraCritica: "prescindindo (= dispensando)",
-      tecnica: "Toda vez que ler 'prescinde', traduza mentalmente para 'DISPENSA' antes de julgar.",
-      regraMental: "Arma desmuniciada ou guardada = ainda assim crime (perigo abstrato)."
     },
     comentario: {
       resolucao: "CERTO. STJ: os crimes de posse e porte de arma são de perigo abstrato/mera conduta — a incolumidade pública é tutelada independentemente de lesão concreta. 'Prescindir' = dispensar: a assertiva diz, corretamente, que se dispensa a prova do perigo concreto.",
@@ -826,12 +671,7 @@ const QUESTOES = [
     gabarito: "E", pegadinha: "troca-numerica", palavraChave: "três ou mais",
     cognitivo: {
       motivo: "Troca numérica no conceito legal mais cobrado da Lei 12.850.",
-      mede: "Definição legal de organização criminosa.",
-      pegadinhaDesc: "Muda '4 ou mais' para '3 ou mais'; todo o resto do conceito está correto.",
-      ondeErra: "Valida o conjunto (90% literal) sem conferir o número.",
       palavraCritica: "três",
-      tecnica: "Números são SEMPRE ponto de checagem: 4+ pessoas; pena máxima SUPERIOR a 4 anos.",
-      regraMental: "ORCRIM = 4 e 4 (4+ pessoas; penas máximas > 4 anos) ou transnacional. Associação criminosa (CP, 288) = 3."
     },
     comentario: {
       resolucao: "ERRADO. Lei 12.850/2013, art. 1º, § 1º: exige-se associação de 4 (QUATRO) ou mais pessoas. Três ou mais é o número da associação criminosa do art. 288 do CP. A banca também costuma trocar 'superiores a 4 anos' por 'iguais ou superiores' — aqui esse trecho estava certo.",
@@ -852,12 +692,7 @@ const QUESTOES = [
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "cujos",
     cognitivo: {
       motivo: "Cobrar o uso do relativo 'cujo', que exige relação de posse entre antecedente e consequente.",
-      mede: "Emprego dos pronomes relativos.",
-      pegadinhaDesc: "'Cujos' soa formal e 'elegante', induzindo o candidato a aceitar a troca.",
-      ondeErra: "Não testa a estrutura sintática exigida por 'cujo' (posse + substantivo sem artigo em seguida).",
       palavraCritica: "cujos",
-      tecnica: "'Cujo' = 'do qual' com ideia de posse, sempre seguido de substantivo. 'Os quais' apenas retoma o antecedente.",
-      regraMental: "Se dá para substituir por 'que' referindo-se ao termo anterior, 'cujo' está proibido."
     },
     comentario: {
       resolucao: "ERRADO. 'Os quais' retoma 'os índices de criminalidade' como sujeito de 'dependem'. 'Cujo' expressa posse e deve anteceder substantivo ('cujos índices'), o que tornaria o período agramatical: 'a redução dos índices..., cujos dependem...' não tem estrutura possível.",
@@ -876,12 +711,7 @@ const QUESTOES = [
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "conquanto",
     cognitivo: {
       motivo: "Diferença entre conectivo adversativo coordenativo e conjunção concessiva subordinativa.",
-      mede: "Coesão sequencial e classes de conectivos.",
-      pegadinhaDesc: "'Conquanto' tem valor semântico próximo (oposição/concessão), mas classe e sintaxe diferentes.",
-      ondeErra: "Julga apenas o 'sentido de contraste' e ignora a estrutura sintática exigida.",
       palavraCritica: "Conquanto (= embora)",
-      tecnica: "'Conquanto' = 'embora': inicia oração subordinada e pede outra oração principal no período — não pode abrir período independente como 'no entanto'.",
-      regraMental: "Adversativas (mas, porém, contudo, entretanto, no entanto) trocam entre si. Concessivas (embora, conquanto, ainda que) trocam entre si. Entre grupos, quase nunca."
     },
     comentario: {
       resolucao: "ERRADO. 'No entanto' é conectivo adversativo que liga períodos independentes. 'Conquanto' é conjunção subordinativa concessiva (equivale a 'embora') e exigiria reestruturação do período (verbo no subjuntivo e oração principal), o que não ocorre na simples substituição.",
@@ -900,12 +730,7 @@ const QUESTOES = [
     gabarito: "E", pegadinha: "verdade-mais-falso", palavraChave: "sua supressão manteria",
     cognitivo: {
       motivo: "Combinar classificação correta (aposto) com consequência falsa (supressão possível).",
-      mede: "Pontuação e estrutura do período.",
-      pegadinhaDesc: "A primeira metade é verdadeira; a conclusão, falsa — o aposto intercalado EXIGE a dupla vírgula.",
-      ondeErra: "Acerta a classificação, relaxa e aceita a conclusão sem testar a supressão.",
       palavraCritica: "manteria a correção",
-      tecnica: "Julgue cada oração da assertiva como um item autônomo.",
-      regraMental: "Aposto explicativo intercalado: as duas vírgulas são obrigatórias — suprimir gera erro de pontuação (sujeito emendado em aposto sem marcação)."
     },
     comentario: {
       resolucao: "ERRADO. O trecho é, de fato, aposto explicativo referido a 'A segurança pública' — mas exatamente por isso as vírgulas duplas são obrigatórias na intercalação. A supressão fundiria aposto e sujeito sem sinalização, comprometendo a correção gramatical.",
@@ -924,12 +749,7 @@ const QUESTOES = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "mesma razão sintática",
     cognitivo: {
       motivo: "Cobrar a justificativa da crase (regência + artigo), formato típico da banca.",
-      mede: "Regência nominal e crase.",
-      pegadinhaDesc: "O candidato desconfia do 'mesma razão' e procura diferença inexistente ('acesso a' e 'essencial a' regem 'a'; 'informação' e 'consolidação' admitem artigo).",
-      ondeErra: "Quer achar pegadinha em item correto.",
       palavraCritica: "termo regente",
-      tecnica: "Teste da crase: troque por palavra masculina ('acesso ao dado', 'essencial ao fortalecimento') — se surge 'ao', há crase.",
-      regraMental: "Crase = preposição A (da regência) + artigo A (do substantivo feminino)."
     },
     comentario: {
       resolucao: "CERTO. 'Acesso' rege a preposição 'a' e 'informação' admite o artigo 'a' → crase. 'Essencial' rege 'a' e 'consolidação' admite 'a' → crase. A justificativa sintática (preposição + artigo) é a mesma nos dois casos.",
@@ -949,12 +769,7 @@ const QUESTOES = [
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "ransomware",
     cognitivo: {
       motivo: "Troca de rótulos entre phishing e ransomware — o padrão nº 1 de Informática na banca.",
-      mede: "Conceitos de ameaças cibernéticas.",
-      pegadinhaDesc: "A definição é perfeita — de OUTRO golpe (phishing).",
-      ondeErra: "Valida a definição correta sem conferir o nome.",
       palavraCritica: "ransomware × phishing",
-      tecnica: "Em Informática, a banca quase nunca erra a definição: ela troca o TERMO definido.",
-      regraMental: "RANSOM = resgate (sequestro/cifração de dados). PHISHING = pescaria (isca por mensagem falsa)."
     },
     comentario: {
       resolucao: "ERRADO. A definição apresentada é de PHISHING. Ransomware é o malware que cifra/bloqueia dados do sistema e exige pagamento de resgate (ransom) para a liberação.",
@@ -972,12 +787,7 @@ const QUESTOES = [
     gabarito: "C", pegadinha: "termo-absoluto", palavraChave: "somente",
     cognitivo: {
       motivo: "Cobrar a distinção incremental × diferencial.",
-      mede: "Estratégias de cópia de segurança.",
-      pegadinhaDesc: "O 'somente' ativa o alarme, mas aqui é tecnicamente correto.",
-      ondeErra: "Marca E por reflexo do 'somente' ou por confundir com becape diferencial.",
       palavraCritica: "desde o último becape (qualquer tipo)",
-      tecnica: "Incremental: referência = último becape de QUALQUER tipo. Diferencial: referência = último becape COMPLETO.",
-      regraMental: "Incremental = incrementos pequenos, restauração trabalhosa. Diferencial = cresce a cada dia, restauração simples."
     },
     comentario: {
       resolucao: "CERTO. O becape incremental copia apenas o que mudou desde o último becape (completo ou incremental), sendo o mais econômico em espaço/tempo de cópia — ao custo de restauração mais complexa (exige o completo + toda a cadeia de incrementais).",
@@ -995,12 +805,7 @@ const QUESTOES = [
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "Shift + Delete",
     cognitivo: {
       motivo: "Cobrar o comportamento de exclusão definitiva.",
-      mede: "Operações básicas do Windows.",
-      pegadinhaDesc: "Descreve o comportamento do Delete comum atribuindo-o ao Shift+Delete.",
-      ondeErra: "Não pratica o atalho e responde por suposição.",
       palavraCritica: "Shift",
-      tecnica: "Shift+Delete = exclusão direta, sem Lixeira (recuperável apenas por software forense).",
-      regraMental: "Shift 'pula' a Lixeira."
     },
     comentario: {
       resolucao: "ERRADO. Shift + Delete exclui o arquivo diretamente, sem passar pela Lixeira — não há restauração pelo caminho comum. (Detalhe de prova policial: dados assim excluídos ainda podem ser recuperados por técnicas periciais até serem sobrescritos.)",
@@ -1020,12 +825,7 @@ const QUESTOES = [
     gabarito: "C", pegadinha: "troca-numerica", palavraChave: "pena mínima inferior a 4 anos",
     cognitivo: {
       motivo: "Cobrar os requisitos do ANPP (art. 28-A do CPP), inovação do Pacote Anticrime.",
-      mede: "Justiça penal negociada.",
-      pegadinhaDesc: "O ponto de checagem é 'pena MÍNIMA inferior a 4' — a banca costuma trocar para 'máxima' ou 'igual ou inferior'.",
-      ondeErra: "Não memorizou qual pena (mínima/máxima) e qual operador (inferior/igual ou inferior).",
       palavraCritica: "mínima inferior",
-      tecnica: "ANPP: confissão + sem violência/grave ameaça + pena MÍNIMA < 4 anos.",
-      regraMental: "ANPP = 'Mínima Menor que 4'. Suspensão condicional do processo = mínima ≤ 1."
     },
     comentario: {
       resolucao: "CERTO. CPP, art. 28-A (Lei 13.964/2019): cabe ANPP quando o investigado confessa formal e circunstancialmente infração sem violência ou grave ameaça com pena mínima inferior a 4 anos, sendo o acordo necessário e suficiente para reprovação e prevenção do crime.",
@@ -1044,12 +844,7 @@ const QUESTOES = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "tipo penal autônomo",
     cognitivo: {
       motivo: "Cobrar a alteração legislativa mais relevante de 2024 em crimes contra a vida.",
-      mede: "Novo art. 121-A do CP.",
-      pegadinhaDesc: "Quem estudou antes de 2024 'sabe' que feminicídio é qualificadora — e marca E com convicção.",
-      ondeErra: "Conhecimento desatualizado gera erro com alta confiança (o pior tipo de erro).",
       palavraCritica: "121-A / 20 a 40 anos",
-      tecnica: "Monitorar alterações legislativas: a banca cobra a novidade em até 2 anos da vigência.",
-      regraMental: "Feminicídio hoje = art. 121-A, autônomo, 20 a 40 anos, hediondo."
     },
     comentario: {
       resolucao: "CERTO. A Lei 14.994/2024 criou o art. 121-A do CP: 'Matar mulher por razões da condição do sexo feminino. Pena — reclusão, de 20 (vinte) a 40 (quarenta) anos.' Deixou de ser qualificadora do art. 121 e é crime hediondo (Lei 8.072/1990, art. 1º, I).",

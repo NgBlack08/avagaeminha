@@ -23,12 +23,7 @@ const QUESTOES_PCAL_LOTE19 = [
     gabarito: "C", pegadinha: "troca-conceito", palavraChave: "crime autônomo",
     cognitivo: {
       motivo: "Cobrar a mudança de natureza jurídica do feminicídio.",
-      mede: "Direito Penal — atualização legislativa (2024).",
-      pegadinhaDesc: "A banca mantém o feminicídio como qualificadora (redação revogada).",
-      ondeErra: "Estuda por material anterior à Lei 14.994/2024.",
       palavraCritica: "crime autônomo",
-      tecnica: "A Lei 14.994/2024 revogou a qualificadora do art. 121, § 2º, VI, e criou o art. 121-A (feminicídio autônomo).",
-      regraMental: "Feminicídio agora é tipo próprio (art. 121-A), não mais qualificadora."
     },
     comentario: {
       resolucao: "CERTO. A Lei 14.994/2024 promoveu alteração estrutural: revogou a qualificadora do feminicídio (art. 121, § 2º, VI) e instituiu o crime autônomo do art. 121-A do CP — 'matar mulher por razões da condição do sexo feminino'. O feminicídio permanece hediondo.",
@@ -47,12 +42,7 @@ const QUESTOES_PCAL_LOTE19 = [
     gabarito: "E", pegadinha: "troca-numerica", palavraChave: "doze a trinta anos",
     cognitivo: {
       motivo: "Cobrar a pena do feminicídio autônomo (art. 121-A).",
-      mede: "Direito Penal — dosimetria do feminicídio.",
-      pegadinhaDesc: "Mantém a pena antiga da qualificadora (12 a 30 anos).",
-      ondeErra: "Não percebe o agravamento da pena promovido pela Lei 14.994/2024.",
       palavraCritica: "doze a trinta",
-      tecnica: "Art. 121-A: reclusão de 20 a 40 anos — pena mais grave do que a antiga qualificadora (12 a 30).",
-      regraMental: "Feminicídio autônomo: 20 a 40 anos (subiu com a Lei 14.994/24)."
     },
     comentario: {
       resolucao: "ERRADO. O art. 121-A do CP, incluído pela Lei 14.994/2024, comina ao feminicídio pena de reclusão de 20 a 40 anos — patamar superior ao da antiga qualificadora (12 a 30 anos). O item reproduz a pena revogada.",
@@ -71,12 +61,7 @@ const QUESTOES_PCAL_LOTE19 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "menosprezo ou discriminação",
     cognitivo: {
       motivo: "Cobrar o conceito de 'razões da condição do sexo feminino'.",
-      mede: "Direito Penal — elementar do feminicídio.",
-      pegadinhaDesc: "A banca pode restringir a uma só das hipóteses.",
-      ondeErra: "Esquece o menosprezo/discriminação como hipótese autônoma.",
       palavraCritica: "violência doméstica OU menosprezo/discriminação",
-      tecnica: "São duas hipóteses: (I) violência doméstica e familiar; (II) menosprezo ou discriminação à condição de mulher.",
-      regraMental: "Razões de gênero = violência doméstica OU menosprezo/discriminação."
     },
     comentario: {
       resolucao: "CERTO. O feminicídio (art. 121-A) exige que o crime seja praticado por razões da condição do sexo feminino, assim consideradas as hipóteses de (I) violência doméstica e familiar e (II) menosprezo ou discriminação à condição de mulher.",
@@ -95,12 +80,7 @@ const QUESTOES_PCAL_LOTE19 = [
     gabarito: "E", pegadinha: "generalizacao", palavraChave: "qualquer pessoa",
     cognitivo: {
       motivo: "Cobrar a delimitação do sujeito passivo do feminicídio (a mulher).",
-      mede: "Direito Penal — sujeito passivo próprio.",
-      pegadinhaDesc: "Generaliza a vítima para 'qualquer pessoa'.",
-      ondeErra: "Confunde motivação de gênero com abrangência universal de vítimas.",
       palavraCritica: "qualquer pessoa",
-      tecnica: "O tipo é 'matar MULHER'. O sujeito passivo é próprio — a mulher (STJ reconhece a mulher trans). Não é qualquer pessoa.",
-      regraMental: "Feminicídio: vítima é a mulher, não 'qualquer pessoa'."
     },
     comentario: {
       resolucao: "ERRADO. O feminicídio é crime de sujeito passivo próprio: a vítima é a mulher (art. 121-A, caput). Não alcança qualquer pessoa; a motivação de gênero não amplia o polo passivo para além da mulher.",
@@ -121,12 +101,7 @@ const QUESTOES_PCAL_LOTE19 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "reiteradamente",
     cognitivo: {
       motivo: "Cobrar o tipo de perseguição/stalking (art. 147-A).",
-      mede: "Direito Penal — crimes contra a liberdade individual.",
-      pegadinhaDesc: "A banca pode omitir a reiteração ou confundir com ameaça (147).",
-      ondeErra: "Trata a perseguição como sinônimo de ameaça.",
       palavraCritica: "reiteradamente",
-      tecnica: "Art. 147-A (Lei 14.132/2021): perseguir REITERADAMENTE, ameaçando integridade física/psicológica ou perturbando liberdade/privacidade.",
-      regraMental: "Stalking = perseguir de forma reiterada (não é ato único)."
     },
     comentario: {
       resolucao: "CERTO. O art. 147-A do CP, incluído pela Lei 14.132/2021, tipifica a perseguição (stalking): perseguir alguém reiteradamente e por qualquer meio, ameaçando-lhe a integridade física ou psicológica, restringindo-lhe a locomoção ou perturbando sua esfera de liberdade ou privacidade.",
@@ -145,12 +120,7 @@ const QUESTOES_PCAL_LOTE19 = [
     gabarito: "E", pegadinha: "restricao-indevida", palavraChave: "um único ato isolado",
     cognitivo: {
       motivo: "Cobrar a exigência de reiteração no crime de perseguição.",
-      mede: "Direito Penal — natureza habitual do stalking.",
-      pegadinhaDesc: "Suprime a reiteração, admitindo ato único.",
-      ondeErra: "Ignora que o tipo exige conduta reiterada.",
       palavraCritica: "único ato isolado",
-      tecnica: "A perseguição é crime habitual: exige reiteração de atos. Um ato isolado, conforme o caso, pode configurar ameaça (147), não stalking.",
-      regraMental: "Stalking não é ato único: precisa de reiteração."
     },
     comentario: {
       resolucao: "ERRADO. O crime de perseguição (art. 147-A) tem natureza habitual e exige reiteração de condutas, não se configurando por um único ato isolado. A prática única e pontual pode caracterizar outro delito, como a ameaça.",
@@ -169,12 +139,7 @@ const QUESTOES_PCAL_LOTE19 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "dano emocional",
     cognitivo: {
       motivo: "Cobrar o crime de violência psicológica contra a mulher (art. 147-B).",
-      mede: "Direito Penal — crimes contra a liberdade individual.",
-      pegadinhaDesc: "A banca pode negar a autonomia do tipo ou situá-lo apenas na Lei Maria da Penha.",
-      ondeErra: "Confunde a forma de violência (Maria da Penha) com o crime autônomo do CP.",
       palavraCritica: "crime autônomo",
-      tecnica: "Art. 147-B (Lei 14.188/2021): a violência psicológica contra a mulher é crime autônomo do CP, punido com reclusão de 6 meses a 2 anos e multa.",
-      regraMental: "Violência psicológica contra a mulher = crime do art. 147-B do CP."
     },
     comentario: {
       resolucao: "CERTO. A Lei 14.188/2021 inseriu o art. 147-B no Código Penal, tipificando a violência psicológica contra a mulher: causar dano emocional que a prejudique e perturbe seu pleno desenvolvimento ou vise degradar/controlar suas ações, mediante ameaça, constrangimento, humilhação, manipulação, isolamento, chantagem, ridicularização, entre outros.",
@@ -195,12 +160,7 @@ const QUESTOES_PCAL_LOTE19 = [
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "teoria pluralista",
     cognitivo: {
       motivo: "Cobrar a teoria monista do concurso de pessoas (art. 29).",
-      mede: "Direito Penal — concurso de pessoas.",
-      pegadinhaDesc: "Troca a teoria monista pela pluralista.",
-      ondeErra: "Confunde a regra (monista) com as exceções pluralistas.",
       palavraCritica: "pluralista",
-      tecnica: "Art. 29: adotou-se a teoria MONISTA (unitária) — todos que concorrem respondem pelo mesmo crime, na medida de sua culpabilidade. Há exceções pluralistas pontuais (ex.: aborto consentido).",
-      regraMental: "Regra: teoria monista (um crime para todos). Pluralista é exceção."
     },
     comentario: {
       resolucao: "ERRADO. O Código Penal adotou, como regra, a teoria MONISTA (unitária) no art. 29: todos os que concorrem para o crime respondem pelo mesmo delito, na medida de sua culpabilidade. A teoria pluralista aparece apenas em exceções específicas.",
@@ -219,12 +179,7 @@ const QUESTOES_PCAL_LOTE19 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "um sexto a um terço",
     cognitivo: {
       motivo: "Cobrar a causa de diminuição da participação de menor importância.",
-      mede: "Direito Penal — dosimetria no concurso de pessoas.",
-      pegadinhaDesc: "A banca troca a fração (ex.: 'um terço a dois terços').",
-      ondeErra: "Não retém a fração correta de redução.",
       palavraCritica: "um sexto a um terço",
-      tecnica: "Art. 29, § 1º: participação de menor importância → redução de 1/6 a 1/3.",
-      regraMental: "Participação de menor importância: reduz de 1/6 a 1/3."
     },
     comentario: {
       resolucao: "CERTO. O art. 29, § 1º, do CP prevê que, se a participação for de menor importância, a pena pode ser reduzida de um sexto a um terço. A causa aplica-se ao partícipe, não ao autor ou coautor.",
@@ -243,12 +198,7 @@ const QUESTOES_PCAL_LOTE19 = [
     gabarito: "E", pegadinha: "termo-absoluto", palavraChave: "sempre somadas",
     cognitivo: {
       motivo: "Cobrar o sistema de aplicação da pena no concurso formal.",
-      mede: "Direito Penal — concurso de crimes.",
-      pegadinhaDesc: "Usa 'sempre' e o cúmulo material para o concurso formal.",
-      ondeErra: "Confunde concurso formal (exasperação) com material (soma).",
       palavraCritica: "sempre somadas",
-      tecnica: "Art. 70: no concurso formal PRÓPRIO aplica-se a exasperação (pena mais grave aumentada de 1/6 a 1/2). A soma só ocorre no formal IMPRÓPRIO (desígnios autônomos).",
-      regraMental: "Formal próprio = exasperação. Soma só no impróprio."
     },
     comentario: {
       resolucao: "ERRADO. No concurso formal próprio, aplica-se a exasperação: a pena mais grave (ou uma delas, se iguais) é aumentada de um sexto até metade (art. 70). A soma (cúmulo material) só incide no concurso formal impróprio, quando há desígnios autônomos. Logo, não é 'sempre' soma.",
@@ -267,12 +217,7 @@ const QUESTOES_PCAL_LOTE19 = [
     gabarito: "C", pegadinha: "literalidade", palavraChave: "um sexto a dois terços",
     cognitivo: {
       motivo: "Cobrar a regra do crime continuado (art. 71).",
-      mede: "Direito Penal — concurso de crimes.",
-      pegadinhaDesc: "A banca troca a fração de aumento do continuado.",
-      ondeErra: "Confunde a fração do continuado (1/6 a 2/3) com a do formal (1/6 a 1/2).",
       palavraCritica: "um sexto a dois terços",
-      tecnica: "Art. 71: crime continuado → pena de um só crime (se idênticas) aumentada de 1/6 a 2/3. É também exasperação, mas com fração maior que a do formal.",
-      regraMental: "Continuado: exaspera de 1/6 a 2/3 (maior que a do formal)."
     },
     comentario: {
       resolucao: "CERTO. No crime continuado (art. 71), aplica-se a pena de um só dos crimes, se idênticas, aumentada de um sexto a dois terços. Trata-se de sistema de exasperação, com fração superior à do concurso formal próprio.",
@@ -293,12 +238,7 @@ const QUESTOES_PCAL_LOTE19 = [
     gabarito: "E", pegadinha: "juris-mais-lei", palavraChave: "aquém do mínimo legal",
     cognitivo: {
       motivo: "Cobrar a Súmula 231 do STJ.",
-      mede: "Direito Penal — dosimetria (2ª fase).",
-      pegadinhaDesc: "Permite a atenuante furar o mínimo legal.",
-      ondeErra: "Desconhece a Súmula 231 do STJ.",
       palavraCritica: "aquém do mínimo",
-      tecnica: "Súmula 231 do STJ: a incidência da atenuante NÃO pode conduzir à redução da pena abaixo do mínimo legal.",
-      regraMental: "Atenuante não fura o piso (Súmula 231 STJ)."
     },
     comentario: {
       resolucao: "ERRADO. Conforme a Súmula 231 do STJ, a incidência de circunstância atenuante não pode conduzir a pena inferior ao mínimo legal. O ajuste na 2ª fase da dosimetria respeita os limites da pena em abstrato.",
@@ -318,12 +258,7 @@ const QUESTOES_PCAL_LOTE19 = [
     gabarito: "C", pegadinha: "juris-mais-lei", palavraChave: "inquéritos e ações em curso",
     cognitivo: {
       motivo: "Cobrar a Súmula 444 do STJ.",
-      mede: "Direito Penal — dosimetria (1ª fase) e presunção de inocência.",
-      pegadinhaDesc: "A banca pode admitir inquéritos/ações em curso como maus antecedentes.",
-      ondeErra: "Ignora a presunção de inocência aplicada à pena-base.",
       palavraCritica: "vedada",
-      tecnica: "Súmula 444 do STJ: inquéritos e ações penais em curso não podem elevar a pena-base — decorrência da presunção de inocência.",
-      regraMental: "Processo em curso não é mau antecedente (Súmula 444 STJ)."
     },
     comentario: {
       resolucao: "CERTO. A Súmula 444 do STJ veda o uso de inquéritos policiais e ações penais em curso para agravar a pena-base. Só condenações transitadas em julgado podem, conforme o caso, ser valoradas como maus antecedentes ou reincidência.",
@@ -343,12 +278,7 @@ const QUESTOES_PCAL_LOTE19 = [
     gabarito: "E", pegadinha: "restricao-indevida", palavraChave: "apenas o pequeno valor",
     cognitivo: {
       motivo: "Cobrar os quatro vetores da insignificância (STF).",
-      mede: "Direito Penal — princípio da insignificância.",
-      pegadinhaDesc: "Reduz a insignificância ao pequeno valor da coisa.",
-      ondeErra: "Confunde 'pequeno valor' (privilégio) com bagatela (atipicidade).",
       palavraCritica: "apenas",
-      tecnica: "STF exige quatro vetores (MARI): Mínima ofensividade, Ausência de periculosidade social, Reduzido grau de reprovabilidade e Inexpressividade da lesão jurídica. Não basta o pequeno valor.",
-      regraMental: "Insignificância: 4 vetores (MARI), não só o valor da coisa."
     },
     comentario: {
       resolucao: "ERRADO. Segundo o STF, a insignificância pressupõe quatro vetores cumulativos (MARI): mínima ofensividade da conduta, ausência de periculosidade social da ação, reduzido grau de reprovabilidade do comportamento e inexpressividade da lesão jurídica. O simples pequeno valor da coisa não basta.",
@@ -370,12 +300,7 @@ const QUESTOES_PCAL_LOTE19 = [
     gabarito: "C", pegadinha: "juris-mais-lei", palavraChave: "incondicionada",
     cognitivo: {
       motivo: "Cobrar a natureza da ação penal nos crimes sexuais (art. 225).",
-      mede: "Direito Penal — ação penal.",
-      pegadinhaDesc: "A banca mantém a ação condicionada à representação (redação anterior).",
-      ondeErra: "Estuda pela redação anterior a 2018.",
       palavraCritica: "incondicionada",
-      tecnica: "Lei 13.718/2018 alterou o art. 225: os crimes contra a liberdade sexual e contra vulnerável passaram a ser de ação pública INCONDICIONADA.",
-      regraMental: "Crime sexual (pós-2018): ação pública incondicionada."
     },
     comentario: {
       resolucao: "CERTO. A Lei 13.718/2018 deu nova redação ao art. 225 do CP: os crimes contra a liberdade sexual e os crimes sexuais contra vulnerável procedem mediante ação penal pública incondicionada, superando o regime anterior de ação condicionada à representação.",
@@ -394,12 +319,7 @@ const QUESTOES_PCAL_LOTE19 = [
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "qualidade negativa",
     cognitivo: {
       motivo: "Cobrar a distinção entre calúnia e injúria.",
-      mede: "Direito Penal — crimes contra a honra.",
-      pegadinhaDesc: "Descreve a injúria e a rotula como calúnia.",
-      ondeErra: "Confunde imputação de fato criminoso (calúnia) com atribuição de qualidade negativa (injúria).",
       palavraCritica: "qualidade negativa",
-      tecnica: "Calúnia (art. 138): imputar falsamente FATO definido como crime. Injúria (art. 140): atribuir qualidade negativa que ofende a dignidade/decoro. A assertiva descreve injúria.",
-      regraMental: "Calúnia = fato-crime falso. Injúria = qualidade negativa."
     },
     comentario: {
       resolucao: "ERRADO. A conduta descrita — atribuir qualidade negativa que ofende a dignidade ou o decoro — caracteriza INJÚRIA (art. 140). A calúnia (art. 138) consiste em imputar falsamente a alguém FATO definido como crime.",

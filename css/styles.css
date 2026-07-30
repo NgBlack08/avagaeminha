@@ -385,6 +385,19 @@ details.cog summary:hover { opacity: .8; }
 .cog-grid .item { background: var(--surface2); border-radius: 10px; padding: 11px 15px; font-size: 13px; }
 .cog-grid .item b { color: var(--muted); font-size: 11px; text-transform: uppercase; letter-spacing: .07em; display: block; margin-bottom: 4px; }
 
+/* Estratégias casadas à questão (substituiu a Engenharia cognitiva) */
+.estr-q { display: grid; gap: 8px; margin-top: 8px; }
+.estr-q-motivo, .estr-q-palavra { background: var(--surface2); border-radius: 10px; padding: 11px 15px; font-size: 13px; }
+.estr-q-motivo b, .estr-q-palavra b { color: var(--muted); font-size: 11px; text-transform: uppercase; letter-spacing: .07em; display: block; margin-bottom: 4px; }
+.estr-q-palavra mark { background: color-mix(in srgb, var(--warn) 22%, transparent); color: inherit; padding: 1px 5px; border-radius: 5px; font-weight: 600; }
+.estr-q-item { background: var(--surface2); border-radius: 10px; padding: 12px 15px; border-left: 3px solid var(--accent); }
+.estr-q-nome { font-size: 13.5px; font-weight: 700; color: var(--accent); margin-bottom: 4px; }
+.estr-q-desc { font-size: 13px; margin: 0 0 8px; line-height: 1.5; }
+.estr-q-item .estr-passos { margin-bottom: 8px; }
+.estr-q-risco { font-size: 12.5px; color: var(--muted); line-height: 1.5; }
+.estr-q-risco b { color: var(--warn); }
+.estr-q-rodape { display: flex; align-items: center; justify-content: space-between; gap: 10px; flex-wrap: wrap; margin-top: 2px; }
+
 .conf { display: flex; gap: 5px; align-items: center; font-size: 12.5px; color: var(--muted); }
 .conf button { background: var(--surface2); border: 1px solid var(--border); border-radius: 8px; padding: 6px 10px; cursor: pointer; color: var(--muted); font-size: 12px; transition: all var(--t-fast); }
 .conf button:hover { color: var(--text); }
