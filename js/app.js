@@ -41,18 +41,29 @@ window.addEventListener("popstate", (e) => {
   navigate(view, { fromPopstate: true });
 });
 
-function iniciarApp() {
+/* `novoAcesso` distingue quem ACABOU DE AUTENTICAR (login, cadastro, troca de
+   senha) de quem apenas recarregou a página com sessão já ativa.
+
+   A diferença existe para conciliar duas regras que se contradizem à primeira
+   vista: todo acesso novo deve começar no Dashboard, onde fica o seletor de
+   trilha em destaque; mas dar F5 no meio de uma lista de questões não pode
+   jogar o aluno de volta ao Dashboard e fazê-lo perder o lugar. Como o hash
+   já carrega a view (ver pushState em navigate()), basta ignorá-lo quando o
+   acesso é novo e honrá-lo quando é recarga.
+
+   O retorno do OAuth do Google cai no caminho de recarga, mas chega com
+   tokens no hash em vez de nome de view — então não passa em viewsValidas e
+   vai para o Dashboard sozinho, que é o comportamento desejado. */
+function iniciarApp({ novoAcesso = false } = {}) {
   const root = document.getElementById("approot");
   if (root) root.classList.remove("no-sidebar");
   document.documentElement.dataset.theme = APP_STATE.config.tema || "dark";
   renderSidebar();
   const mpStatus = checkMpRedirectStatus();
-  /* Ao atualizar a página (F5), permanece na aba atual em vez de voltar
-     ao Dashboard: a URL já carrega a view no hash (ver pushState em
-     navigate()), então só precisamos honrá-lo aqui na inicialização. */
   const hashView = (location.hash || "").replace(/^#/, "");
   const viewsValidas = VIEWS.map(v => v.id).concat(["admin"]);
-  const destino = mpStatus ? "planos" : (viewsValidas.includes(hashView) ? hashView : "dashboard");
+  const manterAba = !novoAcesso && viewsValidas.includes(hashView);
+  const destino = mpStatus ? "planos" : (manterAba ? hashView : "dashboard");
   navigate(destino);
   if (mpStatus) tratarRetornoMercadoPago();
 }
@@ -441,10 +452,8 @@ function renderDashboard() {
   const g = statsGerais();
   const radar = radarAprovacao();
   const devidas = questoesDevidas().length;
-  const focoNome = APP_STATE.config.concursoFoco
-    ? (CONCURSOS.find(c => c.id === APP_STATE.config.concursoFoco)?.nome || APP_STATE.config.concursoFoco)
-    : "Carreiras Policiais";
   const gam = gamificacao();
+  const ed = editalDoFoco();
 
   /* Linha do diagnóstico: barra horizontal colorida por faixa de domínio.
      `idle` = disciplina ainda não respondida (barra neutra, sem peso negativo). */
@@ -460,8 +469,21 @@ function renderDashboard() {
   `<div class="card hero-card">
     <div class="hero-card-info">
       <div class="hero-card-lbl">Central de comando</div>
+      ${/* A trilha define o que o aluno vê em TODO o app — banco, filtros,
+           plano, radar. Por isso o seletor deixou o Perfil e virou o primeiro
+           controle do Dashboard, que é onde todo acesso novo começa. */""}
+      <label class="trilha-seletor">
+        <span class="trilha-seletor-lbl">Trilha de estudo</span>
+        <select onchange="trocarTrilha(this.value)">
+          <option value="" ${!APP_STATE.config.concursoFoco ? "selected" : ""}>Geral — todas as carreiras</option>
+          ${Object.values(EDITAIS).map(e => `<option value="${e.id}" ${APP_STATE.config.concursoFoco === e.id ? "selected" : ""}>${escapeHtml(e.nome)}</option>`).join("")}
+        </select>
+      </label>
       <div class="hero-card-tags">
-        <span class="tag accent">🎯 ${escapeHtml(focoNome)}</span>
+        ${ed
+          ? `<span class="tag accent">📋 ${escapeHtml(ed.fonte.split("(")[0].trim())}</span>
+             <span class="tag ok">${g.totalBanco} questões no seu edital</span>`
+          : `<span class="tag warn">Nenhuma trilha escolhida — vendo as ${g.totalBanco} questões de todos os editais</span>`}
         <span class="tag accent">👤 ${escapeHtml(APP_STATE.config.cargoFoco)}</span>
       </div>
     </div>
@@ -621,9 +643,12 @@ async function trocarTrilha(id) {
   if (respondidas > 0 && novo !== anterior) {
     const nome = novo ? EDITAIS[novo].nome : "Todas (sem trilha)";
     const ok = await mostrarConfirm(
-      `Mudar para "${nome}"? Suas estatísticas passam a contar apenas as disciplinas dessa trilha, então os números do Dashboard e do Perfil vão mudar. Nada é apagado: voltando à trilha anterior, tudo reaparece.`,
+      `Mudar para "${nome}"? Suas estatísticas de desempenho — taxa de acerto, radar, cobertura e plano de estudo — passam a contar apenas as disciplinas dessa trilha. Seu XP, patente e sequência de dias não mudam: eles medem esforço, não conteúdo. Nada é apagado; voltando à trilha anterior, os números reaparecem.`,
       "Trocar de trilha");
-    if (!ok) { renderPerfil(); return; } /* re-render devolve o <select> ao valor antigo */
+    /* Re-render devolve o <select> ao valor antigo — o seletor vive tanto no
+       Dashboard quanto no Perfil, então volta para a view em que o usuário
+       está, não para uma fixa. */
+    if (!ok) { navigate(currentView); return; }
   }
 
   APP_STATE.config.concursoFoco = novo;
@@ -637,8 +662,12 @@ async function trocarTrilha(id) {
   bancoListaCache = null;
   bancoIndice = 0;
   bancoPagina = 0;
+  /* Simulado e Modo Prova guardam filtros de disciplina que podem não existir
+     na trilha nova — ficariam escondendo tudo em silêncio, como os do Banco. */
+  simFiltros = {};
+  pvFiltros = {};
   saveState();
-  renderPerfil();
+  navigate(currentView);
 }
 
 function renderBanco() {

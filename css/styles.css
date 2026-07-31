@@ -164,9 +164,25 @@ body {
   border-color: color-mix(in srgb, var(--accent) 22%, var(--border));
 }
 .hero-card-lbl { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .12em; color: var(--muted); margin-bottom: 8px; }
+.hero-card-info { min-width: 0; flex: 1 1 340px; }
 .hero-card-tags { display: flex; gap: 8px; flex-wrap: wrap; }
 .hero-card-tags .tag { font-size: 13.5px; padding: 6px 12px; font-weight: 600; }
 .hero-card-cta { flex-shrink: 0; }
+
+/* Seletor de trilha — primeiro controle da Central de comando. Recebe
+   tratamento de destaque (borda de acento, fonte maior que a de um filtro
+   comum) porque é a escolha que redefine todo o resto do app: banco,
+   filtros, plano de estudo e radar passam a enxergar só aquele edital. */
+.trilha-seletor { display: block; margin-bottom: 12px; max-width: 420px; }
+.trilha-seletor-lbl {
+  display: block; font-size: 12px; font-weight: 600; color: var(--muted); margin-bottom: 5px;
+}
+.trilha-seletor select {
+  width: 100%; font-size: 15px; font-weight: 600; padding: 11px 14px;
+  border-color: color-mix(in srgb, var(--accent) 45%, var(--border));
+  background: var(--surface);
+}
+.trilha-seletor select:hover { border-color: var(--accent); }
 
 /* Diagnóstico por disciplina: barra horizontal colorida por faixa */
 .diag-linha {

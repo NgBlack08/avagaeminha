@@ -409,10 +409,19 @@ function statsGerais() {
 /* Evolução temporal (por sessão de respostas agrupadas por dia) */
 function evolucaoDiaria() {
   const porDia = {};
-  for (const qid in APP_STATE.respostas) for (const h of APP_STATE.respostas[qid]) {
-    const dia = new Date(h.data).toISOString().slice(0, 10);
-    if (!porDia[dia]) porDia[dia] = { dia, acertos: 0, erros: 0 };
-    if (!h.branco) (h.correta ? porDia[dia].acertos++ : porDia[dia].erros++);
+  /* Escopado: é gráfico de DESEMPENHO (taxa de acerto ao longo do tempo), e
+     misturar trilhas produziria uma curva sem significado — acertar 80% em
+     Legislação do SUS e 50% em Direito Penal viraria um 65% que não descreve
+     preparo para prova nenhuma. Contraste com calcularXP/calcularStreak, que
+     são de ENGAJAMENTO e ficam globais de propósito. */
+  const idsDoEscopo = new Set(questoesDoEscopo().map(q => q.id));
+  for (const qid in APP_STATE.respostas) {
+    if (!idsDoEscopo.has(qid)) continue;
+    for (const h of APP_STATE.respostas[qid]) {
+      const dia = new Date(h.data).toISOString().slice(0, 10);
+      if (!porDia[dia]) porDia[dia] = { dia, acertos: 0, erros: 0 };
+      if (!h.branco) (h.correta ? porDia[dia].acertos++ : porDia[dia].erros++);
+    }
   }
   return Object.values(porDia).sort((a, b) => a.dia.localeCompare(b.dia))
     .map(d => ({ ...d, taxa: (d.acertos + d.erros) ? d.acertos / (d.acertos + d.erros) : 0 }));
@@ -842,6 +851,24 @@ const PATENTES = [
 ];
 
 const META_SEMANAL_QUESTOES = 100;
+
+/* ---------------- Escopo da gamificação: GLOBAL, por decisão ----------------
+   XP, patente, streak, meta semanal e conquistas somam TODAS as respostas e
+   sessões, ignorando a trilha ativa. Isso é deliberado, e a distinção que
+   sustenta a escolha é entre desempenho e engajamento:
+
+     DESEMPENHO  (taxa, radar, cobertura, plano de estudo, revisões devidas,
+                  evolução diária) → escopado por trilha, porque mede preparo
+                  para UMA prova e misturar editais não descreve prova nenhuma.
+
+     ENGAJAMENTO (XP, patente, streak, conquistas) → global, porque mede
+                  esforço, não conteúdo.
+
+   O motivo é concreto: escopar a patente faria quem estudou meses de PC-AL
+   ver o nível zerar ao trocar para Fisioterapia, e quebraria o streak de
+   quem estudou todos os dias — punindo justamente o hábito que o produto
+   quer premiar. Por isso as funções abaixo NÃO usam questoesDoEscopo(); a
+   ausência é intencional e não deve ser "corrigida" sem rever esta decisão. */
 
 function calcularXP() {
   let xp = 0;
