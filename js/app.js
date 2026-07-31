@@ -613,12 +613,12 @@ function renderBanco() {
           onclick="event.preventDefault(); event.stopPropagation(); limparFiltrosBanco()">Limpar</button>` : ""}
     </summary>
     <div class="filters">
-      ${mselHtml("concurso", "Concurso", CONCURSOS.map(c => ({ v: c.id, t: c.id })))}
-      ${mselHtml("cargo", "Cargo", CARGOS.map(c => ({ v: c, t: c })))}
-      ${mselHtml("disciplina", "Disciplina", discs.map(d => ({ v: d, t: d })))}
-      ${mselHtml("assunto", "Assunto", assuntos.map(a => ({ v: a, t: a })))}
-      ${mselHtml("dificuldade", "Dificuldade", [{ v: 1, t: "● Fácil" }, { v: 2, t: "●● Média" }, { v: 3, t: "●●● Difícil" }])}
-      ${mselHtml("pegadinha", "Padrão da banca", DNA_BANCA.map(d => ({ v: d.slug, t: d.nome })))}
+      ${mselHtml(bancoFiltros, "concurso", "banco:concurso", "Concurso", CONCURSOS.map(c => ({ v: c.id, t: c.id })), "toggleFiltroBancoMulti")}
+      ${mselHtml(bancoFiltros, "cargo", "banco:cargo", "Cargo", CARGOS.map(c => ({ v: c, t: c })), "toggleFiltroBancoMulti")}
+      ${mselHtml(bancoFiltros, "disciplina", "banco:disciplina", "Disciplina", discs.map(d => ({ v: d, t: d })), "toggleFiltroBancoMulti")}
+      ${mselHtml(bancoFiltros, "assunto", "banco:assunto", "Assunto", assuntos.map(a => ({ v: a, t: a })), "toggleFiltroBancoMulti")}
+      ${mselHtml(bancoFiltros, "dificuldade", "banco:dificuldade", "Dificuldade", [{ v: 1, t: "● Fácil" }, { v: 2, t: "●● Média" }, { v: 3, t: "●●● Difícil" }], "toggleFiltroBancoMulti")}
+      ${mselHtml(bancoFiltros, "pegadinha", "banco:pegadinha", "Padrão da banca", DNA_BANCA.map(d => ({ v: d.slug, t: d.nome })), "toggleFiltroBancoMulti")}
       <label class="f">Busca<input type="search" id="f-busca" value="${bancoFiltros.busca || ""}" placeholder="palavra-chave…" onchange="setFiltroBanco()"></label>
       <label class="check"><input type="checkbox" id="f-erradas" ${bancoFiltros.somenteErradas ? "checked" : ""} onchange="setFiltroBanco()"> só as que errei</label>
       <label class="check"><input type="checkbox" id="f-novas" ${bancoFiltros.somenteNaoRespondidas ? "checked" : ""} onchange="setFiltroBanco()"> só não respondidas</label>
@@ -637,47 +637,49 @@ function valorFiltroAtivo(v) {
   return v !== null && v !== undefined && v !== false && v !== "";
 }
 
-/* "Marcado" é o inverso de combina(): aqui vazio/null significa NADA
-   selecionado, não "sem restrição" — senão toda opção nasceria marcada. */
-function opcaoMarcada(filtro, valor) {
-  if (filtro === null || filtro === undefined || filtro === "") return false;
-  return Array.isArray(filtro) ? filtro.includes(valor) : filtro === valor;
-}
-
-/* Campo do dropdown de filtro aberto no momento, ou null. null = todos
+/* Chave do dropdown de filtro aberto no momento, ou null. Compartilhado
+   entre as telas que usam mselHtml (Banco, Simulado, Modo Prova) — só uma
+   tela é visível por vez, então um único estado basta. null = todos
    fechados (padrão) — mesma ideia de bancoFiltrosAbertos: sem isto, abrir
    um <details> e marcar uma opção nele fecharia o próprio dropdown, já
-   que renderBanco() reconstrói o HTML do zero a cada clique. */
-let bancoMselAberto = null;
-function onToggleMsel(el, campo) {
+   que cada tela reconstrói o HTML do zero a cada clique. */
+let mselAberto = null;
+function onToggleMsel(el, chave) {
   if (el.open) {
-    bancoMselAberto = campo;
+    mselAberto = chave;
     /* só um aberto por vez — abrir um fecha os outros, feito direto no
-       DOM (sem renderBanco()) para não custar um re-render inteiro só
+       DOM (sem re-render) para não custar um redesenho inteiro da tela só
        por abrir/fechar, que é a interação mais frequente do painel. */
     document.querySelectorAll(".msel[open]").forEach(d => { if (d !== el) d.removeAttribute("open"); });
-  } else if (bancoMselAberto === campo) {
-    bancoMselAberto = null;
+  } else if (mselAberto === chave) {
+    mselAberto = null;
   }
 }
 
-/* Dropdown de marcação múltipla para um campo categórico do Banco de
-   Questões — visualmente do tamanho de um <select>, fechado por padrão.
-   `opcoes` é [{v: valor, t: texto}]. Substituiu uma primeira versão com
-   todas as opções sempre visíveis como chips (até ~270 para Assunto), que
-   pesava o layout a cada clique com 6 categorias abertas ao mesmo tempo. */
-function mselHtml(campo, titulo, opcoes) {
+/* Dropdown de marcação múltipla — visualmente do tamanho de um <select>,
+   fechado por padrão. Reutilizado pelo Banco de Questões, Simulado
+   Adaptativo e Modo Prova.
+     estado    — objeto de filtros da tela (bancoFiltros/simFiltros/pvFiltros)
+     campo     — chave dentro desse objeto
+     chave     — identifica o dropdown para mselAberto; única entre telas,
+                 por isso prefixada (ex. "banco:disciplina", "sim:disciplina")
+     opcoes    — [{v: valor, t: texto}]
+     fnAlternar — nome (string) da função de alternância daquela tela,
+                 chamada pelo onchange de cada caixa
+   Substituiu uma primeira versão (só no Banco) com todas as opções sempre
+   visíveis como chips (até ~270 para Assunto), que pesava o layout a cada
+   clique com 6 categorias abertas ao mesmo tempo. */
+function mselHtml(estado, campo, chave, titulo, opcoes, fnAlternar) {
   if (!opcoes.length) return "";
-  const marcados = Array.isArray(bancoFiltros[campo])
-    ? bancoFiltros[campo]
-    : (valorFiltroAtivo(bancoFiltros[campo]) ? [bancoFiltros[campo]] : []);
-  const aberto = bancoMselAberto === campo;
-  return `<details class="f msel" ${aberto ? "open" : ""} ontoggle="onToggleMsel(this, '${campo}')">
+  const atual = estado[campo];
+  const marcados = Array.isArray(atual) ? atual : (valorFiltroAtivo(atual) ? [atual] : []);
+  const aberto = mselAberto === chave;
+  return `<details class="f msel" ${aberto ? "open" : ""} ontoggle="onToggleMsel(this, '${chave}')">
     <summary>${escapeHtml(titulo)}${marcados.length ? `<span class="msel-badge">${marcados.length}</span>` : ""}</summary>
     <div class="msel-panel">
       ${opcoes.map(o => `<label class="msel-opt">
         <input type="checkbox" ${marcados.includes(o.v) ? "checked" : ""}
-          onchange="toggleFiltroBancoMulti('${campo}', ${typeof o.v === "number" ? o.v : `'${o.v}'`})">
+          onchange="${fnAlternar}('${campo}', ${typeof o.v === "number" ? o.v : `'${o.v}'`})">
         <span>${escapeHtml(o.t)}</span>
       </label>`).join("")}
     </div>
@@ -962,28 +964,38 @@ function renderSimulado() {
         <option value="5">5 (rápido)</option><option value="10" selected>10</option>
         <option value="20">20</option><option value="40">40</option><option value="60">60</option><option value="120">120 (prova completa)</option>
       </select></label>
-      <label class="f">Concurso<select id="sim-concurso">
-        <option value="">Todos${APP_STATE.config.concursoFoco ? ` (foco em ${APP_STATE.config.concursoFoco})` : ""}</option>
-        ${CONCURSOS.map(c => `<option value="${c.id}">${c.id}</option>`).join("")}
-      </select></label>
-      <label class="f">Disciplina<select id="sim-disc">
-        <option value="">Todas (adaptativo)</option>
-        ${listaDisciplinas().map(d => `<option>${d}</option>`).join("")}
-      </select></label>
+      ${mselHtml(simFiltros, "concurso", "sim:concurso", "Concurso", CONCURSOS.map(c => ({ v: c.id, t: c.id })), "toggleFiltroSimMulti")}
+      ${mselHtml(simFiltros, "disciplina", "sim:disciplina", "Disciplina", listaDisciplinas().map(d => ({ v: d, t: d })), "toggleFiltroSimMulti")}
       <label class="f">Modo<select id="sim-modo">
         <option value="adaptativo" selected>Adaptativo (recomendado)</option>
         <option value="revisao">Revisão espaçada (${devidas} devidas)</option>
         <option value="erradas">Só questões que errei</option>
       </select></label>
     </div>
+    <div style="font-size:12px;color:var(--muted);margin-top:2px">Sem marcar concurso ou disciplina, o simulado sorteia entre todos${APP_STATE.config.concursoFoco ? ` (seu foco: ${APP_STATE.config.concursoFoco})` : ""} — priorizando adaptativamente seus pontos fracos.</div>
     <button class="btn" onclick="iniciarSimulado()">▶ Começar</button>
     <div class="aviso">Correção estilo CEBRASPE: <b>cada erro anula um acerto</b>; em branco não pontua. Use o botão "Em branco" estrategicamente, como faria na prova.</div>
   </div>`;
 }
+/* Filtros do Simulado (concurso/disciplina) — persistem entre renders,
+   mesmo padrão de bancoFiltros; sem isto, marcar uma caixa no dropdown
+   fecharia o próprio dropdown a cada re-render. */
+let simFiltros = {};
+function toggleFiltroSimMulti(campo, valor) {
+  const atual = simFiltros[campo];
+  const lista = Array.isArray(atual) ? atual : (valorFiltroAtivo(atual) ? [atual] : []);
+  const i = lista.indexOf(valor);
+  simFiltros = { ...simFiltros, [campo]: i >= 0 ? lista.filter(v => v !== valor) : [...lista, valor] };
+  renderSimulado();
+}
 async function iniciarSimulado() {
   const n = +$("#sim-n").value;
   const modo = $("#sim-modo").value;
-  const filtros = { concurso: $("#sim-concurso").value || null, disciplina: $("#sim-disc").value || null };
+  /* simFiltros[campo] já vem como array (ou undefined) de toggleFiltroSimMulti;
+     combina() trata array vazio/undefined como "sem restrição", então não
+     há necessidade de normalizar para null aqui — []/undefined têm o
+     mesmo efeito. */
+  const filtros = { concurso: simFiltros.concurso, disciplina: simFiltros.disciplina };
   let questoes;
   if (modo === "revisao") {
     questoes = embaralhar(questoesDevidas()).slice(0, n);
@@ -1093,12 +1105,10 @@ function renderProva() {
         <option value="180">3 horas</option>
         <option value="240">4 horas</option>
       </select></label>
-      <label class="f">Disciplina<select id="pv-disc">
-        <option value="">Todas (mistura balanceada)</option>
-        ${discs.map(d => `<option>${escapeHtml(d)}</option>`).join("")}
-      </select></label>
+      ${mselHtml(pvFiltros, "disciplina", "pv:disciplina", "Disciplina", discs.map(d => ({ v: d, t: d })), "toggleFiltroProvaMulti")}
       <label class="check" style="align-self:end"><input type="checkbox" id="pv-edital" checked> só conteúdo do edital PC-AL 2026</label>
     </div>
+    <div style="font-size:12px;color:var(--muted);margin-top:2px">Sem marcar disciplina, a prova sai com mistura balanceada entre todas.</div>
     <button class="btn" onclick="iniciarProva()">◈ Iniciar prova</button>
     <div class="aviso">
       <b>Regras da prova:</b> o cronômetro não para; você navega livremente e pode marcar questões para revisar;
@@ -1106,6 +1116,16 @@ function renderProva() {
       em branco não pontua). Ao esgotar o tempo, a prova é entregue automaticamente.
     </div>
   </div>`;
+}
+/* Filtro de disciplina do Modo Prova — persiste entre renders, mesmo
+   padrão de bancoFiltros/simFiltros. */
+let pvFiltros = {};
+function toggleFiltroProvaMulti(campo, valor) {
+  const atual = pvFiltros[campo];
+  const lista = Array.isArray(atual) ? atual : (valorFiltroAtivo(atual) ? [atual] : []);
+  const i = lista.indexOf(valor);
+  pvFiltros = { ...pvFiltros, [campo]: i >= 0 ? lista.filter(v => v !== valor) : [...lista, valor] };
+  renderProva();
 }
 
 function montarProva(n, filtros) {
@@ -1120,7 +1140,7 @@ async function iniciarProva() {
   const n = +$("#pv-n").value;
   const tempoSel = $("#pv-tempo").value;
   const filtros = {
-    disciplina: $("#pv-disc").value || null,
+    disciplina: pvFiltros.disciplina,
     ocultarForaEdital: $("#pv-edital").checked,
   };
   const questoes = montarProva(n, filtros);
