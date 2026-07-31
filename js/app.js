@@ -583,9 +583,68 @@ function irQuestaoBanco(delta) {
   renderBanco();
 }
 
+/* Barra de escopo da trilha. O escopo esconde ~90% do acervo de quem
+   escolheu uma carreira, e esconder em silêncio é o modo de falha que este
+   projeto combate — então o estado fica visível e a saída é um clique. */
+function escopoBarraHtml() {
+  const ed = editalDoFoco();
+  if (!ed) return ""; /* sem trilha não há o que explicar: já é tudo */
+  const noEscopoN = filtrarQuestoes({}).length;
+  const totalN = filtrarQuestoes({ todoOBanco: true }).length;
+  return bancoFiltros.todoOBanco
+    ? `<div class="escopo-barra fora">
+        <span>Vendo o <b>banco completo</b> (${totalN} questões) — inclui matéria que não cai em ${escapeHtml(ed.curto)}.</span>
+        <button class="btn ghost small" onclick="setEscopoBanco(false)">Voltar à trilha</button>
+      </div>`
+    : `<div class="escopo-barra">
+        <span>Trilha <b>${escapeHtml(ed.curto)}</b> · ${noEscopoN} questões do seu edital${totalN > noEscopoN ? ` (${totalN - noEscopoN} fora)` : ""}</span>
+        <button class="btn ghost small" onclick="setEscopoBanco(true)">Ver banco completo</button>
+      </div>`;
+}
+function setEscopoBanco(todo) {
+  bancoFiltros = { ...bancoFiltros, todoOBanco: todo || undefined };
+  bancoIndice = 0;
+  bancoPagina = 0;
+  renderBanco();
+}
+
+/* Troca a trilha ativa. Nada do histórico é perdido — APP_STATE.respostas é
+   indexado por ID de questão, então voltar à trilha anterior restaura os
+   números —, mas as estatísticas visivelmente mudam, porque passam a contar
+   só o escopo novo. Avisa antes quando há histórico a "sumir". */
+async function trocarTrilha(id) {
+  const anterior = APP_STATE.config.concursoFoco;
+  if (id === (anterior || "")) return;
+
+  const novo = id || null;
+  const respondidas = Object.keys(APP_STATE.respostas).length;
+  if (respondidas > 0 && novo !== anterior) {
+    const nome = novo ? EDITAIS[novo].nome : "Todas (sem trilha)";
+    const ok = await mostrarConfirm(
+      `Mudar para "${nome}"? Suas estatísticas passam a contar apenas as disciplinas dessa trilha, então os números do Dashboard e do Perfil vão mudar. Nada é apagado: voltando à trilha anterior, tudo reaparece.`,
+      "Trocar de trilha");
+    if (!ok) { renderPerfil(); return; } /* re-render devolve o <select> ao valor antigo */
+  }
+
+  APP_STATE.config.concursoFoco = novo;
+  /* Cargo-foco é do edital: "Escrivão" não existe em SESAU/AL. Ao trocar,
+     cai no primeiro cargo válido da trilha nova em vez de virar órfão. */
+  const cargos = cargosDoFoco();
+  if (!cargos.includes(APP_STATE.config.cargoFoco)) APP_STATE.config.cargoFoco = cargos[0];
+  /* Filtros do Banco guardam disciplinas que podem não existir na trilha
+     nova — ficariam escondendo tudo em silêncio. */
+  bancoFiltros = {};
+  bancoListaCache = null;
+  bancoIndice = 0;
+  bancoPagina = 0;
+  saveState();
+  renderPerfil();
+}
+
 function renderBanco() {
-  const discs = listaDisciplinas();
-  const assuntos = listaAssuntos(bancoFiltros.disciplina);
+  const opcoesEscopo = { todoOBanco: bancoFiltros.todoOBanco };
+  const discs = listaDisciplinas(opcoesEscopo);
+  const assuntos = listaAssuntos(bancoFiltros.disciplina, opcoesEscopo);
   const lista = listaBancoAtual();
 
   const toggleVisual = `<div class="view-toggle" role="group" aria-label="Modo de visualização">
@@ -596,14 +655,19 @@ function renderBanco() {
   /* Os 7 seletores empilhados empurravam a primeira questão para muito
      abaixo da dobra no celular. Ficam recolhidos lá, abertos no desktop —
      e o resumo informa quantos filtros estão ativos, para que o estado
-     não fique escondido junto com os controles. */
-  const nAtivos = Object.entries(bancoFiltros).filter(([, v]) => valorFiltroAtivo(v)).length;
+     não fique escondido junto com os controles.
+     `todoOBanco` fica fora da contagem: é chave de escopo, tem barra
+     própria, e contá-la faria "ver banco completo" parecer um filtro a
+     mais quando na verdade é um filtro a menos. */
+  const nAtivos = Object.entries(bancoFiltros)
+    .filter(([k, v]) => k !== "todoOBanco" && valorFiltroAtivo(v)).length;
   const filtrosAbertos = bancoFiltrosAbertos === null
     ? window.innerWidth > 640
     : bancoFiltrosAbertos;
 
   MAIN().innerHTML = topbar("Banco Inteligente de Questões",
     `${QUESTOES.length} questões inéditas em estilo CEBRASPE · filtros combinados`, toggleVisual) +
+  escopoBarraHtml() +
   `<details class="card filtros-card" style="margin-bottom:18px" ${filtrosAbertos ? "open" : ""}
            ontoggle="bancoFiltrosAbertos = this.open">
     <summary class="filtros-resumo">
@@ -614,7 +678,7 @@ function renderBanco() {
     </summary>
     <div class="filters">
       ${mselHtml(bancoFiltros, "concurso", "banco:concurso", "Concurso", CONCURSOS.map(c => ({ v: c.id, t: c.id })), "toggleFiltroBancoMulti")}
-      ${mselHtml(bancoFiltros, "cargo", "banco:cargo", "Cargo", CARGOS.map(c => ({ v: c, t: c })), "toggleFiltroBancoMulti")}
+      ${mselHtml(bancoFiltros, "cargo", "banco:cargo", "Cargo", cargosDoFoco().map(c => ({ v: c, t: c })), "toggleFiltroBancoMulti")}
       ${mselHtml(bancoFiltros, "disciplina", "banco:disciplina", "Disciplina", discs.map(d => ({ v: d, t: d })), "toggleFiltroBancoMulti")}
       ${mselHtml(bancoFiltros, "assunto", "banco:assunto", "Assunto", assuntos.map(a => ({ v: a, t: a })), "toggleFiltroBancoMulti")}
       ${mselHtml(bancoFiltros, "dificuldade", "banco:dificuldade", "Dificuldade", [{ v: 1, t: "● Fácil" }, { v: 2, t: "●● Média" }, { v: 3, t: "●●● Difícil" }], "toggleFiltroBancoMulti")}
@@ -699,7 +763,7 @@ function toggleFiltroBancoMulti(campo, valor) {
   if (campo === "disciplina") {
     /* Assunto pertence a uma disciplina; ao desmarcar uma, os assuntos que
        só existiam nela viram filtro órfão e escondem tudo em silêncio. */
-    const validos = new Set(listaAssuntos(novo));
+    const validos = new Set(listaAssuntos(novo, { todoOBanco: bancoFiltros.todoOBanco }));
     if (Array.isArray(bancoFiltros.assunto)) {
       bancoFiltros.assunto = bancoFiltros.assunto.filter(a => validos.has(a));
     } else if (bancoFiltros.assunto && !validos.has(bancoFiltros.assunto)) {
@@ -1868,12 +1932,16 @@ function renderPerfil() {
 
   MAIN().innerHTML = topbar("Meu Perfil",
     "Seu retrato estatístico como candidato",
-    `<label class="f" style="min-width:130px">Concurso-foco<select onchange="APP_STATE.config.concursoFoco=this.value||null;saveState();renderPerfil()">
-      <option value="" ${!APP_STATE.config.concursoFoco ? "selected" : ""}>Todas as carreiras</option>
-      ${CONCURSOS.map(c => `<option value="${c.id}" ${APP_STATE.config.concursoFoco === c.id ? "selected" : ""}>${c.id}</option>`).join("")}
+    /* A lista sai de EDITAIS, não de CONCURSOS: trilha é carreira com edital
+       mapeado, e só essas escopam de verdade o banco e pesam o Plano de
+       Estudo. PF/PRF/PCDF/PCE continuam existindo como procedência das
+       questões, mas oferecê-las aqui prometeria um escopo que não existe. */
+    `<label class="f" style="min-width:150px">Trilha<select onchange="trocarTrilha(this.value)">
+      <option value="" ${!APP_STATE.config.concursoFoco ? "selected" : ""}>Todas (sem trilha)</option>
+      ${Object.values(EDITAIS).map(e => `<option value="${e.id}" ${APP_STATE.config.concursoFoco === e.id ? "selected" : ""}>${escapeHtml(e.nome)}</option>`).join("")}
     </select></label>
     <label class="f" style="min-width:130px">Cargo-foco<select onchange="APP_STATE.config.cargoFoco=this.value;saveState();renderPerfil()">
-      ${CARGOS.map(c => `<option ${APP_STATE.config.cargoFoco === c ? "selected" : ""}>${c}</option>`).join("")}
+      ${cargosDoFoco().map(c => `<option ${APP_STATE.config.cargoFoco === c ? "selected" : ""}>${escapeHtml(c)}</option>`).join("")}
     </select></label>`) +
   (APP_STATE.config.plano !== "completo" ? `<div class="card" style="margin-bottom:16px">
     <h3>🔓 Ativar código de convite</h3>

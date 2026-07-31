@@ -269,6 +269,19 @@ label.f select, label.f input { max-width: 100%; }
 .filters { display: flex; flex-wrap: wrap; gap: 10px; align-items: end; }
 .check { display: flex; align-items: center; gap: 7px; font-size: 13px; color: var(--text); cursor: pointer; padding-bottom: 9px; }
 
+/* Barra de escopo da trilha, acima dos filtros do Banco. Discreta mas
+   sempre presente: o escopo esconde a maior parte do acervo, e o aluno
+   precisa saber disso sem precisar deduzir de uma contagem que mudou. */
+.escopo-barra {
+  display: flex; align-items: center; gap: 12px; flex-wrap: wrap;
+  background: var(--accent-soft); border: 1px solid transparent;
+  border-radius: var(--r-md); padding: 10px 14px; margin-bottom: 12px;
+  font-size: 13px; color: var(--text);
+}
+.escopo-barra > span { flex: 1; min-width: 0; }
+/* Fora do escopo é estado excepcional — cor de atenção, não de acento. */
+.escopo-barra.fora { background: color-mix(in srgb, var(--warn) 12%, transparent); }
+
 /* Filtro de marcação múltipla do Banco de Questões: um <details> compacto
    do tamanho de um <select> comum — fechado por padrão — que abre um
    painel com uma caixa de marcação por opção. A primeira versão desenhava

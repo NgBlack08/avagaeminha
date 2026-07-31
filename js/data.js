@@ -1250,44 +1250,96 @@ const ESTRATEGIAS = [
 /* Correção estilo CEBRASPE: 1 errada anula 1 certa */
 const REGRA_CORRECAO = { acerto: 1, erro: -1, branco: 0 };
 
-/* Itens que cada disciplina vale na prova, conforme o Edital nº 1 - PC/AL,
-   de 2 de julho de 2026 (Cebraspe): 120 itens ao todo, sendo 50 na prova
-   objetiva P1 (conhecimentos básicos, 5 disciplinas) e 70 na P2
-   (conhecimentos específicos, 9 disciplinas).
+/* ---------------- TRILHAS (editais) ----------------
+   Cada trilha é um edital: o conjunto de disciplinas que caem naquela
+   prova e quantos itens cada uma vale.
 
-   Isso corrige uma inversão: o plano antes derivava o peso da média dos
-   scores de PREDICOES, que só cobre disciplinas específicas — as básicas
-   caíam num padrão genérico de 65 e eram sistematicamente despriorizadas.
-   Pelo edital acontece o contrário: cada disciplina de P1 vale ~10 itens
-   contra ~7,8 de cada disciplina de P2.
+   Esta tabela é a ÚNICA fonte de peso do app. O Plano de Estudo prioriza
+   por ela (js/engine.js, planoEstudoDirigido) e o validador mede cobertura
+   pela mesma tabela — antes o plano derivava o peso da média dos scores de
+   PREDICOES, que só cobre disciplinas específicas, e as básicas caíam num
+   padrão genérico de 65, sistematicamente despriorizadas.
 
-   O edital dá o total por prova, não a divisão interna, então a repartição
-   igual dentro de cada uma é a hipótese neutra — e ainda assim muito mais
-   ancorada que um número arbitrário. "Atualidades e Ética no Serviço
-   Público" é um único bloco de 10 itens no edital e aparece como duas
-   disciplinas no banco, então cada uma leva metade. */
-const EDITAL_PCAL2026 = {
-  fonte: "Edital nº 1 - PC/AL, de 2 de julho de 2026 (Cebraspe)",
-  itensPorDisciplina: {
-    /* P1 — conhecimentos básicos: 50 itens */
-    "Língua Portuguesa": 10,
-    "TI e Segurança Cibernética": 10,
-    "Raciocínio Lógico-Matemático": 10,
-    "Direitos Humanos": 10,
-    "Atualidades": 5,
-    "Ética no Serviço Público": 5,
-    /* P2 — conhecimentos específicos: 70 itens */
-    "Direito Penal": 7.8,
-    "Processo Penal": 7.8,
-    "Direito Constitucional": 7.8,
-    "Direito Administrativo": 7.8,
-    "Legislação Institucional (AL)": 7.8,
-    "Legislação Especial": 7.8,
-    "Contabilidade e Análise Financeira": 7.8,
-    "Estatística": 7.8,
-    "Crimes Cibernéticos e Segurança Digital": 7.8,
+   Uma questão pertence a uma trilha pela DISCIPLINA, não por `q.concurso`.
+   Isso é o que permite as 34 questões de Língua Portuguesa servirem PC-AL e
+   SESAU/AL sem duplicar nada: 93% do banco é lei federal ou matéria comum,
+   e duplicar por carreira quebraria a revisão espaçada (mesmo conteúdo em
+   dois IDs) e dobraria a manutenção de cada atualização legislativa.
+   `q.concurso` continua existindo, mas como procedência — o estilo de prova
+   que a questão imita —, não como escopo.
+
+   Os editais do Cebraspe dão o total por prova, não a divisão interna por
+   disciplina; a repartição igual dentro de cada prova é a hipótese neutra,
+   e ainda assim muito mais ancorada que um número arbitrário. */
+const EDITAIS = {
+  PCAL: {
+    id: "PCAL",
+    nome: "Polícia Civil de Alagoas",
+    curto: "PC-AL",
+    fonte: "Edital nº 1 - PC/AL, de 2 de julho de 2026 (Cebraspe)",
+    cargos: ["Escrivão", "Agente", "Delegado", "Perito Criminal", "Papiloscopista"],
+    /* 120 itens: 50 na P1 (básicos, 5 disciplinas) e 70 na P2 (específicos,
+       9 disciplinas). "Atualidades e Ética no Serviço Público" é um único
+       bloco de 10 itens no edital e aparece como duas disciplinas no banco,
+       então cada uma leva metade. */
+    itensPorDisciplina: {
+      /* P1 — conhecimentos básicos: 50 itens */
+      "Língua Portuguesa": 10,
+      "TI e Segurança Cibernética": 10,
+      "Raciocínio Lógico-Matemático": 10,
+      "Direitos Humanos": 10,
+      "Atualidades": 5,
+      "Ética no Serviço Público": 5,
+      /* P2 — conhecimentos específicos: 70 itens */
+      "Direito Penal": 7.8,
+      "Processo Penal": 7.8,
+      "Direito Constitucional": 7.8,
+      "Direito Administrativo": 7.8,
+      "Legislação Institucional (AL)": 7.8,
+      "Legislação Especial": 7.8,
+      "Contabilidade e Análise Financeira": 7.8,
+      "Estatística": 7.8,
+      "Crimes Cibernéticos e Segurança Digital": 7.8,
+    },
+  },
+
+  SESAUAL_FISIO: {
+    id: "SESAUAL_FISIO",
+    nome: "Fisioterapia — SESAU/AL",
+    curto: "SESAU-AL",
+    fonte: "Edital nº 1 - SESAU/AL, de 18 de junho de 2026, com conteúdo de Fisioterapia republicado pelo Edital nº 2, de 16 de julho de 2026 (Cebraspe)",
+    cargos: ["Especialista em Saúde — Fisioterapia"],
+    /* 120 itens: 50 na P1 e 70 na P2. Prova em 1º/11/2026.
+
+       Duas particularidades deste edital que mudam o que estudar:
+
+       1. NÃO há Raciocínio Lógico-Matemático nem Informática nos básicos —
+          disciplinas que existem no banco por causa de PC-AL e que aqui não
+          valem item nenhum. Por isso ficam de fora desta tabela.
+
+       2. Atualidades cai SOMENTE na prova discursiva ("ATUALIDADES (SOMENTE
+          PARA A PROVA DISCURSIVA)", item 16.2.3). Como esta tabela pesa a
+          prova objetiva, Atualidades não entra — as questões C/E do banco
+          servem como repertório para a redação, não como treino de item.
+
+       O específico não é fisioterapia geral: o edital delimita saúde da
+       mulher (uroginecologia, coloproctologia, obstetrícia, mastologia e
+       oncologia). Ortopedia, respiratória e neurofuncional não caem. */
+    itensPorDisciplina: {
+      /* P1 — conhecimentos básicos: 50 itens, 4 disciplinas na objetiva */
+      "Língua Portuguesa": 12.5,
+      "Ética no Serviço Público": 12.5,
+      "Legislação Estadual (AL)": 12.5,
+      "Legislação Aplicada ao SUS": 12.5,
+      /* P2 — conhecimentos específicos: 70 itens num bloco único */
+      "Fisioterapia em Saúde da Mulher": 70,
+    },
   },
 };
+
+/* Mantido por compatibilidade: `EDITAL_PCAL2026` era a constante única
+   antes das trilhas e ainda pode ser referenciada em lotes antigos. */
+const EDITAL_PCAL2026 = EDITAIS.PCAL;
 
 /* Disciplinas cujo conteúdo é norma jurídica. Serve para escopar as
    estratégias que só fazem sentido diante de lei — "Radar de atualização

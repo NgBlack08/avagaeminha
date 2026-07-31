@@ -299,10 +299,47 @@ function atualizarSRS(qid, acertou, branco) {
 function questaoLiberada(q) {
   return APP_STATE.config.plano === "completo" || FREE_QUESTION_IDS.has(q.id);
 }
+
+/* ---------------- Escopo da trilha ----------------
+   A trilha escolhida (APP_STATE.config.concursoFoco) delimita QUAIS
+   disciplinas existem para aquele candidato. Antes ela era só um peso: uma
+   linha em pesoAdaptativo somava +1 às questões do concurso-foco, e todo o
+   resto — Plano de Estudo, Radar, Raio-X, Perfil — calculava sobre o banco
+   inteiro. Com uma carreira só isso não aparecia; com duas, um fisioterapeuta
+   veria Direito Penal como disciplina a dominar.
+
+   O critério é a DISCIPLINA constar do edital, não `q.concurso` bater. Ver
+   EDITAIS em js/data.js para o porquê.
+
+   Sem trilha escolhida (concursoFoco null), o escopo é o banco inteiro —
+   é o estado de quem já usa o app e não escolheu nada. */
+function editalDoFoco() {
+  const foco = APP_STATE.config.concursoFoco;
+  return (foco && EDITAIS[foco]) || null;
+}
+function disciplinasDoFoco() {
+  const ed = editalDoFoco();
+  return ed ? new Set(Object.keys(ed.itensPorDisciplina)) : null;
+}
+function noEscopo(q) {
+  const discs = disciplinasDoFoco();
+  return !discs || discs.has(q.disciplina);
+}
+/* Cargos da trilha; sem trilha, todos os conhecidos (união dos editais). */
+function cargosDoFoco() {
+  const ed = editalDoFoco();
+  if (ed) return ed.cargos;
+  return [...new Set(Object.values(EDITAIS).flatMap(e => e.cargos))];
+}
+/* Base de tudo que é análise: liberado pelo plano E dentro da trilha. */
+function questoesDoEscopo() {
+  return QUESTOES.filter(q => questaoLiberada(q) && noEscopo(q));
+}
+
 function questoesDevidas() {
   const agora = Date.now();
   return QUESTOES.filter(q => {
-    if (!questaoLiberada(q)) return false;
+    if (!questaoLiberada(q) || !noEscopo(q)) return false;
     const s = APP_STATE.srs[q.id];
     return s && s.proxima <= agora;
   });
@@ -320,7 +357,7 @@ function statsQuestao(qid) {
 
 function statsPorDisciplina() {
   const map = {};
-  for (const q of QUESTOES) {
+  for (const q of questoesDoEscopo()) {
     if (!map[q.disciplina]) map[q.disciplina] = { disciplina: q.disciplina, total: 0, respondidas: 0, acertos: 0, erros: 0, brancos: 0, tempoTotal: 0, nRespostas: 0 };
     const d = map[q.disciplina];
     d.total++;
@@ -346,16 +383,23 @@ function statsGerais() {
   const porDisc = statsPorDisciplina();
   let acertos = 0, erros = 0, brancos = 0, tempoTotal = 0, n = 0;
   for (const d of porDisc) { acertos += d.acertos; erros += d.erros; brancos += d.brancos; tempoTotal += d.tempoTotal; n += d.nRespostas; }
-  const respondidasUnicas = Object.keys(APP_STATE.respostas).length;
+  /* Contagens restritas à trilha: sem isso, quem já respondeu questões fora
+     dela (por ter trocado de foco) teria cobertura acima de 100% — o
+     numerador contando o histórico inteiro e o denominador só o escopo. */
+  const idsDoEscopo = new Set(questoesDoEscopo().map(q => q.id));
+  const respondidasUnicas = Object.keys(APP_STATE.respostas).filter(id => idsDoEscopo.has(id)).length;
   const taxa = (acertos + erros) ? acertos / (acertos + erros) : null;
   /* Índice de confiança calibrada: acerto médio quando confiança alta */
   let confAltaAcertos = 0, confAltaTotal = 0;
-  for (const qid in APP_STATE.respostas) for (const h of APP_STATE.respostas[qid]) {
-    if (h.confianca === 3 && !h.branco) { confAltaTotal++; if (h.correta) confAltaAcertos++; }
+  for (const qid in APP_STATE.respostas) {
+    if (!idsDoEscopo.has(qid)) continue;
+    for (const h of APP_STATE.respostas[qid]) {
+      if (h.confianca === 3 && !h.branco) { confAltaTotal++; if (h.correta) confAltaAcertos++; }
+    }
   }
   return {
     porDisc, acertos, erros, brancos, nRespostas: n,
-    respondidasUnicas, totalBanco: QUESTOES.length,
+    respondidasUnicas, totalBanco: idsDoEscopo.size,
     taxa, liquida: acertos - erros,
     tempoMedioSeg: n ? (tempoTotal / n / 1000) : null,
     calibracao: confAltaTotal ? confAltaAcertos / confAltaTotal : null,
@@ -377,7 +421,7 @@ function evolucaoDiaria() {
 /* Estatística por padrão de pegadinha: onde o usuário mais cai */
 function statsPorPegadinha() {
   const map = {};
-  for (const q of QUESTOES) {
+  for (const q of questoesDoEscopo()) {
     const hist = (APP_STATE.respostas[q.id] || []).filter(h => !h.branco);
     if (!hist.length) continue;
     if (!map[q.pegadinha]) map[q.pegadinha] = { slug: q.pegadinha, acertos: 0, erros: 0 };
@@ -460,8 +504,7 @@ function planoEstudoDirigido() {
      respondida) ou "erro" (última resposta errada — mesma semântica do
      filtro 'só as que errei' do Banco, para o botão bater com a contagem). */
   const porDisc = {};
-  for (const q of QUESTOES) {
-    if (!questaoLiberada(q)) continue;
+  for (const q of questoesDoEscopo()) {
     const d = porDisc[q.disciplina] || (porDisc[q.disciplina] =
       { disciplina: q.disciplina, total: 0, novas: 0, erros: 0, acertos: 0, totErros: 0 });
     d.total++;
@@ -475,7 +518,10 @@ function planoEstudoDirigido() {
   const naReta = fase.id === "reta";
   const itens = Object.values(porDisc).map(d => {
     const taxa = (d.acertos + d.totErros) ? d.acertos / (d.acertos + d.totErros) : null;
-    const peso = EDITAL_PCAL2026.itensPorDisciplina[d.disciplina] ?? PLANO_ITENS_PADRAO;
+    /* Sem trilha escolhida cai no peso padrão para todas — o plano ainda
+       funciona, só não sabe o que vale mais naquela prova. */
+    const itens = editalDoFoco()?.itensPorDisciplina || {};
+    const peso = itens[d.disciplina] ?? PLANO_ITENS_PADRAO;
     let statusId;
     if (taxa === null) statusId = "naoIniciada";
     else if (taxa < 0.6) statusId = "risco";
@@ -556,7 +602,15 @@ function pesoAdaptativo(q, ctx) {
   const taxaGeral = ctx.taxa ?? 0.5;
   const alvo = taxaGeral >= 0.8 ? 3 : taxaGeral >= 0.6 ? 2 : 1;
   w += 1 - Math.abs(q.dificuldade - alvo) * 0.4;
-  if (APP_STATE.config.concursoFoco && q.concurso === APP_STATE.config.concursoFoco) w += 1;
+  /* Peso pelo item que a disciplina vale na prova da trilha: uma disciplina
+     de 12,5 itens merece mais sorteio que uma de 7,8. Substituiu o antigo
+     "+1 se q.concurso == foco", que virou redundante quando o foco passou a
+     escopar o banco — e que estava errado no modelo novo, porque
+     `q.concurso` é procedência, não pertinência à trilha. */
+  const itensDaTrilha = editalDoFoco()?.itensPorDisciplina;
+  if (itensDaTrilha && itensDaTrilha[q.disciplina]) {
+    w += Math.min(1.5, itensDaTrilha[q.disciplina] / 10);
+  }
   if (s.ultima && !s.ultima.correta && !s.ultima.branco) w += 1.5;
   return Math.max(w, 0.1);
 }
@@ -614,6 +668,11 @@ function combinaAlgum(filtro, valores) {
 function filtrarQuestoes(f) {
   return QUESTOES.filter(q => {
     if (!questaoLiberada(q)) return false;
+    /* `todoOBanco` é a válvula de escape do Banco de Questões: o escopo da
+       trilha esconde ~90% do acervo, e esconder em silêncio é justamente o
+       modo de falha que este projeto combate. A tela mostra o escopo ativo
+       e um botão para ver tudo. */
+    if (!f.todoOBanco && !noEscopo(q)) return false;
     if (!combina(f.concurso, q.concurso)) return false;
     if (!combinaAlgum(f.cargo, q.cargo)) return false;
     if (!combina(f.disciplina, q.disciplina)) return false;
@@ -730,10 +789,17 @@ function highlightEnunciado(texto, trecho, titulo) {
   return highlightPerigos(f.antes) + marcaTrecho(highlightPerigos(f.meio), titulo) + highlightPerigos(f.depois);
 }
 
-/* ---------------- Helpers de catálogo ---------------- */
-function listaDisciplinas() { return [...new Set(QUESTOES.filter(questaoLiberada).map(q => q.disciplina))]; }
-function listaAssuntos(disciplina) {
-  return [...new Set(QUESTOES.filter(q => questaoLiberada(q) && combina(disciplina, q.disciplina)).map(q => q.assunto))];
+/* ---------------- Helpers de catálogo ----------------
+   Alimentam os seletores de filtro; seguem o escopo da trilha para que o
+   dropdown não ofereça disciplina que não cai na prova do candidato.
+   `todoOBanco` acompanha o filtro homônimo de filtrarQuestoes. */
+function listaDisciplinas({ todoOBanco } = {}) {
+  const base = todoOBanco ? QUESTOES.filter(questaoLiberada) : questoesDoEscopo();
+  return [...new Set(base.map(q => q.disciplina))];
+}
+function listaAssuntos(disciplina, { todoOBanco } = {}) {
+  const base = todoOBanco ? QUESTOES.filter(questaoLiberada) : questoesDoEscopo();
+  return [...new Set(base.filter(q => combina(disciplina, q.disciplina)).map(q => q.assunto))];
 }
 
 function resetarDados() {

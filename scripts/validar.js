@@ -104,7 +104,7 @@ function normalizar(texto) {
 
 function validar({ quieto = false } = {}) {
   const manifesto = sincronizarManifesto({ gravar: false });
-  const { QUESTOES, DNA_BANCA, EDITAL_PCAL2026, ESTRATEGIAS, DISCIPLINAS_JURIDICAS } =
+  const { QUESTOES, DNA_BANCA, EDITAIS, ESTRATEGIAS, DISCIPLINAS_JURIDICAS } =
     carregarDados(manifesto);
 
   const erros = [];
@@ -234,37 +234,52 @@ function validar({ quieto = false } = {}) {
     }
   }
 
-  /* Cobertura x peso: disciplina que vale muitos itens na prova e tem banco
-     raso é onde o aluno mais perde ponto.
+  /* Cobertura x peso, POR TRILHA: disciplina que vale muitos itens na prova
+     e tem banco raso é onde o aluno mais perde ponto.
 
-     A referência é EDITAL_PCAL2026 — a MESMA tabela que o Plano de Estudo
-     usa para priorizar (js/engine.js, planoEstudoDirigido). Antes isto media
-     por PREDICOES, que só cobre disciplinas específicas e deixou de ser a
-     fonte de peso do app: o painel apontava déficit por um critério que a
-     aplicação não usava mais. */
-  const itensEdital = EDITAL_PCAL2026.itensPorDisciplina;
+     A referência é EDITAIS — a MESMA tabela que o Plano de Estudo usa para
+     priorizar (js/engine.js, planoEstudoDirigido). Antes isto media por
+     PREDICOES, que só cobre disciplinas específicas e deixou de ser a fonte
+     de peso do app: o painel apontava déficit por um critério que a
+     aplicação não usava mais.
+
+     A proporção é medida DENTRO do escopo de cada trilha, não contra o banco
+     inteiro: as 1063 questões jurídicas de PC-AL não são denominador para
+     medir a cobertura de Fisioterapia, que nem enxerga essas disciplinas. */
   const discNoBanco = new Map();
   for (const q of QUESTOES) discNoBanco.set(q.disciplina, (discNoBanco.get(q.disciplina) || 0) + 1);
 
-  const foraDoEdital = [...discNoBanco.keys()].filter(d => !(d in itensEdital));
-  if (foraDoEdital.length) {
-    avisos.push(`${foraDoEdital.length} disciplina(s) do banco sem peso no edital — tratadas como treino complementar: ${foraDoEdital.join(", ")}.`);
-  }
-  const semQuestao = Object.keys(itensEdital).filter(d => !discNoBanco.has(d));
-  if (semQuestao.length) {
-    avisos.push(`${semQuestao.length} disciplina(s) do edital sem nenhuma questão no banco: ${semQuestao.join(", ")}.`);
+  const trilhas = Object.values(EDITAIS);
+  const comPesoEmAlguma = new Set(trilhas.flatMap(e => Object.keys(e.itensPorDisciplina)));
+  const semPesoNenhum = [...discNoBanco.keys()].filter(d => !comPesoEmAlguma.has(d));
+  if (semPesoNenhum.length) {
+    avisos.push(`${semPesoNenhum.length} disciplina(s) do banco sem peso em nenhuma trilha — tratadas como treino complementar: ${semPesoNenhum.join(", ")}.`);
   }
 
-  const comPeso = Object.entries(itensEdital)
-    .filter(([d]) => discNoBanco.has(d))
-    .map(([d, itens]) => ({ d, itens }));
-  const somaItens = comPeso.reduce((s, x) => s + x.itens, 0);
-  for (const { d, itens } of comPeso.sort((a, b) => b.itens - a.itens)) {
-    const ideal = itens / somaItens;
-    const real = discNoBanco.get(d) / total;
-    const desvio = (real - ideal) * 100;
-    if (desvio < -3) {
-      avisos.push(`"${d}" vale ~${itens} itens na prova (${pct(ideal, 1)} dela) mas é só ${pct(discNoBanco.get(d), total)} do banco (${discNoBanco.get(d)} questões) — ${Math.abs(desvio).toFixed(1)}pp abaixo do proporcional.`);
+  for (const trilha of trilhas) {
+    const itensEdital = trilha.itensPorDisciplina;
+    const rotulo = trilha.curto || trilha.id;
+
+    const semQuestao = Object.keys(itensEdital).filter(d => !discNoBanco.has(d));
+    if (semQuestao.length) {
+      avisos.push(`[${rotulo}] ${semQuestao.length} disciplina(s) do edital sem nenhuma questão no banco: ${semQuestao.join(", ")}.`);
+    }
+
+    const comPeso = Object.entries(itensEdital)
+      .filter(([d]) => discNoBanco.has(d))
+      .map(([d, itens]) => ({ d, itens }));
+    if (!comPeso.length) continue;
+
+    const somaItens = comPeso.reduce((s, x) => s + x.itens, 0);
+    /* Denominador é o escopo da trilha, não o banco todo. */
+    const totalNaTrilha = comPeso.reduce((s, x) => s + discNoBanco.get(x.d), 0);
+    for (const { d, itens } of comPeso.sort((a, b) => b.itens - a.itens)) {
+      const ideal = itens / somaItens;
+      const real = discNoBanco.get(d) / totalNaTrilha;
+      const desvio = (real - ideal) * 100;
+      if (desvio < -3) {
+        avisos.push(`[${rotulo}] "${d}" vale ~${itens} itens na prova (${pct(ideal, 1)} dela) mas é só ${pct(discNoBanco.get(d), totalNaTrilha)} do escopo da trilha (${discNoBanco.get(d)} questões) — ${Math.abs(desvio).toFixed(1)}pp abaixo do proporcional.`);
+      }
     }
   }
 

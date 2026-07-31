@@ -162,7 +162,10 @@ function renderAuthScreen(erro) {
                 <input type="tel" id="auth-telefone" autocomplete="tel" placeholder="(82) 90000-0000"></label>
               <label class="f" style="margin-top:12px">Cargo pretendido
                 <select id="auth-cargo-foco">
-                  ${CARGOS.map(c => `<option>${c}</option>`).join("")}
+                  ${/* Ainda não há trilha escolhida no cadastro, então
+                       cargosDoFoco() devolve a união dos editais — inclui
+                       tanto as carreiras policiais quanto as de saúde. */""}
+                  ${cargosDoFoco().map(c => `<option>${escapeHtml(c)}</option>`).join("")}
                 </select></label>
               <label class="f" id="auth-convite-wrap" style="margin-top:12px">Código de convite (opcional — libera acesso completo)
                 <input type="text" id="auth-convite" autocomplete="off" placeholder="ex.: A1B2C3D4" style="text-transform:uppercase"></label>
