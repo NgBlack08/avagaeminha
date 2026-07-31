@@ -209,7 +209,7 @@ function feedbackHtml(q) {
 
 function repintarFeedback(qid) {
   const alvo = $("#fb-" + qid);
-  if (alvo) alvo.outerHTML = feedbackHtml(QUESTOES_POR_ID[qid]);
+  if (alvo) alvo.outerHTML = feedbackHtml(QUESTOES_POR_ID.get(qid));
 }
 
 async function desfazerFeedback(qid) {
@@ -218,7 +218,7 @@ async function desfazerFeedback(qid) {
 }
 
 async function abrirFeedback(qid) {
-  const q = QUESTOES_POR_ID[qid];
+  const q = QUESTOES_POR_ID.get(qid); /* é Map, não objeto — colchete devolve undefined */
   const escolha = await mostrarPromptFeedback(q);
   if (!escolha) return;
   try {
