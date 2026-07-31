@@ -66,6 +66,36 @@ const LIMIAR_CE_GLOBAL = 0.05;        /* desvio tolerado em torno de 50/50 */
 const LIMIAR_VIES_TAMANHO = 0.12;     /* diferença de comprimento entre C e E */
 const MIN_ITENS_PARA_AVALIAR = 15;    /* abaixo disso, a amostra não diz nada */
 
+/* Resolução que só devolve o enunciado.
+
+   Comprimento NÃO serve de medida aqui — foi a primeira hipótese e o banco
+   a desmentiu: as resoluções mais curtas são de RLM e estão completas
+   ("Total de bolas: 10. Azuis ou verdes: 3+2=5. Probabilidade: 5/10 = 1/2"
+   não precisa de mais nada). Outras três heurísticas testadas (item ERRADO
+   sem apontar o correto, ausência de nexo causal, ausência de âncora
+   isolada) marcavam resoluções boas cuja formulação o regex não previa.
+
+   O que sobrevive é o cruzamento: alta repetição lexical do enunciado E
+   nenhum elemento verificável acrescentado. Repetir é legítimo quando vem
+   com a fonte — "ecoa o enunciado, mas cita Lei 14.735/2023, art. 10, §3º"
+   ensina onde conferir. Sem isso, o candidato lê duas vezes a mesma frase.
+
+   Aviso, não erro: a fronteira é de redação, não de contrato de dados. */
+const LIMIAR_ECO_ENUNCIADO = 0.85;
+const ANCORA_VERIFICAVEL =
+  /art\.|artigo|s[uú]mula|inciso|§|lei \d|decreto|CF\b|CP\b|CPP\b|tema \d|RE \d|HC \d|porque|pois\b|uma vez que|ou seja|isto [eé]|na verdade|e n[aã]o\b|o correto/i;
+
+function palavrasLongas(texto) {
+  return String(texto).toLowerCase().normalize("NFD")
+    .replace(/[̀-ͯ]/g, "").match(/[a-z]{5,}/g) || [];
+}
+function taxaDeEco(q) {
+  const doEnunciado = new Set(palavrasLongas(q.enunciado));
+  const daResolucao = palavrasLongas(q.comentario && q.comentario.resolucao);
+  if (daResolucao.length < 8) return 0; /* curta demais para medir eco */
+  return daResolucao.filter(p => doEnunciado.has(p)).length / daResolucao.length;
+}
+
 function normalizar(texto) {
   return String(texto)
     .normalize("NFD").replace(/[̀-ͯ]/g, "")
@@ -183,6 +213,27 @@ function validar({ quieto = false } = {}) {
     avisos.push(`Enunciados CERTO têm ${Math.round(mediaC)} caracteres contra ${Math.round(mediaE)} dos ERRADO (${(viesTam * 100).toFixed(0)}% de diferença) — vira pista de comprimento.`);
   }
 
+  /* Resolução que devolve o enunciado sem acrescentar nada verificável. */
+  const ecoSemAncora = QUESTOES
+    .map(q => ({ q, eco: taxaDeEco(q) }))
+    .filter(({ q, eco }) => eco >= LIMIAR_ECO_ENUNCIADO &&
+      !ANCORA_VERIFICAVEL.test(q.comentario.resolucao))
+    .sort((a, b) => b.eco - a.eco);
+
+  if (ecoSemAncora.length) {
+    const porDisc = {};
+    for (const { q } of ecoSemAncora) porDisc[q.disciplina] = (porDisc[q.disciplina] || 0) + 1;
+    const resumo = Object.entries(porDisc).sort((a, b) => b[1] - a[1])
+      .map(([d, n]) => `${d} (${n})`).join(", ");
+    avisos.push(`${ecoSemAncora.length} resolução(ões) repetem o enunciado sem citar fonte nem explicar o porquê — ${resumo}.`);
+    for (const { q, eco } of ecoSemAncora.slice(0, 10)) {
+      avisos.push(`    ${q.id}: ${(eco * 100).toFixed(0)}% de repetição do enunciado — reescrever a resolução.`);
+    }
+    if (ecoSemAncora.length > 10) {
+      avisos.push(`    ... e mais ${ecoSemAncora.length - 10}. Rode com --resolucoes para a lista completa.`);
+    }
+  }
+
   /* Cobertura x peso: disciplina que vale muitos itens na prova e tem banco
      raso é onde o aluno mais perde ponto.
 
@@ -251,8 +302,30 @@ function relatorio({ erros, avisos, metricas }) {
 
 module.exports = { validar };
 
+/* Fila de trabalho completa: todas as resoluções a reescrever, da pior
+   para a menos ruim, com o texto atual à vista para decidir sem abrir o
+   arquivo. */
+function listarResolucoesFracas() {
+  const manifesto = sincronizarManifesto({ gravar: false });
+  const { QUESTOES } = carregarDados(manifesto);
+  const fila = QUESTOES
+    .map(q => ({ q, eco: taxaDeEco(q) }))
+    .filter(({ q, eco }) => eco >= LIMIAR_ECO_ENUNCIADO &&
+      !ANCORA_VERIFICAVEL.test(q.comentario.resolucao))
+    .sort((a, b) => b.eco - a.eco);
+
+  if (!fila.length) { console.log("Nenhuma resolução repete o enunciado sem acrescentar fonte."); return; }
+  console.log(`${fila.length} resolução(ões) a reescrever, da pior para a menos ruim:\n`);
+  for (const { q, eco } of fila) {
+    console.log(`${q.id}  ${(eco * 100).toFixed(0)}% de repetição  ·  ${q.disciplina} / ${q.assunto}`);
+    console.log(`  enunciado: ${q.enunciado.slice(0, 150)}`);
+    console.log(`  resolução: ${q.comentario.resolucao.slice(0, 150)}\n`);
+  }
+}
+
 if (require.main === module) {
   try {
+    if (process.argv.includes("--resolucoes")) { listarResolucoesFracas(); process.exit(0); }
     const { erros } = validar({ quieto: process.argv.includes("--quieto") });
     process.exit(erros.length ? 1 : 0);
   } catch (e) {

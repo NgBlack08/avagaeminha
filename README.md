@@ -108,8 +108,10 @@ Separa duas coisas diferentes:
 **Erros** — quebram o build, porque são defeitos objetivos que só apareceriam
 em produção, na frente do aluno: campo obrigatório ausente, gabarito fora de
 `{C,E}`, dificuldade fora de `{1,2,3}`, `cargo` que não é array, `probReaparecer`
-fora de `0..1`, ID repetido, enunciado idêntico a outro, e `pegadinha` que não
-existe em `DNA_BANCA` (slug órfão some da tela sem erro nenhum).
+fora de `0..1`, ID repetido, enunciado idêntico a outro, `pegadinha` que não
+existe em `DNA_BANCA` (slug órfão some da tela sem erro nenhum), enunciado que
+cita parágrafo/texto externo sem `textoApoio`, e questão para a qual nenhuma
+estratégia casa (o bloco pós-resposta ficaria vazio).
 
 **Avisos** — não bloqueiam nada. Medem o quanto o banco ainda imita a banca de
 verdade, que é o tipo de coisa que se degrada em silêncio, lote a lote, e não
@@ -118,14 +120,20 @@ aparece olhando uma questão por vez:
 - **Padrão previsível**: padrão que cai no mesmo gabarito em ≥90% dos itens. É o
   sinal mais importante — quando isso acontece, o rótulo vira paráfrase do
   gabarito, e o bloco "Padrão da banca detectado" deixa de ensinar algo
-  transferível. Hoje 7 padrões estão nessa faixa (`literalidade` em 95,9% CERTO,
-  `generalizacao` em 100% ERRADO).
+  transferível. Zerado pelos lotes 55 e 58; o aviso existe para não voltar.
+- **Resolução que ecoa o enunciado**: repetição lexical ≥85% sem citar fonte nem
+  explicar o porquê — o candidato lê duas vezes a mesma frase. Repetir é legítimo
+  quando vem com a fonte; sem ela, não ensina. `node scripts/validar.js
+  --resolucoes` imprime a fila completa, da pior para a menos ruim, com enunciado
+  e resolução lado a lado.
 - **Viés de comprimento** entre enunciados CERTO e ERRADO — vira pista.
 - **Equilíbrio C/E global** fora da faixa 45–55%.
-- **Cobertura desalinhada**: disciplina com peso alto na Predição de Cobrança e
-  banco raso.
-- **Disciplina sem entrada em `PREDICOES`**, que o Plano de Estudo acaba
-  priorizando pelo peso padrão.
+- **Cobertura desalinhada**: disciplina que vale muitos itens no edital e tem
+  banco raso (medido por `EDITAL_PCAL2026`, a mesma tabela que o Plano de Estudo
+  usa para priorizar).
+
+Comprimento da resolução **não** é critério: as mais curtas do banco são de RLM
+e estão completas — uma conta de probabilidade não precisa de 250 caracteres.
 
 Os avisos são intencionalmente não-bloqueantes: transcrição fiel da lei *deve*
 mesmo ser CERTO, então "consertar" o desequilíbrio forçando o gabarito seria
