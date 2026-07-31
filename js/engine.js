@@ -593,16 +593,33 @@ function montarSimulado(n, filtros) {
   return escolhidas;
 }
 
-/* ---------------- Filtros combinados (Módulo 1) ---------------- */
+/* ---------------- Filtros combinados (Módulo 1) ----------------
+   Cada campo categórico aceita um valor único (compatibilidade com quem
+   monta o filtro na mão, como os atalhos "estudar esta disciplina") OU um
+   array (o Banco de Questões, que agora marca vários ao mesmo tempo).
+   Vazio/null/undefined sempre significa "sem restrição". */
+function combina(filtro, valor) {
+  if (filtro === null || filtro === undefined || filtro === "") return true;
+  if (Array.isArray(filtro)) return !filtro.length || filtro.includes(valor);
+  return filtro === valor;
+}
+/* Para campos onde o dado da questão já é uma lista (q.cargo pode valer
+   para vários cargos) — passa se HOUVER interseção com o filtro. */
+function combinaAlgum(filtro, valores) {
+  if (filtro === null || filtro === undefined || filtro === "") return true;
+  const alvo = Array.isArray(filtro) ? filtro : [filtro];
+  return !alvo.length || valores.some(v => alvo.includes(v));
+}
+
 function filtrarQuestoes(f) {
   return QUESTOES.filter(q => {
     if (!questaoLiberada(q)) return false;
-    if (f.concurso && q.concurso !== f.concurso) return false;
-    if (f.cargo && !q.cargo.includes(f.cargo)) return false;
-    if (f.disciplina && q.disciplina !== f.disciplina) return false;
-    if (f.assunto && q.assunto !== f.assunto) return false;
-    if (f.dificuldade && q.dificuldade !== +f.dificuldade) return false;
-    if (f.pegadinha && q.pegadinha !== f.pegadinha) return false;
+    if (!combina(f.concurso, q.concurso)) return false;
+    if (!combinaAlgum(f.cargo, q.cargo)) return false;
+    if (!combina(f.disciplina, q.disciplina)) return false;
+    if (!combina(f.assunto, q.assunto)) return false;
+    if (!combina(f.dificuldade, q.dificuldade)) return false;
+    if (!combina(f.pegadinha, q.pegadinha)) return false;
     if (f.somenteErradas) {
       const s = statsQuestao(q.id);
       if (!s.ultima || s.ultima.branco || s.ultima.correta) return false;
@@ -716,7 +733,7 @@ function highlightEnunciado(texto, trecho, titulo) {
 /* ---------------- Helpers de catálogo ---------------- */
 function listaDisciplinas() { return [...new Set(QUESTOES.filter(questaoLiberada).map(q => q.disciplina))]; }
 function listaAssuntos(disciplina) {
-  return [...new Set(QUESTOES.filter(q => questaoLiberada(q) && (!disciplina || q.disciplina === disciplina)).map(q => q.assunto))];
+  return [...new Set(QUESTOES.filter(q => questaoLiberada(q) && combina(disciplina, q.disciplina)).map(q => q.assunto))];
 }
 
 function resetarDados() {

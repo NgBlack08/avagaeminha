@@ -597,8 +597,7 @@ function renderBanco() {
      abaixo da dobra no celular. Ficam recolhidos lá, abertos no desktop —
      e o resumo informa quantos filtros estão ativos, para que o estado
      não fique escondido junto com os controles. */
-  const nAtivos = Object.entries(bancoFiltros)
-    .filter(([, v]) => v !== null && v !== undefined && v !== false && v !== "").length;
+  const nAtivos = Object.entries(bancoFiltros).filter(([, v]) => valorFiltroAtivo(v)).length;
   const filtrosAbertos = bancoFiltrosAbertos === null
     ? window.innerWidth > 640
     : bancoFiltrosAbertos;
@@ -609,29 +608,17 @@ function renderBanco() {
            ontoggle="bancoFiltrosAbertos = this.open">
     <summary class="filtros-resumo">
       <span>⚙ Filtros</span>
-      ${nAtivos ? `<span class="tag accent">${nAtivos} ativo${nAtivos > 1 ? "s" : ""}</span>` : ""}
+      ${nAtivos ? `<span class="tag accent">${nAtivos} ativo${nAtivos > 1 ? "s" : ""}</span>
+        <button type="button" class="btn ghost small" style="margin-left:auto"
+          onclick="event.preventDefault(); event.stopPropagation(); limparFiltrosBanco()">Limpar</button>` : ""}
     </summary>
     <div class="filters">
-      <label class="f">Concurso<select id="f-concurso" onchange="setFiltroBanco()">
-        <option value="">Todos</option>${CONCURSOS.map(c => `<option value="${c.id}" ${bancoFiltros.concurso === c.id ? "selected" : ""}>${c.id}</option>`).join("")}
-      </select></label>
-      <label class="f">Cargo<select id="f-cargo" onchange="setFiltroBanco()">
-        <option value="">Todos</option>${CARGOS.map(c => `<option ${bancoFiltros.cargo === c ? "selected" : ""}>${c}</option>`).join("")}
-      </select></label>
-      <label class="f">Disciplina<select id="f-disciplina" onchange="setFiltroBanco(true)">
-        <option value="">Todas</option>${discs.map(d => `<option ${bancoFiltros.disciplina === d ? "selected" : ""}>${d}</option>`).join("")}
-      </select></label>
-      <label class="f">Assunto<select id="f-assunto" onchange="setFiltroBanco()">
-        <option value="">Todos</option>${assuntos.map(a => `<option ${bancoFiltros.assunto === a ? "selected" : ""}>${a}</option>`).join("")}
-      </select></label>
-      <label class="f">Dificuldade<select id="f-dificuldade" onchange="setFiltroBanco()">
-        <option value="">Todas</option><option value="1" ${bancoFiltros.dificuldade == 1 ? "selected" : ""}>● Fácil</option>
-        <option value="2" ${bancoFiltros.dificuldade == 2 ? "selected" : ""}>●● Média</option>
-        <option value="3" ${bancoFiltros.dificuldade == 3 ? "selected" : ""}>●●● Difícil</option>
-      </select></label>
-      <label class="f">Padrão da banca<select id="f-pegadinha" onchange="setFiltroBanco()">
-        <option value="">Todos</option>${DNA_BANCA.map(d => `<option value="${d.slug}" ${bancoFiltros.pegadinha === d.slug ? "selected" : ""}>${d.nome}</option>`).join("")}
-      </select></label>
+      ${chipFiltroHtml("concurso", "Concurso", CONCURSOS.map(c => ({ v: c.id, t: c.id })))}
+      ${chipFiltroHtml("cargo", "Cargo", CARGOS.map(c => ({ v: c, t: c })))}
+      ${chipFiltroHtml("disciplina", "Disciplina", discs.map(d => ({ v: d, t: d })))}
+      ${chipFiltroHtml("assunto", "Assunto", assuntos.map(a => ({ v: a, t: a })), { rolar: true })}
+      ${chipFiltroHtml("dificuldade", "Dificuldade", [{ v: 1, t: "● Fácil" }, { v: 2, t: "●● Média" }, { v: 3, t: "●●● Difícil" }])}
+      ${chipFiltroHtml("pegadinha", "Padrão da banca", DNA_BANCA.map(d => ({ v: d.slug, t: d.nome })))}
       <label class="f">Busca<input type="search" id="f-busca" value="${bancoFiltros.busca || ""}" placeholder="palavra-chave…" onchange="setFiltroBanco()"></label>
       <label class="check"><input type="checkbox" id="f-erradas" ${bancoFiltros.somenteErradas ? "checked" : ""} onchange="setFiltroBanco()"> só as que errei</label>
       <label class="check"><input type="checkbox" id="f-novas" ${bancoFiltros.somenteNaoRespondidas ? "checked" : ""} onchange="setFiltroBanco()"> só não respondidas</label>
@@ -640,6 +627,69 @@ function renderBanco() {
   </details>
   ${bancoModoVisual === "unica" ? renderBancoUnica(lista) : renderBancoLista(lista)}`;
   iniciarTimersVisiveis();
+}
+
+/* Um valor de filtro conta como "ativo" se for array não-vazio, ou um
+   escalar não-vazio (compatibilidade com os atalhos que ainda escrevem
+   um valor único direto em bancoFiltros, como "estudar esta disciplina"). */
+function valorFiltroAtivo(v) {
+  if (Array.isArray(v)) return v.length > 0;
+  return v !== null && v !== undefined && v !== false && v !== "";
+}
+
+/* "Marcado" é o inverso de combina(): aqui vazio/null significa NADA
+   selecionado, não "sem restrição" — senão todo chip nasceria aceso. */
+function chipMarcado(filtro, valor) {
+  if (filtro === null || filtro === undefined || filtro === "") return false;
+  return Array.isArray(filtro) ? filtro.includes(valor) : filtro === valor;
+}
+
+/* Grupo de chips de marcação múltipla para um campo categórico do Banco
+   de Questões. `opcoes` é [{v: valor, t: texto}]; `rolar: true` limita a
+   altura com scroll — necessário só para Assunto, que sem disciplina
+   selecionada pode chegar a ~270 itens distintos. */
+function chipFiltroHtml(campo, titulo, opcoes, { rolar } = {}) {
+  if (!opcoes.length) return "";
+  return `<div class="f fchips">
+    <span class="fchips-titulo">${escapeHtml(titulo)}</span>
+    <div class="chip-group${rolar ? " rolavel" : ""}">
+      ${opcoes.map(o => `<button type="button" class="chip small ${chipMarcado(bancoFiltros[campo], o.v) ? "active" : ""}"
+        onclick="toggleFiltroBancoMulti('${campo}', ${typeof o.v === "number" ? o.v : `'${o.v}'`})">${escapeHtml(o.t)}</button>`).join("")}
+    </div>
+  </div>`;
+}
+
+/* Liga/desliga um valor num filtro categórico do Banco. Aceita o campo já
+   vir como escalar (setado por um atalho de navegação) ou array — sempre
+   normaliza para array antes de alternar. */
+function toggleFiltroBancoMulti(campo, valor) {
+  const atual = bancoFiltros[campo];
+  const lista = Array.isArray(atual) ? atual : (valorFiltroAtivo(atual) ? [atual] : []);
+  const i = lista.indexOf(valor);
+  const novo = i >= 0 ? lista.filter(v => v !== valor) : [...lista, valor];
+  bancoFiltros = { ...bancoFiltros, [campo]: novo };
+
+  if (campo === "disciplina") {
+    /* Assunto pertence a uma disciplina; ao desmarcar uma, os assuntos que
+       só existiam nela viram filtro órfão e escondem tudo em silêncio. */
+    const validos = new Set(listaAssuntos(novo));
+    if (Array.isArray(bancoFiltros.assunto)) {
+      bancoFiltros.assunto = bancoFiltros.assunto.filter(a => validos.has(a));
+    } else if (bancoFiltros.assunto && !validos.has(bancoFiltros.assunto)) {
+      bancoFiltros.assunto = null;
+    }
+  }
+
+  bancoIndice = 0;
+  bancoPagina = 0;
+  renderBanco();
+}
+
+function limparFiltrosBanco() {
+  bancoFiltros = {};
+  bancoIndice = 0;
+  bancoPagina = 0;
+  renderBanco();
 }
 
 function renderBancoLista(lista) {
@@ -679,14 +729,14 @@ function renderBancoUnica(lista) {
   <div id="q-lista">${questaoCardHtml(q, { modo: "banco", ampliada: true })}</div>`;
 }
 
-function setFiltroBanco(resetAssunto) {
+/* Só busca textual e as 3 caixas booleanas — os campos categóricos
+   (concurso, cargo, disciplina, assunto, dificuldade, pegadinha) são
+   chips de marcação múltipla e vivem em toggleFiltroBancoMulti(), que já
+   escreve direto em bancoFiltros. Por isso aqui é merge, não substituição
+   — reconstruir bancoFiltros do zero apagaria os arrays já marcados. */
+function setFiltroBanco() {
   bancoFiltros = {
-    concurso: $("#f-concurso").value || null,
-    cargo: $("#f-cargo").value || null,
-    disciplina: $("#f-disciplina").value || null,
-    assunto: resetAssunto ? null : ($("#f-assunto").value || null),
-    dificuldade: $("#f-dificuldade").value || null,
-    pegadinha: $("#f-pegadinha").value || null,
+    ...bancoFiltros,
     busca: $("#f-busca").value.trim() || null,
     somenteErradas: $("#f-erradas").checked,
     somenteNaoRespondidas: $("#f-novas").checked,
