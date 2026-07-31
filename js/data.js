@@ -13,6 +13,7 @@ const CONCURSOS = [
   { id: "PRF",   nome: "Polícia Rodoviária Federal", prioridade: 3 },
   { id: "PCDF",  nome: "Polícia Civil do Distrito Federal", prioridade: 4 },
   { id: "PCE",   nome: "Polícias Civis Estaduais (demais)", prioridade: 5 },
+  { id: "SESAU", nome: "SESAU/AL — Especialista em Saúde", prioridade: 6 },
 ];
 
 const CARGOS = ["Escrivão", "Agente", "Delegado", "Perito Criminal", "Papiloscopista"];
@@ -1363,4 +1364,11 @@ const DISCIPLINAS_JURIDICAS = [
   "Ética no Serviço Público",
   "Crimes Cibernéticos e Segurança Digital",
   "Contabilidade e Análise Financeira",
+  /* Trilha SESAU/AL: ambas são norma (CF arts. 194-200, Leis 8.080 e
+     8.142, Decreto 7.508, Constituição estadual, Lei 5.247/1991), então
+     recebem as estratégias de radar legislativo e checagem de literalidade.
+     "Fisioterapia em Saúde da Mulher" fica de fora de propósito: ali
+     `literalidade` significa conferir o protocolo clínico, não o artigo. */
+  "Legislação Aplicada ao SUS",
+  "Legislação Estadual (AL)",
 ];
