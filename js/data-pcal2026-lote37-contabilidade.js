@@ -215,7 +215,7 @@ const QUESTOES_PCAL_LOTE37 = [
       palavraCritica: "ativo circulante / passivo circulante",
     },
     comentario: {
-      resolucao: "CERTO. O índice de liquidez corrente é calculado por Ativo Circulante / Passivo Circulante. Um resultado superior a 1 indica que a entidade possui, em tese, recursos de curto prazo suficientes para cobrir suas obrigações de curto prazo.",
+      resolucao: "CERTO. LC = Ativo Circulante ÷ Passivo Circulante; acima de 1, há mais direitos de curto prazo do que obrigações de curto prazo. O que salva o item é o \"em tese\", e é aí que mora a lição: o índice não distingue estoque encalhado de dinheiro em caixa, nem casa os PRAZOS — a duplicata pode vencer depois da obrigação que deveria pagar. Por isso liquidez corrente alta não é sinônimo de solvência, e por isso existe a liquidez seca, que expurga os estoques justamente para corrigir essa cegueira. Item que dissesse que LC > 1 \"assegura\" o pagamento estaria ERRADO.",
       fundamento: "Doutrina contábil — análise de índices financeiros (liquidez).",
       macete: "Liquidez corrente = AC / PC. Sempre ativo dividido por passivo, nunca o inverso.",
       erroComum: "Inverter a fórmula, dividindo o passivo circulante pelo ativo circulante.",
@@ -253,7 +253,7 @@ const QUESTOES_PCAL_LOTE37 = [
       palavraCritica: "regime de competência ... independentemente do efetivo recebimento ou pagamento",
     },
     comentario: {
-      resolucao: "CERTO. A contabilidade societária brasileira adota, como regra geral, o regime de competência: receitas e despesas são reconhecidas no período em que ocorrem, independentemente do efetivo recebimento ou pagamento — diferentemente do regime de caixa, que só reconhece a movimentação financeira quando ela efetivamente ocorre.",
+      resolucao: "CERTO. Competência olha o fato gerador; caixa olha a movimentação do dinheiro. Venda a prazo fechada em dezembro e recebida em março é receita de DEZEMBRO. É essa separação que dá sentido a contas como despesa antecipada e receita a receber — elas existem para acomodar a distância entre o fato e o pagamento. Cuidado com a extensão indevida: o setor público brasileiro adota regime MISTO na execução orçamentária (Lei 4.320/1964, art. 35 — receita pelo caixa, despesa pela competência). O enunciado se salva ao delimitar \"contabilidade societária\".",
       fundamento: "Doutrina contábil — princípios de contabilidade (regime de competência).",
       macete: "Competência = regra geral. Reconhece pelo FATO, não pelo dinheiro entrando/saindo.",
       erroComum: "Achar que o regime de caixa é a regra geral da contabilidade societária.",

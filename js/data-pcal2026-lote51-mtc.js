@@ -193,7 +193,7 @@ const QUESTOES_PCAL_LOTE51 = [
       palavraCritica: "tendem a assumir o mesmo valor",
     },
     comentario: {
-      resolucao: "CERTO. Em uma distribuição perfeitamente simétrica, a média aritmética, a mediana e a moda tendem a assumir o mesmo valor, que corresponde ao eixo de simetria da distribuição — todas essas três medidas são classificadas como medidas de tendência central.",
+      resolucao: "CERTO. Na simetria perfeita as três medidas coincidem sobre o eixo de simetria. Duas cautelas que a banca explora: primeiro, a recíproca é FALSA — média igual a mediana igual a moda não prova simetria, pois há distribuições assimétricas em que elas coincidem. Segundo, na assimetria à direita (cauda longa à direita) a ordem típica é moda < mediana < média, porque só a média é puxada pelos valores extremos; à esquerda, inverte-se. É por isso que renda se reporta por mediana, não por média. O \"tendem a\" do enunciado é proposital e está correto.",
       fundamento: "Doutrina de Estatística — medidas de tendência central e simetria de distribuições.",
       macete: "Distribuição simétrica: média = mediana = moda, todas coincidindo no centro.",
       erroComum: "Achar que essas três medidas nunca podem coincidir, ou que alguma delas não é medida de tendência central.",

@@ -475,7 +475,7 @@ const QUESTOES_PCAL_LOTE52 = [
       palavraCritica: "trilhão de dólares",
     },
     comentario: {
-      resolucao: "CERTO. Elon Musk atingiu a marca histórica de primeira pessoa a acumular uma fortuna de um trilhão de dólares, impulsionado pela oferta pública inicial (IPO) da SpaceX, fato amplamente noticiado no cenário econômico e tecnológico recente.",
+      resolucao: "CERTO. Musk cruzou a marca em 12 de junho de 2026, quando a SpaceX abriu capital: a ação saiu a US$ 135, a oferta levantou cerca de US$ 85,7 bilhões e avaliou a empresa em torno de US$ 1,77 trilhão, o que levou a fortuna a aproximadamente US$ 1,1 trilhão. O detalhe que a banca adora explorar: ele permaneceu trilionário 12 dias — em 24 de junho já estava perto de US$ 957 bilhões. Fortuna assim é patrimônio em AÇÕES, não caixa, e oscila com a cotação. Item que descrevesse a marca como permanente, ou que falasse em dinheiro disponível, estaria ERRADO.",
       fundamento: "Acompanhamento de economia e tecnologia — fortunas pessoais e mercado de capitais.",
       macete: "Elon Musk + trilhão de dólares + IPO da SpaceX.",
       erroComum: "Associar o marco à Tesla ou a outra empresa de Elon Musk, em vez da SpaceX.",
@@ -633,7 +633,7 @@ const QUESTOES_PCAL_LOTE52 = [
       palavraCritica: "objeto de disputas estratégicas",
     },
     comentario: {
-      resolucao: "CERTO. A crescente demanda por veículos elétricos, turbinas eólicas, semicondutores e equipamentos militares tem, de fato, ampliado a importância geopolítica das terras raras e de outros minerais críticos, tornando-os objeto de disputas estratégicas entre grandes potências como China e Estados Unidos.",
+      resolucao: "CERTO. O ponto geopolítico não é escassez geológica — terras raras são relativamente abundantes na crosta terrestre. O gargalo está no PROCESSAMENTO: a separação química é cara, ambientalmente pesada e fortemente concentrada na China, que domina a maior parte do refino mundial. Daí o risco de dependência para veículos elétricos, turbinas, semicondutores e defesa, e daí as políticas de diversificação de cadeia adotadas por Estados Unidos, União Europeia e Japão. O Brasil entra nessa conta por deter uma das maiores reservas conhecidas do planeta, tema recorrente em prova. Item que atribuísse a relevância à raridade dos minerais inverteria a causa.",
       fundamento: "Acompanhamento de atualidades — terras raras e minerais críticos.",
       macete: "Terras raras = tecnologia civil + militar = disputa geopolítica.",
       erroComum: "Restringir a importância das terras raras apenas ao setor de energia renovável, ignorando o componente militar/tecnológico.",
@@ -751,7 +751,7 @@ const QUESTOES_PCAL_LOTE52 = [
       palavraCritica: "sem necessariamente possuir",
     },
     comentario: {
-      resolucao: "CERTO. No capitalismo de plataforma, empresas digitais atuam como intermediárias entre prestadores de serviços e consumidores, obtendo vantagens econômicas pelo controle de dados, algoritmos e redes de usuários, mesmo sem possuir necessariamente os ativos físicos (veículos, imóveis etc.) utilizados na prestação do serviço.",
+      resolucao: "CERTO. É o modelo asset-light: a plataforma não é dona dos carros, dos imóveis nem dos entregadores — ela é dona da INTERMEDIAÇÃO. O que rende é o dado e o efeito de rede: quanto mais usuários de um lado, mais valiosa ela fica para o outro lado, e essa espiral cria poder de mercado sem posse física. Repare no advérbio: \"sem NECESSARIAMENTE possuir\". É ele que mantém o item correto, porque há plataformas que investem pesado em logística própria. Item que afirmasse que plataformas digitais \"nunca\" detêm ativos físicos estaria ERRADO.",
       fundamento: "Acompanhamento de atualidades — capitalismo de plataforma.",
       macete: "Plataforma digital = lucra com dados/algoritmos, não necessariamente com posse de ativos físicos.",
       erroComum: "Achar que uma grande empresa de aplicativo precisa ser dona dos ativos (carros, imóveis) que conecta.",
@@ -789,7 +789,7 @@ const QUESTOES_PCAL_LOTE52 = [
       palavraCritica: "terciarização",
     },
     comentario: {
-      resolucao: "CERTO. A terciarização — avanço do setor de serviços nas economias contemporâneas — está de fato relacionada tanto à difusão das tecnologias da informação quanto à crescente importância de atividades como as financeiras, logísticas, educacionais, de saúde e de entretenimento.",
+      resolucao: "CERTO. Dois vetores explicam o avanço do setor terciário: as tecnologias da informação, que permitiram vender serviços à distância e criaram serviços que antes não existiam, e a financeirização, que alçou a intermediação à condição de atividade econômica central. A nuance que a banca explora: terciarização NÃO significa que a indústria encolheu em volume produzido — significa que sua participação RELATIVA no PIB e no emprego caiu. Item que convertesse queda de participação relativa em queda absoluta da produção industrial estaria ERRADO.",
       fundamento: "Acompanhamento de atualidades — economia de serviços e terciarização.",
       macete: "Terciarização = serviços em alta, turbinados por TI, em múltiplos setores.",
       erroComum: "Restringir o conceito de terciarização a um único setor da economia.",

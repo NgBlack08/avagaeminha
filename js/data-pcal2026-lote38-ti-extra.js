@@ -100,7 +100,7 @@ const QUESTOES_PCAL_LOTE38 = [
       palavraCritica: "DML",
     },
     comentario: {
-      resolucao: "CERTO. Os comandos SELECT, INSERT, UPDATE e DELETE pertencem à categoria DML (Data Manipulation Language) da linguagem SQL, empregados para consultar e manipular os dados armazenados nas tabelas de um banco de dados relacional.",
+      resolucao: "CERTO. A classificação é por finalidade, não por sintaxe. DML mexe nos DADOS (SELECT, INSERT, UPDATE, DELETE); DDL mexe na ESTRUTURA (CREATE, ALTER, DROP, TRUNCATE); DCL mexe em PERMISSÃO (GRANT, REVOKE); DTL/TCL controla a transação (COMMIT, ROLLBACK, SAVEPOINT). Duas armadilhas recorrentes: enfiar CREATE ou DROP na lista de DML, e trocar DELETE por TRUNCATE — TRUNCATE apaga todas as linhas, mas é DDL, porque atua sobre a tabela e não gera log linha a linha. Registre ainda que parte da doutrina separa o SELECT em DQL; a banca costuma aceitá-lo dentro de DML, como aqui.",
       fundamento: "Linguagem SQL — categorias de comandos (DML, DDL, DCL).",
       macete: "DML = SELECT/INSERT/UPDATE/DELETE. DDL = CREATE/ALTER/DROP. DCL = GRANT/REVOKE.",
       erroComum: "Confundir DML com DDL ou DCL.",

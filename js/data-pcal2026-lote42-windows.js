@@ -67,7 +67,7 @@ const QUESTOES_PCAL_LOTE42 = [
       palavraCritica: "por padrão ... possível ... realinhar",
     },
     comentario: {
-      resolucao: "CERTO. No Windows 11, os ícones da barra de tarefas, incluindo o botão Iniciar, vêm centralizados por padrão, sendo possível realinhá-los à esquerda por meio das configurações da barra de tarefas, para quem prefere o estilo tradicional do Windows 10.",
+      resolucao: "CERTO. A centralização dos ícones é a mudança visual mais evidente do Windows 11 frente ao 10, e é reversível pela própria interface: Configurações → Personalização → Barra de tarefas → Comportamentos da barra de tarefas → Alinhamento → Esquerda. A pegadinha do assunto está no grau: a banca costuma afirmar que o alinhamento é fixo, ou que voltar ao estilo tradicional exige edição de registro ou programa de terceiros. Não exige — é opção nativa, a dois cliques.",
       fundamento: "Doutrina de Informática — Sistemas Operacionais (barra de tarefas do Windows 11).",
       macete: "Centralizado é só o padrão — dá para mudar para a esquerda nas configurações.",
       erroComum: "Achar que o alinhamento centralizado é fixo e não pode ser alterado.",
@@ -307,7 +307,7 @@ const QUESTOES_PCAL_LOTE42 = [
       palavraCritica: "sem necessidade de instalar programas adicionais",
     },
     comentario: {
-      resolucao: "CERTO. O Windows possui função nativa de renomeação em lote: ao selecionar vários arquivos e pressionar F2, o usuário define um nome-base, e o sistema numera automaticamente os itens em sequência, sem necessidade de instalar programas adicionais.",
+      resolucao: "CERTO. Selecionar vários arquivos, pressionar F2, digitar o nome-base e teclar Enter produz nome (1), nome (2), nome (3)... É recurso nativo do Explorer, sem instalar nada. Dois limites do recurso rendem itens ERRADOS: a numeração é automática e sequencial, sem escolher o padrão, o número inicial ou a posição do contador; e o F2 não faz SUBSTITUIÇÃO de trecho do nome — trocar \"rascunho\" por \"final\" em 50 arquivos exige PowerShell, PowerToys ou ferramenta equivalente.",
       fundamento: "Doutrina de Informática — Sistemas Operacionais (Windows Explorer, renomeação em lote).",
       macete: "F2 em vários arquivos selecionados = renomeação em lote nativa.",
       erroComum: "Achar que esse recurso depende de um software de terceiros.",
@@ -347,7 +347,7 @@ const QUESTOES_PCAL_LOTE42 = [
       palavraCritica: "dificulta ... mais adequado ... descritivos e padronizados",
     },
     comentario: {
-      resolucao: "CERTO. Nomear arquivos com termos genéricos como 'documento1', 'teste' ou 'final' dificulta a localização e a organização no Windows, sendo mais adequado o uso de nomes descritivos e padronizados, que indiquem assunto, data e versão do arquivo.",
+      resolucao: "CERTO. O ganho não é estético, é funcional: nome descritivo com assunto, data e versão torna o arquivo localizável pela BUSCA e ordenável pela própria listagem — \"contrato_2026-03-14_v2\" se ordena cronologicamente sozinho, enquanto \"final\", \"final2\" e \"final_agora\" não se ordenam por nada. Prefira data no formato ISO (AAAA-MM-DD) exatamente por isso. Cuidado com a inversão da banca: afirmar que o Windows \"impede\" nomes genéricos ou que a nomeação afeta o desempenho do sistema. Não impede e não afeta — é boa prática, não regra técnica.",
       fundamento: "Doutrina de Informática — Gestão e organização de arquivos (boas práticas de nomeação).",
       macete: "Nome genérico dificulta a busca; nome descritivo (assunto/data/versão) facilita.",
       erroComum: "Achar que nomes curtos e genéricos favorecem, e não prejudicam, a busca de arquivos.",

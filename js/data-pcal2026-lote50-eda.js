@@ -312,7 +312,7 @@ const QUESTOES_PCAL_LOTE50 = [
       palavraCritica: "não é possível recuperar a sequência original ... sem preservar a ordem",
     },
     comentario: {
-      resolucao: "CERTO. A tabela de frequências absolutas informa apenas a contagem de ocorrências por categoria, sem preservar a ordem em que os dados foram originalmente coletados — não é possível, a partir dela, recuperar a sequência original dos valores individuais da série de dados.",
+      resolucao: "CERTO. A agregação é irreversível: a tabela guarda \"quantos\", não \"em que ordem\" nem \"de quem\". Do resumo não se retorna ao dado bruto. É exatamente o mesmo motivo pelo qual, a partir de uma tabela de frequências por classe, não se calcula a média EXATA — só uma estimativa, usando o ponto médio de cada classe como representante de todos os valores dela. Guarde a regra geral: todo resumo estatístico troca detalhe por legibilidade, e a pergunta útil em prova é sempre qual informação foi descartada no caminho.",
       fundamento: "Doutrina de Estatística — distribuições de frequência (agregação e perda de informação sequencial).",
       macete: "Tabela de frequências = contagem por categoria. A ordem original dos dados nunca é recuperável a partir dela.",
       erroComum: "Achar que a tabela de frequências preserva informação suficiente para reconstruir a sequência exata dos dados coletados.",
@@ -352,7 +352,7 @@ const QUESTOES_PCAL_LOTE50 = [
       palavraCritica: "altura das barras ... proporcional à frequência",
     },
     comentario: {
-      resolucao: "CERTO. Na construção de um histograma, a altura das barras verticais é proporcional à frequência observada de cada valor ou intervalo de classe, permitindo visualizar a distribuição de uma variável quantitativa.",
+      resolucao: "CERTO. A altura da barra representa a frequência da classe. Duas precisões que a banca cobra: primeiro, o histograma é para variável QUANTITATIVA e tem barras coladas, porque o eixo horizontal é contínuo — barras separadas caracterizam o gráfico de colunas, próprio de variável qualitativa. Segundo, quando as classes têm amplitudes DIFERENTES, o rigor manda usar a densidade de frequência (frequência ÷ amplitude) na altura, para que a ÁREA, e não a altura, fique proporcional à frequência. Com classes de mesma amplitude — o caso usual em prova — altura e área são proporcionais e o enunciado está correto como escrito.",
       fundamento: "Doutrina de Estatística — representação gráfica de distribuições de frequência (histograma).",
       macete: "Histograma: altura da barra = frequência da classe.",
       erroComum: "Confundir a dimensão do histograma (altura) que representa a frequência com a largura das barras.",

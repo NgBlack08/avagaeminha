@@ -25,7 +25,7 @@ const QUESTOES_PCAL_LOTE43 = [
       palavraCritica: "não impede ... identifiquem",
     },
     comentario: {
-      resolucao: "CERTO. A navegação em abas anônimas/privadas evita apenas que o navegador salve, no dispositivo local, o histórico, os cookies e o cache da sessão — mas não impede que sites visitados e o provedor de Internet identifiquem as atividades do usuário.",
+      resolucao: "CERTO. O modo anônimo age em um lugar só — o seu dispositivo. Ele deixa de gravar histórico, cookies e cache da sessão localmente. Fora dali nada muda: o site visitado continua vendo seu IP, o provedor continua registrando as conexões, e o administrador da rede corporativa continua enxergando o tráfego. Não confundir com VPN ou Tor, que atuam sobre o CAMINHO da conexão, não sobre o registro local. Item que afirmasse que a aba anônima \"oculta o endereço IP\" ou \"impede o rastreamento pelos sites\" estaria ERRADO.",
       fundamento: "Doutrina de Informática — Internet (navegação anônima/privada).",
       macete: "Anônimo ≠ anonimato na Internet: só esconde do dispositivo, não da rede.",
       erroComum: "Achar que a aba anônima torna o usuário invisível para sites e provedores.",
@@ -65,7 +65,7 @@ const QUESTOES_PCAL_LOTE43 = [
       palavraCritica: "não podendo ser visualizados nem alterados",
     },
     comentario: {
-      resolucao: "CERTO. Na nuvem pública, apesar de a infraestrutura física ser compartilhada entre organizações (modelo multi-inquilino), os dados de cada cliente permanecem isolados, não podendo ser visualizados nem alterados por outras organizações que utilizam o mesmo provedor.",
+      resolucao: "CERTO. O item separa duas camadas que a banca vive embaralhando: o hardware é compartilhado, os dados não. O isolamento vem da virtualização somada ao controle de acesso — cada inquilino enxerga apenas sua fatia lógica, ainda que os bits vizinhos morem no mesmo disco físico. A inversão típica afirma que, por ser infraestrutura compartilhada, \"outras organizações podem acessar os dados\" ou que \"não existe isolamento em nuvem pública\". Compartilhamento físico não é acesso mútuo.",
       fundamento: "Doutrina de Informática — Computação em nuvem (nuvem pública, isolamento multi-inquilino).",
       macete: "'Pública' é a infraestrutura compartilhada; os dados de cada cliente são isolados.",
       erroComum: "Achar que 'nuvem pública' significa que os dados armazenados também são públicos ou visíveis a terceiros.",
@@ -105,7 +105,7 @@ const QUESTOES_PCAL_LOTE43 = [
       palavraCritica: "sem a necessidade de investimento prévio ... dimensionada para o pico de uso",
     },
     comentario: {
-      resolucao: "CERTO. A computação em nuvem é um estilo de computação que permite acesso remoto a recursos compartilhados de forma dinâmica e escalável, geralmente via Internet, possibilitando o provisionamento sob demanda sem investimento prévio em infraestrutura própria dimensionada para o pico de uso.",
+      resolucao: "CERTO. O núcleo do conceito está em \"sob demanda\" e \"sem investimento prévio dimensionado para o pico\": a nuvem troca CAPEX por OPEX. Em vez de comprar servidor para o dia de maior movimento e mantê-lo ocioso os outros 364, paga-se o que se consumir. As cinco características essenciais do modelo NIST são autosserviço sob demanda, amplo acesso pela rede, agrupamento de recursos, elasticidade rápida e serviço medido — o enunciado tangencia quase todas. O erro comum é reduzir nuvem a \"arquivo guardado na Internet\", que é apenas um dos serviços dela.",
       fundamento: "Doutrina de Informática — Computação em nuvem (conceito e características).",
       macete: "Nuvem: remoto + compartilhado + dinâmico + escalável + sob demanda.",
       erroComum: "Achar que a nuvem ainda exige infraestrutura própria dimensionada previamente.",
@@ -185,7 +185,7 @@ const QUESTOES_PCAL_LOTE43 = [
       palavraCritica: "PaaS ... desenvolva e gerencie ... SaaS ... software já pronto",
     },
     comentario: {
-      resolucao: "CERTO. No PaaS (plataforma como serviço), o provedor disponibiliza infraestrutura e ferramentas de desenvolvimento para que o cliente desenvolva e gerencie suas próprias aplicações — diferentemente do SaaS, em que o cliente apenas utiliza um software já pronto fornecido pelo provedor.",
+      resolucao: "CERTO. A diferença entre os modelos é O QUE já vem pronto do provedor. IaaS entrega a máquina — você instala sistema operacional, runtime e aplicação. PaaS entrega o ambiente de execução — você sobe só o código. SaaS entrega o software funcionando — você apenas usa. Em prova, o critério de desempate é sempre um: quem administra o sistema operacional? Em IaaS, o cliente; em PaaS e SaaS, o provedor. A confusão frequente é chamar de PaaS o serviço em que o usuário só consome a aplicação pronta — isso é SaaS.",
       fundamento: "Doutrina de Informática — Computação em nuvem (SaaS x PaaS x IaaS).",
       macete: "Cliente desenvolve apps = PaaS. Cliente só usa app pronto = SaaS.",
       erroComum: "Chamar de SaaS um modelo em que o cliente efetivamente desenvolve suas próprias aplicações.",
@@ -225,7 +225,7 @@ const QUESTOES_PCAL_LOTE43 = [
       palavraCritica: "depende da conexão à Internet e da infraestrutura do provedor",
     },
     comentario: {
-      resolucao: "CERTO. O armazenamento em nuvem permite salvar arquivos, bancos de dados e outras informações em servidores remotos, com vantagens de acessibilidade e escalabilidade frente ao armazenamento local — ainda que sua disponibilidade dependa da conexão à Internet e da infraestrutura do provedor contratado.",
+      resolucao: "CERTO. O que sustenta o item é a ressalva final, não a definição. A banca escreve essa mesma frase suprimindo a dependência — \"garante disponibilidade permanente\", \"dispensa conexão\" — e aí ela fica ERRADA. Nuvem não elimina o ponto único de falha: desloca-o do seu HD para o link de Internet e para o datacenter do provedor. Acessibilidade e escalabilidade são reais; disponibilidade absoluta, não. Nenhum provedor sério promete 100% — os contratos falam em 99,9% e derivados.",
       fundamento: "Doutrina de Informática — Computação em nuvem (armazenamento em nuvem).",
       macete: "Nuvem: acessibilidade + escalabilidade, mas sempre com dependência de Internet/provedor.",
       erroComum: "Tratar o armazenamento em nuvem como isento de qualquer dependência externa.",
@@ -305,7 +305,7 @@ const QUESTOES_PCAL_LOTE43 = [
       palavraCritica: "transferência de arquivos ... compatibilidade entre diversos formatos",
     },
     comentario: {
-      resolucao: "CERTO. O Microsoft Remote Desktop e o TeamViewer permitem acesso remoto a computadores, possibilitando a transferência de arquivos entre as máquinas conectadas, enquanto o Microsoft Office e o LibreOffice oferecem compatibilidade entre diversos formatos de documentos, planilhas e apresentações.",
+      resolucao: "CERTO. São duas afirmações independentes e ambas verdadeiras. Remote Desktop e TeamViewer não apenas espelham a tela: transferem arquivos entre as máquinas conectadas. Office e LibreOffice leem e gravam os formatos um do outro (.docx/.odt, .xlsx/.ods, .pptx/.odp). Repare no grau escolhido: \"compatibilidade\" não é fidelidade integral — macros VBA e formatação avançada podem se perder na conversão. Item que afirmasse compatibilidade \"total, sem qualquer perda\" estaria ERRADO.",
       fundamento: "Doutrina de Informática — Ferramentas de produtividade e acesso remoto.",
       macete: "Acesso remoto moderno sempre permite transferir arquivo; Office e LibreOffice são compatíveis entre si.",
       erroComum: "Achar que ferramentas de acesso remoto só permitem visualização, sem transferência de arquivos.",
@@ -345,7 +345,7 @@ const QUESTOES_PCAL_LOTE43 = [
       palavraCritica: "resgatar informações ... usuário ... data ... nome do arquivo ... quantidade de folhas",
     },
     comentario: {
-      resolucao: "CERTO. Quando documentos são impressos em uma impressora de rede, é possível, por meio dos registros do servidor de impressão (spooler), resgatar informações como o usuário solicitante, a data da impressão, o nome do arquivo e a quantidade de folhas impressas — dados úteis, inclusive, em investigações periciais.",
+      resolucao: "CERTO. O servidor de impressão registra cada trabalho que entra na fila, e é desse log que se reconstrói quem imprimiu, quando, qual arquivo e quantas páginas — daí impressão em rede deixar rastro aproveitável em perícia. O limite a guardar: o log preserva os METADADOS do trabalho, não necessariamente uma cópia do conteúdo impresso. Recuperar o teor do documento depende de o spool ter sido retido em disco, o que não é o comportamento padrão. Item que tratasse isso como certo exigiria bem mais cuidado.",
       fundamento: "Doutrina de Informática — Ferramentas de produtividade (impressão em rede, rastros digitais).",
       macete: "Impressora de rede = spooler registra tudo: quem, quando, o quê e quantas páginas.",
       erroComum: "Achar que não é possível recuperar nenhuma informação sobre uma impressão já realizada.",
@@ -385,7 +385,7 @@ const QUESTOES_PCAL_LOTE43 = [
       palavraCritica: "dados estruturados (marcações do tipo schema)",
     },
     comentario: {
-      resolucao: "CERTO. A pesquisa aprimorada do Google pode apresentar resultados ricos que dependem de dados estruturados (marcações do tipo schema) presentes nas páginas indexadas, os quais ajudam o mecanismo de busca a organizar e exibir informações adicionais sobre o conteúdo encontrado.",
+      resolucao: "CERTO. Dados estruturados (vocabulário schema.org) são marcações embutidas no HTML que declaram ao buscador o QUE cada trecho significa: que aquele número é uma nota de avaliação, que aquela data é o início de um evento, que aquele bloco é uma receita. É isso que habilita o resultado rico — estrelas, preço, FAQ expansível. Ponto de atenção para prova: a marcação HABILITA a exibição, não a garante. O buscador decide se e como exibe. Item que dissesse que o schema \"assegura\" ou \"obriga\" o resultado rico estaria ERRADO.",
       fundamento: "Doutrina de Informática — Mecanismos de busca (pesquisa aprimorada, dados estruturados).",
       macete: "Resultados ricos = dados estruturados (schema) na página indexada.",
       erroComum: "Achar que os resultados de busca dependem apenas do texto puro, sem qualquer marcação estruturada.",
@@ -465,7 +465,7 @@ const QUESTOES_PCAL_LOTE43 = [
       palavraCritica: "endereço lógico ... DNS ... ARP",
     },
     comentario: {
-      resolucao: "CERTO. O endereço IP é um endereço lógico que identifica um dispositivo na rede. A conversão de nomes de domínio em endereços IP é realizada pelo protocolo DNS, enquanto a conversão de endereços IP em endereços físicos (MAC) é realizada pelo protocolo ARP.",
+      resolucao: "CERTO. São três camadas encadeadas, e a ordem importa. Nome de domínio para IP é o DNS. IP para MAC é o ARP — e ele só resolve dentro do MESMO segmento de rede local; quando o destino está fora dela, o ARP devolve o MAC do roteador, não o da máquina final. O IP é lógico e muda quando você troca de rede; o MAC é físico e vem gravado na placa. As inversões que a banca usa: dizer que o DNS converte IP em MAC, ou que o ARP traduz nomes de domínio.",
       fundamento: "Doutrina de Informática — Internet e Redes (endereço IP, DNS, ARP).",
       macete: "IP: lógico. DNS: nome→IP. ARP: IP→MAC. Três coisas diferentes, não confundir.",
       erroComum: "Atribuir ao endereço IP, em vez de ao DNS, a função de converter nomes de domínio.",
