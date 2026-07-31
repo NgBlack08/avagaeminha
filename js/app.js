@@ -613,12 +613,12 @@ function renderBanco() {
           onclick="event.preventDefault(); event.stopPropagation(); limparFiltrosBanco()">Limpar</button>` : ""}
     </summary>
     <div class="filters">
-      ${chipFiltroHtml("concurso", "Concurso", CONCURSOS.map(c => ({ v: c.id, t: c.id })))}
-      ${chipFiltroHtml("cargo", "Cargo", CARGOS.map(c => ({ v: c, t: c })))}
-      ${chipFiltroHtml("disciplina", "Disciplina", discs.map(d => ({ v: d, t: d })))}
-      ${chipFiltroHtml("assunto", "Assunto", assuntos.map(a => ({ v: a, t: a })), { rolar: true })}
-      ${chipFiltroHtml("dificuldade", "Dificuldade", [{ v: 1, t: "● Fácil" }, { v: 2, t: "●● Média" }, { v: 3, t: "●●● Difícil" }])}
-      ${chipFiltroHtml("pegadinha", "Padrão da banca", DNA_BANCA.map(d => ({ v: d.slug, t: d.nome })))}
+      ${mselHtml("concurso", "Concurso", CONCURSOS.map(c => ({ v: c.id, t: c.id })))}
+      ${mselHtml("cargo", "Cargo", CARGOS.map(c => ({ v: c, t: c })))}
+      ${mselHtml("disciplina", "Disciplina", discs.map(d => ({ v: d, t: d })))}
+      ${mselHtml("assunto", "Assunto", assuntos.map(a => ({ v: a, t: a })))}
+      ${mselHtml("dificuldade", "Dificuldade", [{ v: 1, t: "● Fácil" }, { v: 2, t: "●● Média" }, { v: 3, t: "●●● Difícil" }])}
+      ${mselHtml("pegadinha", "Padrão da banca", DNA_BANCA.map(d => ({ v: d.slug, t: d.nome })))}
       <label class="f">Busca<input type="search" id="f-busca" value="${bancoFiltros.busca || ""}" placeholder="palavra-chave…" onchange="setFiltroBanco()"></label>
       <label class="check"><input type="checkbox" id="f-erradas" ${bancoFiltros.somenteErradas ? "checked" : ""} onchange="setFiltroBanco()"> só as que errei</label>
       <label class="check"><input type="checkbox" id="f-novas" ${bancoFiltros.somenteNaoRespondidas ? "checked" : ""} onchange="setFiltroBanco()"> só não respondidas</label>
@@ -638,25 +638,50 @@ function valorFiltroAtivo(v) {
 }
 
 /* "Marcado" é o inverso de combina(): aqui vazio/null significa NADA
-   selecionado, não "sem restrição" — senão todo chip nasceria aceso. */
-function chipMarcado(filtro, valor) {
+   selecionado, não "sem restrição" — senão toda opção nasceria marcada. */
+function opcaoMarcada(filtro, valor) {
   if (filtro === null || filtro === undefined || filtro === "") return false;
   return Array.isArray(filtro) ? filtro.includes(valor) : filtro === valor;
 }
 
-/* Grupo de chips de marcação múltipla para um campo categórico do Banco
-   de Questões. `opcoes` é [{v: valor, t: texto}]; `rolar: true` limita a
-   altura com scroll — necessário só para Assunto, que sem disciplina
-   selecionada pode chegar a ~270 itens distintos. */
-function chipFiltroHtml(campo, titulo, opcoes, { rolar } = {}) {
+/* Campo do dropdown de filtro aberto no momento, ou null. null = todos
+   fechados (padrão) — mesma ideia de bancoFiltrosAbertos: sem isto, abrir
+   um <details> e marcar uma opção nele fecharia o próprio dropdown, já
+   que renderBanco() reconstrói o HTML do zero a cada clique. */
+let bancoMselAberto = null;
+function onToggleMsel(el, campo) {
+  if (el.open) {
+    bancoMselAberto = campo;
+    /* só um aberto por vez — abrir um fecha os outros, feito direto no
+       DOM (sem renderBanco()) para não custar um re-render inteiro só
+       por abrir/fechar, que é a interação mais frequente do painel. */
+    document.querySelectorAll(".msel[open]").forEach(d => { if (d !== el) d.removeAttribute("open"); });
+  } else if (bancoMselAberto === campo) {
+    bancoMselAberto = null;
+  }
+}
+
+/* Dropdown de marcação múltipla para um campo categórico do Banco de
+   Questões — visualmente do tamanho de um <select>, fechado por padrão.
+   `opcoes` é [{v: valor, t: texto}]. Substituiu uma primeira versão com
+   todas as opções sempre visíveis como chips (até ~270 para Assunto), que
+   pesava o layout a cada clique com 6 categorias abertas ao mesmo tempo. */
+function mselHtml(campo, titulo, opcoes) {
   if (!opcoes.length) return "";
-  return `<div class="f fchips">
-    <span class="fchips-titulo">${escapeHtml(titulo)}</span>
-    <div class="chip-group${rolar ? " rolavel" : ""}">
-      ${opcoes.map(o => `<button type="button" class="chip small ${chipMarcado(bancoFiltros[campo], o.v) ? "active" : ""}"
-        onclick="toggleFiltroBancoMulti('${campo}', ${typeof o.v === "number" ? o.v : `'${o.v}'`})">${escapeHtml(o.t)}</button>`).join("")}
+  const marcados = Array.isArray(bancoFiltros[campo])
+    ? bancoFiltros[campo]
+    : (valorFiltroAtivo(bancoFiltros[campo]) ? [bancoFiltros[campo]] : []);
+  const aberto = bancoMselAberto === campo;
+  return `<details class="f msel" ${aberto ? "open" : ""} ontoggle="onToggleMsel(this, '${campo}')">
+    <summary>${escapeHtml(titulo)}${marcados.length ? `<span class="msel-badge">${marcados.length}</span>` : ""}</summary>
+    <div class="msel-panel">
+      ${opcoes.map(o => `<label class="msel-opt">
+        <input type="checkbox" ${marcados.includes(o.v) ? "checked" : ""}
+          onchange="toggleFiltroBancoMulti('${campo}', ${typeof o.v === "number" ? o.v : `'${o.v}'`})">
+        <span>${escapeHtml(o.t)}</span>
+      </label>`).join("")}
     </div>
-  </div>`;
+  </details>`;
 }
 
 /* Liga/desliga um valor num filtro categórico do Banco. Aceita o campo já
