@@ -98,7 +98,7 @@ function renderAuthScreen(erro) {
   const feats = [
     ["🧬", "Questões inéditas com padrão CEBRASPE"],
     ["🎯", "Simulados adaptativos"],
-    ["🧠", "Engenharia cognitiva por questão"],
+    ["🧠", "Estratégias da banca por questão"],
     ["🔁", "Revisão espaçada"],
     ["📊", "Estatísticas inteligentes"],
     ["🧭", "Diagnóstico por disciplina"],
@@ -125,7 +125,7 @@ function renderAuthScreen(erro) {
           <span class="hero-eyebrow">Plataforma especializada em Engenharia Reversa da Banca CEBRASPE</span>
           <h1>Estude como a banca pensa.<br><span class="grad">Aprove com método.</span></h1>
           <p class="lead">Laboratório de engenharia reversa da CEBRASPE para carreiras policiais:
-          questões inéditas com engenharia cognitiva, simulados adaptativos com repetição espaçada
+          questões inéditas com a estratégia que neutraliza cada padrão, simulados adaptativos com repetição espaçada
           e estatísticas que mostram exatamente onde você erra.</p>
           <div class="feat-grid" aria-label="Principais recursos">
             ${feats.map(([ico, label]) => `<div class="feat-card"><span class="ficon">${ico}</span><span>${label}</span></div>`).join("")}

@@ -135,6 +135,22 @@ aparece olhando uma questão por vez:
 Comprimento da resolução **não** é critério: as mais curtas do banco são de RLM
 e estão completas — uma conta de probabilidade não precisa de 250 caracteres.
 
+### O que o validador não alcança
+
+Nenhuma heurística de texto detecta "li tudo e continuo sem entender" — quatro
+foram testadas e todas marcavam resolução boa demais para valer a pena. Quem
+sabe é o leitor, então esse sinal vem dele: sob o comentário de cada questão há
+um botão discreto, e o que ele grava vira fila no painel de Administração,
+ordenada por gravidade (gabarito suspeito primeiro, depois fonte incorreta,
+depois quantidade de alunos) — não por data.
+
+Os motivos são uma lista fechada de quatro, com comentário livre opcional,
+porque fila só serve se for contável: cinco alunos travados na mesma questão é
+sinal; cinco textos soltos são leitura. Um aluno, uma questão, um feedback —
+reenviar corrige o anterior. Marcar como resolvida não apaga o histórico, e se
+alguém sinalizar de novo a questão volta para a fila, porque a reescrita
+anterior não resolveu o problema dele.
+
 Os avisos são intencionalmente não-bloqueantes: transcrição fiel da lei *deve*
 mesmo ser CERTO, então "consertar" o desequilíbrio forçando o gabarito seria
 pior que o problema. O caminho é escrever os itens que faltam — no caso da

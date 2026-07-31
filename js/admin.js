@@ -11,23 +11,75 @@ async function renderAdmin() {
     return;
   }
 
-  MAIN().innerHTML = topbar("Administração", "Usuários cadastrados e convites de acesso",
+  MAIN().innerHTML = topbar("Administração", "Explicações sinalizadas, usuários cadastrados e convites de acesso",
     `<button class="btn small" onclick="gerarConvite()">➕ Gerar convite</button>`) +
     `<div class="empty" id="admin-load"><div class="big">👥</div>Carregando dados…</div>`;
 
-  const [{ data: usuarios, error: e1 }, { data: convites, error: e2 }] = await Promise.all([
+  const [{ data: usuarios, error: e1 }, { data: convites, error: e2 }, { data: fila, error: e3 }] = await Promise.all([
     supa.rpc("admin_listar_usuarios"),
     supa.rpc("admin_listar_convites"),
+    supa.rpc("admin_fila_feedback"),
   ]);
   MAIN().querySelector("#admin-load")?.remove();
 
-  if (e1 || e2) {
+  if (e1 || e2 || e3) {
     MAIN().insertAdjacentHTML("beforeend",
-      `<div class="card"><div class="resultado bad">Erro ao carregar dados: ${escapeHtml((e1 || e2).message)}</div></div>`);
+      `<div class="card"><div class="resultado bad">Erro ao carregar dados: ${escapeHtml((e1 || e2 || e3).message)}</div></div>`);
     return;
   }
 
-  MAIN().insertAdjacentHTML("beforeend", usuariosTabelaHtml(usuarios || []) + convitesCardHtml(convites || []));
+  /* A fila vem primeiro: é a única parte do painel que pede ação. */
+  MAIN().insertAdjacentHTML("beforeend",
+    filaFeedbackHtml(fila || []) + usuariosTabelaHtml(usuarios || []) + convitesCardHtml(convites || []));
+}
+
+/* Fila de explicações que os alunos sinalizaram, uma linha por questão.
+   Ordenada no servidor: gabarito suspeito primeiro (é o único motivo que
+   pode significar erro de conteúdo no ar), depois fonte, depois volume. */
+function filaFeedbackHtml(fila) {
+  if (!fila.length) {
+    return `<div class="card" style="margin-bottom:16px">
+      <h3>📣 Explicações sinalizadas</h3>
+      <div style="font-size:13px;color:var(--muted)">Nenhuma pendência. Quando um aluno marcar "esta explicação não ficou clara", a questão aparece aqui.</div>
+    </div>`;
+  }
+  const selo = (n, cls, txt) => n > 0 ? `<span class="tag ${cls}">${n} ${txt}</span> ` : "";
+  return `<div class="card" style="margin-bottom:16px">
+    <h3>📣 Explicações sinalizadas <span class="tag accent">${fila.length}</span></h3>
+    <div style="font-size:12px;color:var(--muted);margin-bottom:10px">Ordenada por gravidade, não por data: gabarito suspeito primeiro, depois fonte incorreta, depois quantidade de alunos. "Resolver" some com a questão da fila — marque só depois de reescrever a resolução.</div>
+    <div class="chart-scroll">
+    <table class="ranking-tab">
+      <thead><tr><th>Questão</th><th>Disciplina</th><th>Alunos</th><th>Motivos</th><th>Comentários</th><th>Ação</th></tr></thead>
+      <tbody>
+        ${fila.map(f => `
+          <tr>
+            <td class="rk-nome" style="font-family:monospace">${escapeHtml(f.questao_id)}</td>
+            <td>${escapeHtml(f.disciplina || "—")}</td>
+            <td>${f.total}</td>
+            <td>${
+              selo(f.n_gabarito, "bad", "gabarito") +
+              selo(f.n_fonte, "warn", "fonte") +
+              selo(f.n_explica, "accent", "não explica") +
+              selo(f.n_estrategia, "", "estratégia")
+            }</td>
+            <td style="max-width:340px;white-space:normal">${
+              (f.comentarios || []).length
+                ? (f.comentarios || []).map(c => `<div class="fb-cmt">“${escapeHtml(c)}”</div>`).join("")
+                : '<span style="color:var(--muted)">—</span>'
+            }</td>
+            <td><button class="btn ghost small" onclick="resolverFeedback('${f.questao_id}')">Resolver</button></td>
+          </tr>`).join("")}
+      </tbody>
+    </table></div>
+  </div>`;
+}
+
+async function resolverFeedback(qid) {
+  const ok = await mostrarConfirm(`Marcar ${qid} como resolvida? Ela sai da fila. Se um aluno sinalizar de novo, volta.`, "Resolver pendência");
+  if (!ok) return;
+  const { error } = await supa.rpc("admin_resolver_feedback", { p_questao_id: qid });
+  if (error) { await mostrarAlerta("Não foi possível resolver: " + error.message); return; }
+  renderAdmin();
 }
 
 function usuariosTabelaHtml(usuarios) {

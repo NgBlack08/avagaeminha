@@ -192,6 +192,94 @@ function mostrarConfirm(mensagem, titulo) {
     { label: "Confirmar", value: true, cls: "" },
   ] });
 }
+/* ---------------- Feedback sobre a explicação ----------------
+   Botão discreto sob o comentário. Discreto de propósito: quem entendeu
+   a questão não deve ser interrompido por um pedido de avaliação, e quem
+   não entendeu vai procurar onde reclamar. */
+function feedbackHtml(q) {
+  if (MODO !== "cloud") return ""; /* sem login não há onde gravar */
+  const ja = feedbackDaQuestao(q.id);
+  return `<div class="fb-linha" id="fb-${q.id}">${
+    ja
+      ? `<span class="fb-ok">✓ Você sinalizou esta explicação</span>
+         <button class="fb-btn" onclick="desfazerFeedback('${q.id}')">desfazer</button>`
+      : `<button class="fb-btn" onclick="abrirFeedback('${q.id}')">Esta explicação não ficou clara?</button>`
+  }</div>`;
+}
+
+function repintarFeedback(qid) {
+  const alvo = $("#fb-" + qid);
+  if (alvo) alvo.outerHTML = feedbackHtml(QUESTOES_POR_ID[qid]);
+}
+
+async function desfazerFeedback(qid) {
+  try { await removerFeedback(qid); repintarFeedback(qid); }
+  catch (e) { mostrarAlerta("Não foi possível desfazer agora: " + (e.message || e), "Erro"); }
+}
+
+async function abrirFeedback(qid) {
+  const q = QUESTOES_POR_ID[qid];
+  const escolha = await mostrarPromptFeedback(q);
+  if (!escolha) return;
+  try {
+    await enviarFeedback(qid, q.disciplina, escolha.motivo, escolha.comentario);
+    repintarFeedback(qid);
+  } catch (e) {
+    mostrarAlerta("Não foi possível registrar agora: " + (e.message || e), "Erro");
+  }
+}
+
+/* Motivo obrigatório, comentário opcional — resolve com {motivo, comentario}
+   ou null se cancelado. Mesmo esqueleto de mostrarPromptNumero(). */
+function mostrarPromptFeedback(q) {
+  return new Promise(resolve => {
+    const overlay = document.createElement("div");
+    overlay.className = "modal-overlay";
+    overlay.innerHTML = `
+      <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modal-titulo">
+        <div class="modal-titulo" id="modal-titulo">O que não ficou claro?</div>
+        <div class="modal-msg">Questão ${escapeHtml(q.id)} — ${escapeHtml(q.disciplina)}. Isso entra numa fila de revisão; quanto mais gente aponta a mesma questão, antes ela é reescrita.</div>
+        <div class="fb-motivos">
+          ${FEEDBACK_MOTIVOS.map((m, i) => `
+            <label class="fb-motivo">
+              <input type="radio" name="fb-motivo" value="${m.slug}"${i === 0 ? " checked" : ""}>
+              <span>${escapeHtml(m.rotulo)}</span>
+            </label>`).join("")}
+        </div>
+        <textarea class="fb-texto" id="fb-comentario" rows="3" maxlength="500"
+          placeholder="Quer detalhar? (opcional)"></textarea>
+        <div class="modal-actions"></div>
+      </div>`;
+    const actions = overlay.querySelector(".modal-actions");
+    let resolvido = false;
+    function fechar(valor) {
+      if (resolvido) return;
+      resolvido = true;
+      document.removeEventListener("keydown", onKey);
+      overlay.remove();
+      resolve(valor);
+    }
+    function enviar() {
+      const marcado = overlay.querySelector('input[name="fb-motivo"]:checked');
+      if (!marcado) return;
+      fechar({ motivo: marcado.value, comentario: overlay.querySelector("#fb-comentario").value.trim() });
+    }
+    [{ label: "Cancelar", cls: "ghost", acao: () => fechar(null) },
+     { label: "Enviar", cls: "", acao: enviar }].forEach(b => {
+      const btn = document.createElement("button");
+      btn.className = "btn small " + b.cls;
+      btn.textContent = b.label;
+      btn.onclick = b.acao;
+      actions.appendChild(btn);
+    });
+    /* Enter não envia: o campo é textarea e quebrar linha tem de funcionar. */
+    function onKey(e) { if (e.key === "Escape") fechar(null); }
+    document.addEventListener("keydown", onKey);
+    overlay.addEventListener("click", e => { if (e.target === overlay) fechar(null); });
+    document.body.appendChild(overlay);
+  });
+}
+
 /* Modal com campo numérico (ex.: definir uma meta) — retorna o número
    digitado, ou null se cancelado. */
 function mostrarPromptNumero({ titulo, mensagem, valorInicial, min = 0, max = 100, sufixo = "" }) {
@@ -771,7 +859,8 @@ async function responder(qid, resposta) {
         <div class="bloco"><b>Como a banca pensa</b>${escapeHtml(c.comoBancaPensa)}</div>
         ${dna ? `<div class="bloco"><b>Padrão da banca detectado: ${escapeHtml(dna.nome)} (incidência ${dna.incidencia}%)</b>${escapeHtml(dna.gatilho)}</div>` : ""}
       </div>
-      ${estrategiasDaQuestaoHtml(q)}`;
+      ${estrategiasDaQuestaoHtml(q)}
+      ${feedbackHtml(q)}`;
   }
 
   /* Fica fora do if: mesmo sem a explicação, o usuário precisa do botão
@@ -1239,7 +1328,8 @@ function provaRevisaoHtml(d, i) {
       <div class="bloco"><b>Como a banca pensa</b>${escapeHtml(c.comoBancaPensa)}</div>
       ${dna ? `<div class="bloco"><b>Padrão detectado: ${escapeHtml(dna.nome)} (incidência ${dna.incidencia}%)</b>${escapeHtml(dna.gatilho)}</div>` : ""}
     </div>
-    ${estrategiasDaQuestaoHtml(q)}`}
+    ${estrategiasDaQuestaoHtml(q)}
+    ${feedbackHtml(q)}`}
   </div>`;
 }
 
@@ -1562,7 +1652,7 @@ function exemploEstrategiaHtml(e) {
     <p class="ee-porque"><b>Por que este trecho:</b> ${escapeHtml(e.porqueTrecho)}</p>
     ${liberada
       ? `<button class="btn ghost small" onclick="verExemploEstrategia('${e.id}')">Resolver esta questão no banco →</button>`
-      : `<p class="ee-bloqueio">🔒 Esta questão faz parte do banco completo. <a href="#" onclick="navigate('planos');return false;">Ver planos</a> para resolvê-la com comentário e engenharia cognitiva.</p>`}
+      : `<p class="ee-bloqueio">🔒 Esta questão faz parte do banco completo. <a href="#" onclick="navigate('planos');return false;">Ver planos</a> para resolvê-la com comentário e estratégias da banca.</p>`}
   </div>`;
 }
 

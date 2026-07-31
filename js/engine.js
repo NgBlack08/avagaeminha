@@ -99,12 +99,16 @@ function saveState() {
 async function carregarEstadoNuvem(user) {
   CURRENT_USER = user;
   MODO = "cloud";
-  const [{ data: perfil }, { data: respostasRows }, { data: srsRows }, { data: sessoesRows }, { data: assinaturaAtiva }] = await Promise.all([
+  const [{ data: perfil }, { data: respostasRows }, { data: srsRows }, { data: sessoesRows }, { data: assinaturaAtiva }, { data: feedbackRows }] = await Promise.all([
     supa.from("profiles").select("*").eq("id", user.id).single(),
     supa.from("respostas").select("*").eq("user_id", user.id).order("created_at", { ascending: true }),
     supa.from("srs").select("*").eq("user_id", user.id),
     supa.from("sessoes").select("*").eq("user_id", user.id).order("created_at", { ascending: true }),
     supa.from("assinaturas").select("plano_tipo").eq("user_id", user.id).eq("status", "autorizada").maybeSingle(),
+    /* Só o par questão/motivo: no máximo uma linha por questão sinalizada,
+       o que na prática é uma dúzia. Entra no mesmo Promise.all para não
+       custar mais um tempo de ida e volta no boot. */
+    supa.from("feedback_questao").select("questao_id, motivo, comentario").eq("user_id", user.id),
   ]);
   const respostas = {};
   for (const r of (respostasRows || [])) {
@@ -114,6 +118,8 @@ async function carregarEstadoNuvem(user) {
   const srs = {};
   for (const s of (srsRows || [])) srs[s.qid] = { nivel: s.nivel, proxima: new Date(s.proxima).getTime() };
   const sessoes = (sessoesRows || []).map(s => ({ data: new Date(s.created_at).getTime(), n: s.n, acertos: s.acertos, erros: s.erros, brancos: s.brancos, liquida: s.liquida, tempoTotal: s.tempo_total }));
+  FEEDBACK_ENVIADO.clear();
+  for (const f of (feedbackRows || [])) FEEDBACK_ENVIADO.set(f.questao_id, { motivo: f.motivo, comentario: f.comentario });
   APP_STATE.respostas = respostas;
   APP_STATE.srs = srs;
   APP_STATE.sessoes = sessoes;
@@ -144,6 +150,50 @@ function definirMetaTaxa(valor) {
   } else {
     saveLocalState();
   }
+}
+
+/* ---------------- Feedback sobre a explicação ----------------
+   O validador mede o que dá para medir em texto: resolução que ecoa o
+   enunciado sem citar fonte. O que ele não alcança é "li tudo e continuo
+   sem entender" — quatro heurísticas foram testadas para isso e todas
+   marcaram resolução boa demais para valer a pena. Quem sabe é o leitor,
+   então a fila de reescrita vem dele.
+
+   Motivos fechados, e não campo livre, porque uma fila só serve se for
+   contável: cinco alunos travados na mesma questão é sinal; cinco textos
+   soltos são leitura. O comentário livre continua existindo, opcional,
+   para o que a lista não cobre. */
+const FEEDBACK_MOTIVOS = [
+  { slug: "nao_explica",            rotulo: "A resolução não explica por que essa é a resposta" },
+  { slug: "gabarito_suspeito",      rotulo: "Acho que o gabarito está errado" },
+  { slug: "fonte_incorreta",        rotulo: "O fundamento ou a jurisprudência não confere" },
+  { slug: "estrategia_nao_encaixa", rotulo: "A estratégia mostrada não se aplica a esta questão" },
+];
+
+/* IDs que o usuário já sinalizou, carregados no boot junto do resto do
+   estado. Existe para o botão nascer marcado ao reabrir a questão — sem
+   isso o aluno reclama duas vezes achando que a primeira não pegou. */
+const FEEDBACK_ENVIADO = new Map();
+
+function feedbackDaQuestao(qid) { return FEEDBACK_ENVIADO.get(qid) || null; }
+
+async function enviarFeedback(qid, disciplina, motivo, comentario) {
+  if (MODO !== "cloud" || !CURRENT_USER) throw new Error("é preciso estar logado para enviar feedback");
+  const { error } = await supa.rpc("registrar_feedback", {
+    p_questao_id: qid,
+    p_disciplina: disciplina || null,
+    p_motivo: motivo,
+    p_comentario: comentario || null,
+  });
+  if (error) throw error;
+  FEEDBACK_ENVIADO.set(qid, { motivo, comentario: comentario || null });
+}
+
+async function removerFeedback(qid) {
+  if (MODO !== "cloud" || !CURRENT_USER) return;
+  const { error } = await supa.rpc("remover_feedback", { p_questao_id: qid });
+  if (error) throw error;
+  FEEDBACK_ENVIADO.delete(qid);
 }
 
 /* Define (ou limpa, com valor null) a data-alvo da prova, usada pelo
