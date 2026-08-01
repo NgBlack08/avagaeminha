@@ -952,6 +952,137 @@ const PREDICOES = [
     motivos: ["Tema central para cargos policiais (sujeito ativo funcionário)", "Padrão de troca de verbos nucleares entre tipos"] },
 ];
 
+/* ---------------- INTELIGÊNCIA POR TRILHA ----------------
+   Raio-X e Predição são as telas mais específicas de carreira do app: um
+   candidato de Fisioterapia não tem o que fazer com a frequência histórica
+   de Direito Penal nem com a predição de "medidas protetivas autônomas".
+   Enquanto FREQUENCIA_TEMAS/TIMELINE_DISCIPLINAS/PREDICOES eram globais,
+   essas duas telas mentiam para quem não fosse candidato de polícia.
+
+   Cada trilha traz o que tem de verdade. Onde não há dado, o campo vem
+   `null` e a tela mostra o motivo em vez de inventar número — é o caso da
+   série histórica de SESAU/AL, que é primeira edição do concurso.
+
+   ─── SOBRE OS PADRÕES DA BANCA EM CARREIRAS NÃO POLICIAIS ───
+
+   A pergunta era se o DNA_BANCA, levantado em provas de carreira policial,
+   vale para saúde. Analisei uma prova CERTO/ERRADO de Fisioterapia do
+   próprio Cebraspe (HUB/UnB — Residência Multiprofissional, 2018,
+   caderno 370_RMULT_005) item a item. Conclusão:
+
+   TRANSFEREM-SE (mesma mecânica, conteúdo clínico no lugar do jurídico):
+     troca-conceito     — item 4 lista "monocromatismo, INCOERÊNCIA e
+                          colimação" como características do laser; o laser
+                          é coerente. Uma palavra trocada num rol de três.
+     verdade-mais-falso — item 2 abre com premissa verdadeira (maior
+                          comprimento de onda penetra mais) e conclui o
+                          inverso (que o vermelho penetra mais que o
+                          infravermelho). Metade verdadeira sustentando a
+                          falsa, exatamente como em Direito.
+     troca-sujeito      — item 16 atribui o ombro caído à fraqueza do
+                          manguito rotador; a lesão do nervo acessório
+                          afeta o trapézio.
+     inversão/negação   — item 13 nega que o trismo comprometa higiene
+                          oral, fala e alimentação.
+     troca de rótulo    — item 17 chama Katz e Barthel de escalas de AVD
+                          INSTRUMENTAIS; ambas medem AVD básicas.
+
+   NÃO SE APLICAM ao bloco específico de saúde:
+     juris-inventada e juris-mais-lei — não há jurisprudência em conteúdo
+     clínico. Seguem valendo nas disciplinas de legislação da MESMA trilha
+     (SUS, estadual, ética), e é por isso que o escopo correto é por
+     DISCIPLINA e não por trilha — já resolvido em DISCIPLINAS_JURIDICAS.
+
+   MUDA DE SIGNIFICADO:
+     literalidade — em Direito é conferir o artigo; em saúde é conferir a
+     escala, o protocolo ou a diretriz. Mesma habilidade, outra fonte.
+
+   GANHA PESO:
+     o caso clínico. Naquele caderno, a maioria dos comandos pendura vários
+     itens numa vinheta ("Considerando esse caso clínico, julgue..."), e o
+     próprio edital do SESAU/AL prevê a estrutura "Situação hipotética: ...
+     Assertiva: ...". O banco já tem esse formato (textoApoio), mas na
+     trilha de Fisioterapia ele deixa de ser exceção e vira o padrão. */
+const INTELIGENCIA = {
+  PCAL: {
+    frequenciaTemas: FREQUENCIA_TEMAS,
+    timeline: TIMELINE_DISCIPLINAS,
+    predicoes: PREDICOES,
+  },
+
+  SESAUAL_FISIO: {
+    /* Frequências derivadas do peso programático do edital (5 blocos no
+       específico, 4 disciplinas nos básicos) cruzado com a ênfase observada
+       no caderno de Fisioterapia analisado. São estimativas declaradas como
+       tal na interface — não há série histórica deste concurso. */
+    frequenciaTemas: [
+      { disciplina: "Fisioterapia em Saúde da Mulher", temas: [
+        { tema: "Assoalho pélvico e disfunções uroginecológicas", freq: 92, tendencia: "alta", prob: 0.94 },
+        { tema: "Pré e pós-operatório de mastectomia e linfedema", freq: 88, tendencia: "alta", prob: 0.9 },
+        { tema: "Obstetrícia: gestação, parto e puerpério", freq: 85, tendencia: "estavel", prob: 0.88 },
+        { tema: "Recursos terapêuticos (eletro, foto, termo, cinesio)", freq: 82, tendencia: "estavel", prob: 0.86 },
+        { tema: "Avaliação funcional, postura e marcha", freq: 78, tendencia: "estavel", prob: 0.82 },
+        { tema: "Oncologia e cuidados no tratamento antineoplásico", freq: 74, tendencia: "alta", prob: 0.8 },
+        { tema: "Climatério e ciclo menstrual", freq: 68, tendencia: "estavel", prob: 0.72 },
+        { tema: "Disfunções anorretais e coloproctologia", freq: 62, tendencia: "alta", prob: 0.68 },
+        { tema: "Ética e legislação profissional (COFFITO)", freq: 58, tendencia: "estavel", prob: 0.65 },
+      ]},
+      { disciplina: "Legislação Aplicada ao SUS", temas: [
+        { tema: "Lei 8.080/1990 — princípios e organização", freq: 90, tendencia: "estavel", prob: 0.92 },
+        { tema: "Lei 8.142/1990 — Conselhos e Conferências", freq: 86, tendencia: "estavel", prob: 0.9 },
+        { tema: "Decreto 7.508/2011 — Região de Saúde e portas de entrada", freq: 78, tendencia: "alta", prob: 0.84 },
+        { tema: "CF/88, arts. 194 a 200", freq: 76, tendencia: "estavel", prob: 0.82 },
+        { tema: "Resolução CNS 453/2012", freq: 64, tendencia: "estavel", prob: 0.7 },
+        { tema: "Determinantes sociais e sistemas de informação", freq: 55, tendencia: "alta", prob: 0.62 },
+      ]},
+      { disciplina: "Legislação Estadual (AL)", temas: [
+        { tema: "Lei 5.247/1991 — licenças e afastamentos", freq: 84, tendencia: "estavel", prob: 0.88 },
+        { tema: "Lei 5.247/1991 — regime disciplinar e prescrição", freq: 80, tendencia: "estavel", prob: 0.85 },
+        { tema: "Provimento, posse, exercício e estágio probatório", freq: 76, tendencia: "estavel", prob: 0.82 },
+        { tema: "Jornada, férias e vantagens", freq: 66, tendencia: "estavel", prob: 0.7 },
+        { tema: "Constituição do Estado de Alagoas — servidores", freq: 58, tendencia: "estavel", prob: 0.64 },
+      ]},
+      { disciplina: "Ética no Serviço Público", temas: [
+        { tema: "Lei 6.754/2006 — Comissões de Ética", freq: 82, tendencia: "alta", prob: 0.88 },
+        { tema: "Lei 6.754/2006 — deveres e vedações", freq: 78, tendencia: "alta", prob: 0.85 },
+        { tema: "Ética, moral e função pública", freq: 62, tendencia: "estavel", prob: 0.68 },
+      ]},
+      { disciplina: "Língua Portuguesa", temas: [
+        { tema: "Compreensão e reescritura de textos", freq: 88, tendencia: "estavel", prob: 0.9 },
+        { tema: "Morfossintaxe do período", freq: 82, tendencia: "estavel", prob: 0.86 },
+        { tema: "Coesão, pontuação e concordância", freq: 76, tendencia: "estavel", prob: 0.8 },
+      ]},
+    ],
+
+    /* Sem série histórica: o SESAU/AL 2026 é Edital nº 1, primeira edição.
+       Inventar uma curva de 2018 a 2025 seria fabricar dado. */
+    timeline: null,
+
+    predicoes: [
+      { tema: "Disfunções do assoalho pélvico — avaliação e cinesioterapia", disciplina: "Fisioterapia em Saúde da Mulher", score: 95,
+        motivos: ["Núcleo do bloco 1 do edital (uroginecologia)", "Descrição do cargo cita avaliação cinésio-funcional uroginecológica", "Tema com escalas e graduações — terreno de troca numérica"] },
+      { tema: "Linfedema pós-mastectomia e drenagem linfática manual", disciplina: "Fisioterapia em Saúde da Mulher", score: 93,
+        motivos: ["Edital cita expressamente pré e pós-operatório de câncer de mama", "Contraindicações são armadilha clássica em item C/E", "Apareceu em prova CEBRASPE de fisioterapia analisada"] },
+      { tema: "Lei 8.080/1990 — princípios e diretrizes do SUS", disciplina: "Legislação Aplicada ao SUS", score: 91,
+        motivos: ["Dispositivo mais transcrito da legislação do SUS", "Art. 7º tem 14 incisos — rol longo favorece supressão e acréscimo"] },
+      { tema: "Conselho de Saúde: natureza deliberativa e paridade", disciplina: "Legislação Aplicada ao SUS", score: 89,
+        motivos: ["Lei 8.142 + Resolução CNS 453/2012 se completam", "Confusão consultivo x deliberativo é erro recorrente"] },
+      { tema: "Lei 6.754/2006 — advertência x censura ética", disciplina: "Ética no Serviço Público", score: 87,
+        motivos: ["Subitem nomeado no edital (5.1)", "Dois incisos consecutivos que só diferem pelo destinatário"] },
+      { tema: "Estabilidade: 3 anos da CF x 24 meses da lei estadual", disciplina: "Legislação Estadual (AL)", score: 86,
+        motivos: ["Lei estadual de 1991 não recepcionada quanto ao prazo pela EC 19/98", "Conflito entre norma estadual antiga e emenda posterior é alvo típico"] },
+      { tema: "Fisioterapia no pré e pós-parto e no puerpério", disciplina: "Fisioterapia em Saúde da Mulher", score: 84,
+        motivos: ["Bloco 4 do edital trata expressamente de gestação, parto e puerpério", "Conteúdo com muitas condutas contraindicadas por fase"] },
+      { tema: "Decreto 7.508/2011 — Portas de Entrada e RENASES/RENAME", disciplina: "Legislação Aplicada ao SUS", score: 82,
+        motivos: ["Duas siglas quase idênticas do mesmo decreto", "Atenção especializada NÃO é porta de entrada — inversão frequente"] },
+      { tema: "Eletrotermofototerapia: indicações e contraindicações", disciplina: "Fisioterapia em Saúde da Mulher", score: 80,
+        motivos: ["Bloco 3 do edital lista onze recursos terapêuticos", "Prova CEBRASPE analisada trouxe cinco itens só sobre laser"] },
+      { tema: "Licenças da Lei 5.247/1991 — prazos e remuneração", disciplina: "Legislação Estadual (AL)", score: 78,
+        motivos: ["Sete licenças com prazos distintos e regras de remuneração", "Terreno natural de troca numérica"] },
+    ],
+  },
+};
+
 /* ---------------- ESTRATÉGIAS (Módulo 10) ----------------
    Cada estratégia é uma técnica de resolução derivada de padrões
    recorrentes e verificáveis nas provas CEBRASPE em domínio público

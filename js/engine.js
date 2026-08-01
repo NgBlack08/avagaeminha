@@ -336,6 +336,26 @@ function questoesDoEscopo() {
   return QUESTOES.filter(q => questaoLiberada(q) && noEscopo(q));
 }
 
+/* Raio-X e Predição são as telas mais específicas de carreira do app. Sem
+   trilha escolhida caem em PC-AL, que é a única com série histórica —
+   melhor um dado real rotulado do que uma tela vazia. */
+function inteligenciaDoFoco() {
+  const foco = APP_STATE.config.concursoFoco;
+  return (foco && INTELIGENCIA[foco]) || INTELIGENCIA.PCAL;
+}
+
+/* Padrões que de fato ocorrem nas questões da trilha, em vez de listar os 12
+   do DNA_BANCA sempre. É levantado do próprio banco, e não de uma lista fixa
+   por trilha, porque assim se mantém correto sozinho quando entram lotes
+   novos — e porque o recorte real é por DISCIPLINA, não por carreira:
+   `juris-inventada` não existe em conteúdo clínico, mas continua valendo nas
+   disciplinas de legislação da mesma trilha de Fisioterapia. */
+function dnaDoFoco() {
+  const presentes = new Set(questoesDoEscopo().map(q => q.pegadinha));
+  const filtrado = DNA_BANCA.filter(d => presentes.has(d.slug));
+  return filtrado.length ? filtrado : DNA_BANCA;
+}
+
 function questoesDevidas() {
   const agora = Date.now();
   return QUESTOES.filter(q => {

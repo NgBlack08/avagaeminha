@@ -520,7 +520,7 @@ function renderDashboard() {
   <div class="grid cols-2" style="margin-top:16px">
     <div class="card card-dna">
       <h3>🧬 DNA da banca — padrões de maior incidência</h3>
-      ${DNA_BANCA.slice(0, 5).map(d => `
+      ${dnaDoFoco().slice(0, 5).map(d => `
         <div class="dna-item">
           <h4>${d.nome}</h4>
           <div style="display:flex;gap:10px"><div class="dna-bar"><i style="width:${d.incidencia}%"></i></div><span class="dna-pct">${d.incidencia}%</span></div>
@@ -529,7 +529,7 @@ function renderDashboard() {
     </div>
     <div class="card card-pred">
       <h3>↗ Top predições de cobrança</h3>
-      ${PREDICOES.slice().sort((a, b) => b.score - a.score).slice(0, 5).map((p, i) => `
+      ${inteligenciaDoFoco().predicoes.slice().sort((a, b) => b.score - a.score).slice(0, 5).map((p, i) => `
         <div class="pred-item">
           <div class="pred-rank">${i + 1}º</div>
           <div class="pred-body"><h4>${p.tema}</h4><div class="motivos">${p.disciplina}</div></div>
@@ -666,6 +666,9 @@ async function trocarTrilha(id) {
      na trilha nova — ficariam escondendo tudo em silêncio, como os do Banco. */
   simFiltros = {};
   pvFiltros = {};
+  /* O Raio-X guarda a disciplina escolhida no gráfico de frequência, que
+     pode não existir na tabela de inteligência da trilha nova. */
+  raioxDisc = inteligenciaDoFoco().frequenciaTemas[0].disciplina;
   saveState();
   navigate(currentView);
 }
@@ -706,16 +709,27 @@ function renderBanco() {
           onclick="event.preventDefault(); event.stopPropagation(); limparFiltrosBanco()">Limpar</button>` : ""}
     </summary>
     <div class="filters">
-      ${mselHtml(bancoFiltros, "concurso", "banco:concurso", "Concurso", CONCURSOS.map(c => ({ v: c.id, t: c.id })), "toggleFiltroBancoMulti")}
-      ${mselHtml(bancoFiltros, "cargo", "banco:cargo", "Cargo", cargosDoFoco().map(c => ({ v: c, t: c })), "toggleFiltroBancoMulti")}
+      ${/* Concurso e Cargo só aparecem quando têm o que oferecer. Dentro de
+           uma trilha, "Concurso" é redundante com o escopo — e listaria
+           carreiras que o candidato não presta; "Cargo" fica inútil quando o
+           edital tem um só. Filtro que não filtra nada é ruído. */""}
+      ${!editalDoFoco() || bancoFiltros.todoOBanco
+        ? mselHtml(bancoFiltros, "concurso", "banco:concurso", "Concurso", CONCURSOS.map(c => ({ v: c.id, t: c.id })), "toggleFiltroBancoMulti") : ""}
+      ${cargosDoFoco().length > 1
+        ? mselHtml(bancoFiltros, "cargo", "banco:cargo", "Cargo", cargosDoFoco().map(c => ({ v: c, t: c })), "toggleFiltroBancoMulti") : ""}
       ${mselHtml(bancoFiltros, "disciplina", "banco:disciplina", "Disciplina", discs.map(d => ({ v: d, t: d })), "toggleFiltroBancoMulti")}
       ${mselHtml(bancoFiltros, "assunto", "banco:assunto", "Assunto", assuntos.map(a => ({ v: a, t: a })), "toggleFiltroBancoMulti")}
       ${mselHtml(bancoFiltros, "dificuldade", "banco:dificuldade", "Dificuldade", [{ v: 1, t: "● Fácil" }, { v: 2, t: "●● Média" }, { v: 3, t: "●●● Difícil" }], "toggleFiltroBancoMulti")}
-      ${mselHtml(bancoFiltros, "pegadinha", "banco:pegadinha", "Padrão da banca", DNA_BANCA.map(d => ({ v: d.slug, t: d.nome })), "toggleFiltroBancoMulti")}
+      ${mselHtml(bancoFiltros, "pegadinha", "banco:pegadinha", "Padrão da banca", dnaDoFoco().map(d => ({ v: d.slug, t: d.nome })), "toggleFiltroBancoMulti")}
       <label class="f">Busca<input type="search" id="f-busca" value="${bancoFiltros.busca || ""}" placeholder="palavra-chave…" onchange="setFiltroBanco()"></label>
       <label class="check"><input type="checkbox" id="f-erradas" ${bancoFiltros.somenteErradas ? "checked" : ""} onchange="setFiltroBanco()"> só as que errei</label>
       <label class="check"><input type="checkbox" id="f-novas" ${bancoFiltros.somenteNaoRespondidas ? "checked" : ""} onchange="setFiltroBanco()"> só não respondidas</label>
-      <label class="check"><input type="checkbox" id="f-edital" ${bancoFiltros.ocultarForaEdital ? "checked" : ""} onchange="setFiltroBanco()"> só edital PC-AL 2026</label>
+      ${/* `foraEdital` marca itens fora do conteúdo de PC-AL — flag herdada
+           de quando havia uma carreira só. Numa trilha que já escopa por
+           disciplina o filtro não tem função, e oferecê-lo a candidato de
+           Fisioterapia seria oferecer um recorte de outra prova. */""}
+      ${!editalDoFoco() || APP_STATE.config.concursoFoco === "PCAL"
+        ? `<label class="check"><input type="checkbox" id="f-edital" ${bancoFiltros.ocultarForaEdital ? "checked" : ""} onchange="setFiltroBanco()"> só edital PC-AL 2026</label>` : ""}
     </div>
   </details>
   ${bancoModoVisual === "unica" ? renderBancoUnica(lista) : renderBancoLista(lista)}`;
@@ -860,7 +874,9 @@ function setFiltroBanco() {
     busca: $("#f-busca").value.trim() || null,
     somenteErradas: $("#f-erradas").checked,
     somenteNaoRespondidas: $("#f-novas").checked,
-    ocultarForaEdital: $("#f-edital").checked,
+    /* O checkbox some fora da trilha PC-AL; sem o `?.` isto lançaria
+       TypeError ao mexer em qualquer outro filtro na trilha de Fisioterapia. */
+    ocultarForaEdital: !!$("#f-edital")?.checked,
   };
   bancoIndice = 0;
   bancoPagina = 0;
@@ -1526,16 +1542,23 @@ function provaRevisaoHtml(d, i) {
    ================================================================ */
 let raioxDisc = "Direito Penal";
 function renderRaioX() {
-  const freq = FREQUENCIA_TEMAS.find(f => f.disciplina === raioxDisc) || FREQUENCIA_TEMAS[0];
+  const intel = inteligenciaDoFoco();
+  const dna = dnaDoFoco();
+  const ed = editalDoFoco();
+  const tabela = intel.frequenciaTemas;
+  const freq = tabela.find(f => f.disciplina === raioxDisc) || tabela[0];
   const freqData = freq.temas.slice().sort((a, b) => b.freq - a.freq).map(t => ({
     label: t.tema, value: t.freq, display: `${t.freq} · ${t.tendencia === "alta" ? "↗" : t.tendencia === "caindo" ? "↘" : "→"}`,
   }));
 
-  /* heatmap: disciplina × padrão (proporção de questões do banco com cada padrão) */
+  /* heatmap: disciplina × padrão. Escopado por trilha nos dois eixos —
+     mostrar Direito Penal a candidato de Fisioterapia era exatamente o
+     "conteúdo de outra carreira" que a tela não deve ter. */
   const discs = listaDisciplinas();
-  const padroes = DNA_BANCA.map(d => d.slug);
+  const idsEscopo = new Set(questoesDoEscopo().map(q => q.id));
+  const padroes = dna.map(d => d.slug);
   const matrix = discs.map(disc => padroes.map(p => {
-    const qs = QUESTOES.filter(q => q.disciplina === disc);
+    const qs = QUESTOES.filter(q => q.disciplina === disc && idsEscopo.has(q.id));
     if (!qs.length) return null;
     const c = qs.filter(q => q.pegadinha === p).length;
     return c ? c / qs.length : null;
@@ -1545,19 +1568,21 @@ function renderRaioX() {
     "Engenharia reversa do CEBRASPE: padrões, frequências e evolução histórica") +
   `<div class="card" style="margin-bottom:16px">
     <h3>🧬 DNA da CEBRASPE <span class="hint">índice de incidência estimado por padrão</span></h3>
-    ${DNA_BANCA.map(d => `
+    ${dna.map(d => `
       <div class="dna-item">
         <h4>${d.nome}</h4>
         <div style="display:flex;gap:10px"><div class="dna-bar"><i style="width:${d.incidencia}%"></i></div><span class="dna-pct">${d.incidencia}%</span></div>
         <p>${d.desc}</p>
         <div class="gatilho">⚡ Gatilho mental: ${d.gatilho}</div>
       </div>`).join("")}
+    ${dna.length < DNA_BANCA.length ? `<div style="font-size:12.5px;color:var(--muted);margin-top:10px">
+      Exibindo os ${dna.length} padrões que ocorrem nas questões da sua trilha. Os demais existem no banco, mas em disciplinas que não caem na sua prova — <b>jurisprudência inventada</b>, por exemplo, não tem como aparecer em conteúdo clínico.</div>` : ""}
     ${AVISO_ESTATISTICO}
   </div>
   <div class="card" style="margin-bottom:16px">
     <h3>📈 Frequência de temas
       <select style="margin-left:auto" onchange="raioxDisc=this.value;renderRaioX()">
-        ${FREQUENCIA_TEMAS.map(f => `<option ${f.disciplina === raioxDisc ? "selected" : ""}>${f.disciplina}</option>`).join("")}
+        ${tabela.map(f => `<option ${f.disciplina === raioxDisc ? "selected" : ""}>${escapeHtml(f.disciplina)}</option>`).join("")}
       </select></h3>
     <div class="chart-scroll">${chartHBar(freqData)}</div>
     <div style="font-size:12px;color:var(--muted)">peso 0–100 estimado por incidência histórica · ↗ em alta · → estável · ↘ em queda</div>
@@ -1565,13 +1590,25 @@ function renderRaioX() {
   <div class="grid cols-2">
     <div class="card">
       <h3>⏳ Evolução histórica <span class="hint">itens por disciplina/ano (estimativa)</span></h3>
-      <div class="chart-scroll">${chartLines(TIMELINE_DISCIPLINAS.anos, TIMELINE_DISCIPLINAS.series.map(s => ({ nome: s.disciplina, valores: s.valores })))}</div>
-      ${chartLegend(TIMELINE_DISCIPLINAS.series)}
-      <div style="font-size:12.5px;color:var(--muted);margin-top:10px">Leitura: <b>Legislação Especial</b> é a disciplina em maior expansão no perfil recente da banca para carreiras policiais — reflexo das reformas legislativas (Pacote Anticrime, Lei 14.550/2023, Lei 14.994/2024).</div>
+      ${intel.timeline
+        ? `<div class="chart-scroll">${chartLines(intel.timeline.anos, intel.timeline.series.map(s => ({ nome: s.disciplina, valores: s.valores })))}</div>
+           ${chartLegend(intel.timeline.series)}
+           <div style="font-size:12.5px;color:var(--muted);margin-top:10px">Leitura: <b>Legislação Especial</b> é a disciplina em maior expansão no perfil recente da banca para carreiras policiais — reflexo das reformas legislativas (Pacote Anticrime, Lei 14.550/2023, Lei 14.994/2024).</div>`
+        : `${/* Sem série histórica é melhor dizer por quê do que desenhar uma
+               curva inventada — a honestidade sobre a lacuna é o próprio dado. */""}
+           <div class="empty" style="padding:22px 12px">
+             <div class="big">📉</div>
+             Sem série histórica para esta trilha.
+             <div style="font-size:12.5px;color:var(--muted);margin-top:8px;max-width:44ch;margin-inline:auto">
+               ${escapeHtml(ed ? ed.nome : "")} é primeira edição — o Edital nº 1 não tem certame anterior para comparar.
+               Traçar uma curva de anos passados aqui seria inventar dado.
+               A <b>Frequência de temas</b> acima usa o peso programático do edital, que é informação real.
+             </div>
+           </div>`}
     </div>
     <div class="card">
       <h3>🔥 Heatmap: onde cada padrão aparece <span class="hint">% das questões da disciplina</span></h3>
-      <div class="chart-scroll">${chartHeatmap(discs, DNA_BANCA.map(d => d.nome), matrix)}</div>
+      <div class="chart-scroll">${chartHeatmap(discs, dna.map(d => d.nome), matrix)}</div>
     </div>
   </div>
   <div class="card" style="margin-top:16px">
@@ -1583,8 +1620,15 @@ function renderRaioX() {
       <div class="stat"><span class="num">${perfilRedacao().tempoMedioIdeal}s</span><span class="lbl">tempo ideal médio por item</span></div>
     </div>
     <div style="font-size:13px;color:var(--muted);margin-top:12px">
-      Características típicas: períodos longos com orações intercaladas; linguagem técnico-normativa; alta densidade de remissões a dispositivos legais;
-      preferência por reescrituras e substituições em Português; uso de jurisprudência do STF/STJ combinada ao texto legal nas disciplinas jurídicas.
+      ${APP_STATE.config.concursoFoco === "SESAUAL_FISIO"
+        ? `Perfil observado em prova CERTO/ERRADO de Fisioterapia do próprio Cebraspe (HUB/UnB, Residência Multiprofissional): a maioria dos itens
+           pendura-se em <b>vinheta clínica</b> — "Considerando esse caso clínico, julgue..." —, e o edital do SESAU/AL prevê a estrutura
+           <b>Situação hipotética / Assertiva</b>. Os padrões de armadilha são os mesmos das provas jurídicas, com conteúdo clínico no lugar do legal:
+           troca de conceito (laser coerente descrito como "incoerente"), premissa verdadeira com conclusão invertida, troca de sujeito
+           (ombro caído atribuído ao manguito rotador em vez do trapézio) e troca de rótulo entre escalas (Katz e Barthel apresentados como
+           instrumentais quando medem AVD básicas). Espere <b>contraindicação</b> como armadilha recorrente.`
+        : `Características típicas: períodos longos com orações intercaladas; linguagem técnico-normativa; alta densidade de remissões a dispositivos legais;
+           preferência por reescrituras e substituições em Português; uso de jurisprudência do STF/STJ combinada ao texto legal nas disciplinas jurídicas.`}
     </div>
   </div>`;
 }
@@ -1651,7 +1695,7 @@ function analisarTexto() {
    PREDIÇÃO (Módulo 9)
    ================================================================ */
 function renderPredicao() {
-  const rank = PREDICOES.slice().sort((a, b) => b.score - a.score);
+  const rank = inteligenciaDoFoco().predicoes.slice().sort((a, b) => b.score - a.score);
   MAIN().innerHTML = topbar("Predição de Cobrança",
     "Ranking de temas por probabilidade estimada para os próximos certames policiais") +
   `<div class="card">
