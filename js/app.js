@@ -724,12 +724,6 @@ function renderBanco() {
       <label class="f">Busca<input type="search" id="f-busca" value="${bancoFiltros.busca || ""}" placeholder="palavra-chave…" onchange="setFiltroBanco()"></label>
       <label class="check"><input type="checkbox" id="f-erradas" ${bancoFiltros.somenteErradas ? "checked" : ""} onchange="setFiltroBanco()"> só as que errei</label>
       <label class="check"><input type="checkbox" id="f-novas" ${bancoFiltros.somenteNaoRespondidas ? "checked" : ""} onchange="setFiltroBanco()"> só não respondidas</label>
-      ${/* `foraEdital` marca itens fora do conteúdo de PC-AL — flag herdada
-           de quando havia uma carreira só. Numa trilha que já escopa por
-           disciplina o filtro não tem função, e oferecê-lo a candidato de
-           Fisioterapia seria oferecer um recorte de outra prova. */""}
-      ${!editalDoFoco() || APP_STATE.config.concursoFoco === "PCAL"
-        ? `<label class="check"><input type="checkbox" id="f-edital" ${bancoFiltros.ocultarForaEdital ? "checked" : ""} onchange="setFiltroBanco()"> só edital PC-AL 2026</label>` : ""}
     </div>
   </details>
   ${bancoModoVisual === "unica" ? renderBancoUnica(lista) : renderBancoLista(lista)}`;
@@ -874,9 +868,6 @@ function setFiltroBanco() {
     busca: $("#f-busca").value.trim() || null,
     somenteErradas: $("#f-erradas").checked,
     somenteNaoRespondidas: $("#f-novas").checked,
-    /* O checkbox some fora da trilha PC-AL; sem o `?.` isto lançaria
-       TypeError ao mexer em qualquer outro filtro na trilha de Fisioterapia. */
-    ocultarForaEdital: !!$("#f-edital")?.checked,
   };
   bancoIndice = 0;
   bancoPagina = 0;
@@ -1215,7 +1206,6 @@ function renderProva() {
         <option value="240">4 horas</option>
       </select></label>
       ${mselHtml(pvFiltros, "disciplina", "pv:disciplina", "Disciplina", discs.map(d => ({ v: d, t: d })), "toggleFiltroProvaMulti")}
-      <label class="check" style="align-self:end"><input type="checkbox" id="pv-edital" checked> só conteúdo do edital PC-AL 2026</label>
     </div>
     <div style="font-size:12px;color:var(--muted);margin-top:2px">Sem marcar disciplina, a prova sai com mistura balanceada entre todas.</div>
     <button class="btn" onclick="iniciarProva()">◈ Iniciar prova</button>
@@ -1248,10 +1238,7 @@ function montarProva(n, filtros) {
 async function iniciarProva() {
   const n = +$("#pv-n").value;
   const tempoSel = $("#pv-tempo").value;
-  const filtros = {
-    disciplina: pvFiltros.disciplina,
-    ocultarForaEdital: $("#pv-edital").checked,
-  };
+  const filtros = { disciplina: pvFiltros.disciplina };
   const questoes = montarProva(n, filtros);
   if (!questoes.length) { await mostrarAlerta("Nenhuma questão encontrada com esses filtros."); return; }
   if (questoes.length < n) {

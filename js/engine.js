@@ -715,7 +715,6 @@ function filtrarQuestoes(f) {
     if (f.somenteNaoRespondidas) {
       if ((APP_STATE.respostas[q.id] || []).length) return false;
     }
-    if (f.ocultarForaEdital && q.foraEdital) return false;
     if (f.busca) {
       /* q.comentario pode ainda não ter chegado (carga sob demanda); quem
          chama a busca dispara carregarTodosDetalhes() antes de renderizar,
