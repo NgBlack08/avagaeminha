@@ -17,7 +17,7 @@ const QUESTOES_PCAL_LOTE31 = [
 
   {
     id: "ET-009", disciplina: "Ética no Serviço Público", assunto: "Moralidade administrativa", subassunto: "Autonomia frente à legalidade",
-    concurso: "PCAL", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026,
+    concurso: "PCAL", cargo: ["Escrivão","Agente","Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (doutrina de moralidade administrativa)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 60, probReaparecer: 0.8,
     enunciado: "A moralidade administrativa constitui princípio autônomo em relação à legalidade, de modo que um ato pode ser formalmente legal e, ainda assim, ser considerado imoral do ponto de vista administrativo, sujeitando-se a controle judicial por ofensa à moralidade.",
@@ -36,7 +36,7 @@ const QUESTOES_PCAL_LOTE31 = [
   },
   {
     id: "ET-010", disciplina: "Ética no Serviço Público", assunto: "Moralidade administrativa", subassunto: "Moralidade x legalidade",
-    concurso: "PCAL", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026,
+    concurso: "PCAL", cargo: ["Escrivão","Agente","Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (doutrina de moralidade administrativa)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 60, probReaparecer: 0.78,
     enunciado: "No exercício da função pública, a moralidade administrativa se esgota no estrito cumprimento da legalidade, de modo que toda conduta legal é, por definição, eticamente inquestionável.",
@@ -55,7 +55,7 @@ const QUESTOES_PCAL_LOTE31 = [
   },
   {
     id: "ET-011", disciplina: "Ética no Serviço Público", assunto: "Fundamentos de ética e moral", subassunto: "Distinção ética x moral",
-    concurso: "PCAL", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026,
+    concurso: "PCAL", cargo: ["Escrivão","Agente","Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (fundamentos de ética e moral)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 60, probReaparecer: 0.78,
     enunciado: "A ética compreende a reflexão teórica e filosófica acerca dos valores humanos, ao passo que a moral está intrinsecamente associada ao conjunto prático de regras de conduta estabelecidas pelos costumes de um grupo social específico.",
@@ -74,7 +74,7 @@ const QUESTOES_PCAL_LOTE31 = [
   },
   {
     id: "ET-012", disciplina: "Ética no Serviço Público", assunto: "Fundamentos de ética e moral", subassunto: "Distinção ética x moral",
-    concurso: "PCAL", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026,
+    concurso: "PCAL", cargo: ["Escrivão","Agente","Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (fundamentos de ética e moral)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 60, probReaparecer: 0.76,
     enunciado: "A moral compreende a reflexão teórica e filosófica acerca dos valores humanos, sendo a ética o conjunto prático e concreto de regras de conduta vigentes em determinado grupo social.",
@@ -93,7 +93,7 @@ const QUESTOES_PCAL_LOTE31 = [
   },
   {
     id: "ET-013", disciplina: "Ética no Serviço Público", assunto: "Deontologia do serviço público", subassunto: "Deveres além da legalidade formal",
-    concurso: "PCAL", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026,
+    concurso: "PCAL", cargo: ["Escrivão","Agente","Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (deontologia do serviço público)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 60, probReaparecer: 0.74,
     enunciado: "A ética profissional do servidor público fundamenta-se em princípios deontológicos, os quais estabelecem deveres de conduta que transcendem a mera obediência formal às normas jurídicas, alcançando também valores como probidade, zelo e decoro.",
@@ -112,7 +112,7 @@ const QUESTOES_PCAL_LOTE31 = [
   },
   {
     id: "ET-014", disciplina: "Ética no Serviço Público", assunto: "Princípios da Administração Pública", subassunto: "Impessoalidade",
-    concurso: "PCAL", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026,
+    concurso: "PCAL", cargo: ["Escrivão","Agente","Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (princípios constitucionais da Administração)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 60, probReaparecer: 0.76,
     enunciado: "O princípio da impessoalidade, previsto no art. 37 da Constituição Federal, refere-se exclusivamente à vedação de promoção pessoal de agentes públicos em publicidade institucional, não guardando relação com o tratamento isonômico dispensado aos administrados.",
@@ -132,7 +132,7 @@ const QUESTOES_PCAL_LOTE31 = [
 
   {
     id: "DH-048", disciplina: "Direitos Humanos", assunto: "Sistema Interamericano de Direitos Humanos", subassunto: "Acesso à Corte Interamericana",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Pacto de São José da Costa Rica)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 70, probReaparecer: 0.82,
     enunciado: "À luz da Convenção Americana sobre Direitos Humanos (Pacto de São José da Costa Rica), qualquer pessoa ou grupo de pessoas pode submeter caso diretamente à apreciação da Corte Interamericana de Direitos Humanos, desde que previamente esgotados os recursos da jurisdição interna do Estado.",
@@ -151,7 +151,7 @@ const QUESTOES_PCAL_LOTE31 = [
   },
   {
     id: "DH-049", disciplina: "Direitos Humanos", assunto: "Sistema Interamericano de Direitos Humanos", subassunto: "Petição à Comissão Interamericana",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Pacto de São José da Costa Rica)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 65, probReaparecer: 0.8,
     enunciado: "Qualquer pessoa, grupo de pessoas ou entidade não governamental legalmente reconhecida em um ou mais Estados-membros da Organização dos Estados Americanos (OEA) pode apresentar à Comissão Interamericana de Direitos Humanos petições contendo denúncias de violação da Convenção Americana por um Estado-parte.",
@@ -170,7 +170,7 @@ const QUESTOES_PCAL_LOTE31 = [
   },
   {
     id: "DH-050", disciplina: "Direitos Humanos", assunto: "Política Nacional de Direitos Humanos", subassunto: "PNDH-3 (Decreto 7.037/2009)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (PNDH-3)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 60, probReaparecer: 0.72,
     enunciado: "O Programa Nacional de Direitos Humanos (PNDH-3), aprovado pelo Decreto nº 7.037/2009, estrutura-se em cinco eixos orientadores, e não seis, entre os quais não se inclui um eixo específico dedicado à segurança pública.",
@@ -189,7 +189,7 @@ const QUESTOES_PCAL_LOTE31 = [
   },
   {
     id: "DH-051", disciplina: "Direitos Humanos", assunto: "Incorporação de tratados internacionais", subassunto: "Status supralegal x equivalência a emenda",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (incorporação de tratados de direitos humanos)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 70, probReaparecer: 0.84,
     enunciado: "Os tratados e convenções internacionais sobre direitos humanos aprovados por maioria simples em cada Casa do Congresso Nacional, em turno único de votação, equivalem às emendas constitucionais, independentemente do quórum de aprovação.",
@@ -208,7 +208,7 @@ const QUESTOES_PCAL_LOTE31 = [
   },
   {
     id: "DH-052", disciplina: "Direitos Humanos", assunto: "Sistema Interamericano de Direitos Humanos", subassunto: "Vedação à pena de morte (CADH)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Pacto de São José da Costa Rica, art. 4)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 70, probReaparecer: 0.76,
     enunciado: "À luz da Convenção Americana sobre Direitos Humanos (Pacto de São José da Costa Rica), o Estado que houver abolido a pena de morte não poderá restabelecê-la; a Convenção veda, ainda, a imposição dessa pena a quem, no momento da perpetração do delito, for menor de dezoito anos ou maior de setenta anos, bem como à mulher em estado de gravidez.",
@@ -227,7 +227,7 @@ const QUESTOES_PCAL_LOTE31 = [
   },
   {
     id: "DH-053", disciplina: "Direitos Humanos", assunto: "Sistema Interamericano de Direitos Humanos", subassunto: "Competência da Corte Interamericana",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Pacto de São José da Costa Rica)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 70, probReaparecer: 0.76,
     enunciado: "A Corte Interamericana de Direitos Humanos possui competência tanto contenciosa, para julgar casos de violação da Convenção Americana, quanto consultiva, para emitir pareceres sobre a interpretação da Convenção ou de outros tratados de direitos humanos, sendo que apenas os Estados-parte e a Comissão Interamericana têm legitimidade para submeter casos à sua apreciação contenciosa.",

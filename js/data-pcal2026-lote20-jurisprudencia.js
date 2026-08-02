@@ -15,7 +15,7 @@ const QUESTOES_PCAL_LOTE20 = [
   /* ===== DIREITO CONSTITUCIONAL — REMÉDIOS CONSTITUCIONAIS ===== */
   {
     id: "DC-022", disciplina: "Direito Constitucional", assunto: "Remédios constitucionais", subassunto: "Habeas corpus (art. 5º, LXVIII)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (CF, art. 5º, LXVIII)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.85,
     enunciado: "O habeas corpus é cabível sempre que alguém sofrer ou se achar ameaçado de sofrer violência ou coação em sua liberdade de locomoção, por ilegalidade ou abuso de poder.",
@@ -34,7 +34,7 @@ const QUESTOES_PCAL_LOTE20 = [
   },
   {
     id: "DC-023", disciplina: "Direito Constitucional", assunto: "Remédios constitucionais", subassunto: "HC e punição disciplinar militar (art. 142, § 2º)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (CF, art. 142, § 2º; STF)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 55, probReaparecer: 0.78,
     enunciado: "Cabe habeas corpus para discutir o mérito das punições disciplinares militares.",
@@ -54,7 +54,7 @@ const QUESTOES_PCAL_LOTE20 = [
   },
   {
     id: "DC-024", disciplina: "Direito Constitucional", assunto: "Remédios constitucionais", subassunto: "Mandado de segurança (art. 5º, LXIX)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (CF, art. 5º, LXIX)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.8,
     enunciado: "O mandado de segurança protege direito líquido e certo, não amparado por habeas corpus ou habeas data, lesado ou ameaçado por ato de autoridade.",
@@ -73,7 +73,7 @@ const QUESTOES_PCAL_LOTE20 = [
   },
   {
     id: "DC-025", disciplina: "Direito Constitucional", assunto: "Remédios constitucionais", subassunto: "MS contra lei em tese (Súmula 266 STF)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Súmula 266 do STF)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 55, probReaparecer: 0.78,
     enunciado: "É cabível mandado de segurança contra lei em tese.",
@@ -93,7 +93,7 @@ const QUESTOES_PCAL_LOTE20 = [
   },
   {
     id: "DC-026", disciplina: "Direito Constitucional", assunto: "Remédios constitucionais", subassunto: "Habeas data (art. 5º, LXXII)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (CF, art. 5º, LXXII)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.75,
     enunciado: "O habeas data assegura o conhecimento de informações relativas à pessoa do impetrante constantes de registros ou bancos de dados de entidades governamentais ou de caráter público.",
@@ -112,7 +112,7 @@ const QUESTOES_PCAL_LOTE20 = [
   },
   {
     id: "DC-027", disciplina: "Direito Constitucional", assunto: "Remédios constitucionais", subassunto: "Mandado de injunção (art. 5º, LXXI)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (CF, art. 5º, LXXI)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 55, probReaparecer: 0.76,
     enunciado: "O mandado de injunção é cabível sempre que a falta de norma regulamentadora de lei ordinária inviabilizar o exercício de um direito.",
@@ -133,7 +133,7 @@ const QUESTOES_PCAL_LOTE20 = [
   /* ===== PROCESSO PENAL — PROVAS E NULIDADES ===== */
   {
     id: "PP-040", disciplina: "Processo Penal", assunto: "Provas", subassunto: "Prova ilícita (art. 157 CPP)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (CF, art. 5º, LVI; CPP, art. 157)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.85,
     enunciado: "São inadmissíveis, devendo ser desentranhadas do processo, as provas obtidas por meios ilícitos.",
@@ -152,7 +152,7 @@ const QUESTOES_PCAL_LOTE20 = [
   },
   {
     id: "PP-041", disciplina: "Processo Penal", assunto: "Provas", subassunto: "Prova ilícita por derivação (art. 157, § 1º)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (CPP, art. 157, § 1º)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 55, probReaparecer: 0.82,
     enunciado: "Pela teoria dos frutos da árvore envenenada, as provas derivadas das ilícitas são contaminadas em qualquer hipótese, sem exceção.",
@@ -171,7 +171,7 @@ const QUESTOES_PCAL_LOTE20 = [
   },
   {
     id: "PP-042", disciplina: "Processo Penal", assunto: "Investigação", subassunto: "Acesso aos autos (Súmula Vinculante 14)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Súmula Vinculante 14 do STF)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 55, probReaparecer: 0.82,
     enunciado: "É direito do defensor, no interesse do representado, ter acesso amplo aos elementos de prova que, já documentados em procedimento investigatório, digam respeito ao exercício do direito de defesa.",
@@ -191,7 +191,7 @@ const QUESTOES_PCAL_LOTE20 = [
   },
   {
     id: "PP-043", disciplina: "Processo Penal", assunto: "Prisão em flagrante", subassunto: "Flagrante preparado (Súmula 145 STF)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Súmula 145 do STF)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 55, probReaparecer: 0.8,
     enunciado: "No flagrante preparado, em que o agente é induzido à prática do delito por terceiro que adota providências para impedir sua consumação, há crime consumado e punível.",
@@ -211,7 +211,7 @@ const QUESTOES_PCAL_LOTE20 = [
   },
   {
     id: "PP-044", disciplina: "Processo Penal", assunto: "Provas", subassunto: "Valor da confissão (art. 197 CPP)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (CPP, art. 197)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.76,
     enunciado: "No processo penal, a confissão do acusado tem valor relativo e deve ser confrontada com as demais provas dos autos.",
@@ -230,7 +230,7 @@ const QUESTOES_PCAL_LOTE20 = [
   },
   {
     id: "PP-045", disciplina: "Processo Penal", assunto: "Nulidades", subassunto: "Princípio do prejuízo (Súmula 523 STF)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (CPP, art. 563; Súmula 523 do STF)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 55, probReaparecer: 0.8,
     enunciado: "No processo penal, a nulidade do ato deve ser reconhecida ainda que não haja demonstração de prejuízo à parte.",
@@ -250,7 +250,7 @@ const QUESTOES_PCAL_LOTE20 = [
   },
   {
     id: "PP-046", disciplina: "Processo Penal", assunto: "Interrogatório", subassunto: "Direito ao silêncio (art. 186 CPP)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (CPP, art. 186; CF, art. 5º, LXIII)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.78,
     enunciado: "O interrogatório é meio de defesa, sendo assegurado ao acusado o direito de permanecer calado, sem que o silêncio importe confissão ou seja interpretado em prejuízo da defesa.",
@@ -271,7 +271,7 @@ const QUESTOES_PCAL_LOTE20 = [
   /* ===== DIREITO ADMINISTRATIVO — IMPROBIDADE E CONTROLE ===== */
   {
     id: "DA-038", disciplina: "Direito Administrativo", assunto: "Improbidade administrativa", subassunto: "Elemento subjetivo (Lei 14.230/2021)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei 8.429/1992 c/c Lei 14.230/2021)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 55, probReaparecer: 0.85,
     enunciado: "Após a Lei 14.230/2021, os atos de improbidade administrativa podem ser praticados a título de dolo ou de culpa.",
@@ -290,7 +290,7 @@ const QUESTOES_PCAL_LOTE20 = [
   },
   {
     id: "DA-039", disciplina: "Direito Administrativo", assunto: "Improbidade administrativa", subassunto: "Enriquecimento ilícito (art. 9º)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei 8.429/1992, art. 9º)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.78,
     enunciado: "Constitui ato de improbidade que importa enriquecimento ilícito auferir, mediante a prática de ato doloso, qualquer tipo de vantagem patrimonial indevida em razão do exercício de cargo, mandato, função, emprego ou atividade pública.",
@@ -309,7 +309,7 @@ const QUESTOES_PCAL_LOTE20 = [
   },
   {
     id: "DA-040", disciplina: "Direito Administrativo", assunto: "Controle da Administração", subassunto: "Tribunal de Contas e sigilo bancário (STF)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (STF — controle externo)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 55, probReaparecer: 0.72,
     enunciado: "Segundo o STF, o Tribunal de Contas, no exercício do controle externo, pode, por autoridade própria, decretar a quebra do sigilo bancário dos responsáveis por contas públicas.",
@@ -329,7 +329,7 @@ const QUESTOES_PCAL_LOTE20 = [
   },
   {
     id: "DA-041", disciplina: "Direito Administrativo", assunto: "Atos administrativos", subassunto: "Autotutela (Súmula 473 STF)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Súmula 473 do STF)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.8,
     enunciado: "A Administração pode anular seus próprios atos quando eivados de vícios que os tornem ilegais e revogá-los por motivo de conveniência ou oportunidade, respeitados os direitos adquiridos.",

@@ -15,7 +15,7 @@ const QUESTOES_PCAL_LOTE34 = [
 
   {
     id: "DP-083", disciplina: "Direito Penal", assunto: "Princípio da insignificância", subassunto: "Habitualidade delitiva",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (jurisprudência STJ/STF sobre insignificância)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 75, probReaparecer: 0.86,
     enunciado: "Considerando o entendimento consolidado dos tribunais superiores sobre o princípio da insignificância, a habitualidade ou a reiteração delitiva específica, em regra, afasta a incidência desse princípio, ainda que o valor do bem atingido seja irrisório, em razão do maior grau de reprovabilidade da conduta do agente reincidente.",
@@ -34,7 +34,7 @@ const QUESTOES_PCAL_LOTE34 = [
   },
   {
     id: "DP-084", disciplina: "Direito Penal", assunto: "Princípio da insignificância", subassunto: "Habitualidade delitiva",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (jurisprudência STJ/STF sobre insignificância)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 75, probReaparecer: 0.84,
     enunciado: "A habitualidade ou a reiteração delitiva, em regra, são insuficientes para afastar a incidência do princípio da insignificância, desde que o valor do bem atingido seja irrisório.",
@@ -53,7 +53,7 @@ const QUESTOES_PCAL_LOTE34 = [
   },
   {
     id: "DP-085", disciplina: "Direito Penal", assunto: "Crimes contra a vida", subassunto: "Feminicídio (Lei 14.994/2024)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei nº 14.994/2024)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 75, probReaparecer: 0.88,
     enunciado: "À luz das alterações promovidas pela Lei nº 14.994/2024 no Código Penal, o feminicídio deixou de constituir qualificadora do crime de homicídio e passou a configurar crime autônomo, reputando-se presentes as razões da condição do sexo feminino quando o crime envolve violência doméstica e familiar ou menosprezo ou discriminação à condição de mulher.",
@@ -72,7 +72,7 @@ const QUESTOES_PCAL_LOTE34 = [
   },
   {
     id: "DP-086", disciplina: "Direito Penal", assunto: "Crimes contra a vida", subassunto: "Feminicídio (Lei 14.994/2024)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei nº 14.994/2024)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 75, probReaparecer: 0.84,
     enunciado: "Mesmo após as alterações promovidas pela Lei nº 14.994/2024, o feminicídio permanece configurado exclusivamente como qualificadora do crime de homicídio, prevista no art. 121, §2º, do Código Penal, não tendo sido criado tipo penal autônomo para essa conduta.",
@@ -91,7 +91,7 @@ const QUESTOES_PCAL_LOTE34 = [
   },
   {
     id: "DP-087", disciplina: "Direito Penal", assunto: "Crimes contra o patrimônio", subassunto: "Latrocínio (consumação)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Súmula 610, STF)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 75, probReaparecer: 0.86,
     enunciado: "Configura-se o crime de latrocínio consumado quando o agente, no contexto do roubo, provoca a morte da vítima, ainda que não logre subtrair os bens que pretendia.",
@@ -110,7 +110,7 @@ const QUESTOES_PCAL_LOTE34 = [
   },
   {
     id: "DP-088", disciplina: "Direito Penal", assunto: "Crimes contra o patrimônio", subassunto: "Latrocínio (consumação)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Súmula 610, STF)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 75, probReaparecer: 0.82,
     enunciado: "O crime de latrocínio somente se considera consumado quando o agente, além de provocar a morte da vítima, também logra êxito na subtração dos bens pretendidos, configurando-se latrocínio tentado caso a subtração não se realize.",
@@ -129,7 +129,7 @@ const QUESTOES_PCAL_LOTE34 = [
   },
   {
     id: "DP-089", disciplina: "Direito Penal", assunto: "Crimes contra o patrimônio", subassunto: "Furto de energia elétrica mediante fraude",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (CP, art. 155, §3º)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 75, probReaparecer: 0.78,
     enunciado: "No furto de energia elétrica mediante fraude, o pagamento integral do débito antes do recebimento da denúncia não extingue a punibilidade do agente, diferentemente do que ocorre, por exemplo, em determinados crimes tributários, nos quais essa causa extintiva encontra previsão legal específica.",
@@ -148,7 +148,7 @@ const QUESTOES_PCAL_LOTE34 = [
   },
   {
     id: "DP-090", disciplina: "Direito Penal", assunto: "Crimes contra o patrimônio", subassunto: "Furto de energia elétrica mediante fraude",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (CP, art. 155, §3º)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 75, probReaparecer: 0.8,
     enunciado: "No furto de energia elétrica mediante fraude, o pagamento integral do débito antes do recebimento da denúncia extingue a punibilidade do agente, tal como ocorre nos crimes tributários.",
@@ -167,7 +167,7 @@ const QUESTOES_PCAL_LOTE34 = [
   },
   {
     id: "DP-091", disciplina: "Direito Penal", assunto: "Crimes contra a Administração Pública", subassunto: "Peculato (reparação do dano)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (CP, art. 312)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 75, probReaparecer: 0.78,
     enunciado: "Tratando-se de peculato-apropriação (art. 312, caput, do Código Penal), a reparação integral do dano promovida pelo funcionário público antes do recebimento da denúncia não extingue a punibilidade, diferentemente do que ocorre no peculato culposo, hipótese em que a reparação anterior à sentença irrecorrível é causa extintiva de punibilidade.",
@@ -186,7 +186,7 @@ const QUESTOES_PCAL_LOTE34 = [
   },
   {
     id: "DP-092", disciplina: "Direito Penal", assunto: "Crimes contra a Administração Pública", subassunto: "Peculato (reparação do dano)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (CP, art. 312)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 75, probReaparecer: 0.76,
     enunciado: "Tratando-se de peculato-apropriação, a reparação integral do dano promovida pelo funcionário público antes do recebimento da denúncia extingue a punibilidade, tal como ocorre nos crimes tributários.",
@@ -205,7 +205,7 @@ const QUESTOES_PCAL_LOTE34 = [
   },
   {
     id: "DP-093", disciplina: "Direito Penal", assunto: "Aplicação da lei penal", subassunto: "Lei processual penal no tempo",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (CPP, art. 2º)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 75, probReaparecer: 0.78,
     enunciado: "Diferentemente da lei penal, a lei processual penal aplica-se desde logo aos processos em curso, sem prejuízo da validade dos atos já praticados sob a vigência da lei anterior, não se cogitando, em regra, de retroatividade da norma processual mais benéfica ao acusado.",
@@ -224,7 +224,7 @@ const QUESTOES_PCAL_LOTE34 = [
   },
   {
     id: "DP-094", disciplina: "Direito Penal", assunto: "Aplicação da lei penal", subassunto: "Lei processual penal no tempo",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (CPP, art. 2º)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 75, probReaparecer: 0.74,
     enunciado: "Assim como a lei penal material, a lei processual penal admite retroatividade em benefício do acusado, devendo ser aplicada a norma processual mais favorável aos processos em curso, ainda que iniciados sob a vigência de lei processual anterior menos benéfica.",
@@ -243,7 +243,7 @@ const QUESTOES_PCAL_LOTE34 = [
   },
   {
     id: "DP-095", disciplina: "Direito Penal", assunto: "Aplicação da lei penal", subassunto: "Lei excepcional ou temporária (ultra-atividade)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (CP, art. 3º)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 75, probReaparecer: 0.8,
     enunciado: "A lei excepcional ou temporária, embora cessadas as circunstâncias que a determinaram ou decorrido o período de sua duração, aplica-se ao fato praticado durante sua vigência, em razão do fenômeno da ultra-atividade dessas leis.",
@@ -262,7 +262,7 @@ const QUESTOES_PCAL_LOTE34 = [
   },
   {
     id: "DP-096", disciplina: "Direito Penal", assunto: "Aplicação da lei penal", subassunto: "Extraterritorialidade incondicionada",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (CP, art. 7º, I)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 75, probReaparecer: 0.78,
     enunciado: "Tratando-se de hipótese de extraterritorialidade incondicionada, como no crime de genocídio praticado por brasileiro no exterior, a aplicação da lei penal brasileira depende de o agente não ter sido absolvido ou punido no estrangeiro, condição que caracteriza a incondicionalidade dessa modalidade extraterritorial.",

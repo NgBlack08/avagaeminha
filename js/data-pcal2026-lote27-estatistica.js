@@ -17,7 +17,7 @@ const QUESTOES_PCAL_LOTE27 = [
   /* ===== ESTATÍSTICA DESCRITIVA — QUARTIS E OUTLIERS ===== */
   {
     id: "ES-024", disciplina: "Estatística", assunto: "Estatística descritiva", subassunto: "Intervalo interquartil",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (estatística descritiva)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.82,
     enunciado: "Considere um conjunto de dados cujo primeiro quartil (Q1) seja igual a 45 e cujo terceiro quartil (Q3) seja igual a 65. Nessa situação, o intervalo interquartil (IIQ) desses dados é igual a 110, obtido pela soma entre o primeiro e o terceiro quartis.",
@@ -36,7 +36,7 @@ const QUESTOES_PCAL_LOTE27 = [
   },
   {
     id: "ES-025", disciplina: "Estatística", assunto: "Estatística descritiva", subassunto: "Regra dos outliers (1,5×IIQ)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (estatística descritiva)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 55, probReaparecer: 0.78,
     enunciado: "Em um conjunto de dados com primeiro quartil igual a 45 e terceiro quartil igual a 65, serão considerados valores atípicos (outliers) superiores aqueles que excederem 95, conforme o critério usual de 1,5 vez o intervalo interquartil acima do terceiro quartil.",
@@ -55,7 +55,7 @@ const QUESTOES_PCAL_LOTE27 = [
   },
   {
     id: "ES-026", disciplina: "Estatística", assunto: "Probabilidade", subassunto: "Variável aleatória discreta (soma de probabilidades)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (probabilidade)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.76,
     enunciado: "Se X é uma variável aleatória discreta que representa o número mensal de inquéritos policiais concluídos, então a probabilidade de X assumir um valor entre o mínimo e o máximo observados é sempre igual a 1, pois esse intervalo abrange a totalidade dos resultados possíveis da distribuição amostral considerada.",
@@ -74,7 +74,7 @@ const QUESTOES_PCAL_LOTE27 = [
   },
   {
     id: "ES-027", disciplina: "Estatística", assunto: "Distribuição normal", subassunto: "Padronização (escore Z)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (distribuição normal)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 55, probReaparecer: 0.8,
     enunciado: "Considere que a velocidade dos veículos envolvidos em determinado tipo de acidente de trânsito siga uma distribuição normal com média de 85 km/h e desvio padrão de 18 km/h. Nessa situação, o valor de 121 km/h corresponde a um escore Z igual a 4, obtido pela padronização (X − média) dividida pelo desvio padrão.",
@@ -95,7 +95,7 @@ const QUESTOES_PCAL_LOTE27 = [
   /* ===== ANÁLISE DE DADOS — ETL, PYTHON, ML, PLN ===== */
   {
     id: "ES-028", disciplina: "Estatística", assunto: "Análise de dados", subassunto: "Processo de ETL",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (ETL)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.8,
     enunciado: "No processo de ETL (Extract, Transform, Load), a etapa de extração dos dados de suas fontes de origem antecede a etapa de transformação, na qual os dados são padronizados, limpos e adequados antes de serem carregados no ambiente de destino.",
@@ -114,7 +114,7 @@ const QUESTOES_PCAL_LOTE27 = [
   },
   {
     id: "ES-029", disciplina: "Estatística", assunto: "Análise de dados", subassunto: "Bibliotecas Python (Pandas × Scikit-learn)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Python para ciência de dados)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.78,
     enunciado: "Em ciência de dados com Python, a biblioteca Scikit-learn (sklearn) é utilizada principalmente para a manipulação e análise de dados estruturados em formato tabular, por meio de suas estruturas DataFrame e Series, ao passo que a biblioteca Pandas é voltada à criação e à avaliação de modelos de aprendizado de máquina.",
@@ -133,7 +133,7 @@ const QUESTOES_PCAL_LOTE27 = [
   },
   {
     id: "ES-030", disciplina: "Estatística", assunto: "Mineração de dados", subassunto: "Clusterização (aprendizado não supervisionado)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (mineração de dados)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 55, probReaparecer: 0.8,
     enunciado: "A análise de agrupamentos (clusterização) é uma técnica de aprendizado supervisionado, que exige a existência de rótulos previamente definidos nos dados para identificar grupos de observações semelhantes entre si.",
@@ -152,7 +152,7 @@ const QUESTOES_PCAL_LOTE27 = [
   },
   {
     id: "ES-031", disciplina: "Estatística", assunto: "Machine Learning", subassunto: "Classificador Naive Bayes",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (machine learning)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 55, probReaparecer: 0.76,
     enunciado: "O classificador Naive Bayes fundamenta-se no teorema de Bayes e assume que os atributos preditores são condicionalmente independentes entre si, dado o valor da classe — premissa que, embora frequentemente não corresponda à realidade dos dados, não impede que o algoritmo apresente bom desempenho em diversas aplicações práticas.",
@@ -171,7 +171,7 @@ const QUESTOES_PCAL_LOTE27 = [
   },
   {
     id: "ES-032", disciplina: "Estatística", assunto: "Análise de dados", subassunto: "Processamento de Linguagem Natural (n-gramas)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (PLN)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.76,
     enunciado: "No Processamento de Linguagem Natural (PLN), os n-gramas constituem uma técnica de representação textual baseada em sequências contíguas de n itens (palavras ou caracteres) extraídas de um texto, sendo um unigrama uma sequência de dois itens consecutivos e um bigrama, uma sequência de um único item.",
@@ -190,7 +190,7 @@ const QUESTOES_PCAL_LOTE27 = [
   },
   {
     id: "ES-033", disciplina: "Estatística", assunto: "Machine Learning", subassunto: "Overfitting e underfitting",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (machine learning)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.74,
     enunciado: "O underfitting (subajuste) ocorre quando um modelo preditivo se ajusta excessivamente aos dados de treinamento, capturando ruídos e particularidades que prejudicam sua capacidade de generalização para novos dados, ao passo que o overfitting caracteriza-se pela incapacidade do modelo de capturar adequadamente os padrões subjacentes aos dados.",
@@ -209,7 +209,7 @@ const QUESTOES_PCAL_LOTE27 = [
   },
   {
     id: "ES-034", disciplina: "Estatística", assunto: "Análise de dados", subassunto: "Formatos de dados abertos",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (dados abertos)",
     tipo: "CE", dificuldade: 1, tempoIdealSeg: 45, probReaparecer: 0.7,
     enunciado: "XML, JSON e CSV são formatos amplamente utilizados para representação e intercâmbio de dados estruturados e semiestruturados, sendo o CSV mais adequado para dados tabulares simples, enquanto XML e JSON são comumente empregados para representar dados hierárquicos ou aninhados.",
@@ -228,7 +228,7 @@ const QUESTOES_PCAL_LOTE27 = [
   },
   {
     id: "ES-035", disciplina: "Estatística", assunto: "Inferência", subassunto: "Estimação pontual × intervalar",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (inferência estatística)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 55, probReaparecer: 0.72,
     enunciado: "Diferentemente da estimação intervalar, que atribui um único valor numérico como estimativa de um parâmetro populacional, a estimação pontual fornece um intervalo de valores plausíveis para esse parâmetro, associado a um nível de confiança.",
@@ -247,7 +247,7 @@ const QUESTOES_PCAL_LOTE27 = [
   },
   {
     id: "ES-036", disciplina: "Estatística", assunto: "Amostragem", subassunto: "Amostragem estratificada",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (técnicas de amostragem)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.72,
     enunciado: "Na amostragem estratificada, a população é dividida em subgrupos (estratos) internamente mais heterogêneos entre si, a partir dos quais se selecionam amostras, de modo a garantir a representatividade de cada estrato na amostra final.",
@@ -266,7 +266,7 @@ const QUESTOES_PCAL_LOTE27 = [
   },
   {
     id: "ES-037", disciplina: "Estatística", assunto: "Estatística descritiva", subassunto: "Assimetria da distribuição",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (assimetria)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 55, probReaparecer: 0.72,
     enunciado: "Em uma distribuição de dados na qual a mediana é superior à média aritmética, é correto afirmar que essa distribuição apresenta assimetria negativa (à esquerda), com cauda mais alongada para valores menores.",

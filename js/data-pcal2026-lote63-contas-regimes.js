@@ -50,7 +50,7 @@ const QUESTOES_PCAL_LOTE63 = [
   /* ---------- Conceito e classificação das contas ---------- */
   {
     id: "CT-035", disciplina: "Contabilidade e Análise Financeira", assunto: "Contas contábeis", subassunto: "Função × funcionamento da conta",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de troca de conceitos)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 70, probReaparecer: 0.88,
     enunciado: "Ao estabelecer que determinada conta tem seu saldo aumentado por lançamentos a crédito e diminuído por lançamentos a débito, o plano de contas está definindo a função dessa conta.",
@@ -69,7 +69,7 @@ const QUESTOES_PCAL_LOTE63 = [
   },
   {
     id: "CT-036", disciplina: "Contabilidade e Análise Financeira", assunto: "Contas contábeis", subassunto: "Plano de contas como livro obrigatório",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de exigência inexistente)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.84,
     enunciado: "O plano de contas integra o rol de livros contábeis obrigatórios da entidade, devendo ser autenticado na junta comercial ao lado do livro diário.",
@@ -88,7 +88,7 @@ const QUESTOES_PCAL_LOTE63 = [
   },
   {
     id: "CT-037", disciplina: "Contabilidade e Análise Financeira", assunto: "Contas contábeis", subassunto: "Conteúdo do plano de contas",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de restrição indevida)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 70, probReaparecer: 0.8,
     enunciado: "O plano de contas de uma entidade esgota-se no elenco das contas passíveis de utilização, segregadas em devedoras ou credoras e em patrimoniais ou de resultado.",
@@ -107,7 +107,7 @@ const QUESTOES_PCAL_LOTE63 = [
   },
   {
     id: "CT-038", disciplina: "Contabilidade e Análise Financeira", assunto: "Contas contábeis", subassunto: "Contas sintéticas e analíticas",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de literalidade conceitual)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.79,
     enunciado: "Quanto ao nível de detalhamento, as contas sintéticas agrupam saldos de outras contas e não recebem lançamentos diretos, ao passo que as analíticas são as que efetivamente recebem os lançamentos da escrituração.",
@@ -126,7 +126,7 @@ const QUESTOES_PCAL_LOTE63 = [
   },
   {
     id: "CT-039", disciplina: "Contabilidade e Análise Financeira", assunto: "Contas contábeis", subassunto: "Contas redutoras — natureza",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de literalidade conceitual)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 70, probReaparecer: 0.87,
     enunciado: "As contas redutoras apresentam natureza inversa à das demais contas do grupo em que se classificam.",
@@ -145,7 +145,7 @@ const QUESTOES_PCAL_LOTE63 = [
   },
   {
     id: "CT-040", disciplina: "Contabilidade e Análise Financeira", assunto: "Contas contábeis", subassunto: "Natureza dos saldos no ativo e no passivo",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de literalidade conceitual)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 70, probReaparecer: 0.85,
     enunciado: "Os grupos patrimoniais ativo e passivo são compostos tanto por contas de natureza devedora quanto por contas de natureza credora.",
@@ -164,7 +164,7 @@ const QUESTOES_PCAL_LOTE63 = [
   },
   {
     id: "CT-041", disciplina: "Contabilidade e Análise Financeira", assunto: "Contas contábeis", subassunto: "Lucros acumulados — classificação",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de troca de conceitos)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 70, probReaparecer: 0.9,
     enunciado: "As contas de receitas e de despesas classificam-se como contas de resultado, o mesmo ocorrendo com a conta lucros ou prejuízos acumulados.",
@@ -183,7 +183,7 @@ const QUESTOES_PCAL_LOTE63 = [
   },
   {
     id: "CT-042", disciplina: "Contabilidade e Análise Financeira", assunto: "Contas contábeis", subassunto: "Saldo das contas de resultado",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de literalidade conceitual)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 60, probReaparecer: 0.82,
     enunciado: "As contas de resultado podem apresentar saldo devedor ou credor, conforme se trate de despesa ou de receita.",
@@ -202,7 +202,7 @@ const QUESTOES_PCAL_LOTE63 = [
   },
   {
     id: "CT-043", disciplina: "Contabilidade e Análise Financeira", assunto: "Contas contábeis", subassunto: "Classificação em circulante e não circulante",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de generalização)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.78,
     enunciado: "Todas as contas que integram o plano de contas de uma entidade classificam-se em circulantes ou não circulantes.",
@@ -221,7 +221,7 @@ const QUESTOES_PCAL_LOTE63 = [
   },
   {
     id: "CT-044", disciplina: "Contabilidade e Análise Financeira", assunto: "Contas contábeis", subassunto: "Contas de compensação",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de literalidade conceitual)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 70, probReaparecer: 0.72,
     enunciado: "As contas de compensação registram atos administrativos que ainda não alteraram o patrimônio, mas que poderão vir a afetá-lo no futuro, como avais e garantias prestadas a terceiros.",
@@ -242,7 +242,7 @@ const QUESTOES_PCAL_LOTE63 = [
   /* ---------- Partidas dobradas e escrituração ---------- */
   {
     id: "CT-045", disciplina: "Contabilidade e Análise Financeira", assunto: "Escrituração contábil", subassunto: "Lançamento de compra à vista",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de inversão de lançamento)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 75, probReaparecer: 0.86,
     enunciado: "Uma sociedade que adquire à vista, mediante transferência bancária, um imóvel no valor de R$ 350.000 deve lançar esse valor a débito na conta bancos conta movimento e a crédito na conta imóveis, uma vez que há saída de dinheiro e entrada de um bem.",
@@ -261,7 +261,7 @@ const QUESTOES_PCAL_LOTE63 = [
   },
   {
     id: "CT-046", disciplina: "Contabilidade e Análise Financeira", assunto: "Escrituração contábil", subassunto: "Despesas antecipadas",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de literalidade conceitual)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 75, probReaparecer: 0.85,
     enunciado: "O valor pago antecipadamente por um seguro com cobertura de doze meses deve ser registrado pela contratante no ativo, na conta despesas antecipadas, e apropriado ao resultado à medida que o período de cobertura transcorre.",
@@ -280,7 +280,7 @@ const QUESTOES_PCAL_LOTE63 = [
   },
   {
     id: "CT-047", disciplina: "Contabilidade e Análise Financeira", assunto: "Escrituração contábil", subassunto: "Receitas antecipadas",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de troca de conceitos)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 70, probReaparecer: 0.81,
     enunciado: "O valor recebido de um cliente por serviço que só será prestado no exercício seguinte deve ser reconhecido como receita no momento do recebimento, por já estar disponível em caixa.",
@@ -299,7 +299,7 @@ const QUESTOES_PCAL_LOTE63 = [
   },
   {
     id: "CT-048", disciplina: "Contabilidade e Análise Financeira", assunto: "Escrituração contábil", subassunto: "Partidas dobradas — correspondência de valores",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de restrição indevida)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 70, probReaparecer: 0.77,
     enunciado: "Pelo método das partidas dobradas, cada lançamento deve envolver necessariamente uma única conta debitada e uma única conta creditada, de modo que a soma dos débitos coincida com a dos créditos.",
@@ -320,7 +320,7 @@ const QUESTOES_PCAL_LOTE63 = [
   /* ---------- Regimes contábeis ---------- */
   {
     id: "CT-049", disciplina: "Contabilidade e Análise Financeira", assunto: "Regimes contábeis", subassunto: "Definição do regime de caixa",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de troca de conceitos)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 70, probReaparecer: 0.89,
     enunciado: "Denomina-se regime de caixa aquele que considera o conjunto completo dos eventos que afetam o resultado da entidade em determinado exercício social, independentemente da movimentação financeira.",
@@ -339,7 +339,7 @@ const QUESTOES_PCAL_LOTE63 = [
   },
   {
     id: "CT-050", disciplina: "Contabilidade e Análise Financeira", assunto: "Regimes contábeis", subassunto: "Reconhecimento de receita por competência",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de troca de conceitos)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 60, probReaparecer: 0.88,
     enunciado: "Pelo regime de competência, as receitas de vendas devem ser contabilizadas somente no momento do recebimento dos valores, independentemente da entrega do produto.",
@@ -358,7 +358,7 @@ const QUESTOES_PCAL_LOTE63 = [
   },
   {
     id: "CT-051", disciplina: "Contabilidade e Análise Financeira", assunto: "Regimes contábeis", subassunto: "Reconhecimento de despesa por competência",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de literalidade conceitual)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.84,
     enunciado: "O regime de competência determina o reconhecimento das despesas no período em que são incorridas, independentemente do respectivo fluxo de caixa.",
@@ -377,7 +377,7 @@ const QUESTOES_PCAL_LOTE63 = [
   },
   {
     id: "CT-052", disciplina: "Contabilidade e Análise Financeira", assunto: "Regimes contábeis", subassunto: "Apuração de resultado por competência",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de aplicação numérica)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 90, probReaparecer: 0.87,
     enunciado: "Determinada sociedade realizou vendas de R$ 240.000 no período, tendo recebido R$ 205.000, e incorreu em despesas de R$ 186.000, das quais pagou R$ 178.000. Nessas condições, o resultado apurado pelo regime de competência é um lucro de R$ 54.000.",
@@ -396,7 +396,7 @@ const QUESTOES_PCAL_LOTE63 = [
   },
   {
     id: "CT-053", disciplina: "Contabilidade e Análise Financeira", assunto: "Regimes contábeis", subassunto: "Resultado pelo regime de caixa",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de aplicação numérica)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 90, probReaparecer: 0.8,
     enunciado: "Uma entidade prestou serviços no valor de R$ 90.000 no exercício, dos quais recebeu R$ 62.000, e incorreu em despesas de R$ 71.000, tendo pago R$ 65.000. Pelo regime de caixa, apura-se prejuízo de R$ 3.000 no período.",
@@ -415,7 +415,7 @@ const QUESTOES_PCAL_LOTE63 = [
   },
   {
     id: "CT-054", disciplina: "Contabilidade e Análise Financeira", assunto: "Regimes contábeis", subassunto: "Alcance do regime de competência",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de restrição indevida)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.83,
     enunciado: "O regime de competência aplica-se somente às sociedades de grande porte, sendo facultado às pequenas e médias empresas adotar o regime de caixa em sua escrituração contábil.",
@@ -434,7 +434,7 @@ const QUESTOES_PCAL_LOTE63 = [
   },
   {
     id: "CT-055", disciplina: "Contabilidade e Análise Financeira", assunto: "Regimes contábeis", subassunto: "Finalidade informacional do regime de competência",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de literalidade conceitual)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 60, probReaparecer: 0.76,
     enunciado: "O regime de competência proporciona representação mais fiel da situação patrimonial e do desempenho econômico da entidade do que o regime de caixa.",
@@ -453,7 +453,7 @@ const QUESTOES_PCAL_LOTE63 = [
   },
   {
     id: "CT-056", disciplina: "Contabilidade e Análise Financeira", assunto: "Regimes contábeis", subassunto: "Regime misto na Lei 4.320/1964",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de troca de conceitos)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 75, probReaparecer: 0.85,
     enunciado: "Na execução orçamentária regida pela Lei nº 4.320/1964, pertencem ao exercício financeiro as receitas nele legalmente arrecadadas e as despesas nele legalmente empenhadas, o que configura a adoção de regime misto.",
@@ -472,7 +472,7 @@ const QUESTOES_PCAL_LOTE63 = [
   },
   {
     id: "CT-057", disciplina: "Contabilidade e Análise Financeira", assunto: "Regimes contábeis", subassunto: "Regime misto — inversão dos critérios",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de troca de conceitos)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 70, probReaparecer: 0.82,
     enunciado: "Segundo a Lei nº 4.320/1964, pertencem ao exercício financeiro as receitas nele legalmente empenhadas e as despesas nele efetivamente pagas.",
@@ -491,7 +491,7 @@ const QUESTOES_PCAL_LOTE63 = [
   },
   {
     id: "CT-058", disciplina: "Contabilidade e Análise Financeira", assunto: "Regimes contábeis", subassunto: "Competência e movimentação financeira",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de exigência inexistente)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 60, probReaparecer: 0.79,
     enunciado: "No regime de competência, o registro da receita depende de o recebimento ser realizado em dinheiro ou em depósito bancário.",
@@ -510,7 +510,7 @@ const QUESTOES_PCAL_LOTE63 = [
   },
   {
     id: "CT-059", disciplina: "Contabilidade e Análise Financeira", assunto: "Regimes contábeis", subassunto: "Obrigatoriedade legal do regime",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de literalidade normativa)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.78,
     enunciado: "A escrituração da companhia deve ser mantida em registros permanentes, com obediência aos preceitos da legislação comercial e aos princípios de contabilidade geralmente aceitos, observando-se métodos ou critérios contábeis uniformes no tempo.",
@@ -531,7 +531,7 @@ const QUESTOES_PCAL_LOTE63 = [
   /* ---------- Atos e fatos administrativos ---------- */
   {
     id: "CT-060", disciplina: "Contabilidade e Análise Financeira", assunto: "Atos e fatos administrativos", subassunto: "Fato modificativo diminutivo",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de troca de conceitos)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 70, probReaparecer: 0.81,
     enunciado: "O pagamento de juros incidentes sobre um empréstimo bancário constitui fato permutativo, pois há apenas a troca de um elemento do ativo por redução equivalente do passivo.",
@@ -550,7 +550,7 @@ const QUESTOES_PCAL_LOTE63 = [
   },
   {
     id: "CT-061", disciplina: "Contabilidade e Análise Financeira", assunto: "Atos e fatos administrativos", subassunto: "Fato misto",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de literalidade conceitual)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 75, probReaparecer: 0.83,
     enunciado: "O recebimento de uma duplicata com desconto concedido ao cliente por antecipação de pagamento configura fato misto, por reunir, em uma única operação, permuta de elementos patrimoniais e variação do patrimônio líquido.",
@@ -569,7 +569,7 @@ const QUESTOES_PCAL_LOTE63 = [
   },
   {
     id: "CT-062", disciplina: "Contabilidade e Análise Financeira", assunto: "Atos e fatos administrativos", subassunto: "Ato administrativo relevante",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de troca de conceitos)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 70, probReaparecer: 0.76,
     enunciado: "A assinatura de contrato de fiança em favor de terceiro, sem qualquer desembolso no momento, constitui fato administrativo modificativo, devendo ser registrada em conta de resultado.",
@@ -590,7 +590,7 @@ const QUESTOES_PCAL_LOTE63 = [
   /* ---------- Balancete e conferência ---------- */
   {
     id: "CT-063", disciplina: "Contabilidade e Análise Financeira", assunto: "Balancete de verificação", subassunto: "Limites do balancete como prova de correção",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de generalização)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 75, probReaparecer: 0.84,
     enunciado: "A igualdade entre a soma dos saldos devedores e a dos saldos credores no balancete de verificação assegura que a escrituração do período foi realizada sem erros.",
@@ -609,7 +609,7 @@ const QUESTOES_PCAL_LOTE63 = [
   },
   {
     id: "CT-064", disciplina: "Contabilidade e Análise Financeira", assunto: "Balancete de verificação", subassunto: "Contas que compõem o balancete",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de restrição indevida)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.74,
     enunciado: "O balancete de verificação levantado antes do encerramento do exercício apresenta exclusivamente as contas patrimoniais, uma vez que as contas de resultado só são apuradas ao final do período.",
@@ -630,7 +630,7 @@ const QUESTOES_PCAL_LOTE63 = [
   /* ---------- Contraexemplos e casos aplicados ---------- */
   {
     id: "CT-065", disciplina: "Contabilidade e Análise Financeira", assunto: "Escrituração contábil", subassunto: "Aquisição a prazo — fato permutativo",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de literalidade conceitual)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 65, probReaparecer: 0.77,
     enunciado: "A aquisição de um veículo a prazo, sem entrada, constitui fato permutativo, ainda que aumente simultaneamente o ativo e o passivo da entidade.",
@@ -649,7 +649,7 @@ const QUESTOES_PCAL_LOTE63 = [
   },
   {
     id: "CT-066", disciplina: "Contabilidade e Análise Financeira", assunto: "Contas contábeis", subassunto: "Conta caixa e saldo credor",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de literalidade conceitual)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 70, probReaparecer: 0.75,
     enunciado: "A apuração de saldo credor na conta caixa indica necessariamente erro de escrituração, dado que não é possível pagar mais do que se possui em espécie.",
@@ -668,7 +668,7 @@ const QUESTOES_PCAL_LOTE63 = [
   },
   {
     id: "CT-067", disciplina: "Contabilidade e Análise Financeira", assunto: "Contas contábeis", subassunto: "Saldo credor em conta bancária",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de generalização)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 70, probReaparecer: 0.78,
     enunciado: "Assim como ocorre com a conta caixa, o saldo credor na conta bancos conta movimento revela necessariamente erro de escrituração.",
@@ -687,7 +687,7 @@ const QUESTOES_PCAL_LOTE63 = [
   },
   {
     id: "CT-068", disciplina: "Contabilidade e Análise Financeira", assunto: "Regimes contábeis", subassunto: "Depreciação e regime de competência",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de literalidade conceitual)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 75, probReaparecer: 0.8,
     enunciado: "O reconhecimento da depreciação é manifestação do regime de competência, por distribuir ao longo dos exercícios o custo de um ativo cujo desembolso ocorreu integralmente em um único momento.",
@@ -706,7 +706,7 @@ const QUESTOES_PCAL_LOTE63 = [
   },
   {
     id: "CT-069", disciplina: "Contabilidade e Análise Financeira", assunto: "Contas contábeis", subassunto: "Provisões como contas retificadoras",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de troca de conceitos)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 70, probReaparecer: 0.73,
     enunciado: "A provisão para perdas esperadas com créditos de liquidação duvidosa é conta do passivo circulante, por representar obrigação da entidade decorrente de inadimplência prevista.",
@@ -725,7 +725,7 @@ const QUESTOES_PCAL_LOTE63 = [
   },
   {
     id: "CT-070", disciplina: "Contabilidade e Análise Financeira", assunto: "Escrituração contábil", subassunto: "Erro de lançamento e balancete",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de aplicação conceitual)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 80, probReaparecer: 0.79,
     enunciado: "Se uma despesa de energia elétrica for lançada, por engano, a débito da conta despesas de aluguel, o erro provocará desequilíbrio entre as somas de débitos e créditos no balancete de verificação.",
@@ -744,7 +744,7 @@ const QUESTOES_PCAL_LOTE63 = [
   },
   {
     id: "CT-071", disciplina: "Contabilidade e Análise Financeira", assunto: "Regimes contábeis", subassunto: "Competência e exercício social",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de exigência inexistente)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 70, probReaparecer: 0.74,
     enunciado: "O exercício social deve coincidir obrigatoriamente com o ano civil, encerrando-se em 31 de dezembro, a fim de viabilizar a aplicação do regime de competência.",
@@ -763,7 +763,7 @@ const QUESTOES_PCAL_LOTE63 = [
   },
   {
     id: "CT-072", disciplina: "Contabilidade e Análise Financeira", assunto: "Contas contábeis", subassunto: "Encerramento das contas de resultado",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de literalidade conceitual)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 70, probReaparecer: 0.8,
     enunciado: "Ao final do exercício, as contas de receitas e despesas são encerradas contra a conta de apuração do resultado, de modo que iniciam o exercício seguinte com saldo zero.",
@@ -782,7 +782,7 @@ const QUESTOES_PCAL_LOTE63 = [
   },
   {
     id: "CT-073", disciplina: "Contabilidade e Análise Financeira", assunto: "Escrituração contábil", subassunto: "Estorno de lançamento",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de exigência inexistente)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 70, probReaparecer: 0.71,
     enunciado: "A correção de lançamento equivocado na escrituração contábil deve ser feita mediante rasura do registro original, com aposição de visto do contador responsável.",
@@ -801,7 +801,7 @@ const QUESTOES_PCAL_LOTE63 = [
   },
   {
     id: "CT-074", disciplina: "Contabilidade e Análise Financeira", assunto: "Regimes contábeis", subassunto: "Competência na contabilidade pública patrimonial",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de troca de conceitos)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 75, probReaparecer: 0.77,
     enunciado: "Por força do regime misto estabelecido na Lei nº 4.320/1964, a contabilidade patrimonial do setor público reconhece as receitas pelo momento da arrecadação, tal como ocorre na execução orçamentária.",
@@ -828,7 +828,7 @@ const QUESTOES_PCAL_LOTE63 = [
      ------------------------------------------------------------------- */
   {
     id: "CT-075", disciplina: "Contabilidade e Análise Financeira", assunto: "Escrituração contábil", subassunto: "Livro Diário como único livro indispensável",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (contraexemplo de restrição indevida)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 75, probReaparecer: 0.72,
     enunciado: "O livro Diário é o único livro contábil cuja escrituração é indispensável a todo empresário e a toda sociedade empresária, ressalvadas as exigências específicas previstas em leis especiais.",
@@ -847,7 +847,7 @@ const QUESTOES_PCAL_LOTE63 = [
   },
   {
     id: "CT-076", disciplina: "Contabilidade e Análise Financeira", assunto: "Contas contábeis", subassunto: "Alcance da depreciação",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (contraexemplo de restrição indevida)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 70, probReaparecer: 0.75,
     enunciado: "A depreciação alcança somente os bens tangíveis do ativo imobilizado que tenham vida útil definida, não incidindo sobre terrenos.",
@@ -866,7 +866,7 @@ const QUESTOES_PCAL_LOTE63 = [
   },
   {
     id: "CT-077", disciplina: "Contabilidade e Análise Financeira", assunto: "Escrituração contábil", subassunto: "Formalidades intrínsecas da escrituração",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (contraexemplo de exigência inexistente)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 80, probReaparecer: 0.73,
     enunciado: "A escrituração contábil deve ser feita em idioma e moeda corrente nacionais, em ordem cronológica de dia, mês e ano, vedados os intervalos em branco, as entrelinhas, as rasuras e as emendas.",
@@ -885,7 +885,7 @@ const QUESTOES_PCAL_LOTE63 = [
   },
   {
     id: "CT-078", disciplina: "Contabilidade e Análise Financeira", assunto: "Escrituração contábil", subassunto: "Transcrição das demonstrações no Diário",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (contraexemplo de exigência inexistente)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 75, probReaparecer: 0.7,
     enunciado: "O balanço patrimonial e o balanço de resultado econômico devem ser lançados no livro Diário e assinados por contabilista legalmente habilitado e pelo empresário ou sociedade empresária.",

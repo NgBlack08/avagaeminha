@@ -30,7 +30,7 @@ const QUESTOES_PCAL_LOTE55 = [
   /* ===================== CRIMES CIBERNÉTICOS ===================== */
   {
     id: "CC-022", disciplina: "Crimes Cibernéticos e Segurança Digital", assunto: "Marco Civil da Internet", subassunto: "Guarda de registros",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (pseudo-literalidade)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 70, probReaparecer: 0.85,
     enunciado: "Nos termos do Marco Civil da Internet, o provedor de aplicações de internet constituído na forma de pessoa jurídica, que exerça essa atividade de forma organizada, profissionalmente e com fins econômicos, deverá manter os respectivos registros de acesso a aplicações de internet, sob sigilo, em ambiente controlado e de segurança, pelo prazo de um ano.",
@@ -49,7 +49,7 @@ const QUESTOES_PCAL_LOTE55 = [
   },
   {
     id: "CC-023", disciplina: "Crimes Cibernéticos e Segurança Digital", assunto: "Invasão de dispositivo informático", subassunto: "Art. 154-A do CP — pena",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (pseudo-literalidade)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.85,
     enunciado: "Configura o crime de invasão de dispositivo informático a conduta de invadir dispositivo informático alheio, conectado ou não à rede de computadores, com o fim de obter, adulterar ou destruir dados ou informações sem autorização expressa ou tácita do usuário do dispositivo, ou de instalar vulnerabilidades para obter vantagem ilícita, sujeitando o agente à pena de detenção, de três meses a um ano, e multa.",
@@ -68,7 +68,7 @@ const QUESTOES_PCAL_LOTE55 = [
   },
   {
     id: "CC-024", disciplina: "Crimes Cibernéticos e Segurança Digital", assunto: "Fraude eletrônica", subassunto: "Art. 171, §2º-A, do CP",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (pseudo-literalidade)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.8,
     enunciado: "A fraude eletrônica, consistente em obter vantagem ilícita, em prejuízo alheio, mediante informações fornecidas pela vítima ou por terceiro induzido a erro por meio de redes sociais, contatos telefônicos ou envio de correio eletrônico fraudulento, ou por qualquer outro meio fraudulento análogo, é punida com reclusão, de um a cinco anos, e multa.",
@@ -87,7 +87,7 @@ const QUESTOES_PCAL_LOTE55 = [
   },
   {
     id: "CC-025", disciplina: "Crimes Cibernéticos e Segurança Digital", assunto: "LGPD", subassunto: "Dado pessoal sensível",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (pseudo-literalidade)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 70, probReaparecer: 0.8,
     enunciado: "Para os fins da Lei Geral de Proteção de Dados Pessoais, considera-se dado pessoal sensível o dado pessoal sobre origem racial ou étnica, convicção religiosa, opinião política, filiação a sindicato ou a organização de caráter religioso, filosófico ou político, dado referente à saúde ou à vida sexual, dado genético ou biométrico e dado financeiro ou patrimonial, quando vinculado a uma pessoa natural.",
@@ -106,7 +106,7 @@ const QUESTOES_PCAL_LOTE55 = [
   },
   {
     id: "CC-026", disciplina: "Crimes Cibernéticos e Segurança Digital", assunto: "Invasão de dispositivo informático", subassunto: "Figura equiparada",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (pseudo-literalidade)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.75,
     enunciado: "Incorre na mesma pena do crime de invasão de dispositivo informático quem produz, oferece, distribui, vende ou difunde dispositivo ou programa de computador com o intuito de permitir a prática da conduta, desde que o faça com finalidade lucrativa.",
@@ -125,7 +125,7 @@ const QUESTOES_PCAL_LOTE55 = [
   },
   {
     id: "CC-027", disciplina: "Crimes Cibernéticos e Segurança Digital", assunto: "Invasão de dispositivo informático", subassunto: "Ação penal",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (pseudo-literalidade)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 60, probReaparecer: 0.7,
     enunciado: "Nos crimes de invasão de dispositivo informático, procede-se mediante ação penal pública incondicionada, independentemente da qualidade da vítima.",
@@ -146,7 +146,7 @@ const QUESTOES_PCAL_LOTE55 = [
   /* ===================== DIREITO PENAL ===================== */
   {
     id: "DP-097", disciplina: "Direito Penal", assunto: "Crimes contra a vida", subassunto: "Homicídio qualificado — pena",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (pseudo-literalidade)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.8,
     enunciado: "O homicídio praticado mediante paga ou promessa de recompensa, por motivo torpe, com emprego de veneno, fogo, explosivo, asfixia, tortura ou outro meio insidioso ou cruel, ou à traição, de emboscada, ou mediante dissimulação, é punido com reclusão, de doze a vinte e cinco anos.",
@@ -165,7 +165,7 @@ const QUESTOES_PCAL_LOTE55 = [
   },
   {
     id: "DP-098", disciplina: "Direito Penal", assunto: "Tentativa", subassunto: "Causa de diminuição",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (pseudo-literalidade)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.8,
     enunciado: "Salvo disposição em contrário, pune-se a tentativa com a pena correspondente ao crime consumado, diminuída de um sexto a um terço.",
@@ -184,7 +184,7 @@ const QUESTOES_PCAL_LOTE55 = [
   },
   {
     id: "DP-099", disciplina: "Direito Penal", assunto: "Arrependimento posterior", subassunto: "Marco temporal",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (pseudo-literalidade)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 60, probReaparecer: 0.8,
     enunciado: "Nos crimes cometidos sem violência ou grave ameaça à pessoa, reparado o dano ou restituída a coisa, por ato voluntário do agente, até a prolação da sentença de primeiro grau, a pena será reduzida de um a dois terços.",
@@ -203,7 +203,7 @@ const QUESTOES_PCAL_LOTE55 = [
   },
   {
     id: "DP-100", disciplina: "Direito Penal", assunto: "Roubo", subassunto: "Majorante do emprego de arma de fogo",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (pseudo-literalidade)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 60, probReaparecer: 0.8,
     enunciado: "No crime de roubo, a pena é aumentada de um terço até metade se a violência ou ameaça é exercida com emprego de arma de fogo.",
@@ -222,7 +222,7 @@ const QUESTOES_PCAL_LOTE55 = [
   },
   {
     id: "DP-101", disciplina: "Direito Penal", assunto: "Aplicação da pena", subassunto: "Regime inicial de cumprimento",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (pseudo-literalidade)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.8,
     enunciado: "O condenado não reincidente cuja pena privativa de liberdade seja superior a seis anos deverá iniciar seu cumprimento em regime fechado.",
@@ -243,7 +243,7 @@ const QUESTOES_PCAL_LOTE55 = [
   /* ===================== PROCESSO PENAL ===================== */
   {
     id: "PP-082", disciplina: "Processo Penal", assunto: "Prisão em flagrante", subassunto: "Comunicação ao juiz",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (pseudo-literalidade)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.85,
     enunciado: "Em até quarenta e oito horas após a realização da prisão em flagrante, será encaminhado ao juiz competente o auto de prisão em flagrante e, caso o autuado não informe o nome de seu advogado, cópia integral para a Defensoria Pública.",
@@ -262,7 +262,7 @@ const QUESTOES_PCAL_LOTE55 = [
   },
   {
     id: "PP-083", disciplina: "Processo Penal", assunto: "Audiência de custódia", subassunto: "Prazo de realização",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (pseudo-literalidade)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.85,
     enunciado: "Recebido o auto de prisão em flagrante, o juiz deverá promover audiência de custódia com a presença do acusado, seu advogado constituído ou defensor público e o membro do Ministério Público, no prazo máximo de setenta e duas horas contadas da realização da prisão.",
@@ -281,7 +281,7 @@ const QUESTOES_PCAL_LOTE55 = [
   },
   {
     id: "PP-084", disciplina: "Processo Penal", assunto: "Fiança", subassunto: "Fiança concedida pelo delegado",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (pseudo-literalidade)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 60, probReaparecer: 0.85,
     enunciado: "A autoridade policial somente poderá conceder fiança nos casos de infração cuja pena privativa de liberdade máxima não seja superior a dois anos.",
@@ -300,7 +300,7 @@ const QUESTOES_PCAL_LOTE55 = [
   },
   {
     id: "PP-085", disciplina: "Processo Penal", assunto: "Inquérito policial", subassunto: "Prazo de conclusão",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (pseudo-literalidade)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.85,
     enunciado: "O inquérito policial deverá terminar no prazo de quinze dias, se o indiciado tiver sido preso em flagrante ou estiver preso preventivamente, contado o prazo, nessa hipótese, a partir do dia em que se executar a ordem de prisão.",
@@ -319,7 +319,7 @@ const QUESTOES_PCAL_LOTE55 = [
   },
   {
     id: "PP-086", disciplina: "Processo Penal", assunto: "Prisão preventiva", subassunto: "Revisão periódica",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (pseudo-literalidade)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 60, probReaparecer: 0.8,
     enunciado: "O órgão emissor da decisão que decretar a prisão preventiva deverá revisar a necessidade de sua manutenção a cada sessenta dias, mediante decisão fundamentada, de ofício, sob pena de tornar a prisão ilegal.",
@@ -340,7 +340,7 @@ const QUESTOES_PCAL_LOTE55 = [
   /* ===================== DIREITO CONSTITUCIONAL ===================== */
   {
     id: "DC-103", disciplina: "Direito Constitucional", assunto: "Direitos e garantias fundamentais", subassunto: "Inviolabilidade domiciliar",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (pseudo-literalidade)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 60, probReaparecer: 0.9,
     enunciado: "A casa é asilo inviolável do indivíduo, ninguém nela podendo penetrar sem consentimento do morador, salvo em caso de flagrante delito ou desastre, ou para prestar socorro, ou, a qualquer hora, por determinação judicial.",
@@ -359,7 +359,7 @@ const QUESTOES_PCAL_LOTE55 = [
   },
   {
     id: "DC-104", disciplina: "Direito Constitucional", assunto: "Direitos e garantias fundamentais", subassunto: "Prisão — autoridade competente",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (pseudo-literalidade)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.9,
     enunciado: "Ninguém será preso senão em flagrante delito ou por ordem escrita e fundamentada de autoridade policial ou judiciária competente, salvo nos casos de transgressão militar ou crime propriamente militar, definidos em lei.",
@@ -378,7 +378,7 @@ const QUESTOES_PCAL_LOTE55 = [
   },
   {
     id: "DC-105", disciplina: "Direito Constitucional", assunto: "Segurança pública", subassunto: "Atribuições da polícia civil",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (pseudo-literalidade)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 60, probReaparecer: 0.9,
     enunciado: "Às polícias civis, dirigidas por delegados de polícia de carreira, incumbem, ressalvada a competência da União, as funções de polícia judiciária e a apuração de infrações penais, exceto as militares e as de competência da Justiça Eleitoral.",
@@ -397,7 +397,7 @@ const QUESTOES_PCAL_LOTE55 = [
   },
   {
     id: "DC-106", disciplina: "Direito Constitucional", assunto: "Direitos e garantias fundamentais", subassunto: "Identificação criminal",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (pseudo-literalidade)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.85,
     enunciado: "O civilmente identificado não será submetido a identificação criminal em nenhuma hipótese.",
@@ -418,7 +418,7 @@ const QUESTOES_PCAL_LOTE55 = [
   /* ===================== LEGISLAÇÃO ESPECIAL ===================== */
   {
     id: "LE-167", disciplina: "Legislação Especial", assunto: "Organizações criminosas", subassunto: "Conceito legal",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (pseudo-literalidade)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 70, probReaparecer: 0.9,
     enunciado: "Considera-se organização criminosa a associação de três ou mais pessoas, estruturalmente ordenada e caracterizada pela divisão de tarefas, ainda que informalmente, com objetivo de obter, direta ou indiretamente, vantagem de qualquer natureza, mediante a prática de infrações penais cujas penas máximas sejam superiores a quatro anos, ou que sejam de caráter transnacional.",
@@ -437,7 +437,7 @@ const QUESTOES_PCAL_LOTE55 = [
   },
   {
     id: "LE-168", disciplina: "Legislação Especial", assunto: "Violência doméstica", subassunto: "Afastamento imediato do agressor",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (pseudo-literalidade)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 70, probReaparecer: 0.85,
     enunciado: "Verificada a existência de risco atual ou iminente à vida ou à integridade física ou psicológica da mulher em situação de violência doméstica e familiar, o agressor será imediatamente afastado do lar, domicílio ou local de convivência com a ofendida pelo delegado de polícia, independentemente de o município ser sede de comarca.",
@@ -456,7 +456,7 @@ const QUESTOES_PCAL_LOTE55 = [
   },
   {
     id: "LE-169", disciplina: "Legislação Especial", assunto: "Tortura", subassunto: "Causa de aumento",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (pseudo-literalidade)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 60, probReaparecer: 0.8,
     enunciado: "Na Lei de Tortura, a pena é aumentada de um terço até metade se o crime é cometido por agente público.",
@@ -475,7 +475,7 @@ const QUESTOES_PCAL_LOTE55 = [
   },
   {
     id: "LE-170", disciplina: "Legislação Especial", assunto: "Abuso de autoridade", subassunto: "Elemento subjetivo especial",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (pseudo-literalidade)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 70, probReaparecer: 0.9,
     enunciado: "As condutas descritas na Lei de Abuso de Autoridade constituem crime quando praticadas pelo agente, ainda que a título de culpa, com a finalidade de prejudicar outrem ou beneficiar a si mesmo ou a terceiro, ou, ainda, por mero capricho ou satisfação pessoal.",
@@ -496,7 +496,7 @@ const QUESTOES_PCAL_LOTE55 = [
   /* ===================== CONTABILIDADE ===================== */
   {
     id: "CT-029", disciplina: "Contabilidade e Análise Financeira", assunto: "Lei 4.320/1964", subassunto: "Regime contábil",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (pseudo-literalidade)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.8,
     enunciado: "Pertencem ao exercício financeiro as receitas nele arrecadadas e as despesas nele efetivamente pagas.",
@@ -515,7 +515,7 @@ const QUESTOES_PCAL_LOTE55 = [
   },
   {
     id: "CT-030", disciplina: "Contabilidade e Análise Financeira", assunto: "Despesa pública", subassunto: "Estágios da despesa",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (pseudo-literalidade)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.75,
     enunciado: "O empenho da despesa consiste na verificação do direito adquirido pelo credor, tendo por base os títulos e documentos comprobatórios do respectivo crédito, com o fim de apurar a origem e o objeto do que se deve pagar e a quem se deve pagar.",
@@ -536,7 +536,7 @@ const QUESTOES_PCAL_LOTE55 = [
      de cobertura apontado por scripts/validar.js ===== */
   {
     id: "CC-028", disciplina: "Crimes Cibernéticos e Segurança Digital", assunto: "Marco Civil da Internet", subassunto: "Acesso a registros",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (pseudo-literalidade)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.9,
     enunciado: "Os registros de conexão e de acesso a aplicações de internet, bem como os dados pessoais e o conteúdo de comunicações privadas, poderão ser disponibilizados mediante requisição fundamentada da autoridade policial, no curso de inquérito que apure infração penal.",
@@ -555,7 +555,7 @@ const QUESTOES_PCAL_LOTE55 = [
   },
   {
     id: "CC-029", disciplina: "Crimes Cibernéticos e Segurança Digital", assunto: "Marco Civil da Internet", subassunto: "Responsabilidade do provedor",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (pseudo-literalidade)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 70, probReaparecer: 0.8,
     enunciado: "Com o intuito de assegurar a liberdade de expressão e impedir a censura, o provedor de aplicações de internet somente poderá ser responsabilizado civilmente por danos decorrentes de conteúdo gerado por terceiros se, após notificação extrajudicial do ofendido, não tomar as providências para tornar indisponível o conteúdo apontado como infringente.",
@@ -574,7 +574,7 @@ const QUESTOES_PCAL_LOTE55 = [
   },
   {
     id: "CC-030", disciplina: "Crimes Cibernéticos e Segurança Digital", assunto: "Invasão de dispositivo informático", subassunto: "Forma qualificada",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (pseudo-literalidade)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 60, probReaparecer: 0.75,
     enunciado: "Se da invasão de dispositivo informático resultar a obtenção de conteúdo de comunicações eletrônicas privadas, segredos comerciais ou industriais, informações sigilosas assim definidas em lei, ou o controle remoto não autorizado do dispositivo invadido, a pena é de reclusão, de um a quatro anos, e multa.",
@@ -593,7 +593,7 @@ const QUESTOES_PCAL_LOTE55 = [
   },
   {
     id: "CC-031", disciplina: "Crimes Cibernéticos e Segurança Digital", assunto: "LGPD", subassunto: "Sanções administrativas",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (pseudo-literalidade)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.75,
     enunciado: "Entre as sanções administrativas aplicáveis pela autoridade nacional aos agentes de tratamento de dados está a multa simples de até dez por cento do faturamento da pessoa jurídica de direito privado, grupo ou conglomerado no Brasil no seu último exercício, excluídos os tributos, limitada, no total, a cinquenta milhões de reais por infração.",
@@ -612,7 +612,7 @@ const QUESTOES_PCAL_LOTE55 = [
   },
   {
     id: "CT-031", disciplina: "Contabilidade e Análise Financeira", assunto: "Receita pública", subassunto: "Classificação econômica",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (pseudo-literalidade)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.75,
     enunciado: "São classificadas como receitas correntes as receitas tributárias, de contribuições, patrimonial, agropecuária, industrial, de serviços e, ainda, as provenientes de operações de crédito.",
@@ -631,7 +631,7 @@ const QUESTOES_PCAL_LOTE55 = [
   },
   {
     id: "CT-032", disciplina: "Contabilidade e Análise Financeira", assunto: "Despesa pública", subassunto: "Vedação legal",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (pseudo-literalidade)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.75,
     enunciado: "É vedada a realização de despesa sem prévia liquidação.",
@@ -650,7 +650,7 @@ const QUESTOES_PCAL_LOTE55 = [
   },
   {
     id: "DA-071", disciplina: "Direito Administrativo", assunto: "Licitações", subassunto: "Modalidades da Lei 14.133/2021",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (pseudo-literalidade)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 60, probReaparecer: 0.9,
     enunciado: "São modalidades de licitação previstas na Lei 14.133/2021 o pregão, a concorrência, a tomada de preços, o convite, o concurso, o leilão e o diálogo competitivo.",
@@ -669,7 +669,7 @@ const QUESTOES_PCAL_LOTE55 = [
   },
   {
     id: "DA-072", disciplina: "Direito Administrativo", assunto: "Licitações", subassunto: "Sequência das fases",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (pseudo-literalidade)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 70, probReaparecer: 0.85,
     enunciado: "O processo de licitação regido pela Lei 14.133/2021 observará, em sequência, as fases preparatória, de divulgação do edital de licitação, de apresentação de propostas e lances, de habilitação, de julgamento, recursal e de homologação.",

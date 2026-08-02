@@ -13,7 +13,7 @@ const QUESTOES_PCAL_LOTE10 = [
   /* ============ DIREITO PENAL (9 itens 'Errado') ============ */
   {
     id: "DP-042", disciplina: "Direito Penal", assunto: "Aplicação da lei penal", subassunto: "Analogia in malam partem",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 40, probReaparecer: 0.8,
     enunciado: "Em razão do princípio da legalidade, admite-se, no direito penal brasileiro, a analogia in malam partem para incriminar condutas socialmente reprováveis ainda não tipificadas.",
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "analogia in malam partem",
@@ -31,7 +31,7 @@ const QUESTOES_PCAL_LOTE10 = [
   },
   {
     id: "DP-043", disciplina: "Direito Penal", assunto: "Aplicação da lei penal", subassunto: "Novatio legis in pejus",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 40, probReaparecer: 0.82,
     enunciado: "A lei penal mais grave (novatio legis in pejus) retroage para alcançar os fatos praticados antes de sua entrada em vigor, desde que ainda não haja sentença condenatória transitada em julgado.",
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "lei mais grave retroage",
@@ -49,7 +49,7 @@ const QUESTOES_PCAL_LOTE10 = [
   },
   {
     id: "DP-044", disciplina: "Direito Penal", assunto: "Teoria do crime", subassunto: "Erro na execução (aberratio ictus)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 45, probReaparecer: 0.7,
     enunciado: "No erro na execução (aberratio ictus), em que o agente, por acidente ou erro no uso dos meios, atinge pessoa diversa da pretendida, respondem-se pelo crime considerando-se as condições e qualidades da vítima efetivamente atingida.",
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "vítima efetivamente atingida",
@@ -67,7 +67,7 @@ const QUESTOES_PCAL_LOTE10 = [
   },
   {
     id: "DP-045", disciplina: "Direito Penal", assunto: "Ilicitude", subassunto: "Estado de necessidade",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 45, probReaparecer: 0.72,
     enunciado: "Pode invocar o estado de necessidade, para excluir a ilicitude de sua conduta, aquele que tinha o dever legal de enfrentar o perigo, ainda que dispusesse de meios para fazê-lo.",
     gabarito: "E", pegadinha: "exigencia-inexistente", palavraChave: "dever legal de enfrentar o perigo",
@@ -85,7 +85,7 @@ const QUESTOES_PCAL_LOTE10 = [
   },
   {
     id: "DP-046", disciplina: "Direito Penal", assunto: "Teoria do crime", subassunto: "Crime impossível",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 40, probReaparecer: 0.75,
     enunciado: "O crime impossível, decorrente da absoluta ineficácia do meio ou da absoluta impropriedade do objeto, é punível a título de tentativa, com a pena correspondente reduzida.",
     gabarito: "E", pegadinha: "exigencia-inexistente", palavraChave: "punível a título de tentativa",
@@ -103,7 +103,7 @@ const QUESTOES_PCAL_LOTE10 = [
   },
   {
     id: "DP-047", disciplina: "Direito Penal", assunto: "Teoria da pena", subassunto: "Reincidência",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 45, probReaparecer: 0.75,
     enunciado: "Verifica-se a reincidência quando o agente comete novo crime antes de transitar em julgado a sentença que o tenha condenado por crime anterior.",
     gabarito: "E", pegadinha: "troca-numerica", palavraChave: "antes de transitar em julgado",
@@ -121,7 +121,7 @@ const QUESTOES_PCAL_LOTE10 = [
   },
   {
     id: "DP-048", disciplina: "Direito Penal", assunto: "Concurso de crimes", subassunto: "Crime continuado",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 45, probReaparecer: 0.72,
     enunciado: "No crime continuado, aplica-se a regra do cúmulo material, somando-se as penas de cada um dos delitos que integram a continuidade delitiva.",
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "cúmulo material",
@@ -139,7 +139,7 @@ const QUESTOES_PCAL_LOTE10 = [
   },
   {
     id: "DP-049", disciplina: "Direito Penal", assunto: "Crimes contra a pessoa", subassunto: "Homicídio privilegiado",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 40, probReaparecer: 0.72,
     enunciado: "O homicídio privilegiado, cometido por relevante valor social ou moral ou sob o domínio de violenta emoção logo após injusta provocação da vítima, é classificado como crime hediondo.",
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "privilegiado / hediondo",
@@ -157,7 +157,7 @@ const QUESTOES_PCAL_LOTE10 = [
   },
   {
     id: "DP-050", disciplina: "Direito Penal", assunto: "Teoria da pena", subassunto: "Prescrição",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 45, probReaparecer: 0.72,
     enunciado: "Além do racismo e da ação de grupos armados contra a ordem constitucional, também o crime de peculato, por ofender a Administração Pública, é imprescritível no ordenamento brasileiro.",
     gabarito: "E", pegadinha: "generalizacao", palavraChave: "peculato imprescritível",
@@ -177,7 +177,7 @@ const QUESTOES_PCAL_LOTE10 = [
   /* ============ LEGISLAÇÃO PENAL ESPECIAL (8 itens 'Errado') ============ */
   {
     id: "LE-039", disciplina: "Legislação Especial", assunto: "Lei de Drogas", subassunto: "Pena do tráfico",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 40, probReaparecer: 0.78,
     enunciado: "O crime de tráfico de drogas, previsto no art. 33 da Lei nº 11.343/2006, é punido com pena de reclusão de três a dez anos.",
     gabarito: "E", pegadinha: "troca-numerica", palavraChave: "três a dez anos",
@@ -195,7 +195,7 @@ const QUESTOES_PCAL_LOTE10 = [
   },
   {
     id: "LE-040", disciplina: "Legislação Especial", assunto: "Organização Criminosa", subassunto: "Infiltração de agentes",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 45, probReaparecer: 0.75,
     enunciado: "Na Lei nº 12.850/2013, a infiltração de agentes de polícia em tarefas de investigação independe de autorização judicial, bastando a requisição da autoridade policial ou do Ministério Público.",
     gabarito: "E", pegadinha: "troca-sujeito", palavraChave: "independe de autorização judicial",
@@ -213,7 +213,7 @@ const QUESTOES_PCAL_LOTE10 = [
   },
   {
     id: "LE-041", disciplina: "Legislação Especial", assunto: "Lavagem de dinheiro", subassunto: "Infração antecedente",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 45, probReaparecer: 0.78,
     enunciado: "Após as alterações promovidas na Lei nº 9.613/1998, somente crimes hediondos e equiparados podem figurar como infração penal antecedente do crime de lavagem de dinheiro.",
     gabarito: "E", pegadinha: "exigencia-inexistente", palavraChave: "somente crimes hediondos",
@@ -231,7 +231,7 @@ const QUESTOES_PCAL_LOTE10 = [
   },
   {
     id: "LE-042", disciplina: "Legislação Especial", assunto: "Crimes hediondos", subassunto: "Livramento condicional",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 45, probReaparecer: 0.72,
     enunciado: "É vedada, de forma absoluta, a concessão de livramento condicional aos condenados por crimes hediondos ou equiparados, qualquer que seja a situação do apenado.",
     gabarito: "E", pegadinha: "termo-absoluto", palavraChave: "vedada de forma absoluta",
@@ -249,7 +249,7 @@ const QUESTOES_PCAL_LOTE10 = [
   },
   {
     id: "LE-043", disciplina: "Legislação Especial", assunto: "Abuso de Autoridade", subassunto: "Ação penal",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 40, probReaparecer: 0.78,
     enunciado: "Os crimes de abuso de autoridade, previstos na Lei nº 13.869/2019, procedem-se mediante ação penal pública condicionada à representação do ofendido.",
     gabarito: "E", pegadinha: "exigencia-inexistente", palavraChave: "condicionada à representação",
@@ -267,7 +267,7 @@ const QUESTOES_PCAL_LOTE10 = [
   },
   {
     id: "LE-044", disciplina: "Legislação Especial", assunto: "Estatuto da Pessoa Idosa", subassunto: "Conceito de idoso",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 1, tempoIdealSeg: 30, probReaparecer: 0.75,
     enunciado: "Para os fins do Estatuto da Pessoa Idosa (Lei nº 10.741/2003), considera-se idosa a pessoa com idade igual ou superior a sessenta e cinco anos.",
     gabarito: "E", pegadinha: "troca-numerica", palavraChave: "sessenta e cinco anos",
@@ -285,7 +285,7 @@ const QUESTOES_PCAL_LOTE10 = [
   },
   {
     id: "LE-045", disciplina: "Legislação Especial", assunto: "Lei de Tortura", subassunto: "Sujeito ativo",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 45, probReaparecer: 0.72,
     enunciado: "O crime de tortura previsto na Lei nº 9.455/1997 é próprio, somente podendo ser praticado por funcionário público no exercício de suas funções.",
     gabarito: "E", pegadinha: "exigencia-inexistente", palavraChave: "somente funcionário público",
@@ -303,7 +303,7 @@ const QUESTOES_PCAL_LOTE10 = [
   },
   {
     id: "LE-046", disciplina: "Legislação Especial", assunto: "Estatuto do Desarmamento", subassunto: "Disparo de arma de fogo",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 45, probReaparecer: 0.72,
     enunciado: "No Estatuto do Desarmamento, o crime de disparo de arma de fogo em local habitado somente se configura quando o disparo resulta em lesão corporal ou morte de alguém.",
     gabarito: "E", pegadinha: "exigencia-inexistente", palavraChave: "somente quando resulta em lesão",
@@ -323,7 +323,7 @@ const QUESTOES_PCAL_LOTE10 = [
   /* ============ PROCESSO PENAL (6 itens 'Errado') ============ */
   {
     id: "PP-031", disciplina: "Processo Penal", assunto: "Prisão e medidas cautelares", subassunto: "Fiança pela autoridade policial",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 45, probReaparecer: 0.78,
     enunciado: "A autoridade policial não pode conceder fiança em nenhuma hipótese, sendo tal atribuição privativa da autoridade judiciária.",
     gabarito: "E", pegadinha: "termo-absoluto", palavraChave: "não pode em nenhuma hipótese",
@@ -341,7 +341,7 @@ const QUESTOES_PCAL_LOTE10 = [
   },
   {
     id: "PP-032", disciplina: "Processo Penal", assunto: "Ação penal", subassunto: "Princípio da oportunidade",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 40, probReaparecer: 0.75,
     enunciado: "A ação penal de iniciativa privada rege-se pelo princípio da obrigatoriedade, de modo que o ofendido está obrigado a oferecer a queixa-crime quando presentes indícios de autoria e materialidade.",
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "obrigatoriedade",
@@ -359,7 +359,7 @@ const QUESTOES_PCAL_LOTE10 = [
   },
   {
     id: "PP-033", disciplina: "Processo Penal", assunto: "Provas", subassunto: "Ônus da prova",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 40, probReaparecer: 0.8,
     enunciado: "No processo penal, em decorrência do princípio da verdade real, cabe ao acusado o ônus de provar a sua inocência.",
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "ônus de provar a inocência",
@@ -377,7 +377,7 @@ const QUESTOES_PCAL_LOTE10 = [
   },
   {
     id: "PP-034", disciplina: "Processo Penal", assunto: "Disposições preliminares", subassunto: "Citação",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 40, probReaparecer: 0.72,
     enunciado: "No processo penal, a citação por edital constitui a regra geral, adotada sempre que o acusado não for localizado na primeira tentativa de citação.",
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "edital como regra",
@@ -395,7 +395,7 @@ const QUESTOES_PCAL_LOTE10 = [
   },
   {
     id: "PP-035", disciplina: "Processo Penal", assunto: "Prisão e medidas cautelares", subassunto: "Habeas corpus",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 40, probReaparecer: 0.75,
     enunciado: "O habeas corpus, por versar sobre a liberdade de locomoção, exige capacidade postulatória, de modo que somente pode ser impetrado por advogado regularmente inscrito na OAB.",
     gabarito: "E", pegadinha: "exigencia-inexistente", palavraChave: "somente por advogado",
@@ -413,7 +413,7 @@ const QUESTOES_PCAL_LOTE10 = [
   },
   {
     id: "PP-036", disciplina: "Processo Penal", assunto: "Provas", subassunto: "Interrogatório na instrução",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 45, probReaparecer: 0.72,
     enunciado: "No procedimento comum, o interrogatório do acusado constitui o primeiro ato da instrução processual, realizado antes da oitiva das testemunhas de acusação e defesa.",
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "primeiro ato da instrução",
@@ -433,7 +433,7 @@ const QUESTOES_PCAL_LOTE10 = [
   /* ============ ESTATÍSTICA (4 itens 'Errado') ============ */
   {
     id: "ES-018", disciplina: "Estatística", assunto: "Medidas de posição", subassunto: "Moda em variáveis qualitativas",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Perito Criminal","Papiloscopista"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 45, probReaparecer: 0.72,
     enunciado: "A moda é a única medida de tendência central que não pode ser utilizada para variáveis qualitativas, por depender de operações aritméticas sobre os dados.",
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "moda / qualitativas",
@@ -451,7 +451,7 @@ const QUESTOES_PCAL_LOTE10 = [
   },
   {
     id: "ES-019", disciplina: "Estatística", assunto: "Correlação", subassunto: "Coeficiente de Pearson",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Perito Criminal","Papiloscopista"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 40, probReaparecer: 0.75,
     enunciado: "O coeficiente de correlação linear de Pearson pode assumir qualquer valor real, sendo tanto mais forte a correlação quanto maior for o seu valor absoluto, inclusive acima de um.",
     gabarito: "E", pegadinha: "exigencia-inexistente", palavraChave: "acima de um",
@@ -469,7 +469,7 @@ const QUESTOES_PCAL_LOTE10 = [
   },
   {
     id: "ES-020", disciplina: "Estatística", assunto: "Distribuição normal", subassunto: "Média, mediana e moda",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Perito Criminal","Papiloscopista"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 40, probReaparecer: 0.75,
     enunciado: "Na distribuição normal, por ser assimétrica à direita, a média, a mediana e a moda assumem necessariamente valores distintos entre si.",
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "assimétrica / valores distintos",
@@ -487,7 +487,7 @@ const QUESTOES_PCAL_LOTE10 = [
   },
   {
     id: "ES-021", disciplina: "Estatística", assunto: "Probabilidade", subassunto: "Intervalo de probabilidade",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Perito Criminal","Papiloscopista"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 1, tempoIdealSeg: 30, probReaparecer: 0.75,
     enunciado: "A probabilidade de ocorrência de um evento pode assumir valores negativos, especialmente quando se trata de um evento impossível.",
     gabarito: "E", pegadinha: "exigencia-inexistente", palavraChave: "valores negativos",
@@ -507,7 +507,7 @@ const QUESTOES_PCAL_LOTE10 = [
   /* ============ DIREITO CONSTITUCIONAL (3 itens 'Errado') ============ */
   {
     id: "DC-017", disciplina: "Direito Constitucional", assunto: "Direitos e garantias fundamentais", subassunto: "Medida provisória em matéria penal",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 45, probReaparecer: 0.75,
     enunciado: "Presentes os requisitos de relevância e urgência, é admitida a edição de medida provisória para a criação de novos tipos penais e a cominação das respectivas penas.",
     gabarito: "E", pegadinha: "exigencia-inexistente", palavraChave: "medida provisória / tipos penais",
@@ -525,7 +525,7 @@ const QUESTOES_PCAL_LOTE10 = [
   },
   {
     id: "DC-018", disciplina: "Direito Constitucional", assunto: "Direitos e garantias fundamentais", subassunto: "Cláusulas pétreas",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 45, probReaparecer: 0.72,
     enunciado: "Por constituírem cláusulas pétreas, os direitos e garantias individuais não admitem qualquer forma de restrição ou regulamentação por lei infraconstitucional.",
     gabarito: "E", pegadinha: "termo-absoluto", palavraChave: "não admitem qualquer restrição",
@@ -543,7 +543,7 @@ const QUESTOES_PCAL_LOTE10 = [
   },
   {
     id: "DC-019", disciplina: "Direito Constitucional", assunto: "Direitos e garantias fundamentais", subassunto: "Inviolabilidade domiciliar",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 40, probReaparecer: 0.82,
     enunciado: "A casa é asilo inviolável do indivíduo, sendo vedado o ingresso sem consentimento do morador durante o período noturno, mesmo em caso de flagrante delito.",
     gabarito: "E", pegadinha: "exigencia-inexistente", palavraChave: "vedado à noite mesmo em flagrante",
@@ -563,7 +563,7 @@ const QUESTOES_PCAL_LOTE10 = [
   /* ============ DIREITOS HUMANOS (3 itens 'Errado') ============ */
   {
     id: "DH-018", disciplina: "Direitos Humanos", assunto: "Direitos humanos na Constituição", subassunto: "Status dos tratados",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 45, probReaparecer: 0.75,
     enunciado: "No Brasil, todos os tratados internacionais de direitos humanos ingressam no ordenamento com status de norma constitucional, independentemente do procedimento de aprovação adotado pelo Congresso Nacional.",
     gabarito: "E", pegadinha: "termo-absoluto", palavraChave: "todos / independentemente do procedimento",
@@ -581,7 +581,7 @@ const QUESTOES_PCAL_LOTE10 = [
   },
   {
     id: "DH-019", disciplina: "Direitos Humanos", assunto: "Convenção Americana", subassunto: "Pena de morte",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 45, probReaparecer: 0.7,
     enunciado: "De acordo com a Convenção Americana sobre Direitos Humanos, admite-se a aplicação da pena de morte a pessoas que, no momento do crime, eram menores de dezoito anos, desde que haja previsão na legislação do Estado-parte.",
     gabarito: "E", pegadinha: "exigencia-inexistente", palavraChave: "menores de dezoito anos",
@@ -599,7 +599,7 @@ const QUESTOES_PCAL_LOTE10 = [
   },
   {
     id: "DH-020", disciplina: "Direitos Humanos", assunto: "Sistema interamericano", subassunto: "Comissão × Corte",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 45, probReaparecer: 0.72,
     enunciado: "A Comissão Interamericana de Direitos Humanos é o órgão jurisdicional do sistema interamericano, competente para julgar e condenar os Estados-partes ao pagamento de indenizações às vítimas de violações.",
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "Comissão / órgão jurisdicional",
@@ -619,7 +619,7 @@ const QUESTOES_PCAL_LOTE10 = [
   /* ============ CRIMES CIBERNÉTICOS (1 item 'Errado') ============ */
   {
     id: "CC-011", disciplina: "Crimes Cibernéticos e Segurança Digital", assunto: "LGPD", subassunto: "Hipóteses de não aplicação",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 40, probReaparecer: 0.78,
     enunciado: "A Lei Geral de Proteção de Dados aplica-se integralmente ao tratamento de dados pessoais realizado por pessoa natural para fins exclusivamente particulares e não econômicos.",
     gabarito: "E", pegadinha: "exigencia-inexistente", palavraChave: "fins exclusivamente particulares",
@@ -639,7 +639,7 @@ const QUESTOES_PCAL_LOTE10 = [
   /* ============ RACIOCÍNIO LÓGICO (1 item 'Errado') ============ */
   {
     id: "RL-020", disciplina: "Raciocínio Lógico-Matemático", assunto: "Lógica proposicional", subassunto: "Equivalência lógica",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 40, probReaparecer: 0.75,
     enunciado: "Duas proposições compostas são logicamente equivalentes quando possuem a mesma quantidade de conectivos lógicos em sua estrutura.",
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "mesma quantidade de conectivos",

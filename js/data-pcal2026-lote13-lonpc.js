@@ -19,7 +19,7 @@ const QUESTOES_PCAL_LOTE13 = [
   /* ===== DISPOSIÇÕES GERAIS E COMPETÊNCIAS ===== */
   {
     id: "LI-002", disciplina: "Legislação Institucional (AL)", assunto: "Lei Orgânica Nacional das Polícias Civis", subassunto: "Natureza e direção (art. 1º)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei 14.735/2023, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 45, probReaparecer: 0.95,
     enunciado: "As polícias civis, dirigidas por delegado de polícia em atividade e de classe mais elevada, nomeado pelos governadores dos estados e do Distrito Federal, são instituições permanentes, com funções exclusivas e típicas de Estado, essenciais à justiça criminal.",
@@ -38,7 +38,7 @@ const QUESTOES_PCAL_LOTE13 = [
   },
   {
     id: "LI-003", disciplina: "Legislação Institucional (AL)", assunto: "Lei Orgânica Nacional das Polícias Civis", subassunto: "Integração ao Susp (art. 2º)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei 14.735/2023, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 40, probReaparecer: 0.85,
     enunciado: "As polícias civis são integrantes operacionais do Sistema Único de Segurança Pública (Susp) e compõem o sistema de governança da política de segurança pública dos estados, do Distrito Federal e dos territórios.",
@@ -57,7 +57,7 @@ const QUESTOES_PCAL_LOTE13 = [
   },
   {
     id: "LI-004", disciplina: "Legislação Institucional (AL)", assunto: "Lei Orgânica Nacional das Polícias Civis", subassunto: "Iniciativa da lei orgânica estadual (art. 3º)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei 14.735/2023, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 45, probReaparecer: 0.9,
     enunciado: "A lei orgânica da polícia civil de cada estado, do Distrito Federal e de cada território, cuja iniciativa cabe privativamente à respectiva Assembleia Legislativa, deve estabelecer regras específicas observadas as normas gerais da Lei Orgânica Nacional.",
@@ -76,7 +76,7 @@ const QUESTOES_PCAL_LOTE13 = [
   },
   {
     id: "LI-005", disciplina: "Legislação Institucional (AL)", assunto: "Lei Orgânica Nacional das Polícias Civis", subassunto: "Competência da polícia civil (art. 6º)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei 14.735/2023, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 45, probReaparecer: 0.92,
     enunciado: "Compete à polícia civil, ressalvadas a competência da União e as infrações penais militares, executar privativamente as funções de polícia judiciária civil e de apuração de infrações penais, materializadas em inquérito policial ou em outro procedimento de investigação.",
@@ -97,7 +97,7 @@ const QUESTOES_PCAL_LOTE13 = [
   /* ===== ORGANIZAÇÃO E FUNCIONAMENTO ===== */
   {
     id: "LI-006", disciplina: "Legislação Institucional (AL)", assunto: "Lei Orgânica Nacional das Polícias Civis", subassunto: "Planejamento estratégico do Delegado-Geral (art. 8º)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei 14.735/2023, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 45, probReaparecer: 0.88,
     enunciado: "Os Delegados-Gerais das Polícias Civis devem apresentar planejamento estratégico de gestão em até sessenta dias após a sua nomeação.",
@@ -116,7 +116,7 @@ const QUESTOES_PCAL_LOTE13 = [
   },
   {
     id: "LI-007", disciplina: "Legislação Institucional (AL)", assunto: "Lei Orgânica Nacional das Polícias Civis", subassunto: "Corregedoria-Geral (art. 10, § 1º)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei 14.735/2023, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 45, probReaparecer: 0.85,
     enunciado: "O Corregedor-Geral de Polícia Civil deve ser designado diretamente pelo governador do estado, dentre delegados de polícia de qualquer classe da carreira.",
@@ -135,7 +135,7 @@ const QUESTOES_PCAL_LOTE13 = [
   },
   {
     id: "LI-008", disciplina: "Legislação Institucional (AL)", assunto: "Lei Orgânica Nacional das Polícias Civis", subassunto: "Duplo grau em processo disciplinar (art. 10, § 3º)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei 14.735/2023, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 50, probReaparecer: 0.88,
     enunciado: "É garantido o duplo grau de revisão do julgamento nos processos disciplinares na hipótese de penalidade de demissão, mediante recurso ao Conselho Superior de Polícia Civil e, em última instância, ao Chefe do Poder Executivo.",
@@ -154,7 +154,7 @@ const QUESTOES_PCAL_LOTE13 = [
   },
   {
     id: "LI-009", disciplina: "Legislação Institucional (AL)", assunto: "Lei Orgânica Nacional das Polícias Civis", subassunto: "Unidades especializadas (art. 12, § 2º)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei 14.735/2023, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 50, probReaparecer: 0.85,
     enunciado: "O efetivo das unidades especializadas em combate à lavagem de dinheiro e em interceptação de comunicação telefônica, de informática e telemática deve ser composto exclusivamente de policiais civis.",
@@ -173,7 +173,7 @@ const QUESTOES_PCAL_LOTE13 = [
   },
   {
     id: "LI-010", disciplina: "Legislação Institucional (AL)", assunto: "Lei Orgânica Nacional das Polícias Civis", subassunto: "Institutos técnico-científicos (art. 15, § 2º)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei 14.735/2023, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 50, probReaparecer: 0.85,
     enunciado: "Os Institutos de Criminalística, de Medicina Legal e de Identificação devem ser coordenados por delegados de polícia da classe mais elevada, designados pelo Delegado-Geral de Polícia Civil.",
@@ -194,7 +194,7 @@ const QUESTOES_PCAL_LOTE13 = [
   /* ===== CONCURSO, INVESTIDURA E PROMOÇÃO ===== */
   {
     id: "LI-011", disciplina: "Legislação Institucional (AL)", assunto: "Lei Orgânica Nacional das Polícias Civis", subassunto: "Requisitos do oficial investigador (art. 20, § 1º)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei 14.735/2023, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 45, probReaparecer: 0.9,
     enunciado: "Para o cargo de oficial investigador de polícia, exige-se diploma de ensino superior completo, em nível de graduação, especificamente no curso de Direito, reconhecido pelo Ministério da Educação.",
@@ -213,7 +213,7 @@ const QUESTOES_PCAL_LOTE13 = [
   },
   {
     id: "LI-012", disciplina: "Legislação Institucional (AL)", assunto: "Lei Orgânica Nacional das Polícias Civis", subassunto: "Requisitos do delegado (art. 20, § 3º)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei 14.735/2023, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 45, probReaparecer: 0.9,
     enunciado: "Para o cargo de delegado de polícia são exigidos curso de bacharelado em Direito reconhecido pelo órgão competente e três anos de atividade jurídica ou policial, cabendo ao Conselho Superior de Polícia Civil definir os requisitos para classificação como atividade jurídica.",
@@ -232,7 +232,7 @@ const QUESTOES_PCAL_LOTE13 = [
   },
   {
     id: "LI-013", disciplina: "Legislação Institucional (AL)", assunto: "Lei Orgânica Nacional das Polícias Civis", subassunto: "Participação da OAB (art. 20, § 4º)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei 14.735/2023, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 45, probReaparecer: 0.85,
     enunciado: "Para a investidura no cargo de delegado de polícia é exigida aprovação em concurso público de provas e títulos, com a participação da Ordem dos Advogados do Brasil em todas as fases do certame.",
@@ -251,7 +251,7 @@ const QUESTOES_PCAL_LOTE13 = [
   },
   {
     id: "LI-014", disciplina: "Legislação Institucional (AL)", assunto: "Lei Orgânica Nacional das Polícias Civis", subassunto: "Pontuação do tempo de atividade policial (art. 21)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei 14.735/2023, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 50, probReaparecer: 0.8,
     enunciado: "O tempo de atividade policial civil deve ser considerado para pontuação em prova de títulos no concurso público para o cargo de delegado de polícia, valorado em cinquenta por cento da pontuação máxima da prova de títulos.",
@@ -270,7 +270,7 @@ const QUESTOES_PCAL_LOTE13 = [
   },
   {
     id: "LI-015", disciplina: "Legislação Institucional (AL)", assunto: "Lei Orgânica Nacional das Polícias Civis", subassunto: "Curso de formação profissional (art. 22)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei 14.735/2023, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 50, probReaparecer: 0.88,
     enunciado: "Durante o curso de formação profissional, de caráter meramente classificatório, pode ser concedida ajuda de custo não inferior a trinta por cento do valor da remuneração prevista em lei para a classe inicial do respectivo cargo.",
@@ -289,7 +289,7 @@ const QUESTOES_PCAL_LOTE13 = [
   },
   {
     id: "LI-016", disciplina: "Legislação Institucional (AL)", assunto: "Lei Orgânica Nacional das Polícias Civis", subassunto: "Exoneração antes de três anos (art. 24, § 1º)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei 14.735/2023, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 50, probReaparecer: 0.82,
     enunciado: "O servidor que pedir exoneração antes de completar três anos de exercício deve ressarcir ao erário competente os gastos com sua formação, proporcionalmente ao tempo de serviço.",
@@ -310,7 +310,7 @@ const QUESTOES_PCAL_LOTE13 = [
   /* ===== PRERROGATIVAS, DIREITOS E VEDAÇÕES ===== */
   {
     id: "LI-017", disciplina: "Legislação Institucional (AL)", assunto: "Lei Orgânica Nacional das Polícias Civis", subassunto: "Atuação do perito oficial criminal (art. 28)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei 14.735/2023, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 50, probReaparecer: 0.85,
     enunciado: "O perito oficial criminal exerce atribuições de perícia oficial de natureza criminal sob requisição do delegado de polícia, assegurada a ele autonomia técnica, científica e funcional.",
@@ -329,7 +329,7 @@ const QUESTOES_PCAL_LOTE13 = [
   },
   {
     id: "LI-018", disciplina: "Legislação Institucional (AL)", assunto: "Lei Orgânica Nacional das Polícias Civis", subassunto: "Estabilidade do policial civil (art. 30, § 15)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei 14.735/2023, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 45, probReaparecer: 0.9,
     enunciado: "A estabilidade do policial civil dar-se-á após três anos de efetivo exercício no cargo.",
@@ -348,7 +348,7 @@ const QUESTOES_PCAL_LOTE13 = [
   },
   {
     id: "LI-019", disciplina: "Legislação Institucional (AL)", assunto: "Lei Orgânica Nacional das Polícias Civis", subassunto: "Porte de arma do aposentado (art. 30, § 3º)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei 14.735/2023, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 45, probReaparecer: 0.85,
     enunciado: "Os policiais civis, por ocasião de sua aposentadoria, perdem automaticamente a autorização de porte de arma de fogo, que fica restrita aos servidores em atividade.",
@@ -367,7 +367,7 @@ const QUESTOES_PCAL_LOTE13 = [
   },
   {
     id: "LI-020", disciplina: "Legislação Institucional (AL)", assunto: "Lei Orgânica Nacional das Polícias Civis", subassunto: "Sigilo das técnicas de investigação (art. 34)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei 14.735/2023, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 50, probReaparecer: 0.85,
     enunciado: "É vedada a divulgação, a qualquer tempo e fora da esfera policial, de técnicas de investigação utilizadas pelas polícias civis e de qualquer dado ou informação obtidos por meio de medida cautelar judicial, ressalvadas as hipóteses legais, respondendo o infrator civil, administrativa e criminalmente.",
@@ -386,7 +386,7 @@ const QUESTOES_PCAL_LOTE13 = [
   },
   {
     id: "LI-021", disciplina: "Legislação Institucional (AL)", assunto: "Lei Orgânica Nacional das Polícias Civis", subassunto: "Custódia de presos em unidades policiais (art. 40)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei 14.735/2023, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 50, probReaparecer: 0.88,
     enunciado: "É vedada, de forma absoluta e sem qualquer exceção, a custódia de preso e de adolescente infrator em dependências de prédios e unidades das polícias civis.",
@@ -405,7 +405,7 @@ const QUESTOES_PCAL_LOTE13 = [
   },
   {
     id: "LI-022", disciplina: "Legislação Institucional (AL)", assunto: "Lei Orgânica Nacional das Polícias Civis", subassunto: "Conselho Nacional da Polícia Civil (art. 44)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei 14.735/2023, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 50, probReaparecer: 0.8,
     enunciado: "Foi instituído o Conselho Nacional da Polícia Civil, órgão dotado de competência exclusivamente consultiva sobre as políticas públicas institucionais de padronização e intercâmbio nas áreas de competências das polícias civis.",
@@ -424,7 +424,7 @@ const QUESTOES_PCAL_LOTE13 = [
   },
   {
     id: "LI-023", disciplina: "Legislação Institucional (AL)", assunto: "Lei Orgânica Nacional das Polícias Civis", subassunto: "Dia Nacional da Polícia Civil (art. 47)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei 14.735/2023, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 1, tempoIdealSeg: 30, probReaparecer: 0.75,
     enunciado: "A polícia civil tem como Dia Nacional a data de 5 de abril.",

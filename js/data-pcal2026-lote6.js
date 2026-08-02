@@ -14,7 +14,7 @@ const QUESTOES_PCAL_LOTE6 = [
   /* ==================== LEI 9.099/95 — JUIZADOS ESPECIAIS ==================== */
   {
     id: "PP-020", disciplina: "Processo Penal", assunto: "Lei 9.099/1995", subassunto: "Infração de menor potencial ofensivo",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 40, probReaparecer: 0.9,
     enunciado: "Consideram-se infrações penais de menor potencial ofensivo, para os fins da Lei nº 9.099/1995, as contravenções penais e os crimes a que a lei comine pena máxima não superior a dois anos, cumulada ou não com multa.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "pena máxima não superior a dois anos",
@@ -32,7 +32,7 @@ const QUESTOES_PCAL_LOTE6 = [
   },
   {
     id: "PP-021", disciplina: "Processo Penal", assunto: "Lei 9.099/1995", subassunto: "Composição civil dos danos",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 45, probReaparecer: 0.82,
     enunciado: "Nos crimes de ação penal privada ou de ação penal pública condicionada à representação, a composição civil dos danos, homologada pelo juiz, acarreta a renúncia ao direito de queixa ou de representação.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "renúncia ao direito de queixa ou representação",
@@ -50,7 +50,7 @@ const QUESTOES_PCAL_LOTE6 = [
   },
   {
     id: "PP-022", disciplina: "Processo Penal", assunto: "Lei 9.099/1995", subassunto: "Transação penal",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 40, probReaparecer: 0.85,
     enunciado: "A transação penal, proposta pelo Ministério Público, consiste na aplicação imediata de pena restritiva de direitos ou multa, e a sua aceitação pelo autor do fato importa reconhecimento de culpa e gera reincidência.",
     gabarito: "E", pegadinha: "exigencia-inexistente", palavraChave: "importa reconhecimento de culpa e gera reincidência",
@@ -68,7 +68,7 @@ const QUESTOES_PCAL_LOTE6 = [
   },
   {
     id: "PP-023", disciplina: "Processo Penal", assunto: "Lei 9.099/1995", subassunto: "Suspensão condicional do processo",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 45, probReaparecer: 0.83,
     enunciado: "A suspensão condicional do processo pode ser proposta pelo Ministério Público nos crimes em que a pena mínima cominada seja igual ou inferior a um ano, submetendo o acusado a período de prova de dois a quatro anos.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "pena mínima igual ou inferior a um ano",
@@ -86,7 +86,7 @@ const QUESTOES_PCAL_LOTE6 = [
   },
   {
     id: "PP-024", disciplina: "Processo Penal", assunto: "Lei 9.099/1995", subassunto: "Representação — lesão leve e culposa",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 40, probReaparecer: 0.78,
     enunciado: "Por força da Lei nº 9.099/1995, os crimes de lesão corporal leve e de lesão corporal culposa passaram a depender de representação do ofendido para a instauração da ação penal.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "dependem de representação",
@@ -106,7 +106,7 @@ const QUESTOES_PCAL_LOTE6 = [
   /* ==================== ESTATUTO DO DESARMAMENTO ==================== */
   {
     id: "LE-025", disciplina: "Legislação Especial", assunto: "Estatuto do Desarmamento", subassunto: "Posse × porte",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 40, probReaparecer: 0.88,
     enunciado: "No Estatuto do Desarmamento, a conduta de manter arma de fogo de uso permitido no interior da própria residência, sem o devido registro, configura o crime de porte ilegal de arma de fogo.",
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "no interior da própria residência / porte",
@@ -124,7 +124,7 @@ const QUESTOES_PCAL_LOTE6 = [
   },
   {
     id: "LE-026", disciplina: "Legislação Especial", assunto: "Estatuto do Desarmamento", subassunto: "Arma de uso restrito",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 45, probReaparecer: 0.8,
     enunciado: "No Estatuto do Desarmamento, a posse ou o porte de arma de fogo, acessório ou munição de uso restrito é punido de forma mais severa do que as condutas equivalentes envolvendo arma de uso permitido.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "uso restrito mais severo",
@@ -142,7 +142,7 @@ const QUESTOES_PCAL_LOTE6 = [
   },
   {
     id: "LE-027", disciplina: "Legislação Especial", assunto: "Estatuto do Desarmamento", subassunto: "SINARM",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 40, probReaparecer: 0.7,
     enunciado: "O Sistema Nacional de Armas (SINARM), instituído no âmbito da Polícia Federal, tem circunscrição em todo o território nacional e destina-se, entre outras finalidades, ao registro e ao controle de armas de fogo de uso permitido.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "SINARM / Polícia Federal",
@@ -162,7 +162,7 @@ const QUESTOES_PCAL_LOTE6 = [
   /* ==================== CRIMES CONTRA O SISTEMA FINANCEIRO (Lei 7.492/86) ==================== */
   {
     id: "LE-028", disciplina: "Legislação Especial", assunto: "Crimes contra o Sistema Financeiro", subassunto: "Gestão fraudulenta × temerária",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 45, probReaparecer: 0.75,
     enunciado: "Na Lei nº 7.492/1986, a gestão fraudulenta de instituição financeira é punida mais gravemente do que a gestão temerária, sendo aquela caracterizada pelo emprego de ardil ou artifício na condução dos negócios da instituição.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "gestão fraudulenta × temerária",
@@ -180,7 +180,7 @@ const QUESTOES_PCAL_LOTE6 = [
   },
   {
     id: "LE-029", disciplina: "Legislação Especial", assunto: "Crimes contra o Sistema Financeiro", subassunto: "Evasão de divisas / competência",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 40, probReaparecer: 0.72,
     enunciado: "Os crimes contra o Sistema Financeiro Nacional, definidos na Lei nº 7.492/1986, incluindo a evasão de divisas, são de competência da Justiça Estadual do local da sede da instituição financeira.",
     gabarito: "E", pegadinha: "troca-sujeito", palavraChave: "Justiça Estadual",
@@ -200,7 +200,7 @@ const QUESTOES_PCAL_LOTE6 = [
   /* ==================== LEI DE LICITAÇÕES (14.133/2021) ==================== */
   {
     id: "DA-010", disciplina: "Direito Administrativo", assunto: "Licitações", subassunto: "Dispensa × inexigibilidade",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 45, probReaparecer: 0.85,
     enunciado: "Na Lei nº 14.133/2021, a inexigibilidade de licitação ocorre nas hipóteses de inviabilidade de competição, ao passo que a dispensa se dá em situações em que, embora viável a competição, a lei faculta ou determina a contratação direta.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "inviabilidade de competição",
@@ -218,7 +218,7 @@ const QUESTOES_PCAL_LOTE6 = [
   },
   {
     id: "DA-011", disciplina: "Direito Administrativo", assunto: "Licitações", subassunto: "Crimes licitatórios no CP",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 45, probReaparecer: 0.8,
     enunciado: "Com a Lei nº 14.133/2021, os crimes em licitações e contratos administrativos, antes previstos na Lei nº 8.666/1993, passaram a integrar o Código Penal, em capítulo próprio.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "passaram a integrar o Código Penal",
@@ -236,7 +236,7 @@ const QUESTOES_PCAL_LOTE6 = [
   },
   {
     id: "DA-012", disciplina: "Direito Administrativo", assunto: "Licitações", subassunto: "Princípios",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 40, probReaparecer: 0.75,
     enunciado: "A Lei nº 14.133/2021 consagra, entre os princípios da licitação, o do julgamento objetivo, que veda a utilização de critérios subjetivos ou não previstos no edital para a seleção da proposta vencedora.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "julgamento objetivo",
@@ -256,7 +256,7 @@ const QUESTOES_PCAL_LOTE6 = [
   /* ==================== CF ART. 5º — INCISOS ==================== */
   {
     id: "DC-010", disciplina: "Direito Constitucional", assunto: "Direitos e garantias fundamentais", subassunto: "Presunção de inocência",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 40, probReaparecer: 0.88,
     enunciado: "Ninguém será considerado culpado até o trânsito em julgado de sentença penal condenatória, garantia que consagra o princípio da presunção de inocência ou da não culpabilidade.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "trânsito em julgado",
@@ -274,7 +274,7 @@ const QUESTOES_PCAL_LOTE6 = [
   },
   {
     id: "DC-011", disciplina: "Direito Constitucional", assunto: "Direitos e garantias fundamentais", subassunto: "Comunicação da prisão",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 40, probReaparecer: 0.85,
     enunciado: "A prisão de qualquer pessoa e o local onde se encontre serão comunicados imediatamente ao juiz competente e à família do preso ou à pessoa por ele indicada.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "comunicados imediatamente",
@@ -292,7 +292,7 @@ const QUESTOES_PCAL_LOTE6 = [
   },
   {
     id: "DC-012", disciplina: "Direito Constitucional", assunto: "Direitos e garantias fundamentais", subassunto: "Prisão ilegal e liberdade provisória",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 40, probReaparecer: 0.8,
     enunciado: "A prisão ilegal será imediatamente relaxada pela autoridade policial que a tenha efetuado, independentemente de manifestação judicial.",
     gabarito: "E", pegadinha: "troca-sujeito", palavraChave: "autoridade policial",
@@ -310,7 +310,7 @@ const QUESTOES_PCAL_LOTE6 = [
   },
   {
     id: "DC-013", disciplina: "Direito Constitucional", assunto: "Direitos e garantias fundamentais", subassunto: "Identificação criminal",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Papiloscopista"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 40, probReaparecer: 0.78,
     enunciado: "O civilmente identificado não será submetido a identificação criminal, salvo nas hipóteses previstas em lei.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "salvo nas hipóteses previstas em lei",
@@ -330,7 +330,7 @@ const QUESTOES_PCAL_LOTE6 = [
   /* ==================== PACTO DE SÃO JOSÉ (CADH) ==================== */
   {
     id: "DH-010", disciplina: "Direitos Humanos", assunto: "Convenção Americana", subassunto: "Integridade pessoal",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 40, probReaparecer: 0.8,
     enunciado: "Segundo a Convenção Americana sobre Direitos Humanos (Pacto de São José da Costa Rica), toda pessoa tem direito a que se respeite sua integridade física, psíquica e moral, sendo vedada a submissão a tortura ou a penas ou tratos cruéis, desumanos ou degradantes.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "integridade física, psíquica e moral",
@@ -348,7 +348,7 @@ const QUESTOES_PCAL_LOTE6 = [
   },
   {
     id: "DH-011", disciplina: "Direitos Humanos", assunto: "Convenção Americana", subassunto: "Garantias judiciais",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 45, probReaparecer: 0.78,
     enunciado: "A Convenção Americana sobre Direitos Humanos assegura a toda pessoa acusada de delito o direito de ser julgada dentro de um prazo razoável e o direito de recorrer da sentença a juiz ou tribunal superior.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "prazo razoável / duplo grau",
@@ -366,7 +366,7 @@ const QUESTOES_PCAL_LOTE6 = [
   },
   {
     id: "DH-012", disciplina: "Direitos Humanos", assunto: "Convenção Americana", subassunto: "Direito à vida / pena de morte",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 45, probReaparecer: 0.72,
     enunciado: "Conforme a Convenção Americana sobre Direitos Humanos, não se pode restabelecer a pena de morte nos Estados que a hajam abolido, tampouco estendê-la a delitos aos quais não se aplique atualmente.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "não restabelecer a pena de morte",
@@ -386,7 +386,7 @@ const QUESTOES_PCAL_LOTE6 = [
   /* ==================== DIREITO PENAL — CRIMES CONTRA A ADMINISTRAÇÃO ==================== */
   {
     id: "DP-021", disciplina: "Direito Penal", assunto: "Crimes contra a Administração Pública", subassunto: "Prevaricação",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 45, probReaparecer: 0.8,
     enunciado: "Comete prevaricação o funcionário público que retarda ou deixa de praticar, indevidamente, ato de ofício, ou o pratica contra disposição expressa de lei, para satisfazer interesse ou sentimento pessoal.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "interesse ou sentimento pessoal",
@@ -404,7 +404,7 @@ const QUESTOES_PCAL_LOTE6 = [
   },
   {
     id: "DP-022", disciplina: "Direito Penal", assunto: "Crimes contra a Administração Pública", subassunto: "Corrupção ativa",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 40, probReaparecer: 0.78,
     enunciado: "A corrupção ativa, prevista no Código Penal, é crime praticado por particular contra a Administração em geral, consistindo em oferecer ou prometer vantagem indevida a funcionário público para determiná-lo a praticar, omitir ou retardar ato de ofício.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "particular / oferecer ou prometer",

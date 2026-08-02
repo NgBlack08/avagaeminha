@@ -19,7 +19,7 @@ const QUESTOES_PCAL_LOTE41 = [
   /* ===== HIERARQUIA IA ⊃ ML ⊃ REDES NEURAIS ⊃ LLMs ===== */
   {
     id: "ES-038", disciplina: "Estatística", assunto: "Inteligência Artificial", subassunto: "Hierarquia IA, ML, redes neurais e LLMs",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Inteligência Artificial)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 60, probReaparecer: 0.86,
     enunciado: "Machine Learning é um campo da Inteligência Artificial dedicado ao desenvolvimento de modelos capazes de aprender padrões a partir de dados; as redes neurais artificiais constituem uma das técnicas empregadas dentro desse campo; e os Modelos de Linguagem de Grande Porte (LLMs) são modelos baseados em arquiteturas neurais profundas, treinados em larga escala para processar e gerar linguagem natural.",
@@ -38,7 +38,7 @@ const QUESTOES_PCAL_LOTE41 = [
   },
   {
     id: "ES-039", disciplina: "Estatística", assunto: "Inteligência Artificial", subassunto: "Hierarquia IA, ML, redes neurais e LLMs",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Inteligência Artificial)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 60, probReaparecer: 0.84,
     enunciado: "Machine Learning corresponde exclusivamente a sistemas programados com regras fixas e determinísticas, sem qualquer capacidade de generalização a partir de dados, sendo as redes neurais artificiais compostas apenas por uma única camada, sem funções de ativação não lineares.",
@@ -59,7 +59,7 @@ const QUESTOES_PCAL_LOTE41 = [
   /* ===== LLMs: FUNCIONAMENTO E LIMITAÇÕES ===== */
   {
     id: "ES-040", disciplina: "Estatística", assunto: "Inteligência Artificial", subassunto: "Funcionamento dos LLMs",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Inteligência Artificial)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.88,
     enunciado: "Ferramentas de Inteligência Artificial generativa baseadas em modelos de linguagem (LLM) constroem suas respostas por meio da previsão estatística da sequência de palavras mais provável, com base em padrões aprendidos durante o treinamento com grandes volumes de dados textuais.",
@@ -78,7 +78,7 @@ const QUESTOES_PCAL_LOTE41 = [
   },
   {
     id: "ES-041", disciplina: "Estatística", assunto: "Inteligência Artificial", subassunto: "Funcionamento dos LLMs",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Inteligência Artificial)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.86,
     enunciado: "Os Modelos de Linguagem de Grande Porte (LLMs) possuem compreensão semântica plena e consciência contextual equivalentes à cognição humana, produzindo respostas totalmente determinísticas e invariáveis, independentemente do contexto fornecido pelo usuário.",
@@ -99,7 +99,7 @@ const QUESTOES_PCAL_LOTE41 = [
   /* ===== INTELIGÊNCIA ARTIFICIAL GENERATIVA (IAG) ===== */
   {
     id: "ES-042", disciplina: "Estatística", assunto: "Inteligência Artificial", subassunto: "IA Generativa (IAG)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Inteligência Artificial)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 60, probReaparecer: 0.88,
     enunciado: "A Inteligência Artificial Generativa (IAG) é capaz de criar conteúdos inéditos, como textos, imagens, músicas e códigos, sendo que plataformas como o ChatGPT e o DeepSeek têm seu funcionamento baseado em Modelos de Linguagem de Grande Porte (LLMs).",
@@ -118,7 +118,7 @@ const QUESTOES_PCAL_LOTE41 = [
   },
   {
     id: "ES-043", disciplina: "Estatística", assunto: "Inteligência Artificial", subassunto: "IA Generativa (IAG)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Inteligência Artificial)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 60, probReaparecer: 0.84,
     enunciado: "A Inteligência Artificial Generativa (IAG) é incapaz de produzir textos inéditos, sendo utilizada exclusivamente para fins de entretenimento, como em jogos eletrônicos, e funcionando sem qualquer necessidade de treinamento prévio de seus modelos.",
@@ -137,7 +137,7 @@ const QUESTOES_PCAL_LOTE41 = [
   },
   {
     id: "ES-044", disciplina: "Estatística", assunto: "Inteligência Artificial", subassunto: "IA Generativa e revisão humana",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Inteligência Artificial)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.82,
     enunciado: "Ainda que ferramentas de Inteligência Artificial generativa integradas a suítes de produtividade, como o Copilot, tenham acesso ao contexto de documentos do usuário para gerar respostas mais relevantes, seus resultados continuam exigindo revisão humana, já que tais modelos não são treinados exclusivamente com informações integralmente verificadas.",
@@ -156,7 +156,7 @@ const QUESTOES_PCAL_LOTE41 = [
   },
   {
     id: "ES-045", disciplina: "Estatística", assunto: "Inteligência Artificial", subassunto: "IA Generativa e revisão humana",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Inteligência Artificial)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.8,
     enunciado: "Ferramentas de Inteligência Artificial generativa integradas a suítes de produtividade, como o Copilot, não têm acesso a nenhum tipo de contexto sobre os documentos do usuário, razão pela qual seus resultados dispensam qualquer revisão humana posterior.",
@@ -175,7 +175,7 @@ const QUESTOES_PCAL_LOTE41 = [
   },
   {
     id: "ES-046", disciplina: "Estatística", assunto: "Inteligência Artificial", subassunto: "Alucinação em IA generativa",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Inteligência Artificial)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.82,
     enunciado: "O fenômeno conhecido como 'alucinação', na Inteligência Artificial generativa, consiste na geração de informações incorretas ou inexistentes apresentadas com aparência de veracidade, podendo ocorrer mesmo quando o comando (prompt) fornecido pelo usuário está correto e bem formulado.",
@@ -194,7 +194,7 @@ const QUESTOES_PCAL_LOTE41 = [
   },
   {
     id: "ES-047", disciplina: "Estatística", assunto: "Inteligência Artificial", subassunto: "Alucinação em IA generativa",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Inteligência Artificial)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.8,
     enunciado: "O fenômeno conhecido como 'alucinação' em Inteligência Artificial generativa ocorre exclusivamente quando o usuário insere comandos incorretos ou mal formulados, não se verificando em hipótese alguma quando o comando está corretamente estruturado.",
@@ -215,7 +215,7 @@ const QUESTOES_PCAL_LOTE41 = [
   /* ===== FUNDAMENTOS DE MACHINE LEARNING ===== */
   {
     id: "ES-048", disciplina: "Estatística", assunto: "Machine Learning", subassunto: "Fundamentos do aprendizado de máquina",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Inteligência Artificial)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 60, probReaparecer: 0.86,
     enunciado: "O aprendizado de máquina é um subcampo da Inteligência Artificial que permite que sistemas aprendam padrões e realizem previsões ou tomem decisões sem que sejam explicitamente programados para cada tarefa específica, dependendo, para isso, da quantidade e da qualidade dos dados fornecidos em seu treinamento.",
@@ -234,7 +234,7 @@ const QUESTOES_PCAL_LOTE41 = [
   },
   {
     id: "ES-049", disciplina: "Estatística", assunto: "Machine Learning", subassunto: "Fundamentos do aprendizado de máquina",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Inteligência Artificial)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 60, probReaparecer: 0.84,
     enunciado: "O aprendizado de máquina (Machine Learning) consiste em um tipo de hardware utilizado em centros de dados (data centers), sendo capaz de eliminar totalmente a ocorrência de erros de previsão, uma vez devidamente treinado.",
@@ -253,7 +253,7 @@ const QUESTOES_PCAL_LOTE41 = [
   },
   {
     id: "ES-050", disciplina: "Estatística", assunto: "Machine Learning", subassunto: "Tipos de aprendizado de máquina",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Inteligência Artificial)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 60, probReaparecer: 0.86,
     enunciado: "Existem diferentes tipos de aprendizado de máquina, entre os quais o supervisionado (que utiliza dados rotulados), o não supervisionado (que identifica padrões em dados sem rótulos) e o por reforço (que aprende por meio de recompensas e penalidades obtidas em interações com o ambiente).",
@@ -272,7 +272,7 @@ const QUESTOES_PCAL_LOTE41 = [
   },
   {
     id: "ES-051", disciplina: "Estatística", assunto: "Machine Learning", subassunto: "Tipos de aprendizado de máquina",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Inteligência Artificial)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.82,
     enunciado: "O aprendizado supervisionado dispensa o uso de dados rotulados, sendo essa característica exclusiva do aprendizado não supervisionado, o qual, por sua vez, depende necessariamente de rótulos previamente definidos para identificar tendências nos dados analisados.",
@@ -293,7 +293,7 @@ const QUESTOES_PCAL_LOTE41 = [
   /* ===== EMBEDDINGS (BUSCA SEMÂNTICA) ===== */
   {
     id: "ES-052", disciplina: "Estatística", assunto: "Inteligência Artificial", subassunto: "Embeddings (busca semântica)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Inteligência Artificial)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.8,
     enunciado: "Em sistemas de busca semântica baseados em modelos de linguagem de grande porte, frases e documentos são convertidos em representações numéricas densas de dimensão fixa, denominadas embeddings, de modo que a proximidade entre esses vetores reflita a similaridade de significado entre os textos originais.",
@@ -312,7 +312,7 @@ const QUESTOES_PCAL_LOTE41 = [
   },
   {
     id: "ES-053", disciplina: "Estatística", assunto: "Inteligência Artificial", subassunto: "Embeddings (busca semântica)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Inteligência Artificial)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.78,
     enunciado: "Em sistemas de busca semântica baseados em modelos de linguagem de grande porte, a representação vetorial que reflete a similaridade de significado entre textos é denominada token, unidade que corresponde exclusivamente às menores partes em que um texto é dividido antes do processamento pelo modelo.",
@@ -333,7 +333,7 @@ const QUESTOES_PCAL_LOTE41 = [
   /* ===== DEEP LEARNING ===== */
   {
     id: "ES-054", disciplina: "Estatística", assunto: "Machine Learning", subassunto: "Deep Learning",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Inteligência Artificial)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 60, probReaparecer: 0.84,
     enunciado: "O Deep Learning constitui um subconjunto do aprendizado de máquina que emprega redes neurais artificiais multicamadas, atribuindo pesos e vieses distintos às diferentes camadas e aos neurônios artificiais que as compõem.",
@@ -352,7 +352,7 @@ const QUESTOES_PCAL_LOTE41 = [
   },
   {
     id: "ES-055", disciplina: "Estatística", assunto: "Machine Learning", subassunto: "Deep Learning",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Inteligência Artificial)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.82,
     enunciado: "O Deep Learning trabalha sempre com aprendizado não supervisionado, no qual o processo de aprendizagem emerge naturalmente através dos nós da rede, não sendo compatível com abordagens de aprendizado supervisionado ou por reforço.",
@@ -373,7 +373,7 @@ const QUESTOES_PCAL_LOTE41 = [
   /* ===== APRENDIZADO NÃO SUPERVISIONADO (DEFINIÇÃO ESPECÍFICA) ===== */
   {
     id: "ES-056", disciplina: "Estatística", assunto: "Machine Learning", subassunto: "Aprendizado não supervisionado",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Inteligência Artificial)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 60, probReaparecer: 0.82,
     enunciado: "Os modelos de aprendizado não supervisionado precisam inferir suas próprias regras a partir de dados que não contêm respostas corretas previamente rotuladas, tendo como objetivo identificar padrões significativos nesses dados.",
@@ -392,7 +392,7 @@ const QUESTOES_PCAL_LOTE41 = [
   },
   {
     id: "ES-057", disciplina: "Estatística", assunto: "Machine Learning", subassunto: "Aprendizado não supervisionado",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Inteligência Artificial)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 60, probReaparecer: 0.8,
     enunciado: "Os modelos de aprendizado não supervisionado necessitam de dados rotulados para ajustar seus parâmetros e identificar tendências nos conjuntos de dados analisados, sendo essa característica o que os distingue do aprendizado supervisionado.",
@@ -413,7 +413,7 @@ const QUESTOES_PCAL_LOTE41 = [
   /* ===== REDES NEURAIS, IA SIMBÓLICA E APRENDIZADO POR REFORÇO ===== */
   {
     id: "ES-058", disciplina: "Estatística", assunto: "Inteligência Artificial", subassunto: "Redes neurais e aprendizado por reforço",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Inteligência Artificial)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 60, probReaparecer: 0.84,
     enunciado: "As redes neurais artificiais são modelos inspirados no funcionamento do cérebro humano, capazes de aprender a partir de grandes volumes de dados e de ajustar seus pesos internos para reconhecer padrões complexos; já o aprendizado por reforço é empregado, entre outras aplicações, em sistemas que envolvem interação dinâmica com o ambiente.",
@@ -432,7 +432,7 @@ const QUESTOES_PCAL_LOTE41 = [
   },
   {
     id: "ES-059", disciplina: "Estatística", assunto: "Inteligência Artificial", subassunto: "Sistemas baseados em regras (IA simbólica)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Inteligência Artificial)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.76,
     enunciado: "Sistemas fundamentados exclusivamente em regras lógicas predefinidas não são considerados modelos de inteligência artificial, uma vez que a capacidade de aprendizado a partir de dados constitui requisito indispensável para a caracterização de qualquer sistema como inteligência artificial.",

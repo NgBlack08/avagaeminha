@@ -88,7 +88,7 @@ const QUESTOES_PCAL_LOTE7 = [
   /* ==================== DIREITO ADMINISTRATIVO ==================== */
   {
     id: "DA-013", disciplina: "Direito Administrativo", assunto: "Organização administrativa", subassunto: "Descentralização × desconcentração",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 45, probReaparecer: 0.85,
     enunciado: "A desconcentração administrativa pressupõe a distribuição interna de competências entre órgãos de uma mesma pessoa jurídica, ao passo que a descentralização implica a transferência de atribuições para pessoa jurídica distinta.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "mesma pessoa jurídica × pessoa distinta",
@@ -106,7 +106,7 @@ const QUESTOES_PCAL_LOTE7 = [
   },
   {
     id: "DA-014", disciplina: "Direito Administrativo", assunto: "Responsabilidade civil do Estado", subassunto: "Conduta omissiva",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 50, probReaparecer: 0.8,
     enunciado: "Tratando-se de dano decorrente de conduta omissiva do Estado, parcela relevante da doutrina e da jurisprudência exige a demonstração da falta do serviço (culpa administrativa), não bastando a mera ocorrência do dano para gerar o dever de indenizar.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "falta do serviço / culpa administrativa",
@@ -124,7 +124,7 @@ const QUESTOES_PCAL_LOTE7 = [
   },
   {
     id: "DA-015", disciplina: "Direito Administrativo", assunto: "Poderes administrativos", subassunto: "Poder hierárquico × disciplinar",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 40, probReaparecer: 0.78,
     enunciado: "O poder disciplinar autoriza a Administração a apurar infrações e aplicar sanções aos servidores e demais pessoas sujeitas à disciplina administrativa, ao passo que o poder hierárquico permite ordenar, coordenar, controlar e rever a atuação de agentes subordinados.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "disciplinar × hierárquico",
@@ -142,7 +142,7 @@ const QUESTOES_PCAL_LOTE7 = [
   },
   {
     id: "DA-016", disciplina: "Direito Administrativo", assunto: "Controle da Administração", subassunto: "Controle externo",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 40, probReaparecer: 0.75,
     enunciado: "O controle externo da Administração Pública é exercido pelo Poder Legislativo, com o auxílio do Tribunal de Contas, abrangendo a fiscalização contábil, financeira, orçamentária, operacional e patrimonial.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "Legislativo com auxílio do Tribunal de Contas",
@@ -162,7 +162,7 @@ const QUESTOES_PCAL_LOTE7 = [
   /* ==================== LEGISLAÇÃO PENAL ESPECIAL ==================== */
   {
     id: "LE-030", disciplina: "Legislação Especial", assunto: "Organização Criminosa", subassunto: "Colaboração premiada",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 45, probReaparecer: 0.82,
     enunciado: "Na Lei nº 12.850/2013, a colaboração premiada é meio de obtenção de prova, e, segundo a lei, nenhuma sentença condenatória poderá ser proferida com fundamento apenas nas declarações do colaborador.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "não apenas nas declarações do colaborador",
@@ -180,7 +180,7 @@ const QUESTOES_PCAL_LOTE7 = [
   },
   {
     id: "LE-031", disciplina: "Legislação Especial", assunto: "Organização Criminosa", subassunto: "Conceito legal",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 40, probReaparecer: 0.85,
     enunciado: "Considera-se organização criminosa a associação de três ou mais pessoas, estruturalmente ordenada e caracterizada pela divisão de tarefas, para a prática de infrações cujas penas máximas sejam superiores a quatro anos.",
     gabarito: "E", pegadinha: "troca-numerica", palavraChave: "três ou mais pessoas",
@@ -198,7 +198,7 @@ const QUESTOES_PCAL_LOTE7 = [
   },
   {
     id: "LE-032", disciplina: "Legislação Especial", assunto: "Crimes hediondos", subassunto: "Vedações constitucionais",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 40, probReaparecer: 0.85,
     enunciado: "Os crimes hediondos e os a eles equiparados (tráfico, tortura e terrorismo) são insuscetíveis de anistia, graça e indulto, bem como de fiança.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "anistia, graça e indulto / fiança",
@@ -216,7 +216,7 @@ const QUESTOES_PCAL_LOTE7 = [
   },
   {
     id: "LE-033", disciplina: "Legislação Especial", assunto: "Lei de Drogas", subassunto: "Porte para consumo — natureza",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 40, probReaparecer: 0.8,
     enunciado: "O porte de droga para consumo pessoal, previsto no art. 28 da Lei nº 11.343/2006, embora não comporte pena privativa de liberdade, continua a ser tratado pela legislação como conduta típica.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "conduta típica sem prisão",
@@ -236,7 +236,7 @@ const QUESTOES_PCAL_LOTE7 = [
   /* ==================== DIREITOS HUMANOS ==================== */
   {
     id: "DH-013", disciplina: "Direitos Humanos", assunto: "Afirmação histórica", subassunto: "Marcos históricos",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 40, probReaparecer: 0.75,
     enunciado: "A Declaração Universal dos Direitos Humanos, adotada pela Assembleia Geral das Nações Unidas em 1948, é considerada um marco na internacionalização e na afirmação histórica dos direitos humanos no plano global.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "1948 / ONU",
@@ -254,7 +254,7 @@ const QUESTOES_PCAL_LOTE7 = [
   },
   {
     id: "DH-014", disciplina: "Direitos Humanos", assunto: "Teoria geral", subassunto: "Universalidade × relativismo",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 45, probReaparecer: 0.72,
     enunciado: "A universalidade dos direitos humanos, como característica, significa que tais direitos são reconhecidos a todas as pessoas, independentemente de nacionalidade, etnia, sexo, religião ou qualquer outra condição.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "todas as pessoas",
@@ -272,7 +272,7 @@ const QUESTOES_PCAL_LOTE7 = [
   },
   {
     id: "DH-015", disciplina: "Direitos Humanos", assunto: "Direitos humanos na Constituição", subassunto: "Tratados de direitos humanos",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 50, probReaparecer: 0.78,
     enunciado: "Os tratados e convenções internacionais sobre direitos humanos aprovados, em cada Casa do Congresso Nacional, em dois turnos, por três quintos dos votos dos respectivos membros, são equivalentes às emendas constitucionais.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "três quintos / dois turnos",
@@ -292,7 +292,7 @@ const QUESTOES_PCAL_LOTE7 = [
   /* ==================== ESTATÍSTICA E ANÁLISE DE DADOS ==================== */
   {
     id: "ES-012", disciplina: "Estatística", assunto: "Machine Learning", subassunto: "Supervisionado × não supervisionado",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Perito Criminal","Papiloscopista"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 45, probReaparecer: 0.82,
     enunciado: "A análise de agrupamentos (clusterização) é uma técnica de aprendizado não supervisionado, pois busca identificar estruturas ou grupos em dados que não possuem rótulos previamente definidos.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "não supervisionado / sem rótulos",
@@ -310,7 +310,7 @@ const QUESTOES_PCAL_LOTE7 = [
   },
   {
     id: "ES-013", disciplina: "Estatística", assunto: "Machine Learning", subassunto: "Overfitting e regularização",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Perito Criminal","Papiloscopista"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 45, probReaparecer: 0.8,
     enunciado: "O overfitting (sobreajuste) ocorre quando o modelo se ajusta excessivamente aos dados de treinamento, capturando inclusive o ruído, o que prejudica sua capacidade de generalização para dados novos; técnicas de regularização ajudam a mitigar esse problema.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "ajusta excessivamente / generalização",
@@ -328,7 +328,7 @@ const QUESTOES_PCAL_LOTE7 = [
   },
   {
     id: "ES-014", disciplina: "Estatística", assunto: "Análise de dados", subassunto: "CRISP-DM",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Perito Criminal","Papiloscopista"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 45, probReaparecer: 0.72,
     enunciado: "No modelo CRISP-DM de mineração de dados, a fase de entendimento do negócio antecede a de preparação dos dados, sendo esta última normalmente a que mais consome tempo no processo.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "entendimento do negócio antes da preparação",
@@ -348,7 +348,7 @@ const QUESTOES_PCAL_LOTE7 = [
   /* ==================== DIREITO PENAL (reforço) ==================== */
   {
     id: "DP-023", disciplina: "Direito Penal", assunto: "Concurso de pessoas", subassunto: "Teoria monista",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 40, probReaparecer: 0.78,
     enunciado: "O Código Penal adotou, como regra, a teoria monista (unitária) no concurso de pessoas, de modo que todos os que concorrem para o crime respondem pelo mesmo delito, na medida de sua culpabilidade.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "teoria monista",
@@ -366,7 +366,7 @@ const QUESTOES_PCAL_LOTE7 = [
   },
   {
     id: "DP-024", disciplina: "Direito Penal", assunto: "Crimes contra o patrimônio", subassunto: "Extorsão mediante sequestro",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 40, probReaparecer: 0.75,
     enunciado: "A extorsão mediante sequestro é crime de natureza hedionda e consuma-se com a privação da liberdade da vítima, com o fim de obter, para si ou para outrem, qualquer vantagem como condição ou preço do resgate.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "privação da liberdade / condição ou preço do resgate",
@@ -386,7 +386,7 @@ const QUESTOES_PCAL_LOTE7 = [
   /* ==================== TI E SEGURANÇA CIBERNÉTICA (reforço) ==================== */
   {
     id: "TI-011", disciplina: "TI e Segurança Cibernética", assunto: "Sistemas operacionais", subassunto: "Linux — permissões",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Perito Criminal","Papiloscopista"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 40, probReaparecer: 0.75,
     enunciado: "No sistema operacional Linux, as permissões de arquivos são definidas para três categorias — dono (proprietário), grupo e outros —, podendo cada uma receber permissões de leitura, escrita e execução.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "dono, grupo e outros",
@@ -404,7 +404,7 @@ const QUESTOES_PCAL_LOTE7 = [
   },
   {
     id: "TI-012", disciplina: "TI e Segurança Cibernética", assunto: "Edição de planilhas", subassunto: "Referência absoluta",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Perito Criminal","Papiloscopista"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 40, probReaparecer: 0.78,
     enunciado: "Em uma planilha eletrônica, o uso do cifrão nas coordenadas de uma célula, como em $A$1, cria uma referência absoluta, que não se altera quando a fórmula é copiada para outras células.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "$A$1 / referência absoluta",

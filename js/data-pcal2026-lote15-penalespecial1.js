@@ -15,7 +15,7 @@ const QUESTOES_PCAL_LOTE15 = [
   /* ============ LEI MARIA DA PENHA (Lei 11.340/2006) ============ */
   {
     id: "LE-052", disciplina: "Legislação Especial", assunto: "Lei Maria da Penha", subassunto: "Formas de violência (art. 7º)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei 11.340/2006, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 45, probReaparecer: 0.9,
     enunciado: "A violência patrimonial, entendida como conduta que configure retenção, subtração ou destruição parcial dos objetos da mulher, é uma das formas de violência doméstica e familiar previstas na Lei Maria da Penha.",
@@ -34,7 +34,7 @@ const QUESTOES_PCAL_LOTE15 = [
   },
   {
     id: "LE-053", disciplina: "Legislação Especial", assunto: "Lei Maria da Penha", subassunto: "Coabitação (Súmula 600 STJ)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei 11.340/2006, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 45, probReaparecer: 0.86,
     enunciado: "A caracterização da violência doméstica e familiar contra a mulher exige a coabitação entre o autor e a vítima.",
@@ -54,7 +54,7 @@ const QUESTOES_PCAL_LOTE15 = [
   },
   {
     id: "LE-054", disciplina: "Legislação Especial", assunto: "Lei Maria da Penha", subassunto: "Ação penal na lesão corporal (Súmula 542 STJ)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei 11.340/2006, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 55, probReaparecer: 0.9,
     enunciado: "A ação penal no crime de lesão corporal praticado contra a mulher no âmbito das relações domésticas é pública incondicionada, independentemente de representação da ofendida.",
@@ -74,7 +74,7 @@ const QUESTOES_PCAL_LOTE15 = [
   },
   {
     id: "LE-055", disciplina: "Legislação Especial", assunto: "Lei Maria da Penha", subassunto: "Vedação da Lei 9.099/95 (art. 41)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei 11.340/2006, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.88,
     enunciado: "Aos crimes praticados com violência doméstica e familiar contra a mulher, quando a pena máxima não superar dois anos, aplica-se a Lei 9.099/95, admitindo-se a transação penal.",
@@ -94,7 +94,7 @@ const QUESTOES_PCAL_LOTE15 = [
   },
   {
     id: "LE-056", disciplina: "Legislação Especial", assunto: "Lei Maria da Penha", subassunto: "Descumprimento de medida protetiva (art. 24-A)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei 11.340/2006, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 45, probReaparecer: 0.85,
     enunciado: "O descumprimento de medida protetiva de urgência deferida com base na Lei Maria da Penha configura crime autônomo, punível com pena de detenção.",
@@ -113,7 +113,7 @@ const QUESTOES_PCAL_LOTE15 = [
   },
   {
     id: "LE-057", disciplina: "Legislação Especial", assunto: "Lei Maria da Penha", subassunto: "Princípio da insignificância",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei 11.340/2006, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 50, probReaparecer: 0.82,
     enunciado: "Conforme entendimento consolidado do STJ, admite-se a aplicação do princípio da insignificância aos crimes praticados no âmbito da violência doméstica e familiar contra a mulher.",
@@ -133,7 +133,7 @@ const QUESTOES_PCAL_LOTE15 = [
   },
   {
     id: "LE-058", disciplina: "Legislação Especial", assunto: "Lei Maria da Penha", subassunto: "Renúncia à representação (art. 16)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei 11.340/2006, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 55, probReaparecer: 0.83,
     enunciado: "Nas ações penais públicas condicionadas à representação, a renúncia à representação da ofendida só é admitida perante o juiz, em audiência especialmente designada, antes do recebimento da denúncia e ouvido o Ministério Público.",
@@ -152,7 +152,7 @@ const QUESTOES_PCAL_LOTE15 = [
   },
   {
     id: "LE-059", disciplina: "Legislação Especial", assunto: "Lei Maria da Penha", subassunto: "Sujeito passivo",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei 11.340/2006, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 45, probReaparecer: 0.8,
     enunciado: "A proteção especial da Lei Maria da Penha aplica-se indistintamente a vítimas do sexo masculino e feminino em situação de violência doméstica.",
@@ -171,7 +171,7 @@ const QUESTOES_PCAL_LOTE15 = [
   },
   {
     id: "LE-060", disciplina: "Legislação Especial", assunto: "Lei Maria da Penha", subassunto: "Mulher transexual (STJ)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei 11.340/2006, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 50, probReaparecer: 0.78,
     enunciado: "Segundo a jurisprudência do STJ, a Lei Maria da Penha é aplicável às mulheres transexuais em situação de violência doméstica e familiar, independentemente de alteração no registro civil.",
@@ -191,7 +191,7 @@ const QUESTOES_PCAL_LOTE15 = [
   },
   {
     id: "LE-061", disciplina: "Legislação Especial", assunto: "Lei Maria da Penha", subassunto: "Medida protetiva pela autoridade policial (art. 12-C)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei 11.340/2006, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 55, probReaparecer: 0.82,
     enunciado: "As medidas protetivas de urgência que determinam o afastamento do agressor do lar somente podem ser concedidas pelo juiz, sendo vedada, em qualquer hipótese, a atuação da autoridade policial.",
@@ -210,7 +210,7 @@ const QUESTOES_PCAL_LOTE15 = [
   },
   {
     id: "LE-062", disciplina: "Legislação Especial", assunto: "Lei Maria da Penha", subassunto: "Violência psicológica (art. 7º, II)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei 11.340/2006, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 1, tempoIdealSeg: 40, probReaparecer: 0.8,
     enunciado: "A violência psicológica contra a mulher pode caracterizar-se por condutas que causem dano emocional e diminuição da autoestima, como a vigilância constante, a humilhação e a manipulação.",
@@ -229,7 +229,7 @@ const QUESTOES_PCAL_LOTE15 = [
   },
   {
     id: "LE-063", disciplina: "Legislação Especial", assunto: "Lei Maria da Penha", subassunto: "Prisão preventiva (art. 20)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei 11.340/2006, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 45, probReaparecer: 0.8,
     enunciado: "É vedada a decretação de prisão preventiva do agressor nos casos de violência doméstica e familiar contra a mulher.",
@@ -250,7 +250,7 @@ const QUESTOES_PCAL_LOTE15 = [
   /* ============ LEI DE TORTURA (Lei 9.455/1997) ============ */
   {
     id: "LE-064", disciplina: "Legislação Especial", assunto: "Lei de Tortura", subassunto: "Inafiançabilidade (art. 1º, § 6º)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei 9.455/1997, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 45, probReaparecer: 0.85,
     enunciado: "O crime de tortura é inafiançável e insuscetível de graça ou anistia.",
@@ -269,7 +269,7 @@ const QUESTOES_PCAL_LOTE15 = [
   },
   {
     id: "LE-065", disciplina: "Legislação Especial", assunto: "Lei de Tortura", subassunto: "Indulto (pegadinha do § 6º)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei 9.455/1997, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 55, probReaparecer: 0.8,
     enunciado: "A Lei de Tortura veda expressamente a concessão de graça, anistia e indulto ao condenado pelo crime de tortura.",
@@ -288,7 +288,7 @@ const QUESTOES_PCAL_LOTE15 = [
   },
   {
     id: "LE-066", disciplina: "Legislação Especial", assunto: "Lei de Tortura", subassunto: "Regime inicial fechado (art. 1º, § 7º)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei 9.455/1997, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.78,
     enunciado: "O condenado por crime de tortura iniciará, em regra, o cumprimento da pena em regime fechado, admitindo-se a progressão de regime.",
@@ -308,7 +308,7 @@ const QUESTOES_PCAL_LOTE15 = [
   },
   {
     id: "LE-067", disciplina: "Legislação Especial", assunto: "Lei de Tortura", subassunto: "Sujeito ativo (crime comum)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei 9.455/1997, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 55, probReaparecer: 0.8,
     enunciado: "O crime de tortura é próprio, exigindo que o sujeito ativo seja funcionário público no exercício da função.",
@@ -327,7 +327,7 @@ const QUESTOES_PCAL_LOTE15 = [
   },
   {
     id: "LE-068", disciplina: "Legislação Especial", assunto: "Lei de Tortura", subassunto: "Tortura-omissão (art. 1º, § 2º)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei 9.455/1997, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 50, probReaparecer: 0.78,
     enunciado: "Aquele que se omite diante da prática de tortura, quando tinha o dever de evitá-la ou de apurá-la, responde por crime de tortura, apenado com detenção.",
@@ -346,7 +346,7 @@ const QUESTOES_PCAL_LOTE15 = [
   },
   {
     id: "LE-069", disciplina: "Legislação Especial", assunto: "Lei de Tortura", subassunto: "Efeitos da condenação (art. 1º, § 5º)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei 9.455/1997, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 55, probReaparecer: 0.82,
     enunciado: "A condenação por crime de tortura acarreta, como efeito, a perda do cargo, função ou emprego público e a interdição para o seu exercício pelo dobro do prazo da pena aplicada.",
@@ -365,7 +365,7 @@ const QUESTOES_PCAL_LOTE15 = [
   },
   {
     id: "LE-070", disciplina: "Legislação Especial", assunto: "Lei de Tortura", subassunto: "Extraterritorialidade (art. 2º)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei 9.455/1997, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 55, probReaparecer: 0.75,
     enunciado: "A Lei de Tortura não se aplica quando o crime é cometido fora do território nacional, ainda que a vítima seja brasileira.",
@@ -384,7 +384,7 @@ const QUESTOES_PCAL_LOTE15 = [
   },
   {
     id: "LE-071", disciplina: "Legislação Especial", assunto: "Lei de Tortura", subassunto: "Tortura-discriminação (art. 1º, I, 'c')",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei 9.455/1997, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 45, probReaparecer: 0.72,
     enunciado: "Constitui crime de tortura constranger alguém, com emprego de violência ou grave ameaça, causando-lhe sofrimento físico ou mental, em razão de discriminação racial ou religiosa.",
@@ -405,7 +405,7 @@ const QUESTOES_PCAL_LOTE15 = [
   /* ============ LEI DOS CRIMES HEDIONDOS (Lei 8.072/1990) ============ */
   {
     id: "LE-072", disciplina: "Legislação Especial", assunto: "Crimes Hediondos", subassunto: "Vedações do art. 2º",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei 8.072/1990, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 55, probReaparecer: 0.88,
     enunciado: "Os crimes hediondos são inafiançáveis e insuscetíveis de anistia e graça, admitindo-se, contudo, a concessão de indulto.",
@@ -424,7 +424,7 @@ const QUESTOES_PCAL_LOTE15 = [
   },
   {
     id: "LE-073", disciplina: "Legislação Especial", assunto: "Crimes Hediondos", subassunto: "Rol taxativo (art. 1º)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei 8.072/1990, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 45, probReaparecer: 0.82,
     enunciado: "O rol dos crimes hediondos é taxativo, definido expressamente em lei, não se admitindo interpretação extensiva para incluir crimes não previstos.",
@@ -443,7 +443,7 @@ const QUESTOES_PCAL_LOTE15 = [
   },
   {
     id: "LE-074", disciplina: "Legislação Especial", assunto: "Crimes Hediondos", subassunto: "Equiparados (TTT)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei 8.072/1990, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.85,
     enunciado: "O tráfico ilícito de entorpecentes, o terrorismo e a tortura são classificados pela Constituição Federal como crimes hediondos.",
@@ -462,7 +462,7 @@ const QUESTOES_PCAL_LOTE15 = [
   },
   {
     id: "LE-075", disciplina: "Legislação Especial", assunto: "Crimes Hediondos", subassunto: "Progressão após o Pacote Anticrime",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei 8.072/1990 c/c Lei 13.964/2019, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 55, probReaparecer: 0.82,
     enunciado: "Após a Lei 13.964/2019 (Pacote Anticrime), a progressão de regime nos crimes hediondos passou a observar percentuais de cumprimento de pena que variam conforme a primariedade do apenado e a ocorrência de resultado morte.",
@@ -481,7 +481,7 @@ const QUESTOES_PCAL_LOTE15 = [
   },
   {
     id: "LE-076", disciplina: "Legislação Especial", assunto: "Crimes Hediondos", subassunto: "Regime integralmente fechado (inconstitucionalidade)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei 8.072/1990, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 55, probReaparecer: 0.8,
     enunciado: "Nos crimes hediondos, a pena privativa de liberdade deve ser cumprida integralmente em regime fechado, sendo vedada a progressão de regime.",
@@ -501,7 +501,7 @@ const QUESTOES_PCAL_LOTE15 = [
   },
   {
     id: "LE-077", disciplina: "Legislação Especial", assunto: "Crimes Hediondos", subassunto: "Livramento condicional (art. 5º)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei 8.072/1990, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 55, probReaparecer: 0.78,
     enunciado: "O condenado por crime hediondo poderá obter livramento condicional após o cumprimento de mais de dois terços da pena, desde que não seja reincidente específico em crimes dessa natureza.",
@@ -520,7 +520,7 @@ const QUESTOES_PCAL_LOTE15 = [
   },
   {
     id: "LE-078", disciplina: "Legislação Especial", assunto: "Crimes Hediondos", subassunto: "Homicídio qualificado",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei 8.072/1990, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 1, tempoIdealSeg: 40, probReaparecer: 0.8,
     enunciado: "O homicídio qualificado é considerado crime hediondo.",
@@ -539,7 +539,7 @@ const QUESTOES_PCAL_LOTE15 = [
   },
   {
     id: "LE-079", disciplina: "Legislação Especial", assunto: "Crimes Hediondos", subassunto: "Homicídio simples e grupo de extermínio",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei 8.072/1990, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 50, probReaparecer: 0.78,
     enunciado: "O homicídio simples, em qualquer hipótese, não constitui crime hediondo.",
@@ -558,7 +558,7 @@ const QUESTOES_PCAL_LOTE15 = [
   },
   {
     id: "LE-080", disciplina: "Legislação Especial", assunto: "Crimes Hediondos", subassunto: "Arma de fogo de uso proibido (Anticrime)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei 8.072/1990 c/c Lei 13.964/2019, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.78,
     enunciado: "A posse ou o porte ilegal de arma de fogo de uso proibido é classificado como crime hediondo.",
@@ -577,7 +577,7 @@ const QUESTOES_PCAL_LOTE15 = [
   },
   {
     id: "LE-081", disciplina: "Legislação Especial", assunto: "Crimes Hediondos", subassunto: "Estupro de vulnerável",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei 8.072/1990, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.8,
     enunciado: "O estupro de vulnerável, por dispensar a violência ou grave ameaça reais, não está incluído no rol dos crimes hediondos.",

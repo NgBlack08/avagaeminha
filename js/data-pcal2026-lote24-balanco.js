@@ -18,7 +18,7 @@ const QUESTOES_PCAL_LOTE24 = [
   /* ================= EXIGÊNCIA INEXISTENTE — CONTROLE (Certo) ================= */
   {
     id: "DP-079", disciplina: "Direito Penal", assunto: "Crimes contra o Patrimônio", subassunto: "Apropriação indébita (exigência real)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (CP, art. 168) — item de controle",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.75,
     enunciado: "A apropriação indébita exige que o agente tenha a posse ou a detenção lícita e prévia da coisa alheia móvel, apropriando-se dela posteriormente — o que a distingue do furto.",
@@ -37,7 +37,7 @@ const QUESTOES_PCAL_LOTE24 = [
   },
   {
     id: "DP-080", disciplina: "Direito Penal", assunto: "Excludentes de ilicitude", subassunto: "Legítima defesa (exigência real)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (CP, art. 25) — item de controle",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.78,
     enunciado: "A legítima defesa exige o uso moderado dos meios necessários para repelir injusta agressão, atual ou iminente, a direito próprio ou alheio.",
@@ -56,7 +56,7 @@ const QUESTOES_PCAL_LOTE24 = [
   },
   {
     id: "PP-056", disciplina: "Processo Penal", assunto: "Prisão preventiva", subassunto: "Periculum libertatis (exigência real)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (CPP, art. 312) — item de controle",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 55, probReaparecer: 0.8,
     enunciado: "A decretação da prisão preventiva exige a demonstração de risco concreto à ordem pública, à ordem econômica, à instrução criminal ou à aplicação da lei penal, não bastando a mera gravidade abstrata do crime.",
@@ -76,7 +76,7 @@ const QUESTOES_PCAL_LOTE24 = [
   },
   {
     id: "DC-032", disciplina: "Direito Constitucional", assunto: "Estado de sítio", subassunto: "Oitiva dos Conselhos (exigência real)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (CF, arts. 89, 91 e 137) — item de controle",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 55, probReaparecer: 0.72,
     enunciado: "A decretação do estado de sítio exige a prévia oitiva do Conselho da República e do Conselho de Defesa Nacional, ainda que os pareceres desses órgãos não vinculem a decisão do Presidente da República.",
@@ -95,7 +95,7 @@ const QUESTOES_PCAL_LOTE24 = [
   },
   {
     id: "DA-047", disciplina: "Direito Administrativo", assunto: "Improbidade administrativa", subassunto: "Legitimidade ativa (exigência real)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei 8.429/1992, art. 17) — item de controle",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.75,
     enunciado: "A propositura da ação por ato de improbidade administrativa exige legitimidade ativa exclusiva do Ministério Público ou da pessoa jurídica interessada, conforme a Lei 8.429/1992.",
@@ -114,7 +114,7 @@ const QUESTOES_PCAL_LOTE24 = [
   },
   {
     id: "LE-118", disciplina: "Legislação Especial", assunto: "Lei de Drogas", subassunto: "Tráfico × uso pessoal (exigência real)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei 11.343/2006, art. 33) — item de controle",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 55, probReaparecer: 0.78,
     enunciado: "A configuração do tráfico de drogas exige que a substância se destine à mercancia ou à entrega a terceiro, o que o distingue do porte para consumo pessoal.",
@@ -133,7 +133,7 @@ const QUESTOES_PCAL_LOTE24 = [
   },
   {
     id: "DH-046", disciplina: "Direitos Humanos", assunto: "Refúgio", subassunto: "Fundado temor de perseguição (exigência real)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei 9.474/1997, art. 1º) — item de controle",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.72,
     enunciado: "O reconhecimento da condição de refugiado exige fundado temor de perseguição por motivos de raça, religião, nacionalidade, grupo social ou opinião política.",
@@ -152,7 +152,7 @@ const QUESTOES_PCAL_LOTE24 = [
   },
   {
     id: "DA-048", disciplina: "Direito Administrativo", assunto: "Lei de Licitações (14.133/2021)", subassunto: "Dispensa emergencial (exigência real)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei 14.133/2021) — item de controle",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 55, probReaparecer: 0.75,
     enunciado: "A dispensa de licitação por emergência exige que a situação urgente não tenha sido gerada por falta de planejamento, desídia ou má gestão do próprio agente público.",
@@ -173,7 +173,7 @@ const QUESTOES_PCAL_LOTE24 = [
   /* ================= LITERALIDADE — CONTRAEXEMPLO (Errado) ================= */
   {
     id: "DC-033", disciplina: "Direito Constitucional", assunto: "Direitos fundamentais", subassunto: "Legalidade (art. 5º, II — literalidade)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (CF, art. 5º, II)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.85,
     enunciado: "Ninguém será obrigado a fazer ou deixar de fazer alguma coisa senão em virtude de decisão judicial.",
@@ -192,7 +192,7 @@ const QUESTOES_PCAL_LOTE24 = [
   },
   {
     id: "DA-049", disciplina: "Direito Administrativo", assunto: "Princípios da Administração Pública", subassunto: "Art. 37, caput (literalidade)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (CF, art. 37, caput)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.85,
     enunciado: "A administração pública direta e indireta de qualquer dos Poderes obedecerá aos princípios de legalidade, impessoalidade, moralidade, publicidade e razoabilidade.",
@@ -211,7 +211,7 @@ const QUESTOES_PCAL_LOTE24 = [
   },
   {
     id: "DC-034", disciplina: "Direito Constitucional", assunto: "Direitos fundamentais", subassunto: "Inviolabilidade do domicílio (literalidade)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (CF, art. 5º, XI)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.85,
     enunciado: "A casa é asilo inviolável do indivíduo, ninguém nela podendo penetrar sem consentimento do morador, salvo em caso de flagrante delito ou desastre, ou para prestar socorro, ou, durante o dia, por determinação administrativa.",
@@ -230,7 +230,7 @@ const QUESTOES_PCAL_LOTE24 = [
   },
   {
     id: "DC-035", disciplina: "Direito Constitucional", assunto: "Direitos fundamentais", subassunto: "Erro judiciário (literalidade)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (CF, art. 5º, LXXV)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.8,
     enunciado: "O Município indenizará o condenado por erro judiciário, assim como o que ficar preso além do tempo fixado na sentença.",
@@ -249,7 +249,7 @@ const QUESTOES_PCAL_LOTE24 = [
   },
   {
     id: "PP-057", disciplina: "Processo Penal", assunto: "Prisão em flagrante", subassunto: "Flagrante impróprio (literalidade)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (CPP, art. 302, IV)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 55, probReaparecer: 0.82,
     enunciado: "Considera-se em flagrante delito quem é encontrado, a qualquer tempo, com instrumentos, armas, objetos ou papéis que façam presumir ser ele autor da infração.",
@@ -268,7 +268,7 @@ const QUESTOES_PCAL_LOTE24 = [
   },
   {
     id: "DP-081", disciplina: "Direito Penal", assunto: "Crimes contra o Patrimônio", subassunto: "Furto (literalidade)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (CP, art. 155, caput)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 45, probReaparecer: 0.8,
     enunciado: "Nos termos do Código Penal, o crime de furto — subtrair, para si ou para outrem, coisa alheia móvel — é punido com pena de detenção, de um a quatro anos, e multa.",
@@ -287,7 +287,7 @@ const QUESTOES_PCAL_LOTE24 = [
   },
   {
     id: "DP-082", disciplina: "Direito Penal", assunto: "Aplicação da pena", subassunto: "Regimes de cumprimento (literalidade)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (CP, art. 33, caput)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 50, probReaparecer: 0.78,
     enunciado: "A pena de reclusão deve ser cumprida em regime fechado, semiaberto ou aberto; a de detenção, em regime fechado ou aberto, salvo necessidade de transferência a regime fechado.",
@@ -306,7 +306,7 @@ const QUESTOES_PCAL_LOTE24 = [
   },
   {
     id: "LI-044", disciplina: "Legislação Institucional (AL)", assunto: "LONPC (Lei 14.735/2023)", subassunto: "Exclusividade da polícia judiciária (literalidade)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei 14.735/2023, art. 6º, § 1º)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 55, probReaparecer: 0.8,
     enunciado: "As funções de polícia judiciária são exercidas com preferência pelos integrantes das carreiras policiais civis, nos termos da Lei Orgânica Nacional das Polícias Civis.",
@@ -325,7 +325,7 @@ const QUESTOES_PCAL_LOTE24 = [
   },
   {
     id: "DH-047", disciplina: "Direitos Humanos", assunto: "Pacto de San José da Costa Rica", subassunto: "Garantias judiciais (literalidade)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (CADH, art. 8.1)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 55, probReaparecer: 0.78,
     enunciado: "Toda pessoa tem direito a ser ouvida, com as devidas garantias e dentro de um prazo razoável, por um juiz ou tribunal competente, vinculado ao Poder Executivo e imparcial.",
@@ -344,7 +344,7 @@ const QUESTOES_PCAL_LOTE24 = [
   },
   {
     id: "PP-058", disciplina: "Processo Penal", assunto: "Ação penal", subassunto: "Ação pública condicionada (literalidade)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (CPP, art. 24)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 55, probReaparecer: 0.75,
     enunciado: "Nos crimes de ação pública, esta será promovida por denúncia do Ministério Público, mas dependerá, quando a lei o exigir, de requisição do Presidente da República, ou de representação do ofendido ou de quem tiver qualidade para representá-lo.",
@@ -363,7 +363,7 @@ const QUESTOES_PCAL_LOTE24 = [
   },
   {
     id: "DC-036", disciplina: "Direito Constitucional", assunto: "Direitos fundamentais", subassunto: "Devido processo legal (literalidade)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (CF, art. 5º, LIV)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 45, probReaparecer: 0.8,
     enunciado: "Ninguém será privado da liberdade ou de seus direitos políticos sem o devido processo legal.",
@@ -382,7 +382,7 @@ const QUESTOES_PCAL_LOTE24 = [
   },
   {
     id: "DA-050", disciplina: "Direito Administrativo", assunto: "Processo Administrativo (Lei 9.784/1999)", subassunto: "Princípios expressos (literalidade)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei 9.784/1999, art. 2º)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 55, probReaparecer: 0.72,
     enunciado: "A Administração Pública obedecerá, dentre outros, aos princípios da legalidade, finalidade, motivação, razoabilidade, proporcionalidade, moralidade, ampla defesa, contraditório, segurança jurídica, interesse público e subsidiariedade.",

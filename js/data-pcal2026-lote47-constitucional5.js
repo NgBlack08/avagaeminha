@@ -17,7 +17,7 @@ const QUESTOES_PCAL_LOTE47 = [
   /* ===== ALISTAMENTO ELEITORAL E VOTO (ART. 14, § 1º) ===== */
   {
     id: "DC-089", disciplina: "Direito Constitucional", assunto: "Direitos políticos", subassunto: "Alistamento eleitoral e voto (art. 14, § 1º)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (CF/88, art. 14, § 1º)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.85,
     enunciado: "Para os maiores de dezesseis e menores de dezoito anos de idade, tanto o alistamento eleitoral quanto o voto são facultativos, não havendo, na Constituição Federal, hipótese em que um desses atos seja obrigatório e o outro, facultativo, para a mesma faixa etária.",
@@ -36,7 +36,7 @@ const QUESTOES_PCAL_LOTE47 = [
   },
   {
     id: "DC-090", disciplina: "Direito Constitucional", assunto: "Direitos políticos", subassunto: "Alistamento eleitoral e voto (art. 14, § 1º)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (CF/88, art. 14, § 1º)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.82,
     enunciado: "Para os maiores de dezesseis e menores de dezoito anos de idade, é facultativo o voto, mas obrigatório o alistamento eleitoral, uma vez que a Constituição Federal permite a cisão de regimes entre os dois atos para essa faixa etária específica.",
@@ -57,7 +57,7 @@ const QUESTOES_PCAL_LOTE47 = [
   /* ===== ALISTABILIDADE — INALISTÁVEIS (ART. 14, § 2º) ===== */
   {
     id: "DC-091", disciplina: "Direito Constitucional", assunto: "Direitos políticos", subassunto: "Alistabilidade — inalistáveis (art. 14, § 2º)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (CF/88, art. 14, § 2º)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.85,
     enunciado: "A alistabilidade, capacidade eleitoral ativa que confere ao indivíduo o direito de participar da escolha dos mandatários, é vedada aos estrangeiros e, durante o período do serviço militar obrigatório, aos conscritos, sendo essa vedação, no caso destes últimos, de natureza temporária.",
@@ -76,7 +76,7 @@ const QUESTOES_PCAL_LOTE47 = [
   },
   {
     id: "DC-092", disciplina: "Direito Constitucional", assunto: "Direitos políticos", subassunto: "Alistabilidade — inalistáveis (art. 14, § 2º)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (CF/88, art. 14, § 2º)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.8,
     enunciado: "Além dos estrangeiros e dos conscritos durante o período do serviço militar obrigatório, a Constituição Federal veda a alistabilidade também aos presos provisórios e às pessoas com deficiência mental, ampliando o rol de inalistáveis para além dessas duas hipóteses tradicionais.",
@@ -97,7 +97,7 @@ const QUESTOES_PCAL_LOTE47 = [
   /* ===== FILIAÇÃO PARTIDÁRIA — VEDAÇÃO A CANDIDATURA AVULSA (ART. 14, § 3º, V) ===== */
   {
     id: "DC-093", disciplina: "Direito Constitucional", assunto: "Direitos políticos", subassunto: "Filiação partidária — vedação a candidatura avulsa (art. 14, § 3º, V)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (CF/88, art. 14, § 3º, V; STF)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.84,
     enunciado: "A filiação partidária é condição de elegibilidade exigida pela Constituição Federal para qualquer cargo eletivo, inclusive para os cargos de Presidente e Vice-Presidente da República, não sendo admitidas candidaturas avulsas no sistema eleitoral brasileiro, conforme entendimento do STF.",
@@ -116,7 +116,7 @@ const QUESTOES_PCAL_LOTE47 = [
   },
   {
     id: "DC-094", disciplina: "Direito Constitucional", assunto: "Direitos políticos", subassunto: "Filiação partidária — vedação a candidatura avulsa (art. 14, § 3º, V)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (CF/88, art. 14, § 3º, V; STF)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.82,
     enunciado: "Conforme o entendimento jurisprudencial do STF, a candidatura aos cargos de Presidente ou de Vice-Presidente da República é permitida a indivíduos que não tenham filiação partidária, em caráter excepcional, dada a relevância nacional desses cargos.",
@@ -137,7 +137,7 @@ const QUESTOES_PCAL_LOTE47 = [
   /* ===== INELEGIBILIDADE REFLEXA E DIVÓRCIO (ART. 14, § 7º; SÚMULA VINCULANTE 18 STF) ===== */
   {
     id: "DC-095", disciplina: "Direito Constitucional", assunto: "Direitos políticos", subassunto: "Inelegibilidade reflexa e divórcio (art. 14, § 7º; SV 18 STF)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (CF/88, art. 14, § 7º; STF, Súmula Vinculante 18)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 70, probReaparecer: 0.85,
     enunciado: "Segundo entendimento sumulado do Supremo Tribunal Federal, a dissolução da sociedade ou do vínculo conjugal no curso do mandato do titular de cargo do Poder Executivo não afasta a inelegibilidade reflexa prevista no art. 14, § 7º, da Constituição Federal, ainda que o divórcio ocorra meses antes do pleito seguinte.",
@@ -156,7 +156,7 @@ const QUESTOES_PCAL_LOTE47 = [
   },
   {
     id: "DC-096", disciplina: "Direito Constitucional", assunto: "Direitos políticos", subassunto: "Inelegibilidade reflexa e divórcio (art. 14, § 7º; SV 18 STF)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (CF/88, art. 14, § 7º; STF, Súmula Vinculante 18)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 70, probReaparecer: 0.8,
     enunciado: "O ex-cônjuge do titular de cargo do Poder Executivo, divorciado no curso do mandato, poderá candidatar-se, nas eleições seguintes, a cargo eletivo no território de jurisdição do titular, desde que o divórcio tenha ocorrido pelo menos seis meses antes do pleito.",
@@ -177,7 +177,7 @@ const QUESTOES_PCAL_LOTE47 = [
   /* ===== IMPROBIDADE ADMINISTRATIVA — SUSPENSÃO, NUNCA CASSAÇÃO (ART. 15, V; ART. 37, § 4º) ===== */
   {
     id: "DC-097", disciplina: "Direito Constitucional", assunto: "Direitos políticos", subassunto: "Improbidade administrativa — suspensão dos direitos políticos (art. 15, V; art. 37, § 4º)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (CF/88, art. 15, V; art. 37, § 4º)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.85,
     enunciado: "A condenação por ato de improbidade administrativa acarreta a suspensão dos direitos políticos do responsável, na forma e gradação previstas em lei, e não a cassação desses direitos, a qual é vedada em qualquer hipótese pela Constituição Federal.",
@@ -196,7 +196,7 @@ const QUESTOES_PCAL_LOTE47 = [
   },
   {
     id: "DC-098", disciplina: "Direito Constitucional", assunto: "Direitos políticos", subassunto: "Improbidade administrativa — suspensão dos direitos políticos (art. 15, V; art. 37, § 4º)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (CF/88, art. 15, V; art. 37, § 4º)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.82,
     enunciado: "A condenação por improbidade administrativa tem como consequência inerente a cassação dos direitos políticos do responsável, nos termos do art. 15 da Constituição Federal.",
@@ -217,7 +217,7 @@ const QUESTOES_PCAL_LOTE47 = [
   /* ===== VEDAÇÃO ABSOLUTA A RECURSOS ESTRANGEIROS EM PARTIDOS (ART. 17, II) ===== */
   {
     id: "DC-099", disciplina: "Direito Constitucional", assunto: "Direito eleitoral e partidos políticos", subassunto: "Vedação a recursos financeiros estrangeiros (art. 17, II)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (CF/88, art. 17, II)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.84,
     enunciado: "É assegurada a liberdade de criação, fusão, incorporação e extinção de partidos políticos, sendo vedado, contudo, o recebimento de recursos financeiros de entidade ou governo estrangeiros, independentemente de haver ou não subordinação do partido a esses entes.",
@@ -236,7 +236,7 @@ const QUESTOES_PCAL_LOTE47 = [
   },
   {
     id: "DC-100", disciplina: "Direito Constitucional", assunto: "Direito eleitoral e partidos políticos", subassunto: "Vedação a recursos financeiros estrangeiros (art. 17, II)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (CF/88, art. 17, II)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.8,
     enunciado: "É assegurada a liberdade de criação, fusão, incorporação e extinção de partidos políticos, sendo permitido o recebimento de recursos financeiros de entidades estrangeiras, desde que não haja subordinação do partido a governo estrangeiro.",
@@ -257,7 +257,7 @@ const QUESTOES_PCAL_LOTE47 = [
   /* ===== AUTONOMIA PARTIDÁRIA — COLIGAÇÕES (ART. 17, § 1º; EC 97/2017) ===== */
   {
     id: "DC-101", disciplina: "Direito Constitucional", assunto: "Direito eleitoral e partidos políticos", subassunto: "Autonomia partidária e coligações (art. 17, § 1º; EC 97/2017)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (CF/88, art. 17, § 1º; EC 97/2017)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.85,
     enunciado: "A Constituição Federal assegura aos partidos políticos autonomia para adotar os critérios próprios de suas coligações nas eleições majoritárias, sendo vedada, contudo, desde a Emenda Constitucional nº 97/2017, a celebração de coligações nas eleições proporcionais.",
@@ -276,7 +276,7 @@ const QUESTOES_PCAL_LOTE47 = [
   },
   {
     id: "DC-102", disciplina: "Direito Constitucional", assunto: "Direito eleitoral e partidos políticos", subassunto: "Autonomia partidária e coligações (art. 17, § 1º; EC 97/2017)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (CF/88, art. 17, § 1º; EC 97/2017)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.8,
     enunciado: "A Constituição Federal assegura aos partidos políticos autonomia para celebrar coligações nas eleições proporcionais, sendo vedada, desde a Emenda Constitucional nº 97/2017, a formação de coligações nas eleições majoritárias.",

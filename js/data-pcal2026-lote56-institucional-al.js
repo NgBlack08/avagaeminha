@@ -25,7 +25,7 @@ const QUESTOES_PCAL_LOTE56 = [
   /* ===================== PROVIMENTO E INVESTIDURA ===================== */
   {
     id: "LI-045", disciplina: "Legislação Institucional (AL)", assunto: "Estatuto da PC-AL (Lei 3.437/1975)", subassunto: "Formas de provimento (art. 36)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Estatuto PC-AL, Lei 3.437/1975)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.85,
     enunciado: "De acordo com o texto do Estatuto da Polícia Civil de Alagoas, os cargos de natureza policial são providos por nomeação, promoção, acesso, reintegração, aproveitamento, reversão e transferência.",
@@ -44,7 +44,7 @@ const QUESTOES_PCAL_LOTE56 = [
   },
   {
     id: "LI-046", disciplina: "Legislação Institucional (AL)", assunto: "Estatuto da PC-AL (Lei 3.437/1975)", subassunto: "Requisitos de investidura (art. 38)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Estatuto PC-AL, Lei 3.437/1975)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.9,
     enunciado: "Para exercer os cargos de que trata o Estatuto da PC-AL, exige-se, entre outros requisitos, ter no máximo trinta anos de idade, limite que se aplica em qualquer hipótese, inclusive ao funcionário público e aos cargos em comissão.",
@@ -63,7 +63,7 @@ const QUESTOES_PCAL_LOTE56 = [
   },
   {
     id: "LI-047", disciplina: "Legislação Institucional (AL)", assunto: "Estatuto da PC-AL (Lei 3.437/1975)", subassunto: "Requisitos de investidura (art. 38)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Estatuto PC-AL, Lei 3.437/1975)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.8,
     enunciado: "Entre os requisitos para exercer os cargos previstos no Estatuto da PC-AL estão ser brasileiro, ter completado dezoito anos de idade, estar em gozo dos direitos políticos e estar quite com as obrigações militares e eleitorais.",
@@ -82,7 +82,7 @@ const QUESTOES_PCAL_LOTE56 = [
   },
   {
     id: "LI-048", disciplina: "Legislação Institucional (AL)", assunto: "Estatuto da PC-AL (Lei 3.437/1975)", subassunto: "Direção da polícia por delegado de carreira (art. 40 x CF art. 144)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Estatuto PC-AL x CF/88)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 70, probReaparecer: 0.8,
     enunciado: "Ainda que o Estatuto da PC-AL, de 1975, preveja que Delegados Regionais e Especializados possam ser exercidos por oficiais superiores da Polícia Militar, tal previsão não se compatibiliza com a Constituição de 1988, segundo a qual a polícia civil é dirigida por delegados de polícia de carreira.",
@@ -101,7 +101,7 @@ const QUESTOES_PCAL_LOTE56 = [
   },
   {
     id: "LI-049", disciplina: "Legislação Institucional (AL)", assunto: "Estatuto da PC-AL (Lei 3.437/1975)", subassunto: "Posse (art. 42)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Estatuto PC-AL, Lei 3.437/1975)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.8,
     enunciado: "Os servidores policiais civis nomeados tomarão posse no prazo de quinze dias, contados da publicação do ato de nomeação.",
@@ -120,7 +120,7 @@ const QUESTOES_PCAL_LOTE56 = [
   },
   {
     id: "LI-050", disciplina: "Legislação Institucional (AL)", assunto: "Estatuto da PC-AL (Lei 3.437/1975)", subassunto: "Estabilidade — art. 55 x art. 41 da CF",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Estatuto PC-AL x CF/88)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 70, probReaparecer: 0.95,
     enunciado: "Embora o Estatuto da Polícia Civil de Alagoas, editado em 1975, mencione a aquisição de estabilidade após um ano de exercício, tal prazo não prevalece sobre o art. 41 da Constituição Federal, que exige três anos de efetivo exercício e avaliação especial de desempenho para a aquisição da estabilidade pelo servidor de cargo efetivo.",
@@ -139,7 +139,7 @@ const QUESTOES_PCAL_LOTE56 = [
   },
   {
     id: "LI-051", disciplina: "Legislação Institucional (AL)", assunto: "Estatuto da PC-AL (Lei 3.437/1975)", subassunto: "Estágio probatório (art. 55)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Estatuto PC-AL, Lei 3.437/1975)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 60, probReaparecer: 0.85,
     enunciado: "No estágio probatório do policial civil de Alagoas são apuradas a idoneidade moral, a assiduidade, a pontualidade, a disciplina e a eficiência.",
@@ -160,7 +160,7 @@ const QUESTOES_PCAL_LOTE56 = [
   /* ===================== ATRIBUIÇÕES E REQUISITOS DE CARGO ===================== */
   {
     id: "LI-052", disciplina: "Legislação Institucional (AL)", assunto: "Estatuto da PC-AL (Lei 3.437/1975)", subassunto: "Requisito do cargo de Perito Criminal (art. 21)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Estatuto PC-AL, Lei 3.437/1975)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 60, probReaparecer: 0.8,
     enunciado: "Para o provimento do cargo de Perito Criminal, o Estatuto da PC-AL exige a conclusão de curso superior em qualquer área científica, além de curso de Perícia Criminal em estabelecimento idôneo.",
@@ -179,7 +179,7 @@ const QUESTOES_PCAL_LOTE56 = [
   },
   {
     id: "LI-053", disciplina: "Legislação Institucional (AL)", assunto: "Estatuto da PC-AL (Lei 3.437/1975)", subassunto: "Requisito do cargo de Inspetor de Polícia (art. 15)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Estatuto PC-AL, Lei 3.437/1975)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.75,
     enunciado: "Para o provimento do cargo de Inspetor de Polícia, exige-se, como habilitação, o curso de Direito.",
@@ -198,7 +198,7 @@ const QUESTOES_PCAL_LOTE56 = [
   },
   {
     id: "LI-054", disciplina: "Legislação Institucional (AL)", assunto: "Estatuto da PC-AL (Lei 3.437/1975)", subassunto: "Atribuições do Escrivão Auxiliar (art. 17)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Estatuto PC-AL, Lei 3.437/1975)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.75,
     enunciado: "Durante uma operação, o Delegado determinou que o Escrivão Auxiliar de Polícia acompanhasse a equipe em diligência externa para lavratura imediata de autos no local. O servidor pode recusar a ordem, pois suas atribuições se limitam à escrituração interna de cartório.",
@@ -219,7 +219,7 @@ const QUESTOES_PCAL_LOTE56 = [
   /* ===================== PRECEDÊNCIA E VANTAGENS ===================== */
   {
     id: "LI-055", disciplina: "Legislação Institucional (AL)", assunto: "Estatuto da PC-AL (Lei 3.437/1975)", subassunto: "Precedência hierárquica (art. 67)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Estatuto PC-AL, Lei 3.437/1975)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 70, probReaparecer: 0.85,
     enunciado: "Na Polícia Civil de Alagoas, o primeiro critério de precedência hierárquica é o maior tempo de serviço público, seguido do maior nível ou símbolo de vencimento-base.",
@@ -238,7 +238,7 @@ const QUESTOES_PCAL_LOTE56 = [
   },
   {
     id: "LI-056", disciplina: "Legislação Institucional (AL)", assunto: "Estatuto da PC-AL (Lei 3.437/1975)", subassunto: "Precedência hierárquica (art. 67)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Estatuto PC-AL, Lei 3.437/1975)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.8,
     enunciado: "Persistindo o empate entre policiais civis após aplicados os demais critérios de precedência hierárquica previstos no Estatuto da PC-AL, terá precedência o mais idoso.",
@@ -257,7 +257,7 @@ const QUESTOES_PCAL_LOTE56 = [
   },
   {
     id: "LI-057", disciplina: "Legislação Institucional (AL)", assunto: "Estatuto da PC-AL (Lei 3.437/1975)", subassunto: "Ajuda de custo (art. 70)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Estatuto PC-AL, Lei 3.437/1975)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 70, probReaparecer: 0.8,
     enunciado: "A ajuda de custo concedida ao policial civil que passe a ter exercício em nova sede destina-se ao ressarcimento das despesas de viagem à nova instalação, inclusive as de transporte, e não excederá a um mês de vencimento.",
@@ -278,7 +278,7 @@ const QUESTOES_PCAL_LOTE56 = [
   /* ===================== ACUMULAÇÃO ===================== */
   {
     id: "LI-058", disciplina: "Legislação Institucional (AL)", assunto: "Estatuto da PC-AL (Lei 3.437/1975)", subassunto: "Acumulação de cargos (art. 85)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Estatuto PC-AL, Lei 3.437/1975)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 70, probReaparecer: 0.8,
     enunciado: "A regra no Estatuto da PC-AL é a vedação de acumulação de cargos ou funções, admitindo-se, excepcionalmente, a acumulação de um cargo policial técnico ou científico com o de professor, desde que haja correlação de matérias e compatibilidade de horários.",
@@ -299,7 +299,7 @@ const QUESTOES_PCAL_LOTE56 = [
   /* ===================== REGIME DISCIPLINAR — PENALIDADES ===================== */
   {
     id: "LI-059", disciplina: "Legislação Institucional (AL)", assunto: "Estatuto da PC-AL (Lei 3.437/1975)", subassunto: "Penas disciplinares (art. 91)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Estatuto PC-AL, Lei 3.437/1975)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.9,
     enunciado: "São penas disciplinares previstas no Estatuto da PC-AL a repreensão, a multa, a suspensão, a detenção disciplinar, a destituição de função, a demissão e a cassação de aposentadoria ou disponibilidade.",
@@ -318,7 +318,7 @@ const QUESTOES_PCAL_LOTE56 = [
   },
   {
     id: "LI-060", disciplina: "Legislação Institucional (AL)", assunto: "Estatuto da PC-AL (Lei 3.437/1975)", subassunto: "Repreensão (art. 93)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Estatuto PC-AL, Lei 3.437/1975)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.85,
     enunciado: "Diante de falta leve não tipificada para outra sanção específica, a chefia poderá aplicar repreensão verbal ao policial civil, sem registro nos assentamentos, para não macular sua ficha funcional.",
@@ -337,7 +337,7 @@ const QUESTOES_PCAL_LOTE56 = [
   },
   {
     id: "LI-061", disciplina: "Legislação Institucional (AL)", assunto: "Estatuto da PC-AL (Lei 3.437/1975)", subassunto: "Suspensão (art. 94)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Estatuto PC-AL, Lei 3.437/1975)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.85,
     enunciado: "A pena de suspensão, no Estatuto da PC-AL, não excederá de sessenta dias e será aplicada em casos de falta grave ou de reincidência em faltas de qualquer natureza.",
@@ -356,7 +356,7 @@ const QUESTOES_PCAL_LOTE56 = [
   },
   {
     id: "LI-062", disciplina: "Legislação Institucional (AL)", assunto: "Estatuto da PC-AL (Lei 3.437/1975)", subassunto: "Multa (art. 95)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Estatuto PC-AL, Lei 3.437/1975)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 60, probReaparecer: 0.8,
     enunciado: "Quando houver conveniência para o serviço, a pena de suspensão poderá ser convertida em multa na base máxima de 50% do vencimento ou remuneração, ficando o policial civil obrigado a permanecer em serviço.",
@@ -375,7 +375,7 @@ const QUESTOES_PCAL_LOTE56 = [
   },
   {
     id: "LI-063", disciplina: "Legislação Institucional (AL)", assunto: "Estatuto da PC-AL (Lei 3.437/1975)", subassunto: "Detenção disciplinar (art. 96)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Estatuto PC-AL, Lei 3.437/1975)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 70, probReaparecer: 0.85,
     enunciado: "A pena de suspensão poderá ser convertida em detenção disciplinar mediante ordem baixada por escrito por qualquer Delegado de Polícia que presida o feito disciplinar.",
@@ -394,7 +394,7 @@ const QUESTOES_PCAL_LOTE56 = [
   },
   {
     id: "LI-064", disciplina: "Legislação Institucional (AL)", assunto: "Estatuto da PC-AL (Lei 3.437/1975)", subassunto: "Detenção disciplinar — vencimentos (art. 96)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Estatuto PC-AL, Lei 3.437/1975)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 60, probReaparecer: 0.8,
     enunciado: "A detenção disciplinar acarreta a perda dos vencimentos do policial civil durante todo o período de seu cumprimento.",
@@ -413,7 +413,7 @@ const QUESTOES_PCAL_LOTE56 = [
   },
   {
     id: "LI-065", disciplina: "Legislação Institucional (AL)", assunto: "Estatuto da PC-AL (Lei 3.437/1975)", subassunto: "Detenção disciplinar — local (art. 96)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Estatuto PC-AL, Lei 3.437/1975)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 60, probReaparecer: 0.8,
     enunciado: "A detenção disciplinar, quando não exceder de quarenta e oito horas, poderá ser cumprida na própria residência do funcionário policial.",
@@ -432,7 +432,7 @@ const QUESTOES_PCAL_LOTE56 = [
   },
   {
     id: "LI-066", disciplina: "Legislação Institucional (AL)", assunto: "Estatuto da PC-AL (Lei 3.437/1975)", subassunto: "Detenção disciplinar — visitas (art. 104)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Estatuto PC-AL, Lei 3.437/1975)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.75,
     enunciado: "Durante o cumprimento da detenção disciplinar, é vedado ao funcionário receber visitas de familiares ou amigos, a fim de preservar o caráter punitivo da medida.",
@@ -451,7 +451,7 @@ const QUESTOES_PCAL_LOTE56 = [
   },
   {
     id: "LI-067", disciplina: "Legislação Institucional (AL)", assunto: "Estatuto da PC-AL (Lei 3.437/1975)", subassunto: "Detenção disciplinar preventiva (art. 101)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Estatuto PC-AL, Lei 3.437/1975)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.8,
     enunciado: "Em caso de emergência e como medida preventiva, o Chefe de Gabinete da SSP, o Corregedor Geral da Polícia e os Diretores de Departamentos poderão determinar detenção disciplinar contra funcionários policiais subordinados, por prazo não superior a cinco dias.",
@@ -472,7 +472,7 @@ const QUESTOES_PCAL_LOTE56 = [
   /* ===================== REGIME DISCIPLINAR — DEMISSÃO E COMPETÊNCIA ===================== */
   {
     id: "LI-068", disciplina: "Legislação Institucional (AL)", assunto: "Estatuto da PC-AL (Lei 3.437/1975)", subassunto: "Demissão — falta ao serviço (art. 106)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Estatuto PC-AL, Lei 3.437/1975)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.8,
     enunciado: "Segundo o Estatuto da PC-AL, aplica-se a pena de demissão em caso de falta ao serviço por trinta dias intercalados, sem justa causa, durante o período de doze meses.",
@@ -491,7 +491,7 @@ const QUESTOES_PCAL_LOTE56 = [
   },
   {
     id: "LI-069", disciplina: "Legislação Institucional (AL)", assunto: "Estatuto da PC-AL (Lei 3.437/1975)", subassunto: "Competência para penalidades (art. 109)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Estatuto PC-AL, Lei 3.437/1975)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 70, probReaparecer: 0.85,
     enunciado: "No Estatuto da PC-AL, a aplicação das penas de demissão e de cassação de aposentadoria ou disponibilidade é privativa do Governador do Estado.",
@@ -510,7 +510,7 @@ const QUESTOES_PCAL_LOTE56 = [
   },
   {
     id: "LI-070", disciplina: "Legislação Institucional (AL)", assunto: "Estatuto da PC-AL (Lei 3.437/1975)", subassunto: "Competência dos Delegados (art. 109)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Estatuto PC-AL, Lei 3.437/1975)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.8,
     enunciado: "Os Delegados em geral e os Diretores de repartições são competentes para aplicar as penas de repreensão e suspensão até trinta dias.",
@@ -529,7 +529,7 @@ const QUESTOES_PCAL_LOTE56 = [
   },
   {
     id: "LI-071", disciplina: "Legislação Institucional (AL)", assunto: "Estatuto da PC-AL (Lei 3.437/1975)", subassunto: "Suspensão preventiva (art. 110 e 112)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Estatuto PC-AL, Lei 3.437/1975)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 70, probReaparecer: 0.8,
     enunciado: "A suspensão preventiva, cabível quando a presença do funcionário puder influir na apuração da falta, é de até trinta dias, podendo ser prorrogada até noventa dias, após o que cessam seus efeitos ainda que não concluído o processo.",
@@ -550,7 +550,7 @@ const QUESTOES_PCAL_LOTE56 = [
   /* ===================== PROCESSO DISCIPLINAR ===================== */
   {
     id: "LI-072", disciplina: "Legislação Institucional (AL)", assunto: "Estatuto da PC-AL (Lei 3.437/1975)", subassunto: "Processo disciplinar prévio (art. 115)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Estatuto PC-AL, Lei 3.437/1975)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 70, probReaparecer: 0.85,
     enunciado: "O processo disciplinar precederá à aplicação das penas de suspensão por mais de quinze dias, destituição de função, demissão e cassação de disponibilidade.",
@@ -569,7 +569,7 @@ const QUESTOES_PCAL_LOTE56 = [
   },
   {
     id: "LI-073", disciplina: "Legislação Institucional (AL)", assunto: "Estatuto da PC-AL (Lei 3.437/1975)", subassunto: "Sindicância (art. 117)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Estatuto PC-AL, Lei 3.437/1975)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 60, probReaparecer: 0.8,
     enunciado: "A sindicância será instaurada quando as irregularidades não se revelarem evidentes ou quando for incerta a sua autoria, e será conduzida por dois funcionários policiais de categoria igual ou superior.",
@@ -588,7 +588,7 @@ const QUESTOES_PCAL_LOTE56 = [
   },
   {
     id: "LI-074", disciplina: "Legislação Institucional (AL)", assunto: "Estatuto da PC-AL (Lei 3.437/1975)", subassunto: "Comissão de Disciplina (art. 118)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Estatuto PC-AL, Lei 3.437/1975)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 60, probReaparecer: 0.8,
     enunciado: "O inquérito disciplinar será promovido por uma Comissão de Disciplina composta de cinco membros, de preferência bacharéis em Direito, designada pelo Secretário de Segurança Pública.",
@@ -607,7 +607,7 @@ const QUESTOES_PCAL_LOTE56 = [
   },
   {
     id: "LI-075", disciplina: "Legislação Institucional (AL)", assunto: "Estatuto da PC-AL (Lei 3.437/1975)", subassunto: "Suspeição de membro (art. 123)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Estatuto PC-AL, Lei 3.437/1975)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.75,
     enunciado: "Acolhida a alegação de suspeição de membro da Comissão de Disciplina, sua substituição será definitiva, alcançando todos os processos disciplinares futuros de que ele participaria.",
@@ -626,7 +626,7 @@ const QUESTOES_PCAL_LOTE56 = [
   },
   {
     id: "LI-076", disciplina: "Legislação Institucional (AL)", assunto: "Estatuto da PC-AL (Lei 3.437/1975)", subassunto: "Revisão do processo (art. 125)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Estatuto PC-AL, Lei 3.437/1975)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 60, probReaparecer: 0.8,
     enunciado: "A revisão do processo administrativo de que resultou pena disciplinar pode ser requerida a qualquer tempo, quando se aduzam fatos ou circunstâncias suscetíveis de justificar a inocência do requerente.",
@@ -645,7 +645,7 @@ const QUESTOES_PCAL_LOTE56 = [
   },
   {
     id: "LI-077", disciplina: "Legislação Institucional (AL)", assunto: "Estatuto da PC-AL (Lei 3.437/1975)", subassunto: "Agravante disciplinar (art. 92)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Estatuto PC-AL, Lei 3.437/1975)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.75,
     enunciado: "É causa agravante de falta disciplinar tê-la cometido com o concurso de dois ou mais funcionários policiais.",
@@ -664,7 +664,7 @@ const QUESTOES_PCAL_LOTE56 = [
   },
   {
     id: "LI-078", disciplina: "Legislação Institucional (AL)", assunto: "Estatuto da PC-AL (Lei 3.437/1975)", subassunto: "Dosimetria disciplinar (art. 92)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Estatuto PC-AL, Lei 3.437/1975)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.75,
     enunciado: "Na aplicação das penas disciplinares, o Estatuto da PC-AL manda considerar a natureza e a gravidade da transgressão, os danos dela decorrentes para o serviço público, a repercussão do fato, os antecedentes do funcionário e a reincidência.",

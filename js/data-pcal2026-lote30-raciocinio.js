@@ -15,7 +15,7 @@ const QUESTOES_PCAL_LOTE30 = [
 
   {
     id: "RL-024", disciplina: "Raciocínio Lógico-Matemático", assunto: "Razão e proporção", subassunto: "Divisão proporcional direta",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (divisão proporcional)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 70, probReaparecer: 0.8,
     enunciado: "Um prêmio de R$ 45.000 será dividido entre três policiais, de forma diretamente proporcional ao número de anos de serviço de cada um: 4, 5 e 6 anos, respectivamente. Nessas condições, o policial com maior tempo de serviço receberá R$ 18.000.",
@@ -34,7 +34,7 @@ const QUESTOES_PCAL_LOTE30 = [
   },
   {
     id: "RL-025", disciplina: "Raciocínio Lógico-Matemático", assunto: "Porcentagem", subassunto: "Aumento percentual",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (porcentagem)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 65, probReaparecer: 0.8,
     enunciado: "Um equipamento de proteção individual custava R$ 250 e passou a custar R$ 312,50 após reajuste. Nessas condições, o aumento percentual aplicado foi superior a 20%, porém inferior a 30%.",
@@ -53,7 +53,7 @@ const QUESTOES_PCAL_LOTE30 = [
   },
   {
     id: "RL-026", disciplina: "Raciocínio Lógico-Matemático", assunto: "Probabilidade", subassunto: "Probabilidade de eventos mutuamente exclusivos",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (probabilidade)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 65, probReaparecer: 0.78,
     enunciado: "Uma urna contém 5 bolas vermelhas, 3 azuis e 2 verdes, indistinguíveis pelo tato. Retirando-se uma bola ao acaso, a probabilidade de que ela seja azul ou verde é igual a 1/2.",
@@ -72,7 +72,7 @@ const QUESTOES_PCAL_LOTE30 = [
   },
   {
     id: "RL-027", disciplina: "Raciocínio Lógico-Matemático", assunto: "Análise combinatória", subassunto: "Combinação com restrição",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (combinatória)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 80, probReaparecer: 0.75,
     enunciado: "Uma comissão de 4 pessoas será formada a partir de 5 homens e 3 mulheres, devendo conter exatamente 2 mulheres. Nessas condições, o número de comissões distintas que podem ser formadas é igual a 40.",
@@ -91,7 +91,7 @@ const QUESTOES_PCAL_LOTE30 = [
   },
   {
     id: "RL-028", disciplina: "Raciocínio Lógico-Matemático", assunto: "Lógica proposicional", subassunto: "Negação da condicional",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (lógica proposicional)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 75, probReaparecer: 0.82,
     enunciado: "Considere a proposição \"Se o suspeito confessou o crime, então ele será indiciado\", representada por P → Q, sendo P: \"o suspeito confessou o crime\" e Q: \"ele será indiciado\". A negação dessa proposição condicional equivale a \"o suspeito confessou o crime e não será indiciado\" (P ∧ ~Q).",
@@ -110,7 +110,7 @@ const QUESTOES_PCAL_LOTE30 = [
   },
   {
     id: "RL-029", disciplina: "Raciocínio Lógico-Matemático", assunto: "Lógica proposicional", subassunto: "Negação de proposição universal",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (lógica de proposições categóricas)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 75, probReaparecer: 0.84,
     enunciado: "Considere a sentença \"Todo policial aprovado no concurso realizou o curso de formação.\" A negação dessa sentença é: \"Nenhum policial aprovado no concurso realizou o curso de formação.\"",
@@ -129,7 +129,7 @@ const QUESTOES_PCAL_LOTE30 = [
   },
   {
     id: "RL-030", disciplina: "Raciocínio Lógico-Matemático", assunto: "Aritmética", subassunto: "Critério de divisibilidade por 11",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (divisibilidade)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 75, probReaparecer: 0.7,
     enunciado: "O número 918.082 é divisível por 11, pois a diferença entre a soma dos algarismos de posições ímpares e a soma dos algarismos de posições pares (numerando da direita para a esquerda) é um múltiplo de 11, incluindo o zero.",
@@ -148,7 +148,7 @@ const QUESTOES_PCAL_LOTE30 = [
   },
   {
     id: "RL-031", disciplina: "Raciocínio Lógico-Matemático", assunto: "Regra de três", subassunto: "Regra de três composta",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (regra de três composta)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 80, probReaparecer: 0.76,
     enunciado: "Se 10 escrivães elaboram 50 laudos periciais em 4 dias, mantida constante a produtividade individual de cada um, nas mesmas condições de produtividade, 8 escrivães elaborarão 60 laudos periciais em 6 dias.",
@@ -167,7 +167,7 @@ const QUESTOES_PCAL_LOTE30 = [
   },
   {
     id: "RL-032", disciplina: "Raciocínio Lógico-Matemático", assunto: "Matemática financeira", subassunto: "Juros simples",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (juros simples)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 65, probReaparecer: 0.74,
     enunciado: "Um capital de R$ 8.000 foi aplicado a uma taxa de juros simples de 2% ao mês. Após 10 meses, o montante acumulado será igual a R$ 9.800.",
@@ -186,7 +186,7 @@ const QUESTOES_PCAL_LOTE30 = [
   },
   {
     id: "RL-033", disciplina: "Raciocínio Lógico-Matemático", assunto: "Estatística básica", subassunto: "Média ponderada",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (média ponderada)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 65, probReaparecer: 0.76,
     enunciado: "Um candidato obteve nota 7 na prova objetiva, com peso 3, e nota 5 na prova discursiva, com peso 2. Nessas condições, sua média ponderada final foi igual a 6,0.",
@@ -205,7 +205,7 @@ const QUESTOES_PCAL_LOTE30 = [
   },
   {
     id: "RL-034", disciplina: "Raciocínio Lógico-Matemático", assunto: "Sequências numéricas", subassunto: "Progressão aritmética",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (progressão aritmética)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 65, probReaparecer: 0.72,
     enunciado: "Em uma progressão aritmética cujo primeiro termo é 4 e cuja razão é 7, o vigésimo termo dessa sequência é igual a 130.",
@@ -224,7 +224,7 @@ const QUESTOES_PCAL_LOTE30 = [
   },
   {
     id: "RL-035", disciplina: "Raciocínio Lógico-Matemático", assunto: "Análise combinatória", subassunto: "Princípio fundamental da contagem",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (princípio multiplicativo)",
     tipo: "CE", dificuldade: 1, tempoIdealSeg: 55, probReaparecer: 0.78,
     enunciado: "Uma delegacia possui 4 viaturas e 6 motoristas habilitados, podendo qualquer motorista conduzir qualquer viatura. Para formar uma dupla motorista-viatura, sem restrições adicionais, existem 20 combinações possíveis.",
@@ -243,7 +243,7 @@ const QUESTOES_PCAL_LOTE30 = [
   },
   {
     id: "RL-036", disciplina: "Raciocínio Lógico-Matemático", assunto: "Lógica proposicional", subassunto: "Tabela-verdade da disjunção",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (tabela-verdade)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 65, probReaparecer: 0.78,
     enunciado: "Considerando P e Q duas proposições simples, a disjunção \"P ou Q\" (P ∨ Q) é falsa apenas quando ambas as proposições, P e Q, forem falsas simultaneamente; em todas as demais combinações de valores lógicos, a disjunção é verdadeira.",
@@ -262,7 +262,7 @@ const QUESTOES_PCAL_LOTE30 = [
   },
   {
     id: "RL-037", disciplina: "Raciocínio Lógico-Matemático", assunto: "Teoria dos conjuntos", subassunto: "Princípio da inclusão-exclusão",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (conjuntos)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 70, probReaparecer: 0.78,
     enunciado: "Em uma unidade policial com 60 servidores, 35 possuem curso de tiro avançado, 28 possuem curso de direção veicular defensiva e 10 possuem ambos os cursos. Nessas condições, o número de servidores que não possui nenhum dos dois cursos é igual a 17.",
@@ -281,7 +281,7 @@ const QUESTOES_PCAL_LOTE30 = [
   },
   {
     id: "RL-038", disciplina: "Raciocínio Lógico-Matemático", assunto: "Sequências numéricas", subassunto: "Padrão recursivo",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (sequências e padrões)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 65, probReaparecer: 0.7,
     enunciado: "Considere a sequência numérica 3, 7, 15, 31, 63, ..., em que cada termo, a partir do segundo, é obtido multiplicando-se o termo anterior por 2 e somando-se 1 unidade. O próximo termo dessa sequência é igual a 127.",
@@ -300,7 +300,7 @@ const QUESTOES_PCAL_LOTE30 = [
   },
   {
     id: "RL-039", disciplina: "Raciocínio Lógico-Matemático", assunto: "Porcentagem", subassunto: "Percentuais sucessivos",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (percentuais sucessivos)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 75, probReaparecer: 0.84,
     enunciado: "Um produto de R$ 200 recebeu um desconto de 10% e, em seguida, sobre o novo valor, foi aplicado um acréscimo de 10%. Ao final dessas duas operações sucessivas, o preço do produto retornou exatamente ao valor original de R$ 200.",

@@ -15,7 +15,7 @@ const QUESTOES_PCAL_LOTE23 = [
   /* ================= NEGAÇÃO DUPLA ================= */
   {
     id: "DP-076", disciplina: "Direito Penal", assunto: "Crimes contra a Administração Pública", subassunto: "Peculato-furto (negação dupla)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (CP, art. 312, § 1º)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 55, probReaparecer: 0.8,
     enunciado: "Não é incorreto afirmar que comete peculato o funcionário público que, valendo-se da facilidade proporcionada pela função, subtrai bem de que não tem a posse.",
@@ -34,7 +34,7 @@ const QUESTOES_PCAL_LOTE23 = [
   },
   {
     id: "PP-053", disciplina: "Processo Penal", assunto: "Interrogatório", subassunto: "Direito ao silêncio (negação dupla)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (CF, art. 5º, LXIII; CPP, art. 186)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 55, probReaparecer: 0.78,
     enunciado: "Não se pode negar que o silêncio do acusado, no interrogatório, não importa confissão.",
@@ -53,7 +53,7 @@ const QUESTOES_PCAL_LOTE23 = [
   },
   {
     id: "DC-030", disciplina: "Direito Constitucional", assunto: "Direitos fundamentais", subassunto: "Inviolabilidade do domicílio (negação dupla)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (CF, art. 5º, XI)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 55, probReaparecer: 0.8,
     enunciado: "É inegável que a casa não constitui asilo inviolável do indivíduo, sendo lícito nela ingressar, a qualquer hora, sem o consentimento do morador.",
@@ -72,7 +72,7 @@ const QUESTOES_PCAL_LOTE23 = [
   },
   {
     id: "DA-045", disciplina: "Direito Administrativo", assunto: "Atos administrativos", subassunto: "Ato vinculado (negação dupla)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (ato vinculado × discricionário)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 55, probReaparecer: 0.78,
     enunciado: "Não é incorreto afirmar que o ato administrativo vinculado comporta juízo de conveniência e oportunidade quanto à sua prática.",
@@ -91,7 +91,7 @@ const QUESTOES_PCAL_LOTE23 = [
   },
   {
     id: "LE-117", disciplina: "Legislação Especial", assunto: "Lei Maria da Penha", subassunto: "Vedação da 9.099/95 (negação dupla)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei 11.340/2006, art. 41)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 55, probReaparecer: 0.78,
     enunciado: "Não se pode deixar de reconhecer que, aos crimes praticados com violência doméstica e familiar contra a mulher, não se aplica a Lei 9.099/95.",
@@ -113,7 +113,7 @@ const QUESTOES_PCAL_LOTE23 = [
   /* ================= JURISPRUDÊNCIA / SÚMULA INVENTADA ================= */
   {
     id: "DP-077", disciplina: "Direito Penal", assunto: "Princípios penais", subassunto: "Súmula inventada (insignificância)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (súmula fictícia)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 55, probReaparecer: 0.8,
     enunciado: "Conforme a Súmula 912 do STJ, o furto de bem de pequeno valor é sempre atípico, por aplicação obrigatória e automática do princípio da insignificância.",
@@ -133,7 +133,7 @@ const QUESTOES_PCAL_LOTE23 = [
   },
   {
     id: "PP-054", disciplina: "Processo Penal", assunto: "Prisão", subassunto: "Súmula inventada (depositário infiel)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (súmula vinculante fictícia)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 55, probReaparecer: 0.78,
     enunciado: "De acordo com a Súmula Vinculante 74 do STF, é lícita a prisão civil do depositário infiel, qualquer que seja a modalidade do depósito.",
@@ -153,7 +153,7 @@ const QUESTOES_PCAL_LOTE23 = [
   },
   {
     id: "DC-031", disciplina: "Direito Constitucional", assunto: "Remédios constitucionais", subassunto: "Súmula inventada (MS)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (súmula fictícia)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 55, probReaparecer: 0.78,
     enunciado: "Segundo a Súmula 780 do STF, é cabível mandado de segurança contra lei em tese.",
@@ -173,7 +173,7 @@ const QUESTOES_PCAL_LOTE23 = [
   },
   {
     id: "DA-046", disciplina: "Direito Administrativo", assunto: "Atos administrativos", subassunto: "Súmula inventada (autotutela)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (súmula fictícia)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 55, probReaparecer: 0.78,
     enunciado: "Nos termos da Súmula 1.200 do STF, a Administração Pública não pode anular seus próprios atos ilegais, dependendo sempre de prévia decisão do Poder Judiciário.",
@@ -193,7 +193,7 @@ const QUESTOES_PCAL_LOTE23 = [
   },
   {
     id: "DH-045", disciplina: "Direitos Humanos", assunto: "Uso de algemas", subassunto: "Súmula real (controle de verificação)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Súmula Vinculante 11 do STF)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 55, probReaparecer: 0.8,
     enunciado: "Nos termos da Súmula Vinculante 11 do STF, o uso de algemas é medida excepcional, admitida apenas diante de resistência, fundado receio de fuga ou perigo à integridade, exigindo-se justificativa por escrito.",
@@ -213,7 +213,7 @@ const QUESTOES_PCAL_LOTE23 = [
   },
   {
     id: "DP-078", disciplina: "Direito Penal", assunto: "Aplicação da pena", subassunto: "Súmula real (controle de verificação)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Súmula 231 do STJ)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 55, probReaparecer: 0.78,
     enunciado: "De acordo com a Súmula 231 do STJ, a incidência de circunstância atenuante não pode conduzir à redução da pena abaixo do mínimo legal cominado ao crime.",
@@ -233,7 +233,7 @@ const QUESTOES_PCAL_LOTE23 = [
   },
   {
     id: "PP-055", disciplina: "Processo Penal", assunto: "Prisão em flagrante", subassunto: "Súmula real (controle de verificação)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Súmula 145 do STF)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 55, probReaparecer: 0.78,
     enunciado: "Conforme a Súmula 145 do STF, não há crime quando a preparação do flagrante pela autoridade policial torna impossível a sua consumação.",

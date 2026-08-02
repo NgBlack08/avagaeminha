@@ -201,6 +201,34 @@ body {
 .diag-linha:has(.diag-bar.idle) .diag-nome,
 .diag-linha:has(.diag-bar.idle) .diag-pct { color: var(--muted); }
 
+/* ---------- Nota de corte oficial ----------
+   Mesma linguagem visual do diagnóstico por disciplina, com um elemento a
+   mais: o tick vertical marcando onde fica o corte do edital, para a leitura
+   ser "a barra passou do risco ou não" sem precisar comparar números. */
+.corte-wrap { display: flex; flex-direction: column; gap: 12px; margin-top: 12px; }
+.corte-linha { display: grid; grid-template-columns: 132px 1fr auto; align-items: center; gap: 12px; }
+.corte-rot { font-size: 13.5px; }
+.corte-barra { position: relative; height: 9px; background: var(--surface2); border-radius: var(--r-full); }
+.corte-barra i {
+  display: block; height: 100%; border-radius: var(--r-full); background: var(--muted);
+  transition: width .5s cubic-bezier(.4, 0, .2, 1);
+}
+.corte-barra i.ok { background: var(--ok); }
+.corte-barra i.bad { background: var(--bad); }
+.corte-marca {
+  position: absolute; top: -4px; bottom: -4px; width: 2px;
+  background: var(--text); opacity: .75; border-radius: 1px;
+}
+.corte-num { font-size: 13px; font-weight: 700; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.corte-num.ok { color: var(--ok); }
+.corte-num.bad { color: var(--bad); }
+.corte-num .hint { display: block; font-weight: 400; font-size: 11px; }
+@media (max-width: 640px) {
+  .corte-linha { grid-template-columns: 1fr auto; }
+  .corte-barra { grid-column: 1 / -1; order: 3; }
+}
+@media (prefers-reduced-motion: reduce) { .corte-barra i { transition: none; } }
+
 /* ---------- Plano de Estudo Dirigido ---------- */
 .pe-contagem { display: flex; align-items: center; gap: 16px; }
 .pe-dias {

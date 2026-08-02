@@ -26,7 +26,7 @@ const QUESTOES_PCAL_LOTE11 = [
   /* ============ BLOCO 1 — LÍNGUA PORTUGUESA (texto dissertativo) ============ */
   {
     id: "PT-016", disciplina: "Língua Portuguesa", assunto: "Compreensão e reescritura", subassunto: "Substituição de conectivo causal",
-    concurso: "PCAL", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026,
+    concurso: "PCAL", cargo: ["Escrivão","Agente","Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — simulado estilo CEBRASPE (bloco 1, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.85,
     textoApoio: TXT_BLOCO1,
@@ -46,7 +46,7 @@ const QUESTOES_PCAL_LOTE11 = [
   },
   {
     id: "PT-017", disciplina: "Língua Portuguesa", assunto: "Compreensão e reescritura", subassunto: "Adversativo × conclusivo",
-    concurso: "PCAL", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026,
+    concurso: "PCAL", cargo: ["Escrivão","Agente","Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — simulado estilo CEBRASPE (bloco 1, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.85,
     textoApoio: TXT_BLOCO1,
@@ -66,7 +66,7 @@ const QUESTOES_PCAL_LOTE11 = [
   },
   {
     id: "PT-018", disciplina: "Língua Portuguesa", assunto: "Crase", subassunto: "Regência e crase em reescritura",
-    concurso: "PCAL", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026,
+    concurso: "PCAL", cargo: ["Escrivão","Agente","Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — simulado estilo CEBRASPE (bloco 1, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 60, probReaparecer: 0.8,
     textoApoio: TXT_BLOCO1,
@@ -86,7 +86,7 @@ const QUESTOES_PCAL_LOTE11 = [
   },
   {
     id: "PT-019", disciplina: "Língua Portuguesa", assunto: "Significação das palavras", subassunto: "Tampouco × tão pouco",
-    concurso: "PCAL", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026,
+    concurso: "PCAL", cargo: ["Escrivão","Agente","Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — simulado estilo CEBRASPE (bloco 1, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 50, probReaparecer: 0.75,
     textoApoio: TXT_BLOCO1,
@@ -106,7 +106,7 @@ const QUESTOES_PCAL_LOTE11 = [
   },
   {
     id: "PT-020", disciplina: "Língua Portuguesa", assunto: "Sintaxe", subassunto: "Pontuação — conjunção deslocada",
-    concurso: "PCAL", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026,
+    concurso: "PCAL", cargo: ["Escrivão","Agente","Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — simulado estilo CEBRASPE (bloco 1, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.8,
     textoApoio: TXT_BLOCO1,
@@ -128,7 +128,7 @@ const QUESTOES_PCAL_LOTE11 = [
   /* ============ BLOCO 2 — CASO CONCRETO: PENAL E PROCESSO PENAL ============ */
   {
     id: "PP-037", disciplina: "Processo Penal", assunto: "Prisão em flagrante", subassunto: "Flagrante em crime permanente",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — simulado estilo CEBRASPE (bloco 2, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.9,
     textoApoio: TXT_BLOCO2,
@@ -148,7 +148,7 @@ const QUESTOES_PCAL_LOTE11 = [
   },
   {
     id: "PP-038", disciplina: "Processo Penal", assunto: "Provas", subassunto: "Ingresso domiciliar com fundadas razões",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — simulado estilo CEBRASPE (bloco 2, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 60, probReaparecer: 0.92,
     textoApoio: TXT_BLOCO2,
@@ -168,7 +168,7 @@ const QUESTOES_PCAL_LOTE11 = [
   },
   {
     id: "PP-039", disciplina: "Processo Penal", assunto: "Provas", subassunto: "Acesso a dados de celular apreendido",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — simulado estilo CEBRASPE (bloco 2, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 60, probReaparecer: 0.9,
     textoApoio: TXT_BLOCO2,
@@ -188,7 +188,7 @@ const QUESTOES_PCAL_LOTE11 = [
   },
   {
     id: "DP-051", disciplina: "Direito Penal", assunto: "Legislação penal especial aplicada", subassunto: "Tráfico privilegiado no caso concreto",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — simulado estilo CEBRASPE (bloco 2, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 55, probReaparecer: 0.82,
     textoApoio: TXT_BLOCO2,
@@ -208,7 +208,7 @@ const QUESTOES_PCAL_LOTE11 = [
   },
   {
     id: "DP-052", disciplina: "Direito Penal", assunto: "Legislação penal especial aplicada", subassunto: "Tráfico × porte para consumo",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — simulado estilo CEBRASPE (bloco 2, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.85,
     textoApoio: TXT_BLOCO2,
@@ -230,7 +230,7 @@ const QUESTOES_PCAL_LOTE11 = [
   /* ============ BLOCO 3 — DIREITOS HUMANOS E CONSTITUCIONAL ============ */
   {
     id: "DH-021", disciplina: "Direitos Humanos", assunto: "Convenção Americana", subassunto: "Vedação à tortura",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — simulado estilo CEBRASPE (bloco 3, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.85,
     textoApoio: TXT_BLOCO3,
@@ -250,7 +250,7 @@ const QUESTOES_PCAL_LOTE11 = [
   },
   {
     id: "DH-022", disciplina: "Direitos Humanos", assunto: "Sistema interamericano", subassunto: "Responsabilização internacional",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — simulado estilo CEBRASPE (bloco 3, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 55, probReaparecer: 0.78,
     textoApoio: TXT_BLOCO3,
@@ -270,7 +270,7 @@ const QUESTOES_PCAL_LOTE11 = [
   },
   {
     id: "DC-020", disciplina: "Direito Constitucional", assunto: "Direitos e garantias fundamentais", subassunto: "Prova obtida com violação de garantias",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — simulado estilo CEBRASPE (bloco 3, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.88,
     textoApoio: TXT_BLOCO3,
@@ -290,7 +290,7 @@ const QUESTOES_PCAL_LOTE11 = [
   },
   {
     id: "DC-021", disciplina: "Direito Constitucional", assunto: "Direitos e garantias fundamentais", subassunto: "Status dos tratados de DH",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — simulado estilo CEBRASPE (bloco 3, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 55, probReaparecer: 0.8,
     textoApoio: TXT_BLOCO3,
@@ -352,7 +352,7 @@ const QUESTOES_PCAL_LOTE11 = [
   },
   {
     id: "ES-022", disciplina: "Estatística", assunto: "Análise de dados", subassunto: "Incompatibilidade patrimonial",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — simulado estilo CEBRASPE (bloco 4, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.82,
     textoApoio: TXT_BLOCO4,
@@ -372,7 +372,7 @@ const QUESTOES_PCAL_LOTE11 = [
   },
   {
     id: "ES-023", disciplina: "Estatística", assunto: "Medidas de dispersão", subassunto: "Desvio padrão em valores próximos",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — simulado estilo CEBRASPE (bloco 4, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 55, probReaparecer: 0.78,
     textoApoio: TXT_BLOCO4,

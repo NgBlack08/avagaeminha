@@ -22,7 +22,7 @@ const QUESTOES_PCAL_LOTE48 = [
   /* ===== CRIMES COMUNS x FUNCIONAIS (LEI 8.137/1990, ARTS. 1º A 3º) ===== */
   {
     id: "LE-141", disciplina: "Legislação Especial", assunto: "Crimes contra a ordem tributária", subassunto: "Crimes comuns x funcionais (arts. 1º a 3º)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei 8.137/1990, arts. 1º a 3º)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.8,
     enunciado: "Os crimes contra a ordem tributária previstos nos arts. 1º e 2º da Lei nº 8.137/1990 são crimes comuns, podendo ser praticados por qualquer pessoa que tenha dever jurídico relacionado ao tributo, sendo a qualidade especial de funcionário público exigida apenas nos crimes funcionais do art. 3º, estes sim crimes próprios.",
@@ -41,7 +41,7 @@ const QUESTOES_PCAL_LOTE48 = [
   },
   {
     id: "LE-142", disciplina: "Legislação Especial", assunto: "Crimes contra a ordem tributária", subassunto: "Crimes comuns x funcionais (arts. 1º a 3º)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei 8.137/1990, arts. 1º a 3º)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.76,
     enunciado: "Os crimes contra a ordem tributária são, em sua totalidade, considerados crimes próprios, sendo praticados exclusivamente por aqueles que exercem poder de decisão em estabelecimentos privados que realizam qualquer atividade econômica.",
@@ -62,7 +62,7 @@ const QUESTOES_PCAL_LOTE48 = [
   /* ===== NOTA FISCAL — CRIME COMUM PUNIDO COM RECLUSÃO (ART. 1º, V) ===== */
   {
     id: "LE-143", disciplina: "Legislação Especial", assunto: "Crimes contra a ordem tributária", subassunto: "Negar/deixar de fornecer nota fiscal (art. 1º, V)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei 8.137/1990, art. 1º, V)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.82,
     enunciado: "Constitui crime contra a ordem tributária comum, e não crime funcional, negar ou deixar de fornecer, quando obrigatório, nota fiscal ou documento equivalente relativo a venda de mercadoria ou prestação de serviço, ou fornecê-la em desacordo com a legislação, conduta punida com reclusão, e não com detenção.",
@@ -81,7 +81,7 @@ const QUESTOES_PCAL_LOTE48 = [
   },
   {
     id: "LE-144", disciplina: "Legislação Especial", assunto: "Crimes contra a ordem tributária", subassunto: "Negar/deixar de fornecer nota fiscal (art. 1º, V)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei 8.137/1990, art. 1º, V)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.78,
     enunciado: "Constitui crime funcional contra a ordem tributária, punível com detenção, negar ou deixar de fornecer, quando obrigatório, nota fiscal ou documento equivalente relativo a venda de mercadoria ou prestação de serviço, ou fornecê-la em desacordo com a legislação.",
@@ -102,7 +102,7 @@ const QUESTOES_PCAL_LOTE48 = [
   /* ===== MERO INADIMPLEMENTO NÃO É CRIME — EXIGÊNCIA DE DOLO/FRAUDE ===== */
   {
     id: "LE-145", disciplina: "Legislação Especial", assunto: "Crimes contra a ordem tributária", subassunto: "Inadimplemento sem fraude — ilícito administrativo, não crime",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei 8.137/1990, art. 1º)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.8,
     enunciado: "O mero recolhimento de tributo a menor, desacompanhado de fraude, simulação ou qualquer outro meio ardiloso, não caracteriza crime contra a ordem tributária, resolvendo-se a conduta do contribuinte exclusivamente na esfera administrativa, por meio de cobrança, juros e multa moratória.",
@@ -121,7 +121,7 @@ const QUESTOES_PCAL_LOTE48 = [
   },
   {
     id: "LE-146", disciplina: "Legislação Especial", assunto: "Crimes contra a ordem tributária", subassunto: "Inadimplemento sem fraude — ilícito administrativo, não crime",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei 8.137/1990, art. 1º)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.76,
     enunciado: "O recolhimento de valores a menor relativos a tributos, ainda que não comprovada fraude dolosa, configura crime contra a ordem tributária passível de pena de reclusão, uma vez que a discrepância entre o valor devido e o valor recolhido é, por si só, suficiente para a tipificação penal.",
@@ -142,7 +142,7 @@ const QUESTOES_PCAL_LOTE48 = [
   /* ===== RELAÇÕES DE CONSUMO — DESTINAÇÃO COMERCIAL (ART. 7º, IX) ===== */
   {
     id: "LE-147", disciplina: "Legislação Especial", assunto: "Crimes contra as relações de consumo", subassunto: "Depósito de mercadoria imprópria — destinação comercial (art. 7º, IX)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei 8.137/1990, art. 7º, IX)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.82,
     enunciado: "Constitui crime contra as relações de consumo vender, ter em depósito para vender ou expor à venda, ou, de qualquer forma, entregar mercadoria em condições impróprias ao consumo, exigindo-se, para a configuração do tipo, a destinação comercial da mercadoria.",
@@ -161,7 +161,7 @@ const QUESTOES_PCAL_LOTE48 = [
   },
   {
     id: "LE-148", disciplina: "Legislação Especial", assunto: "Crimes contra as relações de consumo", subassunto: "Depósito de mercadoria imprópria — destinação comercial (art. 7º, IX)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei 8.137/1990, art. 7º, IX)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.78,
     enunciado: "Constitui crime contra as relações de consumo ter em depósito, mesmo que não seja para vender ou para expor à venda, mercadoria em condições impróprias para o consumo, bastando, para a tipicidade, a mera posse da mercadoria nessas condições.",
@@ -182,7 +182,7 @@ const QUESTOES_PCAL_LOTE48 = [
   /* ===== AGRAVANTE DO ART. 12 — SERVIDOR PÚBLICO NO EXERCÍCIO DAS FUNÇÕES ===== */
   {
     id: "LE-149", disciplina: "Legislação Especial", assunto: "Crimes contra a ordem tributária", subassunto: "Circunstâncias agravantes (art. 12)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei 8.137/1990, art. 12)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.8,
     enunciado: "Caso um servidor público, no exercício de suas funções, seja autor de crime contra as relações de consumo previsto na Lei nº 8.137/1990, essa circunstância poderá agravar, de um terço até a metade, a pena prevista para o delito, nos termos do art. 12 dessa lei.",
@@ -201,7 +201,7 @@ const QUESTOES_PCAL_LOTE48 = [
   },
   {
     id: "LE-150", disciplina: "Legislação Especial", assunto: "Crimes contra a ordem tributária", subassunto: "Circunstâncias agravantes (art. 12)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei 8.137/1990, art. 12)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.76,
     enunciado: "A agravante prevista no art. 12, II, da Lei nº 8.137/1990 — ser o crime cometido por servidor público no exercício de suas funções — aplica-se, entre outros, aos crimes funcionais contra a ordem tributária do art. 3º dessa lei, agravando-lhes a pena de um terço até a metade.",
@@ -222,7 +222,7 @@ const QUESTOES_PCAL_LOTE48 = [
   /* ===== GLP PARA FINS AUTOMOTIVOS (LEI 8.176/1991, ART. 1º, II, REDAÇÃO DA LEI 15.348/2026) ===== */
   {
     id: "LE-151", disciplina: "Legislação Especial", assunto: "Crimes contra a Ordem Econômica", subassunto: "GLP para fins automotivos (Lei 8.176/1991, art. 1º, II)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei 8.176/1991, art. 1º, II, redação da Lei 15.348/2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.78,
     enunciado: "Após a alteração promovida pela Lei nº 15.348/2026, constitui crime contra a ordem econômica usar gás liquefeito de petróleo em desacordo com as normas estabelecidas em lei apenas quando destinado a fins automotivos, tendo sido descriminalizado o uso irregular do produto em motores de outras espécies, saunas, caldeiras e aquecimento de piscinas.",
@@ -241,7 +241,7 @@ const QUESTOES_PCAL_LOTE48 = [
   },
   {
     id: "LE-152", disciplina: "Legislação Especial", assunto: "Crimes contra a Ordem Econômica", subassunto: "GLP para fins automotivos (Lei 8.176/1991, art. 1º, II)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei 8.176/1991, art. 1º, II, redação da Lei 15.348/2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.74,
     enunciado: "Ainda hoje, constitui crime contra a ordem econômica o uso de gás liquefeito de petróleo em desacordo com as normas estabelecidas em lei, seja para fins automotivos, seja em motores de qualquer espécie, saunas, caldeiras ou aquecimento de piscinas, mantendo-se inalterado o alcance do tipo penal desde a edição da Lei nº 8.176/1991.",
@@ -262,7 +262,7 @@ const QUESTOES_PCAL_LOTE48 = [
   /* ===== USURPAÇÃO — EQUIPARAÇÃO DE QUEM TRANSPORTA/COMERCIALIZA (LEI 8.176/1991, ART. 2º, § 1º) ===== */
   {
     id: "LE-153", disciplina: "Legislação Especial", assunto: "Crimes contra a Ordem Econômica", subassunto: "Usurpação — conduta equiparada (Lei 8.176/1991, art. 2º, § 1º)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei 8.176/1991, art. 2º, § 1º)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.8,
     enunciado: "Incorre nas mesmas penas do crime de usurpação de matéria-prima da União aquele que, sem autorização legal, adquirir, transportar, industrializar, tiver consigo, consumir ou comercializar produto ou matéria-prima obtidos mediante exploração ilegal de bem pertencente à União, ainda que não tenha participado diretamente da extração.",
@@ -281,7 +281,7 @@ const QUESTOES_PCAL_LOTE48 = [
   },
   {
     id: "LE-154", disciplina: "Legislação Especial", assunto: "Crimes contra a Ordem Econômica", subassunto: "Usurpação — conduta equiparada (Lei 8.176/1991, art. 2º, § 1º)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei 8.176/1991, art. 2º, § 1º)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.76,
     enunciado: "Somente responde pelo crime de usurpação de matéria-prima da União, previsto na Lei nº 8.176/1991, quem tenha executado diretamente a lavra ou a exploração ilegal do bem, sendo atípica a conduta de quem apenas transporta ou comercializa o produto, ainda que ciente de sua origem ilícita.",

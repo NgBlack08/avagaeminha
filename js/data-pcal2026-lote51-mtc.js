@@ -23,7 +23,7 @@ const QUESTOES_PCAL_LOTE51 = [
   /* ===== MEDIANA — MÉDIA DOS DOIS VALORES CENTRAIS (CONJUNTO PAR) ===== */
   {
     id: "ES-080", disciplina: "Estatística", assunto: "Medidas de Tendência Central", subassunto: "Cálculo da mediana (conjunto de tamanho par)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (medidas de tendência central)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 60, probReaparecer: 0.8,
     enunciado: "O tempo de deslocamento (em minutos) de 8 viaturas até o local de determinada ocorrência foi registrado da seguinte forma: 12, 15, 15, 18, 20, 22, 25, 30. Com base nesses dados, é correto afirmar que a mediana do tempo de deslocamento das viaturas é igual a 19 minutos.",
@@ -42,7 +42,7 @@ const QUESTOES_PCAL_LOTE51 = [
   },
   {
     id: "ES-081", disciplina: "Estatística", assunto: "Medidas de Tendência Central", subassunto: "Cálculo da mediana (conjunto de tamanho par)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (medidas de tendência central)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 60, probReaparecer: 0.76,
     enunciado: "O tempo de deslocamento (em minutos) de 8 viaturas até o local de determinada ocorrência foi registrado da seguinte forma: 12, 15, 15, 18, 20, 22, 25, 30. Com base nesses dados, é correto afirmar que a mediana do tempo de deslocamento das viaturas é igual a 18 minutos.",
@@ -63,7 +63,7 @@ const QUESTOES_PCAL_LOTE51 = [
   /* ===== MODA — VALOR MAIS FREQUENTE ===== */
   {
     id: "ES-082", disciplina: "Estatística", assunto: "Medidas de Tendência Central", subassunto: "Cálculo da moda",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (medidas de tendência central)",
     tipo: "CE", dificuldade: 1, tempoIdealSeg: 50, probReaparecer: 0.82,
     enunciado: "A idade (em anos) de 9 suspeitos abordados em determinada operação policial foi registrada da seguinte forma: 22, 25, 25, 25, 28, 30, 32, 35, 40. Com base nesses dados, é correto afirmar que a moda das idades observadas é igual a 25 anos.",
@@ -82,7 +82,7 @@ const QUESTOES_PCAL_LOTE51 = [
   },
   {
     id: "ES-083", disciplina: "Estatística", assunto: "Medidas de Tendência Central", subassunto: "Cálculo da moda",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (medidas de tendência central)",
     tipo: "CE", dificuldade: 1, tempoIdealSeg: 50, probReaparecer: 0.78,
     enunciado: "A idade (em anos) de 9 suspeitos abordados em determinada operação policial foi registrada da seguinte forma: 22, 25, 25, 25, 28, 30, 32, 35, 40. Com base nesses dados, é correto afirmar que a moda das idades observadas é igual a 22 anos.",
@@ -103,7 +103,7 @@ const QUESTOES_PCAL_LOTE51 = [
   /* ===== MÉDIA ARITMÉTICA — CÁLCULO DIRETO ===== */
   {
     id: "ES-084", disciplina: "Estatística", assunto: "Medidas de Tendência Central", subassunto: "Cálculo da média aritmética",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (medidas de tendência central)",
     tipo: "CE", dificuldade: 1, tempoIdealSeg: 50, probReaparecer: 0.82,
     enunciado: "A quantidade de armas de fogo apreendidas em 5 operações policiais distintas foi de 3, 5, 7, 9 e 11 unidades, respectivamente. Com base nesses dados, é correto afirmar que a média aritmética de armas apreendidas por operação é igual a 7.",
@@ -122,7 +122,7 @@ const QUESTOES_PCAL_LOTE51 = [
   },
   {
     id: "ES-085", disciplina: "Estatística", assunto: "Medidas de Tendência Central", subassunto: "Cálculo da média aritmética",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (medidas de tendência central)",
     tipo: "CE", dificuldade: 1, tempoIdealSeg: 50, probReaparecer: 0.78,
     enunciado: "A quantidade de armas de fogo apreendidas em 5 operações policiais distintas foi de 3, 5, 7, 9 e 11 unidades, respectivamente. Com base nesses dados, é correto afirmar que a média aritmética de armas apreendidas por operação é igual a 9.",
@@ -143,7 +143,7 @@ const QUESTOES_PCAL_LOTE51 = [
   /* ===== PRIMEIRO QUARTIL x MÉDIA AMOSTRAL ===== */
   {
     id: "ES-086", disciplina: "Estatística", assunto: "Medidas de Tendência Central", subassunto: "Primeiro quartil x média amostral",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (medidas de tendência central, quartis)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 70, probReaparecer: 0.78,
     enunciado: "Supondo que os valores 50, 55, 60, 65 e 70 (em milhares de reais) constituam uma amostra de valores de propina apreendidos em cinco operações distintas, julgue: o primeiro quartil dessa amostra é inferior à média amostral.",
@@ -162,7 +162,7 @@ const QUESTOES_PCAL_LOTE51 = [
   },
   {
     id: "ES-087", disciplina: "Estatística", assunto: "Medidas de Tendência Central", subassunto: "Primeiro quartil x média amostral",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (medidas de tendência central, quartis)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 70, probReaparecer: 0.74,
     enunciado: "Supondo que os valores 50, 55, 60, 65 e 70 (em milhares de reais) constituam uma amostra de valores de propina apreendidos em cinco operações distintas, julgue: o primeiro quartil dessa amostra é superior à média amostral.",
@@ -183,7 +183,7 @@ const QUESTOES_PCAL_LOTE51 = [
   /* ===== DISTRIBUIÇÃO PERFEITAMENTE SIMÉTRICA — MÉDIA = MEDIANA = MODA ===== */
   {
     id: "ES-088", disciplina: "Estatística", assunto: "Medidas de Tendência Central", subassunto: "Distribuição simétrica — coincidência de média, mediana e moda",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (medidas de tendência central, simetria)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.8,
     enunciado: "Em um conjunto de dados cuja distribuição seja perfeitamente simétrica, a média aritmética, a mediana e a moda tendem a assumir o mesmo valor, sendo todas essas medidas classificadas como medidas de tendência central.",
@@ -202,7 +202,7 @@ const QUESTOES_PCAL_LOTE51 = [
   },
   {
     id: "ES-089", disciplina: "Estatística", assunto: "Medidas de Tendência Central", subassunto: "Distribuição simétrica — coincidência de média, mediana e moda",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (medidas de tendência central, simetria)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.76,
     enunciado: "Em um conjunto de dados cuja distribuição seja perfeitamente simétrica, a moda tende a assumir um valor superior ao da média e ao da mediana, uma vez que essas três medidas de tendência central raramente coincidem em uma mesma distribuição.",
@@ -223,7 +223,7 @@ const QUESTOES_PCAL_LOTE51 = [
   /* ===== MÉDIA = MEDIANA NÃO IMPLICA DISTRIBUIÇÃO SIMÉTRICA ===== */
   {
     id: "ES-090", disciplina: "Estatística", assunto: "Medidas de Tendência Central", subassunto: "Média igual à mediana não implica simetria",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (medidas de tendência central, simetria)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 70, probReaparecer: 0.76,
     enunciado: "Se um conjunto de dados for constituído pela quantidade de recursos julgados improcedentes em cinco varas distintas, a saber, {0, 0, 5, 7, 13}, então tal conjunto de dados possui média igual à mediana, distribuindo-se, contudo, de forma assimétrica em torno dessas medidas de posição.",
@@ -242,7 +242,7 @@ const QUESTOES_PCAL_LOTE51 = [
   },
   {
     id: "ES-091", disciplina: "Estatística", assunto: "Medidas de Tendência Central", subassunto: "Média igual à mediana não implica simetria",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (medidas de tendência central, simetria)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 70, probReaparecer: 0.72,
     enunciado: "Sempre que, em um conjunto de dados, a média aritmética for numericamente igual à mediana, pode-se concluir, necessariamente, que a distribuição desses dados é simétrica em torno desse valor central comum.",
@@ -263,7 +263,7 @@ const QUESTOES_PCAL_LOTE51 = [
   /* ===== RECOMPOSIÇÃO DE MÉDIAS AO COMBINAR GRUPOS ===== */
   {
     id: "ES-092", disciplina: "Estatística", assunto: "Medidas de Tendência Central", subassunto: "Recomposição de médias ao combinar grupos",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (medidas de tendência central, médias combinadas)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 75, probReaparecer: 0.78,
     enunciado: "Em determinada delegacia, 8 policiais têm idade média de 38 anos. Para reforçar o efetivo, foram admitidos mais 4 novos policiais. Considerando que, após essa admissão, a idade média do grupo combinado de 12 policiais passou a ser de 35 anos, é correto concluir que a idade média dos 4 novos policiais é inferior a 30 anos.",
@@ -282,7 +282,7 @@ const QUESTOES_PCAL_LOTE51 = [
   },
   {
     id: "ES-093", disciplina: "Estatística", assunto: "Medidas de Tendência Central", subassunto: "Recomposição de médias ao combinar grupos",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (medidas de tendência central, médias combinadas)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 75, probReaparecer: 0.74,
     enunciado: "Em determinada delegacia, 8 policiais têm idade média de 38 anos. Para reforçar o efetivo, foram admitidos mais 4 novos policiais. Considerando que, após essa admissão, a idade média do grupo combinado de 12 policiais passou a ser de 35 anos, é correto concluir que a idade média dos 4 novos policiais é superior a 30 anos.",
@@ -303,7 +303,7 @@ const QUESTOES_PCAL_LOTE51 = [
   /* ===== QUARTIL EM CONJUNTO DE DADOS COM VALORES REPETIDOS ===== */
   {
     id: "ES-094", disciplina: "Estatística", assunto: "Medidas de Tendência Central", subassunto: "Cálculo do primeiro quartil (conjunto com valores repetidos)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (medidas de tendência central, quartis)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 70, probReaparecer: 0.76,
     enunciado: "Considerando que {1, 2, 2, 2, 2, 3, 4, 4, 4, 9} seja um conjunto de dados referente à quantidade de ocorrências registradas em 10 dias consecutivos, julgue o item: o primeiro quartil desse conjunto de dados é igual a 2.",
@@ -322,7 +322,7 @@ const QUESTOES_PCAL_LOTE51 = [
   },
   {
     id: "ES-095", disciplina: "Estatística", assunto: "Medidas de Tendência Central", subassunto: "Cálculo do primeiro quartil (conjunto com valores repetidos)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (medidas de tendência central, quartis)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 70, probReaparecer: 0.72,
     enunciado: "Considerando que {1, 2, 2, 2, 2, 3, 4, 4, 4, 9} seja um conjunto de dados referente à quantidade de ocorrências registradas em 10 dias consecutivos, julgue o item: o primeiro quartil desse conjunto de dados é igual a 4.",
@@ -343,7 +343,7 @@ const QUESTOES_PCAL_LOTE51 = [
   /* ===== SENSIBILIDADE DA MÉDIA A OUTLIERS x ROBUSTEZ DA MEDIANA ===== */
   {
     id: "ES-096", disciplina: "Estatística", assunto: "Medidas de Tendência Central", subassunto: "Sensibilidade da média a outliers x robustez da mediana",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (medidas de tendência central, outliers)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 65, probReaparecer: 0.82,
     enunciado: "Considere o conjunto de salários (em milhares de reais) de 5 servidores: 3, 4, 4, 5 e 6. Se o valor 6 for substituído por 60 (um valor discrepante), a média aritmética do conjunto sofrerá alteração significativa, ao passo que a mediana permanecerá igual a 4, evidenciando a maior sensibilidade da média a valores extremos (outliers) em comparação com a mediana.",
@@ -362,7 +362,7 @@ const QUESTOES_PCAL_LOTE51 = [
   },
   {
     id: "ES-097", disciplina: "Estatística", assunto: "Medidas de Tendência Central", subassunto: "Sensibilidade da média a outliers x robustez da mediana",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (medidas de tendência central, outliers)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 65, probReaparecer: 0.78,
     enunciado: "Considere o conjunto de salários (em milhares de reais) de 5 servidores: 3, 4, 4, 5 e 6. Se o valor 6 for substituído por 60 (um valor discrepante), tanto a média aritmética quanto a mediana do conjunto sofrerão alteração proporcional e de mesma magnitude, uma vez que ambas as medidas são igualmente sensíveis à presença de valores extremos (outliers).",

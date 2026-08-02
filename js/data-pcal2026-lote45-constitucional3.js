@@ -17,7 +17,7 @@ const QUESTOES_PCAL_LOTE45 = [
   /* ===== SEGURANÇA COMO DIREITO SOCIAL (ART. 6º) ===== */
   {
     id: "DC-065", disciplina: "Direito Constitucional", assunto: "Direitos sociais", subassunto: "Rol do art. 6º — segurança como direito social",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (CF/88, art. 6º)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.84,
     enunciado: "A segurança é um direito social expressamente previsto no art. 6º da Constituição Federal, ao lado da educação, da saúde, da alimentação, do trabalho, da moradia, do transporte, do lazer, da previdência social, da proteção à maternidade e à infância e da assistência aos desamparados.",
@@ -36,7 +36,7 @@ const QUESTOES_PCAL_LOTE45 = [
   },
   {
     id: "DC-066", disciplina: "Direito Constitucional", assunto: "Direitos sociais", subassunto: "Rol do art. 6º — segurança como direito social",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (CF/88, art. 6º)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.8,
     enunciado: "A segurança não consta expressamente do rol de direitos sociais previsto no art. 6º da Constituição Federal, sendo considerada, pela doutrina majoritária, um direito implícito, decorrente da interpretação sistemática dos demais direitos ali elencados.",
@@ -57,7 +57,7 @@ const QUESTOES_PCAL_LOTE45 = [
   /* ===== RENDA BÁSICA FAMILIAR (ART. 6º, PARÁGRAFO ÚNICO — EC 114/2021) ===== */
   {
     id: "DC-067", disciplina: "Direito Constitucional", assunto: "Direitos sociais", subassunto: "Renda básica familiar (art. 6º, parágrafo único — EC 114/2021)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (CF/88, art. 6º, parágrafo único, EC 114/2021)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.8,
     enunciado: "Nos termos do parágrafo único do art. 6º da Constituição Federal, acrescido pela Emenda Constitucional nº 114/2021, todo brasileiro em situação de vulnerabilidade social tem direito a uma renda básica familiar, garantida pelo poder público em programa permanente de transferência de renda, cujas normas e requisitos de acesso serão determinados em lei.",
@@ -76,7 +76,7 @@ const QUESTOES_PCAL_LOTE45 = [
   },
   {
     id: "DC-068", disciplina: "Direito Constitucional", assunto: "Direitos sociais", subassunto: "Renda básica familiar (art. 6º, parágrafo único — EC 114/2021)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (CF/88, art. 6º, parágrafo único, EC 114/2021)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.76,
     enunciado: "O direito à renda básica familiar, previsto no parágrafo único do art. 6º da Constituição Federal, constitui norma de eficácia plena e imediata, sendo devido a todo brasileiro em situação de vulnerabilidade social independentemente de regulamentação por lei ordinária.",
@@ -97,7 +97,7 @@ const QUESTOES_PCAL_LOTE45 = [
   /* ===== JORNADA DE TRABALHO (ART. 7º, XIII) ===== */
   {
     id: "DC-069", disciplina: "Direito Constitucional", assunto: "Direitos sociais", subassunto: "Jornada de trabalho (art. 7º, XIII)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (CF/88, art. 7º, XIII)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.8,
     enunciado: "É garantida ao trabalhador a duração do trabalho normal não superior a oito horas diárias nem a quarenta e quatro horas semanais, sendo facultada a compensação de horários e a redução da jornada mediante acordo ou convenção coletiva de trabalho.",
@@ -116,7 +116,7 @@ const QUESTOES_PCAL_LOTE45 = [
   },
   {
     id: "DC-070", disciplina: "Direito Constitucional", assunto: "Direitos sociais", subassunto: "Jornada de trabalho (art. 7º, XIII)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (CF/88, art. 7º, XIII)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.76,
     enunciado: "A duração do trabalho normal, fixada constitucionalmente em não superior a oito horas diárias e quarenta e quatro semanais, constitui limite rígido e inflexível, não sendo admitida sua compensação ou redução por qualquer instrumento de negociação coletiva.",
@@ -137,7 +137,7 @@ const QUESTOES_PCAL_LOTE45 = [
   /* ===== AVISO PRÉVIO (ART. 7º, XXI) ===== */
   {
     id: "DC-071", disciplina: "Direito Constitucional", assunto: "Direitos sociais", subassunto: "Aviso prévio proporcional (art. 7º, XXI)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (CF/88, art. 7º, XXI)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.85,
     enunciado: "Aos trabalhadores urbanos e rurais é garantido o aviso prévio proporcional ao tempo de serviço, sendo o piso constitucional de, no mínimo, trinta dias, nos termos da lei — e não um teto máximo, tampouco um direito independente do tempo de serviço prestado.",
@@ -156,7 +156,7 @@ const QUESTOES_PCAL_LOTE45 = [
   },
   {
     id: "DC-072", disciplina: "Direito Constitucional", assunto: "Direitos sociais", subassunto: "Aviso prévio proporcional (art. 7º, XXI)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (CF/88, art. 7º, XXI)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.82,
     enunciado: "Aos trabalhadores urbanos e rurais é garantido o direito ao aviso prévio de, no máximo, trinta dias, independentemente do tempo de serviço prestado ao empregador.",
@@ -177,7 +177,7 @@ const QUESTOES_PCAL_LOTE45 = [
   /* ===== TRABALHO NOTURNO DO MENOR (ART. 7º, XXXIII) ===== */
   {
     id: "DC-073", disciplina: "Direito Constitucional", assunto: "Direitos sociais", subassunto: "Trabalho do menor — tripé etário (art. 7º, XXXIII)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (CF/88, art. 7º, XXXIII)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.85,
     enunciado: "É vedado ao menor entre dezesseis e dezoito anos de idade o exercício de trabalho noturno, perigoso ou insalubre, sendo essa proibição aplicável a todo trabalhador que não tenha completado dezoito anos, ainda que já lhe seja permitido o trabalho em regra a partir dos dezesseis anos.",
@@ -196,7 +196,7 @@ const QUESTOES_PCAL_LOTE45 = [
   },
   {
     id: "DC-074", disciplina: "Direito Constitucional", assunto: "Direitos sociais", subassunto: "Trabalho do menor — tripé etário (art. 7º, XXXIII)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (CF/88, art. 7º, XXXIII)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.82,
     enunciado: "É permitido ao menor, entre dezesseis e dezoito anos de idade, o exercício de trabalho noturno, uma vez que, alcançada a idade mínima de dezesseis anos, cessam todas as restrições constitucionais especiais relacionadas ao tipo ou ao horário de trabalho exercido.",
@@ -217,7 +217,7 @@ const QUESTOES_PCAL_LOTE45 = [
   /* ===== TRABALHADORES DOMÉSTICOS (ART. 7º, PARÁGRAFO ÚNICO) ===== */
   {
     id: "DC-075", disciplina: "Direito Constitucional", assunto: "Direitos sociais", subassunto: "Trabalhadores domésticos — extensão parcial (art. 7º, parágrafo único)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (CF/88, art. 7º, parágrafo único; EC 72/2013)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.8,
     enunciado: "Não se estende aos trabalhadores domésticos a integralidade dos direitos trabalhistas assegurados pela Constituição Federal aos trabalhadores urbanos e rurais, uma vez que o parágrafo único do art. 7º estende à categoria apenas um rol específico de incisos do caput.",
@@ -236,7 +236,7 @@ const QUESTOES_PCAL_LOTE45 = [
   },
   {
     id: "DC-076", disciplina: "Direito Constitucional", assunto: "Direitos sociais", subassunto: "Trabalhadores domésticos — extensão parcial (art. 7º, parágrafo único)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (CF/88, art. 7º, parágrafo único; EC 72/2013)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.76,
     enunciado: "Após a Emenda Constitucional nº 72/2013, estende-se aos trabalhadores domésticos a integralidade dos direitos trabalhistas assegurados pela Constituição Federal aos trabalhadores urbanos e rurais, equiparando-se por completo as duas categorias no que se refere aos direitos previstos no art. 7º.",
@@ -257,7 +257,7 @@ const QUESTOES_PCAL_LOTE45 = [
   /* ===== DIREITO DE GREVE — SERVIÇOS ESSENCIAIS (ART. 9º, §1º) ===== */
   {
     id: "DC-077", disciplina: "Direito Constitucional", assunto: "Direitos sociais", subassunto: "Direito de greve — serviços essenciais (art. 9º, § 1º)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (CF/88, art. 9º, § 1º)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.85,
     enunciado: "Compete aos trabalhadores decidir sobre a oportunidade de exercer o direito de greve e sobre os interesses que devam por meio dela defender, cabendo, contudo, à lei — e não ao sindicato da categoria — definir os serviços ou atividades essenciais e dispor sobre o atendimento das necessidades inadiáveis da comunidade.",
@@ -276,7 +276,7 @@ const QUESTOES_PCAL_LOTE45 = [
   },
   {
     id: "DC-078", disciplina: "Direito Constitucional", assunto: "Direitos sociais", subassunto: "Direito de greve — serviços essenciais (art. 9º, § 1º)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (CF/88, art. 9º, § 1º)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.8,
     enunciado: "Cabe ao sindicato da categoria definir, no caso de greve, os serviços ou atividades essenciais que serão disponibilizados à coletividade, assim como dispor sobre o atendimento das necessidades inadiáveis da comunidade, sem interferência do Poder Legislativo nessa definição.",

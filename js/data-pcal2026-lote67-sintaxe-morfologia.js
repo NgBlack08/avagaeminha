@@ -33,7 +33,7 @@ const QUESTOES_PCAL_LOTE67 = [
   /* ===== FRASE, ORAÇÃO E PERÍODO ===== */
   {
     id: "PT-035", disciplina: "Língua Portuguesa", assunto: "Frase, oração e período", subassunto: "Conceitos fundamentais",
-    concurso: "PCAL", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026,
+    concurso: "PCAL", cargo: ["Escrivão","Agente","Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de literalidade gramatical)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 60, probReaparecer: 0.78,
     enunciado: "Toda oração se organiza em torno de um verbo ou de uma locução verbal, ao passo que a frase pode constituir-se sem verbo algum, desde que transmita sentido completo, como ocorre em \"Silêncio na sala de audiências!\".",
@@ -52,7 +52,7 @@ const QUESTOES_PCAL_LOTE67 = [
   },
   {
     id: "PT-036", disciplina: "Língua Portuguesa", assunto: "Frase, oração e período", subassunto: "Conceitos fundamentais",
-    concurso: "PCAL", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026,
+    concurso: "PCAL", cargo: ["Escrivão","Agente","Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de troca de conceitos)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 60, probReaparecer: 0.7,
     enunciado: "Denomina-se oração todo enunciado dotado de sentido completo, ainda que nele não figure verbo, ao passo que a frase se caracteriza necessariamente pela presença de uma forma verbal.",
@@ -71,7 +71,7 @@ const QUESTOES_PCAL_LOTE67 = [
   },
   {
     id: "PT-037", disciplina: "Língua Portuguesa", assunto: "Frase, oração e período", subassunto: "Período simples e composto",
-    concurso: "PCAL", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026,
+    concurso: "PCAL", cargo: ["Escrivão","Agente","Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de troca de conceitos)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 70, probReaparecer: 0.68,
     enunciado: "Em \"O escrivão lavrou o termo de declarações\", tem-se período simples, cuja única oração se diz absoluta; já em \"O escrivão lavrou o termo assim que o depoente chegou\" tem-se período composto, por conter duas orações.",
@@ -90,7 +90,7 @@ const QUESTOES_PCAL_LOTE67 = [
   },
   {
     id: "PT-038", disciplina: "Língua Portuguesa", assunto: "Frase, oração e período", subassunto: "Contagem de orações",
-    concurso: "PCAL", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026,
+    concurso: "PCAL", cargo: ["Escrivão","Agente","Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de troca numérica)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 80, probReaparecer: 0.65,
     enunciado: "O período \"A perita tinha analisado o material e havia concluído o laudo\" é composto por quatro orações, uma vez que cada forma verbal nele presente constitui, por si só, uma oração.",
@@ -111,7 +111,7 @@ const QUESTOES_PCAL_LOTE67 = [
   /* ===== SUJEITO ===== */
   {
     id: "PT-039", disciplina: "Língua Portuguesa", assunto: "Termos essenciais da oração", subassunto: "Tipos de sujeito",
-    concurso: "PCAL", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026,
+    concurso: "PCAL", cargo: ["Escrivão","Agente","Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de troca numérica — contraexemplo)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 65, probReaparecer: 0.8,
     enunciado: "Em \"Os agentes e o delegado assinaram o relatório\", o sujeito é composto, pois apresenta mais de um núcleo, ao passo que em \"Os agentes experientes assinaram o relatório\" o sujeito é simples, por possuir núcleo único.",
@@ -130,7 +130,7 @@ const QUESTOES_PCAL_LOTE67 = [
   },
   {
     id: "PT-040", disciplina: "Língua Portuguesa", assunto: "Termos essenciais da oração", subassunto: "Sujeito oculto e indeterminado",
-    concurso: "PCAL", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026,
+    concurso: "PCAL", cargo: ["Escrivão","Agente","Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de troca de conceitos)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 85, probReaparecer: 0.83,
     enunciado: "No período \"Os peritos isolaram o local e recolheram os vestígios\", o sujeito da segunda oração é indeterminado, visto que não figura expresso junto ao verbo \"recolheram\".",
@@ -149,7 +149,7 @@ const QUESTOES_PCAL_LOTE67 = [
   },
   {
     id: "PT-041", disciplina: "Língua Portuguesa", assunto: "Termos essenciais da oração", subassunto: "Sujeito oculto e indeterminado",
-    concurso: "PCAL", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026,
+    concurso: "PCAL", cargo: ["Escrivão","Agente","Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de troca de conceitos)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 85, probReaparecer: 0.75,
     enunciado: "Em \"Arrombaram a porta do depósito durante a madrugada\", enunciado isoladamente, o sujeito é indeterminado; já em \"A guarnição chegou ao local e arrombou a porta do depósito\", o sujeito da segunda oração é oculto.",
@@ -168,7 +168,7 @@ const QUESTOES_PCAL_LOTE67 = [
   },
   {
     id: "PT-042", disciplina: "Língua Portuguesa", assunto: "Termos essenciais da oração", subassunto: "Índice de indeterminação do sujeito",
-    concurso: "PCAL", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026,
+    concurso: "PCAL", cargo: ["Escrivão","Agente","Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de troca numérica — contraexemplo)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 90, probReaparecer: 0.79,
     enunciado: "Em \"Necessita-se de peritos criminais na região\", o pronome \"se\" funciona como índice de indeterminação do sujeito, razão pela qual o verbo permanece na terceira pessoa do singular, ainda que \"peritos criminais\" esteja no plural.",
@@ -187,7 +187,7 @@ const QUESTOES_PCAL_LOTE67 = [
   },
   {
     id: "PT-043", disciplina: "Língua Portuguesa", assunto: "Termos essenciais da oração", subassunto: "Índice de indeterminação x partícula apassivadora",
-    concurso: "PCAL", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026,
+    concurso: "PCAL", cargo: ["Escrivão","Agente","Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de troca de conceitos)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 90, probReaparecer: 0.77,
     enunciado: "Em \"Precisa-se de novos escrivães\", tem-se voz passiva sintética, sendo \"novos escrivães\" o sujeito paciente da oração, o que impõe a flexão do verbo no plural.",
@@ -206,7 +206,7 @@ const QUESTOES_PCAL_LOTE67 = [
   },
   {
     id: "PT-044", disciplina: "Língua Portuguesa", assunto: "Termos essenciais da oração", subassunto: "Voz passiva sintética",
-    concurso: "PCAL", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026,
+    concurso: "PCAL", cargo: ["Escrivão","Agente","Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de troca numérica — contraexemplo)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 85, probReaparecer: 0.81,
     enunciado: "Em \"Apreenderam-se dezenas de aparelhos celulares na operação\", o pronome \"se\" é partícula apassivadora e \"dezenas de aparelhos celulares\" exerce a função de sujeito, o que justifica a flexão verbal no plural.",
@@ -225,7 +225,7 @@ const QUESTOES_PCAL_LOTE67 = [
   },
   {
     id: "PT-045", disciplina: "Língua Portuguesa", assunto: "Termos essenciais da oração", subassunto: "Voz passiva sintética",
-    concurso: "PCAL", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026,
+    concurso: "PCAL", cargo: ["Escrivão","Agente","Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de troca numérica)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 85, probReaparecer: 0.7,
     enunciado: "A construção \"Divulgou-se os resultados do concurso\" atende à norma-padrão, porquanto o verbo, nas construções com o pronome \"se\", permanece invariavelmente na terceira pessoa do singular.",
@@ -244,7 +244,7 @@ const QUESTOES_PCAL_LOTE67 = [
   },
   {
     id: "PT-046", disciplina: "Língua Portuguesa", assunto: "Termos essenciais da oração", subassunto: "Oração sem sujeito — verbo haver",
-    concurso: "PCAL", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026,
+    concurso: "PCAL", cargo: ["Escrivão","Agente","Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de termo absoluto)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 80, probReaparecer: 0.86,
     enunciado: "Empregado no sentido de existir, o verbo haver é impessoal e permanece sempre na terceira pessoa do singular, de sorte que, em \"Havia denúncias contra o servidor\", o termo \"denúncias\" é objeto direto, e não sujeito.",
@@ -263,7 +263,7 @@ const QUESTOES_PCAL_LOTE67 = [
   },
   {
     id: "PT-047", disciplina: "Língua Portuguesa", assunto: "Termos essenciais da oração", subassunto: "Oração sem sujeito — verbo haver",
-    concurso: "PCAL", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026,
+    concurso: "PCAL", cargo: ["Escrivão","Agente","Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de troca de conceitos)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 85, probReaparecer: 0.82,
     enunciado: "Assim como o verbo haver no sentido existencial, os verbos existir, ocorrer e acontecer são impessoais, motivo por que devem permanecer na terceira pessoa do singular, como em \"Ocorreu diversas irregularidades no certame\".",
@@ -282,7 +282,7 @@ const QUESTOES_PCAL_LOTE67 = [
   },
   {
     id: "PT-048", disciplina: "Língua Portuguesa", assunto: "Termos essenciais da oração", subassunto: "Oração sem sujeito — verbo haver",
-    concurso: "PCAL", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026,
+    concurso: "PCAL", cargo: ["Escrivão","Agente","Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de troca de conceitos)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 85, probReaparecer: 0.74,
     enunciado: "Em \"Houve falhas na cadeia de custódia\", a oração é sem sujeito; já em \"Ocorreram falhas na cadeia de custódia\", \"falhas\" exerce a função de sujeito, o que explica a diferença de flexão entre as duas construções.",
@@ -303,7 +303,7 @@ const QUESTOES_PCAL_LOTE67 = [
   /* ===== ORAÇÃO SEM SUJEITO — DEMAIS CASOS ===== */
   {
     id: "PT-049", disciplina: "Língua Portuguesa", assunto: "Termos essenciais da oração", subassunto: "Oração sem sujeito — fenômenos da natureza",
-    concurso: "PCAL", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026,
+    concurso: "PCAL", cargo: ["Escrivão","Agente","Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de generalização — contraexemplo)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 60, probReaparecer: 0.8,
     enunciado: "Os verbos que exprimem fenômenos da natureza, como chover, nevar, trovejar e anoitecer, são, em regra, impessoais, de modo que \"Anoiteceu antes do término da diligência\" constitui oração sem sujeito.",
@@ -322,7 +322,7 @@ const QUESTOES_PCAL_LOTE67 = [
   },
   {
     id: "PT-050", disciplina: "Língua Portuguesa", assunto: "Termos essenciais da oração", subassunto: "Oração sem sujeito — fenômenos da natureza",
-    concurso: "PCAL", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026,
+    concurso: "PCAL", cargo: ["Escrivão","Agente","Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de generalização)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 85, probReaparecer: 0.72,
     enunciado: "Por designarem fenômenos da natureza, os verbos chover e amanhecer são impessoais em qualquer contexto, razão pela qual, em \"Choveram críticas sobre a corporação\", a oração não possui sujeito.",
@@ -341,7 +341,7 @@ const QUESTOES_PCAL_LOTE67 = [
   },
   {
     id: "PT-051", disciplina: "Língua Portuguesa", assunto: "Termos essenciais da oração", subassunto: "Oração sem sujeito — tempo decorrido",
-    concurso: "PCAL", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026,
+    concurso: "PCAL", cargo: ["Escrivão","Agente","Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de troca numérica — contraexemplo)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 80, probReaparecer: 0.84,
     enunciado: "Na indicação de tempo decorrido, os verbos fazer e haver são impessoais, de modo que a forma adequada à norma-padrão é \"Faz cinco anos que o inquérito foi instaurado\", e não \"Fazem cinco anos\".",
@@ -360,7 +360,7 @@ const QUESTOES_PCAL_LOTE67 = [
   },
   {
     id: "PT-052", disciplina: "Língua Portuguesa", assunto: "Termos essenciais da oração", subassunto: "Oração sem sujeito — tempo decorrido",
-    concurso: "PCAL", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026,
+    concurso: "PCAL", cargo: ["Escrivão","Agente","Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de troca de conceitos)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 85, probReaparecer: 0.71,
     enunciado: "Em \"Havia três meses que o suspeito não era localizado\", a expressão \"três meses\" exerce a função de sujeito do verbo \"havia\", o qual, por isso, poderia flexionar-se no plural sem prejuízo à norma-padrão.",
@@ -379,7 +379,7 @@ const QUESTOES_PCAL_LOTE67 = [
   },
   {
     id: "PT-053", disciplina: "Língua Portuguesa", assunto: "Termos essenciais da oração", subassunto: "Oração sem sujeito — verbo ser",
-    concurso: "PCAL", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026,
+    concurso: "PCAL", cargo: ["Escrivão","Agente","Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de troca numérica)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 85, probReaparecer: 0.68,
     enunciado: "Na indicação de horas, o verbo ser é impessoal, mas concorda com a expressão numérica, o que torna corretas tanto \"É uma hora da tarde\" quanto \"São quinze horas\".",
@@ -400,7 +400,7 @@ const QUESTOES_PCAL_LOTE67 = [
   /* ===== PREDICADO ===== */
   {
     id: "PT-054", disciplina: "Língua Portuguesa", assunto: "Tipos de predicado", subassunto: "Predicado verbal, nominal e verbo-nominal",
-    concurso: "PCAL", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026,
+    concurso: "PCAL", cargo: ["Escrivão","Agente","Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de troca de conceitos — contraexemplo)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 80, probReaparecer: 0.85,
     enunciado: "O predicado verbal tem por núcleo o próprio verbo; o nominal tem por núcleo o predicativo, acompanhado de verbo de ligação; e o verbo-nominal apresenta dois núcleos, o verbo e o predicativo.",
@@ -419,7 +419,7 @@ const QUESTOES_PCAL_LOTE67 = [
   },
   {
     id: "PT-055", disciplina: "Língua Portuguesa", assunto: "Tipos de predicado", subassunto: "Predicado verbal e nominal",
-    concurso: "PCAL", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026,
+    concurso: "PCAL", cargo: ["Escrivão","Agente","Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de troca de conceitos)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 80, probReaparecer: 0.76,
     enunciado: "Em \"A escrivã permaneceu atenta durante toda a oitiva\", o predicado é verbal, uma vez que seu núcleo é a forma verbal \"permaneceu\".",
@@ -438,7 +438,7 @@ const QUESTOES_PCAL_LOTE67 = [
   },
   {
     id: "PT-056", disciplina: "Língua Portuguesa", assunto: "Tipos de predicado", subassunto: "Predicado verbo-nominal",
-    concurso: "PCAL", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026,
+    concurso: "PCAL", cargo: ["Escrivão","Agente","Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de troca de conceitos)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 90, probReaparecer: 0.73,
     enunciado: "Em \"A testemunha chegou nervosa à delegacia\", o predicado é verbo-nominal, pois reúne o verbo intransitivo \"chegou\" e o predicativo do sujeito \"nervosa\".",
@@ -457,7 +457,7 @@ const QUESTOES_PCAL_LOTE67 = [
   },
   {
     id: "PT-057", disciplina: "Língua Portuguesa", assunto: "Tipos de predicado", subassunto: "Predicativo x adjunto adverbial",
-    concurso: "PCAL", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026,
+    concurso: "PCAL", cargo: ["Escrivão","Agente","Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de troca de conceitos)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 90, probReaparecer: 0.7,
     enunciado: "Em \"Os investigadores retornaram exaustos ao plantão\", o termo \"exaustos\" classifica-se como adjunto adverbial de modo, por indicar a maneira como se deu o retorno.",
@@ -476,7 +476,7 @@ const QUESTOES_PCAL_LOTE67 = [
   },
   {
     id: "PT-058", disciplina: "Língua Portuguesa", assunto: "Tipos de predicado", subassunto: "Verbos de ligação",
-    concurso: "PCAL", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026,
+    concurso: "PCAL", cargo: ["Escrivão","Agente","Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de troca de conceitos — contraexemplo)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 80, probReaparecer: 0.69,
     enunciado: "Um mesmo verbo pode funcionar como de ligação ou como significativo conforme o contexto: em \"O agente ficou apreensivo\", \"ficar\" é verbo de ligação; em \"O agente ficou na viatura\", é intransitivo.",
@@ -495,7 +495,7 @@ const QUESTOES_PCAL_LOTE67 = [
   },
   {
     id: "PT-059", disciplina: "Língua Portuguesa", assunto: "Tipos de predicado", subassunto: "Predicativo do sujeito",
-    concurso: "PCAL", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026,
+    concurso: "PCAL", cargo: ["Escrivão","Agente","Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de exigência inexistente)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 85, probReaparecer: 0.72,
     enunciado: "O predicativo do sujeito somente ocorre em predicados nominais, sendo indispensável, para sua identificação, a presença de verbo de ligação na oração.",
@@ -516,7 +516,7 @@ const QUESTOES_PCAL_LOTE67 = [
   /* ===== PREDICATIVO ===== */
   {
     id: "PT-060", disciplina: "Língua Portuguesa", assunto: "Predicativo", subassunto: "Formas de representação",
-    concurso: "PCAL", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026,
+    concurso: "PCAL", cargo: ["Escrivão","Agente","Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de generalização — contraexemplo)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 80, probReaparecer: 0.66,
     enunciado: "O predicativo pode ser representado não só por adjetivo, mas também por substantivo, numeral, pronome ou locução adjetiva, como em \"O acusado é reincidente\", \"O acusado é advogado\" e \"O acusado está sem defensor\".",
@@ -535,7 +535,7 @@ const QUESTOES_PCAL_LOTE67 = [
   },
   {
     id: "PT-061", disciplina: "Língua Portuguesa", assunto: "Predicativo", subassunto: "Formas de representação",
-    concurso: "PCAL", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026,
+    concurso: "PCAL", cargo: ["Escrivão","Agente","Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de restrição indevida)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 65, probReaparecer: 0.64,
     enunciado: "A função de predicativo somente pode ser exercida por adjetivos, pois apenas essa classe é capaz de atribuir qualidade ao sujeito ou ao objeto.",
@@ -554,7 +554,7 @@ const QUESTOES_PCAL_LOTE67 = [
   },
   {
     id: "PT-062", disciplina: "Língua Portuguesa", assunto: "Predicativo", subassunto: "Predicativo do objeto",
-    concurso: "PCAL", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026,
+    concurso: "PCAL", cargo: ["Escrivão","Agente","Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de literalidade gramatical)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 85, probReaparecer: 0.78,
     enunciado: "Em \"O conselho considerou improcedente a representação\", o termo \"improcedente\" é predicativo do objeto direto, atribuindo ao objeto \"a representação\" um juízo de valor emitido pelo sujeito.",
@@ -573,7 +573,7 @@ const QUESTOES_PCAL_LOTE67 = [
   },
   {
     id: "PT-063", disciplina: "Língua Portuguesa", assunto: "Predicativo", subassunto: "Predicativo do objeto",
-    concurso: "PCAL", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026,
+    concurso: "PCAL", cargo: ["Escrivão","Agente","Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de troca de conceitos)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 85, probReaparecer: 0.74,
     enunciado: "Em \"A comissão julgou inidôneo o fornecedor\", o termo \"inidôneo\" é predicativo do sujeito, por caracterizar aquele que pratica a ação de julgar.",
@@ -592,7 +592,7 @@ const QUESTOES_PCAL_LOTE67 = [
   },
   {
     id: "PT-064", disciplina: "Língua Portuguesa", assunto: "Predicativo", subassunto: "Predicativo do objeto indireto",
-    concurso: "PCAL", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026,
+    concurso: "PCAL", cargo: ["Escrivão","Agente","Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de exigência inexistente)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 90, probReaparecer: 0.55,
     enunciado: "Para a Nomenclatura Gramatical Brasileira, o predicativo do objeto indireto ocorre apenas com o verbo chamar empregado no sentido de denominar, como em \"Chamaram ao réu de inocente\".",
@@ -613,7 +613,7 @@ const QUESTOES_PCAL_LOTE67 = [
   /* ===== PREDICAÇÃO VERBAL E COMPLEMENTOS ===== */
   {
     id: "PT-065", disciplina: "Língua Portuguesa", assunto: "Predicação verbal", subassunto: "Transitividade",
-    concurso: "PCAL", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026,
+    concurso: "PCAL", cargo: ["Escrivão","Agente","Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de troca de conceitos — contraexemplo)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 65, probReaparecer: 0.87,
     enunciado: "O verbo transitivo direto liga-se ao complemento sem preposição obrigatória, ao passo que o transitivo indireto exige preposição para introduzir seu complemento.",
@@ -632,7 +632,7 @@ const QUESTOES_PCAL_LOTE67 = [
   },
   {
     id: "PT-066", disciplina: "Língua Portuguesa", assunto: "Predicação verbal", subassunto: "Transitividade",
-    concurso: "PCAL", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026,
+    concurso: "PCAL", cargo: ["Escrivão","Agente","Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de troca de conceitos)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 60, probReaparecer: 0.75,
     enunciado: "Classifica-se como transitivo direto o verbo cujo complemento vem regido de preposição, ao passo que o transitivo indireto dispensa qualquer elemento de ligação entre verbo e complemento.",
@@ -651,7 +651,7 @@ const QUESTOES_PCAL_LOTE67 = [
   },
   {
     id: "PT-067", disciplina: "Língua Portuguesa", assunto: "Predicação verbal", subassunto: "Transitividade",
-    concurso: "PCAL", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026,
+    concurso: "PCAL", cargo: ["Escrivão","Agente","Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de troca de conceitos)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 90, probReaparecer: 0.72,
     enunciado: "Em \"O escrivão entregou o laudo ao delegado\", o verbo é transitivo direto e indireto; já em \"O perito assistiu ao interrogatório\", o verbo é transitivo indireto, e \"ao interrogatório\" é objeto indireto.",
@@ -670,7 +670,7 @@ const QUESTOES_PCAL_LOTE67 = [
   },
   {
     id: "PT-068", disciplina: "Língua Portuguesa", assunto: "Termos integrantes da oração", subassunto: "Objeto direto preposicionado",
-    concurso: "PCAL", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026,
+    concurso: "PCAL", cargo: ["Escrivão","Agente","Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de troca de conceitos)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 90, probReaparecer: 0.68,
     enunciado: "Em \"A corporação respeita a todos os seus servidores\", a presença da preposição \"a\" transforma o termo destacado em objeto indireto, alterando a transitividade do verbo respeitar.",
@@ -689,7 +689,7 @@ const QUESTOES_PCAL_LOTE67 = [
   },
   {
     id: "PT-069", disciplina: "Língua Portuguesa", assunto: "Termos integrantes da oração", subassunto: "Objeto direto preposicionado",
-    concurso: "PCAL", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026,
+    concurso: "PCAL", cargo: ["Escrivão","Agente","Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de restrição indevida)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 90, probReaparecer: 0.6,
     enunciado: "O objeto direto preposicionado ocorre em hipóteses restritas, entre as quais o complemento representado por pronome oblíquo tônico, a ideia partitiva e o emprego da palavra Deus, como em \"O réu ofendeu a mim\" e \"Bebeu do vinho\".",
@@ -708,7 +708,7 @@ const QUESTOES_PCAL_LOTE67 = [
   },
   {
     id: "PT-070", disciplina: "Língua Portuguesa", assunto: "Termos integrantes da oração", subassunto: "Objeto indireto",
-    concurso: "PCAL", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026,
+    concurso: "PCAL", cargo: ["Escrivão","Agente","Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de generalização)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 85, probReaparecer: 0.71,
     enunciado: "Toda expressão preposicionada que suceda o verbo exerce a função de objeto indireto, como se verifica em \"O agente permaneceu na viatura\".",
@@ -727,7 +727,7 @@ const QUESTOES_PCAL_LOTE67 = [
   },
   {
     id: "PT-071", disciplina: "Língua Portuguesa", assunto: "Termos integrantes da oração", subassunto: "Objeto pleonástico",
-    concurso: "PCAL", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026,
+    concurso: "PCAL", cargo: ["Escrivão","Agente","Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de literalidade gramatical)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 85, probReaparecer: 0.57,
     enunciado: "Em \"O inquérito, o delegado o concluiu em tempo recorde\", o pronome \"o\" configura objeto direto pleonástico, por retomar, com finalidade enfática, o termo deslocado para o início do período.",
@@ -746,7 +746,7 @@ const QUESTOES_PCAL_LOTE67 = [
   },
   {
     id: "PT-072", disciplina: "Língua Portuguesa", assunto: "Termos integrantes da oração", subassunto: "Objeto cognato",
-    concurso: "PCAL", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026,
+    concurso: "PCAL", cargo: ["Escrivão","Agente","Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de literalidade gramatical)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 80, probReaparecer: 0.52,
     enunciado: "Denomina-se objeto direto cognato, ou interno, aquele cujo núcleo repete o radical ou a ideia expressa pelo próprio verbo, como em \"Viveu uma vida difícil\".",
@@ -765,7 +765,7 @@ const QUESTOES_PCAL_LOTE67 = [
   },
   {
     id: "PT-073", disciplina: "Língua Portuguesa", assunto: "Predicação verbal", subassunto: "Verbo intransitivo",
-    concurso: "PCAL", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026,
+    concurso: "PCAL", cargo: ["Escrivão","Agente","Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de troca de conceitos)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 85, probReaparecer: 0.7,
     enunciado: "O verbo intransitivo não admite que a ele se agregue qualquer termo, razão pela qual, em \"A guarnição chegou rapidamente ao local\", a presença de termos após o verbo revela tratar-se de verbo transitivo.",
@@ -784,7 +784,7 @@ const QUESTOES_PCAL_LOTE67 = [
   },
   {
     id: "PT-074", disciplina: "Língua Portuguesa", assunto: "Termos integrantes da oração", subassunto: "Objeto direto x objeto indireto",
-    concurso: "PCAL", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026,
+    concurso: "PCAL", cargo: ["Escrivão","Agente","Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de troca de conceitos)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 85, probReaparecer: 0.79,
     enunciado: "Na oração \"A autoridade policial ouvirá os depoimentos das testemunhas presenciais\", o termo \"os depoimentos das testemunhas presenciais\" exerce a função de objeto indireto.",
@@ -805,7 +805,7 @@ const QUESTOES_PCAL_LOTE67 = [
   /* ===== COMPLEMENTO NOMINAL X ADJUNTO ADNOMINAL ===== */
   {
     id: "PT-075", disciplina: "Língua Portuguesa", assunto: "Complemento nominal e adjunto adnominal", subassunto: "Conceitos",
-    concurso: "PCAL", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026,
+    concurso: "PCAL", cargo: ["Escrivão","Agente","Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de troca de conceitos — contraexemplo)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 85, probReaparecer: 0.88,
     enunciado: "O adjunto adnominal modifica exclusivamente o substantivo, podendo ser representado por artigo, numeral, pronome adjetivo, adjetivo ou locução adjetiva, ao passo que o complemento nominal completa o sentido de substantivo abstrato, adjetivo ou advérbio, sempre por meio de preposição.",
@@ -824,7 +824,7 @@ const QUESTOES_PCAL_LOTE67 = [
   },
   {
     id: "PT-076", disciplina: "Língua Portuguesa", assunto: "Complemento nominal e adjunto adnominal", subassunto: "Conceitos",
-    concurso: "PCAL", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026,
+    concurso: "PCAL", cargo: ["Escrivão","Agente","Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de restrição indevida)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 80, probReaparecer: 0.72,
     enunciado: "O complemento nominal liga-se somente a substantivos, não havendo, na análise sintática, complemento de adjetivo ou de advérbio.",
@@ -843,7 +843,7 @@ const QUESTOES_PCAL_LOTE67 = [
   },
   {
     id: "PT-077", disciplina: "Língua Portuguesa", assunto: "Complemento nominal e adjunto adnominal", subassunto: "Substantivo concreto e abstrato",
-    concurso: "PCAL", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026,
+    concurso: "PCAL", cargo: ["Escrivão","Agente","Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de termo absoluto)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 85, probReaparecer: 0.76,
     enunciado: "O complemento nominal nunca se liga a substantivo concreto, de modo que, sempre que uma expressão preposicionada se ligar a substantivo dessa natureza, será adjunto adnominal.",
@@ -862,7 +862,7 @@ const QUESTOES_PCAL_LOTE67 = [
   },
   {
     id: "PT-078", disciplina: "Língua Portuguesa", assunto: "Complemento nominal e adjunto adnominal", subassunto: "Substantivo concreto e abstrato",
-    concurso: "PCAL", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026,
+    concurso: "PCAL", cargo: ["Escrivão","Agente","Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de troca de conceitos)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 85, probReaparecer: 0.8,
     enunciado: "Em \"O revólver do acusado foi periciado\", a expressão \"do acusado\" exerce a função de complemento nominal, por completar o sentido do substantivo que a antecede.",
@@ -881,7 +881,7 @@ const QUESTOES_PCAL_LOTE67 = [
   },
   {
     id: "PT-079", disciplina: "Língua Portuguesa", assunto: "Complemento nominal e adjunto adnominal", subassunto: "Critério agente e paciente",
-    concurso: "PCAL", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026,
+    concurso: "PCAL", cargo: ["Escrivão","Agente","Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de troca de conceitos)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 95, probReaparecer: 0.83,
     enunciado: "Em \"a prisão do foragido\", a expressão \"do foragido\" é complemento nominal, por designar quem sofre a ação contida no substantivo abstrato; já em \"a decisão do magistrado\", \"do magistrado\" é adjunto adnominal, por designar quem a pratica.",
@@ -900,7 +900,7 @@ const QUESTOES_PCAL_LOTE67 = [
   },
   {
     id: "PT-080", disciplina: "Língua Portuguesa", assunto: "Complemento nominal e adjunto adnominal", subassunto: "Critério agente e paciente",
-    concurso: "PCAL", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026,
+    concurso: "PCAL", cargo: ["Escrivão","Agente","Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de troca de conceitos)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 95, probReaparecer: 0.81,
     enunciado: "Em \"a convocação dos peritos pela chefia\", a expressão \"dos peritos\" é adjunto adnominal, uma vez que o complemento nominal designa sempre o agente da ação expressa pelo substantivo abstrato.",
@@ -919,7 +919,7 @@ const QUESTOES_PCAL_LOTE67 = [
   },
   {
     id: "PT-081", disciplina: "Língua Portuguesa", assunto: "Complemento nominal e adjunto adnominal", subassunto: "Critério da preposição",
-    concurso: "PCAL", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026,
+    concurso: "PCAL", cargo: ["Escrivão","Agente","Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de termo absoluto)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 90, probReaparecer: 0.7,
     enunciado: "Qualquer expressão preposicionada que se ligue diretamente a um adjetivo será sempre complemento nominal, como em \"O relatório é acessível a todos os servidores\".",
@@ -938,7 +938,7 @@ const QUESTOES_PCAL_LOTE67 = [
   },
   {
     id: "PT-082", disciplina: "Língua Portuguesa", assunto: "Complemento nominal e adjunto adnominal", subassunto: "Critério da preposição",
-    concurso: "PCAL", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026,
+    concurso: "PCAL", cargo: ["Escrivão","Agente","Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de exigência inexistente)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 85, probReaparecer: 0.68,
     enunciado: "O adjunto adnominal jamais admite preposição, de sorte que a simples presença desse elemento em uma expressão ligada a substantivo basta para identificá-la como complemento nominal.",
@@ -959,7 +959,7 @@ const QUESTOES_PCAL_LOTE67 = [
   /* ===== ADJUNTO ADVERBIAL E ADVÉRBIO ===== */
   {
     id: "PT-083", disciplina: "Língua Portuguesa", assunto: "Termos acessórios da oração", subassunto: "Adjunto adverbial",
-    concurso: "PCAL", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026,
+    concurso: "PCAL", cargo: ["Escrivão","Agente","Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de generalização — contraexemplo)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 65, probReaparecer: 0.8,
     enunciado: "O adjunto adverbial exprime circunstância e é invariável, podendo modificar o verbo, o adjetivo, outro advérbio ou a oração inteira.",
@@ -978,7 +978,7 @@ const QUESTOES_PCAL_LOTE67 = [
   },
   {
     id: "PT-084", disciplina: "Língua Portuguesa", assunto: "Termos acessórios da oração", subassunto: "Adjunto adverbial x adnominal",
-    concurso: "PCAL", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026,
+    concurso: "PCAL", cargo: ["Escrivão","Agente","Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de troca de conceitos)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 85, probReaparecer: 0.73,
     enunciado: "Em \"A perícia examinou o veículo com lupa\", a expressão \"com lupa\" é adjunto adnominal, por acrescentar informação ao substantivo \"veículo\".",
@@ -997,7 +997,7 @@ const QUESTOES_PCAL_LOTE67 = [
   },
   {
     id: "PT-085", disciplina: "Língua Portuguesa", assunto: "Termos acessórios da oração", subassunto: "Circunstâncias do adjunto adverbial",
-    concurso: "PCAL", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026,
+    concurso: "PCAL", cargo: ["Escrivão","Agente","Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de troca de conceitos)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 85, probReaparecer: 0.71,
     enunciado: "Em \"O suspeito confessou por medo\", a expressão \"por medo\" é adjunto adverbial de causa; já em \"O suspeito confessou sem hesitação\", \"sem hesitação\" é adjunto adverbial de modo.",
@@ -1016,7 +1016,7 @@ const QUESTOES_PCAL_LOTE67 = [
   },
   {
     id: "PT-086", disciplina: "Língua Portuguesa", assunto: "Termos acessórios da oração", subassunto: "Circunstâncias do adjunto adverbial",
-    concurso: "PCAL", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026,
+    concurso: "PCAL", cargo: ["Escrivão","Agente","Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de troca de conceitos)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 85, probReaparecer: 0.69,
     enunciado: "Em \"O policial desmaiou de exaustão após o plantão\", a expressão \"de exaustão\" configura adjunto adverbial de modo, por descrever a maneira como ocorreu o desmaio.",
@@ -1035,7 +1035,7 @@ const QUESTOES_PCAL_LOTE67 = [
   },
   {
     id: "PT-087", disciplina: "Língua Portuguesa", assunto: "Termos acessórios da oração", subassunto: "Modalizadores",
-    concurso: "PCAL", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026,
+    concurso: "PCAL", cargo: ["Escrivão","Agente","Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de literalidade gramatical)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 80, probReaparecer: 0.64,
     enunciado: "Em \"Lamentavelmente, o inquérito foi arquivado\", o termo inicial não modifica apenas o verbo, mas incide sobre todo o enunciado, revelando a avaliação de quem o profere — razão por que se costuma classificá-lo como modalizador.",
@@ -1054,7 +1054,7 @@ const QUESTOES_PCAL_LOTE67 = [
   },
   {
     id: "PT-088", disciplina: "Língua Portuguesa", assunto: "Advérbio", subassunto: "Classificação semântica",
-    concurso: "PCAL", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026,
+    concurso: "PCAL", cargo: ["Escrivão","Agente","Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de generalização)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 80, probReaparecer: 0.75,
     enunciado: "Os advérbios formados pelo acréscimo do sufixo -mente exprimem invariavelmente circunstância de modo, como se observa em \"provavelmente\", \"extremamente\" e \"diariamente\".",
@@ -1075,7 +1075,7 @@ const QUESTOES_PCAL_LOTE67 = [
   /* ===== MORFOLOGIA ===== */
   {
     id: "PT-089", disciplina: "Língua Portuguesa", assunto: "Classes de palavras", subassunto: "Substantivo e adjetivo",
-    concurso: "PCAL", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026,
+    concurso: "PCAL", cargo: ["Escrivão","Agente","Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de troca de conceitos — contraexemplo)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 80, probReaparecer: 0.72,
     enunciado: "Uma mesma palavra pode pertencer a classes distintas conforme o emprego: em \"O policial chegou\", \"policial\" é substantivo; em \"O inquérito policial foi concluído\", é adjetivo.",
@@ -1094,7 +1094,7 @@ const QUESTOES_PCAL_LOTE67 = [
   },
   {
     id: "PT-090", disciplina: "Língua Portuguesa", assunto: "Classes de palavras", subassunto: "Pronome possessivo",
-    concurso: "PCAL", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026,
+    concurso: "PCAL", cargo: ["Escrivão","Agente","Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de troca de conceitos)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 80, probReaparecer: 0.74,
     enunciado: "Em \"Nosso objetivo é reduzir os índices de criminalidade\", a palavra \"Nosso\" classifica-se morfologicamente como artigo definido, por determinar o substantivo que a sucede.",
@@ -1113,7 +1113,7 @@ const QUESTOES_PCAL_LOTE67 = [
   },
   {
     id: "PT-091", disciplina: "Língua Portuguesa", assunto: "Classes de palavras", subassunto: "Preposição — combinação e contração",
-    concurso: "PCAL", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026,
+    concurso: "PCAL", cargo: ["Escrivão","Agente","Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de troca de conceitos)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 85, probReaparecer: 0.66,
     enunciado: "Ocorre combinação quando a preposição se une a outra palavra sem sofrer perda de fonema, como em \"ao\" e \"aos\"; ocorre contração quando há perda ou alteração de fonema, como em \"do\", \"nesta\" e \"àquele\".",
@@ -1132,7 +1132,7 @@ const QUESTOES_PCAL_LOTE67 = [
   },
   {
     id: "PT-092", disciplina: "Língua Portuguesa", assunto: "Classes de palavras", subassunto: "Preposição — combinação e contração",
-    concurso: "PCAL", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026,
+    concurso: "PCAL", cargo: ["Escrivão","Agente","Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de troca de conceitos)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 80, probReaparecer: 0.6,
     enunciado: "A forma \"pelos\", resultante da união da preposição per com o artigo os, constitui exemplo de combinação, visto que ambas as palavras se mantêm integralmente em sua constituição original.",
@@ -1151,7 +1151,7 @@ const QUESTOES_PCAL_LOTE67 = [
   },
   {
     id: "PT-093", disciplina: "Língua Portuguesa", assunto: "Classes de palavras", subassunto: "Locução adjetiva",
-    concurso: "PCAL", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026,
+    concurso: "PCAL", cargo: ["Escrivão","Agente","Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de troca de conceitos — contraexemplo)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 70, probReaparecer: 0.63,
     enunciado: "A locução adjetiva é o conjunto de preposição e substantivo que equivale a um adjetivo, como em \"prova de perícia\", correspondente a \"prova pericial\", e exerce, na oração, a função de adjunto adnominal.",
@@ -1170,7 +1170,7 @@ const QUESTOES_PCAL_LOTE67 = [
   },
   {
     id: "PT-094", disciplina: "Língua Portuguesa", assunto: "Classes de palavras", subassunto: "Classe gramatical e função sintática",
-    concurso: "PCAL", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026,
+    concurso: "PCAL", cargo: ["Escrivão","Agente","Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de troca de conceitos)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 85, probReaparecer: 0.7,
     enunciado: "As expressões \"adjunto adnominal\" e \"adjetivo\" designam a mesma realidade linguística, sendo a primeira a denominação adotada pela morfologia e a segunda, pela sintaxe.",

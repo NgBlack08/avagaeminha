@@ -13,7 +13,7 @@ const QUESTOES_PCAL_LOTE5 = [
   /* ==================== PROCESSO PENAL ==================== */
   {
     id: "PP-014", disciplina: "Processo Penal", assunto: "Inquérito policial", subassunto: "Características",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 40, probReaparecer: 0.9,
     enunciado: "O inquérito policial é procedimento de natureza inquisitiva, no qual não vigora, em regra, o contraditório e a ampla defesa em sua plenitude, por se tratar de peça de caráter meramente informativo destinada a subsidiar a formação da opinio delicti.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "inquisitiva",
@@ -31,7 +31,7 @@ const QUESTOES_PCAL_LOTE5 = [
   },
   {
     id: "PP-015", disciplina: "Processo Penal", assunto: "Prisão e medidas cautelares", subassunto: "Prisão preventiva — decretação",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 40, probReaparecer: 0.9,
     enunciado: "Após a Lei nº 13.964/2019, a prisão preventiva não pode mais ser decretada de ofício pelo juiz, dependendo de requerimento do Ministério Público, do querelante ou do assistente, ou de representação da autoridade policial.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "não de ofício",
@@ -49,7 +49,7 @@ const QUESTOES_PCAL_LOTE5 = [
   },
   {
     id: "PP-016", disciplina: "Processo Penal", assunto: "Prisão e medidas cautelares", subassunto: "Prisão temporária",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 50, probReaparecer: 0.85,
     enunciado: "A prisão temporária, cabível na fase de investigação, tem prazo de cinco dias, prorrogável por igual período em caso de extrema e comprovada necessidade, elevando-se para trinta dias, também prorrogáveis por igual prazo, quando se tratar de crime hediondo ou equiparado.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "cinco dias / trinta dias",
@@ -67,7 +67,7 @@ const QUESTOES_PCAL_LOTE5 = [
   },
   {
     id: "PP-017", disciplina: "Processo Penal", assunto: "Provas", subassunto: "Interceptação telefônica",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 45, probReaparecer: 0.82,
     enunciado: "A interceptação de comunicações telefônicas, para fins de investigação criminal, poderá ser autorizada pela autoridade policial, no prazo máximo de quinze dias, quando houver indícios de infração penal punida com detenção.",
     gabarito: "E", pegadinha: "troca-sujeito", palavraChave: "autoridade policial / detenção",
@@ -85,7 +85,7 @@ const QUESTOES_PCAL_LOTE5 = [
   },
   {
     id: "PP-018", disciplina: "Processo Penal", assunto: "Disposições preliminares", subassunto: "Incomunicabilidade do preso",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 45, probReaparecer: 0.7,
     enunciado: "Segundo a doutrina majoritária, a incomunicabilidade do preso, prevista no Código de Processo Penal, não foi recepcionada pela Constituição Federal de 1988, que assegura ao preso a assistência da família e de advogado.",
     gabarito: "C", pegadinha: "juris-mais-lei", palavraChave: "não recepcionada",
@@ -103,7 +103,7 @@ const QUESTOES_PCAL_LOTE5 = [
   },
   {
     id: "PP-019", disciplina: "Processo Penal", assunto: "Provas", subassunto: "Prova emprestada",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 40, probReaparecer: 0.72,
     enunciado: "A prova emprestada, produzida em um processo e transportada documentalmente para outro, é admissível desde que respeitado o contraditório, ainda que as partes do processo de destino não sejam as mesmas do processo de origem.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "respeitado o contraditório",
@@ -123,7 +123,7 @@ const QUESTOES_PCAL_LOTE5 = [
   /* ==================== LEGISLAÇÃO PENAL ESPECIAL ==================== */
   {
     id: "LE-018", disciplina: "Legislação Especial", assunto: "Lei de Tortura", subassunto: "Perda do cargo",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 45, probReaparecer: 0.85,
     enunciado: "Na Lei nº 9.455/1997, a condenação por crime de tortura acarreta, como efeito automático, a perda do cargo, função ou emprego público e a interdição para seu exercício pelo dobro do prazo da pena aplicada.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "efeito automático",
@@ -141,7 +141,7 @@ const QUESTOES_PCAL_LOTE5 = [
   },
   {
     id: "LE-019", disciplina: "Legislação Especial", assunto: "Crimes de racismo", subassunto: "Injúria racial (Lei 14.532/2023)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 45, probReaparecer: 0.9,
     enunciado: "Com a Lei nº 14.532/2023, a injúria racial passou a ser expressamente tipificada como modalidade do crime de racismo, sendo, portanto, imprescritível e inafiançável.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "imprescritível e inafiançável",
@@ -159,7 +159,7 @@ const QUESTOES_PCAL_LOTE5 = [
   },
   {
     id: "LE-020", disciplina: "Legislação Especial", assunto: "Estatuto da Pessoa Idosa", subassunto: "Ação penal",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 40, probReaparecer: 0.78,
     enunciado: "Nos crimes previstos no Estatuto da Pessoa Idosa (Lei nº 10.741/2003), a ação penal é pública incondicionada.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "incondicionada",
@@ -177,7 +177,7 @@ const QUESTOES_PCAL_LOTE5 = [
   },
   {
     id: "LE-021", disciplina: "Legislação Especial", assunto: "Lei de Drogas", subassunto: "Tráfico privilegiado",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 45, probReaparecer: 0.82,
     enunciado: "Segundo o STF, o tráfico privilegiado, previsto no § 4º do art. 33 da Lei nº 11.343/2006, não tem natureza hedionda, sendo cabível a aplicação da causa de diminuição de pena ao réu primário, de bons antecedentes, que não se dedique a atividades criminosas nem integre organização criminosa.",
     gabarito: "C", pegadinha: "juris-mais-lei", palavraChave: "não tem natureza hedionda",
@@ -195,7 +195,7 @@ const QUESTOES_PCAL_LOTE5 = [
   },
   {
     id: "LE-022", disciplina: "Legislação Especial", assunto: "Crimes contra a ordem tributária", subassunto: "Súmula Vinculante 24",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 50, probReaparecer: 0.8,
     enunciado: "Conforme entendimento sumulado do STF, não se tipifica crime material contra a ordem tributária, previsto no art. 1º, incisos I a IV, da Lei nº 8.137/1990, antes do lançamento definitivo do tributo.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "lançamento definitivo",
@@ -213,7 +213,7 @@ const QUESTOES_PCAL_LOTE5 = [
   },
   {
     id: "LE-023", disciplina: "Legislação Especial", assunto: "Lavagem de dinheiro", subassunto: "Autolavagem",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 45, probReaparecer: 0.78,
     enunciado: "No ordenamento jurídico brasileiro, admite-se a punição do autor do crime antecedente também pelo crime de lavagem de dinheiro (autolavagem), sendo desnecessária a condenação prévia pela infração antecedente para o processo por lavagem.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "autolavagem",
@@ -231,7 +231,7 @@ const QUESTOES_PCAL_LOTE5 = [
   },
   {
     id: "LE-024", disciplina: "Legislação Especial", assunto: "Estatuto da Pessoa com Deficiência", subassunto: "Crime de discriminação",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 40, probReaparecer: 0.72,
     enunciado: "A Lei nº 13.146/2015 (Estatuto da Pessoa com Deficiência) tipifica como crime a conduta de discriminar pessoa em razão de sua deficiência, prevendo pena para quem pratica, induz ou incita tal discriminação.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "discriminar em razão da deficiência",
@@ -251,7 +251,7 @@ const QUESTOES_PCAL_LOTE5 = [
   /* ==================== CRIMES CIBERNÉTICOS E SEGURANÇA DIGITAL ==================== */
   {
     id: "CC-005", disciplina: "Crimes Cibernéticos e Segurança Digital", assunto: "Invasão de dispositivo", subassunto: "Art. 154-A do CP",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 45, probReaparecer: 0.9,
     enunciado: "O crime de invasão de dispositivo informático, previsto no art. 154-A do Código Penal, exige, para sua configuração, a violação indevida de mecanismo de segurança, com o fim de obter, adulterar ou destruir dados sem autorização do titular do dispositivo.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "violação de mecanismo de segurança",
@@ -269,7 +269,7 @@ const QUESTOES_PCAL_LOTE5 = [
   },
   {
     id: "CC-006", disciplina: "Crimes Cibernéticos e Segurança Digital", assunto: "Furto mediante fraude eletrônica", subassunto: "Art. 155, § 4º-B, do CP",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 45, probReaparecer: 0.82,
     enunciado: "A subtração de valores da conta bancária da vítima, realizada mediante fraude por meio de dispositivo eletrônico ou informático, conectado ou não à rede de computadores, configura furto qualificado, distinto do estelionato.",
     gabarito: "C", pegadinha: "troca-conceito", palavraChave: "furto qualificado",
@@ -287,7 +287,7 @@ const QUESTOES_PCAL_LOTE5 = [
   },
   {
     id: "CC-007", disciplina: "Crimes Cibernéticos e Segurança Digital", assunto: "Busca e apreensão de itens digitais", subassunto: "Acesso a celular apreendido",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 50, probReaparecer: 0.85,
     enunciado: "Segundo a jurisprudência do STJ, é ilícita, em regra, a devassa de dados e conversas registradas no aplicativo de mensagens de aparelho celular apreendido, quando realizada sem autorização judicial.",
     gabarito: "C", pegadinha: "juris-mais-lei", palavraChave: "sem autorização judicial",
@@ -305,7 +305,7 @@ const QUESTOES_PCAL_LOTE5 = [
   },
   {
     id: "CC-008", disciplina: "Crimes Cibernéticos e Segurança Digital", assunto: "LGPD", subassunto: "Tratamento de dados pela segurança pública",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 45, probReaparecer: 0.8,
     enunciado: "A Lei Geral de Proteção de Dados (Lei nº 13.709/2018) não se aplica ao tratamento de dados pessoais realizado para fins exclusivos de segurança pública, defesa nacional, segurança do Estado ou atividades de investigação e repressão de infrações penais.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "fins exclusivos de segurança pública",
@@ -325,7 +325,7 @@ const QUESTOES_PCAL_LOTE5 = [
   /* ==================== DIREITO PENAL (reforço) ==================== */
   {
     id: "DP-019", disciplina: "Direito Penal", assunto: "Crimes contra a honra", subassunto: "Calúnia × difamação × injúria",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 45, probReaparecer: 0.8,
     enunciado: "Comete difamação quem imputa falsamente a alguém fato definido como crime, ao passo que a calúnia consiste em atribuir à vítima fato ofensivo à sua reputação, ainda que não criminoso.",
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "difamação × calúnia",
@@ -343,7 +343,7 @@ const QUESTOES_PCAL_LOTE5 = [
   },
   {
     id: "DP-020", disciplina: "Direito Penal", assunto: "Crimes contra o patrimônio", subassunto: "Apropriação indébita × furto",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 45, probReaparecer: 0.75,
     enunciado: "Configura apropriação indébita a conduta de quem, tendo a posse ou detenção lícita de coisa alheia móvel, dela se apropria, invertendo o título da posse; diferentemente do furto, em que a posse do bem é obtida de forma clandestina ou contra a vontade da vítima.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "posse lícita anterior",
@@ -363,7 +363,7 @@ const QUESTOES_PCAL_LOTE5 = [
   /* ==================== ESTATÍSTICA (reforço) ==================== */
   {
     id: "ES-010", disciplina: "Estatística", assunto: "Probabilidade", subassunto: "Teorema de Bayes",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Perito Criminal","Papiloscopista"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 50, probReaparecer: 0.8,
     enunciado: "O teorema de Bayes permite atualizar a probabilidade de uma hipótese à luz de novas evidências, relacionando a probabilidade a posteriori à probabilidade a priori e à verossimilhança da evidência observada.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "a priori / a posteriori",
@@ -381,7 +381,7 @@ const QUESTOES_PCAL_LOTE5 = [
   },
   {
     id: "ES-011", disciplina: "Estatística", assunto: "Inferência", subassunto: "Teorema Central do Limite",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Perito Criminal","Papiloscopista"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 50, probReaparecer: 0.78,
     enunciado: "Pelo Teorema Central do Limite, a distribuição da média amostral aproxima-se de uma distribuição normal à medida que o tamanho da amostra aumenta, independentemente da forma da distribuição da população de origem.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "independentemente da distribuição da população",

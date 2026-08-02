@@ -32,7 +32,7 @@ const QUESTOES_PCAL_LOTE58 = [
   /* ============ GENERALIZAÇÃO — a regra é mesmo absoluta ============ */
   {
     id: "DH-054", disciplina: "Direitos Humanos", assunto: "Direitos e garantias fundamentais", subassunto: "Vedação absoluta da tortura",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (contraexemplo de padrão)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.9,
     enunciado: "Ninguém será submetido a tortura nem a tratamento desumano ou degradante, sem que a Constituição admita qualquer exceção a essa vedação.",
@@ -51,7 +51,7 @@ const QUESTOES_PCAL_LOTE58 = [
   },
   {
     id: "DH-055", disciplina: "Direitos Humanos", assunto: "Direitos e garantias fundamentais", subassunto: "Crimes inafiançáveis",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (contraexemplo de padrão)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.85,
     enunciado: "A prática da tortura, o tráfico ilícito de entorpecentes, o terrorismo e os crimes definidos como hediondos são, em todos os casos, inafiançáveis e insuscetíveis de graça ou anistia.",
@@ -70,7 +70,7 @@ const QUESTOES_PCAL_LOTE58 = [
   },
   {
     id: "ES-132", disciplina: "Estatística", assunto: "Distribuição de Poisson", subassunto: "Igualdade média-variância",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (contraexemplo de padrão)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.8,
     enunciado: "Em qualquer distribuição de Poisson, a média é sempre igual à variância.",
@@ -89,7 +89,7 @@ const QUESTOES_PCAL_LOTE58 = [
   },
   {
     id: "ES-133", disciplina: "Estatística", assunto: "Variáveis aleatórias", subassunto: "Soma das probabilidades",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (contraexemplo de padrão)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.8,
     enunciado: "Em toda distribuição de probabilidade de variável aleatória discreta, a soma das probabilidades de todos os valores possíveis é necessariamente igual a 1.",
@@ -108,7 +108,7 @@ const QUESTOES_PCAL_LOTE58 = [
   },
   {
     id: "DC-107", disciplina: "Direito Constitucional", assunto: "Direitos e garantias fundamentais", subassunto: "Penas vedadas",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (contraexemplo de padrão)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 60, probReaparecer: 0.85,
     enunciado: "A Constituição Federal veda, sem qualquer ressalva, as penas de caráter perpétuo, de trabalhos forçados, de banimento e as penas cruéis.",
@@ -127,7 +127,7 @@ const QUESTOES_PCAL_LOTE58 = [
   },
   {
     id: "ES-134", disciplina: "Estatística", assunto: "Distribuição normal", subassunto: "Simetria",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (contraexemplo de padrão)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.8,
     enunciado: "Toda distribuição normal é simétrica em relação à sua média, qualquer que seja o valor do desvio padrão.",
@@ -146,7 +146,7 @@ const QUESTOES_PCAL_LOTE58 = [
   },
   {
     id: "ES-135", disciplina: "Estatística", assunto: "Amostragem", subassunto: "Definição de probabilística",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (contraexemplo de padrão)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 60, probReaparecer: 0.8,
     enunciado: "Em toda amostragem probabilística, todos os elementos da população têm probabilidade conhecida e diferente de zero de serem selecionados.",
@@ -167,7 +167,7 @@ const QUESTOES_PCAL_LOTE58 = [
   /* ============ TROCA-CONCEITO — o rótulo bate com a definição ============ */
   {
     id: "DP-102", disciplina: "Direito Penal", assunto: "Teoria do crime", subassunto: "Dolo eventual",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (contraexemplo de padrão)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.9,
     enunciado: "Configura dolo eventual a conduta do agente que, prevendo o resultado como possível, assume o risco de produzi-lo.",
@@ -186,7 +186,7 @@ const QUESTOES_PCAL_LOTE58 = [
   },
   {
     id: "DP-103", disciplina: "Direito Penal", assunto: "Teoria do crime", subassunto: "Culpa consciente",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (contraexemplo de padrão)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.85,
     enunciado: "Na culpa consciente, o agente prevê o resultado, mas acredita sinceramente que ele não ocorrerá, confiando em sua habilidade para evitá-lo.",
@@ -205,7 +205,7 @@ const QUESTOES_PCAL_LOTE58 = [
   },
   {
     id: "DP-104", disciplina: "Direito Penal", assunto: "Crimes contra a Administração", subassunto: "Concussão",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (contraexemplo de padrão)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.85,
     enunciado: "Pratica concussão o funcionário público que exige, para si ou para outrem, direta ou indiretamente, ainda que fora da função ou antes de assumi-la, mas em razão dela, vantagem indevida.",
@@ -224,7 +224,7 @@ const QUESTOES_PCAL_LOTE58 = [
   },
   {
     id: "PP-087", disciplina: "Processo Penal", assunto: "Ação penal", subassunto: "Denúncia e queixa",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (contraexemplo de padrão)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 60, probReaparecer: 0.85,
     enunciado: "A denúncia é a peça inicial da ação penal pública, privativa do Ministério Público, ao passo que a queixa-crime inaugura a ação penal privada, sendo oferecida pelo ofendido ou por seu representante legal.",
@@ -243,7 +243,7 @@ const QUESTOES_PCAL_LOTE58 = [
   },
   {
     id: "PP-088", disciplina: "Processo Penal", assunto: "Prisões cautelares", subassunto: "Temporária × preventiva",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (contraexemplo de padrão)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 70, probReaparecer: 0.85,
     enunciado: "A prisão temporária somente é cabível durante a fase de investigação criminal, ao passo que a prisão preventiva pode ser decretada tanto na investigação quanto no curso da ação penal.",
@@ -262,7 +262,7 @@ const QUESTOES_PCAL_LOTE58 = [
   },
   {
     id: "DC-108", disciplina: "Direito Constitucional", assunto: "Remédios constitucionais", subassunto: "Habeas corpus × mandado de segurança",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (contraexemplo de padrão)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 65, probReaparecer: 0.9,
     enunciado: "O habeas corpus tutela a liberdade de locomoção, enquanto o mandado de segurança protege direito líquido e certo não amparado por habeas corpus ou habeas data.",
@@ -281,7 +281,7 @@ const QUESTOES_PCAL_LOTE58 = [
   },
   {
     id: "CC-032", disciplina: "Crimes Cibernéticos e Segurança Digital", assunto: "Ataques", subassunto: "Phishing",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (contraexemplo de padrão)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.85,
     enunciado: "O phishing caracteriza-se pelo emprego de engenharia social para induzir a vítima a fornecer voluntariamente dados sensíveis, como credenciais de acesso, geralmente por meio de mensagens que simulam comunicação de instituição legítima.",
@@ -300,7 +300,7 @@ const QUESTOES_PCAL_LOTE58 = [
   },
   {
     id: "CC-033", disciplina: "Crimes Cibernéticos e Segurança Digital", assunto: "Ataques", subassunto: "Ransomware",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (contraexemplo de padrão)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.85,
     enunciado: "O ransomware é o código malicioso que restringe o acesso aos dados da vítima, normalmente por cifragem, exigindo pagamento de resgate para a restauração do acesso.",
@@ -319,7 +319,7 @@ const QUESTOES_PCAL_LOTE58 = [
   },
   {
     id: "CT-033", disciplina: "Contabilidade e Análise Financeira", assunto: "Despesa pública", subassunto: "Estágios da despesa",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (contraexemplo de padrão)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.85,
     enunciado: "A liquidação da despesa pública consiste na verificação do direito adquirido pelo credor, tendo por base os títulos e documentos comprobatórios do respectivo crédito.",
@@ -338,7 +338,7 @@ const QUESTOES_PCAL_LOTE58 = [
   },
   {
     id: "CT-034", disciplina: "Contabilidade e Análise Financeira", assunto: "Receita pública", subassunto: "Receita de capital",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (contraexemplo de padrão)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 60, probReaparecer: 0.8,
     enunciado: "As receitas provenientes de operações de crédito classificam-se como receitas de capital, por decorrerem da constituição de dívidas.",
@@ -357,7 +357,7 @@ const QUESTOES_PCAL_LOTE58 = [
   },
   {
     id: "PT-033", disciplina: "Língua Portuguesa", assunto: "Semântica", subassunto: "Denotação e conotação",
-    concurso: "PCAL", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026,
+    concurso: "PCAL", cargo: ["Escrivão","Agente","Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (contraexemplo de padrão)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.8,
     enunciado: "O sentido denotativo corresponde ao significado literal e objetivo da palavra, ao passo que o sentido conotativo decorre de associações subjetivas e figuradas.",
@@ -376,7 +376,7 @@ const QUESTOES_PCAL_LOTE58 = [
   },
   {
     id: "PT-034", disciplina: "Língua Portuguesa", assunto: "Coesão e coerência", subassunto: "Distinção",
-    concurso: "PCAL", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026,
+    concurso: "PCAL", cargo: ["Escrivão","Agente","Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (contraexemplo de padrão)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.85,
     enunciado: "A coesão diz respeito à articulação formal entre elementos textuais, por meio de conectivos e retomadas, enquanto a coerência refere-se à unidade lógica de sentido do conjunto.",
@@ -395,7 +395,7 @@ const QUESTOES_PCAL_LOTE58 = [
   },
   {
     id: "RL-040", disciplina: "Raciocínio Lógico-Matemático", assunto: "Lógica proposicional", subassunto: "Proposição × sentença aberta",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (contraexemplo de padrão)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 60, probReaparecer: 0.85,
     enunciado: "Uma proposição é a sentença declarativa à qual se pode atribuir um único valor lógico, verdadeiro ou falso, ao passo que a sentença aberta, por conter variável, não admite valoração enquanto a variável não for determinada.",
@@ -414,7 +414,7 @@ const QUESTOES_PCAL_LOTE58 = [
   },
   {
     id: "ES-136", disciplina: "Estatística", assunto: "Medidas de tendência central", subassunto: "Mediana",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (contraexemplo de padrão)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.8,
     enunciado: "A mediana é o valor que ocupa a posição central de um conjunto de dados ordenados, sendo menos sensível a valores extremos do que a média aritmética.",
@@ -433,7 +433,7 @@ const QUESTOES_PCAL_LOTE58 = [
   },
   {
     id: "ES-137", disciplina: "Estatística", assunto: "Correlação e regressão", subassunto: "Distinção",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (contraexemplo de padrão)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 60, probReaparecer: 0.8,
     enunciado: "A correlação mede a intensidade e o sentido da associação entre duas variáveis, ao passo que a regressão estabelece um modelo funcional que permite estimar valores de uma variável a partir da outra.",
@@ -452,7 +452,7 @@ const QUESTOES_PCAL_LOTE58 = [
   },
   {
     id: "DA-073", disciplina: "Direito Administrativo", assunto: "Atos administrativos", subassunto: "Anulação × revogação",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (contraexemplo de padrão)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 70, probReaparecer: 0.9,
     enunciado: "A anulação do ato administrativo funda-se em vício de legalidade e opera, em regra, efeitos retroativos, ao passo que a revogação decorre de juízo de conveniência e oportunidade e produz efeitos a partir da decisão.",
@@ -471,7 +471,7 @@ const QUESTOES_PCAL_LOTE58 = [
   },
   {
     id: "LE-171", disciplina: "Legislação Especial", assunto: "Lavagem de dinheiro", subassunto: "Fases",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (contraexemplo de padrão)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.85,
     enunciado: "No processo de lavagem de dinheiro, a colocação corresponde à introdução dos valores ilícitos no sistema financeiro, a ocultação visa a afastar os recursos de sua origem por meio de sucessivas transações, e a integração consiste no retorno dos valores à economia com aparência lícita.",
@@ -490,7 +490,7 @@ const QUESTOES_PCAL_LOTE58 = [
   },
   {
     id: "LE-172", disciplina: "Legislação Especial", assunto: "Organizações criminosas", subassunto: "Colaboração premiada",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (contraexemplo de padrão)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 70, probReaparecer: 0.85,
     enunciado: "A colaboração premiada é meio de obtenção de prova, e nenhuma sentença condenatória poderá ser proferida com fundamento apenas nas declarações do colaborador.",
@@ -509,7 +509,7 @@ const QUESTOES_PCAL_LOTE58 = [
   },
   {
     id: "DP-105", disciplina: "Direito Penal", assunto: "Crimes contra o patrimônio", subassunto: "Roubo × extorsão",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (contraexemplo de padrão)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 70, probReaparecer: 0.85,
     enunciado: "No roubo, a subtração é praticada diretamente pelo agente mediante violência ou grave ameaça; na extorsão, a vítima é constrangida a fazer, tolerar que se faça ou deixar de fazer alguma coisa, sendo imprescindível sua colaboração.",
@@ -528,7 +528,7 @@ const QUESTOES_PCAL_LOTE58 = [
   },
   {
     id: "PP-089", disciplina: "Processo Penal", assunto: "Prisão em flagrante", subassunto: "Flagrante impróprio",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (contraexemplo de padrão)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.85,
     enunciado: "Configura flagrante impróprio a situação em que o agente é perseguido, logo após a prática da infração, em situação que faça presumir ser ele o autor.",
@@ -547,7 +547,7 @@ const QUESTOES_PCAL_LOTE58 = [
   },
   {
     id: "DH-056", disciplina: "Direitos Humanos", assunto: "Teoria geral", subassunto: "Gerações de direitos",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (contraexemplo de padrão)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 60, probReaparecer: 0.85,
     enunciado: "Os direitos de primeira dimensão correspondem aos direitos civis e políticos, ligados à liberdade e exigindo abstenção estatal, enquanto os de segunda dimensão abrangem os direitos sociais, econômicos e culturais, que demandam prestações positivas do Estado.",
@@ -566,7 +566,7 @@ const QUESTOES_PCAL_LOTE58 = [
   },
   {
     id: "TI-106", disciplina: "TI e Segurança Cibernética", assunto: "Segurança da informação", subassunto: "Pilares",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (contraexemplo de padrão)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 60, probReaparecer: 0.85,
     enunciado: "A confidencialidade assegura que a informação seja acessível apenas a quem tem autorização, a integridade garante que ela não seja alterada indevidamente e a disponibilidade assegura o acesso quando necessário.",
@@ -585,7 +585,7 @@ const QUESTOES_PCAL_LOTE58 = [
   },
   {
     id: "DC-109", disciplina: "Direito Constitucional", assunto: "Organização do Estado", subassunto: "Segurança pública",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (contraexemplo de padrão)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.9,
     enunciado: "Às polícias civis incumbem as funções de polícia judiciária e a apuração de infrações penais, ao passo que às polícias militares cabem a polícia ostensiva e a preservação da ordem pública.",
@@ -606,7 +606,7 @@ const QUESTOES_PCAL_LOTE58 = [
   /* ============ EXIGÊNCIA-INEXISTENTE — o requisito é real ============ */
   {
     id: "DP-106", disciplina: "Direito Penal", assunto: "Arrependimento posterior", subassunto: "Requisitos cumulativos",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (contraexemplo de padrão)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 70, probReaparecer: 0.85,
     enunciado: "O arrependimento posterior exige que o crime tenha sido cometido sem violência ou grave ameaça à pessoa e que a reparação do dano ou a restituição da coisa ocorra por ato voluntário do agente até o recebimento da denúncia ou da queixa.",
@@ -625,7 +625,7 @@ const QUESTOES_PCAL_LOTE58 = [
   },
   {
     id: "PP-090", disciplina: "Processo Penal", assunto: "ANPP", subassunto: "Confissão como requisito",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (contraexemplo de padrão)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 70, probReaparecer: 0.9,
     enunciado: "O acordo de não persecução penal exige que o investigado tenha confessado formal e circunstancialmente a prática da infração, que esta tenha sido cometida sem violência ou grave ameaça e que a pena mínima seja inferior a quatro anos.",
@@ -644,7 +644,7 @@ const QUESTOES_PCAL_LOTE58 = [
   },
   {
     id: "LE-173", disciplina: "Legislação Especial", assunto: "Interceptação telefônica", subassunto: "Requisitos",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (contraexemplo de padrão)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 70, probReaparecer: 0.9,
     enunciado: "A interceptação de comunicações telefônicas depende de ordem judicial e não será admitida quando não houver indícios razoáveis da autoria ou participação em infração penal, quando a prova puder ser feita por outros meios disponíveis ou quando o fato investigado constituir infração punida, no máximo, com pena de detenção.",
@@ -665,7 +665,7 @@ const QUESTOES_PCAL_LOTE58 = [
   /* ============ TROCA-SUJEITO — a autoridade é aquela mesmo ============ */
   {
     id: "PP-091", disciplina: "Processo Penal", assunto: "Fiança", subassunto: "Competência da autoridade policial",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (contraexemplo de padrão)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.9,
     enunciado: "A autoridade policial poderá conceder fiança nos casos de infração cuja pena privativa de liberdade máxima não seja superior a quatro anos.",
@@ -684,7 +684,7 @@ const QUESTOES_PCAL_LOTE58 = [
   },
   {
     id: "PP-092", disciplina: "Processo Penal", assunto: "Prisão preventiva", subassunto: "Reserva de jurisdição",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (contraexemplo de padrão)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 60, probReaparecer: 0.9,
     enunciado: "A prisão preventiva somente pode ser decretada pelo juiz, mediante requerimento do Ministério Público, do querelante ou do assistente, ou por representação da autoridade policial, vedada a decretação de ofício.",
@@ -703,7 +703,7 @@ const QUESTOES_PCAL_LOTE58 = [
   },
   {
     id: "LI-079", disciplina: "Legislação Institucional (AL)", assunto: "Estatuto da PC-AL (Lei 3.437/1975)", subassunto: "Designação da Comissão de Disciplina",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (contraexemplo de padrão)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.8,
     enunciado: "No Estatuto da Polícia Civil de Alagoas, a Comissão de Disciplina que promove o inquérito disciplinar é designada pelo Secretário de Segurança Pública.",
@@ -724,7 +724,7 @@ const QUESTOES_PCAL_LOTE58 = [
   /* ============ TROCA-NUMÉRICA — o número está certo ============ */
   {
     id: "PP-093", disciplina: "Processo Penal", assunto: "Inquérito policial", subassunto: "Prazos de conclusão",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (contraexemplo de padrão)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 60, probReaparecer: 0.9,
     enunciado: "No Código de Processo Penal, o inquérito policial deve ser concluído em dez dias quando o indiciado estiver preso e em trinta dias quando estiver solto.",
@@ -743,7 +743,7 @@ const QUESTOES_PCAL_LOTE58 = [
   },
   {
     id: "LE-174", disciplina: "Legislação Especial", assunto: "Prisão temporária", subassunto: "Prazo em crimes hediondos",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (contraexemplo de padrão)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.85,
     enunciado: "Nos crimes hediondos e equiparados, a prisão temporária terá o prazo de trinta dias, prorrogável por igual período em caso de extrema e comprovada necessidade.",
@@ -764,7 +764,7 @@ const QUESTOES_PCAL_LOTE58 = [
   /* ============ RESTRIÇÃO-INDEVIDA — a lei limita mesmo ============ */
   {
     id: "LE-175", disciplina: "Legislação Especial", assunto: "Interceptação telefônica", subassunto: "Finalidade restrita",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (contraexemplo de padrão)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.85,
     enunciado: "A interceptação de comunicações telefônicas só pode ser autorizada para fins de investigação criminal ou de instrução processual penal, não se admitindo sua utilização como meio de prova em processo de natureza exclusivamente cível.",
@@ -783,7 +783,7 @@ const QUESTOES_PCAL_LOTE58 = [
   },
   {
     id: "DP-107", disciplina: "Direito Penal", assunto: "Aplicação da lei penal", subassunto: "Retroatividade benéfica",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (contraexemplo de padrão)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.9,
     enunciado: "A lei penal não retroagirá, salvo para beneficiar o réu, aplicando-se a lei posterior mais benéfica ainda que o fato já tenha sido decidido por sentença condenatória transitada em julgado.",

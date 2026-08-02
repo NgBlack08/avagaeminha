@@ -96,7 +96,7 @@ const QUESTOES = [
   /* ================= DIREITO PENAL ================= */
   {
     id: "DP-001", disciplina: "Direito Penal", assunto: "Crimes contra a Administração Pública", subassunto: "Peculato",
-    concurso: "PCAL", cargo: ["Escrivão","Agente","Delegado"], ano: 2026, origem: "Inédita — estilo CEBRASPE (padrão PCAL)",
+    concurso: "PCAL", cargo: ["Escrivão","Agente"], ano: 2026, origem: "Inédita — estilo CEBRASPE (padrão PCAL)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 40, probReaparecer: 0.9,
     enunciado: "Servidor público que, valendo-se da facilidade proporcionada pela sua qualidade de funcionário, subtrai computador pertencente à repartição em que trabalha, embora não tenha a posse do bem, pratica o crime de peculato.",
     gabarito: "C", pegadinha: "troca-conceito", palavraChave: "embora não tenha a posse",
@@ -114,7 +114,7 @@ const QUESTOES = [
   },
   {
     id: "DP-002", disciplina: "Direito Penal", assunto: "Crimes contra a Administração Pública", subassunto: "Corrupção passiva",
-    concurso: "PF", cargo: ["Agente","Escrivão","Delegado"], ano: 2026, origem: "Inédita — estilo CEBRASPE (padrão PF)",
+    concurso: "PF", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (padrão PF)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 35, probReaparecer: 0.85,
     enunciado: "O crime de corrupção passiva somente se consuma com o efetivo recebimento, pelo funcionário público, da vantagem indevida solicitada.",
     gabarito: "E", pegadinha: "exigencia-inexistente", palavraChave: "somente",
@@ -132,7 +132,7 @@ const QUESTOES = [
   },
   {
     id: "DP-003", disciplina: "Direito Penal", assunto: "Princípios penais", subassunto: "Insignificância",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026, origem: "Inédita — estilo CEBRASPE (padrão PCAL)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (padrão PCAL)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 40, probReaparecer: 0.8,
     enunciado: "Segundo o STF, o princípio da insignificância aplica-se aos crimes praticados com violência ou grave ameaça à pessoa, desde que o valor do bem subtraído seja ínfimo.",
     gabarito: "E", pegadinha: "juris-mais-lei", palavraChave: "violência ou grave ameaça",
@@ -169,7 +169,7 @@ const QUESTOES = [
   },
   {
     id: "DP-005", disciplina: "Direito Penal", assunto: "Teoria do crime", subassunto: "Erro de tipo",
-    concurso: "PCAL", cargo: ["Delegado","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (padrão PCAL)",
+    concurso: "PCAL", cargo: ["Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (padrão PCAL)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 50, probReaparecer: 0.7,
     enunciado: "O erro de tipo essencial inevitável exclui o dolo e a culpa, tornando o fato atípico; se evitável, exclui o dolo, mas permite a punição por crime culposo, se previsto em lei.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "se previsto em lei",
@@ -205,7 +205,7 @@ const QUESTOES = [
   },
   {
     id: "DP-007", disciplina: "Direito Penal", assunto: "Ilicitude", subassunto: "Legítima defesa",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026, origem: "Inédita — estilo CEBRASPE (padrão PCAL)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (padrão PCAL)",
     tipo: "CE", dificuldade: 1, tempoIdealSeg: 30, probReaparecer: 0.7,
     enunciado: "Age em legítima defesa quem, usando moderadamente dos meios necessários, repele injusta agressão futura, porém certa, a direito seu ou de outrem.",
     gabarito: "E", pegadinha: "literalidade", palavraChave: "futura",
@@ -243,7 +243,7 @@ const QUESTOES = [
   /* ================= PROCESSO PENAL ================= */
   {
     id: "PP-001", disciplina: "Processo Penal", assunto: "Prisão e medidas cautelares", subassunto: "Prisão em flagrante",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026, origem: "Inédita — estilo CEBRASPE (padrão PCAL)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (padrão PCAL)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 40, probReaparecer: 0.85,
     enunciado: "A apresentação espontânea do autor do fato à autoridade policial impede a lavratura do auto de prisão em flagrante, mas não obsta a decretação da prisão preventiva, se presentes os seus pressupostos.",
     gabarito: "C", pegadinha: "juris-mais-lei", palavraChave: "apresentação espontânea",
@@ -261,7 +261,7 @@ const QUESTOES = [
   },
   {
     id: "PP-002", disciplina: "Processo Penal", assunto: "Inquérito policial", subassunto: "Arquivamento",
-    concurso: "PCAL", cargo: ["Escrivão","Agente","Delegado"], ano: 2026, origem: "Inédita — estilo CEBRASPE (padrão PCAL)",
+    concurso: "PCAL", cargo: ["Escrivão","Agente"], ano: 2026, origem: "Inédita — estilo CEBRASPE (padrão PCAL)",
     tipo: "CE", dificuldade: 1, tempoIdealSeg: 30, probReaparecer: 0.9,
     enunciado: "A autoridade policial poderá mandar arquivar autos de inquérito quando, ao final das investigações, concluir pela atipicidade da conduta investigada.",
     gabarito: "E", pegadinha: "troca-sujeito", palavraChave: "autoridade policial + arquivar",
@@ -297,7 +297,7 @@ const QUESTOES = [
   },
   {
     id: "PP-004", disciplina: "Processo Penal", assunto: "Provas", subassunto: "Busca e apreensão domiciliar",
-    concurso: "PF", cargo: ["Agente","Delegado"], ano: 2026, origem: "Inédita — estilo CEBRASPE (padrão PF)",
+    concurso: "PF", cargo: ["Agente"], ano: 2026, origem: "Inédita — estilo CEBRASPE (padrão PF)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 50, probReaparecer: 0.9,
     enunciado: "Conforme o STF, o ingresso forçado em domicílio sem mandado judicial é lícito, mesmo durante a noite, quando amparado em fundadas razões, devidamente justificadas a posteriori, que indiquem a ocorrência de situação de flagrante delito no interior da residência.",
     gabarito: "C", pegadinha: "juris-mais-lei", palavraChave: "fundadas razões",
@@ -334,7 +334,7 @@ const QUESTOES = [
   },
   {
     id: "PP-006", disciplina: "Processo Penal", assunto: "Provas", subassunto: "Cadeia de custódia",
-    concurso: "PCAL", cargo: ["Perito Criminal","Papiloscopista","Escrivão","Delegado"], ano: 2026, origem: "Inédita — estilo CEBRASPE (padrão PCAL)",
+    concurso: "PCAL", cargo: ["Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (padrão PCAL)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 40, probReaparecer: 0.85,
     enunciado: "A cadeia de custódia tem início com o reconhecimento do vestígio, assim entendido o ato de distinguir um elemento como de potencial interesse para a produção da prova pericial.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "reconhecimento",
@@ -354,7 +354,7 @@ const QUESTOES = [
   /* ================= DIREITO CONSTITUCIONAL ================= */
   {
     id: "DC-001", disciplina: "Direito Constitucional", assunto: "Direitos e garantias fundamentais", subassunto: "Inviolabilidade domiciliar",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026, origem: "Inédita — estilo CEBRASPE (padrão PCAL)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (padrão PCAL)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 40, probReaparecer: 0.9,
     enunciado: "A casa é asilo inviolável do indivíduo, nela não podendo ninguém penetrar sem consentimento do morador, salvo, durante o dia, em caso de flagrante delito ou desastre, ou para prestar socorro, ou, a qualquer hora, por determinação judicial.",
     gabarito: "E", pegadinha: "literalidade", palavraChave: "durante o dia × a qualquer hora",
@@ -408,7 +408,7 @@ const QUESTOES = [
   },
   {
     id: "DC-004", disciplina: "Direito Constitucional", assunto: "Segurança pública", subassunto: "Art. 144 — Polícias civis",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026, origem: "Inédita — estilo CEBRASPE (padrão PCAL)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (padrão PCAL)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 40, probReaparecer: 0.95,
     enunciado: "Às polícias civis, dirigidas por delegados de polícia de carreira, incumbem, ressalvada a competência da União, as funções de polícia judiciária e a apuração de infrações penais, inclusive as militares.",
     gabarito: "E", pegadinha: "literalidade", palavraChave: "inclusive",
@@ -426,7 +426,7 @@ const QUESTOES = [
   },
   {
     id: "DC-005", disciplina: "Direito Constitucional", assunto: "Direitos e garantias fundamentais", subassunto: "Extradição",
-    concurso: "PF", cargo: ["Agente","Delegado"], ano: 2026, origem: "Inédita — estilo CEBRASPE (padrão PF)",
+    concurso: "PF", cargo: ["Agente"], ano: 2026, origem: "Inédita — estilo CEBRASPE (padrão PF)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 35, probReaparecer: 0.65,
     enunciado: "O brasileiro naturalizado poderá ser extraditado por crime comum praticado antes da naturalização ou em caso de comprovado envolvimento com o tráfico ilícito de entorpecentes, na forma da lei, independentemente do momento do fato.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "antes da naturalização",
@@ -464,7 +464,7 @@ const QUESTOES = [
   /* ================= DIREITO ADMINISTRATIVO ================= */
   {
     id: "DA-001", disciplina: "Direito Administrativo", assunto: "Poderes administrativos", subassunto: "Poder de polícia",
-    concurso: "PCAL", cargo: ["Escrivão","Agente","Delegado"], ano: 2026, origem: "Inédita — estilo CEBRASPE (padrão PCAL)",
+    concurso: "PCAL", cargo: ["Escrivão","Agente"], ano: 2026, origem: "Inédita — estilo CEBRASPE (padrão PCAL)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 35, probReaparecer: 0.8,
     enunciado: "Por ser manifestação da supremacia do interesse público, todos os atos decorrentes do poder de polícia administrativa são dotados de discricionariedade.",
     gabarito: "E", pegadinha: "generalizacao", palavraChave: "todos",
@@ -518,7 +518,7 @@ const QUESTOES = [
   },
   {
     id: "DA-004", disciplina: "Direito Administrativo", assunto: "Improbidade administrativa", subassunto: "Elemento subjetivo",
-    concurso: "PCAL", cargo: ["Escrivão","Delegado"], ano: 2026, origem: "Inédita — estilo CEBRASPE (padrão PCAL)",
+    concurso: "PCAL", cargo: ["Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (padrão PCAL)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 40, probReaparecer: 0.9,
     enunciado: "Após a Lei nº 14.230/2021, a configuração de ato de improbidade administrativa exige a presença de dolo específico, não bastando a voluntariedade do agente, tendo sido abolida a modalidade culposa.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "dolo específico",
@@ -557,7 +557,7 @@ const QUESTOES = [
   /* ================= LEGISLAÇÃO ESPECIAL ================= */
   {
     id: "LE-001", disciplina: "Legislação Especial", assunto: "Lei Maria da Penha", subassunto: "Âmbito de aplicação",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026, origem: "Inédita — estilo CEBRASPE (padrão PCAL)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (padrão PCAL)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 35, probReaparecer: 0.95,
     enunciado: "A configuração da violência doméstica e familiar contra a mulher, para os fins da Lei nº 11.340/2006, exige a coabitação entre autor e vítima quando a agressão ocorrer no âmbito da unidade doméstica.",
     gabarito: "E", pegadinha: "exigencia-inexistente", palavraChave: "exige a coabitação",
@@ -575,7 +575,7 @@ const QUESTOES = [
   },
   {
     id: "LE-002", disciplina: "Legislação Especial", assunto: "Lei Maria da Penha", subassunto: "Sujeitos",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026, origem: "Inédita — estilo CEBRASPE (padrão PCAL)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (padrão PCAL)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 35, probReaparecer: 0.85,
     enunciado: "A Lei Maria da Penha pode ser aplicada quando a agressão é praticada por outra mulher, como na hipótese de violência cometida no âmbito de relação homoafetiva feminina, pois a proteção legal se define pelo gênero da vítima, e não do agressor.",
     gabarito: "C", pegadinha: "juris-mais-lei", palavraChave: "gênero da vítima",
@@ -593,7 +593,7 @@ const QUESTOES = [
   },
   {
     id: "LE-003", disciplina: "Legislação Especial", assunto: "Lei Maria da Penha", subassunto: "Medidas protetivas",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026, origem: "Inédita — estilo CEBRASPE (padrão PCAL)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (padrão PCAL)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 45, probReaparecer: 0.9,
     enunciado: "Nos termos da Lei nº 11.340/2006, com as alterações promovidas pela Lei nº 14.550/2023, as medidas protetivas de urgência serão concedidas independentemente da tipificação penal da violência, do ajuizamento de ação penal ou cível, da existência de inquérito policial ou do registro de boletim de ocorrência.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "independentemente",
@@ -630,7 +630,7 @@ const QUESTOES = [
   },
   {
     id: "LE-005", disciplina: "Legislação Especial", assunto: "Abuso de Autoridade", subassunto: "Elemento subjetivo",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026, origem: "Inédita — estilo CEBRASPE (padrão PCAL)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (padrão PCAL)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 35, probReaparecer: 0.9,
     enunciado: "Os crimes previstos na Lei nº 13.869/2019 admitem tanto a forma dolosa quanto a culposa, bastando, nesta última, a inobservância do dever objetivo de cuidado pelo agente público.",
     gabarito: "E", pegadinha: "exigencia-inexistente", palavraChave: "forma culposa",
@@ -666,7 +666,7 @@ const QUESTOES = [
   },
   {
     id: "LE-007", disciplina: "Legislação Especial", assunto: "Organização Criminosa", subassunto: "Conceito legal",
-    concurso: "PF", cargo: ["Agente","Escrivão","Delegado"], ano: 2026, origem: "Inédita — estilo CEBRASPE (padrão PF)",
+    concurso: "PF", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (padrão PF)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 40, probReaparecer: 0.85,
     enunciado: "Considera-se organização criminosa, nos termos da Lei nº 12.850/2013, a associação de três ou mais pessoas estruturalmente ordenada e caracterizada pela divisão de tarefas, com objetivo de obter vantagem de qualquer natureza mediante a prática de infrações penais cujas penas máximas sejam superiores a quatro anos, ou que sejam de caráter transnacional.",
     gabarito: "E", pegadinha: "troca-numerica", palavraChave: "três ou mais",
@@ -686,7 +686,7 @@ const QUESTOES = [
   /* ================= PORTUGUÊS ================= */
   {
     id: "PT-001", disciplina: "Língua Portuguesa", assunto: "Compreensão e reescritura", subassunto: "Reescritura de trechos",
-    concurso: "PCAL", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026, origem: "Inédita — estilo CEBRASPE (padrão PCAL)",
+    concurso: "PCAL", cargo: ["Escrivão","Agente","Especialista em Saúde — Fisioterapia"], ano: 2026, origem: "Inédita — estilo CEBRASPE (padrão PCAL)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 60, probReaparecer: 0.9,
     textoApoio: "A segurança pública, dever do Estado, direito e responsabilidade de todos, é exercida para a preservação da ordem pública e da incolumidade das pessoas e do patrimônio. No entanto, a mera presença ostensiva do aparato policial não é suficiente para garantir a redução dos índices de criminalidade, os quais dependem, também, de políticas sociais estruturantes.",
     enunciado: "No segundo período do texto, a substituição de 'os quais' por 'cujos' manteria a correção gramatical e os sentidos originais do texto.",
@@ -705,7 +705,7 @@ const QUESTOES = [
   },
   {
     id: "PT-002", disciplina: "Língua Portuguesa", assunto: "Compreensão e reescritura", subassunto: "Coesão referencial",
-    concurso: "PCAL", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026, origem: "Inédita — estilo CEBRASPE (padrão PCAL)",
+    concurso: "PCAL", cargo: ["Escrivão","Agente","Especialista em Saúde — Fisioterapia"], ano: 2026, origem: "Inédita — estilo CEBRASPE (padrão PCAL)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.85,
     textoApoio: "A segurança pública, dever do Estado, direito e responsabilidade de todos, é exercida para a preservação da ordem pública e da incolumidade das pessoas e do patrimônio. No entanto, a mera presença ostensiva do aparato policial não é suficiente para garantir a redução dos índices de criminalidade, os quais dependem, também, de políticas sociais estruturantes.",
     enunciado: "A locução 'No entanto', que introduz o segundo período, poderia ser substituída por 'Conquanto', sem prejuízo da correção gramatical e da coerência textual.",
@@ -724,7 +724,7 @@ const QUESTOES = [
   },
   {
     id: "PT-003", disciplina: "Língua Portuguesa", assunto: "Sintaxe", subassunto: "Pontuação — vírgulas",
-    concurso: "PCAL", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026, origem: "Inédita — estilo CEBRASPE (padrão PCAL)",
+    concurso: "PCAL", cargo: ["Escrivão","Agente","Especialista em Saúde — Fisioterapia"], ano: 2026, origem: "Inédita — estilo CEBRASPE (padrão PCAL)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 60, probReaparecer: 0.8,
     textoApoio: "A segurança pública, dever do Estado, direito e responsabilidade de todos, é exercida para a preservação da ordem pública e da incolumidade das pessoas e do patrimônio.",
     enunciado: "As vírgulas que isolam o trecho 'dever do Estado, direito e responsabilidade de todos' foram empregadas para separar aposto explicativo, razão por que sua supressão manteria a correção gramatical do período.",
@@ -743,7 +743,7 @@ const QUESTOES = [
   },
   {
     id: "PT-004", disciplina: "Língua Portuguesa", assunto: "Sintaxe", subassunto: "Crase",
-    concurso: "PCDF", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026, origem: "Inédita — estilo CEBRASPE (padrão PCDF)",
+    concurso: "PCDF", cargo: ["Escrivão","Agente","Especialista em Saúde — Fisioterapia"], ano: 2026, origem: "Inédita — estilo CEBRASPE (padrão PCDF)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 45, probReaparecer: 0.75,
     textoApoio: "O acesso à informação e a transparência dos órgãos policiais são essenciais à consolidação da confiança social nas instituições de segurança.",
     enunciado: "No trecho, o emprego do acento indicativo de crase em 'à informação' e em 'à consolidação' justifica-se pela mesma razão sintática: em ambos os casos, há fusão da preposição 'a', exigida pelo termo regente, com o artigo definido feminino que antecede o termo regido.",
@@ -764,7 +764,7 @@ const QUESTOES = [
   /* ================= INFORMÁTICA ================= */
   {
     id: "IN-001", disciplina: "Informática", assunto: "Segurança da informação", subassunto: "Malwares e golpes",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Perito Criminal","Papiloscopista"], ano: 2026, origem: "Inédita — estilo CEBRASPE (padrão PCAL)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (padrão PCAL)",
     tipo: "CE", dificuldade: 1, tempoIdealSeg: 30, probReaparecer: 0.85,
     enunciado: "Denomina-se ransomware a técnica de engenharia social por meio da qual o golpista envia mensagens fraudulentas que simulam comunicações de instituições legítimas, com o objetivo de induzir a vítima a fornecer dados pessoais e credenciais de acesso.",
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "ransomware",
@@ -820,7 +820,7 @@ const QUESTOES = [
   /* ================= LEGISLAÇÃO PCAL / ESTADUAL ================= */
   {
     id: "LP-001", disciplina: "Legislação Especial", assunto: "Pacote Anticrime", subassunto: "Juiz das garantias / ANPP",
-    concurso: "PCAL", cargo: ["Delegado","Escrivão","Agente"], ano: 2026, origem: "Inédita — estilo CEBRASPE (padrão PCAL)",
+    concurso: "PCAL", cargo: ["Escrivão","Agente"], ano: 2026, origem: "Inédita — estilo CEBRASPE (padrão PCAL)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 50, probReaparecer: 0.8,
     enunciado: "O acordo de não persecução penal poderá ser celebrado pelo Ministério Público com o investigado que tenha confessado formal e circunstancialmente a prática de infração penal sem violência ou grave ameaça, com pena mínima inferior a quatro anos, desde que necessário e suficiente para a reprovação e prevenção do crime.",
     gabarito: "C", pegadinha: "troca-numerica", palavraChave: "pena mínima inferior a 4 anos",
@@ -839,7 +839,7 @@ const QUESTOES = [
   },
   {
     id: "LP-002", disciplina: "Legislação Especial", assunto: "Feminicídio", subassunto: "Lei 14.994/2024",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026, origem: "Inédita — estilo CEBRASPE (padrão PCAL)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (padrão PCAL)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 45, probReaparecer: 0.9,
     enunciado: "Com o advento da Lei nº 14.994/2024, o feminicídio deixou de ser qualificadora do homicídio e passou a constituir tipo penal autônomo, consistente em matar mulher por razões da condição do sexo feminino, com pena de reclusão de vinte a quarenta anos.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "tipo penal autônomo",
@@ -1409,7 +1409,25 @@ const EDITAIS = {
     nome: "Polícia Civil de Alagoas",
     curto: "PC-AL",
     fonte: "Edital nº 1 - PC/AL, de 2 de julho de 2026 (Cebraspe)",
-    cargos: ["Escrivão", "Agente", "Delegado", "Perito Criminal", "Papiloscopista"],
+    /* O edital nº 1/2026 provê vagas SOMENTE para Agente e Escrivão — o
+       título e o item 20.2.4 ("conhecimentos específicos para os cargos de
+       Agente de Polícia e Escrivão de Polícia") não deixam margem. Delegado,
+       Perito Criminal e Papiloscopista constavam aqui por herança de editais
+       anteriores da PC/AL e foram removidos: ofereciam filtro para cargo que
+       não existe neste concurso. */
+    cargos: ["Escrivão", "Agente"],
+    dataProva: "2026-12-06",
+    /* Corte oficial, item 8.11.4/8.11.5: N1 = (50 − np1) × 0,2, N2 =
+       (70 − np2) × 0,3 e N3 = (120 − nT) × 0,3, desprezada a parte não
+       inteira. Sem itens anulados dá 10, 21 e 36 pontos. Como cada acerto
+       vale +1 e cada erro −1, quem responde tudo precisa de 2A − N ≥ corte,
+       ou seja 30/50, 46/70 e 78/120 acertos. É o piso de eliminação, não a
+       nota de aprovação — que depende do limite de classificados. */
+    corte: {
+      p1: { itens: 50, pontos: 10, acertos: 30 },
+      p2: { itens: 70, pontos: 21, acertos: 46 },
+      total: { itens: 120, pontos: 36, acertos: 78 },
+    },
     /* 120 itens: 50 na P1 (básicos, 5 disciplinas) e 70 na P2 (específicos,
        9 disciplinas). "Atualidades e Ética no Serviço Público" é um único
        bloco de 10 itens no edital e aparece como duas disciplinas no banco,
@@ -1441,6 +1459,14 @@ const EDITAIS = {
     curto: "SESAU-AL",
     fonte: "Edital nº 1 - SESAU/AL, de 18 de junho de 2026, com conteúdo de Fisioterapia republicado pelo Edital nº 2, de 16 de julho de 2026 (Cebraspe)",
     cargos: ["Especialista em Saúde — Fisioterapia"],
+    dataProva: "2026-11-01",
+    /* Mesma sistemática de correção da PC/AL — prova de 120 itens, 50 + 70,
+       no método Cebraspe com erro anulando acerto. */
+    corte: {
+      p1: { itens: 50, pontos: 10, acertos: 30 },
+      p2: { itens: 70, pontos: 21, acertos: 46 },
+      total: { itens: 120, pontos: 36, acertos: 78 },
+    },
     /* 120 itens: 50 na P1 e 70 na P2. Prova em 1º/11/2026.
 
        Duas particularidades deste edital que mudam o que estudar:

@@ -14,7 +14,7 @@ const QUESTOES_PCAL_LOTE33 = [
 
   {
     id: "DA-051", disciplina: "Direito Administrativo", assunto: "Organização administrativa", subassunto: "Desconcentração",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (organização administrativa)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 65, probReaparecer: 0.78,
     enunciado: "A desconcentração administrativa, por consistir na distribuição interna de competências entre órgãos de uma mesma pessoa jurídica, pode ocorrer tanto na Administração Direta quanto no âmbito interno das entidades da Administração Indireta.",
@@ -33,7 +33,7 @@ const QUESTOES_PCAL_LOTE33 = [
   },
   {
     id: "DA-052", disciplina: "Direito Administrativo", assunto: "Atos administrativos", subassunto: "Atos ordinatórios",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (classificação dos atos administrativos)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 65, probReaparecer: 0.76,
     enunciado: "Os atos administrativos ordinatórios — a exemplo das ordens de serviço e das circulares internas — veiculam determinações destinadas a disciplinar o funcionamento interno da Administração e decorrem do poder regulamentar, e não do poder hierárquico.",
@@ -52,7 +52,7 @@ const QUESTOES_PCAL_LOTE33 = [
   },
   {
     id: "DA-053", disciplina: "Direito Administrativo", assunto: "Agentes públicos", subassunto: "Emprego público x cargo público",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (regime jurídico dos agentes públicos)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 65, probReaparecer: 0.78,
     enunciado: "O emprego público distingue-se do cargo público por vincular o agente à Administração mediante contrato de trabalho regido pela Consolidação das Leis do Trabalho (CLT), ao passo que o cargo público, de natureza estatutária, é criado por lei, com denominação própria, e destina-se ao provimento em caráter efetivo ou em comissão.",
@@ -71,7 +71,7 @@ const QUESTOES_PCAL_LOTE33 = [
   },
   {
     id: "DA-054", disciplina: "Direito Administrativo", assunto: "Poderes administrativos", subassunto: "Avocação de competência",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (poder hierárquico)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 75, probReaparecer: 0.76,
     enunciado: "A avocação de competência, decorrente do poder hierárquico, pode ser determinada em caráter permanente pela autoridade superior, independentemente de justificativa, por constituir expressão natural da relação de subordinação.",
@@ -90,7 +90,7 @@ const QUESTOES_PCAL_LOTE33 = [
   },
   {
     id: "DA-055", disciplina: "Direito Administrativo", assunto: "Controle da Administração Pública", subassunto: "Controle legislativo",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (CF/88, art. 49, V)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 75, probReaparecer: 0.8,
     enunciado: "Compete ao Congresso Nacional, e não privativamente ao Senado Federal, sustar os atos normativos do Poder Executivo que exorbitem do poder regulamentar ou dos limites de delegação legislativa.",
@@ -109,7 +109,7 @@ const QUESTOES_PCAL_LOTE33 = [
   },
   {
     id: "DA-056", disciplina: "Direito Administrativo", assunto: "Responsabilidade civil do Estado", subassunto: "Responsabilidade objetiva",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (CF/88, art. 37, §6º)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 65, probReaparecer: 0.82,
     enunciado: "A responsabilidade civil do Estado por danos decorrentes de atos comissivos de seus agentes é subjetiva, cabendo à vítima comprovar o dolo ou a culpa do agente público para fazer jus à indenização.",
@@ -128,7 +128,7 @@ const QUESTOES_PCAL_LOTE33 = [
   },
   {
     id: "DA-057", disciplina: "Direito Administrativo", assunto: "Poderes administrativos", subassunto: "Poder de polícia (autoexecutoriedade)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (poder de polícia)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 75, probReaparecer: 0.78,
     enunciado: "O poder de polícia administrativa caracteriza-se, entre outros atributos, pela autoexecutoriedade, que permite à Administração executar suas decisões e, quando necessário, empregar meios diretos de coerção, independentemente de prévia autorização judicial, ressalvadas as hipóteses expressamente submetidas à reserva de jurisdição.",
@@ -147,7 +147,7 @@ const QUESTOES_PCAL_LOTE33 = [
   },
   {
     id: "DA-058", disciplina: "Direito Administrativo", assunto: "Atos administrativos", subassunto: "Anulação x revogação",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (extinção dos atos administrativos)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 75, probReaparecer: 0.78,
     enunciado: "A revogação de ato administrativo, assim como a anulação, pode ser promovida tanto pela Administração quanto pelo Poder Judiciário, produzindo, em ambos os casos, efeitos retroativos (ex tunc).",
@@ -166,7 +166,7 @@ const QUESTOES_PCAL_LOTE33 = [
   },
   {
     id: "DA-059", disciplina: "Direito Administrativo", assunto: "Atos administrativos", subassunto: "Silêncio administrativo",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (silêncio administrativo)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 65, probReaparecer: 0.72,
     enunciado: "O silêncio administrativo, quando a lei não lhe atribuir efeito específico, não pode ser interpretado como deferimento ou indeferimento tácito do pedido, cabendo ao interessado, nesse caso, buscar a via judicial para compelir a Administração a decidir.",
@@ -185,7 +185,7 @@ const QUESTOES_PCAL_LOTE33 = [
   },
   {
     id: "DA-060", disciplina: "Direito Administrativo", assunto: "Atos administrativos", subassunto: "Silêncio administrativo",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (silêncio administrativo)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 65, probReaparecer: 0.72,
     enunciado: "O silêncio administrativo sempre equivale ao deferimento tácito do pedido formulado pelo administrado, independentemente de a lei atribuir-lhe ou não esse efeito específico.",

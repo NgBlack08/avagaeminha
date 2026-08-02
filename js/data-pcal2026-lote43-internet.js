@@ -15,7 +15,7 @@ const QUESTOES_PCAL_LOTE43 = [
   /* ===== NAVEGAÇÃO ANÔNIMA/PRIVADA ===== */
   {
     id: "TI-082", disciplina: "TI e Segurança Cibernética", assunto: "Internet e navegação", subassunto: "Navegação anônima/privada",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Internet)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.82,
     enunciado: "A navegação em abas anônimas (ou privadas) evita que o navegador salve, no próprio dispositivo, o histórico de navegação, os cookies e o cache da sessão, mas não impede que sites visitados e o provedor de Internet identifiquem as atividades realizadas pelo usuário.",
@@ -34,7 +34,7 @@ const QUESTOES_PCAL_LOTE43 = [
   },
   {
     id: "TI-083", disciplina: "TI e Segurança Cibernética", assunto: "Internet e navegação", subassunto: "Navegação anônima/privada",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Internet)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.78,
     enunciado: "Ao navegar em abas anônimas (ou privadas), o usuário torna-se completamente irrastreável na Internet, uma vez que esse modo de navegação impede que sites visitados e o provedor de acesso identifiquem as atividades realizadas durante a sessão.",
@@ -55,7 +55,7 @@ const QUESTOES_PCAL_LOTE43 = [
   /* ===== NUVEM PÚBLICA E ISOLAMENTO DE DADOS ===== */
   {
     id: "TI-084", disciplina: "TI e Segurança Cibernética", assunto: "Computação em nuvem", subassunto: "Nuvem pública — isolamento multi-inquilino",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Internet)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 55, probReaparecer: 0.78,
     enunciado: "Em uma nuvem pública, embora a infraestrutura física seja compartilhada entre diferentes organizações (modelo multi-inquilino), os dados de cada cliente permanecem isolados, não podendo ser visualizados nem alterados por outras organizações que utilizam o mesmo provedor.",
@@ -74,7 +74,7 @@ const QUESTOES_PCAL_LOTE43 = [
   },
   {
     id: "TI-085", disciplina: "TI e Segurança Cibernética", assunto: "Computação em nuvem", subassunto: "Nuvem pública — isolamento multi-inquilino",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Internet)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 55, probReaparecer: 0.76,
     enunciado: "Os dados de uma organização armazenados em nuvem pública podem ser visualizados por outras organizações que utilizam o mesmo provedor, embora estas não possam alterá-los, uma vez que o caráter 'público' desse modelo de nuvem se estende também à visibilidade dos dados armazenados.",
@@ -95,7 +95,7 @@ const QUESTOES_PCAL_LOTE43 = [
   /* ===== CONCEITO DE COMPUTAÇÃO EM NUVEM ===== */
   {
     id: "TI-086", disciplina: "TI e Segurança Cibernética", assunto: "Computação em nuvem", subassunto: "Conceito e características",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Internet)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.8,
     enunciado: "A computação em nuvem é um estilo de computação que permite acesso remoto a recursos compartilhados de forma dinâmica e escalável, geralmente via Internet, possibilitando ao usuário provisionar recursos sob demanda, sem a necessidade de investimento prévio em infraestrutura própria dimensionada para o pico de uso.",
@@ -114,7 +114,7 @@ const QUESTOES_PCAL_LOTE43 = [
   },
   {
     id: "TI-087", disciplina: "TI e Segurança Cibernética", assunto: "Computação em nuvem", subassunto: "Conceito e características",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Internet)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.76,
     enunciado: "A computação em nuvem não permite o dimensionamento dinâmico e escalável de recursos, sendo necessário que o usuário contrate previamente uma quantidade fixa de capacidade computacional dimensionada para o pico de uso, de forma semelhante à infraestrutura local tradicional.",
@@ -135,7 +135,7 @@ const QUESTOES_PCAL_LOTE43 = [
   /* ===== INTRANET ===== */
   {
     id: "TI-088", disciplina: "TI e Segurança Cibernética", assunto: "Internet e navegação", subassunto: "Intranet e extranet",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Internet)",
     tipo: "CE", dificuldade: 1, tempoIdealSeg: 40, probReaparecer: 0.8,
     enunciado: "A intranet utiliza os mesmos protocolos empregados na Internet, como o TCP/IP e o HTTP, mas constitui uma rede mais restrita, de acesso limitado aos usuários autorizados dentro de uma organização.",
@@ -154,7 +154,7 @@ const QUESTOES_PCAL_LOTE43 = [
   },
   {
     id: "TI-089", disciplina: "TI e Segurança Cibernética", assunto: "Internet e navegação", subassunto: "Intranet e extranet",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Internet)",
     tipo: "CE", dificuldade: 1, tempoIdealSeg: 40, probReaparecer: 0.76,
     enunciado: "A intranet, por constituir uma rede restrita ao ambiente interno de uma organização, utiliza protocolos de comunicação proprietários e incompatíveis com os padrões empregados na Internet pública, como o TCP/IP.",
@@ -175,7 +175,7 @@ const QUESTOES_PCAL_LOTE43 = [
   /* ===== SAAS x PAAS ===== */
   {
     id: "TI-090", disciplina: "TI e Segurança Cibernética", assunto: "Computação em nuvem", subassunto: "SaaS x PaaS x IaaS",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Internet)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 60, probReaparecer: 0.8,
     enunciado: "No modelo de computação em nuvem denominado PaaS (plataforma como serviço), o provedor disponibiliza infraestrutura e ferramentas de desenvolvimento, permitindo que o cliente desenvolva e gerencie suas próprias aplicações, diferentemente do SaaS, no qual o cliente utiliza um software já pronto, disponibilizado pelo provedor.",
@@ -194,7 +194,7 @@ const QUESTOES_PCAL_LOTE43 = [
   },
   {
     id: "TI-091", disciplina: "TI e Segurança Cibernética", assunto: "Computação em nuvem", subassunto: "SaaS x PaaS x IaaS",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Internet)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 60, probReaparecer: 0.78,
     enunciado: "Na computação em nuvem do tipo software como serviço (SaaS), o provedor oferece infraestrutura e ferramentas de desenvolvimento, permitindo ao cliente desenvolver e gerenciar suas próprias aplicações a partir dessa base fornecida.",
@@ -215,7 +215,7 @@ const QUESTOES_PCAL_LOTE43 = [
   /* ===== ARMAZENAMENTO EM NUVEM ===== */
   {
     id: "TI-092", disciplina: "TI e Segurança Cibernética", assunto: "Computação em nuvem", subassunto: "Armazenamento em nuvem (cloud storage)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Internet)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 45, probReaparecer: 0.78,
     enunciado: "O serviço de armazenamento em nuvem permite salvar arquivos, bancos de dados e outras informações em servidores remotos, oferecendo vantagens de acessibilidade e escalabilidade frente aos dispositivos de armazenamento local, ainda que sua disponibilidade dependa da conexão à Internet e da infraestrutura do provedor contratado.",
@@ -234,7 +234,7 @@ const QUESTOES_PCAL_LOTE43 = [
   },
   {
     id: "TI-093", disciplina: "TI e Segurança Cibernética", assunto: "Computação em nuvem", subassunto: "Armazenamento em nuvem (cloud storage)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Internet)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 45, probReaparecer: 0.74,
     enunciado: "O serviço de armazenamento em nuvem oferece acessibilidade e escalabilidade totalmente independentes de conexão à Internet, uma vez que os arquivos salvos em servidores remotos permanecem acessíveis ao usuário mesmo na ausência completa de conectividade de rede.",
@@ -255,7 +255,7 @@ const QUESTOES_PCAL_LOTE43 = [
   /* ===== SAAS — RESPONSABILIDADE DO PROVEDOR ===== */
   {
     id: "TI-094", disciplina: "TI e Segurança Cibernética", assunto: "Computação em nuvem", subassunto: "SaaS — responsabilidade do provedor",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Internet)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.78,
     enunciado: "No modelo de computação em nuvem SaaS (software as a service), o provedor detém o controle sobre a infraestrutura de rede, os servidores e o sistema operacional, sendo responsável pela instalação, configuração e manutenção das aplicações disponibilizadas ao consumidor.",
@@ -274,7 +274,7 @@ const QUESTOES_PCAL_LOTE43 = [
   },
   {
     id: "TI-095", disciplina: "TI e Segurança Cibernética", assunto: "Computação em nuvem", subassunto: "SaaS — responsabilidade do provedor",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Internet)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.76,
     enunciado: "No modelo de computação em nuvem SaaS (software as a service), o consumidor tem controle sobre a infraestrutura de rede, os servidores e o sistema operacional, sendo responsável pela instalação, configuração e manutenção das aplicações fornecidas pelo provedor.",
@@ -295,7 +295,7 @@ const QUESTOES_PCAL_LOTE43 = [
   /* ===== ACESSO REMOTO E SUÍTES DE ESCRITÓRIO ===== */
   {
     id: "TI-096", disciplina: "TI e Segurança Cibernética", assunto: "Ferramentas de produtividade e acesso remoto", subassunto: "Acesso remoto e suítes de escritório",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Internet)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.78,
     enunciado: "Ferramentas como o Microsoft Remote Desktop e o TeamViewer permitem o acesso remoto a computadores, possibilitando inclusive a transferência de arquivos entre as máquinas conectadas, ao passo que suítes como o Microsoft Office e o LibreOffice oferecem compatibilidade entre diversos formatos de documentos, planilhas e apresentações.",
@@ -314,7 +314,7 @@ const QUESTOES_PCAL_LOTE43 = [
   },
   {
     id: "TI-097", disciplina: "TI e Segurança Cibernética", assunto: "Ferramentas de produtividade e acesso remoto", subassunto: "Acesso remoto e suítes de escritório",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Internet)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.74,
     enunciado: "Ferramentas de acesso remoto como o Microsoft Remote Desktop e o TeamViewer permitem apenas a visualização da tela do computador remoto, não sendo possível, por meio delas, a transferência de arquivos entre as máquinas conectadas, ao contrário do que ocorre com suítes como o Microsoft Office e o LibreOffice, que são totalmente incompatíveis entre si.",
@@ -335,7 +335,7 @@ const QUESTOES_PCAL_LOTE43 = [
   /* ===== IMPRESSÃO EM REDE ===== */
   {
     id: "TI-098", disciplina: "TI e Segurança Cibernética", assunto: "Ferramentas de produtividade e acesso remoto", subassunto: "Impressão em rede e rastros digitais",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Internet)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.78,
     enunciado: "Quando documentos são impressos em uma impressora conectada à rede, é possível, por meio dos registros do servidor de impressão (spooler), resgatar informações como o usuário que solicitou a impressão, a data da impressão, o nome do arquivo impresso e a quantidade de folhas impressas, dados úteis, inclusive, em investigações periciais.",
@@ -354,7 +354,7 @@ const QUESTOES_PCAL_LOTE43 = [
   },
   {
     id: "TI-099", disciplina: "TI e Segurança Cibernética", assunto: "Ferramentas de produtividade e acesso remoto", subassunto: "Impressão em rede e rastros digitais",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Internet)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.74,
     enunciado: "Documentos impressos em uma impressora conectada à rede não deixam qualquer tipo de registro recuperável após a conclusão da impressão, sendo impossível, em investigações periciais, identificar o usuário solicitante, a data, o nome do arquivo ou a quantidade de folhas impressas.",
@@ -375,7 +375,7 @@ const QUESTOES_PCAL_LOTE43 = [
   /* ===== PESQUISA APRIMORADA / DADOS ESTRUTURADOS ===== */
   {
     id: "TI-100", disciplina: "TI e Segurança Cibernética", assunto: "Mecanismos de busca", subassunto: "Pesquisa aprimorada e dados estruturados",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Internet)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.76,
     enunciado: "A pesquisa do tipo aprimorada do Google pode apresentar resultados ricos que dependem de dados estruturados (marcações do tipo schema) presentes nas páginas indexadas, os quais ajudam o mecanismo de busca a organizar e exibir informações adicionais sobre o conteúdo encontrado.",
@@ -394,7 +394,7 @@ const QUESTOES_PCAL_LOTE43 = [
   },
   {
     id: "TI-101", disciplina: "TI e Segurança Cibernética", assunto: "Mecanismos de busca", subassunto: "Pesquisa aprimorada e dados estruturados",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Internet)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.72,
     enunciado: "A pesquisa do tipo aprimorada do Google apresenta resultados que independem de qualquer marcação ou dado estruturado presente nas páginas indexadas, uma vez que o mecanismo de busca considera exclusivamente o texto simples do conteúdo para exibir seus resultados.",
@@ -415,7 +415,7 @@ const QUESTOES_PCAL_LOTE43 = [
   /* ===== ASPAS DUPLAS NA BUSCA ===== */
   {
     id: "TI-102", disciplina: "TI e Segurança Cibernética", assunto: "Mecanismos de busca", subassunto: "Operadores de pesquisa (aspas duplas)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Internet)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 55, probReaparecer: 0.8,
     enunciado: "Ao se delimitar uma frase entre aspas duplas em mecanismos de busca como o Google, o resultado é restrito a páginas que contenham a sequência exata de palavras da frase pesquisada, ainda que o mecanismo geralmente ignore diferenças de capitalização (maiúsculas/minúsculas) e a maior parte da pontuação presente nos termos originais.",
@@ -434,7 +434,7 @@ const QUESTOES_PCAL_LOTE43 = [
   },
   {
     id: "TI-103", disciplina: "TI e Segurança Cibernética", assunto: "Mecanismos de busca", subassunto: "Operadores de pesquisa (aspas duplas)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Internet)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 55, probReaparecer: 0.78,
     enunciado: "Ao se usar aspas duplas para delimitar uma frase de pesquisa em motores de busca como o Google, o mecanismo restringe os resultados a páginas que contenham a sequência de palavras idêntica à da frase delimitada, incluindo-se a mesma pontuação e capitalização presentes nos termos de consulta originais.",
@@ -455,7 +455,7 @@ const QUESTOES_PCAL_LOTE43 = [
   /* ===== ENDEREÇO IP x DNS x ARP ===== */
   {
     id: "TI-104", disciplina: "TI e Segurança Cibernética", assunto: "Internet e navegação", subassunto: "Endereço IP, DNS e ARP",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Internet)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 60, probReaparecer: 0.8,
     enunciado: "Em redes de computadores, o endereço IP constitui um endereço lógico que identifica um dispositivo na rede, sendo a conversão de nomes de domínio em endereços IP realizada pelo protocolo DNS, ao passo que a conversão de endereços IP em endereços físicos (MAC) é realizada pelo protocolo ARP.",
@@ -474,7 +474,7 @@ const QUESTOES_PCAL_LOTE43 = [
   },
   {
     id: "TI-105", disciplina: "TI e Segurança Cibernética", assunto: "Internet e navegação", subassunto: "Endereço IP, DNS e ARP",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Internet)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 60, probReaparecer: 0.78,
     enunciado: "Em redes de computadores, o endereço IP é definido como o protocolo responsável pela conversão de nomes de domínio em endereços físicos de dispositivos, função que é desempenhada de forma independente dos protocolos DNS e ARP.",

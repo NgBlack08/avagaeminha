@@ -23,7 +23,7 @@ const QUESTOES_PCAL_LOTE57 = [
   /* ===================== DISTRIBUIÇÕES DISCRETAS ===================== */
   {
     id: "ES-098", disciplina: "Estatística", assunto: "Distribuição binomial", subassunto: "Condições de aplicação",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (probabilidade)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 60, probReaparecer: 0.85,
     enunciado: "A distribuição binomial pressupõe número fixo de provas independentes, cada uma com apenas dois resultados possíveis e probabilidade de sucesso constante entre as provas.",
@@ -42,7 +42,7 @@ const QUESTOES_PCAL_LOTE57 = [
   },
   {
     id: "ES-099", disciplina: "Estatística", assunto: "Distribuição binomial", subassunto: "Esperança e variância",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (probabilidade)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 60, probReaparecer: 0.9,
     enunciado: "Se X segue distribuição binomial com parâmetros n e p, então a esperança de X é np e a variância também é np.",
@@ -61,7 +61,7 @@ const QUESTOES_PCAL_LOTE57 = [
   },
   {
     id: "ES-100", disciplina: "Estatística", assunto: "Distribuição de Poisson", subassunto: "Média e variância",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (probabilidade)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 60, probReaparecer: 0.85,
     enunciado: "Na distribuição de Poisson, a média é igual a λ e a variância é igual a λ², de modo que a variância cresce quadraticamente com a média.",
@@ -80,7 +80,7 @@ const QUESTOES_PCAL_LOTE57 = [
   },
   {
     id: "ES-101", disciplina: "Estatística", assunto: "Distribuição de Poisson", subassunto: "Aplicação",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (probabilidade)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 60, probReaparecer: 0.8,
     enunciado: "A distribuição de Poisson é adequada para modelar o número de ocorrências de um evento em um intervalo fixo de tempo ou espaço, quando os eventos ocorrem de forma independente e a uma taxa média constante.",
@@ -99,7 +99,7 @@ const QUESTOES_PCAL_LOTE57 = [
   },
   {
     id: "ES-102", disciplina: "Estatística", assunto: "Distribuição hipergeométrica", subassunto: "Distinção da binomial",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (probabilidade)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.8,
     enunciado: "A distribuição hipergeométrica aplica-se a extrações sem reposição de uma população finita, situação em que as provas não são independentes e a probabilidade de sucesso varia a cada extração.",
@@ -118,7 +118,7 @@ const QUESTOES_PCAL_LOTE57 = [
   },
   {
     id: "ES-103", disciplina: "Estatística", assunto: "Distribuição geométrica", subassunto: "Definição",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (probabilidade)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 60, probReaparecer: 0.75,
     enunciado: "A distribuição geométrica modela o número de ensaios de Bernoulli independentes necessários até a ocorrência do primeiro sucesso.",
@@ -137,7 +137,7 @@ const QUESTOES_PCAL_LOTE57 = [
   },
   {
     id: "ES-104", disciplina: "Estatística", assunto: "Distribuição binomial negativa", subassunto: "Distinção da geométrica",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (probabilidade)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 60, probReaparecer: 0.7,
     enunciado: "A distribuição binomial negativa modela o número de ensaios necessários até a obtenção do primeiro sucesso, sendo idêntica à distribuição geométrica em qualquer situação.",
@@ -156,7 +156,7 @@ const QUESTOES_PCAL_LOTE57 = [
   },
   {
     id: "ES-105", disciplina: "Estatística", assunto: "Variáveis aleatórias", subassunto: "Função de probabilidade (discretas)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (probabilidade)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 60, probReaparecer: 0.8,
     enunciado: "Em uma variável aleatória discreta, a soma das probabilidades de todos os valores possíveis deve ser igual a 1, e cada probabilidade individual deve situar-se entre 0 e 1, inclusive.",
@@ -177,7 +177,7 @@ const QUESTOES_PCAL_LOTE57 = [
   /* ===================== DISTRIBUIÇÕES CONTÍNUAS ===================== */
   {
     id: "ES-106", disciplina: "Estatística", assunto: "Distribuição normal", subassunto: "Propriedades",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (probabilidade)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 60, probReaparecer: 0.9,
     enunciado: "Na distribuição normal, a curva é simétrica em torno da média, e média, mediana e moda coincidem.",
@@ -196,7 +196,7 @@ const QUESTOES_PCAL_LOTE57 = [
   },
   {
     id: "ES-107", disciplina: "Estatística", assunto: "Distribuição normal", subassunto: "Normal padrão e escore Z",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (probabilidade)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.9,
     enunciado: "A distribuição normal padrão possui média igual a 0 e desvio padrão igual a 1, sendo a padronização obtida pela subtração da média e divisão pela variância.",
@@ -215,7 +215,7 @@ const QUESTOES_PCAL_LOTE57 = [
   },
   {
     id: "ES-108", disciplina: "Estatística", assunto: "Distribuição normal", subassunto: "Regra empírica",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (probabilidade)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 60, probReaparecer: 0.85,
     enunciado: "Em uma distribuição normal, aproximadamente 95% das observações situam-se no intervalo de um desvio padrão em torno da média.",
@@ -234,7 +234,7 @@ const QUESTOES_PCAL_LOTE57 = [
   },
   {
     id: "ES-109", disciplina: "Estatística", assunto: "Distribuição exponencial", subassunto: "Falta de memória",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (probabilidade)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.75,
     enunciado: "A distribuição exponencial é utilizada para modelar o tempo entre ocorrências sucessivas de um processo de Poisson e possui a propriedade de falta de memória.",
@@ -253,7 +253,7 @@ const QUESTOES_PCAL_LOTE57 = [
   },
   {
     id: "ES-110", disciplina: "Estatística", assunto: "Distribuição uniforme", subassunto: "Densidade constante",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (probabilidade)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 60, probReaparecer: 0.75,
     enunciado: "Na distribuição uniforme contínua no intervalo [a, b], a função densidade é constante nesse intervalo e a variância é dada por (b − a)²/2.",
@@ -272,7 +272,7 @@ const QUESTOES_PCAL_LOTE57 = [
   },
   {
     id: "ES-111", disciplina: "Estatística", assunto: "Variáveis aleatórias", subassunto: "Densidade em variáveis contínuas",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (probabilidade)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.8,
     enunciado: "Em uma variável aleatória contínua, a probabilidade de que ela assuma exatamente um valor pontual específico é igual a zero.",
@@ -293,7 +293,7 @@ const QUESTOES_PCAL_LOTE57 = [
   /* ===================== PROBABILIDADE ===================== */
   {
     id: "ES-112", disciplina: "Estatística", assunto: "Probabilidade", subassunto: "Probabilidade da união",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (probabilidade)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 60, probReaparecer: 0.85,
     enunciado: "Para dois eventos quaisquer A e B, a probabilidade da união é dada por P(A) + P(B) − P(A ∩ B).",
@@ -312,7 +312,7 @@ const QUESTOES_PCAL_LOTE57 = [
   },
   {
     id: "ES-113", disciplina: "Estatística", assunto: "Probabilidade", subassunto: "Independência × exclusividade",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (probabilidade)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 70, probReaparecer: 0.85,
     enunciado: "Dois eventos mutuamente excludentes, ambos com probabilidade positiva, são necessariamente independentes.",
@@ -331,7 +331,7 @@ const QUESTOES_PCAL_LOTE57 = [
   },
   {
     id: "ES-114", disciplina: "Estatística", assunto: "Probabilidade", subassunto: "Probabilidade condicional",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (probabilidade)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.85,
     enunciado: "A probabilidade condicional de A dado B, com P(B) > 0, é definida como o quociente entre a probabilidade da interseção de A e B e a probabilidade de B.",
@@ -352,7 +352,7 @@ const QUESTOES_PCAL_LOTE57 = [
   /* ===================== INFERÊNCIA: TESTE DE HIPÓTESES ===================== */
   {
     id: "ES-115", disciplina: "Estatística", assunto: "Teste de hipóteses", subassunto: "Erro tipo I",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (inferência)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 70, probReaparecer: 0.9,
     enunciado: "O erro do tipo I consiste em rejeitar a hipótese nula quando ela é verdadeira, e sua probabilidade de ocorrência corresponde ao nível de significância do teste.",
@@ -371,7 +371,7 @@ const QUESTOES_PCAL_LOTE57 = [
   },
   {
     id: "ES-116", disciplina: "Estatística", assunto: "Teste de hipóteses", subassunto: "Relação entre erros I e II",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (inferência)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 70, probReaparecer: 0.85,
     enunciado: "Mantido constante o tamanho da amostra, a redução do nível de significância de um teste diminui simultaneamente a probabilidade de erro do tipo I e a de erro do tipo II.",
@@ -390,7 +390,7 @@ const QUESTOES_PCAL_LOTE57 = [
   },
   {
     id: "ES-117", disciplina: "Estatística", assunto: "Teste de hipóteses", subassunto: "p-valor",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (inferência)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 70, probReaparecer: 0.9,
     enunciado: "O p-valor representa a probabilidade de a hipótese nula ser verdadeira, de modo que um p-valor de 0,03 indica 3% de chance de H₀ ser verdadeira.",
@@ -409,7 +409,7 @@ const QUESTOES_PCAL_LOTE57 = [
   },
   {
     id: "ES-118", disciplina: "Estatística", assunto: "Teste de hipóteses", subassunto: "Poder do teste",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (inferência)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.8,
     enunciado: "O poder de um teste estatístico é dado por 1 menos a probabilidade de erro do tipo II.",
@@ -428,7 +428,7 @@ const QUESTOES_PCAL_LOTE57 = [
   },
   {
     id: "ES-119", disciplina: "Estatística", assunto: "Teste de hipóteses", subassunto: "Hipótese nula",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (inferência)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 60, probReaparecer: 0.8,
     enunciado: "O não rejeitar a hipótese nula em um teste estatístico equivale a demonstrar que ela é verdadeira.",
@@ -447,7 +447,7 @@ const QUESTOES_PCAL_LOTE57 = [
   },
   {
     id: "ES-120", disciplina: "Estatística", assunto: "Teste qui-quadrado", subassunto: "Aplicação",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (inferência)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 70, probReaparecer: 0.8,
     enunciado: "O teste qui-quadrado de independência é aplicável a variáveis qualitativas dispostas em tabelas de contingência e compara frequências observadas com frequências esperadas.",
@@ -468,7 +468,7 @@ const QUESTOES_PCAL_LOTE57 = [
   /* ===================== ESTIMAÇÃO E AMOSTRAGEM ===================== */
   {
     id: "ES-121", disciplina: "Estatística", assunto: "Estimação", subassunto: "Intervalo de confiança — amplitude",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (inferência)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 70, probReaparecer: 0.9,
     enunciado: "Mantidos constantes os demais fatores, o aumento do nível de confiança de um intervalo produz intervalo de menor amplitude.",
@@ -487,7 +487,7 @@ const QUESTOES_PCAL_LOTE57 = [
   },
   {
     id: "ES-122", disciplina: "Estatística", assunto: "Estimação", subassunto: "Interpretação do intervalo",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (inferência)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 70, probReaparecer: 0.85,
     enunciado: "Um intervalo de confiança de 95% para a média populacional significa que há 95% de probabilidade de o parâmetro estar dentro daquele intervalo já calculado.",
@@ -506,7 +506,7 @@ const QUESTOES_PCAL_LOTE57 = [
   },
   {
     id: "ES-123", disciplina: "Estatística", assunto: "Estimação", subassunto: "Estimador não viesado",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (inferência)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.8,
     enunciado: "Um estimador é dito não viesado quando sua esperança matemática é igual ao parâmetro populacional que se pretende estimar.",
@@ -525,7 +525,7 @@ const QUESTOES_PCAL_LOTE57 = [
   },
   {
     id: "ES-124", disciplina: "Estatística", assunto: "Amostragem", subassunto: "Amostragem probabilística",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (amostragem)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 60, probReaparecer: 0.85,
     enunciado: "Na amostragem probabilística, todo elemento da população possui probabilidade conhecida e não nula de ser selecionado, o que permite a generalização estatística dos resultados.",
@@ -544,7 +544,7 @@ const QUESTOES_PCAL_LOTE57 = [
   },
   {
     id: "ES-125", disciplina: "Estatística", assunto: "Amostragem", subassunto: "Estratificada × conglomerados",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (amostragem)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 70, probReaparecer: 0.85,
     enunciado: "Na amostragem estratificada, a população é dividida em subgrupos homogêneos internamente e extraem-se elementos de todos os estratos; na amostragem por conglomerados, sorteiam-se grupos inteiros, que são internamente heterogêneos.",
@@ -563,7 +563,7 @@ const QUESTOES_PCAL_LOTE57 = [
   },
   {
     id: "ES-126", disciplina: "Estatística", assunto: "Amostragem", subassunto: "Amostragem sistemática",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (amostragem)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 60, probReaparecer: 0.75,
     enunciado: "A amostragem sistemática, por selecionar os elementos segundo regra fixa de intervalo, classifica-se como técnica não probabilística.",
@@ -582,7 +582,7 @@ const QUESTOES_PCAL_LOTE57 = [
   },
   {
     id: "ES-127", disciplina: "Estatística", assunto: "Distribuições amostrais", subassunto: "Teorema Central do Limite",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (inferência)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 75, probReaparecer: 0.9,
     enunciado: "Pelo teorema central do limite, a distribuição da média amostral aproxima-se da normal à medida que o tamanho da amostra cresce, ainda que a população de origem não siga distribuição normal.",
@@ -601,7 +601,7 @@ const QUESTOES_PCAL_LOTE57 = [
   },
   {
     id: "ES-128", disciplina: "Estatística", assunto: "Distribuições amostrais", subassunto: "Erro padrão da média",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (inferência)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 70, probReaparecer: 0.85,
     enunciado: "O erro padrão da média amostral é obtido dividindo-se o desvio padrão populacional pelo tamanho da amostra.",
@@ -620,7 +620,7 @@ const QUESTOES_PCAL_LOTE57 = [
   },
   {
     id: "ES-129", disciplina: "Estatística", assunto: "Correlação e regressão", subassunto: "Coeficiente de correlação",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (correlação)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 70, probReaparecer: 0.85,
     enunciado: "O coeficiente de correlação linear de Pearson varia entre −1 e 1, e um valor próximo de zero indica ausência de qualquer relação entre as variáveis.",
@@ -639,7 +639,7 @@ const QUESTOES_PCAL_LOTE57 = [
   },
   {
     id: "ES-130", disciplina: "Estatística", assunto: "Correlação e regressão", subassunto: "Coeficiente de determinação",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (correlação)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.8,
     enunciado: "O coeficiente de determinação (R²) na regressão linear simples indica a proporção da variabilidade da variável dependente explicada pelo modelo.",
@@ -658,7 +658,7 @@ const QUESTOES_PCAL_LOTE57 = [
   },
   {
     id: "ES-131", disciplina: "Estatística", assunto: "Correlação e regressão", subassunto: "Correlação e causalidade",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (correlação)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 60, probReaparecer: 0.85,
     enunciado: "A existência de correlação forte entre duas variáveis é suficiente para se concluir que uma delas causa a outra.",

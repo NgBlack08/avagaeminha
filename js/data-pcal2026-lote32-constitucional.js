@@ -15,7 +15,7 @@ const QUESTOES_PCAL_LOTE32 = [
 
   {
     id: "DC-037", disciplina: "Direito Constitucional", assunto: "Nacionalidade", subassunto: "Extradição de brasileiro naturalizado",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (CF/88, art. 5º, LI)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 70, probReaparecer: 0.84,
     enunciado: "Com base na Constituição Federal de 1988, o brasileiro naturalizado pode ser extraditado em caso de comprovado envolvimento em tráfico ilícito de entorpecentes e drogas afins, ainda que esse envolvimento seja posterior à naturalização.",
@@ -34,7 +34,7 @@ const QUESTOES_PCAL_LOTE32 = [
   },
   {
     id: "DC-038", disciplina: "Direito Constitucional", assunto: "Nacionalidade", subassunto: "Extradição de brasileiro naturalizado",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (CF/88, art. 5º, LI)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 70, probReaparecer: 0.8,
     enunciado: "O brasileiro naturalizado poderá ser extraditado por crime comum praticado após a naturalização, desde que haja tratado de extradição vigente entre o Brasil e o Estado requerente.",
@@ -53,7 +53,7 @@ const QUESTOES_PCAL_LOTE32 = [
   },
   {
     id: "DC-039", disciplina: "Direito Constitucional", assunto: "Direitos fundamentais", subassunto: "Direito ao esquecimento (STF, Tema 786)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (STF, RE 1.010.606, Tema 786)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 75, probReaparecer: 0.82,
     enunciado: "Conforme entendimento firmado pelo Supremo Tribunal Federal em repercussão geral, é incompatível com a Constituição Federal a ideia de um direito ao esquecimento, assim entendido como o poder de obstar, em razão da passagem do tempo, a divulgação de fatos ou dados verídicos e licitamente obtidos e publicados em meios de comunicação social analógicos ou digitais.",
@@ -72,7 +72,7 @@ const QUESTOES_PCAL_LOTE32 = [
   },
   {
     id: "DC-040", disciplina: "Direito Constitucional", assunto: "Direitos fundamentais", subassunto: "Inviolabilidade de domicílio",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (CF/88, art. 5º, XI)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 65, probReaparecer: 0.86,
     enunciado: "Por determinação judicial, é permitido ingressar na casa, asilo inviolável do indivíduo, sem o consentimento do morador, a qualquer hora do dia ou da noite.",
@@ -91,7 +91,7 @@ const QUESTOES_PCAL_LOTE32 = [
   },
   {
     id: "DC-041", disciplina: "Direito Constitucional", assunto: "Direitos fundamentais", subassunto: "Inviolabilidade de domicílio",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (CF/88, art. 5º, XI)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 65, probReaparecer: 0.84,
     enunciado: "A casa é asilo inviolável do indivíduo, ninguém nela podendo penetrar sem consentimento do morador, salvo em caso de flagrante delito ou desastre, ou para prestar socorro, ou, durante o dia, por determinação judicial.",
@@ -110,7 +110,7 @@ const QUESTOES_PCAL_LOTE32 = [
   },
   {
     id: "DC-042", disciplina: "Direito Constitucional", assunto: "Remédios constitucionais", subassunto: "Mandado de injunção",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (CF/88, art. 5º, LXXI)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 70, probReaparecer: 0.74,
     enunciado: "O mandado de injunção é cabível exclusivamente quando a falta de norma regulamentadora torne inviável o exercício de direitos e liberdades constitucionais, não se aplicando às prerrogativas inerentes à nacionalidade, à soberania e à cidadania.",
@@ -129,7 +129,7 @@ const QUESTOES_PCAL_LOTE32 = [
   },
   {
     id: "DC-043", disciplina: "Direito Constitucional", assunto: "Remédios constitucionais", subassunto: "Habeas data",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (CF/88, art. 5º, LXXII)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 65, probReaparecer: 0.8,
     enunciado: "O habeas data é cabível para assegurar ao impetrante o conhecimento de informações relativas à sua própria pessoa constantes de registros ou bancos de dados de entidades governamentais ou de caráter público, bem como para promover a retificação desses dados, quando não se prefira fazê-lo por processo sigiloso, judicial ou administrativo.",
@@ -148,7 +148,7 @@ const QUESTOES_PCAL_LOTE32 = [
   },
   {
     id: "DC-044", disciplina: "Direito Constitucional", assunto: "Remédios constitucionais", subassunto: "Mandado de segurança coletivo",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (CF/88, art. 5º, LXX)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 75, probReaparecer: 0.76,
     enunciado: "Para a validade do mandado de segurança coletivo, exige-se que o partido político impetrante possua funcionamento comprovado há pelo menos um ano, requisito idêntico ao estabelecido para organizações sindicais, entidades de classe e associações.",
@@ -167,7 +167,7 @@ const QUESTOES_PCAL_LOTE32 = [
   },
   {
     id: "DC-045", disciplina: "Direito Constitucional", assunto: "Remédios constitucionais", subassunto: "Mandado de segurança coletivo",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Súmula 629, STF)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 70, probReaparecer: 0.74,
     enunciado: "A impetração de mandado de segurança coletivo por entidade de classe em favor de seus associados independe de autorização expressa destes, conforme entendimento sumulado do Supremo Tribunal Federal.",
@@ -186,7 +186,7 @@ const QUESTOES_PCAL_LOTE32 = [
   },
   {
     id: "DC-046", disciplina: "Direito Constitucional", assunto: "Nacionalidade", subassunto: "Cargos privativos de brasileiro nato",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (CF/88, art. 12, §3º)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 65, probReaparecer: 0.8,
     enunciado: "São privativos de brasileiro nato os cargos de Presidente e Vice-Presidente da República, Presidente da Câmara dos Deputados, Presidente do Senado Federal, Ministro do Supremo Tribunal Federal, os da carreira diplomática, o de oficial das Forças Armadas e o de Ministro de Estado da Defesa.",
@@ -205,7 +205,7 @@ const QUESTOES_PCAL_LOTE32 = [
   },
   {
     id: "DC-047", disciplina: "Direito Constitucional", assunto: "Nacionalidade", subassunto: "Cargos privativos de brasileiro nato",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (CF/88, art. 12, §3º)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 65, probReaparecer: 0.76,
     enunciado: "Todos os cargos de Ministro de Estado são privativos de brasileiro nato, e não apenas o de Ministro de Estado da Defesa.",
@@ -224,7 +224,7 @@ const QUESTOES_PCAL_LOTE32 = [
   },
   {
     id: "DC-048", disciplina: "Direito Constitucional", assunto: "Estado de defesa e estado de sítio", subassunto: "Competência do Congresso Nacional",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (CF/88, art. 49, IV)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 75, probReaparecer: 0.72,
     enunciado: "Compete ao Congresso Nacional autorizar previamente o estado de defesa e a intervenção federal decretados pelo Presidente da República, cabendo-lhe apenas aprovar, posteriormente, a decretação do estado de sítio.",

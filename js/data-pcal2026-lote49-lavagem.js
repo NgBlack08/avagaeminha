@@ -21,7 +21,7 @@ const QUESTOES_PCAL_LOTE49 = [
   /* ===== ORIGEM ILÍCITA COMO PRESSUPOSTO DO TIPO (ART. 1º) ===== */
   {
     id: "LE-155", disciplina: "Legislação Especial", assunto: "Lavagem de Dinheiro", subassunto: "Origem ilícita como pressuposto do tipo (art. 1º)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei 9.613/1998, art. 1º)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.82,
     enunciado: "O crime de lavagem de dinheiro é acessório em relação a uma infração penal antecedente, de modo que, se os recursos ocultados ou dissimulados tiverem origem exclusivamente lícita, falta o pressuposto do tipo do art. 1º da Lei nº 9.613/1998, não havendo, portanto, lavagem de capitais.",
@@ -40,7 +40,7 @@ const QUESTOES_PCAL_LOTE49 = [
   },
   {
     id: "LE-156", disciplina: "Legislação Especial", assunto: "Lavagem de Dinheiro", subassunto: "Origem ilícita como pressuposto do tipo (art. 1º)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei 9.613/1998, art. 1º)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.78,
     enunciado: "Um processo financeiro que tenha por objetivo desvincular determinado montante em dinheiro de sua operação de origem constitui lavagem de dinheiro, ainda que os recursos tenham sido obtidos licitamente, uma vez que a Lei nº 9.613/1998 não exige a origem ilícita dos valores para a configuração do tipo penal.",
@@ -61,7 +61,7 @@ const QUESTOES_PCAL_LOTE49 = [
   /* ===== TERCEIRO QUE NÃO PARTICIPOU DO CRIME ANTECEDENTE (CRIME COMUM) ===== */
   {
     id: "LE-157", disciplina: "Legislação Especial", assunto: "Lavagem de Dinheiro", subassunto: "Sujeito ativo — crime comum, sem exigência de participação no antecedente",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei 9.613/1998, arts. 1º e 2º, II)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.8,
     enunciado: "O crime de lavagem de dinheiro é crime comum, podendo ser praticado por qualquer pessoa, inclusive por um terceiro que nunca tenha integrado o crime antecedente, bastando que oculte ou dissimule bens, direitos ou valores dele provenientes.",
@@ -80,7 +80,7 @@ const QUESTOES_PCAL_LOTE49 = [
   },
   {
     id: "LE-158", disciplina: "Legislação Especial", assunto: "Lavagem de Dinheiro", subassunto: "Sujeito ativo — crime comum, sem exigência de participação no antecedente",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei 9.613/1998, arts. 1º e 2º, II)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.76,
     enunciado: "Para que se configure o crime de lavagem de dinheiro, é necessário que o agente tenha participado do crime antecedente, seja como autor, seja como partícipe, não podendo um terceiro que nunca integrou o crime-base ser responsabilizado por ocultar ou dissimular os bens dele provenientes.",
@@ -101,7 +101,7 @@ const QUESTOES_PCAL_LOTE49 = [
   /* ===== CAUSA DE AUMENTO — ATIVO VIRTUAL, REITERAÇÃO, ORGANIZAÇÃO CRIMINOSA (ART. 1º, § 4º) ===== */
   {
     id: "LE-159", disciplina: "Legislação Especial", assunto: "Lavagem de Dinheiro", subassunto: "Causa de aumento — ativo virtual, reiteração, organização criminosa (art. 1º, § 4º)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei 9.613/1998, art. 1º, § 4º, redação da Lei 14.478/2022)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.85,
     enunciado: "A pena do crime de lavagem de dinheiro será aumentada de um a dois terços se o crime for cometido de forma reiterada, por intermédio de organização criminosa ou por meio da utilização de ativo virtual, sendo essas três hipóteses alternativas, bastando a incidência de uma delas para a aplicação da majorante.",
@@ -120,7 +120,7 @@ const QUESTOES_PCAL_LOTE49 = [
   },
   {
     id: "LE-160", disciplina: "Legislação Especial", assunto: "Lavagem de Dinheiro", subassunto: "Causa de aumento — ativo virtual, reiteração, organização criminosa (art. 1º, § 4º)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei 9.613/1998, art. 1º, § 4º, redação da Lei 14.478/2022)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.8,
     enunciado: "A pena do crime de lavagem de dinheiro somente será aumentada de um a dois terços se estiverem simultaneamente presentes a prática reiterada do crime, o cometimento por intermédio de organização criminosa e a utilização de ativo virtual, não bastando a ocorrência isolada de qualquer uma dessas circunstâncias.",
@@ -141,7 +141,7 @@ const QUESTOES_PCAL_LOTE49 = [
   /* ===== COLABORAÇÃO PREMIADA — SEM EXIGÊNCIA DE ACORDO PRÉVIO (ART. 1º, § 5º) ===== */
   {
     id: "LE-161", disciplina: "Legislação Especial", assunto: "Lavagem de Dinheiro", subassunto: "Colaboração premiada — sem exigência de acordo prévio formal (art. 1º, § 5º)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei 9.613/1998, art. 1º, § 5º)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.78,
     enunciado: "Os benefícios da colaboração premiada previstos no art. 1º, § 5º, da Lei nº 9.613/1998 podem ser aplicados pelo juiz a qualquer tempo, não havendo exigência de prévio acordo formal homologado judicialmente antes do oferecimento da denúncia para sua concessão.",
@@ -160,7 +160,7 @@ const QUESTOES_PCAL_LOTE49 = [
   },
   {
     id: "LE-162", disciplina: "Legislação Especial", assunto: "Lavagem de Dinheiro", subassunto: "Colaboração premiada — sem exigência de acordo prévio formal (art. 1º, § 5º)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei 9.613/1998, art. 1º, § 5º)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.74,
     enunciado: "A colaboração premiada, no âmbito do processo penal por crime de lavagem de dinheiro, exige acordo homologado judicialmente antes do oferecimento da denúncia, sob pena de nulidade dos benefícios eventualmente concedidos ao colaborador.",
@@ -181,7 +181,7 @@ const QUESTOES_PCAL_LOTE49 = [
   /* ===== MEDIDAS ASSECURATÓRIAS — OITIVA OBRIGATÓRIA DO MP (ART. 4º-B) ===== */
   {
     id: "LE-163", disciplina: "Legislação Especial", assunto: "Lavagem de Dinheiro", subassunto: "Suspensão de medidas assecuratórias e prisão — oitiva do MP (art. 4º-B)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei 9.613/1998, art. 4º-B)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.82,
     enunciado: "A ordem de prisão de pessoas ou as medidas assecuratórias de bens, direitos ou valores poderão ser suspensas pelo juiz, ouvido o Ministério Público, quando a sua execução imediata puder comprometer as investigações em curso.",
@@ -200,7 +200,7 @@ const QUESTOES_PCAL_LOTE49 = [
   },
   {
     id: "LE-164", disciplina: "Legislação Especial", assunto: "Lavagem de Dinheiro", subassunto: "Suspensão de medidas assecuratórias e prisão — oitiva do MP (art. 4º-B)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei 9.613/1998, art. 4º-B)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.78,
     enunciado: "As medidas assecuratórias de bens, direitos ou valores e a ordem de prisão de pessoas poderão ser suspensas imediatamente pelo juiz quando a sua pronta execução puder comprometer as investigações em curso, sendo dispensada a oitiva do Ministério Público em razão da urgência do ato processual.",
@@ -221,7 +221,7 @@ const QUESTOES_PCAL_LOTE49 = [
   /* ===== AFASTAMENTO DE SERVIDOR PÚBLICO INDICIADO — SEM PREJUÍZO DE REMUNERAÇÃO (ART. 17-D) ===== */
   {
     id: "LE-165", disciplina: "Legislação Especial", assunto: "Lavagem de Dinheiro", subassunto: "Afastamento de servidor público indiciado (art. 17-D)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei 9.613/1998, art. 17-D)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.8,
     enunciado: "Em caso de indiciamento de servidor público pela prática de crime de lavagem de dinheiro, este será afastado do exercício do cargo, emprego ou função, sem prejuízo de sua remuneração e dos demais direitos previstos em lei, até que o juiz competente autorize, em decisão fundamentada, o seu retorno.",
@@ -240,7 +240,7 @@ const QUESTOES_PCAL_LOTE49 = [
   },
   {
     id: "LE-166", disciplina: "Legislação Especial", assunto: "Lavagem de Dinheiro", subassunto: "Afastamento de servidor público indiciado (art. 17-D)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei 9.613/1998, art. 17-D)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.76,
     enunciado: "Servidor público indiciado, em tese, pela prática de crime de lavagem de dinheiro deverá ser afastado imediatamente do cargo ou função, com prejuízo de remunerações, até que o juiz competente autorize o seu retorno às atividades.",

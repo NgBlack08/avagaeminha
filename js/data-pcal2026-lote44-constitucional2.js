@@ -27,7 +27,7 @@ const QUESTOES_PCAL_LOTE44 = [
   /* ===== VEDAÇÃO AO ANONIMATO (ART. 5º, IV) ===== */
   {
     id: "DC-049", disciplina: "Direito Constitucional", assunto: "Direitos fundamentais", subassunto: "Liberdade de manifestação e vedação ao anonimato (art. 5º, IV)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (CF/88, art. 5º, IV)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.85,
     enunciado: "A Constituição Federal assegura a livre manifestação do pensamento, mas veda o anonimato, exigindo-se a identificação do autor para viabilizar sua responsabilização por eventuais abusos e assegurar ao ofendido o direito de resposta proporcional ao agravo.",
@@ -46,7 +46,7 @@ const QUESTOES_PCAL_LOTE44 = [
   },
   {
     id: "DC-050", disciplina: "Direito Constitucional", assunto: "Direitos fundamentais", subassunto: "Liberdade de manifestação e vedação ao anonimato (art. 5º, IV)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (CF/88, art. 5º, IV)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.8,
     enunciado: "A Constituição Federal, ao assegurar a livre manifestação do pensamento como garantia fundamental, admite o anonimato do autor sempre que este entenda necessário resguardar sua identidade para evitar retaliações pessoais ou profissionais.",
@@ -67,7 +67,7 @@ const QUESTOES_PCAL_LOTE44 = [
   /* ===== CENSURA PRÉVIA (ART. 5º, IX) ===== */
   {
     id: "DC-051", disciplina: "Direito Constitucional", assunto: "Direitos fundamentais", subassunto: "Liberdade de expressão intelectual, artística e científica (art. 5º, IX)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (CF/88, art. 5º, IX)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.8,
     enunciado: "É livre a expressão da atividade intelectual, artística, científica e de comunicação, independentemente de censura ou licença, de modo que a exigência de autorização prévia de órgão público para a publicação de uma obra é incompatível com a Constituição Federal.",
@@ -86,7 +86,7 @@ const QUESTOES_PCAL_LOTE44 = [
   },
   {
     id: "DC-052", disciplina: "Direito Constitucional", assunto: "Direitos fundamentais", subassunto: "Liberdade de expressão intelectual, artística e científica (art. 5º, IX)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (CF/88, art. 5º, IX)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.76,
     enunciado: "A expressão da atividade intelectual, artística, científica e de comunicação, embora livre em regra, pode ser condicionada, pela Constituição Federal, à obtenção de licença prévia de órgão público competente, quando a obra a ser publicada envolver temas de interesse social relevante.",
@@ -107,7 +107,7 @@ const QUESTOES_PCAL_LOTE44 = [
   /* ===== DIREITOS DO PRESO — IDENTIFICAÇÃO DOS RESPONSÁVEIS (ART. 5º, LXIV) ===== */
   {
     id: "DC-053", disciplina: "Direito Constitucional", assunto: "Direitos fundamentais", subassunto: "Direitos do preso — identificação dos responsáveis (art. 5º, LXIV)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (CF/88, art. 5º, LXIV)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.85,
     enunciado: "É assegurado ao preso o direito à identificação dos responsáveis por sua prisão ou por seu interrogatório policial, garantia que não comporta exceção, ainda que a prisão decorra de operação sigilosa autorizada por autoridade competente.",
@@ -126,7 +126,7 @@ const QUESTOES_PCAL_LOTE44 = [
   },
   {
     id: "DC-054", disciplina: "Direito Constitucional", assunto: "Direitos fundamentais", subassunto: "Direitos do preso — identificação dos responsáveis (art. 5º, LXIV)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (CF/88, art. 5º, LXIV)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.82,
     enunciado: "É assegurado ao preso o direito à identificação dos responsáveis por sua prisão, exceto quando esta ocorrer no âmbito de operação sigilosa autorizada por autoridade competente, hipótese em que a identificação pode ser recusada por razões de segurança institucional.",
@@ -147,7 +147,7 @@ const QUESTOES_PCAL_LOTE44 = [
   /* ===== LIBERDADE DE ASSOCIAÇÃO — SUSPENSÃO x DISSOLUÇÃO (ART. 5º, XIX) ===== */
   {
     id: "DC-055", disciplina: "Direito Constitucional", assunto: "Direitos fundamentais", subassunto: "Liberdade de associação — suspensão x dissolução (art. 5º, XIX)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (CF/88, art. 5º, XIX)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.85,
     enunciado: "As associações somente poderão ser compulsoriamente dissolvidas ou ter suas atividades suspensas por decisão judicial, exigindo-se, no caso da dissolução compulsória, o trânsito em julgado, requisito que não é exigido para a suspensão das atividades, medida de natureza reversível que admite decisão judicial ainda recorrível.",
@@ -166,7 +166,7 @@ const QUESTOES_PCAL_LOTE44 = [
   },
   {
     id: "DC-056", disciplina: "Direito Constitucional", assunto: "Direitos fundamentais", subassunto: "Liberdade de associação — suspensão x dissolução (art. 5º, XIX)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (CF/88, art. 5º, XIX)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.82,
     enunciado: "As associações somente poderão ser compulsoriamente dissolvidas ou ter suas atividades suspensas por decisão judicial com trânsito em julgado, sendo esse requisito aplicável igualmente às duas medidas, em razão da gravidade da interferência estatal na liberdade de associação.",
@@ -187,7 +187,7 @@ const QUESTOES_PCAL_LOTE44 = [
   /* ===== CRIMES INAFIANÇÁVEIS, IMPRESCRITÍVEIS E GRAÇA/ANISTIA (ART. 5º, XLII-XLIV) ===== */
   {
     id: "DC-057", disciplina: "Direito Constitucional", assunto: "Direitos fundamentais", subassunto: "Crimes inafiançáveis, imprescritíveis e graça/anistia (art. 5º, XLII-XLIV)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (CF/88, art. 5º, XLII, XLIII e XLIV)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 70, probReaparecer: 0.86,
     enunciado: "Segundo a Constituição Federal, o crime de racismo, embora imprescritível e inafiançável, admite os benefícios de graça e indulto, ao passo que o crime de terrorismo, apesar de prescritível, é insuscetível de anistia, graça ou indulto — regimes jurídicos distintos que não devem ser confundidos.",
@@ -206,7 +206,7 @@ const QUESTOES_PCAL_LOTE44 = [
   },
   {
     id: "DC-058", disciplina: "Direito Constitucional", assunto: "Direitos fundamentais", subassunto: "Crimes inafiançáveis, imprescritíveis e graça/anistia (art. 5º, XLII-XLIV)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (CF/88, art. 5º, XLII, XLIII e XLIV)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 70, probReaparecer: 0.82,
     enunciado: "Segundo a Constituição Federal, o crime de racismo é insuscetível de graça ou indulto, por força de sua imprescritibilidade, ao passo que o crime de terrorismo, por ser prescritível, admite a concessão de anistia, graça ou indulto pelo Poder Público.",
@@ -227,7 +227,7 @@ const QUESTOES_PCAL_LOTE44 = [
   /* ===== HABEAS CORPUS x MANDADO DE SEGURANÇA (ART. 5º, LXVIII e LXIX) ===== */
   {
     id: "DC-059", disciplina: "Direito Constitucional", assunto: "Remédios constitucionais", subassunto: "Habeas corpus x mandado de segurança — liberdade de locomoção (art. 5º, LXVIII e LXIX)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (CF/88, art. 5º, LXVIII e LXIX)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.85,
     enunciado: "O remédio constitucional cabível para tutelar a liberdade de locomoção contra ilegalidade ou abuso de poder é o habeas corpus, e não o mandado de segurança, que é residual, destinado a proteger direito líquido e certo não amparado por habeas corpus ou habeas data.",
@@ -246,7 +246,7 @@ const QUESTOES_PCAL_LOTE44 = [
   },
   {
     id: "DC-060", disciplina: "Direito Constitucional", assunto: "Remédios constitucionais", subassunto: "Habeas corpus x mandado de segurança — liberdade de locomoção (art. 5º, LXVIII e LXIX)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (CF/88, art. 5º, LXVIII e LXIX)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.82,
     enunciado: "Para anular uma prisão ilegal, cabe ao preso impetrar mandado de segurança, remédio constitucional destinado especificamente a tutelar a liberdade de locomoção contra ilegalidade ou abuso de poder praticado por autoridade pública.",
@@ -267,7 +267,7 @@ const QUESTOES_PCAL_LOTE44 = [
   /* ===== AÇÃO POPULAR (ART. 5º, LXXIII) ===== */
   {
     id: "DC-061", disciplina: "Direito Constitucional", assunto: "Remédios constitucionais", subassunto: "Ação popular (art. 5º, LXXIII)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (CF/88, art. 5º, LXXIII)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.82,
     enunciado: "Qualquer cidadão é parte legítima para propor ação popular que vise anular ato lesivo ao patrimônio público, à moralidade administrativa, ao meio ambiente ou ao patrimônio histórico e cultural, ficando o autor, salvo comprovada má-fé, isento de custas judiciais e do ônus da sucumbência.",
@@ -286,7 +286,7 @@ const QUESTOES_PCAL_LOTE44 = [
   },
   {
     id: "DC-062", disciplina: "Direito Constitucional", assunto: "Remédios constitucionais", subassunto: "Ação popular (art. 5º, LXXIII)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (CF/88, art. 5º, LXXIII)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.78,
     enunciado: "A ação popular somente pode ser proposta por partido político com representação no Congresso Nacional ou por entidade de classe legalmente constituída, não sendo facultado ao cidadão comum, isoladamente, o ajuizamento dessa ação para anular ato lesivo ao patrimônio público.",
@@ -307,7 +307,7 @@ const QUESTOES_PCAL_LOTE44 = [
   /* ===== CONCEITO DE DIA E NOITE PARA BUSCA DOMICILIAR (STJ, RHC 196.496) ===== */
   {
     id: "DC-063", disciplina: "Direito Constitucional", assunto: "Direitos fundamentais", subassunto: "Inviolabilidade de domicílio — conceito de dia e noite (STJ, RHC 196.496)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (STJ, RHC 196.496; Lei 13.869/2019, art. 22, § 1º, III)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 70, probReaparecer: 0.8,
     enunciado: "Desde o advento do art. 22, § 1º, III, da Lei nº 13.869/2019 (Lei de Abuso de Autoridade), passou a ser válido o cumprimento de mandado de busca e apreensão domiciliar no período compreendido entre 5 horas e 21 horas, configurando abuso de autoridade seu cumprimento fora dessa janela, sem o consentimento do morador.",
@@ -326,7 +326,7 @@ const QUESTOES_PCAL_LOTE44 = [
   },
   {
     id: "DC-064", disciplina: "Direito Constitucional", assunto: "Direitos fundamentais", subassunto: "Inviolabilidade de domicílio — conceito de dia e noite (STJ, RHC 196.496)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (STJ, RHC 196.496; Lei 13.869/2019, art. 22, § 1º, III)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 70, probReaparecer: 0.76,
     enunciado: "A definição dos conceitos de 'dia' e 'noite', para fins de cumprimento de mandado de busca e apreensão domiciliar, permanece, até hoje, sem qualquer critério objetivo fixado em lei, dependendo exclusivamente da avaliação subjetiva do agente responsável pelo cumprimento da diligência.",

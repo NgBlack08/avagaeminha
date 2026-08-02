@@ -17,7 +17,7 @@ const QUESTOES_PCAL_LOTE54 = [
   /* ===== PRINCÍPIOS CONSTITUCIONAIS DO PROCESSO PENAL ===== */
   {
     id: "PP-071", disciplina: "Processo Penal", assunto: "Princípios constitucionais do processo penal", subassunto: "Contraditório e ampla defesa — acesso a elementos já documentados",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (CF, art. 5º, LV; Súmula Vinculante 14/STF)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.85,
     enunciado: "Os princípios do contraditório e da ampla defesa asseguram ao acusado o direito de ser ouvido e de apresentar provas, bem como o direito de acesso aos elementos de prova já documentados em procedimento investigatório realizado por órgão com competência de polícia judiciária, desde que digam respeito ao exercício do direito de defesa.",
@@ -36,7 +36,7 @@ const QUESTOES_PCAL_LOTE54 = [
   },
   {
     id: "PP-072", disciplina: "Processo Penal", assunto: "Princípios constitucionais do processo penal", subassunto: "Nemo tenetur se detegere — reconhecimento x cessão de senha",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (nemo tenetur se detegere; doutrina de Renato Brasileiro)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 60, probReaparecer: 0.8,
     enunciado: "Na fase de investigação policial, o princípio da não autoincriminação (nemo tenetur se detegere) autoriza o investigado a recusar tanto a participação em ato de reconhecimento pessoal quanto o fornecimento da senha de desbloqueio de seu aparelho celular, por se tratar, em ambos os casos, de comportamento ativo exigido do próprio investigado.",
@@ -55,7 +55,7 @@ const QUESTOES_PCAL_LOTE54 = [
   },
   {
     id: "PP-073", disciplina: "Processo Penal", assunto: "Princípios constitucionais do processo penal", subassunto: "Ampla defesa e produção antecipada de provas (art. 366, CPP)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (CPP, art. 366)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 60, probReaparecer: 0.82,
     enunciado: "Viola o princípio da ampla defesa a decisão que determine a produção antecipada de provas urgentes nos casos em que o acusado, citado por edital, não compareça nem constitua advogado, ainda que a medida esteja prevista em lei e conte com a participação de defensor nomeado pelo juízo.",
@@ -74,7 +74,7 @@ const QUESTOES_PCAL_LOTE54 = [
   },
   {
     id: "PP-074", disciplina: "Processo Penal", assunto: "Princípios constitucionais do processo penal", subassunto: "Inadmissibilidade das provas ilícitas",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (CF, art. 5º, LVI; CPP, art. 157; princípio da proporcionalidade)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.85,
     enunciado: "A despeito do princípio constitucional da vedação às provas ilícitas, o juiz poderá considerar uma prova ilícita em qualquer situação, desde que se convença de sua importância para a condenação do réu.",
@@ -93,7 +93,7 @@ const QUESTOES_PCAL_LOTE54 = [
   },
   {
     id: "PP-075", disciplina: "Processo Penal", assunto: "Princípios constitucionais do processo penal", subassunto: "Presunção de inocência e maus antecedentes",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Súmula 444/STJ; RE 591.054/STF — repercussão geral)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.9,
     enunciado: "Fere o princípio constitucional da presunção de inocência (ou da não culpabilidade) a definição de maus antecedentes, para fins de aplicação da pena-base, com fundamento em inquéritos policiais ou ações penais em curso, sem sentença condenatória transitada em julgado.",
@@ -112,7 +112,7 @@ const QUESTOES_PCAL_LOTE54 = [
   },
   {
     id: "PP-076", disciplina: "Processo Penal", assunto: "Princípios constitucionais do processo penal", subassunto: "Princípio da publicidade — ampla e restrita",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (CF, art. 93, IX)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.85,
     enunciado: "A lei não poderá restringir, em nenhuma hipótese, a publicidade dos atos processuais penais, sob pena de ferir o princípio constitucional da publicidade.",
@@ -131,7 +131,7 @@ const QUESTOES_PCAL_LOTE54 = [
   },
   {
     id: "PP-077", disciplina: "Processo Penal", assunto: "Princípios constitucionais do processo penal", subassunto: "Princípio do juiz natural",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (CF, art. 5º, LIII e XXXVII)",
     tipo: "CE", dificuldade: 1, tempoIdealSeg: 45, probReaparecer: 0.88,
     enunciado: "Ninguém será processado nem sentenciado senão pela autoridade competente, tampouco haverá juízo ou tribunal de exceção, em respeito ao princípio constitucional do juiz natural.",
@@ -152,7 +152,7 @@ const QUESTOES_PCAL_LOTE54 = [
   /* ===== LEI PROCESSUAL PENAL NO TEMPO E NO ESPAÇO ===== */
   {
     id: "PP-078", disciplina: "Processo Penal", assunto: "Disposições preliminares", subassunto: "Territorialidade da lei processual penal (CPP, art. 1º)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (CPP, art. 1º; CF, art. 52, I)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 60, probReaparecer: 0.85,
     enunciado: "O Código de Processo Penal será aplicado a todas as ações penais e correlatas que tiverem curso no território nacional, nelas incluídas as destinadas a apurar crime de responsabilidade cometido pelo presidente da República.",
@@ -171,7 +171,7 @@ const QUESTOES_PCAL_LOTE54 = [
   },
   {
     id: "PP-079", disciplina: "Processo Penal", assunto: "Disposições preliminares", subassunto: "Aplicação imediata da lei processual penal (tempus regit actum)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (CPP, art. 2º)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.9,
     enunciado: "Uma norma processual penal só terá aplicabilidade aos crimes que forem praticados após sua entrada em vigor, tal como ocorre com a lei penal material.",
@@ -190,7 +190,7 @@ const QUESTOES_PCAL_LOTE54 = [
   },
   {
     id: "PP-080", disciplina: "Processo Penal", assunto: "Disposições preliminares", subassunto: "Não retroatividade da lei processual penal",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (CPP, art. 2º; CP, art. 2º, parágrafo único)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 60, probReaparecer: 0.85,
     enunciado: "Lei nova mais benéfica, quando modifica procedimentos no processo penal, retroage e impõe a renovação dos atos processuais já praticados sob a vigência da lei anterior.",
@@ -209,7 +209,7 @@ const QUESTOES_PCAL_LOTE54 = [
   },
   {
     id: "PP-081", disciplina: "Processo Penal", assunto: "Disposições preliminares", subassunto: "Aplicação imediata e isolamento dos atos processuais",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (CPP, art. 2º)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.85,
     enunciado: "A lei processual penal deverá ser aplicada imediatamente, sem que isso prejudique a validade dos atos realizados sob a vigência da lei anterior, tampouco constitua ofensa ao princípio da irretroatividade.",

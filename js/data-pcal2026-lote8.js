@@ -17,7 +17,7 @@ const QUESTOES_PCAL_LOTE8 = [
   /* ===== DIREITO PENAL — CRIMES CONTRA A PESSOA ===== */
   {
     id: "DP-025", disciplina: "Direito Penal", assunto: "Crimes contra a pessoa", subassunto: "Constrangimento ilegal",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 40, probReaparecer: 0.75,
     enunciado: "Comete constrangimento ilegal quem constrange alguém, mediante violência ou grave ameaça, ou depois de lhe haver reduzido a capacidade de resistência, a não fazer o que a lei permite ou a fazer o que ela não manda.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "não fazer o que a lei permite",
@@ -35,7 +35,7 @@ const QUESTOES_PCAL_LOTE8 = [
   },
   {
     id: "DP-026", disciplina: "Direito Penal", assunto: "Crimes contra a pessoa", subassunto: "Ameaça — ação penal",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 40, probReaparecer: 0.75,
     enunciado: "No crime de ameaça, consistente em ameaçar alguém, por palavra, escrito ou gesto, de causar-lhe mal injusto e grave, a ação penal é pública condicionada à representação do ofendido.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "condicionada à representação",
@@ -53,7 +53,7 @@ const QUESTOES_PCAL_LOTE8 = [
   },
   {
     id: "DP-027", disciplina: "Direito Penal", assunto: "Crimes contra a pessoa", subassunto: "Sequestro e cárcere privado",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 45, probReaparecer: 0.72,
     enunciado: "O crime de sequestro ou cárcere privado, que consiste em privar alguém de sua liberdade, é classificado como crime permanente, de modo que a consumação se prolonga no tempo enquanto perdurar a privação da liberdade.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "crime permanente",
@@ -71,7 +71,7 @@ const QUESTOES_PCAL_LOTE8 = [
   },
   {
     id: "DP-028", disciplina: "Direito Penal", assunto: "Crimes contra a pessoa", subassunto: "Omissão de socorro",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 40, probReaparecer: 0.72,
     enunciado: "Configura-se o crime de omissão de socorro quando o agente deixa de prestar assistência, quando possível fazê-lo sem risco pessoal, a criança abandonada ou extraviada, ou a pessoa inválida ou ferida, ao desamparo ou em grave e iminente perigo, podendo também deixar de pedir socorro à autoridade pública.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "sem risco pessoal",
@@ -89,7 +89,7 @@ const QUESTOES_PCAL_LOTE8 = [
   },
   {
     id: "DP-029", disciplina: "Direito Penal", assunto: "Crimes contra a dignidade sexual", subassunto: "Estupro de vulnerável",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 45, probReaparecer: 0.8,
     enunciado: "Segundo entendimento sumulado do STJ, pratica estupro de vulnerável quem mantém conjunção carnal ou ato libidinoso com menor de 14 anos, sendo irrelevante o eventual consentimento da vítima, sua experiência sexual anterior ou a existência de relacionamento amoroso com o agente.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "irrelevante o consentimento",
@@ -109,7 +109,7 @@ const QUESTOES_PCAL_LOTE8 = [
   /* ===== DIREITO PENAL — CRIMES CONTRA A ADMINISTRAÇÃO ===== */
   {
     id: "DP-030", disciplina: "Direito Penal", assunto: "Crimes contra a Administração Pública", subassunto: "Excesso de exação",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 45, probReaparecer: 0.72,
     enunciado: "Comete excesso de exação o funcionário que exige tributo ou contribuição social que sabe ou deveria saber indevido, ou, quando devido, emprega na cobrança meio vexatório ou gravoso não autorizado por lei.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "tributo indevido / meio vexatório",
@@ -127,7 +127,7 @@ const QUESTOES_PCAL_LOTE8 = [
   },
   {
     id: "DP-031", disciplina: "Direito Penal", assunto: "Crimes contra a Administração Pública", subassunto: "Resistência",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 40, probReaparecer: 0.75,
     enunciado: "Configura o crime de resistência a oposição à execução de ato legal, mediante violência ou ameaça a funcionário competente para executá-lo ou a quem lhe esteja prestando auxílio.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "violência ou ameaça / ato legal",
@@ -145,7 +145,7 @@ const QUESTOES_PCAL_LOTE8 = [
   },
   {
     id: "DP-032", disciplina: "Direito Penal", assunto: "Crimes contra a Administração Pública", subassunto: "Desacato",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 45, probReaparecer: 0.75,
     enunciado: "Segundo o entendimento atual dos tribunais superiores, o crime de desacato a funcionário público no exercício da função foi descriminalizado por incompatibilidade com a Convenção Americana sobre Direitos Humanos.",
     gabarito: "E", pegadinha: "juris-mais-lei", palavraChave: "descriminalizado",
@@ -163,7 +163,7 @@ const QUESTOES_PCAL_LOTE8 = [
   },
   {
     id: "DP-033", disciplina: "Direito Penal", assunto: "Crimes contra a Administração Pública", subassunto: "Contrabando × descaminho",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 45, probReaparecer: 0.72,
     enunciado: "O descaminho consiste em importar ou exportar mercadoria cuja entrada ou saída do país seja absolutamente proibida, ao passo que o contrabando se caracteriza pela ilusão, total ou parcial, do pagamento de imposto devido sobre mercadoria permitida.",
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "descaminho × contrabando",
@@ -181,7 +181,7 @@ const QUESTOES_PCAL_LOTE8 = [
   },
   {
     id: "DP-034", disciplina: "Direito Penal", assunto: "Crimes contra a Administração Pública", subassunto: "Peculato mediante erro de outrem",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 45, probReaparecer: 0.7,
     enunciado: "O funcionário público que se apropria de dinheiro ou de qualquer utilidade que, no exercício do cargo, recebeu por erro de outrem, pratica o denominado peculato-estelionato, ou peculato mediante erro de outrem.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "recebeu por erro de outrem",
@@ -201,7 +201,7 @@ const QUESTOES_PCAL_LOTE8 = [
   /* ===== DIREITO PENAL — CRIMES CONTRA A ADMINISTRAÇÃO DA JUSTIÇA ===== */
   {
     id: "DP-035", disciplina: "Direito Penal", assunto: "Crimes contra a Administração da Justiça", subassunto: "Denunciação caluniosa",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 45, probReaparecer: 0.75,
     enunciado: "Pratica denunciação caluniosa quem dá causa à instauração de investigação policial, de processo judicial, de investigação administrativa, de inquérito civil ou de ação de improbidade administrativa contra alguém, imputando-lhe crime de que o sabe inocente.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "imputando crime de que o sabe inocente",
@@ -219,7 +219,7 @@ const QUESTOES_PCAL_LOTE8 = [
   },
   {
     id: "DP-036", disciplina: "Direito Penal", assunto: "Crimes contra a Administração da Justiça", subassunto: "Falso testemunho",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 40, probReaparecer: 0.72,
     enunciado: "O crime de falso testemunho ou falsa perícia consuma-se com a afirmação falsa, a negação ou a omissão da verdade por testemunha, perito, contador, tradutor ou intérprete, em processo judicial, administrativo, inquérito policial ou em juízo arbitral.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "afirmação falsa / omissão da verdade",
@@ -237,7 +237,7 @@ const QUESTOES_PCAL_LOTE8 = [
   },
   {
     id: "DP-037", disciplina: "Direito Penal", assunto: "Crimes contra a Administração da Justiça", subassunto: "Comunicação falsa × autoacusação",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 45, probReaparecer: 0.68,
     enunciado: "Comete o crime de autoacusação falsa quem provoca a ação de autoridade, comunicando a ocorrência de crime ou de contravenção que sabe não ter se verificado.",
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "autoacusação falsa",
@@ -257,7 +257,7 @@ const QUESTOES_PCAL_LOTE8 = [
   /* ===== DIREITO PENAL — CRIMES CONTRA O PATRIMÔNIO ===== */
   {
     id: "DP-038", disciplina: "Direito Penal", assunto: "Crimes contra o patrimônio", subassunto: "Receptação",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 45, probReaparecer: 0.75,
     enunciado: "Na receptação, a punição do agente depende da prévia condenação do autor do crime antecedente que gerou a coisa receptada, em razão da acessoriedade do delito.",
     gabarito: "E", pegadinha: "exigencia-inexistente", palavraChave: "depende da prévia condenação",
@@ -277,7 +277,7 @@ const QUESTOES_PCAL_LOTE8 = [
   /* ===== RACIOCÍNIO LÓGICO-MATEMÁTICO ===== */
   {
     id: "RL-012", disciplina: "Raciocínio Lógico-Matemático", assunto: "Lógica de argumentação", subassunto: "Modus tollens",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 50, probReaparecer: 0.85,
     enunciado: "Considere o argumento: 'Se o suspeito é culpado, então ele estava no local do crime. O suspeito não estava no local do crime. Logo, o suspeito não é culpado.' Esse argumento é válido, correspondendo à forma conhecida como modus tollens.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "modus tollens",
@@ -295,7 +295,7 @@ const QUESTOES_PCAL_LOTE8 = [
   },
   {
     id: "RL-013", disciplina: "Raciocínio Lógico-Matemático", assunto: "Progressões", subassunto: "Progressão aritmética",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 60, probReaparecer: 0.78,
     enunciado: "Em uma progressão aritmética de primeiro termo igual a 3 e razão igual a 5, o décimo termo é igual a 48.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "a10 = a1 + 9r",
@@ -313,7 +313,7 @@ const QUESTOES_PCAL_LOTE8 = [
   },
   {
     id: "RL-014", disciplina: "Raciocínio Lógico-Matemático", assunto: "Análise combinatória", subassunto: "Arranjo × combinação",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 55, probReaparecer: 0.8,
     enunciado: "Para formar uma comissão de três integrantes, sem cargos definidos, a partir de um grupo de cinco policiais, deve-se utilizar o conceito de combinação, pois a ordem de escolha dos integrantes é irrelevante.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "ordem irrelevante = combinação",
@@ -331,7 +331,7 @@ const QUESTOES_PCAL_LOTE8 = [
   },
   {
     id: "RL-015", disciplina: "Raciocínio Lógico-Matemático", assunto: "Operações com conjuntos", subassunto: "Princípio da inclusão-exclusão",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 60, probReaparecer: 0.78,
     enunciado: "Em um grupo de 100 investigados, 60 usam determinada rede social A e 50 usam a rede B, sendo que 30 usam ambas. Nessa situação, exatamente 20 investigados não usam nenhuma das duas redes.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "inclusão-exclusão",
@@ -349,7 +349,7 @@ const QUESTOES_PCAL_LOTE8 = [
   },
   {
     id: "RL-016", disciplina: "Raciocínio Lógico-Matemático", assunto: "Porcentagem", subassunto: "Variações percentuais sucessivas",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 55, probReaparecer: 0.78,
     enunciado: "Um valor que sofre um aumento de 10% e, em seguida, uma redução de 10% sobre o novo valor retorna exatamente ao seu valor original.",
     gabarito: "E", pegadinha: "exigencia-inexistente", palavraChave: "aumento e redução de 10%",
@@ -369,7 +369,7 @@ const QUESTOES_PCAL_LOTE8 = [
   /* ===== LÍNGUA PORTUGUESA ===== */
   {
     id: "PT-010", disciplina: "Língua Portuguesa", assunto: "Sintaxe", subassunto: "Vírgula entre sujeito e verbo",
-    concurso: "PCAL", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Escrivão","Agente","Especialista em Saúde — Fisioterapia"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 45, probReaparecer: 0.8,
     textoApoio: "Os agentes responsáveis pela investigação apresentaram o relatório final à autoridade.",
     enunciado: "A inserção de uma vírgula imediatamente após 'investigação' preservaria a correção gramatical do período, por isolar o sujeito da oração.",
@@ -388,7 +388,7 @@ const QUESTOES_PCAL_LOTE8 = [
   },
   {
     id: "PT-011", disciplina: "Língua Portuguesa", assunto: "Sintaxe", subassunto: "Paralelismo",
-    concurso: "PCAL", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Escrivão","Agente","Especialista em Saúde — Fisioterapia"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 45, probReaparecer: 0.75,
     enunciado: "No período 'A autoridade recomendou cautela e que os agentes agissem com discrição', há quebra de paralelismo sintático, que seria corrigida pela reescrita 'A autoridade recomendou cautela e discrição aos agentes'.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "paralelismo sintático",
@@ -406,7 +406,7 @@ const QUESTOES_PCAL_LOTE8 = [
   },
   {
     id: "PT-012", disciplina: "Língua Portuguesa", assunto: "Regência verbal", subassunto: "Verbo 'preferir'",
-    concurso: "PCAL", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Escrivão","Agente","Especialista em Saúde — Fisioterapia"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 40, probReaparecer: 0.72,
     enunciado: "De acordo com a norma-padrão, a construção 'prefiro atuar em campo do que trabalhar no gabinete' está gramaticalmente correta quanto à regência do verbo 'preferir'.",
     gabarito: "E", pegadinha: "exigencia-inexistente", palavraChave: "prefiro ... do que",
@@ -426,7 +426,7 @@ const QUESTOES_PCAL_LOTE8 = [
   /* ===== PROCESSO PENAL ===== */
   {
     id: "PP-025", disciplina: "Processo Penal", assunto: "Ação penal", subassunto: "Princípios da ação penal pública",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 40, probReaparecer: 0.8,
     enunciado: "A ação penal pública rege-se, entre outros, pelos princípios da obrigatoriedade e da indisponibilidade, de modo que, presentes os requisitos legais, o Ministério Público está, em regra, obrigado a oferecer a denúncia e não pode dela desistir.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "obrigatoriedade / indisponibilidade",
@@ -444,7 +444,7 @@ const QUESTOES_PCAL_LOTE8 = [
   },
   {
     id: "PP-026", disciplina: "Processo Penal", assunto: "Competência", subassunto: "Lugar da infração",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 40, probReaparecer: 0.75,
     enunciado: "Como regra geral, a competência para o processo e julgamento será determinada pelo lugar em que se consumar a infração ou, no caso de tentativa, pelo lugar em que for praticado o último ato de execução.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "lugar da consumação",
@@ -462,7 +462,7 @@ const QUESTOES_PCAL_LOTE8 = [
   },
   {
     id: "PP-027", disciplina: "Processo Penal", assunto: "Ação penal", subassunto: "Prazo para oferecimento da denúncia",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 40, probReaparecer: 0.75,
     enunciado: "O prazo para o oferecimento da denúncia, estando o réu preso, é de cinco dias, contados da data em que o órgão do Ministério Público receber os autos do inquérito policial; se solto, o prazo é de quinze dias.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "cinco dias preso / quinze solto",
@@ -482,7 +482,7 @@ const QUESTOES_PCAL_LOTE8 = [
   /* ===== DIREITO CONSTITUCIONAL ===== */
   {
     id: "DC-014", disciplina: "Direito Constitucional", assunto: "Direitos e garantias fundamentais", subassunto: "Provas ilícitas",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 40, probReaparecer: 0.85,
     enunciado: "São inadmissíveis, no processo, as provas obtidas por meios ilícitos, garantia expressamente prevista no rol de direitos e garantias fundamentais da Constituição Federal.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "provas obtidas por meios ilícitos",
@@ -500,7 +500,7 @@ const QUESTOES_PCAL_LOTE8 = [
   },
   {
     id: "DC-015", disciplina: "Direito Constitucional", assunto: "Segurança pública", subassunto: "Subordinação das polícias",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 40, probReaparecer: 0.85,
     enunciado: "As polícias civis, os corpos de bombeiros militares e as polícias militares subordinam-se aos Governadores dos Estados, do Distrito Federal e dos Territórios.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "subordinam-se aos Governadores",
@@ -518,7 +518,7 @@ const QUESTOES_PCAL_LOTE8 = [
   },
   {
     id: "DC-016", disciplina: "Direito Constitucional", assunto: "Direitos e garantias fundamentais", subassunto: "Devido processo, contraditório e ampla defesa",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 40, probReaparecer: 0.82,
     enunciado: "Aos litigantes, em processo judicial ou administrativo, e aos acusados em geral são assegurados o contraditório e a ampla defesa, com os meios e recursos a ela inerentes.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "processo judicial ou administrativo",
@@ -538,7 +538,7 @@ const QUESTOES_PCAL_LOTE8 = [
   /* ===== LEGISLAÇÃO PENAL ESPECIAL ===== */
   {
     id: "LE-034", disciplina: "Legislação Especial", assunto: "Crimes ambientais", subassunto: "Responsabilidade da pessoa jurídica",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 45, probReaparecer: 0.78,
     enunciado: "Conforme a Lei nº 9.605/1998 e a jurisprudência dos tribunais superiores, a pessoa jurídica pode ser responsabilizada penalmente por crimes ambientais, não se exigindo, atualmente, a simultânea imputação da pessoa física para a validade da ação penal (superada a teoria da dupla imputação).",
     gabarito: "C", pegadinha: "juris-mais-lei", palavraChave: "superada a dupla imputação",
@@ -556,7 +556,7 @@ const QUESTOES_PCAL_LOTE8 = [
   },
   {
     id: "LE-035", disciplina: "Legislação Especial", assunto: "Crimes contra a ordem tributária", subassunto: "Relações de consumo (Lei 8.137/1990)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 40, probReaparecer: 0.7,
     enunciado: "A Lei nº 8.137/1990, além dos crimes contra a ordem tributária e econômica, tipifica condutas lesivas às relações de consumo, como vender ou expor à venda mercadoria cujas condições de fabricação, distribuição ou apresentação estejam em desacordo com as normas legais.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "relações de consumo",

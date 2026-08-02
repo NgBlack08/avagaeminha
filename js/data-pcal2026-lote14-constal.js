@@ -24,7 +24,7 @@ const QUESTOES_PCAL_LOTE14 = [
   /* ===== SERVIDORES PÚBLICOS — REGIME, REMUNERAÇÃO E JORNADA ===== */
   {
     id: "LI-024", disciplina: "Legislação Institucional (AL)", assunto: "Constituição de Alagoas", subassunto: "Regime jurídico único (art. 54)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Constituição de AL, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 45, probReaparecer: 0.88,
     enunciado: "O Estado de Alagoas e seus municípios devem instituir regime jurídico único para todos os servidores da administração direta, autárquica e fundacional.",
@@ -43,7 +43,7 @@ const QUESTOES_PCAL_LOTE14 = [
   },
   {
     id: "LI-025", disciplina: "Legislação Institucional (AL)", assunto: "Constituição de Alagoas", subassunto: "Piso salarial (art. 55)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Constituição de AL, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 40, probReaparecer: 0.82,
     enunciado: "O piso salarial dos servidores públicos do Estado de Alagoas nunca poderá ser inferior a dois salários mínimos nacionais.",
@@ -62,7 +62,7 @@ const QUESTOES_PCAL_LOTE14 = [
   },
   {
     id: "LI-026", disciplina: "Legislação Institucional (AL)", assunto: "Constituição de Alagoas", subassunto: "Jornada de trabalho (art. 55)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Constituição de AL, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 40, probReaparecer: 0.82,
     enunciado: "A jornada de trabalho dos servidores públicos estaduais é de até oito horas diárias e quarenta horas semanais, admitida a compensação de horários.",
@@ -81,7 +81,7 @@ const QUESTOES_PCAL_LOTE14 = [
   },
   {
     id: "LI-027", disciplina: "Legislação Institucional (AL)", assunto: "Constituição de Alagoas", subassunto: "Adicional de horas extras e noturno (art. 55)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Constituição de AL, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 40, probReaparecer: 0.8,
     enunciado: "O adicional devido pelos serviços extraordinários e noturnos deve corresponder a, no mínimo, cinquenta por cento sobre o valor da hora normal de trabalho.",
@@ -102,7 +102,7 @@ const QUESTOES_PCAL_LOTE14 = [
   /* ===== LOTAÇÃO, ESTABILIDADE E DISPONIBILIDADE ===== */
   {
     id: "LI-028", disciplina: "Legislação Institucional (AL)", assunto: "Constituição de Alagoas", subassunto: "Lotação de cônjuges e companheiros (art. 56)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Constituição de AL, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 45, probReaparecer: 0.85,
     enunciado: "O direito à lotação na mesma localidade, assegurado pela Constituição estadual, alcança apenas os cônjuges, não se estendendo aos companheiros em união estável.",
@@ -121,7 +121,7 @@ const QUESTOES_PCAL_LOTE14 = [
   },
   {
     id: "LI-029", disciplina: "Legislação Institucional (AL)", assunto: "Constituição de Alagoas", subassunto: "Lotação conjunta — exceção (art. 56)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Constituição de AL, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 50, probReaparecer: 0.75,
     enunciado: "Tratando-se de membros da Magistratura ou do Ministério Público, o direito à lotação na mesma localidade somente se aplica quando houver mais de uma Vara na comarca.",
@@ -140,7 +140,7 @@ const QUESTOES_PCAL_LOTE14 = [
   },
   {
     id: "LI-030", disciplina: "Legislação Institucional (AL)", assunto: "Constituição de Alagoas", subassunto: "Mora na apreciação da aposentadoria (art. 57, § 3º)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Constituição de AL, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 50, probReaparecer: 0.85,
     enunciado: "Decorridos trinta dias do requerimento de aposentadoria sem decisão da administração, o servidor fica desobrigado de trabalhar, mantendo a remuneração integral até a decisão final.",
@@ -159,7 +159,7 @@ const QUESTOES_PCAL_LOTE14 = [
   },
   {
     id: "LI-031", disciplina: "Legislação Institucional (AL)", assunto: "Constituição de Alagoas", subassunto: "Estabilidade do servidor",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Constituição de AL, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 40, probReaparecer: 0.85,
     enunciado: "A estabilidade no serviço público estadual é adquirida pelos servidores aprovados em concurso público após dois anos de efetivo exercício no cargo.",
@@ -178,7 +178,7 @@ const QUESTOES_PCAL_LOTE14 = [
   },
   {
     id: "LI-032", disciplina: "Legislação Institucional (AL)", assunto: "Constituição de Alagoas", subassunto: "Disponibilidade por extinção do cargo",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Constituição de AL, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 45, probReaparecer: 0.78,
     enunciado: "Extinto o cargo ou declarada a sua desnecessidade, o servidor estável será posto em disponibilidade, com remuneração proporcional ao tempo de serviço e aproveitamento prioritário em vaga compatível.",
@@ -197,7 +197,7 @@ const QUESTOES_PCAL_LOTE14 = [
   },
   {
     id: "LI-033", disciplina: "Legislação Institucional (AL)", assunto: "Constituição de Alagoas", subassunto: "Participação em órgãos colegiados",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Constituição de AL, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 45, probReaparecer: 0.72,
     enunciado: "É permitido ao servidor público civil ou militar do Estado de Alagoas participar simultaneamente de mais de um órgão colegiado remunerado, desde que haja compatibilidade de horários.",
@@ -216,7 +216,7 @@ const QUESTOES_PCAL_LOTE14 = [
   },
   {
     id: "LI-034", disciplina: "Legislação Institucional (AL)", assunto: "Constituição de Alagoas", subassunto: "Empregados de estatais (art. 62)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Constituição de AL, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 45, probReaparecer: 0.7,
     enunciado: "Aos empregados das empresas públicas e das sociedades de economia mista do Estado de Alagoas é assegurado o direito à participação nos lucros e na gestão da empresa.",
@@ -237,7 +237,7 @@ const QUESTOES_PCAL_LOTE14 = [
   /* ===== SERVIDORES MILITARES ESTADUAIS ===== */
   {
     id: "LI-035", disciplina: "Legislação Institucional (AL)", assunto: "Constituição de Alagoas", subassunto: "Conferimento de patentes",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Constituição de AL, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 45, probReaparecer: 0.75,
     enunciado: "As patentes dos oficiais militares estaduais são conferidas pelo Comandante-Geral da Polícia Militar, com prerrogativas asseguradas apenas durante a atividade.",
@@ -256,7 +256,7 @@ const QUESTOES_PCAL_LOTE14 = [
   },
   {
     id: "LI-036", disciplina: "Legislação Institucional (AL)", assunto: "Constituição de Alagoas", subassunto: "Filiação partidária de militares",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Constituição de AL, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 40, probReaparecer: 0.75,
     enunciado: "É facultada ao militar estadual em atividade a filiação a partido político, desde que não exerça atividade político-partidária durante o expediente.",
@@ -275,7 +275,7 @@ const QUESTOES_PCAL_LOTE14 = [
   },
   {
     id: "LI-037", disciplina: "Legislação Institucional (AL)", assunto: "Constituição de Alagoas", subassunto: "Perda de posto e patente",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Constituição de AL, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 50, probReaparecer: 0.72,
     enunciado: "O oficial militar estadual somente perderá o posto e a patente se for julgado indigno do oficialato ou com ele incompatível por decisão do órgão colegiado militar competente, sendo a esse julgamento submetido o oficial condenado a pena privativa de liberdade superior a dois anos.",
@@ -296,7 +296,7 @@ const QUESTOES_PCAL_LOTE14 = [
   /* ===== SISTEMA DE SEGURANÇA PÚBLICA ===== */
   {
     id: "LI-038", disciplina: "Legislação Institucional (AL)", assunto: "Constituição de Alagoas", subassunto: "Segurança pública — conceito",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Constituição de AL, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 1, tempoIdealSeg: 35, probReaparecer: 0.88,
     enunciado: "A segurança pública constitui dever do Estado, direito e responsabilidade de todos, tendo por objetivos a preservação da ordem pública e a incolumidade das pessoas e do patrimônio.",
@@ -315,7 +315,7 @@ const QUESTOES_PCAL_LOTE14 = [
   },
   {
     id: "LI-039", disciplina: "Legislação Institucional (AL)", assunto: "Constituição de Alagoas", subassunto: "Subordinação da Polícia Civil",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Constituição de AL, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 45, probReaparecer: 0.85,
     enunciado: "A Polícia Civil de Alagoas, incumbida das funções de polícia judiciária e da apuração de infrações penais, exceto as militares, subordina-se diretamente ao Secretário de Estado da Segurança Pública.",
@@ -334,7 +334,7 @@ const QUESTOES_PCAL_LOTE14 = [
   },
   {
     id: "LI-040", disciplina: "Legislação Institucional (AL)", assunto: "Constituição de Alagoas", subassunto: "Guardas municipais — porte de arma",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Constituição de AL, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 50, probReaparecer: 0.8,
     enunciado: "Nos termos da Constituição do Estado de Alagoas, os integrantes das guardas municipais podem portar arma de fogo sem restrições, independentemente de autorização específica.",
@@ -353,7 +353,7 @@ const QUESTOES_PCAL_LOTE14 = [
   },
   {
     id: "LI-041", disciplina: "Legislação Institucional (AL)", assunto: "Constituição de Alagoas", subassunto: "Guardas municipais — criação e supervisão",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Constituição de AL, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 50, probReaparecer: 0.75,
     enunciado: "Os municípios alagoanos podem criar guardas municipais na forma de lei complementar estadual, ficando essas guardas supervisionadas operacionalmente pela Polícia Militar do Estado.",
@@ -372,7 +372,7 @@ const QUESTOES_PCAL_LOTE14 = [
   },
   {
     id: "LI-042", disciplina: "Legislação Institucional (AL)", assunto: "Constituição de Alagoas", subassunto: "Comando da PM e do Corpo de Bombeiros",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Constituição de AL, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 45, probReaparecer: 0.75,
     enunciado: "Os cargos de Comandante-Geral da Polícia Militar e do Corpo de Bombeiros Militar podem ser ocupados por oficiais da ativa ou da reserva, desde que pertencentes ao último posto da hierarquia.",
@@ -391,7 +391,7 @@ const QUESTOES_PCAL_LOTE14 = [
   },
   {
     id: "LI-043", disciplina: "Legislação Institucional (AL)", assunto: "Constituição de Alagoas", subassunto: "Carreiras da Polícia Civil",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Constituição de AL, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 50, probReaparecer: 0.85,
     enunciado: "Lei específica organizará os cargos da Polícia Civil em carreira estruturada, sendo as funções de polícia judiciária privativas das respectivas carreiras policiais civis.",

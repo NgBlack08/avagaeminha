@@ -12,7 +12,7 @@ const QUESTOES_PCAL_LOTE18 = [
 
   {
     id: "DA-024", disciplina: "Direito Administrativo", assunto: "Lei de Licitações (14.133/2021)", subassunto: "Modalidades (art. 28)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei 14.133/2021, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 55, probReaparecer: 0.88,
     enunciado: "São modalidades de licitação previstas na Lei 14.133/2021: concorrência, tomada de preços, convite, concurso, leilão e pregão.",
@@ -31,7 +31,7 @@ const QUESTOES_PCAL_LOTE18 = [
   },
   {
     id: "DA-025", disciplina: "Direito Administrativo", assunto: "Lei de Licitações (14.133/2021)", subassunto: "Diálogo competitivo (art. 32)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei 14.133/2021, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.8,
     enunciado: "O diálogo competitivo é modalidade de licitação introduzida pela Lei 14.133/2021, destinada à contratação de objetos que envolvam inovação tecnológica ou soluções não disponíveis de forma pronta no mercado.",
@@ -50,7 +50,7 @@ const QUESTOES_PCAL_LOTE18 = [
   },
   {
     id: "DA-026", disciplina: "Direito Administrativo", assunto: "Lei de Licitações (14.133/2021)", subassunto: "Pregão (art. 29)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei 14.133/2021, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 55, probReaparecer: 0.82,
     enunciado: "O pregão é a modalidade adequada e obrigatória para a contratação de bens e serviços especiais de engenharia.",
@@ -69,7 +69,7 @@ const QUESTOES_PCAL_LOTE18 = [
   },
   {
     id: "DA-027", disciplina: "Direito Administrativo", assunto: "Lei de Licitações (14.133/2021)", subassunto: "Critérios de julgamento (art. 33)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei 14.133/2021, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.8,
     enunciado: "São critérios de julgamento das propostas na Lei 14.133/2021, entre outros, o menor preço, o maior desconto, a melhor técnica ou conteúdo artístico, a técnica e preço, o maior lance e o maior retorno econômico.",
@@ -88,7 +88,7 @@ const QUESTOES_PCAL_LOTE18 = [
   },
   {
     id: "DA-028", disciplina: "Direito Administrativo", assunto: "Lei de Licitações (14.133/2021)", subassunto: "Fases (art. 17)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei 14.133/2021, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 55, probReaparecer: 0.85,
     enunciado: "Na nova Lei de Licitações, em regra, a fase de habilitação antecede a fase de julgamento das propostas.",
@@ -107,7 +107,7 @@ const QUESTOES_PCAL_LOTE18 = [
   },
   {
     id: "DA-029", disciplina: "Direito Administrativo", assunto: "Lei de Licitações (14.133/2021)", subassunto: "Inversão de fases (art. 17, § 1º)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei 14.133/2021, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.78,
     enunciado: "Segundo a Lei 14.133/2021, a fase de julgamento, em regra, antecede a de habilitação, admitindo-se a inversão dessa ordem mediante ato motivado e previsão expressa no edital.",
@@ -126,7 +126,7 @@ const QUESTOES_PCAL_LOTE18 = [
   },
   {
     id: "DA-030", disciplina: "Direito Administrativo", assunto: "Lei de Licitações (14.133/2021)", subassunto: "Contratação direta",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei 14.133/2021, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.78,
     enunciado: "A contratação direta compreende as hipóteses de inexigibilidade e de dispensa de licitação (esta abrangendo a licitação dispensável e a dispensada).",
@@ -145,7 +145,7 @@ const QUESTOES_PCAL_LOTE18 = [
   },
   {
     id: "DA-031", disciplina: "Direito Administrativo", assunto: "Lei de Licitações (14.133/2021)", subassunto: "Inexigibilidade (art. 74)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei 14.133/2021, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 55, probReaparecer: 0.78,
     enunciado: "As hipóteses de inexigibilidade de licitação previstas na Lei 14.133/2021 constituem rol taxativo.",
@@ -164,7 +164,7 @@ const QUESTOES_PCAL_LOTE18 = [
   },
   {
     id: "DA-032", disciplina: "Direito Administrativo", assunto: "Lei de Licitações (14.133/2021)", subassunto: "Dispensa (art. 75)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei 14.133/2021, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.76,
     enunciado: "As hipóteses de licitação dispensável previstas na Lei 14.133/2021 constituem rol taxativo, não admitindo ampliação por analogia.",
@@ -183,7 +183,7 @@ const QUESTOES_PCAL_LOTE18 = [
   },
   {
     id: "DA-033", disciplina: "Direito Administrativo", assunto: "Lei de Licitações (14.133/2021)", subassunto: "Dispensa por valor (art. 75, I e II)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei 14.133/2021, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 55, probReaparecer: 0.76,
     enunciado: "É dispensável a licitação para contratação de obras e serviços de engenharia de valor até R$ 50.000,00, mesmo patamar aplicável às demais compras e serviços.",
@@ -202,7 +202,7 @@ const QUESTOES_PCAL_LOTE18 = [
   },
   {
     id: "DA-034", disciplina: "Direito Administrativo", assunto: "Lei de Licitações (14.133/2021)", subassunto: "Agente de contratação (art. 8º)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei 14.133/2021, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.75,
     enunciado: "A Lei 14.133/2021 prevê a figura do agente de contratação, servidor designado pela autoridade competente para tomar decisões e conduzir o processo licitatório, auxiliado por equipe de apoio.",
@@ -221,7 +221,7 @@ const QUESTOES_PCAL_LOTE18 = [
   },
   {
     id: "DA-035", disciplina: "Direito Administrativo", assunto: "Lei de Licitações (14.133/2021)", subassunto: "Princípios (art. 5º)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei 14.133/2021, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.74,
     enunciado: "A Lei 14.133/2021 relaciona, entre os princípios aplicáveis às licitações e contratos, além da legalidade, impessoalidade, moralidade, publicidade e eficiência, também o planejamento, a segregação de funções e a segurança jurídica.",
@@ -240,7 +240,7 @@ const QUESTOES_PCAL_LOTE18 = [
   },
   {
     id: "DA-036", disciplina: "Direito Administrativo", assunto: "Lei de Licitações (14.133/2021)", subassunto: "Modo de disputa (art. 56)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei 14.133/2021, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.72,
     enunciado: "Na Lei 14.133/2021, o modo de disputa deve ser sempre aberto, sendo vedada a utilização do modo fechado.",
@@ -259,7 +259,7 @@ const QUESTOES_PCAL_LOTE18 = [
   },
   {
     id: "DA-037", disciplina: "Direito Administrativo", assunto: "Lei de Licitações (14.133/2021)", subassunto: "Rito comum (concorrência e pregão)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei 14.133/2021, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 55, probReaparecer: 0.72,
     enunciado: "Na Lei 14.133/2021, a concorrência e o pregão seguem o mesmo rito procedimental comum, diferenciando-se essencialmente quanto ao objeto e aos critérios de julgamento aplicáveis.",

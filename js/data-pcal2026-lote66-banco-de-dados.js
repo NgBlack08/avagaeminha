@@ -35,7 +35,7 @@ const QUESTOES_PCAL_LOTE66 = [
   /* ===== DADO, INFORMAÇÃO E TIPOLOGIA ===== */
   {
     id: "TI-187", disciplina: "TI e Segurança Cibernética", assunto: "Banco de dados", subassunto: "Dado e informação",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de literalidade técnica)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.79,
     enunciado: "Em processamento de dados, o dado constitui a matéria-prima bruta, ao passo que a informação resulta da organização e do tratamento desses dados de modo a lhes conferir significado para quem os recebe.",
@@ -54,7 +54,7 @@ const QUESTOES_PCAL_LOTE66 = [
   },
   {
     id: "TI-188", disciplina: "TI e Segurança Cibernética", assunto: "Banco de dados", subassunto: "Dados estruturados e não estruturados",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de generalização)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 70, probReaparecer: 0.83,
     enunciado: "Por não observarem formato predefinido, os dados não estruturados são mais simples de manipular e de consultar do que os dados estruturados, o que dispensa recursos especializados de processamento.",
@@ -73,7 +73,7 @@ const QUESTOES_PCAL_LOTE66 = [
   },
   {
     id: "TI-189", disciplina: "TI e Segurança Cibernética", assunto: "Banco de dados", subassunto: "Dados estruturados e não estruturados",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de literalidade técnica)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 60, probReaparecer: 0.85,
     enunciado: "Dados estruturados obedecem a esquema rígido definido antes da carga, com campos e tipos determinados, enquanto dados não estruturados não se sujeitam a modelo prévio, sendo típicos os textos livres, as imagens, os áudios e os vídeos.",
@@ -92,7 +92,7 @@ const QUESTOES_PCAL_LOTE66 = [
   },
   {
     id: "TI-190", disciplina: "TI e Segurança Cibernética", assunto: "Banco de dados", subassunto: "Dados semiestruturados",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de troca de conceitos)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 80, probReaparecer: 0.78,
     enunciado: "Documentos em HTML e em XML classificam-se como dados estruturados, dado que suas marcações definem rigidamente o esquema do conteúdo, de modo equivalente ao que ocorre com as tabelas de um banco de dados relacional.",
@@ -111,7 +111,7 @@ const QUESTOES_PCAL_LOTE66 = [
   },
   {
     id: "TI-191", disciplina: "TI e Segurança Cibernética", assunto: "Banco de dados", subassunto: "Dados não estruturados",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de termo absoluto)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 75, probReaparecer: 0.74,
     enunciado: "Em arquiteturas de Big Data, os dados não estruturados não admitem indexação nem consulta direta, sendo obrigatória sua conversão prévia em dados estruturados para que qualquer análise possa ser realizada.",
@@ -130,7 +130,7 @@ const QUESTOES_PCAL_LOTE66 = [
   },
   {
     id: "TI-192", disciplina: "TI e Segurança Cibernética", assunto: "Banco de dados", subassunto: "Big Data",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de generalização)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 65, probReaparecer: 0.8,
     enunciado: "Big Data consiste unicamente no armazenamento de grandes volumes de dados estruturados em bancos de dados relacionais, mantendo-se fora do conceito os dados não estruturados e semiestruturados.",
@@ -149,7 +149,7 @@ const QUESTOES_PCAL_LOTE66 = [
   },
   {
     id: "TI-193", disciplina: "TI e Segurança Cibernética", assunto: "Banco de dados", subassunto: "Big Data",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de literalidade técnica)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 60, probReaparecer: 0.82,
     enunciado: "Entre os Vs comumente associados ao Big Data, a variedade designa a convivência de diferentes tipos de dados — estruturados, semiestruturados e não estruturados — em um mesmo ambiente analítico.",
@@ -170,7 +170,7 @@ const QUESTOES_PCAL_LOTE66 = [
   /* ===== DATA LAKE, DATA WAREHOUSE E ETL ===== */
   {
     id: "TI-194", disciplina: "TI e Segurança Cibernética", assunto: "Banco de dados", subassunto: "Data lake",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de literalidade técnica)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 75, probReaparecer: 0.76,
     enunciado: "O data lake armazena dados brutos, de origens diversas, em seu formato original, sem a imposição prévia do esquema rígido característico do banco de dados relacional, o que favorece abordagens em que a transformação ocorre após a carga.",
@@ -189,7 +189,7 @@ const QUESTOES_PCAL_LOTE66 = [
   },
   {
     id: "TI-195", disciplina: "TI e Segurança Cibernética", assunto: "Banco de dados", subassunto: "Data lake e data warehouse",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de troca de conceitos)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 80, probReaparecer: 0.72,
     enunciado: "O data warehouse caracteriza-se por receber os dados em formato bruto, sem modelagem prévia, ao passo que o data lake somente admite dados já transformados e organizados segundo esquema dimensional definido antes da carga.",
@@ -208,7 +208,7 @@ const QUESTOES_PCAL_LOTE66 = [
   },
   {
     id: "TI-196", disciplina: "TI e Segurança Cibernética", assunto: "Banco de dados", subassunto: "ETL e ELT",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de literalidade técnica)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 75, probReaparecer: 0.68,
     enunciado: "No processo de ETL, a padronização de formatos, a limpeza de inconsistências e a decomposição de campos com múltiplas ocorrências em registros distintos são atividades próprias da etapa de transformação.",
@@ -227,7 +227,7 @@ const QUESTOES_PCAL_LOTE66 = [
   },
   {
     id: "TI-197", disciplina: "TI e Segurança Cibernética", assunto: "Banco de dados", subassunto: "OLTP e OLAP",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de troca de conceitos)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 85, probReaparecer: 0.7,
     enunciado: "O data warehouse é orientado à transação, sendo otimizado para inserções e atualizações frequentes de pequeno volume, características que o tornam adequado ao processamento operacional do dia a dia.",
@@ -248,7 +248,7 @@ const QUESTOES_PCAL_LOTE66 = [
   /* ===== MODELAGEM E NORMALIZAÇÃO ===== */
   {
     id: "TI-198", disciplina: "TI e Segurança Cibernética", assunto: "Banco de dados", subassunto: "Relacionamentos e cardinalidade",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de literalidade técnica)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 80, probReaparecer: 0.81,
     enunciado: "O relacionamento de cardinalidade N:N identificado entre duas entidades no modelo lógico exige, na implementação relacional, a criação de uma terceira tabela, que armazena as chaves estrangeiras correspondentes às chaves primárias das duas tabelas originais.",
@@ -267,7 +267,7 @@ const QUESTOES_PCAL_LOTE66 = [
   },
   {
     id: "TI-199", disciplina: "TI e Segurança Cibernética", assunto: "Banco de dados", subassunto: "Relacionamentos e cardinalidade",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de troca numérica)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 80, probReaparecer: 0.7,
     enunciado: "O relacionamento de cardinalidade 1:N entre duas tabelas exige a criação de tabela associativa, ao passo que o relacionamento N:N é implementado mediante simples inclusão de uma chave estrangeira em uma das tabelas envolvidas.",
@@ -286,7 +286,7 @@ const QUESTOES_PCAL_LOTE66 = [
   },
   {
     id: "TI-200", disciplina: "TI e Segurança Cibernética", assunto: "Banco de dados", subassunto: "Normalização",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de literalidade técnica)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 90, probReaparecer: 0.66,
     enunciado: "A primeira forma normal exige que todos os atributos sejam atômicos, vedando campos multivalorados e grupos repetitivos, requisito que antecede a análise das dependências funcionais tratadas nas formas normais seguintes.",
@@ -305,7 +305,7 @@ const QUESTOES_PCAL_LOTE66 = [
   },
   {
     id: "TI-201", disciplina: "TI e Segurança Cibernética", assunto: "Banco de dados", subassunto: "Normalização",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de troca de conceitos)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 90, probReaparecer: 0.62,
     enunciado: "A segunda forma normal elimina as dependências transitivas entre atributos não chave, ao passo que a terceira forma normal se ocupa das dependências parciais em relação a parte da chave primária composta.",
@@ -326,7 +326,7 @@ const QUESTOES_PCAL_LOTE66 = [
   /* ===== CHAVES E INTEGRIDADE ===== */
   {
     id: "TI-202", disciplina: "TI e Segurança Cibernética", assunto: "Banco de dados", subassunto: "Integridade referencial",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de literalidade técnica)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 65, probReaparecer: 0.87,
     enunciado: "A integridade referencial assegura que todo valor lançado em coluna definida como chave estrangeira corresponda a um valor existente na chave referenciada da outra tabela, o que impede a permanência de registros órfãos.",
@@ -345,7 +345,7 @@ const QUESTOES_PCAL_LOTE66 = [
   },
   {
     id: "TI-203", disciplina: "TI e Segurança Cibernética", assunto: "Banco de dados", subassunto: "Chave estrangeira",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de exigência inexistente)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 80, probReaparecer: 0.6,
     enunciado: "A chave estrangeira deve necessariamente referenciar chave primária situada em tabela diversa daquela em que foi definida, sendo vedado, no modelo relacional, que uma tabela referencie a si própria.",
@@ -364,7 +364,7 @@ const QUESTOES_PCAL_LOTE66 = [
   },
   {
     id: "TI-204", disciplina: "TI e Segurança Cibernética", assunto: "Banco de dados", subassunto: "Chaves primária e única",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de restrição indevida)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 85, probReaparecer: 0.71,
     enunciado: "Somente a chave primária impede, a um só tempo, a duplicidade e a ausência de valor na coluna, uma vez que a restrição de unicidade, embora vede valores repetidos, admite a existência de valor nulo.",
@@ -383,7 +383,7 @@ const QUESTOES_PCAL_LOTE66 = [
   },
   {
     id: "TI-205", disciplina: "TI e Segurança Cibernética", assunto: "Banco de dados", subassunto: "Chaves primária e única",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de troca de conceitos)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 80, probReaparecer: 0.67,
     enunciado: "A coluna definida como chave primária admite valores nulos, desde que não se repitam, ao passo que a coluna submetida à restrição de unicidade não tolera valor nulo em hipótese alguma.",
@@ -402,7 +402,7 @@ const QUESTOES_PCAL_LOTE66 = [
   },
   {
     id: "TI-206", disciplina: "TI e Segurança Cibernética", assunto: "Banco de dados", subassunto: "Restrições de integridade",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de generalização)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 65, probReaparecer: 0.73,
     enunciado: "Restrições de integridade como a chave estrangeira podem ser suprimidas do projeto do banco de dados como técnica corrente de otimização, sem prejuízo à consistência das informações armazenadas.",
@@ -421,7 +421,7 @@ const QUESTOES_PCAL_LOTE66 = [
   },
   {
     id: "TI-207", disciplina: "TI e Segurança Cibernética", assunto: "Banco de dados", subassunto: "Exclusão em cascata",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de termo absoluto)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 85, probReaparecer: 0.76,
     enunciado: "A execução do comando DELETE sobre um registro da tabela pai remove automaticamente todos os registros a ele vinculados nas tabelas filhas, independentemente do modo como a chave estrangeira tenha sido definida.",
@@ -440,7 +440,7 @@ const QUESTOES_PCAL_LOTE66 = [
   },
   {
     id: "TI-208", disciplina: "TI e Segurança Cibernética", assunto: "Banco de dados", subassunto: "Exclusão em cascata",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de exigência inexistente)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 85, probReaparecer: 0.64,
     enunciado: "A propagação da exclusão do registro pai aos registros filhos somente ocorre se a ação referencial correspondente houver sido expressamente declarada na definição da chave estrangeira, admitindo o padrão SQL, entre outras alternativas, a atribuição de valor nulo à coluna referenciadora.",
@@ -461,7 +461,7 @@ const QUESTOES_PCAL_LOTE66 = [
   /* ===== SUBLINGUAGENS SQL ===== */
   {
     id: "TI-209", disciplina: "TI e Segurança Cibernética", assunto: "Linguagem SQL", subassunto: "Sublinguagens (DDL, DML, DCL e TCL)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de literalidade técnica)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 75, probReaparecer: 0.84,
     enunciado: "Na linguagem SQL, os comandos CREATE, ALTER e DROP integram a DDL, por atuarem sobre a estrutura dos objetos do banco, ao passo que GRANT e REVOKE integram a DCL, por disciplinarem privilégios de acesso.",
@@ -480,7 +480,7 @@ const QUESTOES_PCAL_LOTE66 = [
   },
   {
     id: "TI-210", disciplina: "TI e Segurança Cibernética", assunto: "Linguagem SQL", subassunto: "Sublinguagens (DDL, DML, DCL e TCL)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de troca de conceitos)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 65, probReaparecer: 0.8,
     enunciado: "O comando SELECT integra a DDL, uma vez que lhe cabe definir a estrutura lógica dos dados que serão apresentados ao usuário como resultado da consulta.",
@@ -499,7 +499,7 @@ const QUESTOES_PCAL_LOTE66 = [
   },
   {
     id: "TI-211", disciplina: "TI e Segurança Cibernética", assunto: "Linguagem SQL", subassunto: "Comandos de manipulação (DML)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de troca de conceitos)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.77,
     enunciado: "O comando INSERT INTO destina-se à alteração de valores de registros já existentes na tabela, ao passo que a inclusão de novas linhas é realizada pelo comando UPDATE.",
@@ -518,7 +518,7 @@ const QUESTOES_PCAL_LOTE66 = [
   },
   {
     id: "TI-212", disciplina: "TI e Segurança Cibernética", assunto: "Linguagem SQL", subassunto: "Comandos de manipulação (DML)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de termo absoluto)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 70, probReaparecer: 0.82,
     enunciado: "A execução de UPDATE ou de DELETE sem a cláusula WHERE alcança todas as linhas da tabela, razão pela qual tais comandos, executados por engano nessas condições, comprometem a consistência lógica dos dados.",
@@ -537,7 +537,7 @@ const QUESTOES_PCAL_LOTE66 = [
   },
   {
     id: "TI-213", disciplina: "TI e Segurança Cibernética", assunto: "Linguagem SQL", subassunto: "TRUNCATE, DELETE e DROP",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de verdade seguida de falso)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 90, probReaparecer: 0.69,
     enunciado: "O comando DELETE remove linhas segundo o filtro informado e preserva a estrutura da tabela, ao passo que o comando TRUNCATE, por integrar a DML, admite cláusula WHERE para restringir as linhas a serem eliminadas.",
@@ -556,7 +556,7 @@ const QUESTOES_PCAL_LOTE66 = [
   },
   {
     id: "TI-214", disciplina: "TI e Segurança Cibernética", assunto: "Linguagem SQL", subassunto: "TRUNCATE, DELETE e DROP",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de verdade seguida de falso)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 85, probReaparecer: 0.66,
     enunciado: "O comando DROP TABLE elimina a tabela e sua definição do dicionário de dados, o comando TRUNCATE remove todas as linhas mantendo a estrutura, e o comando DELETE remove linhas conforme o filtro aplicado, também preservando a estrutura da tabela.",
@@ -575,7 +575,7 @@ const QUESTOES_PCAL_LOTE66 = [
   },
   {
     id: "TI-215", disciplina: "TI e Segurança Cibernética", assunto: "Linguagem SQL", subassunto: "Controle de transações (TCL)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de troca de conceitos)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 75, probReaparecer: 0.63,
     enunciado: "Os comandos COMMIT e ROLLBACK integram a DCL, por conferirem ao administrador o poder de conceder ou de revogar a efetivação das alterações realizadas por outros usuários no banco de dados.",
@@ -596,7 +596,7 @@ const QUESTOES_PCAL_LOTE66 = [
   /* ===== CONSULTAS SQL ===== */
   {
     id: "TI-216", disciplina: "TI e Segurança Cibernética", assunto: "Linguagem SQL", subassunto: "LIMIT e OFFSET",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de verdade seguida de falso)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 90, probReaparecer: 0.74,
     enunciado: "A execução do comando SELECT * FROM OCORRENCIA LIMIT 10 OFFSET 5 retorna, no máximo, cinco registros, contados a partir do sexto registro do conjunto de resultados.",
@@ -615,7 +615,7 @@ const QUESTOES_PCAL_LOTE66 = [
   },
   {
     id: "TI-217", disciplina: "TI e Segurança Cibernética", assunto: "Linguagem SQL", subassunto: "LIMIT e OFFSET",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de troca numérica)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 85, probReaparecer: 0.65,
     enunciado: "A execução do comando SELECT * FROM OCORRENCIA LIMIT 10 OFFSET 5 retorna, no máximo, dez registros, iniciando-se a apresentação pelo sexto registro do conjunto de resultados.",
@@ -634,7 +634,7 @@ const QUESTOES_PCAL_LOTE66 = [
   },
   {
     id: "TI-218", disciplina: "TI e Segurança Cibernética", assunto: "Linguagem SQL", subassunto: "Comparação com NULL",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de troca de conceitos)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 85, probReaparecer: 0.79,
     enunciado: "Considerando que a coluna id_setor admita valor nulo, o comando SELECT nome FROM SERVIDOR WHERE id_setor = NULL retorna os nomes dos servidores que não possuam setor cadastrado.",
@@ -653,7 +653,7 @@ const QUESTOES_PCAL_LOTE66 = [
   },
   {
     id: "TI-219", disciplina: "TI e Segurança Cibernética", assunto: "Linguagem SQL", subassunto: "Funções de agregação",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de troca de conceitos)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 90, probReaparecer: 0.68,
     enunciado: "As expressões COUNT(*) e COUNT(id_setor) produzem sempre resultados idênticos sobre a mesma tabela, porquanto as funções de agregação do SQL computam os valores nulos como ocorrências válidas.",
@@ -672,7 +672,7 @@ const QUESTOES_PCAL_LOTE66 = [
   },
   {
     id: "TI-220", disciplina: "TI e Segurança Cibernética", assunto: "Linguagem SQL", subassunto: "WHERE e HAVING",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de troca de conceitos)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 85, probReaparecer: 0.72,
     enunciado: "A cláusula HAVING filtra as linhas antes do agrupamento promovido pelo GROUP BY, enquanto a cláusula WHERE se aplica ao resultado já agregado, permitindo restringir grupos com base em funções como SUM e COUNT.",
@@ -691,7 +691,7 @@ const QUESTOES_PCAL_LOTE66 = [
   },
   {
     id: "TI-221", disciplina: "TI e Segurança Cibernética", assunto: "Linguagem SQL", subassunto: "WHERE e HAVING",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de literalidade técnica)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 80, probReaparecer: 0.67,
     enunciado: "Em consulta que agrupe registros por delegacia e apure a quantidade de ocorrências de cada uma, a restrição do resultado às delegacias com mais de cem ocorrências deve ser expressa na cláusula HAVING, e não na cláusula WHERE.",
@@ -710,7 +710,7 @@ const QUESTOES_PCAL_LOTE66 = [
   },
   {
     id: "TI-222", disciplina: "TI e Segurança Cibernética", assunto: "Linguagem SQL", subassunto: "Junções (JOIN)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de troca de conceitos)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 85, probReaparecer: 0.75,
     enunciado: "O INNER JOIN retorna todas as linhas da tabela indicada à esquerda, ainda que não haja correspondência na tabela da direita, ao passo que o LEFT JOIN se restringe às linhas com correspondência em ambas as tabelas.",
@@ -729,7 +729,7 @@ const QUESTOES_PCAL_LOTE66 = [
   },
   {
     id: "TI-223", disciplina: "TI e Segurança Cibernética", assunto: "Linguagem SQL", subassunto: "Junções (JOIN)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de termo absoluto)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 85, probReaparecer: 0.62,
     enunciado: "Na junção interna entre duas tabelas, somente as linhas que satisfaçam a condição de junção em ambas integram o resultado; a omissão dessa condição produz o produto cartesiano entre os conjuntos envolvidos.",
@@ -750,7 +750,7 @@ const QUESTOES_PCAL_LOTE66 = [
   /* ===== OBJETOS DO BANCO ===== */
   {
     id: "TI-224", disciplina: "TI e Segurança Cibernética", assunto: "Banco de dados", subassunto: "Visões (views)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de troca de conceitos)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 80, probReaparecer: 0.78,
     enunciado: "A view é uma tabela física estática que duplica, em novo espaço de disco, os dados da tabela de origem a cada nova linha nela inserida, com a finalidade precípua de reforçar a segurança do perímetro de rede.",
@@ -769,7 +769,7 @@ const QUESTOES_PCAL_LOTE66 = [
   },
   {
     id: "TI-225", disciplina: "TI e Segurança Cibernética", assunto: "Banco de dados", subassunto: "Visões (views)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de literalidade técnica)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 80, probReaparecer: 0.7,
     enunciado: "A view convencional não armazena dados próprios, sendo seu conteúdo derivado das tabelas-base no momento da consulta; já a view materializada persiste fisicamente o resultado, o que exige política de atualização para evitar defasagem.",
@@ -788,7 +788,7 @@ const QUESTOES_PCAL_LOTE66 = [
   },
   {
     id: "TI-226", disciplina: "TI e Segurança Cibernética", assunto: "Banco de dados", subassunto: "Índices",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de literalidade técnica)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 80, probReaparecer: 0.73,
     enunciado: "O índice acelera a recuperação de linhas que atendam a determinado critério de busca, mas onera as operações de inserção, alteração e exclusão, pois a estrutura precisa ser mantida atualizada a cada modificação dos dados.",
@@ -807,7 +807,7 @@ const QUESTOES_PCAL_LOTE66 = [
   },
   {
     id: "TI-227", disciplina: "TI e Segurança Cibernética", assunto: "Banco de dados", subassunto: "Índices",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de generalização)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 80, probReaparecer: 0.66,
     enunciado: "A criação de índices em todas as colunas de uma tabela constitui prática recomendada de otimização, por assegurar ganho de desempenho em qualquer consulta que venha a ser executada sobre ela.",
@@ -828,7 +828,7 @@ const QUESTOES_PCAL_LOTE66 = [
   /* ===== TRANSAÇÕES, NoSQL E SEGURANÇA ===== */
   {
     id: "TI-228", disciplina: "TI e Segurança Cibernética", assunto: "Banco de dados", subassunto: "Propriedades ACID",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de literalidade técnica)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 85, probReaparecer: 0.76,
     enunciado: "A atomicidade assegura que a transação seja efetivada por inteiro ou integralmente desfeita, ao passo que a durabilidade garante que as alterações confirmadas subsistam ainda que sobrevenha falha do sistema imediatamente após a confirmação.",
@@ -847,7 +847,7 @@ const QUESTOES_PCAL_LOTE66 = [
   },
   {
     id: "TI-229", disciplina: "TI e Segurança Cibernética", assunto: "Banco de dados", subassunto: "Propriedades ACID",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de troca de conceitos)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 85, probReaparecer: 0.69,
     enunciado: "O isolamento assegura que a transação seja executada integralmente ou não produza efeito algum, ao passo que a atomicidade impede que transações concorrentes interfiram umas nas outras durante a execução.",
@@ -866,7 +866,7 @@ const QUESTOES_PCAL_LOTE66 = [
   },
   {
     id: "TI-230", disciplina: "TI e Segurança Cibernética", assunto: "Banco de dados", subassunto: "Bancos NoSQL",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de literalidade técnica)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 80, probReaparecer: 0.71,
     enunciado: "Entre as famílias de bancos de dados NoSQL costumam ser arroladas as de chave-valor, as orientadas a documentos, as de famílias de colunas e as orientadas a grafos, esta última especialmente adequada à representação de relações entre entidades, como vínculos entre pessoas.",
@@ -885,7 +885,7 @@ const QUESTOES_PCAL_LOTE66 = [
   },
   {
     id: "TI-231", disciplina: "TI e Segurança Cibernética", assunto: "Banco de dados", subassunto: "Bancos NoSQL",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de generalização)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 85, probReaparecer: 0.65,
     enunciado: "Os bancos de dados NoSQL dispensam qualquer noção de esquema e, por não implementarem controle transacional, jamais asseguram consistência dos dados, o que os torna inadequados a qualquer aplicação crítica.",
@@ -904,7 +904,7 @@ const QUESTOES_PCAL_LOTE66 = [
   },
   {
     id: "TI-232", disciplina: "TI e Segurança Cibernética", assunto: "Banco de dados", subassunto: "Injeção de SQL",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de literalidade técnica)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 85, probReaparecer: 0.8,
     enunciado: "A injeção de SQL decorre da concatenação de entrada não tratada do usuário ao corpo do comando enviado ao banco, e a defesa mais efetiva consiste no emprego de consultas parametrizadas, que separam o comando dos dados fornecidos.",
@@ -923,7 +923,7 @@ const QUESTOES_PCAL_LOTE66 = [
   },
   {
     id: "TI-233", disciplina: "TI e Segurança Cibernética", assunto: "Banco de dados", subassunto: "Injeção de SQL",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de generalização)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 80, probReaparecer: 0.68,
     enunciado: "A validação dos dados realizada exclusivamente no navegador do usuário, por meio de scripts executados no lado cliente, é suficiente para eliminar o risco de injeção de SQL na aplicação.",
@@ -942,7 +942,7 @@ const QUESTOES_PCAL_LOTE66 = [
   },
   {
     id: "TI-234", disciplina: "TI e Segurança Cibernética", assunto: "Banco de dados", subassunto: "Backup e recuperação",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de literalidade técnica)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 85, probReaparecer: 0.61,
     enunciado: "A recuperação do banco de dados a um instante determinado depende da conjugação da cópia de segurança com os registros do log de transações posteriores a ela, razão pela qual o descarte desses registros compromete a restauração a ponto no tempo.",

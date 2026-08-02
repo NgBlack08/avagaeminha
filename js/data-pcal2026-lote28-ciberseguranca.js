@@ -15,7 +15,7 @@ const QUESTOES_PCAL_LOTE28 = [
   /* ===== AUTENTICAÇÃO E PRIVACIDADE (Crimes Cibernéticos — Segurança Digital) ===== */
   {
     id: "CC-015", disciplina: "Crimes Cibernéticos e Segurança Digital", assunto: "Autenticação", subassunto: "Autenticação multifator (MFA)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (segurança digital)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.8,
     enunciado: "A autenticação multifator (MFA) caracteriza-se pela exigência de fatores de verificação de natureza distinta — como algo que o usuário sabe (senha), algo que ele possui (token ou aplicativo) e algo que ele é (biometria) —, não sendo suficiente, para configurá-la, o uso de duas senhas diferentes cadastradas pelo próprio usuário.",
@@ -34,7 +34,7 @@ const QUESTOES_PCAL_LOTE28 = [
   },
   {
     id: "CC-016", disciplina: "Crimes Cibernéticos e Segurança Digital", assunto: "Privacidade", subassunto: "Metadados de geolocalização (EXIF)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (segurança digital)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.75,
     enunciado: "A desativação da opção de geolocalização em fotografias publicadas em redes sociais constitui medida relevante de segurança e privacidade, uma vez que dispositivos móveis modernos costumam incorporar metadados de localização (dados EXIF) aos arquivos de imagem capturados.",
@@ -53,7 +53,7 @@ const QUESTOES_PCAL_LOTE28 = [
   },
   {
     id: "CC-017", disciplina: "Crimes Cibernéticos e Segurança Digital", assunto: "Golpes virtuais", subassunto: "Phishing",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (golpes virtuais)",
     tipo: "CE", dificuldade: 1, tempoIdealSeg: 45, probReaparecer: 0.8,
     enunciado: "O phishing é uma técnica de exploração de falhas técnicas de segurança dos servidores das instituições visadas, e não uma técnica de engenharia social baseada no engano direto da vítima por meio de e-mails, mensagens ou sítios eletrônicos falsos.",
@@ -72,7 +72,7 @@ const QUESTOES_PCAL_LOTE28 = [
   },
   {
     id: "CC-018", disciplina: "Crimes Cibernéticos e Segurança Digital", assunto: "Invasão de dispositivo", subassunto: "Art. 154-A pós-Lei 14.155/2021",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (CP, art. 154-A; Lei 14.155/2021)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 55, probReaparecer: 0.8,
     enunciado: "Mesmo após as alterações promovidas pela Lei 14.155/2021, o crime de invasão de dispositivo informático (art. 154-A do Código Penal) continua exigindo, como elementar do tipo, a violação indevida de mecanismo de segurança do dispositivo invadido.",
@@ -91,7 +91,7 @@ const QUESTOES_PCAL_LOTE28 = [
   },
   {
     id: "CC-019", disciplina: "Crimes Cibernéticos e Segurança Digital", assunto: "Convenção de Budapeste", subassunto: "Cooperação internacional (Decreto 11.491/2023)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Decreto 11.491/2023)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 55, probReaparecer: 0.76,
     enunciado: "A Convenção sobre o Crime Cibernético (Convenção de Budapeste), incorporada ao ordenamento brasileiro pelo Decreto 11.491/2023, tem por finalidade exclusiva estabelecer mecanismos de cooperação internacional na investigação e na obtenção de provas eletrônicas, não se ocupando da harmonização da tipificação de condutas praticadas por meio de sistemas informáticos entre os Estados signatários.",
@@ -112,7 +112,7 @@ const QUESTOES_PCAL_LOTE28 = [
   /* ===== FRAMEWORKS E PROTOCOLOS (TI e Segurança Cibernética) ===== */
   {
     id: "TI-017", disciplina: "TI e Segurança Cibernética", assunto: "Frameworks de segurança", subassunto: "NIST Cybersecurity Framework (funções)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (NIST CSF)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.72,
     enunciado: "O NIST Cybersecurity Framework (NIST CSF) estrutura-se, entre outras, em funções essenciais que incluem identificar, proteger, detectar e responder, prescindindo de uma função específica voltada à recuperação após a ocorrência de um incidente de segurança.",
@@ -131,7 +131,7 @@ const QUESTOES_PCAL_LOTE28 = [
   },
   {
     id: "TI-018", disciplina: "TI e Segurança Cibernética", assunto: "Gestão de identidades", subassunto: "SSO (Single Sign-On)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (gestão de identidades e acesso)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.72,
     enunciado: "O Single Sign-On (SSO) é um mecanismo de autenticação que permite ao usuário acessar múltiplos sistemas ou aplicações distintas mediante uma única autenticação inicial, sem a necessidade de inserir novamente suas credenciais a cada novo sistema acessado.",
@@ -150,7 +150,7 @@ const QUESTOES_PCAL_LOTE28 = [
   },
   {
     id: "TI-019", disciplina: "TI e Segurança Cibernética", assunto: "Criptografia", subassunto: "Simétrica × assimétrica",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (criptografia)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.75,
     enunciado: "Na criptografia assimétrica, a mesma chave é utilizada tanto para cifrar quanto para decifrar a informação, ao passo que, na criptografia simétrica, empregam-se um par de chaves distintas — uma pública e uma privada —, sendo uma delas usada para cifrar e a outra para decifrar.",
@@ -169,7 +169,7 @@ const QUESTOES_PCAL_LOTE28 = [
   },
   {
     id: "TI-020", disciplina: "TI e Segurança Cibernética", assunto: "Procedimentos de backup", subassunto: "Regra 3-2-1",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (backup)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.7,
     enunciado: "A regra 3-2-1 de backup recomenda manter duas cópias dos dados, armazenadas em três tipos de mídia diferentes, com pelo menos uma cópia mantida fora do local (off-site) de origem dos dados.",
@@ -188,7 +188,7 @@ const QUESTOES_PCAL_LOTE28 = [
   },
   {
     id: "TI-021", disciplina: "TI e Segurança Cibernética", assunto: "Segurança de rede", subassunto: "IDS × IPS",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (IDS/IPS)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.72,
     enunciado: "O IPS (Intrusion Prevention System) tem a função de detectar e alertar sobre atividades suspeitas na rede, sem necessariamente bloqueá-las, ao passo que o IDS (Intrusion Detection System) atua de forma ativa, podendo bloquear ou impedir automaticamente o tráfego identificado como malicioso.",
@@ -207,7 +207,7 @@ const QUESTOES_PCAL_LOTE28 = [
   },
   {
     id: "TI-022", disciplina: "TI e Segurança Cibernética", assunto: "Computação em nuvem", subassunto: "Responsabilidade compartilhada",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (segurança em nuvem)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 55, probReaparecer: 0.68,
     enunciado: "Nos ambientes de computação em nuvem, o modelo de responsabilidade compartilhada estabelece que a segurança da infraestrutura física é, em regra, atribuída ao provedor do serviço de nuvem, ao passo que a segurança da configuração de acesso, dos dados armazenados e das aplicações do cliente permanece, em geral, sob a responsabilidade deste último.",
@@ -226,7 +226,7 @@ const QUESTOES_PCAL_LOTE28 = [
   },
   {
     id: "TI-023", disciplina: "TI e Segurança Cibernética", assunto: "Fundamentos de segurança", subassunto: "Tríade CID (confidencialidade, integridade, disponibilidade)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (fundamentos de segurança da informação)",
     tipo: "CE", dificuldade: 1, tempoIdealSeg: 45, probReaparecer: 0.78,
     enunciado: "Os princípios fundamentais da segurança da informação — confidencialidade, integridade e disponibilidade — asseguram, respectivamente, que os dados sejam acessíveis apenas por pessoas autorizadas, que permaneçam exatos e não sejam alterados indevidamente, e que estejam acessíveis sempre que necessário aos usuários autorizados.",

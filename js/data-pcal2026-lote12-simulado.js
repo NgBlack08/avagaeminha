@@ -24,7 +24,7 @@ const QUESTOES_PCAL_LOTE12 = [
   /* ============ BLOCO 5 — DIREITO ADMINISTRATIVO ============ */
   {
     id: "DA-019", disciplina: "Direito Administrativo", assunto: "Licitações", subassunto: "Dispensa por emergência",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — simulado estilo CEBRASPE (bloco 5, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.85,
     textoApoio: TXT_BLOCO5,
@@ -44,7 +44,7 @@ const QUESTOES_PCAL_LOTE12 = [
   },
   {
     id: "DA-020", disciplina: "Direito Administrativo", assunto: "Licitações", subassunto: "Instrução da contratação direta",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — simulado estilo CEBRASPE (bloco 5, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 55, probReaparecer: 0.8,
     textoApoio: TXT_BLOCO5,
@@ -64,7 +64,7 @@ const QUESTOES_PCAL_LOTE12 = [
   },
   {
     id: "DA-021", disciplina: "Direito Administrativo", assunto: "Improbidade administrativa", subassunto: "Elemento subjetivo no caso concreto",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — simulado estilo CEBRASPE (bloco 5, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 55, probReaparecer: 0.88,
     textoApoio: TXT_BLOCO5,
@@ -84,7 +84,7 @@ const QUESTOES_PCAL_LOTE12 = [
   },
   {
     id: "DA-022", disciplina: "Direito Administrativo", assunto: "Responsabilidade civil do Estado", subassunto: "Dano a terceiros no caso concreto",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — simulado estilo CEBRASPE (bloco 5, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 55, probReaparecer: 0.85,
     textoApoio: TXT_BLOCO5,
@@ -104,7 +104,7 @@ const QUESTOES_PCAL_LOTE12 = [
   },
   {
     id: "DA-023", disciplina: "Direito Administrativo", assunto: "Atos administrativos", subassunto: "Controle judicial do ato discricionário",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — simulado estilo CEBRASPE (bloco 5, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 55, probReaparecer: 0.8,
     textoApoio: TXT_BLOCO5,
@@ -126,7 +126,7 @@ const QUESTOES_PCAL_LOTE12 = [
   /* ============ BLOCO 6 — CRIMES CIBERNÉTICOS E TI ============ */
   {
     id: "CC-012", disciplina: "Crimes Cibernéticos e Segurança Digital", assunto: "Golpes virtuais", subassunto: "Phishing no caso concreto",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — simulado estilo CEBRASPE (bloco 6, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.88,
     textoApoio: TXT_BLOCO6,
@@ -146,7 +146,7 @@ const QUESTOES_PCAL_LOTE12 = [
   },
   {
     id: "CC-013", disciplina: "Crimes Cibernéticos e Segurança Digital", assunto: "Malwares", subassunto: "Ransomware no caso concreto",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — simulado estilo CEBRASPE (bloco 6, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.88,
     textoApoio: TXT_BLOCO6,
@@ -166,7 +166,7 @@ const QUESTOES_PCAL_LOTE12 = [
   },
   {
     id: "TI-015", disciplina: "TI e Segurança Cibernética", assunto: "Procedimentos de backup", subassunto: "Becape como mitigação",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — simulado estilo CEBRASPE (bloco 6, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.85,
     textoApoio: TXT_BLOCO6,
@@ -186,7 +186,7 @@ const QUESTOES_PCAL_LOTE12 = [
   },
   {
     id: "TI-016", disciplina: "TI e Segurança Cibernética", assunto: "LGPD", subassunto: "Incidente de segurança",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — simulado estilo CEBRASPE (bloco 6, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 55, probReaparecer: 0.82,
     textoApoio: TXT_BLOCO6,
@@ -206,7 +206,7 @@ const QUESTOES_PCAL_LOTE12 = [
   },
   {
     id: "CC-014", disciplina: "Crimes Cibernéticos e Segurança Digital", assunto: "Busca e apreensão de itens digitais", subassunto: "Cadeia de custódia do vestígio digital",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — simulado estilo CEBRASPE (bloco 6, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 55, probReaparecer: 0.85,
     textoApoio: TXT_BLOCO6,
@@ -228,7 +228,7 @@ const QUESTOES_PCAL_LOTE12 = [
   /* ============ BLOCO 7 — LEGISLAÇÃO PENAL ESPECIAL ============ */
   {
     id: "LE-047", disciplina: "Legislação Especial", assunto: "Lei de Tortura", subassunto: "Tortura-prova no caso concreto",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — simulado estilo CEBRASPE (bloco 7, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.9,
     textoApoio: TXT_BLOCO7,
@@ -248,7 +248,7 @@ const QUESTOES_PCAL_LOTE12 = [
   },
   {
     id: "LE-048", disciplina: "Legislação Especial", assunto: "Lei de Tortura", subassunto: "Fiança",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — simulado estilo CEBRASPE (bloco 7, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.85,
     textoApoio: TXT_BLOCO7,
@@ -268,7 +268,7 @@ const QUESTOES_PCAL_LOTE12 = [
   },
   {
     id: "LE-049", disciplina: "Legislação Especial", assunto: "Abuso de Autoridade", subassunto: "Uso de algemas",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — simulado estilo CEBRASPE (bloco 7, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 55, probReaparecer: 0.88,
     textoApoio: TXT_BLOCO7,
@@ -288,7 +288,7 @@ const QUESTOES_PCAL_LOTE12 = [
   },
   {
     id: "LE-050", disciplina: "Legislação Especial", assunto: "Estatuto do Desarmamento", subassunto: "Posse com registro vencido",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — simulado estilo CEBRASPE (bloco 7, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 55, probReaparecer: 0.82,
     textoApoio: TXT_BLOCO7,
@@ -308,7 +308,7 @@ const QUESTOES_PCAL_LOTE12 = [
   },
   {
     id: "LE-051", disciplina: "Legislação Especial", assunto: "Lei de Tortura", subassunto: "Efeito da condenação no caso concreto",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — simulado estilo CEBRASPE (bloco 7, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 55, probReaparecer: 0.85,
     textoApoio: TXT_BLOCO7,
@@ -330,7 +330,7 @@ const QUESTOES_PCAL_LOTE12 = [
   /* ============ BLOCO 8 — RACIOCÍNIO LÓGICO E ÉTICA ============ */
   {
     id: "RL-021", disciplina: "Raciocínio Lógico-Matemático", assunto: "Lógica de argumentação", subassunto: "Modus tollens aplicado",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — simulado estilo CEBRASPE (bloco 8, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.88,
     textoApoio: TXT_BLOCO8,
@@ -350,7 +350,7 @@ const QUESTOES_PCAL_LOTE12 = [
   },
   {
     id: "RL-022", disciplina: "Raciocínio Lógico-Matemático", assunto: "Lógica de argumentação", subassunto: "Silogismo disjuntivo",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — simulado estilo CEBRASPE (bloco 8, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 60, probReaparecer: 0.85,
     textoApoio: TXT_BLOCO8,
@@ -370,7 +370,7 @@ const QUESTOES_PCAL_LOTE12 = [
   },
   {
     id: "RL-023", disciplina: "Raciocínio Lógico-Matemático", assunto: "Lógica proposicional", subassunto: "Negação da condicional aplicada",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — simulado estilo CEBRASPE (bloco 8, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 55, probReaparecer: 0.85,
     textoApoio: TXT_BLOCO8,
@@ -390,7 +390,7 @@ const QUESTOES_PCAL_LOTE12 = [
   },
   {
     id: "ET-007", disciplina: "Ética no Serviço Público", assunto: "Ética e função pública", subassunto: "Dever de veracidade",
-    concurso: "PCAL", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026,
+    concurso: "PCAL", cargo: ["Escrivão","Agente","Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — simulado estilo CEBRASPE (bloco 8, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.8,
     textoApoio: TXT_BLOCO8,
@@ -410,7 +410,7 @@ const QUESTOES_PCAL_LOTE12 = [
   },
   {
     id: "ET-008", disciplina: "Ética no Serviço Público", assunto: "Ética no setor público", subassunto: "Independência das instâncias",
-    concurso: "PCAL", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026,
+    concurso: "PCAL", cargo: ["Escrivão","Agente","Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — simulado estilo CEBRASPE (bloco 8, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 60, probReaparecer: 0.85,
     textoApoio: TXT_BLOCO8,

@@ -33,7 +33,7 @@ const QUESTOES_PCAL_LOTE65 = [
   /* ===== PROTOCOLOS: SMTP, POP3 E IMAP ===== */
   {
     id: "TI-143", disciplina: "TI e Segurança Cibernética", assunto: "Correio eletrônico", subassunto: "Protocolos POP3 e IMAP",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de literalidade técnica)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 60, probReaparecer: 0.9,
     enunciado: "O protocolo IMAP mantém as mensagens armazenadas no servidor e sincroniza o estado da caixa postal entre os dispositivos do usuário, ao passo que o POP3, em sua configuração tradicional, transfere as mensagens para o dispositivo local e as remove do servidor.",
@@ -52,7 +52,7 @@ const QUESTOES_PCAL_LOTE65 = [
   },
   {
     id: "TI-144", disciplina: "TI e Segurança Cibernética", assunto: "Correio eletrônico", subassunto: "Protocolos POP3 e IMAP",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de troca de conceitos)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 60, probReaparecer: 0.88,
     enunciado: "O POP3 é o protocolo indicado para o usuário que acessa a mesma caixa postal de vários dispositivos, pois preserva as mensagens no servidor e replica entre os aparelhos as pastas e as marcações de leitura, função que o IMAP não desempenha.",
@@ -71,7 +71,7 @@ const QUESTOES_PCAL_LOTE65 = [
   },
   {
     id: "TI-145", disciplina: "TI e Segurança Cibernética", assunto: "Correio eletrônico", subassunto: "Protocolos e portas",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de literalidade técnica)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 75, probReaparecer: 0.84,
     enunciado: "No serviço de correio eletrônico, o SMTP é responsável pelo envio de mensagens, sendo a porta 587 a recomendada para submissão a partir do cliente, enquanto as variantes seguras de acesso operam nas portas 993, para IMAP sobre TLS, e 995, para POP3 sobre TLS.",
@@ -90,7 +90,7 @@ const QUESTOES_PCAL_LOTE65 = [
   },
   {
     id: "TI-146", disciplina: "TI e Segurança Cibernética", assunto: "Correio eletrônico", subassunto: "Protocolos e portas",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de troca numérica)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 75, probReaparecer: 0.72,
     enunciado: "Na configuração padrão de um cliente de correio eletrônico, o protocolo SMTP utiliza a porta 110 e o protocolo POP3 utiliza a porta 25, ambas sem criptografia.",
@@ -109,7 +109,7 @@ const QUESTOES_PCAL_LOTE65 = [
   },
   {
     id: "TI-147", disciplina: "TI e Segurança Cibernética", assunto: "Correio eletrônico", subassunto: "Protocolo SMTP",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de generalização)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 60, probReaparecer: 0.79,
     enunciado: "O SMTP é o protocolo utilizado tanto para o envio quanto para a recuperação de mensagens armazenadas na caixa postal do usuário, o que dispensa o emprego de POP3 ou de IMAP em clientes de correio eletrônico devidamente configurados.",
@@ -128,7 +128,7 @@ const QUESTOES_PCAL_LOTE65 = [
   },
   {
     id: "TI-148", disciplina: "TI e Segurança Cibernética", assunto: "Correio eletrônico", subassunto: "Protocolo SMTP",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de termo absoluto)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 70, probReaparecer: 0.68,
     enunciado: "Entre os três protocolos clássicos do correio eletrônico, somente o SMTP atua no envio de mensagens, cabendo ao POP3 e ao IMAP exclusivamente o acesso às mensagens já depositadas na caixa postal do destinatário.",
@@ -147,7 +147,7 @@ const QUESTOES_PCAL_LOTE65 = [
   },
   {
     id: "TI-149", disciplina: "TI e Segurança Cibernética", assunto: "Correio eletrônico", subassunto: "Segurança do transporte (TLS)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de troca de conceitos)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 85, probReaparecer: 0.6,
     enunciado: "No STARTTLS, a conexão é estabelecida já cifrada desde o primeiro pacote em uma porta dedicada, ao passo que, no modelo conhecido como SMTPS, a sessão começa em texto claro e só é promovida a canal seguro após comando específico do cliente.",
@@ -166,7 +166,7 @@ const QUESTOES_PCAL_LOTE65 = [
   },
   {
     id: "TI-150", disciplina: "TI e Segurança Cibernética", assunto: "Correio eletrônico", subassunto: "Padrão MIME e anexos",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de literalidade técnica)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 80, probReaparecer: 0.63,
     enunciado: "O padrão MIME permite que mensagens de correio eletrônico transportem anexos binários e caracteres fora do conjunto ASCII, mediante codificação do conteúdo — como a Base64 —, o que acarreta acréscimo aproximado de um terço no tamanho transmitido em relação ao arquivo original.",
@@ -185,7 +185,7 @@ const QUESTOES_PCAL_LOTE65 = [
   },
   {
     id: "TI-151", disciplina: "TI e Segurança Cibernética", assunto: "Correio eletrônico", subassunto: "Protocolo POP3",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de exigência inexistente)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 75, probReaparecer: 0.7,
     enunciado: "O protocolo POP3 exclui obrigatoriamente do servidor toda mensagem transferida para o dispositivo do usuário, não sendo possível ao cliente de correio eletrônico preservar cópia remota das mensagens baixadas.",
@@ -206,7 +206,7 @@ const QUESTOES_PCAL_LOTE65 = [
   /* ===== AUTENTICIDADE E SIGILO ===== */
   {
     id: "TI-152", disciplina: "TI e Segurança Cibernética", assunto: "Correio eletrônico", subassunto: "Falsificação de remetente (spoofing)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de literalidade técnica)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 80, probReaparecer: 0.82,
     enunciado: "O SMTP, em sua concepção original, não prevê mecanismo de verificação da identidade do remetente informado na mensagem, razão pela qual a falsificação do endereço de origem (spoofing) depende de controles complementares para ser detectada.",
@@ -225,7 +225,7 @@ const QUESTOES_PCAL_LOTE65 = [
   },
   {
     id: "TI-153", disciplina: "TI e Segurança Cibernética", assunto: "Correio eletrônico", subassunto: "SPF, DKIM e DMARC",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de troca de conceitos)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 85, probReaparecer: 0.71,
     enunciado: "O SPF acrescenta à mensagem uma assinatura criptográfica verificável por chave pública publicada no DNS, enquanto o DKIM relaciona, em registro DNS do domínio, os endereços de servidores autorizados a enviar mensagens em seu nome.",
@@ -244,7 +244,7 @@ const QUESTOES_PCAL_LOTE65 = [
   },
   {
     id: "TI-154", disciplina: "TI e Segurança Cibernética", assunto: "Correio eletrônico", subassunto: "SPF, DKIM e DMARC",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de literalidade técnica)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 85, probReaparecer: 0.66,
     enunciado: "O DMARC apoia-se nos resultados de SPF e de DKIM e acrescenta a definição, pelo titular do domínio, da política a ser aplicada às mensagens reprovadas — como quarentena ou rejeição —, além de prever o envio de relatórios ao próprio domínio.",
@@ -263,7 +263,7 @@ const QUESTOES_PCAL_LOTE65 = [
   },
   {
     id: "TI-155", disciplina: "TI e Segurança Cibernética", assunto: "Correio eletrônico", subassunto: "Sigilo das mensagens",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de generalização)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 85, probReaparecer: 0.77,
     enunciado: "O emprego de TLS na conexão entre o cliente de correio eletrônico e o servidor assegura criptografia fim a fim da mensagem, de modo que o conteúdo permanece ininteligível inclusive para o provedor de serviço que a armazena.",
@@ -282,7 +282,7 @@ const QUESTOES_PCAL_LOTE65 = [
   },
   {
     id: "TI-156", disciplina: "TI e Segurança Cibernética", assunto: "Correio eletrônico", subassunto: "Sigilo das mensagens",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de restrição indevida)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 80, probReaparecer: 0.64,
     enunciado: "Somente mediante o uso de soluções que cifram a própria mensagem, como o S/MIME e o OpenPGP, obtém-se sigilo do conteúdo perante os servidores intermediários, uma vez que a proteção conferida pelo TLS se restringe ao trecho percorrido entre dois pontos da comunicação.",
@@ -301,7 +301,7 @@ const QUESTOES_PCAL_LOTE65 = [
   },
   {
     id: "TI-157", disciplina: "TI e Segurança Cibernética", assunto: "Correio eletrônico", subassunto: "Assinatura digital em mensagens",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de troca de conceitos)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 80, probReaparecer: 0.73,
     enunciado: "A assinatura digital aposta a uma mensagem de correio eletrônico torna seu conteúdo ininteligível a terceiros não autorizados, garantindo a confidencialidade da comunicação entre remetente e destinatário.",
@@ -320,7 +320,7 @@ const QUESTOES_PCAL_LOTE65 = [
   },
   {
     id: "TI-158", disciplina: "TI e Segurança Cibernética", assunto: "Correio eletrônico", subassunto: "Filtros antispam",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de troca de conceitos)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 60, probReaparecer: 0.75,
     enunciado: "O filtro antispam de um serviço de correio eletrônico tem por finalidade detectar e remover códigos maliciosos presentes nos anexos das mensagens, função equivalente à do antivírus instalado na estação de trabalho.",
@@ -339,7 +339,7 @@ const QUESTOES_PCAL_LOTE65 = [
   },
   {
     id: "TI-159", disciplina: "TI e Segurança Cibernética", assunto: "Correio eletrônico", subassunto: "Phishing e spear phishing",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de literalidade técnica)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 65, probReaparecer: 0.86,
     enunciado: "O spear phishing distingue-se do phishing comum por dirigir-se a alvo determinado, valendo-se de informações previamente coletadas sobre a vítima ou sobre a organização a que ela pertence, o que eleva a verossimilhança da mensagem fraudulenta.",
@@ -358,7 +358,7 @@ const QUESTOES_PCAL_LOTE65 = [
   },
   {
     id: "TI-160", disciplina: "TI e Segurança Cibernética", assunto: "Correio eletrônico", subassunto: "Phishing e spear phishing",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de troca de sujeito)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 60, probReaparecer: 0.7,
     enunciado: "Denomina-se phishing a fraude direcionada a pessoa ou a organização específica, construída a partir de dados previamente levantados sobre o alvo, ao passo que o spear phishing consiste no envio indiscriminado de mensagens genéricas a grandes listas de endereços.",
@@ -377,7 +377,7 @@ const QUESTOES_PCAL_LOTE65 = [
   },
   {
     id: "TI-161", disciplina: "TI e Segurança Cibernética", assunto: "Correio eletrônico", subassunto: "Comprometimento de contas",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de literalidade técnica)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 85, probReaparecer: 0.61,
     enunciado: "A criação, sem conhecimento do titular, de regra que encaminhe automaticamente mensagens a endereço externo e as mova para pasta pouco visualizada constitui indício relevante de comprometimento da conta de correio eletrônico, sendo técnica associada a fraudes de desvio de pagamento.",
@@ -398,7 +398,7 @@ const QUESTOES_PCAL_LOTE65 = [
   /* ===== CAMPOS DE DESTINATÁRIO E OPERAÇÕES ===== */
   {
     id: "TI-162", disciplina: "TI e Segurança Cibernética", assunto: "Correio eletrônico", subassunto: "Campos Para, Cc e Cco",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de literalidade técnica)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.91,
     enunciado: "Os endereços inseridos no campo Cco de uma mensagem recebem cópia dela sem que sejam exibidos aos demais destinatários, ao contrário do que ocorre com os endereços lançados nos campos Para e Cc.",
@@ -417,7 +417,7 @@ const QUESTOES_PCAL_LOTE65 = [
   },
   {
     id: "TI-163", disciplina: "TI e Segurança Cibernética", assunto: "Correio eletrônico", subassunto: "Campos Para, Cc e Cco",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de troca de conceitos)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.8,
     enunciado: "O campo Cc destina-se ao envio de cópia sem revelar os endereços dos destinatários aos demais participantes da mensagem, enquanto o campo Cco exibe a todos a relação completa de quem recebeu a cópia.",
@@ -436,7 +436,7 @@ const QUESTOES_PCAL_LOTE65 = [
   },
   {
     id: "TI-164", disciplina: "TI e Segurança Cibernética", assunto: "Correio eletrônico", subassunto: "Responder e responder a todos",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de generalização)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 80, probReaparecer: 0.69,
     enunciado: "O acionamento da opção Responder a todos encaminha a resposta ao remetente e a todos os destinatários da mensagem original, inclusive aos endereços que constavam do campo Cco.",
@@ -455,7 +455,7 @@ const QUESTOES_PCAL_LOTE65 = [
   },
   {
     id: "TI-165", disciplina: "TI e Segurança Cibernética", assunto: "Correio eletrônico", subassunto: "Encaminhar e responder",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de generalização)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.85,
     enunciado: "Em qualquer cliente ou serviço de correio eletrônico de uso corrente, o encaminhamento de uma mensagem preserva, por padrão, os arquivos a ela anexados, comportamento que não se verifica na simples resposta ao remetente.",
@@ -474,7 +474,7 @@ const QUESTOES_PCAL_LOTE65 = [
   },
   {
     id: "TI-166", disciplina: "TI e Segurança Cibernética", assunto: "Correio eletrônico", subassunto: "Encaminhar e responder",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de exigência inexistente)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.74,
     enunciado: "Mensagem recebida com documento anexado somente pode ser encaminhada a outro usuário se o anexo for previamente removido, porquanto os protocolos de correio eletrônico vedam, por razões de segurança, o repasse de mensagens com arquivos anexados.",
@@ -493,7 +493,7 @@ const QUESTOES_PCAL_LOTE65 = [
   },
   {
     id: "TI-167", disciplina: "TI e Segurança Cibernética", assunto: "Correio eletrônico", subassunto: "Entrega de mensagens e DNS",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de exigência inexistente)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 85, probReaparecer: 0.58,
     enunciado: "Para que uma mensagem seja entregue a determinado domínio, é indispensável que o servidor de origem localize, por consulta ao DNS, o registro MX do domínio de destino ou, na ausência deste, o respectivo registro de endereço, sem o que a entrega não se completa.",
@@ -514,7 +514,7 @@ const QUESTOES_PCAL_LOTE65 = [
   /* ===== ORGANIZAÇÃO, PASTAS E WEBMAIL ===== */
   {
     id: "TI-168", disciplina: "TI e Segurança Cibernética", assunto: "Correio eletrônico", subassunto: "Pastas e exclusão de mensagens",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de termo absoluto)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 55, probReaparecer: 0.83,
     enunciado: "No Microsoft Outlook, todas as mensagens excluídas da Caixa de Entrada são automaticamente redirecionadas para a pasta de lixo eletrônico, onde permanecem até a exclusão definitiva.",
@@ -533,7 +533,7 @@ const QUESTOES_PCAL_LOTE65 = [
   },
   {
     id: "TI-169", disciplina: "TI e Segurança Cibernética", assunto: "Correio eletrônico", subassunto: "Pastas e exclusão de mensagens",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de verdade seguida de falso)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 75, probReaparecer: 0.62,
     enunciado: "No Microsoft Outlook, a exclusão de uma mensagem a transfere para a pasta Itens Excluídos, ao passo que a classificação de uma mensagem como indesejada a transfere para a pasta Lixo Eletrônico, de modo que as duas pastas coexistem com finalidades diversas.",
@@ -552,7 +552,7 @@ const QUESTOES_PCAL_LOTE65 = [
   },
   {
     id: "TI-170", disciplina: "TI e Segurança Cibernética", assunto: "Correio eletrônico", subassunto: "Webmail — Gmail",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de troca numérica)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 60, probReaparecer: 0.76,
     enunciado: "As mensagens movidas para a lixeira do Gmail são excluídas em definitivo após sete dias e sete horas, independentemente de qualquer providência do usuário.",
@@ -571,7 +571,7 @@ const QUESTOES_PCAL_LOTE65 = [
   },
   {
     id: "TI-171", disciplina: "TI e Segurança Cibernética", assunto: "Correio eletrônico", subassunto: "Webmail — Gmail",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de troca numérica)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 70, probReaparecer: 0.65,
     enunciado: "No Gmail, tanto as mensagens movidas para a lixeira quanto as classificadas como spam são excluídas automaticamente após 30 dias, sem prejuízo de o usuário restaurá-las ou apagá-las em definitivo antes desse prazo.",
@@ -590,7 +590,7 @@ const QUESTOES_PCAL_LOTE65 = [
   },
   {
     id: "TI-172", disciplina: "TI e Segurança Cibernética", assunto: "Correio eletrônico", subassunto: "Webmail — Gmail",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de literalidade técnica)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 60, probReaparecer: 0.78,
     enunciado: "No Gmail, é possível inserir na mensagem arquivos hospedados no Google Drive, recurso que permite compartilhar conteúdo que excederia o limite de tamanho previsto para anexos convencionais.",
@@ -609,7 +609,7 @@ const QUESTOES_PCAL_LOTE65 = [
   },
   {
     id: "TI-173", disciplina: "TI e Segurança Cibernética", assunto: "Correio eletrônico", subassunto: "Limites de anexo",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de troca numérica)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 70, probReaparecer: 0.6,
     enunciado: "O limite padrão para anexos em mensagens enviadas pelo Gmail é de 250 MB por mensagem, valor uniformizado entre os principais provedores de correio eletrônico do mercado.",
@@ -628,7 +628,7 @@ const QUESTOES_PCAL_LOTE65 = [
   },
   {
     id: "TI-174", disciplina: "TI e Segurança Cibernética", assunto: "Correio eletrônico", subassunto: "Webmail e cliente de e-mail",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de literalidade técnica)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.89,
     enunciado: "Os serviços de webmail permitem o acesso às mensagens de correio eletrônico diretamente pelo navegador de Internet, sem que seja necessária a instalação de um programa cliente de e-mail no dispositivo do usuário.",
@@ -647,7 +647,7 @@ const QUESTOES_PCAL_LOTE65 = [
   },
   {
     id: "TI-175", disciplina: "TI e Segurança Cibernética", assunto: "Correio eletrônico", subassunto: "Webmail e cliente de e-mail",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de troca de conceitos)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 60, probReaparecer: 0.72,
     enunciado: "Denomina-se webmail o programa de correio eletrônico instalado no computador do usuário, responsável por transferir as mensagens do servidor para o disco local, ao passo que o cliente de e-mail é a interface acessada por navegador, hospedada no provedor.",
@@ -666,7 +666,7 @@ const QUESTOES_PCAL_LOTE65 = [
   },
   {
     id: "TI-176", disciplina: "TI e Segurança Cibernética", assunto: "Correio eletrônico", subassunto: "Natureza assíncrona do e-mail",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de troca de conceitos)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 60, probReaparecer: 0.87,
     enunciado: "O envio de mensagem por correio eletrônico pressupõe que remetente e destinatário estejam simultaneamente conectados à Internet, condição sem a qual a comunicação não se estabelece.",
@@ -685,7 +685,7 @@ const QUESTOES_PCAL_LOTE65 = [
   },
   {
     id: "TI-177", disciplina: "TI e Segurança Cibernética", assunto: "Correio eletrônico", subassunto: "Natureza assíncrona do e-mail",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de literalidade técnica)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 75, probReaparecer: 0.64,
     enunciado: "O correio eletrônico opera segundo o modelo de armazenamento e encaminhamento, em que a mensagem transita entre servidores e é retida na caixa postal de destino até o acesso do destinatário, podendo o servidor de origem efetuar novas tentativas quando o destino esteja temporariamente indisponível.",
@@ -706,7 +706,7 @@ const QUESTOES_PCAL_LOTE65 = [
   /* ===== CLIENTE OUTLOOK ===== */
   {
     id: "TI-178", disciplina: "TI e Segurança Cibernética", assunto: "Correio eletrônico", subassunto: "Microsoft Outlook — contas",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de literalidade técnica)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.8,
     enunciado: "O Microsoft Outlook permite configurar, em uma mesma instalação, diversas contas de correio eletrônico de provedores distintos, cada qual com sua estrutura própria de pastas.",
@@ -725,7 +725,7 @@ const QUESTOES_PCAL_LOTE65 = [
   },
   {
     id: "TI-179", disciplina: "TI e Segurança Cibernética", assunto: "Correio eletrônico", subassunto: "Microsoft Outlook — contas",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de restrição indevida)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.71,
     enunciado: "O Microsoft Outlook 2010 não admite a configuração de múltiplas contas de correio eletrônico em uma única instalação, ficando o usuário limitado a uma conta por vez.",
@@ -744,7 +744,7 @@ const QUESTOES_PCAL_LOTE65 = [
   },
   {
     id: "TI-180", disciplina: "TI e Segurança Cibernética", assunto: "Correio eletrônico", subassunto: "Microsoft Outlook — regras",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de literalidade técnica)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 60, probReaparecer: 0.88,
     enunciado: "O recurso de regras do Microsoft Outlook possibilita automatizar o tratamento das mensagens recebidas, com ações como mover para pastas determinadas, atribuir categorias, sinalizar, encaminhar e responder, segundo critérios definidos pelo próprio usuário.",
@@ -763,7 +763,7 @@ const QUESTOES_PCAL_LOTE65 = [
   },
   {
     id: "TI-181", disciplina: "TI e Segurança Cibernética", assunto: "Correio eletrônico", subassunto: "Microsoft Outlook — regras",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de generalização)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 80, probReaparecer: 0.57,
     enunciado: "As regras configuradas no Microsoft Outlook são integralmente processadas pelo servidor de correio eletrônico, de modo que se aplicam às mensagens recebidas ainda que o programa esteja fechado no computador do usuário.",
@@ -782,7 +782,7 @@ const QUESTOES_PCAL_LOTE65 = [
   },
   {
     id: "TI-182", disciplina: "TI e Segurança Cibernética", assunto: "Correio eletrônico", subassunto: "Microsoft Outlook — arquivos de dados",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de troca de conceitos)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 85, probReaparecer: 0.59,
     enunciado: "No Microsoft Outlook, o arquivo de extensão .ost armazena mensagens que foram retiradas do servidor e passam a existir apenas localmente, ao passo que o arquivo .pst mantém uma cópia em cache sincronizada com a caixa postal remota.",
@@ -803,7 +803,7 @@ const QUESTOES_PCAL_LOTE65 = [
   /* ===== CABEÇALHOS E VESTÍGIOS ===== */
   {
     id: "TI-183", disciplina: "TI e Segurança Cibernética", assunto: "Correio eletrônico", subassunto: "Análise de cabeçalhos",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de verdade seguida de falso)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 90, probReaparecer: 0.6,
     enunciado: "Os campos Received do cabeçalho de uma mensagem registram os servidores por onde ela transitou, sendo acrescentados sucessivamente a cada salto, e o campo Message-ID é gerado pelo cliente do destinatário no momento em que a mensagem é aberta.",
@@ -822,7 +822,7 @@ const QUESTOES_PCAL_LOTE65 = [
   },
   {
     id: "TI-184", disciplina: "TI e Segurança Cibernética", assunto: "Correio eletrônico", subassunto: "Análise de cabeçalhos",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de generalização)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 85, probReaparecer: 0.67,
     enunciado: "O endereço constante do campo De: do cabeçalho de uma mensagem constitui elemento suficiente para atribuir a autoria do envio, dispensando o exame dos demais campos do cabeçalho e dos resultados de verificação de autenticidade.",
@@ -843,7 +843,7 @@ const QUESTOES_PCAL_LOTE65 = [
   /* ===== COMPACTAÇÃO PARA ENVIO ===== */
   {
     id: "TI-185", disciplina: "TI e Segurança Cibernética", assunto: "Correio eletrônico", subassunto: "Compactação de arquivos para envio",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de literalidade técnica)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 60, probReaparecer: 0.73,
     enunciado: "Programas compactadores, como o 7-Zip e o WinRAR, reduzem o tamanho dos arquivos e permitem reuni-los em um único pacote, o que facilita o envio por correio eletrônico, sem que a compactação, por si só, torne o conteúdo inacessível a terceiros.",
@@ -862,7 +862,7 @@ const QUESTOES_PCAL_LOTE65 = [
   },
   {
     id: "TI-186", disciplina: "TI e Segurança Cibernética", assunto: "Correio eletrônico", subassunto: "Compactação de arquivos para envio",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de troca de conceitos)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 60, probReaparecer: 0.66,
     enunciado: "A compactação de documentos em formato ZIP antes do envio por correio eletrônico assegura a confidencialidade do conteúdo, pois converte os dados em formato ilegível, que somente o destinatário consegue reverter.",

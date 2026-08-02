@@ -496,6 +496,66 @@ function radarAprovacao() {
     liquida: g.liquida, horasEstimadas, metaTaxa };
 }
 
+/* ---------------- Corte oficial e decisão de marcar em branco ----------------
+
+   O edital da trilha traz o piso de eliminação em `corte` (ver EDITAIS, em
+   js/data.js). Até aqui o app media desempenho contra uma meta arbitrária
+   (metaTaxa, 0,75 por padrão); passa a medir também contra o número que
+   elimina de fato.
+
+   A projeção supõe que o candidato responde a todos os itens com a taxa de
+   acerto que vem demonstrando. Nessa hipótese, acertando A de N itens, a nota
+   líquida é A − (N − A) = 2A − N, porque no método Cebraspe o erro anula um
+   acerto. É estimativa, não promessa: taxa medida em banco de questões tende
+   a ser otimista frente à prova real. */
+function projecaoCorte() {
+  const ed = editalDoFoco();
+  if (!ed || !ed.corte) return null;
+  const taxa = statsGerais().taxa ?? 0;
+  const proj = ([chave, c]) => {
+    const acertos = taxa * c.itens;
+    const liquida = 2 * acertos - c.itens;      /* erro anula acerto */
+    return {
+      chave, itens: c.itens, exigido: c.pontos, acertosExigidos: c.acertos,
+      taxaExigida: c.acertos / c.itens,
+      liquidaProjetada: liquida,
+      acertosProjetados: acertos,
+      passa: liquida >= c.pontos,
+      folga: liquida - c.pontos,
+    };
+  };
+  return { taxa, trilha: ed.curto || ed.id, blocos: Object.entries(ed.corte).map(proj) };
+}
+
+/* Em prova com erro anulando acerto, chutar tem valor esperado 2p − 1, sendo p
+   a probabilidade de acerto: só compensa acima de 50%. Abaixo disso, o branco
+   (que vale 0) é melhor que o palpite. Esta função confronta esse limiar com o
+   histórico real do candidato por nível de confiança declarada — o dado que o
+   app já coleta a cada resposta — para dizer em que faixa ele deve deixar em
+   branco em vez de arriscar. */
+function orientacaoBranco() {
+  const faixas = { 1: { n: 0, acertos: 0 }, 2: { n: 0, acertos: 0 }, 3: { n: 0, acertos: 0 } };
+  for (const hist of Object.values(APP_STATE.respostas)) {
+    for (const h of hist) {
+      if (h.branco || !faixas[h.confianca]) continue;
+      faixas[h.confianca].n++;
+      if (h.correta) faixas[h.confianca].acertos++;
+    }
+  }
+  const rotulos = { 1: "chute", 2: "dúvida", 3: "certeza" };
+  const linhas = Object.entries(faixas)
+    .filter(([, f]) => f.n >= 5)          /* abaixo disso a taxa é ruído */
+    .map(([nivel, f]) => {
+      const p = f.acertos / f.n;
+      return {
+        nivel: Number(nivel), rotulo: rotulos[nivel], n: f.n, taxa: p,
+        valorEsperado: 2 * p - 1,          /* por item chutado */
+        recomendaBranco: p < 0.5,
+      };
+    });
+  return { limiar: 0.5, linhas, temDados: linhas.length > 0 };
+}
+
 /* ---------------- Plano de Estudo Dirigido ----------------
    Cruza três coisas que já existiam isoladas no app: dias até a prova
    (config.dataProva), o quanto cada disciplina "pesa" na banca segundo

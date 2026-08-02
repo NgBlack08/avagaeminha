@@ -14,7 +14,7 @@ const QUESTOES_PCAL_LOTE17 = [
   /* ===== CONVENÇÃO AMERICANA DE DIREITOS HUMANOS (Pacto de San José) ===== */
   {
     id: "DH-023", disciplina: "Direitos Humanos", assunto: "Pacto de San José da Costa Rica", subassunto: "Prisão civil por dívida (art. 7.7)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (CADH/Decreto 678/1992, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.88,
     enunciado: "A Convenção Americana de Direitos Humanos veda a prisão civil por dívida, ressalvado o caso de inadimplemento de obrigação alimentar.",
@@ -33,7 +33,7 @@ const QUESTOES_PCAL_LOTE17 = [
   },
   {
     id: "DH-024", disciplina: "Direitos Humanos", assunto: "Pacto de San José da Costa Rica", subassunto: "Depositário infiel (SV 25)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (CADH c/c STF, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 55, probReaparecer: 0.85,
     enunciado: "Segundo o entendimento do STF, é lícita a prisão civil do depositário infiel, por não haver incompatibilidade com a Convenção Americana de Direitos Humanos.",
@@ -53,7 +53,7 @@ const QUESTOES_PCAL_LOTE17 = [
   },
   {
     id: "DH-025", disciplina: "Direitos Humanos", assunto: "Pacto de San José da Costa Rica", subassunto: "Status supralegal (RE 466.343)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (CADH c/c STF, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 55, probReaparecer: 0.85,
     enunciado: "Segundo o STF, os tratados internacionais de direitos humanos aprovados sem o rito das emendas constitucionais possuem status supralegal, situando-se acima da legislação ordinária e abaixo da Constituição.",
@@ -73,7 +73,7 @@ const QUESTOES_PCAL_LOTE17 = [
   },
   {
     id: "DH-026", disciplina: "Direitos Humanos", assunto: "Pacto de San José da Costa Rica", subassunto: "Direito à vida (art. 4.1)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (CADH/Decreto 678/1992, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.78,
     enunciado: "Nos termos da Convenção Americana de Direitos Humanos, o direito à vida deve ser protegido pela lei e, em geral, desde o momento da concepção.",
@@ -92,7 +92,7 @@ const QUESTOES_PCAL_LOTE17 = [
   },
   {
     id: "DH-027", disciplina: "Direitos Humanos", assunto: "Pacto de San José da Costa Rica", subassunto: "Pena de morte (art. 4.3)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (CADH/Decreto 678/1992, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 50, probReaparecer: 0.75,
     enunciado: "A Convenção Americana admite que os Estados que houverem abolido a pena de morte a restabeleçam, desde que por meio de lei.",
@@ -111,7 +111,7 @@ const QUESTOES_PCAL_LOTE17 = [
   },
   {
     id: "DH-028", disciplina: "Direitos Humanos", assunto: "Pacto de San José da Costa Rica", subassunto: "Duplo grau (art. 8.2.h)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (CADH/Decreto 678/1992, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.8,
     enunciado: "A Convenção Americana assegura ao acusado, entre as garantias judiciais, o direito de recorrer da sentença a juiz ou tribunal superior.",
@@ -130,7 +130,7 @@ const QUESTOES_PCAL_LOTE17 = [
   },
   {
     id: "DH-029", disciplina: "Direitos Humanos", assunto: "Pacto de San José da Costa Rica", subassunto: "Jurisdição da Corte Interamericana (art. 62)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (CADH/Decreto 678/1992, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 55, probReaparecer: 0.75,
     enunciado: "A simples ratificação da Convenção Americana submete o Estado, automaticamente, à jurisdição contenciosa da Corte Interamericana de Direitos Humanos, independentemente de declaração específica.",
@@ -149,7 +149,7 @@ const QUESTOES_PCAL_LOTE17 = [
   },
   {
     id: "DH-030", disciplina: "Direitos Humanos", assunto: "Pacto de San José da Costa Rica", subassunto: "Presunção de inocência (art. 8.2)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (CADH/Decreto 678/1992, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 1, tempoIdealSeg: 40, probReaparecer: 0.78,
     enunciado: "A Convenção Americana assegura que toda pessoa acusada de delito tem direito a que se presuma sua inocência enquanto não for legalmente comprovada sua culpa.",
@@ -168,7 +168,7 @@ const QUESTOES_PCAL_LOTE17 = [
   },
   {
     id: "DH-031", disciplina: "Direitos Humanos", assunto: "Pacto de San José da Costa Rica", subassunto: "Liberdade de pensamento e expressão (art. 13)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (CADH/Decreto 678/1992, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 55, probReaparecer: 0.72,
     enunciado: "A Convenção Americana admite a censura prévia como meio ordinário de controle da liberdade de expressão.",
@@ -187,7 +187,7 @@ const QUESTOES_PCAL_LOTE17 = [
   },
   {
     id: "DH-032", disciplina: "Direitos Humanos", assunto: "Pacto de San José da Costa Rica", subassunto: "Proteção da honra e da dignidade (art. 11)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (CADH/Decreto 678/1992, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 1, tempoIdealSeg: 40, probReaparecer: 0.7,
     enunciado: "A Convenção Americana assegura a toda pessoa o direito ao respeito de sua honra e ao reconhecimento de sua dignidade, sendo vedadas ingerências arbitrárias em sua vida privada.",
@@ -208,7 +208,7 @@ const QUESTOES_PCAL_LOTE17 = [
   /* ===== PNDH-3 (Decreto 7.037/2009) ===== */
   {
     id: "DH-033", disciplina: "Direitos Humanos", assunto: "PNDH-3", subassunto: "Natureza e estrutura",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Decreto 7.037/2009, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.78,
     enunciado: "O Programa Nacional de Direitos Humanos (PNDH-3) foi instituído por decreto e estrutura-se em eixos orientadores, desdobrados em diretrizes e objetivos estratégicos.",
@@ -227,7 +227,7 @@ const QUESTOES_PCAL_LOTE17 = [
   },
   {
     id: "DH-034", disciplina: "Direitos Humanos", assunto: "PNDH-3", subassunto: "Instrumento normativo",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Decreto 7.037/2009, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 45, probReaparecer: 0.72,
     enunciado: "O PNDH-3 foi aprovado por emenda constitucional, ostentando status de norma constitucional.",
@@ -246,7 +246,7 @@ const QUESTOES_PCAL_LOTE17 = [
   },
   {
     id: "DH-035", disciplina: "Direitos Humanos", assunto: "PNDH-3", subassunto: "Eixos orientadores",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Decreto 7.037/2009, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.75,
     enunciado: "Entre os eixos orientadores do PNDH-3 inclui-se o da segurança pública, acesso à justiça e combate à violência.",
@@ -265,7 +265,7 @@ const QUESTOES_PCAL_LOTE17 = [
   },
   {
     id: "DH-036", disciplina: "Direitos Humanos", assunto: "PNDH-3", subassunto: "Alcance e destinatários",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Decreto 7.037/2009, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 50, probReaparecer: 0.7,
     enunciado: "O PNDH-3 dirige-se exclusivamente aos órgãos do Poder Executivo federal, não envolvendo estados, municípios nem a participação da sociedade civil.",
@@ -284,7 +284,7 @@ const QUESTOES_PCAL_LOTE17 = [
   },
   {
     id: "DH-037", disciplina: "Direitos Humanos", assunto: "PNDH-3", subassunto: "Princípios (universalidade e indivisibilidade)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Decreto 7.037/2009, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 45, probReaparecer: 0.72,
     enunciado: "O PNDH-3 reafirma a universalidade, a indivisibilidade e a interdependência dos direitos humanos.",
@@ -303,7 +303,7 @@ const QUESTOES_PCAL_LOTE17 = [
   },
   {
     id: "DH-038", disciplina: "Direitos Humanos", assunto: "PNDH-3", subassunto: "Abrangência dos direitos",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Decreto 7.037/2009, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 45, probReaparecer: 0.7,
     enunciado: "Na perspectiva do PNDH-3, os direitos humanos restringem-se aos direitos civis e políticos.",

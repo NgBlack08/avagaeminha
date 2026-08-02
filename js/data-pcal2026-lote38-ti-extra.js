@@ -14,7 +14,7 @@ const QUESTOES_PCAL_LOTE38 = [
 
   {
     id: "TI-024", disciplina: "TI e Segurança Cibernética", assunto: "Sistemas operacionais", subassunto: "Permissões em Linux (chmod)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (sistemas operacionais Linux)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 60, probReaparecer: 0.76,
     enunciado: "No sistema operacional Linux, o comando chmod é utilizado exclusivamente para alterar o proprietário de um arquivo ou diretório, não sendo possível, por meio dele, modificar as permissões de leitura, escrita e execução atribuídas a esse arquivo.",
@@ -33,7 +33,7 @@ const QUESTOES_PCAL_LOTE38 = [
   },
   {
     id: "TI-025", disciplina: "TI e Segurança Cibernética", assunto: "Sistemas operacionais", subassunto: "Permissões em Linux (chmod)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (sistemas operacionais Linux)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 60, probReaparecer: 0.76,
     enunciado: "No sistema operacional Linux, o comando chmod é utilizado para alterar as permissões de leitura, escrita e execução atribuídas a um arquivo ou diretório, para o proprietário, o grupo e os demais usuários.",
@@ -52,7 +52,7 @@ const QUESTOES_PCAL_LOTE38 = [
   },
   {
     id: "TI-026", disciplina: "TI e Segurança Cibernética", assunto: "Banco de dados", subassunto: "Modelo conceitual (DER)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (modelagem de banco de dados)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 70, probReaparecer: 0.76,
     enunciado: "O modelo conceitual de um banco de dados, representado tipicamente por um Diagrama Entidade-Relacionamento (DER), tem como finalidade descrever a estrutura física de armazenamento dos dados, incluindo índices, tipos de arquivos e parâmetros específicos do sistema gerenciador de banco de dados (SGBD) a ser utilizado.",
@@ -71,7 +71,7 @@ const QUESTOES_PCAL_LOTE38 = [
   },
   {
     id: "TI-027", disciplina: "TI e Segurança Cibernética", assunto: "Banco de dados", subassunto: "Modelo conceitual (DER)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (modelagem de banco de dados)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 70, probReaparecer: 0.74,
     enunciado: "O modelo conceitual de um banco de dados, tipicamente representado por um Diagrama Entidade-Relacionamento (DER), descreve de forma abstrata as entidades, os atributos e os relacionamentos relevantes para o negócio, sem se preocupar com detalhes de implementação física ou com o SGBD a ser utilizado.",
@@ -90,7 +90,7 @@ const QUESTOES_PCAL_LOTE38 = [
   },
   {
     id: "TI-028", disciplina: "TI e Segurança Cibernética", assunto: "Linguagem SQL", subassunto: "Data Manipulation Language (DML)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (linguagem SQL)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 60, probReaparecer: 0.78,
     enunciado: "Os comandos SELECT, INSERT, UPDATE e DELETE pertencem à categoria da linguagem SQL denominada DML (Data Manipulation Language), utilizada para consultar e manipular os dados armazenados nas tabelas de um banco de dados relacional.",
@@ -109,7 +109,7 @@ const QUESTOES_PCAL_LOTE38 = [
   },
   {
     id: "TI-029", disciplina: "TI e Segurança Cibernética", assunto: "Fundamentos de segurança da informação", subassunto: "Ataques de negação de serviço (DDoS)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (tríade CID e ataques DDoS)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 65, probReaparecer: 0.8,
     enunciado: "Um ataque de negação de serviço distribuído (DDoS), que torna um sistema indisponível para seus usuários legítimos por meio da sobrecarga de requisições, compromete diretamente o princípio da confidencialidade da informação, uma vez que impede o acesso aos dados por parte dos usuários autorizados.",
@@ -128,7 +128,7 @@ const QUESTOES_PCAL_LOTE38 = [
   },
   {
     id: "TI-030", disciplina: "TI e Segurança Cibernética", assunto: "Gestão de riscos em segurança da informação", subassunto: "Risco residual",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (gestão de riscos em segurança da informação)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 70, probReaparecer: 0.78,
     enunciado: "No processo de gestão de riscos em segurança da informação, o risco residual corresponde ao nível de risco que permanece após a aplicação dos controles de segurança, não sendo, em regra, eliminado por completo, ainda que a organização implemente políticas de segurança da informação.",
@@ -147,7 +147,7 @@ const QUESTOES_PCAL_LOTE38 = [
   },
   {
     id: "TI-031", disciplina: "TI e Segurança Cibernética", assunto: "Linguagem de programação Java", subassunto: "Imutabilidade da classe String",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Java — estruturas de dados)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 70, probReaparecer: 0.74,
     enunciado: "Na linguagem de programação Java, a classe String é uma estrutura mutável, de modo que, ao se utilizar métodos como concat() ou replace() sobre um objeto String já existente, o conteúdo original desse objeto é alterado diretamente, sem a criação de um novo objeto em memória.",
@@ -166,7 +166,7 @@ const QUESTOES_PCAL_LOTE38 = [
   },
   {
     id: "TI-032", disciplina: "TI e Segurança Cibernética", assunto: "Gestão de identidades e acesso", subassunto: "OAuth2 x OpenID Connect",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (protocolos de autenticação e autorização)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 75, probReaparecer: 0.78,
     enunciado: "O protocolo OAuth2 tem como finalidade principal autorizar o acesso de uma aplicação a recursos de um usuário, sem necessariamente autenticar sua identidade, ao passo que o OpenID Connect constitui uma camada de autenticação construída sobre o OAuth2, permitindo verificar a identidade do usuário de forma padronizada.",
@@ -185,7 +185,7 @@ const QUESTOES_PCAL_LOTE38 = [
   },
   {
     id: "TI-033", disciplina: "TI e Segurança Cibernética", assunto: "Soluções de segurança da informação", subassunto: "SIEM x PAM",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (soluções de segurança: SIEM e PAM)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 75, probReaparecer: 0.74,
     enunciado: "Uma solução SIEM (Security Information and Event Management) tem como principal função gerenciar as identidades e os privilégios de acesso concedidos a usuários privilegiados, substituindo, dessa forma, a necessidade de soluções específicas de PAM (Privileged Access Management) em uma organização.",
@@ -205,7 +205,7 @@ const QUESTOES_PCAL_LOTE38 = [
 
   {
     id: "CC-020", disciplina: "Crimes Cibernéticos e Segurança Digital", assunto: "Interceptação de comunicações", subassunto: "Lei nº 9.296/1996",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei 9.296/1996)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 75, probReaparecer: 0.78,
     enunciado: "Constitui crime, nos termos da Lei nº 9.296/1996, realizar interceptação de comunicações telefônicas, de informática ou telemática sem autorização judicial ou com objetivos não autorizados em lei, sujeitando o responsável a pena de reclusão.",
@@ -224,7 +224,7 @@ const QUESTOES_PCAL_LOTE38 = [
   },
   {
     id: "CC-021", disciplina: "Crimes Cibernéticos e Segurança Digital", assunto: "Interceptação de comunicações", subassunto: "Lei nº 9.296/1996",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei 9.296/1996; CF, art. 5º, XII)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 75, probReaparecer: 0.76,
     enunciado: "A interceptação de comunicações telemáticas pode ser realizada pela autoridade policial sem autorização judicial, sempre que a urgência da investigação assim o exigir, dispensando-se, nessa hipótese, qualquer controle jurisdicional.",

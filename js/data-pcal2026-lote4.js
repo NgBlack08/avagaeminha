@@ -13,7 +13,7 @@ const QUESTOES_PCAL_LOTE4 = [
   /* ==================== LÍNGUA PORTUGUESA ==================== */
   {
     id: "PT-005", disciplina: "Língua Portuguesa", assunto: "Concordância", subassunto: "Verbo 'fazer' impessoal (tempo)",
-    concurso: "PCAL", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Escrivão","Agente","Especialista em Saúde — Fisioterapia"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 40, probReaparecer: 0.85,
     enunciado: "No trecho 'Fazem cinco anos que o inquérito foi instaurado', o emprego do verbo no plural atende à norma-padrão, uma vez que concorda com o termo 'cinco anos'.",
     gabarito: "E", pegadinha: "exigencia-inexistente", palavraChave: "Fazem cinco anos",
@@ -31,7 +31,7 @@ const QUESTOES_PCAL_LOTE4 = [
   },
   {
     id: "PT-006", disciplina: "Língua Portuguesa", assunto: "Crase", subassunto: "Locuções e palavras femininas",
-    concurso: "PCAL", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Escrivão","Agente","Especialista em Saúde — Fisioterapia"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 40, probReaparecer: 0.8,
     enunciado: "Na frase 'O suspeito foi mantido a distância pelos agentes', a ausência do acento grave em 'a distância' respeita a norma-padrão, pois a palavra 'distância' não vem determinada por adjunto que a especifique.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "a distância (sem especificação)",
@@ -49,7 +49,7 @@ const QUESTOES_PCAL_LOTE4 = [
   },
   {
     id: "PT-007", disciplina: "Língua Portuguesa", assunto: "Colocação pronominal", subassunto: "Próclise obrigatória",
-    concurso: "PCAL", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Escrivão","Agente","Especialista em Saúde — Fisioterapia"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 40, probReaparecer: 0.78,
     enunciado: "Em 'Nunca se viu tamanha celeridade nas investigações', a próclise (colocação do pronome antes do verbo) é obrigatória em razão da presença do advérbio de negação 'nunca'.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "nunca (palavra atrativa)",
@@ -67,7 +67,7 @@ const QUESTOES_PCAL_LOTE4 = [
   },
   {
     id: "PT-008", disciplina: "Língua Portuguesa", assunto: "Regência verbal", subassunto: "Verbo 'assistir'",
-    concurso: "PCAL", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Escrivão","Agente","Especialista em Saúde — Fisioterapia"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 45, probReaparecer: 0.72,
     enunciado: "Em 'Os peritos assistiram o laudo com atenção', o verbo 'assistir', no sentido de presenciar, está corretamente empregado como transitivo direto, dispensando a preposição 'a'.",
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "assistiram o laudo",
@@ -85,7 +85,7 @@ const QUESTOES_PCAL_LOTE4 = [
   },
   {
     id: "PT-009", disciplina: "Língua Portuguesa", assunto: "Compreensão e reescritura", subassunto: "Voz passiva",
-    concurso: "PCAL", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Escrivão","Agente","Especialista em Saúde — Fisioterapia"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 45, probReaparecer: 0.8,
     textoApoio: "A autoridade policial instaurou o inquérito após receber a notícia do crime.",
     enunciado: "A transposição do período para a voz passiva mantém a correção e o sentido na forma: 'O inquérito foi instaurado pela autoridade policial após receber a notícia do crime'.",
@@ -106,7 +106,7 @@ const QUESTOES_PCAL_LOTE4 = [
   /* ==================== RACIOCÍNIO LÓGICO-MATEMÁTICO ==================== */
   {
     id: "RL-007", disciplina: "Raciocínio Lógico-Matemático", assunto: "Lógica proposicional", subassunto: "Contrapositiva",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 45, probReaparecer: 0.9,
     enunciado: "A proposição 'Se há indícios de autoria, então o inquérito é instaurado' é logicamente equivalente a 'Se o inquérito não é instaurado, então não há indícios de autoria'.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "contrapositiva",
@@ -124,7 +124,7 @@ const QUESTOES_PCAL_LOTE4 = [
   },
   {
     id: "RL-008", disciplina: "Raciocínio Lógico-Matemático", assunto: "Lógica proposicional", subassunto: "Negação da condicional",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 50, probReaparecer: 0.88,
     enunciado: "A negação da proposição 'Se o agente cumpriu o mandado, então o suspeito foi preso' é 'O agente cumpriu o mandado e o suspeito não foi preso'.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "negação de P→Q",
@@ -142,7 +142,7 @@ const QUESTOES_PCAL_LOTE4 = [
   },
   {
     id: "RL-009", disciplina: "Raciocínio Lógico-Matemático", assunto: "Lógica de primeira ordem", subassunto: "Negação de quantificador",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 50, probReaparecer: 0.82,
     enunciado: "A negação da proposição 'Todos os policiais são armados' é 'Nenhum policial é armado'.",
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "Nenhum",
@@ -160,7 +160,7 @@ const QUESTOES_PCAL_LOTE4 = [
   },
   {
     id: "RL-010", disciplina: "Raciocínio Lógico-Matemático", assunto: "Lógica proposicional", subassunto: "Leis de De Morgan",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 45, probReaparecer: 0.85,
     enunciado: "Pela Lei de De Morgan, a negação de 'O réu é culpado e a prova é lícita' equivale a 'O réu não é culpado ou a prova não é lícita'.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "De Morgan",
@@ -178,7 +178,7 @@ const QUESTOES_PCAL_LOTE4 = [
   },
   {
     id: "RL-011", disciplina: "Raciocínio Lógico-Matemático", assunto: "Probabilidade", subassunto: "Probabilidade condicional",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 60, probReaparecer: 0.8,
     enunciado: "Em um baralho comum de 52 cartas, a probabilidade de se retirar uma carta que seja rei, dado que a carta retirada é uma figura (valete, dama ou rei), é igual a 1/3.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "dado que (condicional)",
@@ -198,7 +198,7 @@ const QUESTOES_PCAL_LOTE4 = [
   /* ==================== NOÇÕES DE DIREITOS HUMANOS ==================== */
   {
     id: "DH-006", disciplina: "Direitos Humanos", assunto: "Teoria geral", subassunto: "Características",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 40, probReaparecer: 0.85,
     enunciado: "Entre as características dos direitos humanos está a imprescritibilidade, de modo que tais direitos não se perdem pela passagem do tempo nem pelo seu não exercício.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "imprescritibilidade",
@@ -216,7 +216,7 @@ const QUESTOES_PCAL_LOTE4 = [
   },
   {
     id: "DH-007", disciplina: "Direitos Humanos", assunto: "Convenção Americana", subassunto: "Prisão civil por dívida",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 45, probReaparecer: 0.8,
     enunciado: "Conforme o Pacto de São José da Costa Rica e o entendimento do STF, é lícita a prisão civil do depositário infiel, ao lado da prisão do devedor de alimentos.",
     gabarito: "E", pegadinha: "exigencia-inexistente", palavraChave: "depositário infiel",
@@ -234,7 +234,7 @@ const QUESTOES_PCAL_LOTE4 = [
   },
   {
     id: "DH-008", disciplina: "Direitos Humanos", assunto: "Dimensões dos direitos", subassunto: "Gerações",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 40, probReaparecer: 0.75,
     enunciado: "Os direitos de primeira dimensão (ou geração) correspondem aos direitos sociais, econômicos e culturais, que exigem prestações positivas do Estado, ligados ao valor da igualdade.",
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "primeira dimensão / sociais",
@@ -252,7 +252,7 @@ const QUESTOES_PCAL_LOTE4 = [
   },
   {
     id: "DH-009", disciplina: "Direitos Humanos", assunto: "Direitos humanos e Estado", subassunto: "Uso da força policial",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 40, probReaparecer: 0.78,
     enunciado: "Segundo os parâmetros internacionais de direitos humanos aplicáveis à atividade policial, o uso da força deve observar os princípios da legalidade, necessidade e proporcionalidade, sendo o emprego de arma de fogo medida excepcional.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "legalidade, necessidade e proporcionalidade",
@@ -272,7 +272,7 @@ const QUESTOES_PCAL_LOTE4 = [
   /* ==================== ÉTICA NO SERVIÇO PÚBLICO ==================== */
   {
     id: "ET-004", disciplina: "Ética no Serviço Público", assunto: "Ética e moral", subassunto: "Distinção conceitual",
-    concurso: "PCAL", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Escrivão","Agente","Especialista em Saúde — Fisioterapia"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 40, probReaparecer: 0.8,
     enunciado: "A moral corresponde ao conjunto de normas e costumes efetivamente vividos por um grupo social, enquanto a ética é a reflexão crítica e filosófica sobre esses valores morais.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "reflexão crítica",
@@ -290,7 +290,7 @@ const QUESTOES_PCAL_LOTE4 = [
   },
   {
     id: "ET-005", disciplina: "Ética no Serviço Público", assunto: "Ética e função pública", subassunto: "Princípios da Administração",
-    concurso: "PCAL", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Escrivão","Agente","Especialista em Saúde — Fisioterapia"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 40, probReaparecer: 0.82,
     enunciado: "O princípio da impessoalidade, aplicável ao servidor público, impõe que a atuação administrativa seja voltada ao interesse público, vedando a promoção pessoal do agente à custa de atos e realizações da Administração.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "impessoalidade",
@@ -308,7 +308,7 @@ const QUESTOES_PCAL_LOTE4 = [
   },
   {
     id: "ET-006", disciplina: "Ética no Serviço Público", assunto: "Ética no setor público", subassunto: "Conduta do servidor",
-    concurso: "PCAL", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Escrivão","Agente","Especialista em Saúde — Fisioterapia"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 40, probReaparecer: 0.75,
     enunciado: "No exercício da função pública, a cortesia, a boa-vontade e o zelo no trato com o cidadão são deveres éticos do servidor, e não meras liberalidades sujeitas à sua conveniência pessoal.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "deveres éticos",
@@ -328,7 +328,7 @@ const QUESTOES_PCAL_LOTE4 = [
   /* ==================== TI E SEGURANÇA CIBERNÉTICA ==================== */
   {
     id: "TI-005", disciplina: "TI e Segurança Cibernética", assunto: "Malwares", subassunto: "Cavalo de Troia × vírus",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Perito Criminal","Papiloscopista"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 35, probReaparecer: 0.85,
     enunciado: "O cavalo de Troia (trojan) caracteriza-se por se replicar automaticamente pela rede, sem necessidade de ação do usuário nem de um programa hospedeiro, o que o distingue do vírus.",
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "replica automaticamente",
@@ -346,7 +346,7 @@ const QUESTOES_PCAL_LOTE4 = [
   },
   {
     id: "TI-006", disciplina: "TI e Segurança Cibernética", assunto: "Criptografia", subassunto: "Simétrica × assimétrica",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Perito Criminal","Papiloscopista"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 45, probReaparecer: 0.82,
     enunciado: "Na criptografia assimétrica, utiliza-se um par de chaves: aquilo que é cifrado com a chave pública somente pode ser decifrado com a respectiva chave privada, e vice-versa.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "par de chaves",
@@ -364,7 +364,7 @@ const QUESTOES_PCAL_LOTE4 = [
   },
   {
     id: "TI-007", disciplina: "TI e Segurança Cibernética", assunto: "Segurança de rede", subassunto: "Firewall × IDS × IPS",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Perito Criminal","Papiloscopista"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 40, probReaparecer: 0.8,
     enunciado: "O IDS (Intrusion Detection System) atua de forma reativa apenas detectando e alertando sobre atividades suspeitas, ao passo que o IPS (Intrusion Prevention System) pode bloquear ativamente o tráfego malicioso.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "IDS detecta / IPS bloqueia",
@@ -382,7 +382,7 @@ const QUESTOES_PCAL_LOTE4 = [
   },
   {
     id: "TI-008", disciplina: "TI e Segurança Cibernética", assunto: "Computação em nuvem", subassunto: "Modelos de serviço",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Perito Criminal","Papiloscopista"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 40, probReaparecer: 0.78,
     enunciado: "No modelo de computação em nuvem SaaS (Software as a Service), o usuário final acessa aplicações prontas pela Internet, sem precisar gerenciar a infraestrutura, o sistema operacional ou a manutenção do software subjacente.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "SaaS",
@@ -400,7 +400,7 @@ const QUESTOES_PCAL_LOTE4 = [
   },
   {
     id: "TI-009", disciplina: "TI e Segurança Cibernética", assunto: "Gestão de identidades", subassunto: "Autenticação multifator",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Perito Criminal","Papiloscopista"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 40, probReaparecer: 0.8,
     enunciado: "A autenticação multifator (MFA) combina fatores de categorias distintas — como algo que o usuário sabe, algo que possui e algo que é —, de modo que a exigência de duas senhas diferentes já configura, por si só, autenticação multifator.",
     gabarito: "E", pegadinha: "verdade-mais-falso", palavraChave: "duas senhas diferentes",
@@ -418,7 +418,7 @@ const QUESTOES_PCAL_LOTE4 = [
   },
   {
     id: "TI-010", disciplina: "TI e Segurança Cibernética", assunto: "Fundamentos de segurança", subassunto: "Tríade CID",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Perito Criminal","Papiloscopista"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 35, probReaparecer: 0.85,
     enunciado: "O princípio da integridade, na segurança da informação, garante que a informação esteja acessível e disponível sempre que um usuário autorizado dela necessitar.",
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "acessível e disponível",
@@ -438,7 +438,7 @@ const QUESTOES_PCAL_LOTE4 = [
   /* ==================== DIREITO CONSTITUCIONAL ==================== */
   {
     id: "DC-007", disciplina: "Direito Constitucional", assunto: "Segurança pública", subassunto: "Órgãos do art. 144",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 40, probReaparecer: 0.9,
     enunciado: "A segurança pública é exercida, entre outros órgãos, pelas polícias penais federal, estaduais e distrital, incluídas expressamente no rol do art. 144 da Constituição Federal pela Emenda Constitucional nº 104/2019.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "polícias penais",
@@ -456,7 +456,7 @@ const QUESTOES_PCAL_LOTE4 = [
   },
   {
     id: "DC-008", disciplina: "Direito Constitucional", assunto: "Direitos e garantias fundamentais", subassunto: "Remédios constitucionais",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 40, probReaparecer: 0.82,
     enunciado: "Conceder-se-á habeas data para assegurar o conhecimento ou a retificação de informações relativas à pessoa do impetrante, constantes de registros ou bancos de dados de entidades governamentais ou de caráter público.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "habeas data",
@@ -474,7 +474,7 @@ const QUESTOES_PCAL_LOTE4 = [
   },
   {
     id: "DC-009", disciplina: "Direito Constitucional", assunto: "Direitos e garantias fundamentais", subassunto: "Direito de reunião",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 45, probReaparecer: 0.75,
     enunciado: "O direito de reunião em locais abertos ao público, previsto na Constituição, depende de prévia autorização da autoridade competente, exigindo-se, ainda, que não frustre outra reunião anteriormente convocada para o mesmo local.",
     gabarito: "E", pegadinha: "exigencia-inexistente", palavraChave: "prévia autorização",
@@ -494,7 +494,7 @@ const QUESTOES_PCAL_LOTE4 = [
   /* ==================== DIREITO ADMINISTRATIVO ==================== */
   {
     id: "DA-006", disciplina: "Direito Administrativo", assunto: "Organização administrativa", subassunto: "Autarquias",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 40, probReaparecer: 0.85,
     enunciado: "As autarquias são pessoas jurídicas de direito público, integrantes da Administração indireta, criadas diretamente por lei específica, dispensando registro de seus atos constitutivos para adquirir personalidade jurídica.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "criadas por lei",
@@ -512,7 +512,7 @@ const QUESTOES_PCAL_LOTE4 = [
   },
   {
     id: "DA-007", disciplina: "Direito Administrativo", assunto: "Atos administrativos", subassunto: "Atributos",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 45, probReaparecer: 0.82,
     enunciado: "A autoexecutoriedade, atributo do ato administrativo, está presente em todos os atos da Administração, permitindo-lhe executá-los diretamente, com o uso da força se necessário, independentemente de previsão legal ou de situação de urgência.",
     gabarito: "E", pegadinha: "termo-absoluto", palavraChave: "todos os atos",
@@ -530,7 +530,7 @@ const QUESTOES_PCAL_LOTE4 = [
   },
   {
     id: "DA-008", disciplina: "Direito Administrativo", assunto: "Licitações", subassunto: "Modalidades (Lei 14.133/2021)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 40, probReaparecer: 0.8,
     enunciado: "A Lei nº 14.133/2021 (nova Lei de Licitações) manteve as modalidades tomada de preços e convite, acrescentando a elas o diálogo competitivo.",
     gabarito: "E", pegadinha: "exigencia-inexistente", palavraChave: "tomada de preços e convite",
@@ -548,7 +548,7 @@ const QUESTOES_PCAL_LOTE4 = [
   },
   {
     id: "DA-009", disciplina: "Direito Administrativo", assunto: "Poderes administrativos", subassunto: "Poder de polícia",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 45, probReaparecer: 0.78,
     enunciado: "O ciclo de polícia administrativa compreende as fases de ordem, consentimento, fiscalização e sanção; segundo o STF, a fase de sanção pode ser delegada a pessoas jurídicas de direito privado integrantes da Administração indireta.",
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "sanção pode ser delegada",

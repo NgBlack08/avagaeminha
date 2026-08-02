@@ -15,7 +15,7 @@ const QUESTOES_PCAL_LOTE3 = [
   /* ============ DIREITO PENAL — CRIMES CONTRA A PESSOA ============ */
   {
     id: "DP-013", disciplina: "Direito Penal", assunto: "Crimes contra a pessoa", subassunto: "Dolo eventual × culpa consciente",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 50, probReaparecer: 0.85,
     enunciado: "No dolo eventual, o agente prevê o resultado e, embora não o queira diretamente, assume o risco de produzi-lo; já na culpa consciente, o agente também prevê o resultado, mas acredita sinceramente que este não ocorrerá.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "assume o risco",
@@ -33,7 +33,7 @@ const QUESTOES_PCAL_LOTE3 = [
   },
   {
     id: "DP-014", disciplina: "Direito Penal", assunto: "Crimes contra a pessoa", subassunto: "Lesão corporal seguida de morte",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 45, probReaparecer: 0.75,
     enunciado: "A lesão corporal seguida de morte é crime preterdoloso, no qual há dolo na conduta antecedente (lesão) e culpa quanto ao resultado mais grave (morte); por essa razão, não se admite a forma tentada.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "preterdoloso",
@@ -53,7 +53,7 @@ const QUESTOES_PCAL_LOTE3 = [
   /* ============ DIREITO PENAL — CRIMES CONTRA O PATRIMÔNIO ============ */
   {
     id: "DP-015", disciplina: "Direito Penal", assunto: "Crimes contra o patrimônio", subassunto: "Roubo próprio × impróprio",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 40, probReaparecer: 0.85,
     enunciado: "Configura roubo impróprio a conduta do agente que, logo depois de subtraída a coisa, emprega violência contra pessoa a fim de assegurar a impunidade do crime ou a detenção da coisa para si.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "logo depois de subtraída",
@@ -71,7 +71,7 @@ const QUESTOES_PCAL_LOTE3 = [
   },
   {
     id: "DP-016", disciplina: "Direito Penal", assunto: "Crimes contra o patrimônio", subassunto: "Consumação do roubo",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 45, probReaparecer: 0.8,
     enunciado: "Segundo o STJ, o crime de roubo somente se consuma quando o agente obtém a posse mansa, pacífica e desvigiada da coisa subtraída, fora da esfera de vigilância da vítima.",
     gabarito: "E", pegadinha: "exigencia-inexistente", palavraChave: "posse mansa, pacífica e desvigiada",
@@ -90,7 +90,7 @@ const QUESTOES_PCAL_LOTE3 = [
   },
   {
     id: "DP-017", disciplina: "Direito Penal", assunto: "Crimes contra o patrimônio", subassunto: "Extorsão × roubo",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 45, probReaparecer: 0.75,
     enunciado: "A extorsão é crime formal, consumando-se independentemente da obtenção da vantagem econômica indevida, bastando o constrangimento da vítima, mediante violência ou grave ameaça, a fazer, tolerar que se faça ou deixar de fazer alguma coisa.",
     gabarito: "C", pegadinha: "juris-mais-lei", palavraChave: "independentemente da obtenção",
@@ -108,7 +108,7 @@ const QUESTOES_PCAL_LOTE3 = [
   },
   {
     id: "DP-018", disciplina: "Direito Penal", assunto: "Crimes contra o patrimônio", subassunto: "Estelionato — ação penal",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 40, probReaparecer: 0.85,
     enunciado: "Após a Lei nº 13.964/2019, a ação penal no crime de estelionato passou a ser, em regra, pública condicionada à representação do ofendido, salvo quando a vítima for a Administração Pública, criança ou adolescente, pessoa idosa ou vulnerável, entre outras hipóteses legais.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "condicionada à representação",
@@ -129,7 +129,7 @@ const QUESTOES_PCAL_LOTE3 = [
   /* ============ PROCESSO PENAL — PRISÃO EM FLAGRANTE ============ */
   {
     id: "PP-010", disciplina: "Processo Penal", assunto: "Prisão em flagrante", subassunto: "Modalidades (art. 302)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 40, probReaparecer: 0.9,
     enunciado: "Considera-se em flagrante próprio o agente que é perseguido, logo após a prática do delito, pela autoridade, pelo ofendido ou por qualquer pessoa, em situação que faça presumir ser ele o autor da infração.",
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "perseguido, logo após",
@@ -147,7 +147,7 @@ const QUESTOES_PCAL_LOTE3 = [
   },
   {
     id: "PP-011", disciplina: "Processo Penal", assunto: "Prisão em flagrante", subassunto: "Flagrante preparado × esperado",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 45, probReaparecer: 0.85,
     enunciado: "Conforme entendimento sumulado do STF, não há crime quando a preparação do flagrante pela polícia torna impossível a sua consumação, hipótese em que se configura crime impossível.",
     gabarito: "C", pegadinha: "juris-mais-lei", palavraChave: "torna impossível a consumação",
@@ -165,7 +165,7 @@ const QUESTOES_PCAL_LOTE3 = [
   },
   {
     id: "PP-012", disciplina: "Processo Penal", assunto: "Prisão em flagrante", subassunto: "Crime permanente",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 40, probReaparecer: 0.85,
     enunciado: "Nos crimes permanentes, considera-se o agente em situação de flagrância enquanto não cessar a permanência, razão pela qual é lícito o ingresso domiciliar, a qualquer hora do dia ou da noite, para fazer cessar a prática, como no caso do tráfico de drogas na modalidade 'ter em depósito'.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "enquanto não cessar a permanência",
@@ -184,7 +184,7 @@ const QUESTOES_PCAL_LOTE3 = [
   },
   {
     id: "PP-013", disciplina: "Processo Penal", assunto: "Prisão em flagrante", subassunto: "Audiência de custódia",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 40, probReaparecer: 0.85,
     enunciado: "Recebido o auto de prisão em flagrante, o juiz deverá promover a audiência de custódia, com a apresentação do preso, no prazo máximo de setenta e duas horas contadas da prisão.",
     gabarito: "E", pegadinha: "troca-numerica", palavraChave: "setenta e duas horas",

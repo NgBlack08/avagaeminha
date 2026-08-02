@@ -21,7 +21,7 @@ const QUESTOES_PCAL_LOTE46 = [
   /* ===== NACIONALIDADE POTESTATIVA — OPÇÃO CONFIRMATIVA (ART. 12, I, "C") ===== */
   {
     id: "DC-079", disciplina: "Direito Constitucional", assunto: "Nacionalidade", subassunto: "Nacionalidade potestativa — opção confirmativa (art. 12, I, 'c')",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (CF/88, art. 12, I, 'c')",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.82,
     enunciado: "O nascido no estrangeiro, de pai brasileiro ou de mãe brasileira, que não tenha sido registrado em repartição brasileira competente, só adquire a condição de brasileiro nato se vier a residir no Brasil e optar formalmente, em juízo, em qualquer tempo após atingida a maioridade, pela nacionalidade brasileira.",
@@ -40,7 +40,7 @@ const QUESTOES_PCAL_LOTE46 = [
   },
   {
     id: "DC-080", disciplina: "Direito Constitucional", assunto: "Nacionalidade", subassunto: "Nacionalidade potestativa — opção confirmativa (art. 12, I, 'c')",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (CF/88, art. 12, I, 'c')",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.78,
     enunciado: "O nascido no estrangeiro, com pai brasileiro ou mãe brasileira, que venha a residir no Brasil adquire automaticamente a condição de brasileiro nato ao atingir a maioridade civil, independentemente de qualquer manifestação formal de vontade nesse sentido.",
@@ -61,7 +61,7 @@ const QUESTOES_PCAL_LOTE46 = [
   /* ===== NATURALIZAÇÃO EXTRAORDINÁRIA E IMPEDIMENTO PARA PRESIDIR A CASA (ART. 12, II, "B" E § 3º) ===== */
   {
     id: "DC-081", disciplina: "Direito Constitucional", assunto: "Nacionalidade", subassunto: "Naturalização extraordinária e impedimento para presidir a Casa (art. 12, II, 'b' e § 3º)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (CF/88, art. 12, II, 'b' e § 3º)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 70, probReaparecer: 0.84,
     enunciado: "O estrangeiro residente no Brasil há mais de quinze anos ininterruptos, sem condenação penal, tem direito subjetivo à naturalização extraordinária mediante requerimento e, uma vez naturalizado, pode candidatar-se e ser eleito deputado federal ou senador, mas, se eleito, estará impedido de presidir a Casa legislativa a que pertencer.",
@@ -80,7 +80,7 @@ const QUESTOES_PCAL_LOTE46 = [
   },
   {
     id: "DC-082", disciplina: "Direito Constitucional", assunto: "Nacionalidade", subassunto: "Naturalização extraordinária e impedimento para presidir a Casa (art. 12, II, 'b' e § 3º)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (CF/88, art. 12, II, 'b' e § 3º)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 70, probReaparecer: 0.8,
     enunciado: "O estrangeiro residente no Brasil há mais de quinze anos ininterruptos, sem condenação penal, que se torne brasileiro naturalizado mediante requerimento, não poderá candidatar-se a deputado federal ou a senador, uma vez que tais cargos são privativos de brasileiro nato, nos termos do art. 12, § 3º, da Constituição Federal.",
@@ -101,7 +101,7 @@ const QUESTOES_PCAL_LOTE46 = [
   /* ===== CASSAÇÃO x PERDA DE DIREITOS POLÍTICOS (ART. 15) ===== */
   {
     id: "DC-083", disciplina: "Direito Constitucional", assunto: "Nacionalidade", subassunto: "Cassação x perda de direitos políticos (art. 15)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (CF/88, art. 15)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.84,
     enunciado: "É vedada, em qualquer hipótese, a cassação de direitos políticos, sendo o cancelamento da naturalização por sentença judicial transitada em julgado uma hipótese constitucional de perda — e não de cassação — desses direitos.",
@@ -120,7 +120,7 @@ const QUESTOES_PCAL_LOTE46 = [
   },
   {
     id: "DC-084", disciplina: "Direito Constitucional", assunto: "Nacionalidade", subassunto: "Cassação x perda de direitos políticos (art. 15)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (CF/88, art. 15)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.8,
     enunciado: "O cancelamento da naturalização por sentença judicial transitada em julgado tem por consequência a cassação dos direitos políticos do indivíduo, nos termos expressos do art. 15 da Constituição Federal.",
@@ -141,7 +141,7 @@ const QUESTOES_PCAL_LOTE46 = [
   /* ===== RENÚNCIA DA NACIONALIDADE E REAQUISIÇÃO (EC 131/2023, ART. 12, § 4º, II E § 5º) ===== */
   {
     id: "DC-085", disciplina: "Direito Constitucional", assunto: "Nacionalidade", subassunto: "Renúncia e reaquisição da nacionalidade (EC 131/2023, art. 12, § 4º, II e § 5º)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (CF/88, art. 12, § 4º, II e § 5º, redação da EC 131/2023)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 70, probReaparecer: 0.82,
     enunciado: "A renúncia da nacionalidade brasileira, mediante pedido expresso à autoridade brasileira competente — ressalvadas as situações que acarretem apatridia —, não impede o interessado de readquirir sua nacionalidade brasileira originária, nos termos da lei, consoante a redação dada ao art. 12 da Constituição Federal pela Emenda Constitucional nº 131/2023.",
@@ -160,7 +160,7 @@ const QUESTOES_PCAL_LOTE46 = [
   },
   {
     id: "DC-086", disciplina: "Direito Constitucional", assunto: "Nacionalidade", subassunto: "Renúncia e reaquisição da nacionalidade (EC 131/2023, art. 12, § 4º, II e § 5º)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (CF/88, art. 12, § 4º, II e § 5º, redação da EC 131/2023)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 70, probReaparecer: 0.78,
     enunciado: "A renúncia da nacionalidade brasileira, uma vez formalizada por pedido expresso à autoridade competente, é ato irreversível, impedindo definitivamente o interessado de voltar a adquirir a nacionalidade brasileira, ainda que futuramente preencha os requisitos legais para tanto.",
@@ -181,7 +181,7 @@ const QUESTOES_PCAL_LOTE46 = [
   /* ===== EXTRADIÇÃO DO BRASILEIRO NATO — VEDAÇÃO ABSOLUTA (ART. 5º, LI) ===== */
   {
     id: "DC-087", disciplina: "Direito Constitucional", assunto: "Nacionalidade", subassunto: "Extradição do brasileiro nato — vedação absoluta (art. 5º, LI)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (CF/88, art. 5º, LI)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.86,
     enunciado: "O brasileiro nato jamais poderá ser extraditado, em nenhuma hipótese, independentemente da natureza ou da gravidade do crime imputado — sendo a exceção relativa ao comprovado envolvimento em tráfico ilícito de entorpecentes e drogas afins aplicável exclusivamente ao brasileiro naturalizado.",
@@ -200,7 +200,7 @@ const QUESTOES_PCAL_LOTE46 = [
   },
   {
     id: "DC-088", disciplina: "Direito Constitucional", assunto: "Nacionalidade", subassunto: "Extradição do brasileiro nato — vedação absoluta (art. 5º, LI)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (CF/88, art. 5º, LI)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.82,
     enunciado: "O brasileiro nato somente poderá ser extraditado na hipótese de comprovado envolvimento em tráfico ilícito de entorpecentes e drogas afins, aplicando-se a ele a mesma exceção constitucional prevista para o brasileiro naturalizado.",

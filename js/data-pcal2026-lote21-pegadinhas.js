@@ -12,7 +12,7 @@ const QUESTOES_PCAL_LOTE21 = [
 
   {
     id: "DP-069", disciplina: "Direito Penal", assunto: "Princípios penais", subassunto: "Termo absoluto verdadeiro (art. 5º, III, CF)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (CF, art. 5º, III)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 55, probReaparecer: 0.8,
     enunciado: "A vedação a que alguém seja submetido a tortura ou a tratamento desumano ou degradante não admite exceção, ainda que em estado de defesa ou de sítio.",
@@ -31,7 +31,7 @@ const QUESTOES_PCAL_LOTE21 = [
   },
   {
     id: "DC-028", disciplina: "Direito Constitucional", assunto: "Direitos fundamentais", subassunto: "Relatividade (generalização)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (CF, art. 5º; STF)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 55, probReaparecer: 0.82,
     enunciado: "Os direitos e garantias fundamentais têm caráter absoluto, não admitindo qualquer relativização.",
@@ -51,7 +51,7 @@ const QUESTOES_PCAL_LOTE21 = [
   },
   {
     id: "DA-042", disciplina: "Direito Administrativo", assunto: "Poderes administrativos", subassunto: "Poder de polícia (restrição indevida)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (poder de polícia)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.78,
     enunciado: "O poder de polícia administrativa esgota-se na atividade repressiva, consistente na aplicação de sanções aos particulares.",
@@ -70,7 +70,7 @@ const QUESTOES_PCAL_LOTE21 = [
   },
   {
     id: "PP-047", disciplina: "Processo Penal", assunto: "Inquérito policial", subassunto: "Dispensabilidade (verdade + falso)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (CPP; STF)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 55, probReaparecer: 0.85,
     enunciado: "O inquérito policial é procedimento administrativo, inquisitivo, sigiloso e indispensável à propositura da ação penal.",
@@ -89,7 +89,7 @@ const QUESTOES_PCAL_LOTE21 = [
   },
   {
     id: "DP-070", disciplina: "Direito Penal", assunto: "Ação penal", subassunto: "Queixa-crime (troca de sujeito)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (CPP, ação penal privada)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.76,
     enunciado: "Na ação penal privada, cabe ao querelado o oferecimento da queixa-crime.",
@@ -108,7 +108,7 @@ const QUESTOES_PCAL_LOTE21 = [
   },
   {
     id: "DH-039", disciplina: "Direitos Humanos", assunto: "Teoria geral dos direitos humanos", subassunto: "Eficácia horizontal (restrição indevida)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (eficácia horizontal; STF)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 55, probReaparecer: 0.78,
     enunciado: "Os direitos fundamentais aplicam-se exclusivamente às relações entre o indivíduo e o Estado, não incidindo nas relações entre particulares.",
@@ -128,7 +128,7 @@ const QUESTOES_PCAL_LOTE21 = [
   },
   {
     id: "DA-043", disciplina: "Direito Administrativo", assunto: "Atos administrativos", subassunto: "Requisitos (verdade + falso)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (requisitos do ato administrativo)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 55, probReaparecer: 0.8,
     enunciado: "São requisitos de validade do ato administrativo a competência, a finalidade, a forma, o motivo, o objeto e a publicidade.",
@@ -147,7 +147,7 @@ const QUESTOES_PCAL_LOTE21 = [
   },
   {
     id: "PP-048", disciplina: "Processo Penal", assunto: "Inquérito policial", subassunto: "Indiciamento (troca de sujeito)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei 12.830/2013)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.82,
     enunciado: "O indiciamento é ato privativo do delegado de polícia, mediante despacho fundamentado, no âmbito do inquérito policial.",
@@ -167,7 +167,7 @@ const QUESTOES_PCAL_LOTE21 = [
   },
   {
     id: "DP-071", disciplina: "Direito Penal", assunto: "Crimes dolosos contra a vida", subassunto: "Júri e foro por prerrogativa (generalização)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (CF, art. 5º, XXXVIII; STF)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 55, probReaparecer: 0.78,
     enunciado: "Todo crime doloso contra a vida é julgado pelo tribunal do júri, inclusive quando o réu detém foro por prerrogativa de função previsto na Constituição.",
@@ -187,7 +187,7 @@ const QUESTOES_PCAL_LOTE21 = [
   },
   {
     id: "LE-116", disciplina: "Legislação Especial", assunto: "Lei de Drogas", subassunto: "Porte para consumo (restrição indevida)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei 11.343/2006, art. 28)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.8,
     enunciado: "O porte de droga para consumo pessoal não é punido com pena privativa de liberdade, sujeitando o agente a advertência, prestação de serviços à comunidade e medida educativa.",
@@ -206,7 +206,7 @@ const QUESTOES_PCAL_LOTE21 = [
   },
   {
     id: "DC-029", disciplina: "Direito Constitucional", assunto: "Controle de constitucionalidade", subassunto: "Legitimados da ADI (restrição verdadeira)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (CF, art. 103)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 55, probReaparecer: 0.78,
     enunciado: "Somente os legitimados expressamente arrolados na Constituição podem propor ação direta de inconstitucionalidade perante o STF.",
@@ -225,7 +225,7 @@ const QUESTOES_PCAL_LOTE21 = [
   },
   {
     id: "DA-044", disciplina: "Direito Administrativo", assunto: "Improbidade administrativa", subassunto: "Aplicação das sanções (troca de sujeito)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei 8.429/1992)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 55, probReaparecer: 0.76,
     enunciado: "As sanções por ato de improbidade administrativa são aplicadas pela própria autoridade administrativa, no âmbito de processo administrativo disciplinar.",
@@ -244,7 +244,7 @@ const QUESTOES_PCAL_LOTE21 = [
   },
   {
     id: "DH-040", disciplina: "Direitos Humanos", assunto: "Sistema global", subassunto: "Natureza da DUDH (troca de conceito)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (DUDH/1948)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 55, probReaparecer: 0.76,
     enunciado: "A Declaração Universal dos Direitos Humanos, de 1948, tem natureza jurídica de tratado internacional, sendo, por si só, diretamente vinculante e exigível como norma convencional.",

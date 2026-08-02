@@ -37,7 +37,7 @@ const QUESTOES_PCAL_LOTE62 = [
   /* ---------- Disposições preliminares (arts. 1º a 8º) ---------- */
   {
     id: "LI-080", disciplina: "Legislação Institucional (AL)", assunto: "Estatuto da PC-AL (Lei 3.437/1975)", subassunto: "Composição do regime jurídico (art. 1º, p.u.)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de literalidade normativa)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.86,
     enunciado: "O regime jurídico dos funcionários civis da Polícia Civil de Alagoas compõe-se exclusivamente das normas especiais do respectivo Estatuto, afastada a incidência das normas gerais do Estatuto dos Funcionários Públicos Civis do Estado.",
@@ -56,7 +56,7 @@ const QUESTOES_PCAL_LOTE62 = [
   },
   {
     id: "LI-081", disciplina: "Legislação Institucional (AL)", assunto: "Estatuto da PC-AL (Lei 3.437/1975)", subassunto: "Comissionados como policiais civis (art. 2º, p.u.)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de literalidade normativa)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.8,
     enunciado: "Os ocupantes de cargos em comissão e funções gratificadas com atribuições e responsabilidade de natureza policial são considerados policiais civis desde que assim declarados por decreto do chefe do Poder Executivo.",
@@ -75,7 +75,7 @@ const QUESTOES_PCAL_LOTE62 = [
   },
   {
     id: "LI-082", disciplina: "Legislação Institucional (AL)", assunto: "Estatuto da PC-AL (Lei 3.437/1975)", subassunto: "Vedação de serviços gratuitos (art. 3º)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de literalidade normativa)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 60, probReaparecer: 0.78,
     enunciado: "É admitida a prestação de serviços gratuitos à Polícia Civil de Alagoas por prazo não superior a trinta dias, hipótese em que o período será computado como de efetivo exercício.",
@@ -94,7 +94,7 @@ const QUESTOES_PCAL_LOTE62 = [
   },
   {
     id: "LI-083", disciplina: "Legislação Institucional (AL)", assunto: "Estatuto da PC-AL (Lei 3.437/1975)", subassunto: "Magistério cumulativo — redação vigente (art. 4º)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (conflito de redações)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 75, probReaparecer: 0.92,
     enunciado: "Conforme a redação atualmente em vigor do Estatuto da Polícia Civil de Alagoas, o membro da Polícia Judiciária poderá, havendo compatibilidade de horários, exercer cumulativamente atividade de magistério.",
@@ -113,7 +113,7 @@ const QUESTOES_PCAL_LOTE62 = [
   },
   {
     id: "LI-084", disciplina: "Legislação Institucional (AL)", assunto: "Estatuto da PC-AL (Lei 3.437/1975)", subassunto: "Dedicação exclusiva — redação revogada (art. 4º)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (conflito de redações)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 70, probReaparecer: 0.88,
     enunciado: "O Estatuto da Polícia Civil de Alagoas submete o policial civil, em sua redação vigente, ao regime de tempo integral e dedicação exclusiva ao serviço policial, nas modalidades Operacional e Especializada.",
@@ -132,7 +132,7 @@ const QUESTOES_PCAL_LOTE62 = [
   },
   {
     id: "LI-085", disciplina: "Legislação Institucional (AL)", assunto: "Estatuto da PC-AL (Lei 3.437/1975)", subassunto: "Subordinação da Polícia Civil (art. 6º)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de literalidade normativa)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.74,
     enunciado: "A Polícia Civil do Estado de Alagoas é subordinada diretamente, para todos os efeitos, à Secretaria de Segurança Pública.",
@@ -151,7 +151,7 @@ const QUESTOES_PCAL_LOTE62 = [
   },
   {
     id: "LI-086", disciplina: "Legislação Institucional (AL)", assunto: "Estatuto da PC-AL (Lei 3.437/1975)", subassunto: "Competência da Polícia Civil (art. 7º)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de literalidade normativa)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 60, probReaparecer: 0.7,
     enunciado: "Compete à Polícia Civil manter e assegurar a ordem pública, garantir os direitos individuais e coletivos, a execução das leis e o exercício dos poderes constituídos, sem qualquer limitação de esfera de atribuições.",
@@ -172,7 +172,7 @@ const QUESTOES_PCAL_LOTE62 = [
   /* ---------- Cargos e requisitos (arts. 15 a 30) ---------- */
   {
     id: "LI-087", disciplina: "Legislação Institucional (AL)", assunto: "Estatuto da PC-AL (Lei 3.437/1975)", subassunto: "Escolaridade do Motorista Policial (art. 20)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de literalidade normativa)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 60, probReaparecer: 0.66,
     enunciado: "Para o provimento do cargo de Motorista Policial, o Estatuto exige a conclusão do ensino de 1º grau ou equivalente.",
@@ -191,7 +191,7 @@ const QUESTOES_PCAL_LOTE62 = [
   },
   {
     id: "LI-088", disciplina: "Legislação Institucional (AL)", assunto: "Estatuto da PC-AL (Lei 3.437/1975)", subassunto: "Atribuições do Agente Auxiliar (art. 19)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de literalidade normativa)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.75,
     enunciado: "Incluem-se entre as atribuições básicas do Agente Auxiliar de Polícia executar intimações e notificações a indiciados, vítimas e testemunhas, proceder à busca de informações e executar a segurança de autoridades.",
@@ -210,7 +210,7 @@ const QUESTOES_PCAL_LOTE62 = [
   },
   {
     id: "LI-089", disciplina: "Legislação Institucional (AL)", assunto: "Estatuto da PC-AL (Lei 3.437/1975)", subassunto: "Atribuições do Escrivão de Polícia (art. 16)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de literalidade normativa)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.72,
     enunciado: "Ao Escrivão de Polícia compete supervisionar e fiscalizar os trabalhos de cartório e autuar os inquéritos iniciados, sendo-lhe vedado, por incompatibilidade hierárquica, executar as atribuições próprias do escrivão auxiliar.",
@@ -229,7 +229,7 @@ const QUESTOES_PCAL_LOTE62 = [
   },
   {
     id: "LI-090", disciplina: "Legislação Institucional (AL)", assunto: "Estatuto da PC-AL (Lei 3.437/1975)", subassunto: "Atribuições do Desenhista Policial (art. 30)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de literalidade normativa)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.6,
     enunciado: "Compete basicamente ao Desenhista Policial proceder ao levantamento de croquis de locais de infração penal.",
@@ -250,7 +250,7 @@ const QUESTOES_PCAL_LOTE62 = [
   /* ---------- Provimento de cargos de direção (art. 40) ---------- */
   {
     id: "LI-091", disciplina: "Legislação Institucional (AL)", assunto: "Estatuto da PC-AL (Lei 3.437/1975)", subassunto: "Cabo da PM e cargo de Delegado (art. 40, § 2º)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de literalidade normativa)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.79,
     enunciado: "O policial militar na graduação de cabo não poderá, em hipótese alguma, ser nomeado para exercer o cargo de delegado de polícia nem designado para responder pelo expediente do respectivo órgão.",
@@ -269,7 +269,7 @@ const QUESTOES_PCAL_LOTE62 = [
   },
   {
     id: "LI-092", disciplina: "Legislação Institucional (AL)", assunto: "Estatuto da PC-AL (Lei 3.437/1975)", subassunto: "Requisito para cargos de direção (art. 40, caput)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de literalidade normativa)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.76,
     enunciado: "Para os cargos de Corregedor Geral de Polícia, Chefe de Gabinete da SSP, diretores de departamentos e delegados distritais, especializados e regionais, o Estatuto exige a nomeação de bacharéis em Direito com comprovada vivência policial.",
@@ -290,7 +290,7 @@ const QUESTOES_PCAL_LOTE62 = [
   /* ---------- Remoção (arts. 64 a 66) ---------- */
   {
     id: "LI-093", disciplina: "Legislação Institucional (AL)", assunto: "Estatuto da PC-AL (Lei 3.437/1975)", subassunto: "Remoção por conveniência da disciplina (art. 65)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de literalidade normativa)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 70, probReaparecer: 0.82,
     enunciado: "A remoção por conveniência da disciplina deverá ser expressamente justificada pelo chefe do serviço em que estiver lotado o funcionário e acarretará a perda dos direitos e vantagens atribuídos às demais modalidades de remoção, inclusive da gratificação de função policial.",
@@ -309,7 +309,7 @@ const QUESTOES_PCAL_LOTE62 = [
   },
   {
     id: "LI-094", disciplina: "Legislação Institucional (AL)", assunto: "Estatuto da PC-AL (Lei 3.437/1975)", subassunto: "Claro na lotação (art. 66)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de literalidade normativa)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.7,
     enunciado: "A remoção do funcionário policial dependerá, em qualquer hipótese, da existência de claro na lotação de destino.",
@@ -330,7 +330,7 @@ const QUESTOES_PCAL_LOTE62 = [
   /* ---------- Gratificação de ação policial (art. 78) ---------- */
   {
     id: "LI-095", disciplina: "Legislação Institucional (AL)", assunto: "Estatuto da PC-AL (Lei 3.437/1975)", subassunto: "Jornada da gratificação de ação policial (art. 78, § 2º)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de literalidade normativa)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 70, probReaparecer: 0.84,
     enunciado: "A gratificação de ação policial sujeita o funcionário ao regime de dedicação integral e exclusiva e o obriga à prestação de, no mínimo, cento e oitenta horas mensais de trabalho.",
@@ -349,7 +349,7 @@ const QUESTOES_PCAL_LOTE62 = [
   },
   {
     id: "LI-096", disciplina: "Legislação Institucional (AL)", assunto: "Estatuto da PC-AL (Lei 3.437/1975)", subassunto: "Cumulação da gratificação de risco (art. 78, § 4º)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de literalidade normativa)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 60, probReaparecer: 0.72,
     enunciado: "A gratificação de ação policial não poderá ser acumulada com qualquer outra gratificação referente a risco de vida.",
@@ -370,7 +370,7 @@ const QUESTOES_PCAL_LOTE62 = [
   /* ---------- Acumulação (arts. 85 e 86) ---------- */
   {
     id: "LI-097", disciplina: "Legislação Institucional (AL)", assunto: "Estatuto da PC-AL (Lei 3.437/1975)", subassunto: "Requisitos da acumulação excepcional (art. 85, § 1º)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de literalidade normativa)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 70, probReaparecer: 0.85,
     enunciado: "A acumulação de cargo policial de natureza técnica ou científica com o de professor somente será permitida quando houver correlação de matérias e compatibilidade de horários.",
@@ -389,7 +389,7 @@ const QUESTOES_PCAL_LOTE62 = [
   },
   {
     id: "LI-098", disciplina: "Legislação Institucional (AL)", assunto: "Estatuto da PC-AL (Lei 3.437/1975)", subassunto: "Alcance da proibição de acumular (art. 85, § 2º)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de literalidade normativa)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.77,
     enunciado: "A proibição de acumular imposta ao policial civil restringe-se aos cargos e funções da administração direta, não alcançando empregos em autarquias, empresas públicas e sociedades de economia mista.",
@@ -410,7 +410,7 @@ const QUESTOES_PCAL_LOTE62 = [
   /* ---------- Regime disciplinar avançado ---------- */
   {
     id: "LI-099", disciplina: "Legislação Institucional (AL)", assunto: "Estatuto da PC-AL (Lei 3.437/1975)", subassunto: "Detenção disciplinar na residência (art. 96, § 2º, I)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de literalidade normativa)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 70, probReaparecer: 0.81,
     enunciado: "A detenção disciplinar será cumprida na residência do funcionário quando não exceder setenta e duas horas.",
@@ -429,7 +429,7 @@ const QUESTOES_PCAL_LOTE62 = [
   },
   {
     id: "LI-100", disciplina: "Legislação Institucional (AL)", assunto: "Estatuto da PC-AL (Lei 3.437/1975)", subassunto: "Autoridade competente para a detenção (art. 96, caput)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de literalidade normativa)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.78,
     enunciado: "A conversão da pena de suspensão em detenção disciplinar depende de ordem escrita do Secretário de Segurança Pública ou do Governador do Estado.",
@@ -448,7 +448,7 @@ const QUESTOES_PCAL_LOTE62 = [
   },
   {
     id: "LI-101", disciplina: "Legislação Institucional (AL)", assunto: "Estatuto da PC-AL (Lei 3.437/1975)", subassunto: "Limite do processo disciplinar prévio (art. 115)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de literalidade normativa)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 70, probReaparecer: 0.83,
     enunciado: "O processo disciplinar precederá à aplicação das penas de suspensão por mais de trinta dias, destituição de função, demissão e cassação de disponibilidade.",
@@ -467,7 +467,7 @@ const QUESTOES_PCAL_LOTE62 = [
   },
   {
     id: "LI-102", disciplina: "Legislação Institucional (AL)", assunto: "Estatuto da PC-AL (Lei 3.437/1975)", subassunto: "Competência para instaurar processo (art. 114)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de literalidade normativa)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.74,
     enunciado: "São competentes para instaurar o processo disciplinar o governador do estado, o secretário de segurança pública e as autoridades a que se refere o Estatuto entre as competentes para aplicar penas disciplinares.",
@@ -486,7 +486,7 @@ const QUESTOES_PCAL_LOTE62 = [
   },
   {
     id: "LI-103", disciplina: "Legislação Institucional (AL)", assunto: "Estatuto da PC-AL (Lei 3.437/1975)", subassunto: "Rito do inquérito e da sindicância (art. 116)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de literalidade normativa)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.71,
     enunciado: "O inquérito e a sindicância disciplinares da Polícia Civil observam rito processual próprio, integralmente disciplinado no Estatuto da corporação, sem remissão ao regime dos demais funcionários civis do estado.",
@@ -505,7 +505,7 @@ const QUESTOES_PCAL_LOTE62 = [
   },
   {
     id: "LI-104", disciplina: "Legislação Institucional (AL)", assunto: "Estatuto da PC-AL (Lei 3.437/1975)", subassunto: "Composição da sindicância (art. 117)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de literalidade normativa)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 70, probReaparecer: 0.8,
     enunciado: "A sindicância será procedida por três funcionários policiais de categoria igual ou superior à do sindicado, designados mediante despacho da autoridade que determinar sua instauração.",
@@ -524,7 +524,7 @@ const QUESTOES_PCAL_LOTE62 = [
   },
   {
     id: "LI-105", disciplina: "Legislação Institucional (AL)", assunto: "Estatuto da PC-AL (Lei 3.437/1975)", subassunto: "Cabimento da sindicância (art. 117)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de literalidade normativa)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.76,
     enunciado: "A sindicância será instaurada quando as irregularidades não se revelarem evidentes ou quando for incerta a sua autoria.",
@@ -543,7 +543,7 @@ const QUESTOES_PCAL_LOTE62 = [
   },
   {
     id: "LI-106", disciplina: "Legislação Institucional (AL)", assunto: "Estatuto da PC-AL (Lei 3.437/1975)", subassunto: "Composição da Comissão de Disciplina (art. 118)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de literalidade normativa)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 70, probReaparecer: 0.82,
     enunciado: "A Comissão de Disciplina que promove o inquérito disciplinar deve ser composta obrigatoriamente por bacharéis em Direito integrantes do quadro da Polícia Civil.",
@@ -562,7 +562,7 @@ const QUESTOES_PCAL_LOTE62 = [
   },
   {
     id: "LI-107", disciplina: "Legislação Institucional (AL)", assunto: "Estatuto da PC-AL (Lei 3.437/1975)", subassunto: "Dosimetria e agravante (art. 92)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de literalidade normativa)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.73,
     enunciado: "Constitui causa agravante da falta disciplinar o fato de ter sido ela cometida com o concurso de três ou mais funcionários policiais.",
@@ -581,7 +581,7 @@ const QUESTOES_PCAL_LOTE62 = [
   },
   {
     id: "LI-108", disciplina: "Legislação Institucional (AL)", assunto: "Estatuto da PC-AL (Lei 3.437/1975)", subassunto: "Limites da revisão disciplinar (art. 126)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de literalidade normativa)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 70, probReaparecer: 0.79,
     enunciado: "A simples alegação de injustiça da penalidade não constitui fundamento para a revisão do processo disciplinar.",
@@ -600,7 +600,7 @@ const QUESTOES_PCAL_LOTE62 = [
   },
   {
     id: "LI-109", disciplina: "Legislação Institucional (AL)", assunto: "Estatuto da PC-AL (Lei 3.437/1975)", subassunto: "Legitimidade para requerer revisão (art. 125, p.u.)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de literalidade normativa)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.7,
     enunciado: "Falecido ou desaparecido o funcionário policial, a revisão do processo disciplinar poderá ser requerida por qualquer das pessoas constantes do seu assentamento individual.",
@@ -621,7 +621,7 @@ const QUESTOES_PCAL_LOTE62 = [
   /* ---------- Interação com o Estatuto dos Servidores (Lei 5.247/1991) ---------- */
   {
     id: "LI-110", disciplina: "Legislação Institucional (AL)", assunto: "Estatuto da PC-AL (Lei 3.437/1975)", subassunto: "Aplicação subsidiária do RJU estadual",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (integração normativa)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 75, probReaparecer: 0.84,
     enunciado: "Diante de omissão do Estatuto da Polícia Civil de Alagoas quanto à revisão do processo disciplinar, aplicam-se as normas previstas no Estatuto dos Funcionários Públicos Civis do Estado.",
@@ -640,7 +640,7 @@ const QUESTOES_PCAL_LOTE62 = [
   },
   {
     id: "LI-111", disciplina: "Legislação Institucional (AL)", assunto: "Estatuto da PC-AL (Lei 3.437/1975)", subassunto: "Hierarquia entre norma especial e geral",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (integração normativa)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 75, probReaparecer: 0.8,
     enunciado: "Havendo conflito entre disposição expressa do Estatuto da Polícia Civil de Alagoas e norma do Regime Jurídico Único dos servidores estaduais sobre a mesma matéria, prevalece a norma do Regime Jurídico Único, por ser diploma posterior.",
@@ -659,7 +659,7 @@ const QUESTOES_PCAL_LOTE62 = [
   },
   {
     id: "LI-112", disciplina: "Legislação Institucional (AL)", assunto: "Estatuto da PC-AL (Lei 3.437/1975)", subassunto: "Magistério eventual (art. 86)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de literalidade normativa)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.75,
     enunciado: "Além da vedação de acumular, o Estatuto proíbe ao policial civil o exercício de qualquer outra atividade, mesmo privada, ressalvado o magistério eventual.",
@@ -678,7 +678,7 @@ const QUESTOES_PCAL_LOTE62 = [
   },
   {
     id: "LI-113", disciplina: "Legislação Institucional (AL)", assunto: "Estatuto da PC-AL (Lei 3.437/1975)", subassunto: "Conceito de atividade técnica (art. 4º, p.u.)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (conflito de redações)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 70, probReaparecer: 0.77,
     enunciado: "Para os fins do Estatuto, considera-se atividade técnica, na redação vigente, exclusivamente aquela cujo provimento exija diploma de curso universitário ou equivalente.",
@@ -697,7 +697,7 @@ const QUESTOES_PCAL_LOTE62 = [
   },
   {
     id: "LI-114", disciplina: "Legislação Institucional (AL)", assunto: "Estatuto da PC-AL (Lei 3.437/1975)", subassunto: "Precedência hierárquica (art. 5º, p.u.)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de literalidade normativa)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.72,
     enunciado: "A Polícia Civil fundamenta-se na hierarquia e na disciplina, estabelecendo-se a precedência, basicamente, pela subordinação funcional.",
@@ -716,7 +716,7 @@ const QUESTOES_PCAL_LOTE62 = [
   },
   {
     id: "LI-115", disciplina: "Legislação Institucional (AL)", assunto: "Estatuto da PC-AL (Lei 3.437/1975)", subassunto: "Autoridades policiais civis (art. 8º)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de literalidade normativa)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 60, probReaparecer: 0.73,
     enunciado: "O Secretário de Segurança Pública não integra o rol de autoridades policiais civis do Estatuto, por exercer cargo de natureza política e não policial.",
@@ -735,7 +735,7 @@ const QUESTOES_PCAL_LOTE62 = [
   },
   {
     id: "LI-116", disciplina: "Legislação Institucional (AL)", assunto: "Estatuto da PC-AL (Lei 3.437/1975)", subassunto: "Requisito do Perito Criminal (art. 21, p.u.)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de literalidade normativa)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 70, probReaparecer: 0.81,
     enunciado: "Para o provimento do cargo de Perito Criminal, o Estatuto exige, cumulativamente, a conclusão do curso de Direito e de curso em perícia criminal realizado em estabelecimento idôneo.",
@@ -754,7 +754,7 @@ const QUESTOES_PCAL_LOTE62 = [
   },
   {
     id: "LI-117", disciplina: "Legislação Institucional (AL)", assunto: "Estatuto da PC-AL (Lei 3.437/1975)", subassunto: "Requisito do Inspetor de Polícia (art. 15, p.u.)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de literalidade normativa)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.78,
     enunciado: "Para o provimento do cargo de Inspetor de Polícia exige-se a conclusão do ensino de 2º grau ou equivalente, sendo o curso de Direito requisito apenas desejável.",
@@ -773,7 +773,7 @@ const QUESTOES_PCAL_LOTE62 = [
   },
   {
     id: "LI-118", disciplina: "Legislação Institucional (AL)", assunto: "Estatuto da PC-AL (Lei 3.437/1975)", subassunto: "Atribuições do Inspetor de Polícia (art. 15)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de literalidade normativa)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 70, probReaparecer: 0.76,
     enunciado: "Entre as atribuições básicas do Inspetor de Polícia incluem-se instaurar e presidir inquéritos policiais, formalizar prisão em flagrante, informar pedidos de habeas corpus e representar à autoridade judiciária sobre a necessidade de prisão preventiva de indiciados.",
@@ -792,7 +792,7 @@ const QUESTOES_PCAL_LOTE62 = [
   },
   {
     id: "LI-119", disciplina: "Legislação Institucional (AL)", assunto: "Estatuto da PC-AL (Lei 3.437/1975)", subassunto: "Delegado Regional exercido por militar (art. 40, § 1º)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de literalidade normativa)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 70, probReaparecer: 0.74,
     enunciado: "No interesse do serviço policial, os cargos de Delegado Regional e Especializado poderão, segundo o Estatuto, ser exercidos por oficiais superiores da Polícia Militar ou por capitães portadores do Curso de Aperfeiçoamento de Oficiais.",

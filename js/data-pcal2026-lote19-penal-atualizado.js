@@ -16,7 +16,7 @@ const QUESTOES_PCAL_LOTE19 = [
   /* ===== FEMINICÍDIO — Lei 14.994/2024 (crime autônomo) ===== */
   {
     id: "DP-053", disciplina: "Direito Penal", assunto: "Feminicídio", subassunto: "Crime autônomo (Lei 14.994/2024)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (CP, art. 121-A; Lei 14.994/2024)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 55, probReaparecer: 0.92,
     enunciado: "Com o advento da Lei 14.994/2024, o feminicídio deixou de figurar como qualificadora do homicídio e passou a constituir crime autônomo, com tipo penal próprio.",
@@ -35,7 +35,7 @@ const QUESTOES_PCAL_LOTE19 = [
   },
   {
     id: "DP-054", disciplina: "Direito Penal", assunto: "Feminicídio", subassunto: "Pena (art. 121-A)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (CP, art. 121-A; Lei 14.994/2024)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 50, probReaparecer: 0.88,
     enunciado: "O feminicídio, como crime autônomo, é punido com reclusão de doze a trinta anos.",
@@ -54,7 +54,7 @@ const QUESTOES_PCAL_LOTE19 = [
   },
   {
     id: "DP-055", disciplina: "Direito Penal", assunto: "Feminicídio", subassunto: "Razões da condição do sexo feminino",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (CP, art. 121-A; Lei 14.994/2024)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.82,
     enunciado: "Considera-se que há razões da condição do sexo feminino quando o crime envolve violência doméstica e familiar ou menosprezo ou discriminação à condição de mulher.",
@@ -73,7 +73,7 @@ const QUESTOES_PCAL_LOTE19 = [
   },
   {
     id: "DP-056", disciplina: "Direito Penal", assunto: "Feminicídio", subassunto: "Sujeito passivo",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (CP, art. 121-A)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 50, probReaparecer: 0.8,
     enunciado: "O feminicídio pode ter como vítima qualquer pessoa, bastando que o crime seja motivado por discriminação de gênero.",
@@ -94,7 +94,7 @@ const QUESTOES_PCAL_LOTE19 = [
   /* ===== STALKING E VIOLÊNCIA PSICOLÓGICA ===== */
   {
     id: "DP-057", disciplina: "Direito Penal", assunto: "Perseguição (stalking)", subassunto: "Tipo penal (art. 147-A)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (CP, art. 147-A; Lei 14.132/2021)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.82,
     enunciado: "Perseguir alguém, reiteradamente e por qualquer meio, ameaçando-lhe a integridade física ou psicológica ou perturbando sua esfera de liberdade ou privacidade, configura o crime de perseguição.",
@@ -113,7 +113,7 @@ const QUESTOES_PCAL_LOTE19 = [
   },
   {
     id: "DP-058", disciplina: "Direito Penal", assunto: "Perseguição (stalking)", subassunto: "Habitualidade",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (CP, art. 147-A)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 50, probReaparecer: 0.78,
     enunciado: "O crime de perseguição configura-se com a prática de um único ato isolado dirigido à vítima.",
@@ -132,7 +132,7 @@ const QUESTOES_PCAL_LOTE19 = [
   },
   {
     id: "DP-059", disciplina: "Direito Penal", assunto: "Violência psicológica contra a mulher", subassunto: "Tipo penal (art. 147-B)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (CP, art. 147-B; Lei 14.188/2021)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.8,
     enunciado: "Causar dano emocional à mulher, mediante humilhação, manipulação, isolamento ou chantagem, que a prejudique e perturbe seu pleno desenvolvimento, constitui crime autônomo previsto no Código Penal.",
@@ -153,7 +153,7 @@ const QUESTOES_PCAL_LOTE19 = [
   /* ===== CONCURSO DE PESSOAS E DE CRIMES ===== */
   {
     id: "DP-060", disciplina: "Direito Penal", assunto: "Concurso de pessoas", subassunto: "Teoria adotada (art. 29)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (CP, art. 29)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 55, probReaparecer: 0.82,
     enunciado: "Quanto ao concurso de pessoas, o Código Penal adotou, como regra, a teoria pluralista, segundo a qual cada concorrente responde por um crime autônomo e distinto.",
@@ -172,7 +172,7 @@ const QUESTOES_PCAL_LOTE19 = [
   },
   {
     id: "DP-061", disciplina: "Direito Penal", assunto: "Concurso de pessoas", subassunto: "Participação de menor importância (art. 29, § 1º)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (CP, art. 29, § 1º)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 45, probReaparecer: 0.75,
     enunciado: "Se a participação no crime for de menor importância, a pena poderá ser reduzida de um sexto a um terço.",
@@ -191,7 +191,7 @@ const QUESTOES_PCAL_LOTE19 = [
   },
   {
     id: "DP-062", disciplina: "Direito Penal", assunto: "Concurso de crimes", subassunto: "Concurso formal (art. 70)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (CP, art. 70)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 55, probReaparecer: 0.8,
     enunciado: "No concurso formal de crimes, as penas dos delitos praticados são sempre somadas, por aplicação do sistema do cúmulo material.",
@@ -210,7 +210,7 @@ const QUESTOES_PCAL_LOTE19 = [
   },
   {
     id: "DP-063", disciplina: "Direito Penal", assunto: "Concurso de crimes", subassunto: "Crime continuado (art. 71)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (CP, art. 71)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.76,
     enunciado: "No crime continuado, aplica-se a pena de um só dos crimes, se idênticas, aumentada de um sexto a dois terços.",
@@ -231,7 +231,7 @@ const QUESTOES_PCAL_LOTE19 = [
   /* ===== DOSIMETRIA — SÚMULAS ===== */
   {
     id: "DP-064", disciplina: "Direito Penal", assunto: "Aplicação da pena", subassunto: "Atenuante e mínimo legal (Súmula 231 STJ)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (CP, art. 65; Súmula 231 STJ)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 55, probReaparecer: 0.82,
     enunciado: "A incidência de circunstância atenuante pode conduzir à redução da pena para aquém do mínimo legal cominado ao crime.",
@@ -251,7 +251,7 @@ const QUESTOES_PCAL_LOTE19 = [
   },
   {
     id: "DP-065", disciplina: "Direito Penal", assunto: "Aplicação da pena", subassunto: "Maus antecedentes (Súmula 444 STJ)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (CP, art. 59; Súmula 444 STJ)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 55, probReaparecer: 0.8,
     enunciado: "É vedada a utilização de inquéritos policiais e ações penais em curso para agravar a pena-base a título de maus antecedentes.",
@@ -271,7 +271,7 @@ const QUESTOES_PCAL_LOTE19 = [
   },
   {
     id: "DP-066", disciplina: "Direito Penal", assunto: "Princípios penais", subassunto: "Insignificância (STF)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (STF — princípio da insignificância)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 55, probReaparecer: 0.85,
     enunciado: "Conforme o STF, a aplicação do princípio da insignificância exige apenas a constatação do pequeno valor econômico da coisa subtraída.",
@@ -293,7 +293,7 @@ const QUESTOES_PCAL_LOTE19 = [
   /* ===== DIGNIDADE SEXUAL E HONRA ===== */
   {
     id: "DP-067", disciplina: "Direito Penal", assunto: "Crimes contra a dignidade sexual", subassunto: "Ação penal (Lei 13.718/2018)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (CP, art. 225; Lei 13.718/2018)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.82,
     enunciado: "Após a Lei 13.718/2018, os crimes contra a dignidade sexual passaram a ser, em regra, de ação penal pública incondicionada.",
@@ -312,7 +312,7 @@ const QUESTOES_PCAL_LOTE19 = [
   },
   {
     id: "DP-068", disciplina: "Direito Penal", assunto: "Crimes contra a honra", subassunto: "Calúnia × injúria (art. 138 × 140)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (CP, arts. 138 e 140)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.8,
     enunciado: "Comete calúnia quem atribui a alguém, falsamente, qualidade negativa que ofenda sua dignidade ou decoro.",

@@ -448,6 +448,59 @@ function gamiCardHtml(gam) {
 /* ================================================================
    DASHBOARD (Módulos 8 + 12)
    ================================================================ */
+/* Card do corte oficial. Só aparece com trilha escolhida e com histórico
+   suficiente para a projeção significar alguma coisa — sem isso mostraria
+   uma barra vermelha assustadora para quem acabou de criar a conta. */
+function corteHtml() {
+  const p = projecaoCorte();
+  if (!p) return "";
+  const g = statsGerais();
+  if (g.taxa === null || g.respondidasUnicas < 20) return "";
+
+  const nome = { p1: "Básicos (P1)", p2: "Específicos (P2)", total: "Conjunto" };
+  const linhas = p.blocos.map(b => {
+    const cls = b.passa ? "ok" : "bad";
+    const pctProj = Math.max(0, Math.min(100, 100 * b.acertosProjetados / b.itens));
+    const pctCorte = 100 * b.acertosExigidos / b.itens;
+    return `
+      <div class="corte-linha">
+        <div class="corte-rot">${nome[b.chave] || b.chave}</div>
+        <div class="corte-barra">
+          <i class="${cls}" style="width:${pctProj.toFixed(1)}%"></i>
+          <span class="corte-marca" style="left:${pctCorte.toFixed(1)}%" title="corte: ${b.acertosExigidos} de ${b.itens} acertos"></span>
+        </div>
+        <div class="corte-num ${cls}">
+          ${Math.round(b.acertosProjetados)}/${b.itens}
+          <span class="hint">corte ${b.acertosExigidos}</span>
+        </div>
+      </div>`;
+  }).join("");
+
+  const reprova = p.blocos.filter(b => !b.passa);
+  const veredito = reprova.length
+    ? `<b class="bad">No ritmo atual você seria eliminado</b> em ${reprova.map(b => nome[b.chave]).join(" e ")}.`
+    : `<b class="ok">No ritmo atual você passa do corte</b> nos três critérios — o corte elimina, mas não aprova: a classificação depende do número de vagas.`;
+
+  const ob = orientacaoBranco();
+  const arriscadas = ob.linhas.filter(l => l.recomendaBranco);
+  const dicaBranco = !ob.temDados
+    ? `Marque sua confiança ao responder: com histórico suficiente, mostro aqui em que situações vale mais deixar em branco.`
+    : arriscadas.length
+      ? `Quando você marca <b>${arriscadas.map(l => l.rotulo).join(" ou ")}</b>, acerta ${arriscadas.map(l => Math.round(l.taxa * 100) + "%").join(" e ")} — abaixo dos 50% em que o chute passa a compensar. <b>Nesses casos, deixar em branco rende mais que arriscar.</b>`
+      : `Sua taxa fica acima de 50% em todas as faixas de confiança — vale marcar, mesmo em dúvida.`;
+
+  return `
+  <div class="card" style="margin-top:16px">
+    <h3>🎯 Nota de corte oficial <span class="hint">${escapeHtml(p.trilha)} · projeção pela sua taxa de ${Math.round(p.taxa * 100)}%</span></h3>
+    <div class="corte-wrap">${linhas}</div>
+    <div style="font-size:13px;color:var(--muted);margin-top:10px">${veredito}</div>
+    <div style="font-size:13px;color:var(--muted);margin-top:8px;padding-top:8px;border-top:1px solid var(--border)">
+      <b>Erro anula acerto; branco vale zero.</b> ${dicaBranco}
+    </div>
+    ${AVISO_ESTATISTICO}
+  </div>`;
+}
+
 function renderDashboard() {
   const g = statsGerais();
   const radar = radarAprovacao();
@@ -517,6 +570,7 @@ function renderDashboard() {
       ${radar.dominadas.length + radar.atencao.length + radar.risco.length + radar.naoIniciadas.length ? "" : `<div style="color:var(--muted);font-size:13px">— ainda sem dados suficientes</div>`}
     </div>
   </div>
+  ${corteHtml()}
   <div class="grid cols-2" style="margin-top:16px">
     <div class="card card-dna">
       <h3>🧬 DNA da banca — padrões de maior incidência</h3>

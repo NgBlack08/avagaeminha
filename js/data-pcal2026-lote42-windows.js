@@ -17,7 +17,7 @@ const QUESTOES_PCAL_LOTE42 = [
   /* ===== MENU INICIAR (WINDOWS 11) ===== */
   {
     id: "TI-060", disciplina: "TI e Segurança Cibernética", assunto: "Sistemas operacionais", subassunto: "Windows 11 — Menu Iniciar",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Windows 10/11)",
     tipo: "CE", dificuldade: 1, tempoIdealSeg: 45, probReaparecer: 0.82,
     enunciado: "No Menu Iniciar do Windows 11, é possível arrastar um ícone de aplicativo fixado sobre outro para criar automaticamente uma pasta, recurso que não existia da mesma forma no Windows 10, o qual organizava os aplicativos em grupos de blocos dinâmicos (Live Tiles).",
@@ -36,7 +36,7 @@ const QUESTOES_PCAL_LOTE42 = [
   },
   {
     id: "TI-061", disciplina: "TI e Segurança Cibernética", assunto: "Sistemas operacionais", subassunto: "Windows 11 — Menu Iniciar",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Windows 10/11)",
     tipo: "CE", dificuldade: 1, tempoIdealSeg: 45, probReaparecer: 0.78,
     enunciado: "O Menu Iniciar do Windows 11 não permite a criação de pastas para organizar os ícones dos aplicativos fixados, sendo esse recurso exclusivo do Windows 10, que já disponibilizava tal funcionalidade por meio da seção de grupos de blocos dinâmicos (Live Tiles).",
@@ -57,7 +57,7 @@ const QUESTOES_PCAL_LOTE42 = [
   /* ===== BARRA DE TAREFAS (WINDOWS 11) ===== */
   {
     id: "TI-062", disciplina: "TI e Segurança Cibernética", assunto: "Sistemas operacionais", subassunto: "Windows 11 — barra de tarefas",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Windows 10/11)",
     tipo: "CE", dificuldade: 1, tempoIdealSeg: 45, probReaparecer: 0.8,
     enunciado: "No Windows 11, a barra de tarefas apresenta, por padrão, os ícones centralizados, incluindo o botão Iniciar, sendo possível, por meio das configurações da barra de tarefas, realinhar esses ícones à esquerda, caso o usuário prefira o estilo tradicional.",
@@ -76,7 +76,7 @@ const QUESTOES_PCAL_LOTE42 = [
   },
   {
     id: "TI-063", disciplina: "TI e Segurança Cibernética", assunto: "Sistemas operacionais", subassunto: "Windows 11 — barra de tarefas",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Windows 10/11)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.76,
     enunciado: "No Windows 11, os ícones da barra de tarefas, incluindo o botão Iniciar, são exibidos exclusivamente na posição centralizada, não havendo, nas configurações do sistema, qualquer opção para realinhá-los à posição à esquerda utilizada no Windows 10.",
@@ -97,7 +97,7 @@ const QUESTOES_PCAL_LOTE42 = [
   /* ===== SNAP LAYOUTS ===== */
   {
     id: "TI-064", disciplina: "TI e Segurança Cibernética", assunto: "Sistemas operacionais", subassunto: "Windows 11 — Snap Layouts",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Windows 10/11)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.82,
     enunciado: "O recurso Snap Layouts do Windows 11 oferece opções predefinidas para organizar várias janelas abertas na tela, podendo ser acionado pelo atalho de teclado Windows+Z ou ao posicionar o cursor do mouse sobre o botão Maximizar de uma janela.",
@@ -116,7 +116,7 @@ const QUESTOES_PCAL_LOTE42 = [
   },
   {
     id: "TI-065", disciplina: "TI e Segurança Cibernética", assunto: "Sistemas operacionais", subassunto: "Windows 11 — Snap Layouts",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Windows 10/11)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.78,
     enunciado: "O recurso Snap Layouts do Windows 11 é acionado exclusivamente pelo atalho de teclado Windows+Tab, sendo essa a mesma combinação de teclas responsável por exibir a Visão de Tarefas com as janelas abertas em miniatura.",
@@ -137,7 +137,7 @@ const QUESTOES_PCAL_LOTE42 = [
   /* ===== EXTENSÃO DE ARQUIVO x CONVERSÃO ===== */
   {
     id: "TI-066", disciplina: "TI e Segurança Cibernética", assunto: "Sistemas operacionais", subassunto: "Windows Explorer — extensões de arquivo",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Windows 10/11)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.84,
     enunciado: "No Windows Explorer, ao renomear um arquivo e alterar manualmente sua extensão (por exemplo, de .jpg para .png), o sistema operacional apenas modifica o rótulo do nome do arquivo, sem converter seu conteúdo ou ajustar sua estrutura interna, podendo o arquivo se tornar inconsistente ou não abrir corretamente.",
@@ -156,7 +156,7 @@ const QUESTOES_PCAL_LOTE42 = [
   },
   {
     id: "TI-067", disciplina: "TI e Segurança Cibernética", assunto: "Sistemas operacionais", subassunto: "Windows Explorer — extensões de arquivo",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Windows 10/11)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.82,
     enunciado: "No Windows Explorer, ao renomear um arquivo diretamente e modificar sua extensão (por exemplo, de .jpg para .png), o sistema operacional ajusta automaticamente os metadados e a estrutura interna do arquivo para refletir o novo formato indicado no nome, convertendo seu conteúdo de forma transparente ao usuário.",
@@ -177,7 +177,7 @@ const QUESTOES_PCAL_LOTE42 = [
   /* ===== WINDOWS HELLO E PASSKEYS ===== */
   {
     id: "TI-068", disciplina: "TI e Segurança Cibernética", assunto: "Sistemas operacionais", subassunto: "Windows 11 — Windows Hello e chaves de acesso",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Windows 10/11)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.8,
     enunciado: "No Windows 11, por meio das chaves de acesso (passkeys), é possível utilizar o Windows Hello para iniciar sessão em sites e aplicativos com impressão digital, reconhecimento facial ou PIN, sem a necessidade de digitar senhas, o que torna o processo de autenticação mais rápido e seguro.",
@@ -196,7 +196,7 @@ const QUESTOES_PCAL_LOTE42 = [
   },
   {
     id: "TI-069", disciplina: "TI e Segurança Cibernética", assunto: "Sistemas operacionais", subassunto: "Windows 11 — Windows Hello e chaves de acesso",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Windows 10/11)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.76,
     enunciado: "As chaves de acesso (passkeys) do Windows 11, ao dispensarem a digitação de senhas para autenticação em sites e aplicativos por meio do Windows Hello, tornam o processo de login menos seguro, uma vez que a ausência de senha elimina uma camada de proteção contra acessos indevidos.",
@@ -217,7 +217,7 @@ const QUESTOES_PCAL_LOTE42 = [
   /* ===== WINDOWS UPDATE ===== */
   {
     id: "TI-070", disciplina: "TI e Segurança Cibernética", assunto: "Sistemas operacionais", subassunto: "Windows 11 — Windows Update",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Windows 10/11)",
     tipo: "CE", dificuldade: 1, tempoIdealSeg: 45, probReaparecer: 0.82,
     enunciado: "O Windows 11 continua aplicando atualizações automaticamente por meio do Windows Update, sendo possível ao usuário, por meio de Configurações > Windows Update, apenas verificar a disponibilidade de novas atualizações ou pausar temporariamente o processo, sem desativá-lo por completo com facilidade.",
@@ -236,7 +236,7 @@ const QUESTOES_PCAL_LOTE42 = [
   },
   {
     id: "TI-071", disciplina: "TI e Segurança Cibernética", assunto: "Sistemas operacionais", subassunto: "Windows 11 — Windows Update",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Windows 10/11)",
     tipo: "CE", dificuldade: 1, tempoIdealSeg: 45, probReaparecer: 0.8,
     enunciado: "O Windows 11, por questões de segurança, não permite mais que sejam instaladas atualizações automaticamente; assim, para manter o dispositivo seguro e atualizado, o usuário deve, obrigatoriamente, verificar e instalar as atualizações de forma manual por meio de Configurações > Windows Update.",
@@ -257,7 +257,7 @@ const QUESTOES_PCAL_LOTE42 = [
   /* ===== SESSÕES DE FOCO (APP RELÓGIO) ===== */
   {
     id: "TI-072", disciplina: "TI e Segurança Cibernética", assunto: "Sistemas operacionais", subassunto: "Windows 11 — Sessões de foco",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Windows 10/11)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.78,
     enunciado: "No Windows 11, o aplicativo Relógio disponibiliza o recurso Sessões de foco, por meio do qual o usuário pode definir um período de tempo para bloquear temporariamente notificações, sons e alertas de aplicativos, integrando-se ao recurso Assistente de Foco (Não Perturbe).",
@@ -276,7 +276,7 @@ const QUESTOES_PCAL_LOTE42 = [
   },
   {
     id: "TI-073", disciplina: "TI e Segurança Cibernética", assunto: "Sistemas operacionais", subassunto: "Windows 11 — Sessões de foco",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Windows 10/11)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.74,
     enunciado: "No Windows 11, o recurso de bloqueio temporário de notificações, sons e alertas de aplicativos, denominado Sessões de foco, está disponível exclusivamente no Painel de Controle clássico do sistema, não havendo qualquer funcionalidade equivalente integrada aos aplicativos nativos do Windows 11.",
@@ -297,7 +297,7 @@ const QUESTOES_PCAL_LOTE42 = [
   /* ===== RENOMEAR ARQUIVOS EM LOTE ===== */
   {
     id: "TI-074", disciplina: "TI e Segurança Cibernética", assunto: "Sistemas operacionais", subassunto: "Windows — renomeação de arquivos em lote",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Windows 10/11)",
     tipo: "CE", dificuldade: 1, tempoIdealSeg: 45, probReaparecer: 0.8,
     enunciado: "O Windows possui uma função nativa de renomeação em lote, por meio da qual o usuário pode selecionar vários arquivos, pressionar a tecla F2, definir um nome-base e o sistema numera automaticamente os itens (por exemplo, nome (1), nome (2)...), sem necessidade de instalar programas adicionais.",
@@ -316,7 +316,7 @@ const QUESTOES_PCAL_LOTE42 = [
   },
   {
     id: "TI-075", disciplina: "TI e Segurança Cibernética", assunto: "Sistemas operacionais", subassunto: "Windows — renomeação de arquivos em lote",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Windows 10/11)",
     tipo: "CE", dificuldade: 1, tempoIdealSeg: 45, probReaparecer: 0.76,
     enunciado: "O Windows não possui função nativa para renomear múltiplos arquivos simultaneamente com um padrão comum de nomes, sendo necessário, para essa finalidade, a instalação de programas adicionais de terceiros especializados em renomeação em lote.",
@@ -337,7 +337,7 @@ const QUESTOES_PCAL_LOTE42 = [
   /* ===== BOAS PRÁTICAS DE NOMEAÇÃO DE ARQUIVOS ===== */
   {
     id: "TI-076", disciplina: "TI e Segurança Cibernética", assunto: "Sistemas operacionais", subassunto: "Boas práticas de organização de arquivos",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Windows 10/11)",
     tipo: "CE", dificuldade: 1, tempoIdealSeg: 40, probReaparecer: 0.78,
     enunciado: "Nomear arquivos com termos genéricos, como 'documento1', 'teste' ou 'final', dificulta a localização e a organização no Windows, sendo mais adequado o uso de nomes descritivos e padronizados, que indiquem, por exemplo, assunto, data e versão do arquivo.",
@@ -356,7 +356,7 @@ const QUESTOES_PCAL_LOTE42 = [
   },
   {
     id: "TI-077", disciplina: "TI e Segurança Cibernética", assunto: "Sistemas operacionais", subassunto: "Boas práticas de organização de arquivos",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Windows 10/11)",
     tipo: "CE", dificuldade: 1, tempoIdealSeg: 40, probReaparecer: 0.76,
     enunciado: "Nomear arquivos no computador com termos genéricos, como 'documento1', 'teste' ou 'final', constitui prática eficiente de organização, uma vez que esses nomes curtos e padronizados facilitam a busca rápida de arquivos no Windows, independentemente da quantidade de arquivos semelhantes armazenados.",
@@ -377,7 +377,7 @@ const QUESTOES_PCAL_LOTE42 = [
   /* ===== COMPACTAÇÃO ZIP NATIVA ===== */
   {
     id: "TI-078", disciplina: "TI e Segurança Cibernética", assunto: "Sistemas operacionais", subassunto: "Windows — compactação de arquivos (ZIP)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Windows 10/11)",
     tipo: "CE", dificuldade: 1, tempoIdealSeg: 40, probReaparecer: 0.82,
     enunciado: "O Windows possui suporte nativo para arquivos no formato ZIP, sendo possível compactar (por meio da opção Enviar para > Pasta compactada) e descompactar arquivos nesse formato sem a necessidade de instalar programas adicionais, ao contrário de formatos como RAR e 7z, que exigem software específico.",
@@ -396,7 +396,7 @@ const QUESTOES_PCAL_LOTE42 = [
   },
   {
     id: "TI-079", disciplina: "TI e Segurança Cibernética", assunto: "Sistemas operacionais", subassunto: "Windows — compactação de arquivos (ZIP)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Windows 10/11)",
     tipo: "CE", dificuldade: 1, tempoIdealSeg: 40, probReaparecer: 0.78,
     enunciado: "O Windows não possui suporte nativo para compactação ou descompactação de arquivos em nenhum formato, sendo necessária, inclusive para arquivos ZIP, a instalação de programas de terceiros, como o WinRAR ou o 7-Zip, para realizar essas operações.",
@@ -417,7 +417,7 @@ const QUESTOES_PCAL_LOTE42 = [
   /* ===== MOVER ARQUIVOS ENTRE UNIDADES E PERMISSÕES NTFS ===== */
   {
     id: "TI-080", disciplina: "TI e Segurança Cibernética", assunto: "Sistemas operacionais", subassunto: "Windows — permissões NTFS ao mover arquivos",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Windows 10/11)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.78,
     enunciado: "No Windows, quando um arquivo é movido entre pastas localizadas em unidades (volumes) diferentes, esse arquivo passa a herdar as permissões NTFS da pasta de destino, uma vez que, tecnicamente, essa operação equivale a copiar o arquivo para o novo local e, em seguida, apagar o original.",
@@ -436,7 +436,7 @@ const QUESTOES_PCAL_LOTE42 = [
   },
   {
     id: "TI-081", disciplina: "TI e Segurança Cibernética", assunto: "Sistemas operacionais", subassunto: "Windows — permissões NTFS ao mover arquivos",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Windows 10/11)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.76,
     enunciado: "Quando um arquivo é movido entre pastas localizadas em unidades (volumes) diferentes no Windows, esse arquivo mantém integralmente todas as suas permissões NTFS originais, independentemente do volume de destino, já que a operação de mover é sempre idêntica à de copiar dentro do mesmo volume.",

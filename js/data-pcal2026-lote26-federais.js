@@ -15,7 +15,7 @@ const QUESTOES_PCAL_LOTE26 = [
   /* ===== CRIMES DE RESPONSABILIDADE — Lei 1.079/1950 ===== */
   {
     id: "LE-119", disciplina: "Legislação Especial", assunto: "Crimes de Responsabilidade", subassunto: "Natureza (Lei 1.079/1950)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei 1.079/1950; CF)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 55, probReaparecer: 0.8,
     enunciado: "Os crimes de responsabilidade definidos na Lei 1.079/1950 constituem infrações político-administrativas, punidas com a perda do cargo e a inabilitação para o exercício de função pública.",
@@ -34,7 +34,7 @@ const QUESTOES_PCAL_LOTE26 = [
   },
   {
     id: "LE-120", disciplina: "Legislação Especial", assunto: "Crimes de Responsabilidade", subassunto: "Julgamento do Presidente (troca de sujeito)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (CF, art. 52, I; Lei 1.079/1950)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 55, probReaparecer: 0.82,
     enunciado: "Nos crimes de responsabilidade, o Presidente da República é processado e julgado pelo Supremo Tribunal Federal.",
@@ -53,7 +53,7 @@ const QUESTOES_PCAL_LOTE26 = [
   },
   {
     id: "LE-121", disciplina: "Legislação Especial", assunto: "Crimes de Responsabilidade", subassunto: "Rol (probidade e lei orçamentária)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (CF, art. 85; Lei 1.079/1950)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.76,
     enunciado: "São crimes de responsabilidade os atos do Presidente da República que atentem contra a probidade na administração e contra a lei orçamentária.",
@@ -72,7 +72,7 @@ const QUESTOES_PCAL_LOTE26 = [
   },
   {
     id: "LE-122", disciplina: "Legislação Especial", assunto: "Crimes de Responsabilidade", subassunto: "Inabilitação (troca numérica)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (CF, art. 52, parágrafo único)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 50, probReaparecer: 0.78,
     enunciado: "A condenação por crime de responsabilidade acarreta a inabilitação, por dez anos, para o exercício de função pública.",
@@ -93,7 +93,7 @@ const QUESTOES_PCAL_LOTE26 = [
   /* ===== CRIMES DE RESPONSABILIDADE — Decreto-Lei 201/1967 (prefeitos) ===== */
   {
     id: "LE-123", disciplina: "Legislação Especial", assunto: "Crimes de Responsabilidade", subassunto: "Prefeitos — art. 1º (DL 201/1967)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Decreto-Lei 201/1967; STF)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 55, probReaparecer: 0.78,
     enunciado: "Os crimes de responsabilidade dos prefeitos municipais previstos no art. 1º do Decreto-Lei 201/1967 são julgados pelo Poder Judiciário, independentemente do pronunciamento da Câmara Municipal.",
@@ -113,7 +113,7 @@ const QUESTOES_PCAL_LOTE26 = [
   },
   {
     id: "LE-124", disciplina: "Legislação Especial", assunto: "Crimes de Responsabilidade", subassunto: "Prefeitos — art. 4º (troca de sujeito)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Decreto-Lei 201/1967, art. 4º)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 55, probReaparecer: 0.76,
     enunciado: "As infrações político-administrativas dos prefeitos, previstas no art. 4º do Decreto-Lei 201/1967, são julgadas pelo Poder Judiciário, com imposição de pena privativa de liberdade.",
@@ -134,7 +134,7 @@ const QUESTOES_PCAL_LOTE26 = [
   /* ===== CRIMES CONTRA A ORDEM ECONÔMICA — Lei 8.176/1991 ===== */
   {
     id: "LE-125", disciplina: "Legislação Especial", assunto: "Crimes contra a Ordem Econômica", subassunto: "Combustíveis (Lei 8.176/1991, art. 1º)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei 8.176/1991, art. 1º)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.72,
     enunciado: "Constitui crime contra a ordem econômica adquirir, distribuir e revender derivados de petróleo, gás natural e demais combustíveis líquidos carburantes em desacordo com as normas estabelecidas na forma da lei.",
@@ -153,7 +153,7 @@ const QUESTOES_PCAL_LOTE26 = [
   },
   {
     id: "LE-126", disciplina: "Legislação Especial", assunto: "Crimes contra a Ordem Econômica", subassunto: "Usurpação de matéria-prima da União (art. 2º)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei 8.176/1991, art. 2º)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 50, probReaparecer: 0.7,
     enunciado: "A usurpação de matéria-prima pertencente à União, mediante sua exploração sem autorização legal, constitui mero ilícito administrativo, sem repercussão penal.",
@@ -174,7 +174,7 @@ const QUESTOES_PCAL_LOTE26 = [
   /* ===== CRIMES FALIMENTARES — Lei 11.101/2005 ===== */
   {
     id: "LE-127", disciplina: "Legislação Especial", assunto: "Crimes Falimentares", subassunto: "Condição objetiva de punibilidade (art. 180)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei 11.101/2005, art. 180)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 55, probReaparecer: 0.75,
     enunciado: "A decretação da falência, a concessão da recuperação judicial ou a homologação da recuperação extrajudicial é condição objetiva de punibilidade das infrações penais previstas na Lei de Falências.",
@@ -193,7 +193,7 @@ const QUESTOES_PCAL_LOTE26 = [
   },
   {
     id: "LE-128", disciplina: "Legislação Especial", assunto: "Crimes Falimentares", subassunto: "Fraude a credores (troca de pena)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei 11.101/2005, art. 168)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 55, probReaparecer: 0.72,
     enunciado: "A prática, antes ou depois da falência, de ato fraudulento de que resulte prejuízo aos credores, com o fim de obter vantagem indevida, é punida com detenção.",
@@ -212,7 +212,7 @@ const QUESTOES_PCAL_LOTE26 = [
   },
   {
     id: "LE-129", disciplina: "Legislação Especial", assunto: "Crimes Falimentares", subassunto: "Ação penal (art. 184)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei 11.101/2005, art. 184)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.7,
     enunciado: "Os crimes previstos na Lei de Falências são de ação penal pública incondicionada.",
@@ -231,7 +231,7 @@ const QUESTOES_PCAL_LOTE26 = [
   },
   {
     id: "LE-130", disciplina: "Legislação Especial", assunto: "Crimes Falimentares", subassunto: "Competência (troca de sujeito)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei 11.101/2005, art. 183)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 55, probReaparecer: 0.72,
     enunciado: "A competência para o processo e julgamento dos crimes falimentares é do juízo cível perante o qual tramita o processo de falência ou de recuperação.",

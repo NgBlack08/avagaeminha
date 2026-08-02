@@ -17,7 +17,7 @@ const QUESTOES_PCAL_LOTE22 = [
   /* ============ BLOCO 1 — FLAGRANTE (Processo Penal) ============ */
   {
     id: "PP-049", disciplina: "Processo Penal", assunto: "Prisão em flagrante", subassunto: "Espécies de flagrante (art. 302)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (bloco texto-base, CPP)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.8,
     textoApoio: TA_FLAGRANTE,
@@ -37,7 +37,7 @@ const QUESTOES_PCAL_LOTE22 = [
   },
   {
     id: "PP-050", disciplina: "Processo Penal", assunto: "Prisão em flagrante", subassunto: "Reserva de jurisdição (art. 5º, LXI, CF)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (bloco texto-base, CF/CPP)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.82,
     textoApoio: TA_FLAGRANTE,
@@ -57,7 +57,7 @@ const QUESTOES_PCAL_LOTE22 = [
   },
   {
     id: "PP-051", disciplina: "Processo Penal", assunto: "Interrogatório", subassunto: "Direito ao silêncio (art. 5º, LXIII, CF)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (bloco texto-base, CF/CPP)",
     tipo: "CE", dificuldade: 1, tempoIdealSeg: 45, probReaparecer: 0.8,
     textoApoio: TA_FLAGRANTE,
@@ -77,7 +77,7 @@ const QUESTOES_PCAL_LOTE22 = [
   },
   {
     id: "PP-052", disciplina: "Processo Penal", assunto: "Prisão em flagrante", subassunto: "Nota de culpa (art. 306, § 2º)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (bloco texto-base, CPP)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 55, probReaparecer: 0.78,
     textoApoio: TA_FLAGRANTE,
@@ -99,7 +99,7 @@ const QUESTOES_PCAL_LOTE22 = [
   /* ============ BLOCO 2 — FEMINICÍDIO (Direito Penal) ============ */
   {
     id: "DP-072", disciplina: "Direito Penal", assunto: "Feminicídio", subassunto: "Crime autônomo e hediondez",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (bloco texto-base, CP art. 121-A)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.9,
     textoApoio: TA_FEMINICIDIO,
@@ -119,7 +119,7 @@ const QUESTOES_PCAL_LOTE22 = [
   },
   {
     id: "DP-073", disciplina: "Direito Penal", assunto: "Feminicídio", subassunto: "Competência do júri",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (bloco texto-base, CF art. 5º, XXXVIII)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 55, probReaparecer: 0.82,
     textoApoio: TA_FEMINICIDIO,
@@ -139,7 +139,7 @@ const QUESTOES_PCAL_LOTE22 = [
   },
   {
     id: "DP-074", disciplina: "Direito Penal", assunto: "Concurso de crimes", subassunto: "Concurso com lesão grave",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (bloco texto-base, CP)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 55, probReaparecer: 0.76,
     textoApoio: TA_FEMINICIDIO,
@@ -159,7 +159,7 @@ const QUESTOES_PCAL_LOTE22 = [
   },
   {
     id: "DP-075", disciplina: "Direito Penal", assunto: "Crimes Hediondos", subassunto: "Progressão de regime",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (bloco texto-base, Lei 8.072/1990)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 55, probReaparecer: 0.8,
     textoApoio: TA_FEMINICIDIO,
@@ -182,7 +182,7 @@ const QUESTOES_PCAL_LOTE22 = [
   /* ============ BLOCO 3 — ABORDAGEM POLICIAL (Direitos Humanos) ============ */
   {
     id: "DH-041", disciplina: "Direitos Humanos", assunto: "Garantias do preso", subassunto: "Silêncio e defesa (CF + CADH)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (bloco texto-base, CF/CADH)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.8,
     textoApoio: TA_ABORDAGEM,
@@ -202,7 +202,7 @@ const QUESTOES_PCAL_LOTE22 = [
   },
   {
     id: "DH-042", disciplina: "Direitos Humanos", assunto: "Uso de algemas", subassunto: "Súmula Vinculante 11",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (bloco texto-base, SV 11)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 55, probReaparecer: 0.82,
     textoApoio: TA_ABORDAGEM,
@@ -223,7 +223,7 @@ const QUESTOES_PCAL_LOTE22 = [
   },
   {
     id: "DH-043", disciplina: "Direitos Humanos", assunto: "Garantias do preso", subassunto: "Comunicação da prisão (art. 5º, LXII)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (bloco texto-base, CF)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.76,
     textoApoio: TA_ABORDAGEM,
@@ -243,7 +243,7 @@ const QUESTOES_PCAL_LOTE22 = [
   },
   {
     id: "DH-044", disciplina: "Direitos Humanos", assunto: "Pacto de San José da Costa Rica", subassunto: "Condução à autoridade judicial (art. 7.5)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (bloco texto-base, CADH)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 55, probReaparecer: 0.78,
     textoApoio: TA_ABORDAGEM,

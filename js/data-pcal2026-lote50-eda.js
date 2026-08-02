@@ -22,7 +22,7 @@ const QUESTOES_PCAL_LOTE50 = [
   /* ===== ESTATÍSTICA (AMOSTRA) x PARÂMETRO (POPULAÇÃO) ===== */
   {
     id: "ES-060", disciplina: "Estatística", assunto: "Análise Exploratória de Dados", subassunto: "Estatística x parâmetro (amostra x população)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (conceitos de amostragem)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.8,
     enunciado: "Uma estatística é uma medida numérica calculada a partir dos dados de uma amostra, ao passo que um parâmetro é uma medida numérica que descreve uma característica da população como um todo.",
@@ -41,7 +41,7 @@ const QUESTOES_PCAL_LOTE50 = [
   },
   {
     id: "ES-061", disciplina: "Estatística", assunto: "Análise Exploratória de Dados", subassunto: "Estatística x parâmetro (amostra x população)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (conceitos de amostragem)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.76,
     enunciado: "Um parâmetro é uma medida numérica calculada a partir dos dados de uma amostra, ao passo que uma estatística é uma medida numérica que descreve uma característica da população como um todo.",
@@ -62,7 +62,7 @@ const QUESTOES_PCAL_LOTE50 = [
   /* ===== VARIÁVEL QUANTITATIVA CONTÍNUA — QUALQUER VALOR NUMÉRICO ===== */
   {
     id: "ES-062", disciplina: "Estatística", assunto: "Análise Exploratória de Dados", subassunto: "Variáveis quantitativas contínuas",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (tipos de variáveis)",
     tipo: "CE", dificuldade: 1, tempoIdealSeg: 45, probReaparecer: 0.82,
     enunciado: "Variáveis quantitativas contínuas podem assumir qualquer valor numérico dentro de um intervalo, mesmo que esse valor não corresponda a um número inteiro, como ocorre, por exemplo, com a altura ou o peso de uma pessoa.",
@@ -81,7 +81,7 @@ const QUESTOES_PCAL_LOTE50 = [
   },
   {
     id: "ES-063", disciplina: "Estatística", assunto: "Análise Exploratória de Dados", subassunto: "Variáveis quantitativas contínuas",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (tipos de variáveis)",
     tipo: "CE", dificuldade: 1, tempoIdealSeg: 45, probReaparecer: 0.78,
     enunciado: "Variáveis quantitativas contínuas, por definição, somente podem assumir valores numéricos inteiros, sendo vedada a ocorrência de valores fracionários, os quais caracterizariam uma variável quantitativa discreta.",
@@ -102,7 +102,7 @@ const QUESTOES_PCAL_LOTE50 = [
   /* ===== VARIÁVEL DUMMY — K CATEGORIAS EXIGEM K-1 DUMMIES ===== */
   {
     id: "ES-064", disciplina: "Estatística", assunto: "Análise Exploratória de Dados", subassunto: "Variáveis dummy (binárias)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (variáveis dummy)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.76,
     enunciado: "Uma variável qualitativa expressa por três categorias distintas não pode ser representada por uma única variável dummy (binária), sendo necessárias, no mínimo, duas variáveis dummy para codificar todas as categorias sem redundância.",
@@ -121,7 +121,7 @@ const QUESTOES_PCAL_LOTE50 = [
   },
   {
     id: "ES-065", disciplina: "Estatística", assunto: "Análise Exploratória de Dados", subassunto: "Variáveis dummy (binárias)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (variáveis dummy)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.72,
     enunciado: "Uma variável qualitativa expressa por três categorias pode ser representada por uma variável dummy, uma vez que a variável dummy, por definição, é capaz de codificar qualquer número de categorias em um único indicador binário.",
@@ -142,7 +142,7 @@ const QUESTOES_PCAL_LOTE50 = [
   /* ===== MÉDIA EXIGE VARIÁVEL MÉTRICA (QUANTITATIVA) ===== */
   {
     id: "ES-066", disciplina: "Estatística", assunto: "Análise Exploratória de Dados", subassunto: "Cálculo da média — exigência de variável métrica",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (medidas de tendência central)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.8,
     enunciado: "Para o cálculo da média aritmética, a variável deve ser necessariamente do tipo métrica (quantitativa), não sendo possível calcular uma média aritmética significativa a partir de dados de natureza meramente qualitativa nominal ou ordinal.",
@@ -161,7 +161,7 @@ const QUESTOES_PCAL_LOTE50 = [
   },
   {
     id: "ES-067", disciplina: "Estatística", assunto: "Análise Exploratória de Dados", subassunto: "Cálculo da média — exigência de variável métrica",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (medidas de tendência central)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.76,
     enunciado: "A média aritmética pode ser calculada de forma estatisticamente significativa para qualquer tipo de variável, inclusive para variáveis qualitativas nominais e ordinais, bastando que suas categorias sejam previamente codificadas com valores numéricos.",
@@ -182,7 +182,7 @@ const QUESTOES_PCAL_LOTE50 = [
   /* ===== DIAS DA SEMANA SÃO QUALITATIVOS ORDINAIS, NÃO QUANTITATIVOS ===== */
   {
     id: "ES-068", disciplina: "Estatística", assunto: "Análise Exploratória de Dados", subassunto: "Variáveis ordinais são qualitativas, não quantitativas",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (classificação de variáveis)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.8,
     enunciado: "Os dias da semana constituem exemplo de variável qualitativa ordinal — e não de variável quantitativa —, uma vez que expressam uma ordem entre categorias (segunda, terça, quarta...), sem que essa ordem corresponda a uma medida numérica passível de operações aritméticas.",
@@ -201,7 +201,7 @@ const QUESTOES_PCAL_LOTE50 = [
   },
   {
     id: "ES-069", disciplina: "Estatística", assunto: "Análise Exploratória de Dados", subassunto: "Variáveis ordinais são qualitativas, não quantitativas",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (classificação de variáveis)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.76,
     enunciado: "As variáveis quantitativas podem ser do tipo ordinais, sendo estas as que remetem a uma ideia de ordem entre os valores, como, por exemplo, os dias da semana e as horas do dia.",
@@ -222,7 +222,7 @@ const QUESTOES_PCAL_LOTE50 = [
   /* ===== CORES EM GRÁFICOS INFLUENCIAM A INTERPRETAÇÃO ===== */
   {
     id: "ES-070", disciplina: "Estatística", assunto: "Análise Exploratória de Dados", subassunto: "Visualização de dados — influência das cores",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (visualização de dados)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.78,
     enunciado: "A escolha das cores em um gráfico tem influência relevante na interpretação dos dados, podendo destacar, ofuscar ou até distorcer a percepção de padrões, tendências e comparações entre categorias.",
@@ -241,7 +241,7 @@ const QUESTOES_PCAL_LOTE50 = [
   },
   {
     id: "ES-071", disciplina: "Estatística", assunto: "Análise Exploratória de Dados", subassunto: "Visualização de dados — influência das cores",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (visualização de dados)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.74,
     enunciado: "A escolha das cores em um gráfico tem pouca influência na interpretação dos dados, tratando-se de um aspecto meramente estético que não afeta a percepção de padrões, tendências ou comparações entre categorias apresentadas na visualização.",
@@ -262,7 +262,7 @@ const QUESTOES_PCAL_LOTE50 = [
   /* ===== GRÁFICO DE PIZZA — INADEQUADO PARA MUITAS CATEGORIAS/DADOS COMPLEXOS ===== */
   {
     id: "ES-072", disciplina: "Estatística", assunto: "Análise Exploratória de Dados", subassunto: "Gráfico de setores (pizza) — limitações",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (visualização de dados)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.8,
     enunciado: "O gráfico de setores (pizza) não é a melhor escolha para a visualização de grandes conjuntos de dados complexos, sendo mais adequado para representar a distribuição proporcional de uma variável qualitativa com poucas categorias.",
@@ -281,7 +281,7 @@ const QUESTOES_PCAL_LOTE50 = [
   },
   {
     id: "ES-073", disciplina: "Estatística", assunto: "Análise Exploratória de Dados", subassunto: "Gráfico de setores (pizza) — limitações",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (visualização de dados)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.76,
     enunciado: "O gráfico de pizza é a melhor escolha para a visualização de grandes conjuntos de dados complexos, por permitir a representação simultânea de um elevado número de categorias sem prejuízo à clareza da leitura.",
@@ -302,7 +302,7 @@ const QUESTOES_PCAL_LOTE50 = [
   /* ===== TABELA DE FREQUÊNCIAS — PERDA DA SEQUÊNCIA ORIGINAL DOS DADOS ===== */
   {
     id: "ES-074", disciplina: "Estatística", assunto: "Análise Exploratória de Dados", subassunto: "Tabela de frequências — perda de informação sequencial",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (distribuição de frequências)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.78,
     enunciado: "A partir de uma tabela de frequências absolutas de uma variável qualitativa nominal, não é possível recuperar a sequência original dos valores individuais da série de dados, uma vez que a tabela apenas informa a contagem de ocorrências por categoria, sem preservar a ordem em que foram coletadas.",
@@ -321,7 +321,7 @@ const QUESTOES_PCAL_LOTE50 = [
   },
   {
     id: "ES-075", disciplina: "Estatística", assunto: "Análise Exploratória de Dados", subassunto: "Tabela de frequências — perda de informação sequencial",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (distribuição de frequências)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.74,
     enunciado: "A partir de uma tabela de frequências absolutas de uma variável qualitativa nominal, é possível recuperar os valores originais da série de dados, incluída a ordem exata em que cada observação foi coletada.",
@@ -342,7 +342,7 @@ const QUESTOES_PCAL_LOTE50 = [
   /* ===== HISTOGRAMA — ALTURA DAS BARRAS PROPORCIONAL À FREQUÊNCIA ===== */
   {
     id: "ES-076", disciplina: "Estatística", assunto: "Análise Exploratória de Dados", subassunto: "Histograma — construção",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (histogramas)",
     tipo: "CE", dificuldade: 1, tempoIdealSeg: 45, probReaparecer: 0.8,
     enunciado: "Na construção de um histograma, a altura das barras verticais deve ser proporcional à frequência observada de cada valor ou intervalo de classe mensurado, permitindo a visualização da distribuição de uma variável quantitativa.",
@@ -361,7 +361,7 @@ const QUESTOES_PCAL_LOTE50 = [
   },
   {
     id: "ES-077", disciplina: "Estatística", assunto: "Análise Exploratória de Dados", subassunto: "Histograma — construção",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (histogramas)",
     tipo: "CE", dificuldade: 1, tempoIdealSeg: 45, probReaparecer: 0.76,
     enunciado: "Na construção de um histograma, a altura das barras verticais é sempre igual entre si, independentemente da frequência observada, sendo a largura de cada barra o elemento que deve ser ajustado para representar a frequência de cada classe.",
@@ -382,7 +382,7 @@ const QUESTOES_PCAL_LOTE50 = [
   /* ===== AGRUPAMENTO EM CLASSES — MAIS CLASSES = MENOS PERDA DE INFORMAÇÃO ===== */
   {
     id: "ES-078", disciplina: "Estatística", assunto: "Análise Exploratória de Dados", subassunto: "Agrupamento em classes — número de classes e perda de informação",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (distribuição de frequências por classes)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.78,
     enunciado: "Ao se agrupar os dados de uma variável quantitativa contínua por faixas (classes) de valores para se construir uma tabela de frequências, a perda de informação em relação aos dados originais será tanto menor quanto maior for o número de classes escolhidas, uma vez que intervalos mais estreitos aproximam a representação dos valores individuais reais.",
@@ -401,7 +401,7 @@ const QUESTOES_PCAL_LOTE50 = [
   },
   {
     id: "ES-079", disciplina: "Estatística", assunto: "Análise Exploratória de Dados", subassunto: "Agrupamento em classes — número de classes e perda de informação",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (distribuição de frequências por classes)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.74,
     enunciado: "Ao se agrupar os dados de uma variável quantitativa contínua por faixas (classes) de valores para se construir uma tabela de frequências, a perda de informação em relação aos dados originais será tanto maior quanto maior for o número de classes escolhidas.",

@@ -13,7 +13,7 @@ const QUESTOES_PCAL_LOTE53 = [
 
   {
     id: "DA-061", disciplina: "Direito Administrativo", assunto: "Organização administrativa", subassunto: "Descentralização por delegação",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Organização Administrativa — descentralização, doutrina de Mazza/Carvalho Filho)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.85,
     enunciado: "Ocorre descentralização administrativa por delegação quando o poder público transfere a execução de determinado serviço público a um particular, mediante contrato de concessão, permanecendo a titularidade do serviço com o ente político.",
@@ -33,7 +33,7 @@ const QUESTOES_PCAL_LOTE53 = [
 
   {
     id: "DA-062", disciplina: "Direito Administrativo", assunto: "Organização administrativa", subassunto: "Administração direta",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Organização Administrativa — administração direta, doutrina de Carvalho Filho)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 45, probReaparecer: 0.85,
     enunciado: "A administração direta é composta pelos órgãos que integram a estrutura interna das pessoas políticas (União, estados, Distrito Federal e municípios), os quais não possuem personalidade jurídica própria, mas se organizam dentro de uma única personalidade jurídica.",
@@ -53,7 +53,7 @@ const QUESTOES_PCAL_LOTE53 = [
 
   {
     id: "DA-063", disciplina: "Direito Administrativo", assunto: "Organização administrativa", subassunto: "Administração indireta — delegação de competências",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Organização Administrativa — descentralização e administração indireta)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 55, probReaparecer: 0.8,
     enunciado: "As entidades da administração indireta são criadas justamente para receber, por outorga, a titularidade de determinados serviços públicos ou de interesse público, os quais, por definição, são indelegáveis a particulares.",
@@ -73,7 +73,7 @@ const QUESTOES_PCAL_LOTE53 = [
 
   {
     id: "DA-064", disciplina: "Direito Administrativo", assunto: "Organização administrativa", subassunto: "Desconcentração",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Organização Administrativa — desconcentração, doutrina de Mazza)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 45, probReaparecer: 0.88,
     enunciado: "A distribuição de competências entre órgãos internos, sem personalidade jurídica própria, pertencentes a uma mesma pessoa jurídica, com manutenção da vinculação hierárquica entre eles, denomina-se desconcentração administrativa.",
@@ -93,7 +93,7 @@ const QUESTOES_PCAL_LOTE53 = [
 
   {
     id: "DA-065", disciplina: "Direito Administrativo", assunto: "Organização administrativa", subassunto: "Fundações públicas",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Organização Administrativa — fundações públicas, Decreto-Lei 200/67 e doutrina de Alexandrino/Paulo)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 55, probReaparecer: 0.82,
     enunciado: "As fundações públicas são criadas mediante autorização legislativa, podendo adquirir personalidade jurídica de direito público ou de direito privado, e destinam-se ao desenvolvimento de atividades de interesse público ou privado, desde que sem fins lucrativos.",
@@ -113,7 +113,7 @@ const QUESTOES_PCAL_LOTE53 = [
 
   {
     id: "DA-066", disciplina: "Direito Administrativo", assunto: "Organização administrativa", subassunto: "Autarquias",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Organização Administrativa — autarquias, Decreto-Lei 200/67)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 45, probReaparecer: 0.88,
     enunciado: "A autarquia é entidade da administração pública indireta, dotada de personalidade jurídica de direito público, criada por lei específica para executar, de forma descentralizada, atividades típicas da administração pública.",
@@ -133,7 +133,7 @@ const QUESTOES_PCAL_LOTE53 = [
 
   {
     id: "DA-067", disciplina: "Direito Administrativo", assunto: "Organização administrativa", subassunto: "Empresas públicas x sociedades de economia mista",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Organização Administrativa — empresas estatais, Decreto-Lei 200/67 e doutrina de Mazza)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.85,
     enunciado: "As sociedades de economia mista e as empresas públicas são pessoas jurídicas de direito privado que desempenham atividade de natureza econômica, distinguindo-se, entre outros aspectos, pela forma societária adotada e pela composição do capital.",
@@ -153,7 +153,7 @@ const QUESTOES_PCAL_LOTE53 = [
 
   {
     id: "DA-068", disciplina: "Direito Administrativo", assunto: "Organização administrativa", subassunto: "Características comuns da administração indireta",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Organização Administrativa — características comuns da administração indireta)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.82,
     enunciado: "Autarquias, fundações públicas, empresas públicas e sociedades de economia mista são pessoas jurídicas integrantes da administração indireta, criadas ou autorizadas por lei específica, dotadas de personalidade jurídica própria, mas desprovidas de patrimônio próprio, que permanece sob a titularidade do ente político instituidor.",
@@ -173,7 +173,7 @@ const QUESTOES_PCAL_LOTE53 = [
 
   {
     id: "DA-069", disciplina: "Direito Administrativo", assunto: "Organização administrativa", subassunto: "Entidades paraestatais",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Organização Administrativa — entidades paraestatais, doutrina de Alexandrino/Paulo)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 55, probReaparecer: 0.78,
     enunciado: "As entidades paraestatais — como os serviços sociais autônomos (SESI, SESC, SENAT) e as organizações da sociedade civil de interesse público (OSCIP) — são pessoas jurídicas de direito privado que colaboram com o Estado na prestação de atividades de interesse social sem fins lucrativos, razão pela qual passam a integrar formalmente a administração pública indireta.",
@@ -193,7 +193,7 @@ const QUESTOES_PCAL_LOTE53 = [
 
   {
     id: "DA-070", disciplina: "Direito Administrativo", assunto: "Organização administrativa", subassunto: "Criação de empresas subsidiárias",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Organização Administrativa — empresas subsidiárias, CF art. 37, XIX e XX)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 55, probReaparecer: 0.85,
     enunciado: "Como a instituição de uma empresa pública já depende de autorização legislativa específica, a Constituição Federal dispensa a exigência de nova autorização legislativa para a criação de empresas subsidiárias dessa mesma empresa pública.",

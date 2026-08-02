@@ -19,7 +19,7 @@ const QUESTOES_PCAL_LOTE40 = [
   /* ===== MALWARES: worm, vírus, trojan, spyware, ransomware ===== */
   {
     id: "TI-034", disciplina: "TI e Segurança Cibernética", assunto: "Malwares", subassunto: "Worm (autopropagação)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Segurança da Informação)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.86,
     enunciado: "O worm é um tipo de praga virtual capaz de se replicar e se propagar automaticamente de um computador para outro através da rede, explorando vulnerabilidades dos sistemas, sem depender de um arquivo hospedeiro ou da ação direta do usuário.",
@@ -38,7 +38,7 @@ const QUESTOES_PCAL_LOTE40 = [
   },
   {
     id: "TI-035", disciplina: "TI e Segurança Cibernética", assunto: "Malwares", subassunto: "Worm (autopropagação)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Segurança da Informação)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.84,
     enunciado: "O worm é um programa incapaz de se propagar automaticamente pelas redes de computadores, sendo necessário que sua disseminação ocorra por meio de dispositivos de mídia removível, como pendrives.",
@@ -57,7 +57,7 @@ const QUESTOES_PCAL_LOTE40 = [
   },
   {
     id: "TI-036", disciplina: "TI e Segurança Cibernética", assunto: "Malwares", subassunto: "Vírus × worm (dependência de hospedeiro)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Segurança da Informação)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.8,
     enunciado: "Diferentemente do worm, que se autopropaga pela rede sem necessidade de um programa hospedeiro, o vírus de computador depende da existência de um arquivo ou programa hospedeiro para se replicar e se disseminar.",
@@ -76,7 +76,7 @@ const QUESTOES_PCAL_LOTE40 = [
   },
   {
     id: "TI-037", disciplina: "TI e Segurança Cibernética", assunto: "Malwares", subassunto: "Trojan (cavalo de Troia)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Segurança da Informação)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 60, probReaparecer: 0.82,
     enunciado: "O cavalo de Troia (trojan), entre outras ações maliciosas que pode desencadear, propaga-se automaticamente pela rede, enviando cópias de seu próprio código por e-mail para outros dispositivos, de modo que impressoras, roteadores e aparelhos conectados por Bluetooth passam a retransmitir o código malicioso.",
@@ -95,7 +95,7 @@ const QUESTOES_PCAL_LOTE40 = [
   },
   {
     id: "TI-038", disciplina: "TI e Segurança Cibernética", assunto: "Malwares", subassunto: "Trojan (cavalo de Troia)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Segurança da Informação)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.84,
     enunciado: "O trojan (cavalo de Troia) caracteriza-se por se disfarçar de um programa legítimo e útil, induzindo o próprio usuário a instalá-lo voluntariamente, não possuindo capacidade de se autopropagar pela rede como o worm.",
@@ -114,7 +114,7 @@ const QUESTOES_PCAL_LOTE40 = [
   },
   {
     id: "TI-039", disciplina: "TI e Segurança Cibernética", assunto: "Malwares", subassunto: "Ransomware × spyware",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Segurança da Informação)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.88,
     enunciado: "O ransomware é uma praga virtual que tem como principal característica capturar dados pessoais do usuário para utilizá-los no envio de mensagens de spam, sem solicitar qualquer permissão.",
@@ -135,7 +135,7 @@ const QUESTOES_PCAL_LOTE40 = [
   /* ===== FIREWALL, ANTIMALWARE E BACKUP (separação de funções) ===== */
   {
     id: "TI-040", disciplina: "TI e Segurança Cibernética", assunto: "Firewall × antivírus × backup", subassunto: "Firewall (controle de tráfego)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Segurança da Informação)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.86,
     enunciado: "Por meio do recurso de proteção firewall, é possível ao usuário solicitar ao sistema uma verificação de seus arquivos em busca de possíveis códigos maliciosos armazenados no computador.",
@@ -154,7 +154,7 @@ const QUESTOES_PCAL_LOTE40 = [
   },
   {
     id: "TI-041", disciplina: "TI e Segurança Cibernética", assunto: "Firewall × antivírus × backup", subassunto: "Firewall (controle de tráfego)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Segurança da Informação)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.78,
     enunciado: "O firewall é um mecanismo de segurança, implementado em hardware, em software ou em ambos, que controla o tráfego de dados de entrada e saída de uma rede com base em um conjunto de regras predefinidas.",
@@ -173,7 +173,7 @@ const QUESTOES_PCAL_LOTE40 = [
   },
   {
     id: "TI-042", disciplina: "TI e Segurança Cibernética", assunto: "Firewall × antivírus × backup", subassunto: "Recuperação de falhas de armazenamento",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Segurança da Informação)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.8,
     enunciado: "Algumas falhas catastróficas no armazenamento de dados podem ser corrigidas por meio da restauração do firewall do computador afetado, uma vez que esse mecanismo também é responsável por preservar cópias dos dados armazenados.",
@@ -192,7 +192,7 @@ const QUESTOES_PCAL_LOTE40 = [
   },
   {
     id: "TI-043", disciplina: "TI e Segurança Cibernética", assunto: "Firewall × antivírus × backup", subassunto: "Categorias de antimalware",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Segurança da Informação)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.78,
     enunciado: "As ferramentas antimalware são programas projetados para identificar, neutralizar ou eliminar códigos maliciosos de um computador, existindo diferentes categorias especializadas, como antivírus, antispyware, antirootkit e antitrojan, cada uma voltada ao combate de um tipo específico de ameaça.",
@@ -213,7 +213,7 @@ const QUESTOES_PCAL_LOTE40 = [
   /* ===== TIPOS DE BACKUP: completo, diferencial, incremental ===== */
   {
     id: "TI-044", disciplina: "TI e Segurança Cibernética", assunto: "Procedimentos de backup", subassunto: "Backup diferencial",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Segurança da Informação)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.86,
     enunciado: "O backup diferencial copia todos os arquivos alterados desde o último backup completo, de modo que, para uma restauração total dos dados, bastam o último backup completo e o último backup diferencial realizado.",
@@ -232,7 +232,7 @@ const QUESTOES_PCAL_LOTE40 = [
   },
   {
     id: "TI-045", disciplina: "TI e Segurança Cibernética", assunto: "Procedimentos de backup", subassunto: "Diferencial × incremental (espaço e velocidade)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Segurança da Informação)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 70, probReaparecer: 0.86,
     enunciado: "Caso um backup completo seja executado aos domingos e, ao longo da semana, sejam executados backups diferenciais diariamente até sábado, a criação desses backups diferenciais será mais rápida e consumirá menos espaço de armazenamento do que se, no lugar deles, fossem adotados backups incrementais ao longo da semana.",
@@ -251,7 +251,7 @@ const QUESTOES_PCAL_LOTE40 = [
   },
   {
     id: "TI-046", disciplina: "TI e Segurança Cibernética", assunto: "Procedimentos de backup", subassunto: "Backup incremental",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Segurança da Informação)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.84,
     enunciado: "O backup incremental copia apenas os arquivos alterados desde o último backup realizado, seja ele completo ou incremental, sendo o tipo que consome menos espaço de armazenamento, ainda que sua restauração completa exija o backup completo somado a todos os backups incrementais subsequentes, em sequência.",
@@ -270,7 +270,7 @@ const QUESTOES_PCAL_LOTE40 = [
   },
   {
     id: "TI-047", disciplina: "TI e Segurança Cibernética", assunto: "Procedimentos de backup", subassunto: "Backup incremental",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Segurança da Informação)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 60, probReaparecer: 0.82,
     enunciado: "Dentre os tipos usuais de becape, o que mais consome espaço de armazenamento no computador é o backup incremental, por acumular sucessivamente todas as alterações realizadas desde a primeira cópia completa.",
@@ -289,7 +289,7 @@ const QUESTOES_PCAL_LOTE40 = [
   },
   {
     id: "TI-048", disciplina: "TI e Segurança Cibernética", assunto: "Procedimentos de backup", subassunto: "Backup incremental",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Segurança da Informação)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.82,
     enunciado: "O backup incremental, uma vez configurado e executado, realiza uma cópia exata e completa de todos os arquivos e pastas selecionados a cada execução, sendo especialmente indicado para situações em que se necessite de recuperação rápida e integral de dados após falha de hardware.",
@@ -308,7 +308,7 @@ const QUESTOES_PCAL_LOTE40 = [
   },
   {
     id: "TI-049", disciplina: "TI e Segurança Cibernética", assunto: "Procedimentos de backup", subassunto: "Restauração do backup incremental",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Segurança da Informação)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.8,
     enunciado: "Assim como ocorre no backup diferencial, a restauração completa de dados a partir de backups incrementais exige apenas dois conjuntos de arquivos: o último backup completo e o último backup incremental realizado.",
@@ -329,7 +329,7 @@ const QUESTOES_PCAL_LOTE40 = [
   /* ===== COMPUTAÇÃO EM NUVEM E ONEDRIVE ===== */
   {
     id: "TI-050", disciplina: "TI e Segurança Cibernética", assunto: "Computação em nuvem", subassunto: "Nuvem × ransomware",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Segurança da Informação)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.86,
     enunciado: "Embora os serviços de armazenamento em nuvem reduzam o risco de perda de dados e aumentem a resiliência da informação, por meio de recursos como versionamento e backup automático, eles não são totalmente imunes a ameaças como o ransomware.",
@@ -348,7 +348,7 @@ const QUESTOES_PCAL_LOTE40 = [
   },
   {
     id: "TI-051", disciplina: "TI e Segurança Cibernética", assunto: "Computação em nuvem", subassunto: "Nuvem × ransomware",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Segurança da Informação)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.84,
     enunciado: "Por serem totalmente imunes a pragas virtuais como o ransomware, os serviços de armazenamento em nuvem eliminam por completo o risco de perda de arquivos decorrente desse tipo de ameaça.",
@@ -367,7 +367,7 @@ const QUESTOES_PCAL_LOTE40 = [
   },
   {
     id: "TI-052", disciplina: "TI e Segurança Cibernética", assunto: "Computação em nuvem", subassunto: "OneDrive (Arquivos sob Demanda)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Segurança da Informação)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.8,
     enunciado: "O OneDrive, serviço de armazenamento em nuvem da Microsoft, permite a sincronização seletiva de pastas e arquivos do dispositivo local, sendo que, após a sincronização, a cópia local do arquivo é sempre apagada, permanecendo apenas a versão armazenada na nuvem.",
@@ -386,7 +386,7 @@ const QUESTOES_PCAL_LOTE40 = [
   },
   {
     id: "TI-053", disciplina: "TI e Segurança Cibernética", assunto: "Computação em nuvem", subassunto: "OneDrive (Arquivos sob Demanda)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Segurança da Informação)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.78,
     enunciado: "O recurso de Arquivos sob Demanda do OneDrive admite três estados possíveis para cada arquivo — somente na nuvem, disponível localmente e sempre disponível —, liberando espaço de armazenamento local apenas quando necessário.",
@@ -407,7 +407,7 @@ const QUESTOES_PCAL_LOTE40 = [
   /* ===== ATAQUES DE NEGAÇÃO DE SERVIÇO E TRÍADE CID ===== */
   {
     id: "TI-054", disciplina: "TI e Segurança Cibernética", assunto: "Ataques de negação de serviço (DDoS)", subassunto: "DDoS × ransomware (identificação do ataque)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Segurança da Informação)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 70, probReaparecer: 0.88,
     enunciado: "Um incidente de segurança caracterizado pelo recebimento de um volume massivo e simultâneo de conexões, oriundas de diferentes origens distribuídas pela rede, com o objetivo de exceder a capacidade de resposta de um serviço e comprometer sua disponibilidade, configura um ataque de negação de serviço distribuído (DDoS).",
@@ -426,7 +426,7 @@ const QUESTOES_PCAL_LOTE40 = [
   },
   {
     id: "TI-055", disciplina: "TI e Segurança Cibernética", assunto: "Ataques de negação de serviço (DDoS)", subassunto: "DDoS × ransomware (identificação do ataque)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Segurança da Informação)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 70, probReaparecer: 0.88,
     enunciado: "Um incidente de segurança em que um serviço público foi derrubado após receber um volume massivo de conexões simultâneas provenientes de diversos países, com o objetivo de sobrecarregar a infraestrutura e interromper o funcionamento do sistema, pode ser corretamente classificado como um ataque de ransomware.",
@@ -445,7 +445,7 @@ const QUESTOES_PCAL_LOTE40 = [
   },
   {
     id: "TI-056", disciplina: "TI e Segurança Cibernética", assunto: "Ataques de negação de serviço (DDoS)", subassunto: "DoS × DDoS (origem do ataque)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Segurança da Informação)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.78,
     enunciado: "O ataque de negação de serviço (DoS), por definição, tem origem em múltiplos computadores distribuídos e coordenados entre si, diferentemente do ataque de negação de serviço distribuído (DDoS), que parte de uma única máquina atacante.",
@@ -464,7 +464,7 @@ const QUESTOES_PCAL_LOTE40 = [
   },
   {
     id: "TI-057", disciplina: "TI e Segurança Cibernética", assunto: "Tríade CID", subassunto: "Autenticidade e não repúdio",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Segurança da Informação)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.8,
     enunciado: "Além da confidencialidade, da integridade e da disponibilidade — que compõem a tríade CID —, a autenticidade e o não repúdio completam o conjunto de premissas clássicas da segurança da informação, sendo ambos assegurados, por exemplo, pelo uso da assinatura digital.",
@@ -483,7 +483,7 @@ const QUESTOES_PCAL_LOTE40 = [
   },
   {
     id: "TI-058", disciplina: "TI e Segurança Cibernética", assunto: "Tríade CID", subassunto: "Integridade e disponibilidade",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Segurança da Informação)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.82,
     enunciado: "O princípio da integridade da informação garante que os dados permaneçam completos e não sejam alterados de forma indevida, ao passo que o princípio da disponibilidade assegura que os sistemas e as informações estejam acessíveis sempre que necessários aos usuários devidamente autorizados.",
@@ -502,7 +502,7 @@ const QUESTOES_PCAL_LOTE40 = [
   },
   {
     id: "TI-059", disciplina: "TI e Segurança Cibernética", assunto: "Tríade CID", subassunto: "Confidencialidade, integridade e disponibilidade",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Segurança da Informação)",
     tipo: "CE", dificuldade: 1, tempoIdealSeg: 45, probReaparecer: 0.84,
     enunciado: "São considerados atributos básicos e fundamentais da segurança da informação a confidencialidade, a integridade e a disponibilidade, os quais compõem a chamada tríade CID.",

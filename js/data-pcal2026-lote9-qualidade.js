@@ -14,7 +14,7 @@ const QUESTOES_PCAL_LOTE9 = [
   /* ===== ESTATÍSTICA (reduzir viés 'C'; incluir fácil) ===== */
   {
     id: "ES-015", disciplina: "Estatística", assunto: "Medidas de posição", subassunto: "Mediana × média",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Perito Criminal","Papiloscopista"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 1, tempoIdealSeg: 30, probReaparecer: 0.8,
     enunciado: "Em qualquer conjunto de dados numéricos, a mediana é sempre igual à média aritmética.",
     gabarito: "E", pegadinha: "termo-absoluto", palavraChave: "sempre igual",
@@ -32,7 +32,7 @@ const QUESTOES_PCAL_LOTE9 = [
   },
   {
     id: "ES-016", disciplina: "Estatística", assunto: "Medidas de dispersão", subassunto: "Desvio padrão",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Perito Criminal","Papiloscopista"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 1, tempoIdealSeg: 30, probReaparecer: 0.78,
     enunciado: "O desvio padrão pode assumir valores negativos quando a maioria das observações se encontra abaixo da média aritmética.",
     gabarito: "E", pegadinha: "exigencia-inexistente", palavraChave: "valores negativos",
@@ -50,7 +50,7 @@ const QUESTOES_PCAL_LOTE9 = [
   },
   {
     id: "ES-017", disciplina: "Estatística", assunto: "Amostragem", subassunto: "Amostragem aleatória simples",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Perito Criminal","Papiloscopista"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 40, probReaparecer: 0.78,
     enunciado: "Na amostragem aleatória simples, cada elemento da população possui probabilidade distinta de ser selecionado, privilegiando-se os estratos mais representativos.",
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "probabilidade distinta / estratos",
@@ -70,7 +70,7 @@ const QUESTOES_PCAL_LOTE9 = [
   /* ===== CRIMES CIBERNÉTICOS (reduzir viés 'C') ===== */
   {
     id: "CC-009", disciplina: "Crimes Cibernéticos e Segurança Digital", assunto: "Invasão de dispositivo", subassunto: "Ação penal",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 40, probReaparecer: 0.8,
     enunciado: "O crime de invasão de dispositivo informático, previsto no art. 154-A do Código Penal, é, em todas as hipóteses, de ação penal pública incondicionada.",
     gabarito: "E", pegadinha: "termo-absoluto", palavraChave: "todas as hipóteses / incondicionada",
@@ -88,7 +88,7 @@ const QUESTOES_PCAL_LOTE9 = [
   },
   {
     id: "CC-010", disciplina: "Crimes Cibernéticos e Segurança Digital", assunto: "Golpes virtuais", subassunto: "Phishing × ransomware",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Perito Criminal","Papiloscopista"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 35, probReaparecer: 0.82,
     enunciado: "O phishing é um tipo de código malicioso que criptografa os arquivos do dispositivo da vítima e exige o pagamento de resgate para a sua liberação.",
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "criptografa e exige resgate",
@@ -108,7 +108,7 @@ const QUESTOES_PCAL_LOTE9 = [
   /* ===== PROCESSO PENAL (reduzir viés 'C') ===== */
   {
     id: "PP-028", disciplina: "Processo Penal", assunto: "Inquérito policial", subassunto: "Dispensabilidade",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 40, probReaparecer: 0.85,
     enunciado: "O inquérito policial é peça indispensável à propositura da ação penal, de modo que a sua ausência acarreta a nulidade do processo penal dele decorrente.",
     gabarito: "E", pegadinha: "exigencia-inexistente", palavraChave: "indispensável",
@@ -126,7 +126,7 @@ const QUESTOES_PCAL_LOTE9 = [
   },
   {
     id: "PP-029", disciplina: "Processo Penal", assunto: "Prisão e medidas cautelares", subassunto: "Prazo da preventiva",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 45, probReaparecer: 0.8,
     enunciado: "A prisão preventiva possui prazo máximo de trinta dias, prorrogável uma única vez por igual período, findo o qual o preso deve ser obrigatoriamente colocado em liberdade.",
     gabarito: "E", pegadinha: "troca-numerica", palavraChave: "prazo máximo de trinta dias",
@@ -144,7 +144,7 @@ const QUESTOES_PCAL_LOTE9 = [
   },
   {
     id: "PP-030", disciplina: "Processo Penal", assunto: "Provas", subassunto: "Reconhecimento de pessoas",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 45, probReaparecer: 0.82,
     enunciado: "Segundo a jurisprudência mais recente do STJ, as formalidades do reconhecimento de pessoas previstas no art. 226 do Código de Processo Penal constituem mera recomendação, podendo ser livremente dispensadas pela autoridade.",
     gabarito: "E", pegadinha: "juris-mais-lei", palavraChave: "mera recomendação",
@@ -164,7 +164,7 @@ const QUESTOES_PCAL_LOTE9 = [
   /* ===== RACIOCÍNIO LÓGICO (reduzir viés 'C'; incluir fácil) ===== */
   {
     id: "RL-017", disciplina: "Raciocínio Lógico-Matemático", assunto: "Lógica proposicional", subassunto: "Negação simples",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 1, tempoIdealSeg: 30, probReaparecer: 0.8,
     enunciado: "A negação da proposição 'João é policial' é 'João é bombeiro'.",
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "negação",
@@ -182,7 +182,7 @@ const QUESTOES_PCAL_LOTE9 = [
   },
   {
     id: "RL-018", disciplina: "Raciocínio Lógico-Matemático", assunto: "Lógica proposicional", subassunto: "Disjunção inclusiva",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 40, probReaparecer: 0.82,
     enunciado: "Em uma disjunção inclusiva do tipo 'p ou q', para que a proposição composta seja verdadeira, é necessário que ambas as proposições simples sejam verdadeiras.",
     gabarito: "E", pegadinha: "exigencia-inexistente", palavraChave: "ambas verdadeiras",
@@ -200,7 +200,7 @@ const QUESTOES_PCAL_LOTE9 = [
   },
   {
     id: "RL-019", disciplina: "Raciocínio Lógico-Matemático", assunto: "Lógica proposicional", subassunto: "Condicional com antecedente falso",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 45, probReaparecer: 0.8,
     enunciado: "Na proposição condicional 'se p, então q', quando a proposição antecedente p é falsa, a condicional é necessariamente falsa, independentemente do valor lógico de q.",
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "antecedente falso",
@@ -220,7 +220,7 @@ const QUESTOES_PCAL_LOTE9 = [
   /* ===== DIREITO PENAL (reduzir viés 'C') ===== */
   {
     id: "DP-039", disciplina: "Direito Penal", assunto: "Teoria do crime", subassunto: "Tentativa — punição",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 1, tempoIdealSeg: 30, probReaparecer: 0.82,
     enunciado: "No Código Penal, a tentativa é punida, em regra, com a mesma pena cominada ao crime consumado.",
     gabarito: "E", pegadinha: "exigencia-inexistente", palavraChave: "mesma pena",
@@ -238,7 +238,7 @@ const QUESTOES_PCAL_LOTE9 = [
   },
   {
     id: "DP-040", disciplina: "Direito Penal", assunto: "Crimes contra o patrimônio", subassunto: "Roubo — modalidade culposa",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 1, tempoIdealSeg: 30, probReaparecer: 0.78,
     enunciado: "O crime de roubo admite tanto a forma dolosa quanto a forma culposa, esta última quando a subtração ocorre por imprudência do agente.",
     gabarito: "E", pegadinha: "exigencia-inexistente", palavraChave: "forma culposa",
@@ -256,7 +256,7 @@ const QUESTOES_PCAL_LOTE9 = [
   },
   {
     id: "DP-041", disciplina: "Direito Penal", assunto: "Crimes contra o patrimônio", subassunto: "Furto de coisa comum",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 45, probReaparecer: 0.68,
     enunciado: "A subtração, pelo condômino, de coisa comum móvel, em detrimento dos demais coproprietários, é conduta atípica, por incidir sobre bem do qual o agente também é titular.",
     gabarito: "E", pegadinha: "exigencia-inexistente", palavraChave: "atípica",
@@ -276,7 +276,7 @@ const QUESTOES_PCAL_LOTE9 = [
   /* ===== LEGISLAÇÃO PENAL ESPECIAL (reduzir viés 'C') ===== */
   {
     id: "LE-036", disciplina: "Legislação Especial", assunto: "Lei de Drogas", subassunto: "Usuário — pena",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 40, probReaparecer: 0.8,
     enunciado: "A Lei nº 11.343/2006 comina pena privativa de liberdade de seis meses a dois anos para quem adquire ou traz consigo droga para consumo pessoal.",
     gabarito: "E", pegadinha: "exigencia-inexistente", palavraChave: "pena privativa de liberdade",
@@ -294,7 +294,7 @@ const QUESTOES_PCAL_LOTE9 = [
   },
   {
     id: "LE-037", disciplina: "Legislação Especial", assunto: "Lei de Tortura", subassunto: "Ação penal",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 40, probReaparecer: 0.78,
     enunciado: "O crime de tortura, previsto na Lei nº 9.455/1997, procede-se mediante ação penal pública condicionada à representação da vítima.",
     gabarito: "E", pegadinha: "exigencia-inexistente", palavraChave: "condicionada à representação",
@@ -312,7 +312,7 @@ const QUESTOES_PCAL_LOTE9 = [
   },
   {
     id: "LE-038", disciplina: "Legislação Especial", assunto: "Crimes de racismo", subassunto: "Fiança e prescrição",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 40, probReaparecer: 0.82,
     enunciado: "Nos termos da Constituição Federal, a prática do racismo constitui crime afiançável e sujeito à prescrição, punido com pena de detenção.",
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "afiançável e sujeito à prescrição",
@@ -332,7 +332,7 @@ const QUESTOES_PCAL_LOTE9 = [
   /* ===== DIREITOS HUMANOS (reduzir viés 'C') ===== */
   {
     id: "DH-016", disciplina: "Direitos Humanos", assunto: "Teoria geral", subassunto: "Relatividade",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 40, probReaparecer: 0.82,
     enunciado: "Por serem fundamentais à dignidade humana, os direitos humanos possuem caráter absoluto, não admitindo qualquer limitação, ainda que diante da colisão com outros direitos humanos.",
     gabarito: "E", pegadinha: "termo-absoluto", palavraChave: "caráter absoluto",
@@ -350,7 +350,7 @@ const QUESTOES_PCAL_LOTE9 = [
   },
   {
     id: "DH-017", disciplina: "Direitos Humanos", assunto: "Afirmação histórica", subassunto: "Natureza da DUDH",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 45, probReaparecer: 0.75,
     enunciado: "A Declaração Universal dos Direitos Humanos, de 1948, é formalmente um tratado internacional e, por isso, foi incorporada ao ordenamento brasileiro com status de emenda constitucional.",
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "tratado / emenda constitucional",
@@ -370,7 +370,7 @@ const QUESTOES_PCAL_LOTE9 = [
   /* ===== LÍNGUA PORTUGUESA (com texto de apoio) ===== */
   {
     id: "PT-013", disciplina: "Língua Portuguesa", assunto: "Compreensão e reescritura", subassunto: "Substituição que altera o sentido",
-    concurso: "PCAL", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Escrivão","Agente","Especialista em Saúde — Fisioterapia"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 60, probReaparecer: 0.85,
     textoApoio: "A investigação criminal moderna exige que o agente, além de conhecer a legislação, domine técnicas de análise de dados, uma vez que grande parte das provas hoje é digital. Sem esse preparo, dificilmente se chega à autoria dos delitos cibernéticos.",
     enunciado: "No trecho, a substituição da expressão 'uma vez que' por 'ainda que' preservaria a correção gramatical e o sentido original do período.",
@@ -389,7 +389,7 @@ const QUESTOES_PCAL_LOTE9 = [
   },
   {
     id: "PT-014", disciplina: "Língua Portuguesa", assunto: "Compreensão e reescritura", subassunto: "Referência pronominal",
-    concurso: "PCAL", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Escrivão","Agente","Especialista em Saúde — Fisioterapia"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.8,
     textoApoio: "A autoridade policial recebeu o relatório e o encaminhou ao Ministério Público, que ofereceu a denúncia.",
     enunciado: "No período, o pronome 'o', em 'encaminhou', refere-se ao termo 'relatório'.",
@@ -408,7 +408,7 @@ const QUESTOES_PCAL_LOTE9 = [
   },
   {
     id: "PT-015", disciplina: "Língua Portuguesa", assunto: "Concordância", subassunto: "Concordância verbal — sujeito composto",
-    concurso: "PCAL", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Escrivão","Agente","Especialista em Saúde — Fisioterapia"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.78,
     textoApoio: "O delegado e o escrivão analisou as provas do inquérito antes de encaminhá-lo ao juiz.",
     enunciado: "No período, o emprego do verbo 'analisou' no singular está de acordo com a norma-padrão de concordância verbal.",
@@ -429,7 +429,7 @@ const QUESTOES_PCAL_LOTE9 = [
   /* ===== TI (incluir fácil; reduzir viés) ===== */
   {
     id: "TI-013", disciplina: "TI e Segurança Cibernética", assunto: "Organização de arquivos", subassunto: "Extensão de arquivo",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Perito Criminal","Papiloscopista"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 1, tempoIdealSeg: 30, probReaparecer: 0.75,
     enunciado: "Em ambiente Windows, a extensão de um arquivo (como .docx, .pdf ou .exe) indica, em regra, o seu tipo ou formato, orientando o sistema quanto ao programa associado à sua abertura.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "extensão indica o tipo",
@@ -447,7 +447,7 @@ const QUESTOES_PCAL_LOTE9 = [
   },
   {
     id: "TI-014", disciplina: "TI e Segurança Cibernética", assunto: "Sistema operacional", subassunto: "Memória RAM",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Perito Criminal","Papiloscopista"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 1, tempoIdealSeg: 30, probReaparecer: 0.75,
     enunciado: "A memória RAM é um tipo de memória não volátil, de modo que os dados nela armazenados são preservados mesmo após o desligamento do computador.",
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "não volátil",
@@ -487,7 +487,7 @@ const QUESTOES_PCAL_LOTE9 = [
   /* ===== DIREITO ADMINISTRATIVO (reduzir viés) ===== */
   {
     id: "DA-017", disciplina: "Direito Administrativo", assunto: "Atos administrativos", subassunto: "Controle judicial da discricionariedade",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 45, probReaparecer: 0.78,
     enunciado: "Os atos administrativos discricionários, por envolverem juízo de conveniência e oportunidade, não se sujeitam a qualquer espécie de controle pelo Poder Judiciário.",
     gabarito: "E", pegadinha: "termo-absoluto", palavraChave: "não se sujeitam a qualquer controle",
@@ -505,7 +505,7 @@ const QUESTOES_PCAL_LOTE9 = [
   },
   {
     id: "DA-018", disciplina: "Direito Administrativo", assunto: "Atos administrativos", subassunto: "Revogação × anulação",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 40, probReaparecer: 0.8,
     enunciado: "O Poder Judiciário, no exercício de sua função jurisdicional, pode revogar atos administrativos de outros Poderes por razões de conveniência e oportunidade.",
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "revogar / conveniência e oportunidade",

@@ -15,7 +15,7 @@ const QUESTOES_PCAL_LOTE16 = [
   /* ============ CRIMES AMBIENTAIS (Lei 9.605/1998) ============ */
   {
     id: "LE-082", disciplina: "Legislação Especial", assunto: "Crimes Ambientais", subassunto: "Responsabilidade penal da pessoa jurídica (art. 3º)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei 9.605/1998, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.85,
     enunciado: "As pessoas jurídicas podem ser responsabilizadas penalmente por crimes ambientais, quando a infração for cometida por decisão de seu representante legal ou de órgão colegiado, no interesse ou benefício da entidade.",
@@ -34,7 +34,7 @@ const QUESTOES_PCAL_LOTE16 = [
   },
   {
     id: "LE-083", disciplina: "Legislação Especial", assunto: "Crimes Ambientais", subassunto: "Dupla imputação (STF)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei 9.605/1998, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 55, probReaparecer: 0.8,
     enunciado: "Segundo a jurisprudência atual do STF, a responsabilização penal da pessoa jurídica por crime ambiental depende, necessariamente, da simultânea imputação da pessoa física responsável pela conduta.",
@@ -54,7 +54,7 @@ const QUESTOES_PCAL_LOTE16 = [
   },
   {
     id: "LE-084", disciplina: "Legislação Especial", assunto: "Crimes Ambientais", subassunto: "Desconsideração da personalidade jurídica (art. 4º)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei 9.605/1998, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 45, probReaparecer: 0.72,
     enunciado: "Poderá ser desconsiderada a pessoa jurídica sempre que sua personalidade for obstáculo ao ressarcimento de prejuízos causados à qualidade do meio ambiente.",
@@ -73,7 +73,7 @@ const QUESTOES_PCAL_LOTE16 = [
   },
   {
     id: "LE-085", disciplina: "Legislação Especial", assunto: "Crimes Ambientais", subassunto: "Penas da pessoa jurídica (art. 21)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei 9.605/1998, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.75,
     enunciado: "Entre as penas aplicáveis às pessoas jurídicas por crimes ambientais inclui-se a pena privativa de liberdade.",
@@ -92,7 +92,7 @@ const QUESTOES_PCAL_LOTE16 = [
   },
   {
     id: "LE-086", disciplina: "Legislação Especial", assunto: "Crimes Ambientais", subassunto: "Transação e composição do dano (art. 27)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei 9.605/1998, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 55, probReaparecer: 0.7,
     enunciado: "Nos crimes ambientais de menor potencial ofensivo, a proposta de aplicação imediata de pena (transação penal) somente pode ser formulada após a prévia composição do dano ambiental, salvo comprovada impossibilidade.",
@@ -111,7 +111,7 @@ const QUESTOES_PCAL_LOTE16 = [
   },
   {
     id: "LE-087", disciplina: "Legislação Especial", assunto: "Crimes Ambientais", subassunto: "Responsabilidade das pessoas físicas (art. 3º, parágrafo único)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei 9.605/1998, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 50, probReaparecer: 0.72,
     enunciado: "A responsabilidade penal da pessoa jurídica por crime ambiental exclui a responsabilidade das pessoas físicas que sejam autoras, coautoras ou partícipes do mesmo fato.",
@@ -130,7 +130,7 @@ const QUESTOES_PCAL_LOTE16 = [
   },
   {
     id: "LE-088", disciplina: "Legislação Especial", assunto: "Crimes Ambientais", subassunto: "Circunstâncias atenuantes (art. 14)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei 9.605/1998, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 45, probReaparecer: 0.68,
     enunciado: "O baixo grau de instrução ou escolaridade do agente constitui circunstância que atenua a pena nos crimes ambientais.",
@@ -149,7 +149,7 @@ const QUESTOES_PCAL_LOTE16 = [
   },
   {
     id: "LE-089", disciplina: "Legislação Especial", assunto: "Crimes Ambientais", subassunto: "Crimes de perigo",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei 9.605/1998, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 50, probReaparecer: 0.7,
     enunciado: "A configuração de qualquer crime ambiental exige a ocorrência de dano efetivo e mensurável ao meio ambiente.",
@@ -170,7 +170,7 @@ const QUESTOES_PCAL_LOTE16 = [
   /* ============ CRIMES DE RACISMO/PRECONCEITO (Lei 7.716/1989) ============ */
   {
     id: "LE-090", disciplina: "Legislação Especial", assunto: "Crimes de Racismo", subassunto: "Inafiançabilidade e imprescritibilidade (CF, art. 5º, XLII)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei 7.716/1989 c/c CF, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.85,
     enunciado: "A prática do racismo constitui crime inafiançável e imprescritível, sujeito à pena de reclusão.",
@@ -189,7 +189,7 @@ const QUESTOES_PCAL_LOTE16 = [
   },
   {
     id: "LE-091", disciplina: "Legislação Especial", assunto: "Crimes de Racismo", subassunto: "Injúria racial (Lei 14.532/2023)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei 7.716/1989 c/c Lei 14.532/2023, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 55, probReaparecer: 0.82,
     enunciado: "Após a Lei 14.532/2023, a injúria racial passou a ser tratada como modalidade de racismo, tornando-se imprescritível e inafiançável.",
@@ -208,7 +208,7 @@ const QUESTOES_PCAL_LOTE16 = [
   },
   {
     id: "LE-092", disciplina: "Legislação Especial", assunto: "Crimes de Racismo", subassunto: "Negativa de emprego (art. 4º)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei 7.716/1989, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 1, tempoIdealSeg: 40, probReaparecer: 0.72,
     enunciado: "Constitui crime negar ou obstar emprego em empresa privada a alguém em razão de raça, cor, etnia, religião ou procedência nacional.",
@@ -227,7 +227,7 @@ const QUESTOES_PCAL_LOTE16 = [
   },
   {
     id: "LE-093", disciplina: "Legislação Especial", assunto: "Crimes de Racismo", subassunto: "Racismo × injúria (individualização)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei 7.716/1989, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 55, probReaparecer: 0.75,
     enunciado: "Os crimes de racismo previstos na Lei 7.716/1989 somente se configuram quando a discriminação é dirigida a uma pessoa determinada e individualizada.",
@@ -246,7 +246,7 @@ const QUESTOES_PCAL_LOTE16 = [
   },
   {
     id: "LE-094", disciplina: "Legislação Especial", assunto: "Crimes de Racismo", subassunto: "Negativa de atendimento (art. 5º)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei 7.716/1989, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 1, tempoIdealSeg: 40, probReaparecer: 0.7,
     enunciado: "Recusar ou impedir o acesso de alguém a estabelecimento comercial, negando-lhe atendimento em razão de sua cor, constitui crime da Lei de Crimes Resultantes de Preconceito.",
@@ -265,7 +265,7 @@ const QUESTOES_PCAL_LOTE16 = [
   },
   {
     id: "LE-095", disciplina: "Legislação Especial", assunto: "Crimes de Racismo", subassunto: "Ação penal e retratação",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei 7.716/1989, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 45, probReaparecer: 0.7,
     enunciado: "A retratação do ofendido é causa de extinção da punibilidade nos crimes de racismo.",
@@ -284,7 +284,7 @@ const QUESTOES_PCAL_LOTE16 = [
   },
   {
     id: "LE-096", disciplina: "Legislação Especial", assunto: "Crimes de Racismo", subassunto: "Agravante do funcionário público (art. 20-A)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei 7.716/1989 c/c Lei 14.532/2023, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 50, probReaparecer: 0.75,
     enunciado: "A prática de crime de racismo por funcionário público, no exercício de suas funções, constitui circunstância que agrava a pena.",
@@ -305,7 +305,7 @@ const QUESTOES_PCAL_LOTE16 = [
   /* ============ LAVAGEM DE DINHEIRO (Lei 9.613/1998) ============ */
   {
     id: "LE-097", disciplina: "Legislação Especial", assunto: "Lavagem de Dinheiro", subassunto: "Infração antecedente (Lei 12.683/2012)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei 9.613/1998, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 55, probReaparecer: 0.85,
     enunciado: "Após a Lei 12.683/2012, qualquer infração penal pode figurar como antecedente do crime de lavagem de dinheiro, tendo sido abolido o rol taxativo de crimes antecedentes.",
@@ -324,7 +324,7 @@ const QUESTOES_PCAL_LOTE16 = [
   },
   {
     id: "LE-098", disciplina: "Legislação Especial", assunto: "Lavagem de Dinheiro", subassunto: "Autonomia (art. 2º, II)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei 9.613/1998, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 55, probReaparecer: 0.83,
     enunciado: "A condenação pelo crime de lavagem de dinheiro depende de prévia condenação, transitada em julgado, pelo crime antecedente.",
@@ -343,7 +343,7 @@ const QUESTOES_PCAL_LOTE16 = [
   },
   {
     id: "LE-099", disciplina: "Legislação Especial", assunto: "Lavagem de Dinheiro", subassunto: "Competência e processo (art. 2º)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei 9.613/1998, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.75,
     enunciado: "O processo e o julgamento do crime de lavagem de dinheiro independem do processo e julgamento das infrações penais antecedentes, ainda que praticadas em outro país.",
@@ -362,7 +362,7 @@ const QUESTOES_PCAL_LOTE16 = [
   },
   {
     id: "LE-100", disciplina: "Legislação Especial", assunto: "Lavagem de Dinheiro", subassunto: "Pena (art. 1º, § 4º)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei 9.613/1998, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 45, probReaparecer: 0.75,
     enunciado: "O crime de lavagem de dinheiro é punido com pena de detenção de um a quatro anos e multa.",
@@ -381,7 +381,7 @@ const QUESTOES_PCAL_LOTE16 = [
   },
   {
     id: "LE-101", disciplina: "Legislação Especial", assunto: "Lavagem de Dinheiro", subassunto: "Colaboração premiada (art. 1º, § 5º)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei 9.613/1998, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 55, probReaparecer: 0.72,
     enunciado: "No crime de lavagem, a colaboração espontânea do autor que leve à apuração das infrações e à localização dos bens pode ensejar redução de pena, seu cumprimento em regime aberto ou semiaberto, ou até o perdão judicial.",
@@ -400,7 +400,7 @@ const QUESTOES_PCAL_LOTE16 = [
   },
   {
     id: "LE-102", disciplina: "Legislação Especial", assunto: "Lavagem de Dinheiro", subassunto: "COAF (natureza)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei 9.613/1998, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.7,
     enunciado: "O Conselho de Controle de Atividades Financeiras (COAF) integra a estrutura do Ministério Público Federal, com atribuição de promover a ação penal nos crimes de lavagem.",
@@ -419,7 +419,7 @@ const QUESTOES_PCAL_LOTE16 = [
   },
   {
     id: "LE-103", disciplina: "Legislação Especial", assunto: "Lavagem de Dinheiro", subassunto: "Alienação antecipada (art. 4º-A)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei 9.613/1998, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 50, probReaparecer: 0.68,
     enunciado: "O juiz poderá determinar a alienação antecipada dos bens apreendidos ou sequestrados quando estiverem sujeitos a deterioração ou depreciação, ou quando houver dificuldade para sua manutenção.",
@@ -440,7 +440,7 @@ const QUESTOES_PCAL_LOTE16 = [
   /* ============ JUIZADOS ESPECIAIS CRIMINAIS (Lei 9.099/1995) ============ */
   {
     id: "LE-104", disciplina: "Legislação Especial", assunto: "Juizados Especiais Criminais", subassunto: "Menor potencial ofensivo (art. 61)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei 9.099/1995, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.85,
     enunciado: "Consideram-se infrações de menor potencial ofensivo as contravenções penais e os crimes a que a lei comine pena máxima não superior a dois anos, cumulada ou não com multa.",
@@ -459,7 +459,7 @@ const QUESTOES_PCAL_LOTE16 = [
   },
   {
     id: "LE-105", disciplina: "Legislação Especial", assunto: "Juizados Especiais Criminais", subassunto: "Suspensão condicional do processo (art. 89)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei 9.099/1995, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 55, probReaparecer: 0.82,
     enunciado: "A suspensão condicional do processo é cabível nos crimes cuja pena máxima cominada não seja superior a um ano.",
@@ -478,7 +478,7 @@ const QUESTOES_PCAL_LOTE16 = [
   },
   {
     id: "LE-106", disciplina: "Legislação Especial", assunto: "Juizados Especiais Criminais", subassunto: "Proposta de suspensão (art. 89)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei 9.099/1995, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.78,
     enunciado: "Ao oferecer a denúncia, o Ministério Público poderá propor a suspensão condicional do processo, por dois a quatro anos, ao acusado que não esteja sendo processado nem tenha sido condenado por outro crime, presentes os demais requisitos.",
@@ -497,7 +497,7 @@ const QUESTOES_PCAL_LOTE16 = [
   },
   {
     id: "LE-107", disciplina: "Legislação Especial", assunto: "Juizados Especiais Criminais", subassunto: "Efeitos da transação penal (art. 76)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei 9.099/1995, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 55, probReaparecer: 0.8,
     enunciado: "A aceitação da proposta de transação penal implica reconhecimento de culpa e gera reincidência e maus antecedentes ao autor do fato.",
@@ -516,7 +516,7 @@ const QUESTOES_PCAL_LOTE16 = [
   },
   {
     id: "LE-108", disciplina: "Legislação Especial", assunto: "Juizados Especiais Criminais", subassunto: "Composição civil dos danos (art. 74)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei 9.099/1995, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 50, probReaparecer: 0.76,
     enunciado: "Nos crimes de ação penal privada ou pública condicionada à representação, a homologação do acordo de composição civil dos danos acarreta a renúncia ao direito de queixa ou de representação.",
@@ -535,7 +535,7 @@ const QUESTOES_PCAL_LOTE16 = [
   },
   {
     id: "LE-109", disciplina: "Legislação Especial", assunto: "Juizados Especiais Criminais", subassunto: "Princípios (art. 62)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei 9.099/1995, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.74,
     enunciado: "O processo perante o Juizado Especial Criminal orienta-se pelos critérios da oralidade, simplicidade, informalidade, economia processual e celeridade, bem como do contraditório diferido obrigatório.",
@@ -554,7 +554,7 @@ const QUESTOES_PCAL_LOTE16 = [
   },
   {
     id: "LE-110", disciplina: "Legislação Especial", assunto: "Juizados Especiais Criminais", subassunto: "Termo circunstanciado (art. 69)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei 9.099/1995, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.8,
     enunciado: "A autoridade policial que tomar conhecimento de infração de menor potencial ofensivo lavrará termo circunstanciado; ao autor do fato que for imediatamente encaminhado ao juizado ou assumir compromisso de a ele comparecer não se imporá prisão em flagrante.",

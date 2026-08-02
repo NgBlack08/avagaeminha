@@ -14,7 +14,7 @@ const QUESTOES_PCAL_LOTE35 = [
 
   {
     id: "PP-059", disciplina: "Processo Penal", assunto: "Inquérito policial", subassunto: "Dispensabilidade",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (natureza jurídica do inquérito policial)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 65, probReaparecer: 0.8,
     enunciado: "O inquérito policial constitui peça dispensável à propositura da ação penal, podendo o titular oferecer a denúncia ou a queixa com base em outros elementos de convicção, ainda que não tenha sido previamente instaurado o inquérito.",
@@ -33,7 +33,7 @@ const QUESTOES_PCAL_LOTE35 = [
   },
   {
     id: "PP-060", disciplina: "Processo Penal", assunto: "Inquérito policial", subassunto: "Dispensabilidade",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (natureza jurídica do inquérito policial)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 65, probReaparecer: 0.78,
     enunciado: "O inquérito policial constitui peça indispensável à propositura da ação penal, não podendo o titular oferecer denúncia ou queixa sem que tenha sido previamente instaurado o inquérito correspondente.",
@@ -52,7 +52,7 @@ const QUESTOES_PCAL_LOTE35 = [
   },
   {
     id: "PP-061", disciplina: "Processo Penal", assunto: "Prisão preventiva", subassunto: "Vedação à decretação de ofício",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (CPP, art. 311, com redação da Lei 13.964/2019)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 75, probReaparecer: 0.86,
     enunciado: "Não pode o juiz, no curso do inquérito policial, decretar de ofício a prisão preventiva do investigado, ainda que verifique a presença de fatos novos e contemporâneos que evidenciem risco à ordem pública, dependendo tal medida de representação da autoridade policial ou de requerimento do Ministério Público, do querelante ou do assistente.",
@@ -71,7 +71,7 @@ const QUESTOES_PCAL_LOTE35 = [
   },
   {
     id: "PP-062", disciplina: "Processo Penal", assunto: "Prisão preventiva", subassunto: "Vedação à decretação de ofício",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (CPP, art. 311, com redação da Lei 13.964/2019)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 75, probReaparecer: 0.84,
     enunciado: "No curso do inquérito policial, verificando o juiz a presença de fatos novos e contemporâneos que evidenciem risco à ordem pública, poderá ele decretar de ofício a prisão preventiva do investigado.",
@@ -90,7 +90,7 @@ const QUESTOES_PCAL_LOTE35 = [
   },
   {
     id: "PP-063", disciplina: "Processo Penal", assunto: "Prisão temporária", subassunto: "Prazo em crimes hediondos",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei 8.072/1990, art. 2º, §4º)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 70, probReaparecer: 0.82,
     enunciado: "Por se tratar de crime hediondo, a prisão temporária poderá ser decretada pelo prazo de trinta dias, prorrogável por igual período em caso de extrema e comprovada necessidade.",
@@ -109,7 +109,7 @@ const QUESTOES_PCAL_LOTE35 = [
   },
   {
     id: "PP-064", disciplina: "Processo Penal", assunto: "Prisão temporária", subassunto: "Prazo em crimes hediondos",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei 8.072/1990, art. 2º, §4º)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 70, probReaparecer: 0.78,
     enunciado: "Ainda que se trate de crime hediondo, a prisão temporária poderá ser decretada pelo prazo geral de cinco dias, prorrogável por igual período em caso de extrema necessidade, não havendo prazo diferenciado para essa categoria de delitos.",
@@ -128,7 +128,7 @@ const QUESTOES_PCAL_LOTE35 = [
   },
   {
     id: "PP-065", disciplina: "Processo Penal", assunto: "Princípios constitucionais do processo penal", subassunto: "Presunção de inocência e execução da pena",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (STF, ADCs 43, 44 e 54)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 75, probReaparecer: 0.86,
     enunciado: "Conforme o princípio da presunção de inocência (ou da não culpabilidade) e o entendimento firmado pelo Supremo Tribunal Federal, é vedada a execução da pena antes do trânsito em julgado da sentença penal condenatória, admitida a prisão do acusado, nessa fase, apenas a título cautelar.",
@@ -147,7 +147,7 @@ const QUESTOES_PCAL_LOTE35 = [
   },
   {
     id: "PP-066", disciplina: "Processo Penal", assunto: "Princípios constitucionais do processo penal", subassunto: "Presunção de inocência e execução da pena",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (STF, ADCs 43, 44 e 54)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 75, probReaparecer: 0.8,
     enunciado: "Conforme o entendimento atualmente vigente no Supremo Tribunal Federal, admite-se a execução da pena imediatamente após a condenação em segunda instância, ainda que pendente recurso especial ou extraordinário, independentemente do trânsito em julgado da sentença condenatória.",
@@ -166,7 +166,7 @@ const QUESTOES_PCAL_LOTE35 = [
   },
   {
     id: "PP-067", disciplina: "Processo Penal", assunto: "Institutos despenalizadores", subassunto: "Suspensão condicional do processo",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei 9.099/1995, art. 89)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 75, probReaparecer: 0.78,
     enunciado: "A suspensão condicional do processo, prevista no art. 89 da Lei nº 9.099/1995, aplica-se aos crimes cuja pena mínima cominada seja igual ou inferior a um ano, ainda que o processo não tramite perante o Juizado Especial Criminal, não se restringindo, portanto, às infrações de menor potencial ofensivo.",
@@ -185,7 +185,7 @@ const QUESTOES_PCAL_LOTE35 = [
   },
   {
     id: "PP-068", disciplina: "Processo Penal", assunto: "Institutos despenalizadores", subassunto: "Suspensão condicional do processo",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei 9.099/1995, art. 89)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 75, probReaparecer: 0.8,
     enunciado: "A suspensão condicional do processo aplica-se exclusivamente às infrações de menor potencial ofensivo, submetidas à competência do Juizado Especial Criminal.",
@@ -204,7 +204,7 @@ const QUESTOES_PCAL_LOTE35 = [
   },
   {
     id: "PP-069", disciplina: "Processo Penal", assunto: "Prisão em flagrante", subassunto: "Modalidades de flagrante (art. 302, CPP)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (CPP, art. 302)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 80, probReaparecer: 0.82,
     enunciado: "Após subtrair, mediante grave ameaça, um veículo da vítima, o agente empreendeu fuga. Cerca de três horas depois, sem que houvesse qualquer perseguição, foi abordado por policiais em via pública, na posse das chaves e dos documentos do automóvel subtraído, circunstância que fez presumir ser ele o autor do delito. Nessa situação, configura-se hipótese de flagrante impróprio (ou quase-flagrante), por ter sido o agente perseguido, logo após a prática do crime, e encontrado em situação que fazia presumir sua autoria.",
@@ -223,7 +223,7 @@ const QUESTOES_PCAL_LOTE35 = [
   },
   {
     id: "PP-070", disciplina: "Processo Penal", assunto: "Prisão em flagrante", subassunto: "Modalidades de flagrante (art. 302, CPP)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (CPP, art. 302)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 80, probReaparecer: 0.8,
     enunciado: "Após subtrair, mediante grave ameaça, um veículo da vítima, o agente empreendeu fuga. Cerca de três horas depois, sem que houvesse qualquer perseguição, foi abordado por policiais em via pública, na posse das chaves e dos documentos do automóvel subtraído. Nessa situação, configura-se hipótese de flagrante presumido, e não impróprio, uma vez que o agente foi encontrado, logo depois do crime, na posse de objetos que fizeram presumir sua autoria, sem que tenha havido perseguição.",

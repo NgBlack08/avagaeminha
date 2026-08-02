@@ -15,7 +15,7 @@ const QUESTOES_PCAL_LOTE36 = [
 
   {
     id: "LE-131", disciplina: "Legislação Especial", assunto: "Crimes falimentares", subassunto: "Ação penal",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei 11.101/2005, art. 184)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 75, probReaparecer: 0.78,
     enunciado: "Os crimes previstos na Lei nº 11.101/2005 (Lei de Falências e Recuperação Judicial) são de ação penal pública incondicionada, promovida pelo Ministério Público independentemente de representação dos credores prejudicados.",
@@ -34,7 +34,7 @@ const QUESTOES_PCAL_LOTE36 = [
   },
   {
     id: "LE-132", disciplina: "Legislação Especial", assunto: "Crimes falimentares", subassunto: "Ação penal",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei 11.101/2005, art. 184)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 75, probReaparecer: 0.76,
     enunciado: "A persecução penal dos crimes falimentares previstos na Lei nº 11.101/2005 depende de representação dos credores prejudicados, tratando-se de ação penal pública condicionada.",
@@ -53,7 +53,7 @@ const QUESTOES_PCAL_LOTE36 = [
   },
   {
     id: "LE-133", disciplina: "Legislação Especial", assunto: "Lavagem de dinheiro", subassunto: "Efeitos da condenação",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei 9.613/1998, art. 7º)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 80, probReaparecer: 0.76,
     enunciado: "Constituem efeitos da condenação pelo crime de lavagem de dinheiro, além dos previstos no Código Penal, a interdição do exercício de cargo ou função pública de qualquer natureza pelo mesmo período da pena privativa de liberdade aplicada; esse efeito, todavia, não é automático, dependendo de motivação expressa na sentença quanto à gravidade concreta do fato ou às circunstâncias do crime que o justifiquem.",
@@ -72,7 +72,7 @@ const QUESTOES_PCAL_LOTE36 = [
   },
   {
     id: "LE-134", disciplina: "Legislação Especial", assunto: "Lavagem de dinheiro", subassunto: "Efeitos da condenação",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei 9.613/1998, art. 7º)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 80, probReaparecer: 0.74,
     enunciado: "Constitui efeito automático da condenação pelo crime de lavagem de dinheiro a interdição do exercício de cargo ou função pública pelo mesmo período da pena privativa de liberdade aplicada, independentemente de fundamentação específica na sentença sobre a gravidade concreta do fato.",
@@ -91,7 +91,7 @@ const QUESTOES_PCAL_LOTE36 = [
   },
   {
     id: "LE-135", disciplina: "Legislação Especial", assunto: "Crimes hediondos", subassunto: "Insuscetibilidade de benefícios",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei 8.072/1990, com redação da Lei 11.464/2007)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 80, probReaparecer: 0.8,
     enunciado: "Os crimes hediondos, a prática da tortura, o tráfico ilícito de entorpecentes e drogas afins e o terrorismo são insuscetíveis de anistia, graça, indulto, fiança e liberdade provisória, nos termos da Lei nº 8.072/1990 em sua redação atualmente vigente.",
@@ -110,7 +110,7 @@ const QUESTOES_PCAL_LOTE36 = [
   },
   {
     id: "LE-136", disciplina: "Legislação Especial", assunto: "Crimes hediondos", subassunto: "Insuscetibilidade de benefícios",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei 8.072/1990, com redação da Lei 11.464/2007)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 80, probReaparecer: 0.78,
     enunciado: "Os crimes hediondos, a prática da tortura, o tráfico ilícito de entorpecentes e drogas afins e o terrorismo são insuscetíveis de anistia, graça, indulto e fiança; a vedação à liberdade provisória, contudo, foi excluída da Lei nº 8.072/1990 pela Lei nº 11.464/2007, sendo hoje possível sua concessão quando ausentes os requisitos da prisão preventiva.",
@@ -129,7 +129,7 @@ const QUESTOES_PCAL_LOTE36 = [
   },
   {
     id: "LE-137", disciplina: "Legislação Especial", assunto: "Tortura", subassunto: "Tortura-castigo (art. 1º, II, Lei 9.455/1997)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei 9.455/1997, art. 1º, II)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 75, probReaparecer: 0.78,
     enunciado: "A modalidade de tortura-castigo, prevista no art. 1º, II, da Lei nº 9.455/1997, consiste em submeter alguém, sob sua guarda, poder ou autoridade, com emprego de violência ou grave ameaça, a intenso sofrimento físico ou mental, como forma de aplicar castigo pessoal ou medida de caráter preventivo, configurando crime próprio, que somente pode ser cometido por quem detenha a vítima sob sua guarda, poder ou autoridade.",
@@ -148,7 +148,7 @@ const QUESTOES_PCAL_LOTE36 = [
   },
   {
     id: "LE-138", disciplina: "Legislação Especial", assunto: "Tortura", subassunto: "Tortura-castigo (art. 1º, II, Lei 9.455/1997)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei 9.455/1997, art. 1º, II)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 75, probReaparecer: 0.74,
     enunciado: "A modalidade de tortura-castigo, prevista no art. 1º, II, da Lei nº 9.455/1997, configura crime comum, que pode ser praticado por qualquer pessoa, independentemente de o agente deter a vítima sob sua guarda, poder ou autoridade.",
@@ -167,7 +167,7 @@ const QUESTOES_PCAL_LOTE36 = [
   },
   {
     id: "LE-139", disciplina: "Legislação Especial", assunto: "Crimes ambientais", subassunto: "Responsabilização penal da pessoa jurídica",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (STF, RE 548.181)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 80, probReaparecer: 0.82,
     enunciado: "A responsabilização penal da pessoa jurídica por crime ambiental não depende da simultânea responsabilização da pessoa física que atuou em seu nome, tendo o Supremo Tribunal Federal superado a chamada teoria da dupla imputação necessária.",
@@ -186,7 +186,7 @@ const QUESTOES_PCAL_LOTE36 = [
   },
   {
     id: "LE-140", disciplina: "Legislação Especial", assunto: "Crimes ambientais", subassunto: "Responsabilização penal da pessoa jurídica",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (STF, RE 548.181)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 80, probReaparecer: 0.8,
     enunciado: "A responsabilização penal da pessoa jurídica por crime ambiental está condicionada à imputação simultânea da pessoa física responsável pela decisão, de modo que a persecução penal isolada do ente moral é inadmissível.",

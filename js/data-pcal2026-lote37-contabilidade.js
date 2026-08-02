@@ -15,7 +15,7 @@ const QUESTOES_PCAL_LOTE37 = [
 
   {
     id: "CT-015", disciplina: "Contabilidade e Análise Financeira", assunto: "Demonstrações contábeis", subassunto: "Balanço patrimonial",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (balanço patrimonial)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 65, probReaparecer: 0.78,
     enunciado: "O balanço patrimonial evidencia a posição patrimonial e financeira da entidade em determinada data, sendo composto pelos grupos ativo, passivo e patrimônio líquido.",
@@ -34,7 +34,7 @@ const QUESTOES_PCAL_LOTE37 = [
   },
   {
     id: "CT-016", disciplina: "Contabilidade e Análise Financeira", assunto: "Demonstrações contábeis", subassunto: "Balanço patrimonial",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (balanço patrimonial)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 65, probReaparecer: 0.74,
     enunciado: "O balanço patrimonial evidencia o resultado (lucro ou prejuízo) apurado pela entidade ao longo de um período, e não sua posição patrimonial e financeira em uma data específica.",
@@ -53,7 +53,7 @@ const QUESTOES_PCAL_LOTE37 = [
   },
   {
     id: "CT-017", disciplina: "Contabilidade e Análise Financeira", assunto: "Análise de fraudes financeiras", subassunto: "Movimentação financeira incompatível",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (indícios de fraude/lavagem de dinheiro)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 75, probReaparecer: 0.8,
     enunciado: "A incompatibilidade entre os fluxos financeiros movimentados por uma pessoa e sua capacidade econômica declarada constitui apenas indício, insuficiente, por si só, para comprovar a ocorrência de fraude contábil ou de crime contra a ordem tributária, exigindo-se a análise conjunta de outros elementos probatórios.",
@@ -72,7 +72,7 @@ const QUESTOES_PCAL_LOTE37 = [
   },
   {
     id: "CT-018", disciplina: "Contabilidade e Análise Financeira", assunto: "Análise de fraudes financeiras", subassunto: "Movimentação financeira incompatível",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (indícios de fraude/lavagem de dinheiro)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 75, probReaparecer: 0.78,
     enunciado: "A incompatibilidade entre os fluxos financeiros movimentados por uma pessoa e sua capacidade econômica declarada é suficiente, por si só, para comprovar a ocorrência de fraude contábil ou de crime contra a ordem tributária, dispensando-se a análise de outros elementos probatórios.",
@@ -91,7 +91,7 @@ const QUESTOES_PCAL_LOTE37 = [
   },
   {
     id: "CT-019", disciplina: "Contabilidade e Análise Financeira", assunto: "Gestão de riscos financeiros", subassunto: "Identificação de riscos",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (gestão de riscos financeiros)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 65, probReaparecer: 0.76,
     enunciado: "A identificação de riscos financeiros constitui etapa essencial da gestão de riscos, permitindo à entidade reconhecer eventos internos ou externos que possam afetar negativamente o alcance de seus objetivos financeiros.",
@@ -110,7 +110,7 @@ const QUESTOES_PCAL_LOTE37 = [
   },
   {
     id: "CT-020", disciplina: "Contabilidade e Análise Financeira", assunto: "Gestão de riscos financeiros", subassunto: "Identificação de riscos",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (gestão de riscos financeiros)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 65, probReaparecer: 0.72,
     enunciado: "A gestão de riscos financeiros dispensa a etapa de identificação de riscos, bastando à entidade manter monitoramento contínuo dos indicadores financeiros já conhecidos.",
@@ -129,7 +129,7 @@ const QUESTOES_PCAL_LOTE37 = [
   },
   {
     id: "CT-021", disciplina: "Contabilidade e Análise Financeira", assunto: "Demonstrações contábeis", subassunto: "Demonstração do Resultado do Exercício (DRE)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (DRE)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 65, probReaparecer: 0.76,
     enunciado: "A Demonstração do Resultado do Exercício (DRE) evidencia as receitas, os custos, as despesas e o resultado (lucro ou prejuízo) apurados pela entidade ao longo de um período, diferindo do balanço patrimonial, que retrata a posição patrimonial em uma data específica.",
@@ -148,7 +148,7 @@ const QUESTOES_PCAL_LOTE37 = [
   },
   {
     id: "CT-022", disciplina: "Contabilidade e Análise Financeira", assunto: "Demonstrações contábeis", subassunto: "Demonstração do Resultado do Exercício (DRE)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (DRE)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 65, probReaparecer: 0.72,
     enunciado: "A Demonstração do Resultado do Exercício (DRE), assim como o balanço patrimonial, é elaborada para retratar a posição patrimonial da entidade em uma data específica, e não o resultado apurado ao longo de um período.",
@@ -167,7 +167,7 @@ const QUESTOES_PCAL_LOTE37 = [
   },
   {
     id: "CT-023", disciplina: "Contabilidade e Análise Financeira", assunto: "Análise de demonstrações contábeis", subassunto: "Análise vertical e horizontal",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (análise de balanços)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 65, probReaparecer: 0.76,
     enunciado: "A análise vertical evidencia a participação percentual de cada conta em relação a um valor-base (ex.: o ativo total), ao passo que a análise horizontal evidencia a evolução de cada conta ao longo de diferentes períodos, permitindo identificar tendências de crescimento ou de retração.",
@@ -186,7 +186,7 @@ const QUESTOES_PCAL_LOTE37 = [
   },
   {
     id: "CT-024", disciplina: "Contabilidade e Análise Financeira", assunto: "Análise de demonstrações contábeis", subassunto: "Análise vertical e horizontal",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (análise de balanços)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 65, probReaparecer: 0.74,
     enunciado: "A análise horizontal evidencia a participação percentual de cada conta em relação a um valor-base dentro de um mesmo período, ao passo que a análise vertical evidencia a evolução de cada conta ao longo de diferentes períodos.",
@@ -205,7 +205,7 @@ const QUESTOES_PCAL_LOTE37 = [
   },
   {
     id: "CT-025", disciplina: "Contabilidade e Análise Financeira", assunto: "Índices financeiros", subassunto: "Liquidez corrente",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (índices de liquidez)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 65, probReaparecer: 0.78,
     enunciado: "O índice de liquidez corrente é calculado pela divisão do ativo circulante pelo passivo circulante, sendo que um resultado superior a 1 indica que a entidade possui, em tese, recursos de curto prazo suficientes para honrar suas obrigações de curto prazo.",
@@ -224,7 +224,7 @@ const QUESTOES_PCAL_LOTE37 = [
   },
   {
     id: "CT-026", disciplina: "Contabilidade e Análise Financeira", assunto: "Índices financeiros", subassunto: "Liquidez corrente",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (índices de liquidez)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 65, probReaparecer: 0.74,
     enunciado: "O índice de liquidez corrente é calculado pela divisão do passivo circulante pelo ativo circulante, sendo que um resultado superior a 1 indica boa capacidade de pagamento das obrigações de curto prazo.",
@@ -243,7 +243,7 @@ const QUESTOES_PCAL_LOTE37 = [
   },
   {
     id: "CT-027", disciplina: "Contabilidade e Análise Financeira", assunto: "Princípios contábeis", subassunto: "Regime de competência",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (regime de competência x regime de caixa)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 65, probReaparecer: 0.78,
     enunciado: "A contabilidade societária brasileira adota, como regra geral, o regime de competência, segundo o qual receitas e despesas são reconhecidas no período em que ocorrem, independentemente do efetivo recebimento ou pagamento, diferentemente do regime de caixa, que reconhece receitas e despesas apenas quando há efetiva movimentação financeira.",
@@ -262,7 +262,7 @@ const QUESTOES_PCAL_LOTE37 = [
   },
   {
     id: "CT-028", disciplina: "Contabilidade e Análise Financeira", assunto: "Princípios contábeis", subassunto: "Regime de competência",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (regime de competência x regime de caixa)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 65, probReaparecer: 0.74,
     enunciado: "A contabilidade societária brasileira adota, como regra geral, o regime de caixa, segundo o qual receitas e despesas somente são reconhecidas quando há efetivo recebimento ou pagamento em dinheiro, e não o regime de competência.",

@@ -18,7 +18,7 @@ const QUESTOES_PCAL_LOTE39 = [
 
   {
     id: "ET-015", disciplina: "Ética no Serviço Público", assunto: "Comissão de Ética", subassunto: "Divulgação de decisões (Lei 6.754/2006, art. 11)",
-    concurso: "PCAL", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026,
+    concurso: "PCAL", cargo: ["Escrivão","Agente","Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei Estadual nº 6.754/2006, art. 11)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 75, probReaparecer: 0.78,
     enunciado: "Nos termos da Lei Estadual nº 6.754/2006 (Código de Ética Funcional do Servidor Público do Estado de Alagoas), as decisões da Comissão de Ética relativas à apuração de fatos submetidos à sua apreciação serão resumidas em ementa e divulgadas no respectivo órgão, com a omissão dos nomes dos interessados.",
@@ -37,7 +37,7 @@ const QUESTOES_PCAL_LOTE39 = [
   },
   {
     id: "ET-016", disciplina: "Ética no Serviço Público", assunto: "Comissão de Ética", subassunto: "Divulgação de decisões (Lei 6.754/2006, art. 11)",
-    concurso: "PCAL", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026,
+    concurso: "PCAL", cargo: ["Escrivão","Agente","Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei Estadual nº 6.754/2006, art. 11)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 75, probReaparecer: 0.78,
     enunciado: "Nos termos da Lei Estadual nº 6.754/2006, as decisões da Comissão de Ética relativas à apuração de fatos submetidos à sua apreciação deverão ser resumidas em ementa e divulgadas no respectivo órgão, garantindo-se a identificação nominal dos interessados, em observância ao princípio da transparência na prestação dos serviços públicos estaduais.",
@@ -56,7 +56,7 @@ const QUESTOES_PCAL_LOTE39 = [
   },
   {
     id: "ET-017", disciplina: "Ética no Serviço Público", assunto: "Comissão de Ética", subassunto: "Vedação ao non liquet (Lei 6.754/2006, art. 12)",
-    concurso: "PCAL", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026,
+    concurso: "PCAL", cargo: ["Escrivão","Agente","Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei Estadual nº 6.754/2006, art. 12)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 75, probReaparecer: 0.76,
     enunciado: "A Comissão de Ética, nos termos da Lei Estadual nº 6.754/2006, não pode eximir-se de fundamentar o julgamento da falta ética do servidor público alegando ausência de previsão expressa no Código, cabendo-lhe recorrer à analogia, aos costumes e aos princípios éticos e morais conhecidos em outras profissões.",
@@ -75,7 +75,7 @@ const QUESTOES_PCAL_LOTE39 = [
   },
   {
     id: "ET-018", disciplina: "Ética no Serviço Público", assunto: "Comissão de Ética", subassunto: "Registros de conduta ética (Lei 6.754/2006, art. 7º)",
-    concurso: "PCAL", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026,
+    concurso: "PCAL", cargo: ["Escrivão","Agente","Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei Estadual nº 6.754/2006, art. 7º)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 65, probReaparecer: 0.76,
     enunciado: "Incumbe à Comissão de Ética, nos termos da Lei Estadual nº 6.754/2006, fornecer aos organismos encarregados da execução do quadro de carreira os registros sobre a conduta ética dos servidores públicos, para o efeito de instruir e fundamentar promoções e demais procedimentos próprios da carreira do servidor.",
@@ -94,7 +94,7 @@ const QUESTOES_PCAL_LOTE39 = [
   },
   {
     id: "ET-019", disciplina: "Ética no Serviço Público", assunto: "Comissão de Ética", subassunto: "Processo de apuração (Lei 6.754/2006, art. 8º)",
-    concurso: "PCAL", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026,
+    concurso: "PCAL", cargo: ["Escrivão","Agente","Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei Estadual nº 6.754/2006, art. 8º, §1º)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 75, probReaparecer: 0.8,
     enunciado: "Instaurado o processo de apuração de prática de ato em desrespeito ao Código de Ética Funcional do Servidor Público do Estado de Alagoas (Lei Estadual nº 6.754/2006), o servidor público investigado será oficiado pela Comissão de Ética para manifestar-se no prazo de três dias.",
@@ -113,7 +113,7 @@ const QUESTOES_PCAL_LOTE39 = [
   },
   {
     id: "ET-020", disciplina: "Ética no Serviço Público", assunto: "Comissão de Ética", subassunto: "Processo de apuração (Lei 6.754/2006, art. 8º)",
-    concurso: "PCAL", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026,
+    concurso: "PCAL", cargo: ["Escrivão","Agente","Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei Estadual nº 6.754/2006, art. 8º, §1º)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 75, probReaparecer: 0.8,
     enunciado: "Nos termos do art. 8º, §1º, da Lei Estadual nº 6.754/2006, instaurado o processo de apuração de prática de ato em desrespeito ao Código de Ética Funcional do Servidor Público do Estado de Alagoas, o servidor público investigado será oficiado para manifestar-se no prazo de cinco dias.",
@@ -132,7 +132,7 @@ const QUESTOES_PCAL_LOTE39 = [
   },
   {
     id: "ET-021", disciplina: "Ética no Serviço Público", assunto: "Comissão de Ética", subassunto: "Instauração do processo (Lei 6.754/2006, art. 8º)",
-    concurso: "PCAL", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026,
+    concurso: "PCAL", cargo: ["Escrivão","Agente","Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei Estadual nº 6.754/2006, art. 8º, caput)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 75, probReaparecer: 0.78,
     enunciado: "O processo de apuração de prática de ato em desrespeito ao Código de Ética Funcional do Servidor Público do Estado de Alagoas pode ser instaurado pela própria Comissão de Ética, de ofício, ou em razão de denúncia fundamentada formulada por autoridade, servidor público, qualquer cidadão que se identifique, ou entidades associativas regularmente constituídas.",
@@ -151,7 +151,7 @@ const QUESTOES_PCAL_LOTE39 = [
   },
   {
     id: "ET-022", disciplina: "Ética no Serviço Público", assunto: "Comissão de Ética", subassunto: "Registros de conduta ética (Lei 6.754/2006, art. 7º)",
-    concurso: "PCAL", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026,
+    concurso: "PCAL", cargo: ["Escrivão","Agente","Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei Estadual nº 6.754/2006, art. 7º)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 65, probReaparecer: 0.74,
     enunciado: "A atuação da Comissão de Ética, nos termos da Lei Estadual nº 6.754/2006, restringe-se à aplicação de penalidades, não lhe competindo fornecer aos organismos de gestão de carreira quaisquer registros sobre a conduta ética dos servidores.",
@@ -170,7 +170,7 @@ const QUESTOES_PCAL_LOTE39 = [
   },
   {
     id: "ET-023", disciplina: "Ética no Serviço Público", assunto: "Comissão de Ética", subassunto: "Vedação ao non liquet (Lei 6.754/2006, art. 12)",
-    concurso: "PCAL", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026,
+    concurso: "PCAL", cargo: ["Escrivão","Agente","Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei Estadual nº 6.754/2006, art. 12)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 75, probReaparecer: 0.74,
     enunciado: "A Comissão de Ética pode eximir-se de julgar a falta ética do servidor público quando não houver previsão expressa no Código, uma vez que a Lei Estadual nº 6.754/2006 não autoriza a aplicação de analogia, costumes ou princípios éticos de outras profissões.",

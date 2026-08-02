@@ -24,7 +24,7 @@ const QUESTOES_PCAL_LOTE64 = [
   /* ===== "TUDO É ARQUIVO", INODES E LINKS ===== */
   {
     id: "TI-107", disciplina: "TI e Segurança Cibernética", assunto: "Sistemas operacionais", subassunto: "Linux — sistema de arquivos e inodes",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de literalidade técnica)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 60, probReaparecer: 0.84,
     enunciado: "No Linux, um diretório é implementado como um arquivo de tipo especial cujo conteúdo é uma tabela que associa nomes de entradas aos respectivos números de inode, razão pela qual o nome de um arquivo não é armazenado no próprio inode.",
@@ -43,7 +43,7 @@ const QUESTOES_PCAL_LOTE64 = [
   },
   {
     id: "TI-108", disciplina: "TI e Segurança Cibernética", assunto: "Sistemas operacionais", subassunto: "Linux — links simbólicos e físicos",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de troca de conceitos)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 75, probReaparecer: 0.8,
     enunciado: "No Linux, o link físico (hard link) pode ser criado entre sistemas de arquivos distintos e apontar para diretórios, ao passo que o link simbólico fica restrito à partição em que foi criado e só admite arquivos comuns como destino.",
@@ -62,7 +62,7 @@ const QUESTOES_PCAL_LOTE64 = [
   },
   {
     id: "TI-109", disciplina: "TI e Segurança Cibernética", assunto: "Sistemas operacionais", subassunto: "Linux — remoção de arquivos",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de termo absoluto)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 75, probReaparecer: 0.74,
     enunciado: "No Linux, a execução do comando rm sobre um arquivo libera imediatamente os blocos de dados ocupados por ele, ainda que algum processo mantenha o arquivo aberto no momento da remoção.",
@@ -81,7 +81,7 @@ const QUESTOES_PCAL_LOTE64 = [
   },
   {
     id: "TI-110", disciplina: "TI e Segurança Cibernética", assunto: "Sistemas operacionais", subassunto: "Linux — hierarquia de diretórios (FHS)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de literalidade técnica)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 60, probReaparecer: 0.82,
     enunciado: "Segundo o padrão FHS adotado pelas distribuições Linux, o diretório /proc não corresponde a uma área em disco, mas a um sistema de arquivos virtual gerado em memória pelo kernel, que expõe informações sobre processos e sobre o próprio sistema.",
@@ -100,7 +100,7 @@ const QUESTOES_PCAL_LOTE64 = [
   },
   {
     id: "TI-111", disciplina: "TI e Segurança Cibernética", assunto: "Sistemas operacionais", subassunto: "Linux — hierarquia de diretórios (FHS)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de troca de conceitos)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 70, probReaparecer: 0.76,
     enunciado: "No padrão FHS, o diretório /var destina-se aos arquivos de configuração do sistema e dos serviços instalados, enquanto o /etc concentra os dados de conteúdo variável, tais como registros de log, filas de impressão e caches de aplicações.",
@@ -121,7 +121,7 @@ const QUESTOES_PCAL_LOTE64 = [
   /* ===== PERMISSÕES E BITS ESPECIAIS ===== */
   {
     id: "TI-112", disciplina: "TI e Segurança Cibernética", assunto: "Sistemas operacionais", subassunto: "Linux — permissões e bits especiais",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de literalidade técnica)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 80, probReaparecer: 0.83,
     enunciado: "No Linux, o bit SUID aplicado a um arquivo executável faz que o programa seja executado com os privilégios do proprietário do arquivo, e não com os do usuário que o invocou, motivo pelo qual binários com esse bit constituem vetor clássico de escalonamento de privilégios.",
@@ -140,7 +140,7 @@ const QUESTOES_PCAL_LOTE64 = [
   },
   {
     id: "TI-113", disciplina: "TI e Segurança Cibernética", assunto: "Sistemas operacionais", subassunto: "Linux — permissões e bits especiais",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de troca de conceitos)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 80, probReaparecer: 0.75,
     enunciado: "O sticky bit aplicado ao diretório /tmp impede que qualquer usuário crie arquivos nesse diretório sem autorização do administrador, restringindo a escrita ao usuário root.",
@@ -159,7 +159,7 @@ const QUESTOES_PCAL_LOTE64 = [
   },
   {
     id: "TI-114", disciplina: "TI e Segurança Cibernética", assunto: "Sistemas operacionais", subassunto: "Linux — permissões e bits especiais",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de troca numérica)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 85, probReaparecer: 0.79,
     enunciado: "A execução do comando chmod 750 relatorio.sh concede ao proprietário leitura, escrita e execução; ao grupo, leitura e execução; e aos demais usuários, apenas leitura.",
@@ -178,7 +178,7 @@ const QUESTOES_PCAL_LOTE64 = [
   },
   {
     id: "TI-115", disciplina: "TI e Segurança Cibernética", assunto: "Sistemas operacionais", subassunto: "Linux — umask",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de literalidade técnica)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 85, probReaparecer: 0.71,
     enunciado: "Com a umask definida em 022, um arquivo comum criado por um usuário receberá o modo 644, ao passo que um diretório criado pelo mesmo usuário receberá o modo 755, em razão de as permissões-base padrão serem distintas para arquivos e para diretórios.",
@@ -197,7 +197,7 @@ const QUESTOES_PCAL_LOTE64 = [
   },
   {
     id: "TI-116", disciplina: "TI e Segurança Cibernética", assunto: "Sistemas operacionais", subassunto: "Linux — permissões de diretório",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de exigência inexistente)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 80, probReaparecer: 0.7,
     enunciado: "Para que um usuário consiga listar os nomes dos arquivos contidos em um diretório com o comando ls, é indispensável que ele detenha a permissão de execução (x) sobre esse diretório, uma vez que a permissão de leitura (r) isoladamente não é suficiente para essa operação.",
@@ -218,7 +218,7 @@ const QUESTOES_PCAL_LOTE64 = [
   /* ===== PROCESSOS E SINAIS ===== */
   {
     id: "TI-117", disciplina: "TI e Segurança Cibernética", assunto: "Sistemas operacionais", subassunto: "Linux — gerenciamento de processos",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de literalidade técnica)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 60, probReaparecer: 0.86,
     enunciado: "No Linux, o comando ps apresenta um retrato estático dos processos no instante da execução, ao passo que utilitários como top e htop atualizam periodicamente a exibição, permitindo acompanhar consumo de CPU e memória em tempo real.",
@@ -237,7 +237,7 @@ const QUESTOES_PCAL_LOTE64 = [
   },
   {
     id: "TI-118", disciplina: "TI e Segurança Cibernética", assunto: "Sistemas operacionais", subassunto: "Linux — sinais de processo",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de troca de conceitos)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 80, probReaparecer: 0.78,
     enunciado: "O comando kill, executado sem a indicação de um sinal específico, envia ao processo o sinal SIGKILL (9), que pode ser capturado ou ignorado pela aplicação, permitindo a liberação ordenada dos recursos alocados antes do encerramento.",
@@ -256,7 +256,7 @@ const QUESTOES_PCAL_LOTE64 = [
   },
   {
     id: "TI-119", disciplina: "TI e Segurança Cibernética", assunto: "Sistemas operacionais", subassunto: "Linux — estados de processo",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de troca de conceitos)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 85, probReaparecer: 0.68,
     enunciado: "Um processo zumbi no Linux é aquele que continua consumindo tempo de processador após a morte do processo pai, devendo ser encerrado com kill -9 para que os recursos de CPU e de memória por ele ocupados sejam devolvidos ao sistema.",
@@ -275,7 +275,7 @@ const QUESTOES_PCAL_LOTE64 = [
   },
   {
     id: "TI-120", disciplina: "TI e Segurança Cibernética", assunto: "Sistemas operacionais", subassunto: "Linux — prioridade de processos",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de literalidade técnica)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 75, probReaparecer: 0.66,
     enunciado: "No Linux, valores de nice mais baixos correspondem a maior prioridade de escalonamento, e a atribuição de valores negativos a um processo é prerrogativa do superusuário.",
@@ -294,7 +294,7 @@ const QUESTOES_PCAL_LOTE64 = [
   },
   {
     id: "TI-121", disciplina: "TI e Segurança Cibernética", assunto: "Sistemas operacionais", subassunto: "Linux — execução em segundo plano",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de termo absoluto)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 75, probReaparecer: 0.64,
     enunciado: "Ao se acrescentar o caractere & ao final de um comando no shell do Linux, o processo passa a executar em segundo plano e torna-se imune ao encerramento do terminal que o originou, dispensando o uso de utilitários como nohup ou screen.",
@@ -315,7 +315,7 @@ const QUESTOES_PCAL_LOTE64 = [
   /* ===== USUÁRIOS, SENHAS E PRIVILÉGIOS ===== */
   {
     id: "TI-122", disciplina: "TI e Segurança Cibernética", assunto: "Sistemas operacionais", subassunto: "Linux — contas e senhas",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de literalidade técnica)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 75, probReaparecer: 0.81,
     enunciado: "Nos sistemas Linux atuais, o arquivo /etc/passwd é legível por todos os usuários e não contém os hashes das senhas, os quais ficam armazenados em /etc/shadow, arquivo com leitura restrita ao superusuário.",
@@ -334,7 +334,7 @@ const QUESTOES_PCAL_LOTE64 = [
   },
   {
     id: "TI-123", disciplina: "TI e Segurança Cibernética", assunto: "Sistemas operacionais", subassunto: "Linux — elevação de privilégios",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de troca de conceitos)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 70, probReaparecer: 0.77,
     enunciado: "No Linux, o comando sudo exige que o usuário informe a senha do root para executar um comando com privilégios administrativos, ao passo que o comando su solicita a senha do próprio usuário que o invoca.",
@@ -355,7 +355,7 @@ const QUESTOES_PCAL_LOTE64 = [
   /* ===== SYSTEMD E SERVIÇOS ===== */
   {
     id: "TI-124", disciplina: "TI e Segurança Cibernética", assunto: "Sistemas operacionais", subassunto: "Linux — systemd e serviços",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de troca de conceitos)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 80, probReaparecer: 0.72,
     enunciado: "Nas distribuições Linux que adotam o systemd, o comando systemctl start nginx garante que o serviço passe a ser iniciado automaticamente a cada inicialização do sistema, dispensando o uso do subcomando enable.",
@@ -374,7 +374,7 @@ const QUESTOES_PCAL_LOTE64 = [
   },
   {
     id: "TI-125", disciplina: "TI e Segurança Cibernética", assunto: "Sistemas operacionais", subassunto: "Linux — logs do sistema",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de literalidade técnica)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 70, probReaparecer: 0.69,
     enunciado: "Em sistemas com systemd, o journald armazena os registros em formato binário indexado, de modo que a consulta a esses registros é feita pelo comando journalctl, e não pela simples leitura de arquivos de texto com cat ou less.",
@@ -393,7 +393,7 @@ const QUESTOES_PCAL_LOTE64 = [
   },
   {
     id: "TI-126", disciplina: "TI e Segurança Cibernética", assunto: "Sistemas operacionais", subassunto: "Linux — agendamento de tarefas",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de troca numérica)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 85, probReaparecer: 0.67,
     enunciado: "Na sintaxe do crontab, os cinco campos que antecedem o comando representam, nesta ordem, minuto, hora, dia do mês, mês e dia da semana; assim, a entrada 30 2 * * 0 agenda a execução às 2h30 de todo domingo.",
@@ -414,7 +414,7 @@ const QUESTOES_PCAL_LOTE64 = [
   /* ===== PACOTES E ATUALIZAÇÕES ===== */
   {
     id: "TI-127", disciplina: "TI e Segurança Cibernética", assunto: "Sistemas operacionais", subassunto: "Linux — gerenciamento de pacotes",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de literalidade técnica)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 60, probReaparecer: 0.85,
     enunciado: "O apt é o gerenciador de pacotes de alto nível típico das distribuições derivadas do Debian, enquanto o yum e seu sucessor dnf cumprem papel equivalente em distribuições da família Red Hat, todos capazes de obter e aplicar correções de segurança a partir de repositórios oficiais.",
@@ -433,7 +433,7 @@ const QUESTOES_PCAL_LOTE64 = [
   },
   {
     id: "TI-128", disciplina: "TI e Segurança Cibernética", assunto: "Sistemas operacionais", subassunto: "Linux — gerenciamento de pacotes",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de troca de conceitos)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 80, probReaparecer: 0.7,
     enunciado: "A instalação de um pacote por meio do comando dpkg -i, em sistemas Debian, resolve automaticamente as dependências do pacote, buscando nos repositórios configurados os componentes adicionais necessários ao seu funcionamento.",
@@ -452,7 +452,7 @@ const QUESTOES_PCAL_LOTE64 = [
   },
   {
     id: "TI-129", disciplina: "TI e Segurança Cibernética", assunto: "Sistemas operacionais", subassunto: "Linux — atualização do kernel",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de generalização)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 80, probReaparecer: 0.83,
     enunciado: "No Linux, a aplicação de atualizações de segurança nunca demanda a reinicialização do sistema, já que o modelo modular do kernel permite substituir em tempo de execução qualquer componente atualizado.",
@@ -471,7 +471,7 @@ const QUESTOES_PCAL_LOTE64 = [
   },
   {
     id: "TI-130", disciplina: "TI e Segurança Cibernética", assunto: "Sistemas operacionais", subassunto: "Linux — atualização do kernel",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de restrição indevida)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 75, probReaparecer: 0.65,
     enunciado: "Somente as correções aplicadas ao kernel exigem, em regra, a reinicialização do sistema Linux; atualizações de bibliotecas compartilhadas, como a libssl, podem ser aplicadas sem reboot, embora exijam o reinício dos serviços que as mantinham carregadas em memória.",
@@ -492,7 +492,7 @@ const QUESTOES_PCAL_LOTE64 = [
   /* ===== REDE ===== */
   {
     id: "TI-131", disciplina: "TI e Segurança Cibernética", assunto: "Sistemas operacionais", subassunto: "Linux — comandos de rede",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de troca de sujeito)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 60, probReaparecer: 0.88,
     enunciado: "Em distribuições Linux, o comando ipconfig exibe as configurações das interfaces de rede, ao passo que, no Windows, essa mesma função cabe ao comando ifconfig.",
@@ -511,7 +511,7 @@ const QUESTOES_PCAL_LOTE64 = [
   },
   {
     id: "TI-132", disciplina: "TI e Segurança Cibernética", assunto: "Sistemas operacionais", subassunto: "Linux — comandos de rede",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de literalidade técnica)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 70, probReaparecer: 0.71,
     enunciado: "Nas distribuições Linux atuais, os utilitários do pacote net-tools, entre eles o ifconfig e o netstat, encontram-se em estado de obsolescência, tendo sido sucedidos, respectivamente, pelos comandos ip e ss, do pacote iproute2.",
@@ -530,7 +530,7 @@ const QUESTOES_PCAL_LOTE64 = [
   },
   {
     id: "TI-133", disciplina: "TI e Segurança Cibernética", assunto: "Sistemas operacionais", subassunto: "Linux — resolução de nomes",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de troca de conceitos)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 80, probReaparecer: 0.63,
     enunciado: "No Linux, o arquivo /etc/resolv.conf contém o mapeamento estático entre nomes de máquinas e endereços IP consultado antes do DNS, enquanto o /etc/hosts registra os servidores de nomes utilizados pelo sistema.",
@@ -551,7 +551,7 @@ const QUESTOES_PCAL_LOTE64 = [
   /* ===== SELINUX E ENDURECIMENTO ===== */
   {
     id: "TI-134", disciplina: "TI e Segurança Cibernética", assunto: "Sistemas operacionais", subassunto: "Linux — controle de acesso obrigatório (MAC)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de literalidade técnica)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 85, probReaparecer: 0.79,
     enunciado: "O SELinux implementa controle de acesso obrigatório (MAC), no qual as decisões decorrem de uma política definida centralmente e não podem ser alteradas pelo proprietário do recurso, diferentemente do modelo discricionário (DAC) das permissões POSIX tradicionais.",
@@ -570,7 +570,7 @@ const QUESTOES_PCAL_LOTE64 = [
   },
   {
     id: "TI-135", disciplina: "TI e Segurança Cibernética", assunto: "Sistemas operacionais", subassunto: "Android — SELinux",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de troca de conceitos)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 80, probReaparecer: 0.85,
     enunciado: "Nas versões estáveis do Android a partir da 5.0, o SELinux permanece em modo permissivo, limitando-se a registrar em log as violações de política, sem bloquear efetivamente os acessos indevidos.",
@@ -589,7 +589,7 @@ const QUESTOES_PCAL_LOTE64 = [
   },
   {
     id: "TI-136", disciplina: "TI e Segurança Cibernética", assunto: "Sistemas operacionais", subassunto: "Linux — controle de acesso obrigatório (MAC)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de troca de conceitos)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 80, probReaparecer: 0.6,
     enunciado: "O AppArmor, adotado por padrão em distribuições como o Ubuntu, aplica suas políticas com base em rótulos de segurança atribuídos aos inodes dos arquivos, ao passo que o SELinux confina os programas por meio de perfis vinculados ao caminho do executável.",
@@ -610,7 +610,7 @@ const QUESTOES_PCAL_LOTE64 = [
   /* ===== ANDROID: ARQUITETURA E SEGURANÇA ===== */
   {
     id: "TI-137", disciplina: "TI e Segurança Cibernética", assunto: "Sistemas operacionais", subassunto: "Android — sistema de arquivos",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de troca de conceitos)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 60, probReaparecer: 0.84,
     enunciado: "O Android adota o NTFS como sistema de arquivos padrão de sua partição de dados, escolha justificada pelo suporte nativo desse sistema a permissões granulares e pela compatibilidade com mídias removíveis.",
@@ -629,7 +629,7 @@ const QUESTOES_PCAL_LOTE64 = [
   },
   {
     id: "TI-138", disciplina: "TI e Segurança Cibernética", assunto: "Sistemas operacionais", subassunto: "Android — gerenciamento de aplicativos",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de literalidade técnica)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 65, probReaparecer: 0.82,
     enunciado: "No Android, o PackageManager responde pela instalação, atualização e remoção de aplicativos, verificando a assinatura digital do pacote .apk, de modo que uma atualização só é aceita se estiver assinada com a mesma chave do aplicativo já instalado.",
@@ -648,7 +648,7 @@ const QUESTOES_PCAL_LOTE64 = [
   },
   {
     id: "TI-139", disciplina: "TI e Segurança Cibernética", assunto: "Sistemas operacionais", subassunto: "Android — isolamento de aplicativos",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de literalidade técnica)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 80, probReaparecer: 0.76,
     enunciado: "O isolamento entre aplicativos no Android apoia-se no próprio modelo de usuários do Linux: a cada aplicativo instalado é atribuído um identificador de usuário (UID) distinto, de modo que os dados privados de um aplicativo ficam inacessíveis aos demais pelas permissões do sistema de arquivos.",
@@ -667,7 +667,7 @@ const QUESTOES_PCAL_LOTE64 = [
   },
   {
     id: "TI-140", disciplina: "TI e Segurança Cibernética", assunto: "Sistemas operacionais", subassunto: "Android — permissões de aplicativos",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de termo absoluto)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 80, probReaparecer: 0.8,
     enunciado: "No Android, todas as permissões declaradas por um aplicativo são concedidas em bloco no momento da instalação, não sendo possível ao usuário revogá-las individualmente sem desinstalar o aplicativo.",
@@ -686,7 +686,7 @@ const QUESTOES_PCAL_LOTE64 = [
   },
   {
     id: "TI-141", disciplina: "TI e Segurança Cibernética", assunto: "Sistemas operacionais", subassunto: "Android — arquitetura",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de troca de conceitos)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 80, probReaparecer: 0.62,
     enunciado: "O Android Runtime (ART), que substituiu a máquina virtual Dalvik, executa os aplicativos exclusivamente por interpretação do bytecode a cada execução, abordagem que reduz o espaço ocupado em armazenamento em detrimento do desempenho.",
@@ -705,7 +705,7 @@ const QUESTOES_PCAL_LOTE64 = [
   },
   {
     id: "TI-142", disciplina: "TI e Segurança Cibernética", assunto: "Sistemas operacionais", subassunto: "Android — inicialização segura",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de literalidade técnica)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 80, probReaparecer: 0.68,
     enunciado: "O recurso de inicialização verificada (Verified Boot) do Android estabelece uma cadeia de confiança em que cada etapa do processo de inicialização verifica criptograficamente a integridade da etapa seguinte, permitindo detectar alterações não autorizadas no sistema.",
