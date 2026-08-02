@@ -21,6 +21,26 @@ const CARGOS = ["Escrivão", "Agente", "Delegado", "Perito Criminal", "Papilosco
 /* ---------------- DNA DA BANCA (Módulo 4) ----------------
    incidencia = índice estimado (%) de aparição do padrão nas
    provas C/E de carreiras policiais analisadas. */
+/* ---------------- DNA da banca ----------------
+   ATENÇÃO ao que `incidencia` é e ao que não é.
+
+   É uma ESTIMATIVA EDITORIAL da frequência com que a CEBRASPE recorre a
+   cada padrão — leitura qualitativa de provas anteriores, não contagem
+   item a item. Não foi medida, e por isso não deve ser exibida como se
+   fosse estatística apurada.
+
+   Ela também NÃO se confunde com duas outras coisas que o app calcula e
+   que são, essas sim, medidas:
+     • a composição do próprio banco (quantos itens de cada padrão existem
+       aqui, e para que lado eles caem) — ver `composicaoPadroes()`;
+     • o desempenho do candidato por padrão — ver `statsPorPegadinha()`.
+
+   A distinção importa porque a composição do banco é enviesada por
+   construção: `literalidade` responde por 43% dos itens e cai em CERTO em
+   cerca de 90% deles. Quem treinar aqui e concluir "citação fiel da lei
+   costuma ser CERTO" terá aprendido o banco, não a banca. O app precisa
+   dizer isso em vez de esconder — daí a tela expor as três grandezas
+   separadas, cada uma com sua origem. */
 const DNA_BANCA = [
   { slug: "termo-absoluto", nome: "Termos absolutos", incidencia: 82,
     desc: "Uso de 'sempre', 'nunca', 'somente', 'qualquer', 'todos'. Termos absolutos frequentemente tornam a assertiva ERRADA — mas não automaticamente: normas literais podem ser absolutas (ex.: vedação à tortura).",
@@ -1417,6 +1437,11 @@ const EDITAIS = {
        não existe neste concurso. */
     cargos: ["Escrivão", "Agente"],
     dataProva: "2026-12-06",
+    /* Item 7.2: as objetivas e a discursiva têm, juntas, 4 h 30 min. O tempo
+       que sobra para os 120 itens depende de quanto a discursiva consumir —
+       por isso a análise de ritmo trabalha com uma reserva declarada, e não
+       com os 270 minutos cheios. */
+    duracaoMin: 270,
     /* Corte oficial, item 8.11.4/8.11.5: N1 = (50 − np1) × 0,2, N2 =
        (70 − np2) × 0,3 e N3 = (120 − nT) × 0,3, desprezada a parte não
        inteira. Sem itens anulados dá 10, 21 e 36 pontos. Como cada acerto
@@ -1460,6 +1485,7 @@ const EDITAIS = {
     fonte: "Edital nº 1 - SESAU/AL, de 18 de junho de 2026, com conteúdo de Fisioterapia republicado pelo Edital nº 2, de 16 de julho de 2026 (Cebraspe)",
     cargos: ["Especialista em Saúde — Fisioterapia"],
     dataProva: "2026-11-01",
+    duracaoMin: 270,
     /* Mesma sistemática de correção da PC/AL — prova de 120 itens, 50 + 70,
        no método Cebraspe com erro anulando acerto. */
     corte: {

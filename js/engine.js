@@ -466,10 +466,23 @@ function statsPorPegadinha() {
     if (!map[q.pegadinha]) map[q.pegadinha] = { slug: q.pegadinha, acertos: 0, erros: 0 };
     for (const h of hist) (h.correta ? map[q.pegadinha].acertos++ : map[q.pegadinha].erros++);
   }
+  /* Prior = desempenho global do próprio candidato, e não 50% fixo: se ele
+     acerta 70% no geral, um padrão com duas respostas erradas é evidência
+     fraca contra esse pano de fundo, e a suavização deve refletir isso.
+     A ordenação passa a usar a taxa suavizada — a crua continua exposta
+     para leitura, mas não comanda mais o ranking. */
+  const g = statsGerais();
+  const prior = g.taxa ?? 0.5;
   return Object.values(map).map(p => {
     const dna = DNA_BANCA.find(d => d.slug === p.slug);
-    return { ...p, nome: dna ? dna.nome : p.slug, taxa: p.acertos / (p.acertos + p.erros) };
-  }).sort((a, b) => a.taxa - b.taxa);
+    const n = p.acertos + p.erros;
+    return {
+      ...p, n, nome: dna ? dna.nome : p.slug,
+      taxa: p.acertos / n,
+      taxaSuave: taxaSuavizada(p.acertos, n, prior),
+      confiavel: n >= PESO_PRIOR,
+    };
+  }).sort((a, b) => a.taxaSuave - b.taxaSuave);
 }
 
 /* ---------------- Radar de Aprovação (Módulo 12) ----------------
@@ -478,9 +491,22 @@ function statsPorPegadinha() {
 function radarAprovacao() {
   const g = statsGerais();
   const porDisc = g.porDisc.filter(d => d.acertos + d.erros > 0);
-  const dominadas = porDisc.filter(d => d.taxa >= 0.8 && (d.acertos + d.erros) >= 4);
-  const atencao = porDisc.filter(d => d.taxa >= 0.6 && d.taxa < 0.8);
-  const risco = porDisc.filter(d => d.taxa < 0.6);
+  /* Classificação por taxa SUAVIZADA e com piso de amostra em todas as
+     faixas. Antes só "dominada" exigia n mínimo: duas respostas erradas
+     bastavam para uma disciplina inteira aparecer como "maior risco",
+     que é justamente o rótulo que assusta e desvia o plano de estudo. */
+  const MIN_AMOSTRA = 4;
+  const prior = g.taxa ?? 0.5;
+  const comTaxa = porDisc.map(d => {
+    const n = d.acertos + d.erros;
+    return { ...d, n, taxaSuave: taxaSuavizada(d.acertos, n, prior), amostraSuficiente: n >= MIN_AMOSTRA };
+  });
+  const maduras = comTaxa.filter(d => d.amostraSuficiente);
+  const dominadas = maduras.filter(d => d.taxaSuave >= 0.8);
+  const atencao = maduras.filter(d => d.taxaSuave >= 0.6 && d.taxaSuave < 0.8);
+  const risco = maduras.filter(d => d.taxaSuave < 0.6);
+  /* Amostra ainda insuficiente para julgar: não é domínio nem risco. */
+  const emAferricao = comTaxa.filter(d => !d.amostraSuficiente);
   const naoIniciadas = g.porDisc.filter(d => d.acertos + d.erros === 0);
   const cobertura = g.respondidasUnicas / g.totalBanco;
   const taxa = g.taxa ?? 0;
@@ -491,9 +517,202 @@ function radarAprovacao() {
      aprovados em carreiras policiais costumam ter 70%+ de acerto bruto —
      mas o usuário pode ajustar essa meta (APP_STATE.config.metaTaxa). */
   const metaTaxa = APP_STATE.config.metaTaxa ?? 0.75;
-  const horasEstimadas = Math.max(0, Math.round((metaTaxa - taxa) * 400));
-  return { dominadas, atencao, risco, naoIniciadas, score, taxa, cobertura, calibracao: g.calibracao,
-    liquida: g.liquida, horasEstimadas, metaTaxa };
+  /* `horasEstimadas` era (meta − taxa) × 400, com 400 saído do nada. Passa a
+     derivar do que o candidato de fato leva por questão: quantas questões
+     ainda faltam do escopo, multiplicadas pelo tempo mediano medido dele.
+     Sem histórico de tempo suficiente, devolve null — melhor não exibir do
+     que exibir número inventado. */
+  const ritmo = analiseRitmo();
+  const restantes = Math.max(0, g.totalBanco - g.respondidasUnicas);
+  const horasEstimadas = ritmo ? Math.round(restantes * ritmo.segMediano / 3600) : null;
+  return { dominadas, atencao, risco, naoIniciadas, emAferricao, score, taxa, cobertura,
+    calibracao: g.calibracao, liquida: g.liquida, horasEstimadas, metaTaxa,
+    horasBaseadaEmRitmo: !!ritmo, questoesRestantes: restantes };
+}
+
+/* ---------------- Higiene estatística ----------------
+
+   Duas correções que atravessam todas as métricas abaixo.
+
+   1) SUAVIZAÇÃO. Ordenar por taxa crua faz amostra minúscula dominar
+      ranking: dois itens respondidos e nenhum acerto viram "0%", pior que
+      quarenta itens com 55%. A média bayesiana puxa o resultado para o
+      prior enquanto há pouca evidência e o solta conforme n cresce.
+      PESO_PRIOR = 5 significa, na prática, "só confio na taxa depois de
+      umas cinco respostas".
+
+   2) RECÊNCIA. A taxa acumulada trata um erro de três meses atrás como se
+      fosse de ontem, e o candidato que evoluiu não vê o painel reagir.
+      A janela móvel olha as últimas respostas, em ordem cronológica. */
+const PESO_PRIOR = 5;
+const JANELA_RECENTE = 120;   /* uma prova inteira de respostas */
+
+function taxaSuavizada(acertos, n, prior = 0.5) {
+  if (!n) return null;
+  return (acertos + PESO_PRIOR * prior) / (n + PESO_PRIOR);
+}
+
+/* Histórico achatado e ordenado por data, restrito à trilha. Base das
+   métricas que dependem de ordem — recência, viés e ritmo. */
+function historicoOrdenado({ incluirBrancos = false } = {}) {
+  const idsDoEscopo = new Set(questoesDoEscopo().map(q => q.id));
+  const linha = [];
+  for (const qid in APP_STATE.respostas) {
+    if (!idsDoEscopo.has(qid)) continue;
+    for (const h of APP_STATE.respostas[qid]) {
+      if (!incluirBrancos && h.branco) continue;
+      linha.push(h);
+    }
+  }
+  return linha.sort((a, b) => a.data - b.data);
+}
+
+/* Taxa na janela recente, ao lado da acumulada. A diferença entre as duas
+   é o sinal de tendência: positiva, está melhorando. */
+function taxaRecente(janela = JANELA_RECENTE) {
+  const linha = historicoOrdenado();
+  if (linha.length < 10) return null;
+  const recorte = linha.slice(-janela);
+  const acertos = recorte.filter(h => h.correta).length;
+  const acumulada = linha.filter(h => h.correta).length / linha.length;
+  const recente = acertos / recorte.length;
+  return { recente, acumulada, delta: recente - acumulada, n: recorte.length, nTotal: linha.length };
+}
+
+/* ---------------- Viés de resposta ----------------
+
+   Em prova de certo/errado, o candidato tem duas formas de perder ponto:
+   não saber o conteúdo e ter tendência sistemática para um dos lados. A
+   segunda é invisível no percentual de acerto e barata de corrigir, mas
+   só aparece quando se compara a proporção de marcações "C" do candidato
+   com a proporção de gabaritos "C" das questões que ele de fato respondeu
+   — não com 50%, porque o recorte respondido nem sempre é equilibrado.
+
+   Chamar de vício de aquiescência (marcar CERTO demais) é o caso mais
+   comum: diante da dúvida, o texto plausível convence. O inverso também
+   ocorre em quem estuda por "palavras perigosas" e passa a rejeitar todo
+   item com "sempre" ou "somente". */
+function viesResposta() {
+  const linha = historicoOrdenado();
+  if (linha.length < 20) return null;
+  const porId = new Map(QUESTOES.map(q => [q.id, q]));
+
+  let marcouC = 0, gabaritoC = 0;
+  let aceitouIndevido = 0, rejeitouIndevido = 0;   /* erros por direção */
+  for (const h of linha) {
+    const q = porId.get(h.qid);
+    if (!q) continue;
+    if (h.resposta === "C") marcouC++;
+    if (q.gabarito === "C") gabaritoC++;
+    if (!h.correta) (h.resposta === "C" ? aceitouIndevido++ : rejeitouIndevido++);
+  }
+  const n = linha.length;
+  const propMarcada = marcouC / n;
+  const propEsperada = gabaritoC / n;
+  const desvio = propMarcada - propEsperada;
+  const erros = aceitouIndevido + rejeitouIndevido;
+
+  /* 8 pontos percentuais é onde o desvio deixa de ser ruído amostral e
+     passa a custar pontos de forma perceptível em 120 itens. */
+  const LIMIAR = 0.08;
+  let tendencia = "equilibrado";
+  if (desvio > LIMIAR) tendencia = "aceita-demais";
+  else if (desvio < -LIMIAR) tendencia = "rejeita-demais";
+
+  return {
+    n, propMarcada, propEsperada, desvio, tendencia,
+    aceitouIndevido, rejeitouIndevido, erros,
+    /* fração dos erros que veio de cada direção — o diagnóstico prático */
+    fracaoAceitando: erros ? aceitouIndevido / erros : null,
+  };
+}
+
+/* ---------------- Ritmo ----------------
+
+   O app já media tempo por questão, mas só usava o dado no relatório de
+   simulado. Numa prova de 120 itens com tempo fechado, ritmo elimina
+   tanto quanto conteúdo — e a pergunta "eu terminaria a prova?" não tinha
+   resposta em lugar nenhum.
+
+   Trabalha-se com MEDIANA, não média: uma questão deixada aberta enquanto
+   o candidato foi almoçar distorce a média e não diz nada sobre ritmo.
+   Descartam-se também tempos absurdos pela mesma razão. */
+const TEMPO_MAX_PLAUSIVEL_MS = 15 * 60000;
+
+function mediana(v) {
+  if (!v.length) return null;
+  const s = [...v].sort((a, b) => a - b);
+  const m = Math.floor(s.length / 2);
+  return s.length % 2 ? s[m] : (s[m - 1] + s[m]) / 2;
+}
+
+function analiseRitmo({ reservaDiscursivaMin = 60 } = {}) {
+  const porId = new Map(QUESTOES.map(q => [q.id, q]));
+  const linha = historicoOrdenado({ incluirBrancos: true })
+    .filter(h => h.tempoMs > 0 && h.tempoMs < TEMPO_MAX_PLAUSIVEL_MS);
+  if (linha.length < 15) return null;
+
+  const razoes = [], segundos = [], porDisc = {};
+  for (const h of linha) {
+    const q = porId.get(h.qid);
+    if (!q || !q.tempoIdealSeg) continue;
+    const seg = h.tempoMs / 1000;
+    const razao = seg / q.tempoIdealSeg;
+    razoes.push(razao); segundos.push(seg);
+    (porDisc[q.disciplina] ||= { disciplina: q.disciplina, razoes: [] }).razoes.push(razao);
+  }
+  if (!razoes.length) return null;
+
+  const razaoMediana = mediana(razoes);
+  const segMediano = mediana(segundos);
+
+  const ed = editalDoFoco();
+  const itens = ed && ed.corte ? ed.corte.total.itens : 120;
+  const disponivelMin = ed && ed.duracaoMin ? ed.duracaoMin - reservaDiscursivaMin : null;
+  const projetadoMin = segMediano * itens / 60;
+
+  return {
+    n: razoes.length,
+    segMediano, razaoMediana,
+    /* acima de 1 = mais lento que o tempo ideal do item */
+    maisLento: razaoMediana > 1,
+    itens, disponivelMin, reservaDiscursivaMin, projetadoMin,
+    cabeNoTempo: disponivelMin === null ? null : projetadoMin <= disponivelMin,
+    folgaMin: disponivelMin === null ? null : disponivelMin - projetadoMin,
+    porDisciplina: Object.values(porDisc)
+      .filter(d => d.razoes.length >= 5)
+      .map(d => ({ disciplina: d.disciplina, n: d.razoes.length, razao: mediana(d.razoes) }))
+      .sort((a, b) => b.razao - a.razao),
+  };
+}
+
+/* ---------------- Composição do banco por padrão ----------------
+
+   Mede o que o BANCO é, não o que a banca faz — e existe justamente para
+   que a diferença fique visível. Se um padrão concentra muitos itens e
+   quase todos caem para o mesmo lado, treinar por ele ensina o reflexo
+   errado, e o app precisa avisar em vez de exibir como se fosse DNA da
+   banca. Ver o comentário de DNA_BANCA em js/data.js. */
+function composicaoPadroes() {
+  const base = questoesDoEscopo();
+  if (!base.length) return [];
+  const m = {};
+  for (const q of base) {
+    const c = (m[q.pegadinha] ||= { slug: q.pegadinha, C: 0, E: 0 });
+    c[q.gabarito]++;
+  }
+  return Object.values(m).map(c => {
+    const total = c.C + c.E;
+    const dna = DNA_BANCA.find(d => d.slug === c.slug);
+    const ladoDominante = c.C >= c.E ? "C" : "E";
+    return {
+      ...c, total, ladoDominante,
+      nome: dna ? dna.nome : c.slug,
+      incidenciaEstimada: dna ? dna.incidencia : null,
+      participacao: total / base.length,
+      previsibilidade: Math.max(c.C, c.E) / total,
+    };
+  }).sort((a, b) => b.total - a.total);
 }
 
 /* ---------------- Corte oficial e decisão de marcar em branco ----------------
@@ -589,7 +808,11 @@ function faseDoPlano(diasRestantes) {
 }
 
 function planoEstudoDirigido() {
-  const dataProva = APP_STATE.config.dataProva || null;
+  /* A data informada pelo candidato prevalece; na falta dela, usa-se a do
+     edital da trilha, que agora existe em EDITAIS. Antes, quem não digitasse
+     nada ficava sem contagem regressiva mesmo com data pública conhecida. */
+  const ed = editalDoFoco();
+  const dataProva = APP_STATE.config.dataProva || (ed && ed.dataProva) || null;
   let diasRestantes = null;
   if (dataProva) {
     const hoje = new Date(); hoje.setHours(0, 0, 0, 0);

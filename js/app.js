@@ -501,6 +501,78 @@ function corteHtml() {
   </div>`;
 }
 
+/* Card de viés e ritmo. Duas coisas que o percentual de acerto esconde: a
+   tendência sistemática para um dos lados no C/E e a velocidade de
+   resolução. Ambas já eram medidas — só não eram mostradas. */
+function viesRitmoHtml() {
+  const v = viesResposta();
+  const r = analiseRitmo();
+  const tr = taxaRecente();
+  if (!v && !r && !tr) return "";
+
+  const pct = x => Math.round(x * 100) + "%";
+  const blocos = [];
+
+  if (tr) {
+    const subiu = tr.delta > 0.02, caiu = tr.delta < -0.02;
+    const cls = subiu ? "ok" : caiu ? "bad" : "";
+    const seta = subiu ? "▲" : caiu ? "▼" : "▬";
+    blocos.push(`
+      <div class="vr-bloco">
+        <div class="vr-titulo">Tendência recente</div>
+        <div class="vr-num ${cls}">${seta} ${pct(tr.recente)}</div>
+        <div class="vr-sub">últimas ${tr.n} respostas · acumulado ${pct(tr.acumulada)}</div>
+      </div>`);
+  }
+
+  if (v) {
+    const rotulo = { "aceita-demais": "Aceita demais", "rejeita-demais": "Rejeita demais", "equilibrado": "Equilibrado" }[v.tendencia];
+    const cls = v.tendencia === "equilibrado" ? "ok" : "warn";
+    blocos.push(`
+      <div class="vr-bloco">
+        <div class="vr-titulo">Viés de marcação</div>
+        <div class="vr-num ${cls}">${rotulo}</div>
+        <div class="vr-sub">marcou CERTO em ${pct(v.propMarcada)} · o gabarito pedia ${pct(v.propEsperada)}</div>
+      </div>`);
+  }
+
+  if (r) {
+    const cls = r.cabeNoTempo === false ? "bad" : "ok";
+    blocos.push(`
+      <div class="vr-bloco">
+        <div class="vr-titulo">Ritmo</div>
+        <div class="vr-num ${cls}">${Math.round(r.segMediano)}s <span class="vr-peq">por questão</span></div>
+        <div class="vr-sub">${r.razaoMediana > 1 ? Math.round((r.razaoMediana - 1) * 100) + "% acima" : Math.round((1 - r.razaoMediana) * 100) + "% abaixo"} do tempo ideal dos itens</div>
+      </div>`);
+  }
+
+  /* Leitura em texto: é onde o número vira conduta. */
+  const notas = [];
+  if (v && v.tendencia !== "equilibrado") {
+    const lado = v.tendencia === "aceita-demais" ? "CERTO" : "ERRADO";
+    const oposto = v.tendencia === "aceita-demais" ? "aceitar" : "rejeitar";
+    notas.push(`Você marca <b>${lado}</b> com mais frequência do que o gabarito das questões que respondeu — ${pct(Math.abs(v.desvio))} de desvio. ${v.fracaoAceitando !== null ? `Dos seus erros, <b>${pct(v.tendencia === "aceita-demais" ? v.fracaoAceitando : 1 - v.fracaoAceitando)}</b> vieram de ${oposto} indevidamente. ` : ""}Na dúvida, esse é o lado para o qual você tende — desconfie dele antes de marcar.`);
+  } else if (v) {
+    notas.push(`Sua proporção de CERTO acompanha a das questões respondidas: sem viés relevante de marcação.`);
+  }
+  if (r && r.disponivelMin !== null) {
+    notas.push(r.cabeNoTempo
+      ? `No seu ritmo, os ${r.itens} itens levariam <b>≈ ${Math.round(r.projetadoMin)} min</b>, dentro dos ${r.disponivelMin} min estimados para a objetiva (reservando ${r.reservaDiscursivaMin} min para a discursiva). Folga de ${Math.round(r.folgaMin)} min.`
+      : `No seu ritmo, os ${r.itens} itens levariam <b>≈ ${Math.round(r.projetadoMin)} min</b> — acima dos ${r.disponivelMin} min estimados para a objetiva. <b>Faltariam ${Math.round(-r.folgaMin)} min.</b>`);
+  }
+  const lentas = r && r.porDisciplina.filter(d => d.razao > 1.3).slice(0, 3);
+  if (lentas && lentas.length) {
+    notas.push(`Mais lento que o ideal em: ${lentas.map(d => `<b>${escapeHtml(d.disciplina)}</b> (${Math.round(d.razao * 100)}%)`).join(", ")}.`);
+  }
+
+  return `
+  <div class="card" style="margin-top:16px">
+    <h3>🧭 Viés, ritmo e tendência <span class="hint">o que a taxa de acerto não mostra</span></h3>
+    <div class="vr-grid">${blocos.join("")}</div>
+    ${notas.length ? `<div class="vr-notas">${notas.map(n => `<p>${n}</p>`).join("")}</div>` : ""}
+  </div>`;
+}
+
 function renderDashboard() {
   const g = statsGerais();
   const radar = radarAprovacao();
@@ -559,26 +631,47 @@ function renderDashboard() {
       <div style="text-align:center;font-size:13px;color:var(--muted);margin-top:4px">
         ${g.taxa === null ? `Responda questões para calibrar o radar. Meta atual: <b>${Math.round(radar.metaTaxa * 100)}% de acertos</b>.`
           : `Sua meta: <b>${Math.round(radar.metaTaxa * 100)}% de acertos</b>. ` +
-            (radar.horasEstimadas > 0 ? `Estimativa de estudo dirigido restante: <b>≈ ${radar.horasEstimadas}h líquidas</b>.` : `Você está no patamar da meta — mantenha o ritmo. ✔`)}
+            (radar.horasEstimadas === null
+              ? `Responda mais algumas questões para eu estimar o tempo restante pelo seu ritmo real.`
+              : radar.horasEstimadas > 0
+                ? `Faltam <b>${radar.questoesRestantes}</b> questões do seu escopo — <b>≈ ${radar.horasEstimadas}h</b> no seu ritmo atual.`
+                : `Você já percorreu o escopo inteiro da trilha. ✔`)}
       </div>
       ${AVISO_ESTATISTICO}
     </div>
     <div class="card">
       <h3>📊 Diagnóstico por disciplina</h3>
-      <div style="font-size:12px;color:var(--muted);margin-bottom:10px">✔ Domina (≥80%) · ⚠ Precisa melhorar (60–79%) · ✖ Maior risco (&lt;60%) · ○ Não iniciado</div>
-      ${linha(radar.dominadas, "ok", "✔")}${linha(radar.atencao, "warn", "⚠")}${linha(radar.risco, "bad", "✖")}${linha(radar.naoIniciadas, "idle", "○", true)}
-      ${radar.dominadas.length + radar.atencao.length + radar.risco.length + radar.naoIniciadas.length ? "" : `<div style="color:var(--muted);font-size:13px">— ainda sem dados suficientes</div>`}
+      <div style="font-size:12px;color:var(--muted);margin-bottom:10px">✔ Domina (≥80%) · ⚠ Precisa melhorar (60–79%) · ✖ Maior risco (&lt;60%) · ◐ Aferindo · ○ Não iniciado</div>
+      ${linha(radar.dominadas, "ok", "✔")}${linha(radar.atencao, "warn", "⚠")}${linha(radar.risco, "bad", "✖")}${linha(radar.emAferricao, "idle", "◐", true)}${linha(radar.naoIniciadas, "idle", "○", true)}
+      ${radar.dominadas.length + radar.atencao.length + radar.risco.length + radar.emAferricao.length + radar.naoIniciadas.length ? "" : `<div style="color:var(--muted);font-size:13px">— ainda sem dados suficientes</div>`}
+      <div style="font-size:11.5px;color:var(--muted);margin-top:8px">As faixas usam taxa suavizada: com poucas respostas, o resultado é puxado para a sua média geral até haver evidência bastante. Disciplinas com menos de 4 respostas ficam em <b>◐ aferindo</b>, sem virar risco nem domínio.</div>
     </div>
   </div>
   ${corteHtml()}
+  ${viesRitmoHtml()}
   <div class="grid cols-2" style="margin-top:16px">
     <div class="card card-dna">
       <h3>🧬 DNA da banca — padrões de maior incidência</h3>
-      ${dnaDoFoco().slice(0, 5).map(d => `
+      ${(() => {
+        /* A barra mostra a incidência ESTIMADA (leitura editorial de provas
+           anteriores). Ao lado dela vai, quando houver, a composição medida
+           do banco — quantos itens daquele padrão existem aqui e para que
+           lado caem. Quando um padrão é muito previsível dentro do banco, o
+           aviso aparece: treinar por ele ensina o reflexo do banco, não o da
+           banca. Ver o comentário de DNA_BANCA em js/data.js. */
+        const comp = new Map(composicaoPadroes().map(c => [c.slug, c]));
+        return dnaDoFoco().slice(0, 5).map(d => {
+          const c = comp.get(d.slug);
+          const viciado = c && c.total >= 30 && c.previsibilidade >= 0.85;
+          return `
         <div class="dna-item">
           <h4>${d.nome}</h4>
           <div style="display:flex;gap:10px"><div class="dna-bar"><i style="width:${d.incidencia}%"></i></div><span class="dna-pct">${d.incidencia}%</span></div>
-        </div>`).join("")}
+          ${c ? `<div class="dna-comp">${c.total} itens no banco · ${Math.round(c.previsibilidade * 100)}% caem em <b>${c.ladoDominante === "C" ? "CERTO" : "ERRADO"}</b>${viciado ? ` <span class="dna-alerta" title="Dentro deste banco o padrão é previsível demais. Não conclua que a banca se comporta assim.">⚠ previsível aqui</span>` : ""}</div>` : ""}
+        </div>`;
+        }).join("");
+      })()}
+      <div class="dna-nota">A barra é <b>estimativa editorial</b> de quanto a banca usa cada padrão — leitura de provas anteriores, não contagem item a item. A linha abaixo dela é medida, mas mede <b>este banco</b>, não a prova.</div>
       <button class="btn ghost small" style="margin-top:12px" onclick="navigate('raiox')">Ver Raio-X completo →</button>
     </div>
     <div class="card card-pred">

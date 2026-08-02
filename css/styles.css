@@ -229,6 +229,29 @@ body {
 }
 @media (prefers-reduced-motion: reduce) { .corte-barra i { transition: none; } }
 
+/* ---------- Viés, ritmo e tendência ---------- */
+.vr-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px; margin-top: 12px;
+}
+.vr-bloco { background: var(--surface2); border: 1px solid var(--border); border-radius: var(--r-md); padding: 12px 14px; }
+.vr-titulo { font-size: 11.5px; text-transform: uppercase; letter-spacing: .04em; color: var(--muted); }
+.vr-num { font-size: 20px; font-weight: 800; margin: 4px 0 2px; font-variant-numeric: tabular-nums; }
+.vr-num.ok { color: var(--ok); } .vr-num.bad { color: var(--bad); } .vr-num.warn { color: var(--warn); }
+.vr-peq { font-size: 12px; font-weight: 500; color: var(--muted); }
+.vr-sub { font-size: 12px; color: var(--muted); line-height: 1.4; }
+.vr-notas { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border); }
+.vr-notas p { font-size: 13px; color: var(--muted); line-height: 1.55; margin: 0 0 6px; }
+.vr-notas p:last-child { margin-bottom: 0; }
+
+/* Transparência do DNA: separa estimativa editorial de medida do banco. */
+.dna-comp { font-size: 11.5px; color: var(--muted); margin-top: 5px; }
+.dna-alerta { color: var(--warn); font-weight: 600; white-space: nowrap; }
+.dna-nota {
+  font-size: 11.5px; color: var(--muted); line-height: 1.5;
+  margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border);
+}
+
 /* ---------- Plano de Estudo Dirigido ---------- */
 .pe-contagem { display: flex; align-items: center; gap: 16px; }
 .pe-dias {
