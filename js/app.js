@@ -883,6 +883,22 @@ function setFiltroBanco() {
 }
 
 /* ============ Componente de questão ============ */
+
+/* Etiqueta de abrangência do card. Antes mostrava `q.concurso · q.cargo`, o
+   que confundia procedência com pertinência: um item de Ética redigido a
+   partir do edital da SESAU aparecia como "SESAU · Especialista em Saúde —
+   Fisioterapia" para quem estuda para a PC-AL, embora o conteúdo (Lei
+   estadual 6.754/2006) conste dos dois editais. Agora a etiqueta responde à
+   pergunta que o candidato de fato faz — em que provas isto cai —, e os
+   cargos só são listados quando a questão não vale para todos. */
+function etiquetaAbrangencia(q) {
+  const trilhas = trilhasDaQuestao(q);
+  if (!trilhas.length) return `${escapeHtml(q.disciplina)} · treino complementar`;
+  const rotulo = trilhas.map(t => escapeHtml(t.curto)).join(" + ");
+  const cobreTodos = trilhas.every(t => t.cargos.every(c => q.cargo.includes(c)));
+  return cobreTodos ? `${rotulo} · todos os cargos` : `${rotulo} · ${escapeHtml(q.cargo.join("/"))}`;
+}
+
 const qUI = {}; /* estado transitório por questão: {confianca, respondida, inicio} */
 function questaoCardHtml(q, opts) {
   const s = statsQuestao(q.id);
@@ -901,7 +917,7 @@ function questaoCardHtml(q, opts) {
     </div>` : ""}
     <div class="q-head">
       <span class="tag accent">${q.id}</span>
-      <span class="tag">${q.concurso} · ${q.cargo.join("/")}</span>
+      <span class="tag" title="Provas em que este item cai, pelo conteúdo programático">${etiquetaAbrangencia(q)}</span>
       <span class="tag">${q.disciplina}</span>
       <span class="tag">${q.assunto}</span>
       <span class="tag diff" title="dificuldade">${diff}</span>

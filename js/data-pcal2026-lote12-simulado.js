@@ -390,7 +390,7 @@ const QUESTOES_PCAL_LOTE12 = [
   },
   {
     id: "ET-007", disciplina: "Ética no Serviço Público", assunto: "Ética e função pública", subassunto: "Dever de veracidade",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — simulado estilo CEBRASPE (bloco 8, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.8,
     textoApoio: TXT_BLOCO8,
@@ -410,7 +410,7 @@ const QUESTOES_PCAL_LOTE12 = [
   },
   {
     id: "ET-008", disciplina: "Ética no Serviço Público", assunto: "Ética no setor público", subassunto: "Independência das instâncias",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — simulado estilo CEBRASPE (bloco 8, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 60, probReaparecer: 0.85,
     textoApoio: TXT_BLOCO8,

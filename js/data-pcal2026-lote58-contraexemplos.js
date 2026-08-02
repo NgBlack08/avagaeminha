@@ -357,7 +357,7 @@ const QUESTOES_PCAL_LOTE58 = [
   },
   {
     id: "PT-033", disciplina: "Língua Portuguesa", assunto: "Semântica", subassunto: "Denotação e conotação",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (contraexemplo de padrão)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.8,
     enunciado: "O sentido denotativo corresponde ao significado literal e objetivo da palavra, ao passo que o sentido conotativo decorre de associações subjetivas e figuradas.",
@@ -376,7 +376,7 @@ const QUESTOES_PCAL_LOTE58 = [
   },
   {
     id: "PT-034", disciplina: "Língua Portuguesa", assunto: "Coesão e coerência", subassunto: "Distinção",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (contraexemplo de padrão)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.85,
     enunciado: "A coesão diz respeito à articulação formal entre elementos textuais, por meio de conectivos e retomadas, enquanto a coerência refere-se à unidade lógica de sentido do conjunto.",

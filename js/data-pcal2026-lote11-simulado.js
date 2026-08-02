@@ -26,7 +26,7 @@ const QUESTOES_PCAL_LOTE11 = [
   /* ============ BLOCO 1 — LÍNGUA PORTUGUESA (texto dissertativo) ============ */
   {
     id: "PT-016", disciplina: "Língua Portuguesa", assunto: "Compreensão e reescritura", subassunto: "Substituição de conectivo causal",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — simulado estilo CEBRASPE (bloco 1, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.85,
     textoApoio: TXT_BLOCO1,
@@ -46,7 +46,7 @@ const QUESTOES_PCAL_LOTE11 = [
   },
   {
     id: "PT-017", disciplina: "Língua Portuguesa", assunto: "Compreensão e reescritura", subassunto: "Adversativo × conclusivo",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — simulado estilo CEBRASPE (bloco 1, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.85,
     textoApoio: TXT_BLOCO1,
@@ -66,7 +66,7 @@ const QUESTOES_PCAL_LOTE11 = [
   },
   {
     id: "PT-018", disciplina: "Língua Portuguesa", assunto: "Crase", subassunto: "Regência e crase em reescritura",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — simulado estilo CEBRASPE (bloco 1, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 60, probReaparecer: 0.8,
     textoApoio: TXT_BLOCO1,
@@ -86,7 +86,7 @@ const QUESTOES_PCAL_LOTE11 = [
   },
   {
     id: "PT-019", disciplina: "Língua Portuguesa", assunto: "Significação das palavras", subassunto: "Tampouco × tão pouco",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — simulado estilo CEBRASPE (bloco 1, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 50, probReaparecer: 0.75,
     textoApoio: TXT_BLOCO1,
@@ -106,7 +106,7 @@ const QUESTOES_PCAL_LOTE11 = [
   },
   {
     id: "PT-020", disciplina: "Língua Portuguesa", assunto: "Sintaxe", subassunto: "Pontuação — conjunção deslocada",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — simulado estilo CEBRASPE (bloco 1, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.8,
     textoApoio: TXT_BLOCO1,

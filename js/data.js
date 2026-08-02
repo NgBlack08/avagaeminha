@@ -686,7 +686,7 @@ const QUESTOES = [
   /* ================= PORTUGUÊS ================= */
   {
     id: "PT-001", disciplina: "Língua Portuguesa", assunto: "Compreensão e reescritura", subassunto: "Reescritura de trechos",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026, origem: "Inédita — estilo CEBRASPE (padrão PCAL)",
+    concurso: "PCAL", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026, origem: "Inédita — estilo CEBRASPE (padrão PCAL)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 60, probReaparecer: 0.9,
     textoApoio: "A segurança pública, dever do Estado, direito e responsabilidade de todos, é exercida para a preservação da ordem pública e da incolumidade das pessoas e do patrimônio. No entanto, a mera presença ostensiva do aparato policial não é suficiente para garantir a redução dos índices de criminalidade, os quais dependem, também, de políticas sociais estruturantes.",
     enunciado: "No segundo período do texto, a substituição de 'os quais' por 'cujos' manteria a correção gramatical e os sentidos originais do texto.",
@@ -705,7 +705,7 @@ const QUESTOES = [
   },
   {
     id: "PT-002", disciplina: "Língua Portuguesa", assunto: "Compreensão e reescritura", subassunto: "Coesão referencial",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026, origem: "Inédita — estilo CEBRASPE (padrão PCAL)",
+    concurso: "PCAL", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026, origem: "Inédita — estilo CEBRASPE (padrão PCAL)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.85,
     textoApoio: "A segurança pública, dever do Estado, direito e responsabilidade de todos, é exercida para a preservação da ordem pública e da incolumidade das pessoas e do patrimônio. No entanto, a mera presença ostensiva do aparato policial não é suficiente para garantir a redução dos índices de criminalidade, os quais dependem, também, de políticas sociais estruturantes.",
     enunciado: "A locução 'No entanto', que introduz o segundo período, poderia ser substituída por 'Conquanto', sem prejuízo da correção gramatical e da coerência textual.",
@@ -724,7 +724,7 @@ const QUESTOES = [
   },
   {
     id: "PT-003", disciplina: "Língua Portuguesa", assunto: "Sintaxe", subassunto: "Pontuação — vírgulas",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026, origem: "Inédita — estilo CEBRASPE (padrão PCAL)",
+    concurso: "PCAL", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026, origem: "Inédita — estilo CEBRASPE (padrão PCAL)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 60, probReaparecer: 0.8,
     textoApoio: "A segurança pública, dever do Estado, direito e responsabilidade de todos, é exercida para a preservação da ordem pública e da incolumidade das pessoas e do patrimônio.",
     enunciado: "As vírgulas que isolam o trecho 'dever do Estado, direito e responsabilidade de todos' foram empregadas para separar aposto explicativo, razão por que sua supressão manteria a correção gramatical do período.",
@@ -743,7 +743,7 @@ const QUESTOES = [
   },
   {
     id: "PT-004", disciplina: "Língua Portuguesa", assunto: "Sintaxe", subassunto: "Crase",
-    concurso: "PCDF", cargo: ["Escrivão","Agente"], ano: 2026, origem: "Inédita — estilo CEBRASPE (padrão PCDF)",
+    concurso: "PCDF", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026, origem: "Inédita — estilo CEBRASPE (padrão PCDF)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 45, probReaparecer: 0.75,
     textoApoio: "O acesso à informação e a transparência dos órgãos policiais são essenciais à consolidação da confiança social nas instituições de segurança.",
     enunciado: "No trecho, o emprego do acento indicativo de crase em 'à informação' e em 'à consolidação' justifica-se pela mesma razão sintática: em ambos os casos, há fusão da preposição 'a', exigida pelo termo regente, com o artigo definido feminino que antecede o termo regido.",

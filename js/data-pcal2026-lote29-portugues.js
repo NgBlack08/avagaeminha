@@ -21,7 +21,7 @@ const QUESTOES_PCAL_LOTE29 = [
 
   {
     id: "PT-021", disciplina: "Língua Portuguesa", assunto: "Coesão textual", subassunto: "Conectivo explicativo",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (texto-base autoral: perícia e cadeia de custódia)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 60, probReaparecer: 0.8,
     textoApoio: TEXTO_BASE_LOTE29,
@@ -41,7 +41,7 @@ const QUESTOES_PCAL_LOTE29 = [
   },
   {
     id: "PT-022", disciplina: "Língua Portuguesa", assunto: "Sintaxe", subassunto: "Orações subordinadas adverbiais",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (texto-base autoral: perícia e cadeia de custódia)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 60, probReaparecer: 0.76,
     textoApoio: TEXTO_BASE_LOTE29,
@@ -61,7 +61,7 @@ const QUESTOES_PCAL_LOTE29 = [
   },
   {
     id: "PT-023", disciplina: "Língua Portuguesa", assunto: "Regência verbal", subassunto: "Verbo transitivo direto",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (texto-base autoral: perícia e cadeia de custódia)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.74,
     textoApoio: TEXTO_BASE_LOTE29,
@@ -81,7 +81,7 @@ const QUESTOES_PCAL_LOTE29 = [
   },
   {
     id: "PT-024", disciplina: "Língua Portuguesa", assunto: "Ortografia e acentuação", subassunto: "Crase",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (texto-base autoral: perícia e cadeia de custódia)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.82,
     textoApoio: TEXTO_BASE_LOTE29,
@@ -101,7 +101,7 @@ const QUESTOES_PCAL_LOTE29 = [
   },
   {
     id: "PT-025", disciplina: "Língua Portuguesa", assunto: "Concordância verbal", subassunto: "Sujeito simples",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (texto-base autoral: perícia e cadeia de custódia)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 60, probReaparecer: 0.7,
     textoApoio: TEXTO_BASE_LOTE29,
@@ -121,7 +121,7 @@ const QUESTOES_PCAL_LOTE29 = [
   },
   {
     id: "PT-026", disciplina: "Língua Portuguesa", assunto: "Pontuação", subassunto: "Travessão (aposto explicativo)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (texto-base autoral: perícia e cadeia de custódia)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.72,
     textoApoio: TEXTO_BASE_LOTE29,
@@ -141,7 +141,7 @@ const QUESTOES_PCAL_LOTE29 = [
   },
   {
     id: "PT-027", disciplina: "Língua Portuguesa", assunto: "Coesão textual", subassunto: "Conectivo conclusivo",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (texto-base autoral: perícia e cadeia de custódia)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.72,
     textoApoio: TEXTO_BASE_LOTE29,
@@ -161,7 +161,7 @@ const QUESTOES_PCAL_LOTE29 = [
   },
   {
     id: "PT-028", disciplina: "Língua Portuguesa", assunto: "Regência nominal", subassunto: "Substantivo abstrato + preposição",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (texto-base autoral: perícia e cadeia de custódia)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.7,
     textoApoio: TEXTO_BASE_LOTE29,
@@ -181,7 +181,7 @@ const QUESTOES_PCAL_LOTE29 = [
   },
   {
     id: "PT-029", disciplina: "Língua Portuguesa", assunto: "Sintaxe", subassunto: "Oração reduzida de gerúndio",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (texto-base autoral: perícia e cadeia de custódia)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.7,
     textoApoio: TEXTO_BASE_LOTE29,
@@ -201,7 +201,7 @@ const QUESTOES_PCAL_LOTE29 = [
   },
   {
     id: "PT-030", disciplina: "Língua Portuguesa", assunto: "Pontuação", subassunto: "Vírgula (aposto explicativo)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (texto-base autoral: perícia e cadeia de custódia)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.72,
     textoApoio: TEXTO_BASE_LOTE29,
@@ -221,7 +221,7 @@ const QUESTOES_PCAL_LOTE29 = [
   },
   {
     id: "PT-031", disciplina: "Língua Portuguesa", assunto: "Sintaxe", subassunto: "Voz passiva sintética",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (texto-base autoral: perícia e cadeia de custódia)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.74,
     textoApoio: TEXTO_BASE_LOTE29,
@@ -241,7 +241,7 @@ const QUESTOES_PCAL_LOTE29 = [
   },
   {
     id: "PT-032", disciplina: "Língua Portuguesa", assunto: "Tipologia textual", subassunto: "Dissertativo-argumentativo",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026,
+    concurso: "PCAL", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (texto-base autoral: perícia e cadeia de custódia)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 60, probReaparecer: 0.76,
     textoApoio: TEXTO_BASE_LOTE29,

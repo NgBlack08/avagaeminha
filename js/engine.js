@@ -325,6 +325,16 @@ function noEscopo(q) {
   const discs = disciplinasDoFoco();
   return !discs || discs.has(q.disciplina);
 }
+/* Trilhas em que a questão de fato cai, pelo mesmo critério de noEscopo():
+   a DISCIPLINA constar do edital. Não confundir com `q.concurso`, que é
+   procedência — de qual edital a questão foi redigida — e por isso não
+   serve para responder "isto cai na minha prova?". Língua Portuguesa e
+   Ética no Serviço Público constam dos dois editais: uma questão de ética
+   redigida para SESAU vale igualmente para PC-AL, cujo conteúdo
+   programático cobra a mesma Lei estadual 6.754/2006. */
+function trilhasDaQuestao(q) {
+  return Object.values(EDITAIS).filter(e => q.disciplina in e.itensPorDisciplina);
+}
 /* Cargos da trilha; sem trilha, todos os conhecidos (união dos editais). */
 function cargosDoFoco() {
   const ed = editalDoFoco();

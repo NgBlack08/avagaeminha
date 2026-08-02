@@ -114,6 +114,7 @@ function validar({ quieto = false } = {}) {
   /* ================= ERROS ================= */
 
   const slugsValidos = new Set(DNA_BANCA.map(d => d.slug));
+  const cargosConhecidos = new Set(Object.values(EDITAIS).flatMap(e => e.cargos));
   const vistosId = new Map();
   const vistosEnunciado = new Map();
 
@@ -137,6 +138,27 @@ function validar({ quieto = false } = {}) {
     if (!["C", "E"].includes(q.gabarito)) erros.push(`${onde}: gabarito inválido — "${q.gabarito}" (esperado C ou E)`);
     if (![1, 2, 3].includes(q.dificuldade)) erros.push(`${onde}: dificuldade inválida — "${q.dificuldade}" (esperado 1, 2 ou 3)`);
     if (!Array.isArray(q.cargo) || !q.cargo.length) erros.push(`${onde}: cargo deve ser um array não vazio`);
+
+    /* Cargo declarado tem de existir em algum edital: um cargo inventado ou
+       com typo não casa com filtro nenhum e some da tela sem erro. */
+    if (Array.isArray(q.cargo)) {
+      const orfaos = q.cargo.filter(c => !cargosConhecidos.has(c));
+      if (orfaos.length) erros.push(`${onde}: cargo inexistente em qualquer edital — ${orfaos.map(c => `"${c}"`).join(", ")}`);
+
+      /* Disciplina que consta de mais de um edital é conteúdo comum às
+         trilhas — Língua Portuguesa e Ética no Serviço Público, hoje. Se o
+         cargo cobre só uma delas, a questão fica invisível para a outra
+         carreira ao filtrar por cargo, embora caia na prova dela. Foi assim
+         que 144 itens ficaram fora do alcance de quem tinha direito a eles:
+         94 de Português inacessíveis à trilha da SESAU e 50 de Ética
+         divididos entre as duas. O cargo deve ser a união. */
+      for (const trilha of Object.values(EDITAIS)) {
+        if (!(q.disciplina in trilha.itensPorDisciplina)) continue;
+        if (!trilha.cargos.some(c => q.cargo.includes(c))) {
+          erros.push(`${onde}: "${q.disciplina}" consta do edital ${trilha.curto || trilha.id}, mas nenhum cargo dessa trilha está em q.cargo — a questão fica invisível para ela`);
+        }
+      }
+    }
     if (typeof q.tempoIdealSeg !== "number" || q.tempoIdealSeg <= 0) erros.push(`${onde}: tempoIdealSeg inválido — "${q.tempoIdealSeg}"`);
     if (typeof q.probReaparecer !== "number" || q.probReaparecer < 0 || q.probReaparecer > 1) {
       erros.push(`${onde}: probReaparecer fora de 0..1 — "${q.probReaparecer}"`);

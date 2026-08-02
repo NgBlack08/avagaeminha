@@ -369,7 +369,7 @@ const QUESTOES_PCAL_LOTE8 = [
   /* ===== LÍNGUA PORTUGUESA ===== */
   {
     id: "PT-010", disciplina: "Língua Portuguesa", assunto: "Sintaxe", subassunto: "Vírgula entre sujeito e verbo",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 45, probReaparecer: 0.8,
     textoApoio: "Os agentes responsáveis pela investigação apresentaram o relatório final à autoridade.",
     enunciado: "A inserção de uma vírgula imediatamente após 'investigação' preservaria a correção gramatical do período, por isolar o sujeito da oração.",
@@ -388,7 +388,7 @@ const QUESTOES_PCAL_LOTE8 = [
   },
   {
     id: "PT-011", disciplina: "Língua Portuguesa", assunto: "Sintaxe", subassunto: "Paralelismo",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 45, probReaparecer: 0.75,
     enunciado: "No período 'A autoridade recomendou cautela e que os agentes agissem com discrição', há quebra de paralelismo sintático, que seria corrigida pela reescrita 'A autoridade recomendou cautela e discrição aos agentes'.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "paralelismo sintático",
@@ -406,7 +406,7 @@ const QUESTOES_PCAL_LOTE8 = [
   },
   {
     id: "PT-012", disciplina: "Língua Portuguesa", assunto: "Regência verbal", subassunto: "Verbo 'preferir'",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 40, probReaparecer: 0.72,
     enunciado: "De acordo com a norma-padrão, a construção 'prefiro atuar em campo do que trabalhar no gabinete' está gramaticalmente correta quanto à regência do verbo 'preferir'.",
     gabarito: "E", pegadinha: "exigencia-inexistente", palavraChave: "prefiro ... do que",

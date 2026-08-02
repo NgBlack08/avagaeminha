@@ -35,7 +35,7 @@ const QUESTOES_SESAUAL_LOTE61 = [
   /* ---------- Regras deontológicas (art. 2º) ---------- */
   {
     id: "ET-024", disciplina: "Ética no Serviço Público", assunto: "Código de Ética Funcional (AL)", subassunto: "Regras deontológicas — o honesto e o desonesto",
-    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
+    concurso: "SESAU", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Edital SESAU/AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.86,
     enunciado: "Segundo o Código de Ética Funcional do Servidor Público Civil do Estado de Alagoas, o servidor não terá que decidir somente entre o legal e o ilegal, o justo e o injusto, o conveniente e o inconveniente, o oportuno e o inoportuno, mas principalmente entre o honesto e o desonesto.",
@@ -54,7 +54,7 @@ const QUESTOES_SESAUAL_LOTE61 = [
   },
   {
     id: "ET-025", disciplina: "Ética no Serviço Público", assunto: "Código de Ética Funcional (AL)", subassunto: "Vida privada e conceito funcional",
-    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
+    concurso: "SESAU", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Edital SESAU/AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 60, probReaparecer: 0.82,
     enunciado: "Os fatos e atos verificados na conduta do servidor em sua vida privada são irrelevantes para a formação de seu conceito na vida funcional, dada a separação entre as esferas pública e particular.",
@@ -73,7 +73,7 @@ const QUESTOES_SESAUAL_LOTE61 = [
   },
   {
     id: "ET-026", disciplina: "Ética no Serviço Público", assunto: "Código de Ética Funcional (AL)", subassunto: "Publicidade dos atos administrativos",
-    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
+    concurso: "SESAU", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Edital SESAU/AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.76,
     enunciado: "A publicidade de qualquer ato administrativo constitui requisito de eficácia e moralidade, não admitindo o Código de Ética estadual qualquer hipótese de sigilo.",
@@ -92,7 +92,7 @@ const QUESTOES_SESAUAL_LOTE61 = [
   },
   {
     id: "ET-027", disciplina: "Ética no Serviço Público", assunto: "Código de Ética Funcional (AL)", subassunto: "Demora no atendimento como dano moral",
-    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
+    concurso: "SESAU", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Edital SESAU/AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.84,
     enunciado: "Deixar o servidor qualquer pessoa à espera de solução que compete ao setor em que exerça suas funções, permitindo a formação de longas filas ou qualquer outra espécie de atraso na prestação do serviço, caracteriza dano moral aos usuários dos serviços públicos estaduais.",
@@ -113,7 +113,7 @@ const QUESTOES_SESAUAL_LOTE61 = [
   /* ---------- Conceito de servidor público para fins éticos (art. 3º) ---------- */
   {
     id: "ET-028", disciplina: "Ética no Serviço Público", assunto: "Código de Ética Funcional (AL)", subassunto: "Conceito ampliado de servidor público",
-    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
+    concurso: "SESAU", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Edital SESAU/AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.9,
     enunciado: "Para fins de apuração do comprometimento ético, considera-se servidor público todo aquele que preste serviços de natureza permanente, temporária ou excepcional, ainda que sem retribuição financeira, desde que ligado direta ou indiretamente a qualquer órgão ou entidade do Poder Estatal.",
@@ -132,7 +132,7 @@ const QUESTOES_SESAUAL_LOTE61 = [
   },
   {
     id: "ET-029", disciplina: "Ética no Serviço Público", assunto: "Código de Ética Funcional (AL)", subassunto: "Alcance sobre estatais",
-    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
+    concurso: "SESAU", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Edital SESAU/AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.83,
     enunciado: "O Código de Ética Funcional do Estado de Alagoas aplica-se aos servidores da administração direta, das autarquias e das fundações públicas, não alcançando os empregados de empresas públicas e de sociedades de economia mista, submetidos ao regime celetista.",
@@ -151,7 +151,7 @@ const QUESTOES_SESAUAL_LOTE61 = [
   },
   {
     id: "ET-030", disciplina: "Ética no Serviço Público", assunto: "Código de Ética Funcional (AL)", subassunto: "Natureza do vínculo",
-    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
+    concurso: "SESAU", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Edital SESAU/AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.75,
     enunciado: "A sujeição ao Código de Ética Funcional do Estado de Alagoas pressupõe vínculo de natureza permanente com a Administração Pública estadual, excluídos os prestadores de serviço temporários e excepcionais.",
@@ -172,7 +172,7 @@ const QUESTOES_SESAUAL_LOTE61 = [
   /* ---------- Deveres fundamentais (art. 4º) ---------- */
   {
     id: "ET-031", disciplina: "Ética no Serviço Público", assunto: "Código de Ética Funcional (AL)", subassunto: "Dever de escolher a opção mais vantajosa ao bem comum",
-    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
+    concurso: "SESAU", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Edital SESAU/AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.8,
     enunciado: "É dever fundamental do servidor ser probo, reto, leal e justo, demonstrando toda a integridade do seu caráter, escolhendo sempre, quando estiver diante de duas opções, a melhor e a mais vantajosa para o bem comum.",
@@ -191,7 +191,7 @@ const QUESTOES_SESAUAL_LOTE61 = [
   },
   {
     id: "ET-032", disciplina: "Ética no Serviço Público", assunto: "Código de Ética Funcional (AL)", subassunto: "Dever de resistir a pressões e denunciá-las",
-    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
+    concurso: "SESAU", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Edital SESAU/AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.85,
     enunciado: "É dever do servidor resistir a todas as pressões de superiores hierárquicos, de contratantes, interessados e outros que visem obter quaisquer favores, benesses ou vantagens indevidas em decorrência de ações imorais, ilegais ou aéticas, e denunciá-las.",
@@ -210,7 +210,7 @@ const QUESTOES_SESAUAL_LOTE61 = [
   },
   {
     id: "ET-033", disciplina: "Ética no Serviço Público", assunto: "Código de Ética Funcional (AL)", subassunto: "Direito de greve",
-    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
+    concurso: "SESAU", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Edital SESAU/AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.78,
     enunciado: "O Código de Ética Funcional do Estado de Alagoas veda ao servidor público a participação em movimento de greve, por incompatibilidade com o dever de assiduidade e com a continuidade do serviço público.",
@@ -229,7 +229,7 @@ const QUESTOES_SESAUAL_LOTE61 = [
   },
   {
     id: "ET-034", disciplina: "Ética no Serviço Público", assunto: "Código de Ética Funcional (AL)", subassunto: "Apresentação pessoal",
-    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
+    concurso: "SESAU", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Edital SESAU/AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.7,
     enunciado: "Consta entre os deveres fundamentais do servidor público estadual apresentar-se ao trabalho com vestimentas adequadas ao exercício da função.",
@@ -248,7 +248,7 @@ const QUESTOES_SESAUAL_LOTE61 = [
   },
   {
     id: "ET-035", disciplina: "Ética no Serviço Público", assunto: "Código de Ética Funcional (AL)", subassunto: "Desvio de finalidade com forma legal",
-    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
+    concurso: "SESAU", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Edital SESAU/AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 70, probReaparecer: 0.81,
     enunciado: "O servidor que exerça sua função com finalidade estranha ao interesse público não incorre em comprometimento ético desde que observe todas as formalidades legais e não cometa violação expressa à lei.",
@@ -269,7 +269,7 @@ const QUESTOES_SESAUAL_LOTE61 = [
   /* ---------- Vedações (art. 5º) ---------- */
   {
     id: "ET-036", disciplina: "Ética no Serviço Público", assunto: "Código de Ética Funcional (AL)", subassunto: "Vedação de vantagem indevida",
-    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
+    concurso: "SESAU", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Edital SESAU/AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 60, probReaparecer: 0.87,
     enunciado: "É vedado ao servidor pleitear, solicitar, provocar, sugerir ou receber qualquer tipo de ajuda financeira, gratificação, prêmio, comissão, doação ou vantagem de qualquer espécie, para si, familiares ou qualquer pessoa, para o cumprimento da sua missão ou para influenciar outro servidor para o mesmo fim.",
@@ -288,7 +288,7 @@ const QUESTOES_SESAUAL_LOTE61 = [
   },
   {
     id: "ET-037", disciplina: "Ética no Serviço Público", assunto: "Código de Ética Funcional (AL)", subassunto: "Embriaguez",
-    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
+    concurso: "SESAU", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Edital SESAU/AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 60, probReaparecer: 0.86,
     enunciado: "É vedado ao servidor apresentar-se embriagado no serviço, ressalvadas as situações ocorridas fora do horário de expediente, que pertencem à esfera privada.",
@@ -307,7 +307,7 @@ const QUESTOES_SESAUAL_LOTE61 = [
   },
   {
     id: "ET-038", disciplina: "Ética no Serviço Público", assunto: "Código de Ética Funcional (AL)", subassunto: "Informações privilegiadas",
-    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
+    concurso: "SESAU", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Edital SESAU/AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.82,
     enunciado: "É vedado ao servidor fazer uso de informações privilegiadas obtidas no âmbito de seu serviço, em benefício próprio, de parentes, de amigos ou de terceiros.",
@@ -326,7 +326,7 @@ const QUESTOES_SESAUAL_LOTE61 = [
   },
   {
     id: "ET-039", disciplina: "Ética no Serviço Público", assunto: "Código de Ética Funcional (AL)", subassunto: "Conivência por solidariedade",
-    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
+    concurso: "SESAU", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Edital SESAU/AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 60, probReaparecer: 0.79,
     enunciado: "O espírito de solidariedade entre colegas de repartição justifica que o servidor deixe de comunicar erro ou infração ética cometida por outro servidor, desde que não haja prejuízo ao erário.",
@@ -347,7 +347,7 @@ const QUESTOES_SESAUAL_LOTE61 = [
   /* ---------- Comissões de Ética (arts. 6º a 13) ---------- */
   {
     id: "ET-040", disciplina: "Ética no Serviço Público", assunto: "Código de Ética Funcional (AL)", subassunto: "Criação e composição da Comissão de Ética",
-    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
+    concurso: "SESAU", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Edital SESAU/AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.91,
     enunciado: "Em todos os órgãos e entidades do Poder Executivo estadual deverá ser criada, por portaria do respectivo secretário de estado ou do dirigente máximo da entidade, uma Comissão de Ética integrada por três servidores públicos efetivos e respectivos suplentes.",
@@ -366,7 +366,7 @@ const QUESTOES_SESAUAL_LOTE61 = [
   },
   {
     id: "ET-041", disciplina: "Ética no Serviço Público", assunto: "Código de Ética Funcional (AL)", subassunto: "Publicidade da portaria de constituição",
-    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
+    concurso: "SESAU", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Edital SESAU/AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.7,
     enunciado: "A portaria que constitui a Comissão de Ética será publicada no Diário Oficial do Estado, dispensada a indicação nominal dos membros titulares e suplentes, para preservar sua independência.",
@@ -385,7 +385,7 @@ const QUESTOES_SESAUAL_LOTE61 = [
   },
   {
     id: "ET-042", disciplina: "Ética no Serviço Público", assunto: "Código de Ética Funcional (AL)", subassunto: "Instauração do processo e denúncia",
-    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
+    concurso: "SESAU", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Edital SESAU/AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.84,
     enunciado: "O processo de apuração de prática de ato em desrespeito ao Código será instaurado pela Comissão de Ética de ofício ou em razão de denúncia fundamentada, admitida a denúncia anônima em razão do interesse público na apuração.",
@@ -404,7 +404,7 @@ const QUESTOES_SESAUAL_LOTE61 = [
   },
   {
     id: "ET-043", disciplina: "Ética no Serviço Público", assunto: "Código de Ética Funcional (AL)", subassunto: "Prazos de manifestação do servidor",
-    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
+    concurso: "SESAU", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Edital SESAU/AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.87,
     enunciado: "Instaurado o processo, o servidor será oficiado para manifestar-se no prazo de cinco dias e, concluídas as diligências, será novamente oficiado para nova manifestação no prazo de três dias.",
@@ -423,7 +423,7 @@ const QUESTOES_SESAUAL_LOTE61 = [
   },
   {
     id: "ET-044", disciplina: "Ética no Serviço Público", assunto: "Código de Ética Funcional (AL)", subassunto: "Advertência e censura ética",
-    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
+    concurso: "SESAU", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Edital SESAU/AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 70, probReaparecer: 0.93,
     enunciado: "A violação das normas do Código acarreta advertência, aplicável aos servidores que já tiverem deixado o cargo, emprego ou função, e censura ética, aplicável aos que estejam no exercício do cargo efetivo ou em comissão.",
@@ -442,7 +442,7 @@ const QUESTOES_SESAUAL_LOTE61 = [
   },
   {
     id: "ET-045", disciplina: "Ética no Serviço Público", assunto: "Código de Ética Funcional (AL)", subassunto: "Registro na ficha funcional",
-    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
+    concurso: "SESAU", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Edital SESAU/AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.8,
     enunciado: "A cominação aplicada pela Comissão de Ética será transcrita na ficha funcional do faltoso por um período de cinco anos, para todos os efeitos legais.",
@@ -461,7 +461,7 @@ const QUESTOES_SESAUAL_LOTE61 = [
   },
   {
     id: "ET-046", disciplina: "Ética no Serviço Público", assunto: "Código de Ética Funcional (AL)", subassunto: "Relação com o processo administrativo disciplinar",
-    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
+    concurso: "SESAU", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Edital SESAU/AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.79,
     enunciado: "Sempre que a conduta do servidor ou sua reincidência ensejar a imposição de penalidade, a Comissão de Ética aplicará diretamente a sanção disciplinar cabível, nos termos do Regime Jurídico Único dos Servidores Públicos do Estado de Alagoas.",
@@ -480,7 +480,7 @@ const QUESTOES_SESAUAL_LOTE61 = [
   },
   {
     id: "ET-047", disciplina: "Ética no Serviço Público", assunto: "Código de Ética Funcional (AL)", subassunto: "Divulgação das decisões",
-    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
+    concurso: "SESAU", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Edital SESAU/AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 60, probReaparecer: 0.74,
     enunciado: "As decisões da Comissão de Ética serão resumidas em ementa e, com a omissão dos nomes dos interessados, divulgadas no próprio órgão ou entidade, bem como remetidas às demais Comissões de Ética.",
@@ -499,7 +499,7 @@ const QUESTOES_SESAUAL_LOTE61 = [
   },
   {
     id: "ET-048", disciplina: "Ética no Serviço Público", assunto: "Código de Ética Funcional (AL)", subassunto: "Vedação de non liquet ético",
-    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
+    concurso: "SESAU", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Edital SESAU/AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.77,
     enunciado: "Diante de conduta não prevista expressamente no Código de Ética, a Comissão deverá abster-se de julgar, em respeito ao princípio da tipicidade, arquivando o expediente.",
@@ -518,7 +518,7 @@ const QUESTOES_SESAUAL_LOTE61 = [
   },
   {
     id: "ET-049", disciplina: "Ética no Serviço Público", assunto: "Código de Ética Funcional (AL)", subassunto: "Compromisso solene na posse",
-    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
+    concurso: "SESAU", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Edital SESAU/AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.72,
     enunciado: "Em cada órgão e entidade do Poder Executivo estadual, quem houver de tomar posse ou ser investido em função pública deverá prestar, perante a respectiva Comissão de Ética, compromisso solene de acatamento e observância das regras do Código de Ética Funcional.",
@@ -537,7 +537,7 @@ const QUESTOES_SESAUAL_LOTE61 = [
   },
   {
     id: "ET-050", disciplina: "Ética no Serviço Público", assunto: "Código de Ética Funcional (AL)", subassunto: "Registros de conduta ética e carreira",
-    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
+    concurso: "SESAU", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (contraexemplo de padrão)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.75,
     enunciado: "Incumbe à Comissão de Ética fornecer, aos organismos encarregados da execução do quadro de carreira, os registros sobre a conduta ética dos servidores, para o efeito de instruir e fundamentar promoções e demais procedimentos próprios da carreira.",

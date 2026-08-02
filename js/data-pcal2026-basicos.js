@@ -213,7 +213,7 @@ const QUESTOES_PCAL_BASICOS = [
   /* ============ ÉTICA NO SERVIÇO PÚBLICO ============ */
   {
     id: "ET-001", disciplina: "Ética no Serviço Público", assunto: "Ética e moral", subassunto: "Distinção conceitual",
-    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 1, tempoIdealSeg: 30, probReaparecer: 0.8,
     enunciado: "Ética e moral são conceitos idênticos, visto que ambos designam o conjunto de normas de conduta adotadas por determinado grupo social em dado momento histórico.",
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "idênticos",
@@ -231,7 +231,7 @@ const QUESTOES_PCAL_BASICOS = [
   },
   {
     id: "ET-002", disciplina: "Ética no Serviço Público", assunto: "Ética e função pública", subassunto: "Legalidade e moralidade",
-    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 35, probReaparecer: 0.8,
     enunciado: "A conduta eticamente adequada do servidor público restringe-se ao cumprimento estrito da legalidade, pois ato legal é, por definição, ato honesto e conveniente ao interesse público.",
     gabarito: "E", pegadinha: "restricao-indevida", palavraChave: "restringe-se",
@@ -249,7 +249,7 @@ const QUESTOES_PCAL_BASICOS = [
   },
   {
     id: "ET-003", disciplina: "Ética no Serviço Público", assunto: "Ética e democracia", subassunto: "Exercício da cidadania",
-    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 1, tempoIdealSeg: 30, probReaparecer: 0.7,
     enunciado: "No regime democrático, o exercício da cidadania esgota-se no direito de votar e de ser votado, não abrangendo formas de participação e de controle social da administração pública.",
     gabarito: "E", pegadinha: "restricao-indevida", palavraChave: "esgota-se",

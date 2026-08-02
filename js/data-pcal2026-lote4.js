@@ -13,7 +13,7 @@ const QUESTOES_PCAL_LOTE4 = [
   /* ==================== LÍNGUA PORTUGUESA ==================== */
   {
     id: "PT-005", disciplina: "Língua Portuguesa", assunto: "Concordância", subassunto: "Verbo 'fazer' impessoal (tempo)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 40, probReaparecer: 0.85,
     enunciado: "No trecho 'Fazem cinco anos que o inquérito foi instaurado', o emprego do verbo no plural atende à norma-padrão, uma vez que concorda com o termo 'cinco anos'.",
     gabarito: "E", pegadinha: "exigencia-inexistente", palavraChave: "Fazem cinco anos",
@@ -31,7 +31,7 @@ const QUESTOES_PCAL_LOTE4 = [
   },
   {
     id: "PT-006", disciplina: "Língua Portuguesa", assunto: "Crase", subassunto: "Locuções e palavras femininas",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 40, probReaparecer: 0.8,
     enunciado: "Na frase 'O suspeito foi mantido a distância pelos agentes', a ausência do acento grave em 'a distância' respeita a norma-padrão, pois a palavra 'distância' não vem determinada por adjunto que a especifique.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "a distância (sem especificação)",
@@ -49,7 +49,7 @@ const QUESTOES_PCAL_LOTE4 = [
   },
   {
     id: "PT-007", disciplina: "Língua Portuguesa", assunto: "Colocação pronominal", subassunto: "Próclise obrigatória",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 40, probReaparecer: 0.78,
     enunciado: "Em 'Nunca se viu tamanha celeridade nas investigações', a próclise (colocação do pronome antes do verbo) é obrigatória em razão da presença do advérbio de negação 'nunca'.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "nunca (palavra atrativa)",
@@ -67,7 +67,7 @@ const QUESTOES_PCAL_LOTE4 = [
   },
   {
     id: "PT-008", disciplina: "Língua Portuguesa", assunto: "Regência verbal", subassunto: "Verbo 'assistir'",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 45, probReaparecer: 0.72,
     enunciado: "Em 'Os peritos assistiram o laudo com atenção', o verbo 'assistir', no sentido de presenciar, está corretamente empregado como transitivo direto, dispensando a preposição 'a'.",
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "assistiram o laudo",
@@ -85,7 +85,7 @@ const QUESTOES_PCAL_LOTE4 = [
   },
   {
     id: "PT-009", disciplina: "Língua Portuguesa", assunto: "Compreensão e reescritura", subassunto: "Voz passiva",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 45, probReaparecer: 0.8,
     textoApoio: "A autoridade policial instaurou o inquérito após receber a notícia do crime.",
     enunciado: "A transposição do período para a voz passiva mantém a correção e o sentido na forma: 'O inquérito foi instaurado pela autoridade policial após receber a notícia do crime'.",
@@ -272,7 +272,7 @@ const QUESTOES_PCAL_LOTE4 = [
   /* ==================== ÉTICA NO SERVIÇO PÚBLICO ==================== */
   {
     id: "ET-004", disciplina: "Ética no Serviço Público", assunto: "Ética e moral", subassunto: "Distinção conceitual",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 40, probReaparecer: 0.8,
     enunciado: "A moral corresponde ao conjunto de normas e costumes efetivamente vividos por um grupo social, enquanto a ética é a reflexão crítica e filosófica sobre esses valores morais.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "reflexão crítica",
@@ -290,7 +290,7 @@ const QUESTOES_PCAL_LOTE4 = [
   },
   {
     id: "ET-005", disciplina: "Ética no Serviço Público", assunto: "Ética e função pública", subassunto: "Princípios da Administração",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 40, probReaparecer: 0.82,
     enunciado: "O princípio da impessoalidade, aplicável ao servidor público, impõe que a atuação administrativa seja voltada ao interesse público, vedando a promoção pessoal do agente à custa de atos e realizações da Administração.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "impessoalidade",
@@ -308,7 +308,7 @@ const QUESTOES_PCAL_LOTE4 = [
   },
   {
     id: "ET-006", disciplina: "Ética no Serviço Público", assunto: "Ética no setor público", subassunto: "Conduta do servidor",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 40, probReaparecer: 0.75,
     enunciado: "No exercício da função pública, a cortesia, a boa-vontade e o zelo no trato com o cidadão são deveres éticos do servidor, e não meras liberalidades sujeitas à sua conveniência pessoal.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "deveres éticos",

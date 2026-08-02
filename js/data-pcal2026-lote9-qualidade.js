@@ -370,7 +370,7 @@ const QUESTOES_PCAL_LOTE9 = [
   /* ===== LÍNGUA PORTUGUESA (com texto de apoio) ===== */
   {
     id: "PT-013", disciplina: "Língua Portuguesa", assunto: "Compreensão e reescritura", subassunto: "Substituição que altera o sentido",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 60, probReaparecer: 0.85,
     textoApoio: "A investigação criminal moderna exige que o agente, além de conhecer a legislação, domine técnicas de análise de dados, uma vez que grande parte das provas hoje é digital. Sem esse preparo, dificilmente se chega à autoria dos delitos cibernéticos.",
     enunciado: "No trecho, a substituição da expressão 'uma vez que' por 'ainda que' preservaria a correção gramatical e o sentido original do período.",
@@ -389,7 +389,7 @@ const QUESTOES_PCAL_LOTE9 = [
   },
   {
     id: "PT-014", disciplina: "Língua Portuguesa", assunto: "Compreensão e reescritura", subassunto: "Referência pronominal",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.8,
     textoApoio: "A autoridade policial recebeu o relatório e o encaminhou ao Ministério Público, que ofereceu a denúncia.",
     enunciado: "No período, o pronome 'o', em 'encaminhou', refere-se ao termo 'relatório'.",
@@ -408,7 +408,7 @@ const QUESTOES_PCAL_LOTE9 = [
   },
   {
     id: "PT-015", disciplina: "Língua Portuguesa", assunto: "Concordância", subassunto: "Concordância verbal — sujeito composto",
-    concurso: "PCAL", cargo: ["Agente","Escrivão","Delegado","Perito Criminal","Papiloscopista"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Escrivão","Agente","Delegado","Perito Criminal","Papiloscopista","Especialista em Saúde — Fisioterapia"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.78,
     textoApoio: "O delegado e o escrivão analisou as provas do inquérito antes de encaminhá-lo ao juiz.",
     enunciado: "No período, o emprego do verbo 'analisou' no singular está de acordo com a norma-padrão de concordância verbal.",
