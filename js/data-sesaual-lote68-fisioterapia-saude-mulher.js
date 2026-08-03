@@ -38,7 +38,7 @@ const QUESTOES_SESAUAL_LOTE68 = [
 
   /* ===== COMPETÊNCIA PROFISSIONAL E MARCO REGULATÓRIO ===== */
   {
-    id: "FSM-001", disciplina: "Fisioterapia em Saúde da Mulher", assunto: "Marco regulatório da especialidade", subassunto: "Resolução COFFITO 401/2011 — campos de atuação",
+    id: "FSM-001", disciplina: "Fisioterapia", assunto: "Marco regulatório da especialidade", subassunto: "Resolução COFFITO 401/2011 — campos de atuação",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de generalização — contraexemplo)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 65, probReaparecer: 0.82,
@@ -57,7 +57,7 @@ const QUESTOES_SESAUAL_LOTE68 = [
     }
   },
   {
-    id: "FSM-002", disciplina: "Fisioterapia em Saúde da Mulher", assunto: "Marco regulatório da especialidade", subassunto: "Competências do especialista",
+    id: "FSM-002", disciplina: "Fisioterapia", assunto: "Marco regulatório da especialidade", subassunto: "Competências do especialista",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de restrição indevida)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 75, probReaparecer: 0.7,
@@ -76,7 +76,7 @@ const QUESTOES_SESAUAL_LOTE68 = [
     }
   },
   {
-    id: "FSM-003", disciplina: "Fisioterapia em Saúde da Mulher", assunto: "Anatomia funcional do assoalho pélvico", subassunto: "Músculo levantador do ânus",
+    id: "FSM-003", disciplina: "Fisioterapia", assunto: "Anatomia funcional do assoalho pélvico", subassunto: "Músculo levantador do ânus",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de troca de conceitos)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 80, probReaparecer: 0.86,
@@ -95,7 +95,7 @@ const QUESTOES_SESAUAL_LOTE68 = [
     }
   },
   {
-    id: "FSM-004", disciplina: "Fisioterapia em Saúde da Mulher", assunto: "Anatomia funcional do assoalho pélvico", subassunto: "Inervação",
+    id: "FSM-004", disciplina: "Fisioterapia", assunto: "Anatomia funcional do assoalho pélvico", subassunto: "Inervação",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de termo absoluto)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 80, probReaparecer: 0.74,
@@ -116,7 +116,7 @@ const QUESTOES_SESAUAL_LOTE68 = [
 
   /* ===== AVALIAÇÃO FUNCIONAL ===== */
   {
-    id: "FSM-005", disciplina: "Fisioterapia em Saúde da Mulher", assunto: "Avaliação do assoalho pélvico", subassunto: "Escala de Oxford modificada",
+    id: "FSM-005", disciplina: "Fisioterapia", assunto: "Avaliação do assoalho pélvico", subassunto: "Escala de Oxford modificada",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de troca numérica)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 80, probReaparecer: 0.88,
@@ -135,7 +135,7 @@ const QUESTOES_SESAUAL_LOTE68 = [
     }
   },
   {
-    id: "FSM-006", disciplina: "Fisioterapia em Saúde da Mulher", assunto: "Avaliação do assoalho pélvico", subassunto: "Esquema PERFECT",
+    id: "FSM-006", disciplina: "Fisioterapia", assunto: "Avaliação do assoalho pélvico", subassunto: "Esquema PERFECT",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de troca de conceitos)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 85, probReaparecer: 0.79,
@@ -154,7 +154,7 @@ const QUESTOES_SESAUAL_LOTE68 = [
     }
   },
   {
-    id: "FSM-007", disciplina: "Fisioterapia em Saúde da Mulher", assunto: "Avaliação do assoalho pélvico", subassunto: "Diário miccional",
+    id: "FSM-007", disciplina: "Fisioterapia", assunto: "Avaliação do assoalho pélvico", subassunto: "Diário miccional",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de literalidade técnica)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 70, probReaparecer: 0.81,
@@ -173,7 +173,7 @@ const QUESTOES_SESAUAL_LOTE68 = [
     }
   },
   {
-    id: "FSM-008", disciplina: "Fisioterapia em Saúde da Mulher", assunto: "Avaliação do assoalho pélvico", subassunto: "Pad test",
+    id: "FSM-008", disciplina: "Fisioterapia", assunto: "Avaliação do assoalho pélvico", subassunto: "Pad test",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de troca de conceitos)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 75, probReaparecer: 0.68,
@@ -192,7 +192,7 @@ const QUESTOES_SESAUAL_LOTE68 = [
     }
   },
   {
-    id: "FSM-009", disciplina: "Fisioterapia em Saúde da Mulher", assunto: "Avaliação do assoalho pélvico", subassunto: "Biofeedback",
+    id: "FSM-009", disciplina: "Fisioterapia", assunto: "Avaliação do assoalho pélvico", subassunto: "Biofeedback",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de troca de conceitos)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 80, probReaparecer: 0.77,
@@ -211,7 +211,7 @@ const QUESTOES_SESAUAL_LOTE68 = [
     }
   },
   {
-    id: "FSM-010", disciplina: "Fisioterapia em Saúde da Mulher", assunto: "Avaliação do assoalho pélvico", subassunto: "Classificação POP-Q",
+    id: "FSM-010", disciplina: "Fisioterapia", assunto: "Avaliação do assoalho pélvico", subassunto: "Classificação POP-Q",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de troca numérica)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 90, probReaparecer: 0.72,
@@ -232,7 +232,7 @@ const QUESTOES_SESAUAL_LOTE68 = [
 
   /* ===== INCONTINÊNCIA URINÁRIA ===== */
   {
-    id: "FSM-011", disciplina: "Fisioterapia em Saúde da Mulher", assunto: "Incontinência urinária", subassunto: "Tipos de incontinência",
+    id: "FSM-011", disciplina: "Fisioterapia", assunto: "Incontinência urinária", subassunto: "Tipos de incontinência",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de troca de conceitos)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 70, probReaparecer: 0.9,
@@ -251,7 +251,7 @@ const QUESTOES_SESAUAL_LOTE68 = [
     }
   },
   {
-    id: "FSM-012", disciplina: "Fisioterapia em Saúde da Mulher", assunto: "Incontinência urinária", subassunto: "Tratamento de primeira linha",
+    id: "FSM-012", disciplina: "Fisioterapia", assunto: "Incontinência urinária", subassunto: "Tratamento de primeira linha",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de termo absoluto — contraexemplo)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 70, probReaparecer: 0.87,
@@ -270,7 +270,7 @@ const QUESTOES_SESAUAL_LOTE68 = [
     }
   },
   {
-    id: "FSM-013", disciplina: "Fisioterapia em Saúde da Mulher", assunto: "Incontinência urinária", subassunto: "Manobra de Valsalva no treino",
+    id: "FSM-013", disciplina: "Fisioterapia", assunto: "Incontinência urinária", subassunto: "Manobra de Valsalva no treino",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de exigência inexistente)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 80, probReaparecer: 0.75,
@@ -289,7 +289,7 @@ const QUESTOES_SESAUAL_LOTE68 = [
     }
   },
   {
-    id: "FSM-014", disciplina: "Fisioterapia em Saúde da Mulher", assunto: "Incontinência urinária", subassunto: "Eletroestimulação",
+    id: "FSM-014", disciplina: "Fisioterapia", assunto: "Incontinência urinária", subassunto: "Eletroestimulação",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de troca numérica)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 90, probReaparecer: 0.7,
@@ -308,7 +308,7 @@ const QUESTOES_SESAUAL_LOTE68 = [
     }
   },
   {
-    id: "FSM-015", disciplina: "Fisioterapia em Saúde da Mulher", assunto: "Incontinência urinária", subassunto: "Treinamento vesical",
+    id: "FSM-015", disciplina: "Fisioterapia", assunto: "Incontinência urinária", subassunto: "Treinamento vesical",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de restrição indevida — contraexemplo)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 80, probReaparecer: 0.73,
@@ -327,7 +327,7 @@ const QUESTOES_SESAUAL_LOTE68 = [
     }
   },
   {
-    id: "FSM-016", disciplina: "Fisioterapia em Saúde da Mulher", assunto: "Incontinência urinária", subassunto: "Cones vaginais",
+    id: "FSM-016", disciplina: "Fisioterapia", assunto: "Incontinência urinária", subassunto: "Cones vaginais",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de generalização)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 75, probReaparecer: 0.62,
@@ -348,7 +348,7 @@ const QUESTOES_SESAUAL_LOTE68 = [
 
   /* ===== PROLAPSO E CLIMATÉRIO ===== */
   {
-    id: "FSM-017", disciplina: "Fisioterapia em Saúde da Mulher", assunto: "Prolapso de órgãos pélvicos", subassunto: "Tipos de prolapso",
+    id: "FSM-017", disciplina: "Fisioterapia", assunto: "Prolapso de órgãos pélvicos", subassunto: "Tipos de prolapso",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de troca de conceitos)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 80, probReaparecer: 0.76,
@@ -367,7 +367,7 @@ const QUESTOES_SESAUAL_LOTE68 = [
     }
   },
   {
-    id: "FSM-018", disciplina: "Fisioterapia em Saúde da Mulher", assunto: "Prolapso de órgãos pélvicos", subassunto: "Fatores de risco",
+    id: "FSM-018", disciplina: "Fisioterapia", assunto: "Prolapso de órgãos pélvicos", subassunto: "Fatores de risco",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de generalização — contraexemplo)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 70, probReaparecer: 0.71,
@@ -386,7 +386,7 @@ const QUESTOES_SESAUAL_LOTE68 = [
     }
   },
   {
-    id: "FSM-019", disciplina: "Fisioterapia em Saúde da Mulher", assunto: "Climatério e menopausa", subassunto: "Repercussões do hipoestrogenismo",
+    id: "FSM-019", disciplina: "Fisioterapia", assunto: "Climatério e menopausa", subassunto: "Repercussões do hipoestrogenismo",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de troca de conceitos)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 80, probReaparecer: 0.69,
@@ -405,7 +405,7 @@ const QUESTOES_SESAUAL_LOTE68 = [
     }
   },
   {
-    id: "FSM-020", disciplina: "Fisioterapia em Saúde da Mulher", assunto: "Climatério e menopausa", subassunto: "Conduta fisioterapêutica",
+    id: "FSM-020", disciplina: "Fisioterapia", assunto: "Climatério e menopausa", subassunto: "Conduta fisioterapêutica",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de generalização)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 80, probReaparecer: 0.6,
@@ -426,7 +426,7 @@ const QUESTOES_SESAUAL_LOTE68 = [
 
   /* ===== OBSTETRÍCIA ===== */
   {
-    id: "FSM-021", disciplina: "Fisioterapia em Saúde da Mulher", assunto: "Fisioterapia na gestação", subassunto: "Alterações posturais",
+    id: "FSM-021", disciplina: "Fisioterapia", assunto: "Fisioterapia na gestação", subassunto: "Alterações posturais",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de troca de conceitos)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 80, probReaparecer: 0.84,
@@ -445,7 +445,7 @@ const QUESTOES_SESAUAL_LOTE68 = [
     }
   },
   {
-    id: "FSM-022", disciplina: "Fisioterapia em Saúde da Mulher", assunto: "Fisioterapia na gestação", subassunto: "Contraindicações ao exercício",
+    id: "FSM-022", disciplina: "Fisioterapia", assunto: "Fisioterapia na gestação", subassunto: "Contraindicações ao exercício",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de restrição indevida)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 90, probReaparecer: 0.8,
@@ -464,7 +464,7 @@ const QUESTOES_SESAUAL_LOTE68 = [
     }
   },
   {
-    id: "FSM-023", disciplina: "Fisioterapia em Saúde da Mulher", assunto: "Fisioterapia na gestação", subassunto: "Diástase do reto abdominal",
+    id: "FSM-023", disciplina: "Fisioterapia", assunto: "Fisioterapia na gestação", subassunto: "Diástase do reto abdominal",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de troca de conceitos)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 85, probReaparecer: 0.78,
@@ -483,7 +483,7 @@ const QUESTOES_SESAUAL_LOTE68 = [
     }
   },
   {
-    id: "FSM-024", disciplina: "Fisioterapia em Saúde da Mulher", assunto: "Fisioterapia na gestação", subassunto: "Dor lombopélvica gestacional",
+    id: "FSM-024", disciplina: "Fisioterapia", assunto: "Fisioterapia na gestação", subassunto: "Dor lombopélvica gestacional",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de literalidade técnica)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 80, probReaparecer: 0.72,
@@ -502,7 +502,7 @@ const QUESTOES_SESAUAL_LOTE68 = [
     }
   },
   {
-    id: "FSM-025", disciplina: "Fisioterapia em Saúde da Mulher", assunto: "Fisioterapia no parto", subassunto: "Recursos não farmacológicos",
+    id: "FSM-025", disciplina: "Fisioterapia", assunto: "Fisioterapia no parto", subassunto: "Recursos não farmacológicos",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de generalização — contraexemplo)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 70, probReaparecer: 0.79,
@@ -521,7 +521,7 @@ const QUESTOES_SESAUAL_LOTE68 = [
     }
   },
   {
-    id: "FSM-026", disciplina: "Fisioterapia em Saúde da Mulher", assunto: "Fisioterapia no parto", subassunto: "Períodos clínicos do parto",
+    id: "FSM-026", disciplina: "Fisioterapia", assunto: "Fisioterapia no parto", subassunto: "Períodos clínicos do parto",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de troca numérica)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 80, probReaparecer: 0.67,
@@ -540,7 +540,7 @@ const QUESTOES_SESAUAL_LOTE68 = [
     }
   },
   {
-    id: "FSM-027", disciplina: "Fisioterapia em Saúde da Mulher", assunto: "Puerpério", subassunto: "Conduta no pós-parto imediato",
+    id: "FSM-027", disciplina: "Fisioterapia", assunto: "Puerpério", subassunto: "Conduta no pós-parto imediato",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de verdade seguida de falso — contraexemplo)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 80, probReaparecer: 0.7,
@@ -559,7 +559,7 @@ const QUESTOES_SESAUAL_LOTE68 = [
     }
   },
   {
-    id: "FSM-028", disciplina: "Fisioterapia em Saúde da Mulher", assunto: "Puerpério", subassunto: "Amamentação e mastite",
+    id: "FSM-028", disciplina: "Fisioterapia", assunto: "Puerpério", subassunto: "Amamentação e mastite",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de exigência inexistente)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 80, probReaparecer: 0.68,
@@ -580,7 +580,7 @@ const QUESTOES_SESAUAL_LOTE68 = [
 
   /* ===== MASTOLOGIA E ONCOLOGIA ===== */
   {
-    id: "FSM-029", disciplina: "Fisioterapia em Saúde da Mulher", assunto: "Mastologia e oncologia", subassunto: "Linfedema — terapia complexa descongestiva",
+    id: "FSM-029", disciplina: "Fisioterapia", assunto: "Mastologia e oncologia", subassunto: "Linfedema — terapia complexa descongestiva",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de verdade seguida de falso — contraexemplo)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 85, probReaparecer: 0.89,
@@ -599,7 +599,7 @@ const QUESTOES_SESAUAL_LOTE68 = [
     }
   },
   {
-    id: "FSM-030", disciplina: "Fisioterapia em Saúde da Mulher", assunto: "Mastologia e oncologia", subassunto: "Drenagem linfática manual — contraindicações",
+    id: "FSM-030", disciplina: "Fisioterapia", assunto: "Mastologia e oncologia", subassunto: "Drenagem linfática manual — contraindicações",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de generalização)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 85, probReaparecer: 0.81,
@@ -618,7 +618,7 @@ const QUESTOES_SESAUAL_LOTE68 = [
     }
   },
   {
-    id: "FSM-031", disciplina: "Fisioterapia em Saúde da Mulher", assunto: "Mastologia e oncologia", subassunto: "Complicações da linfadenectomia axilar",
+    id: "FSM-031", disciplina: "Fisioterapia", assunto: "Mastologia e oncologia", subassunto: "Complicações da linfadenectomia axilar",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de termo absoluto)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 90, probReaparecer: 0.83,
@@ -637,7 +637,7 @@ const QUESTOES_SESAUAL_LOTE68 = [
     }
   },
   {
-    id: "FSM-032", disciplina: "Fisioterapia em Saúde da Mulher", assunto: "Mastologia e oncologia", subassunto: "Síndrome da rede axilar",
+    id: "FSM-032", disciplina: "Fisioterapia", assunto: "Mastologia e oncologia", subassunto: "Síndrome da rede axilar",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de troca de conceitos)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 85, probReaparecer: 0.66,
@@ -656,7 +656,7 @@ const QUESTOES_SESAUAL_LOTE68 = [
     }
   },
   {
-    id: "FSM-033", disciplina: "Fisioterapia em Saúde da Mulher", assunto: "Mastologia e oncologia", subassunto: "Reabilitação pós-mastectomia",
+    id: "FSM-033", disciplina: "Fisioterapia", assunto: "Mastologia e oncologia", subassunto: "Reabilitação pós-mastectomia",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de troca numérica)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 85, probReaparecer: 0.74,
@@ -675,7 +675,7 @@ const QUESTOES_SESAUAL_LOTE68 = [
     }
   },
   {
-    id: "FSM-034", disciplina: "Fisioterapia em Saúde da Mulher", assunto: "Mastologia e oncologia", subassunto: "Linfedema — medidas de prevenção",
+    id: "FSM-034", disciplina: "Fisioterapia", assunto: "Mastologia e oncologia", subassunto: "Linfedema — medidas de prevenção",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de verdade seguida de falso)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 90, probReaparecer: 0.76,
@@ -696,7 +696,7 @@ const QUESTOES_SESAUAL_LOTE68 = [
 
   /* ===== COLOPROCTOLOGIA ===== */
   {
-    id: "FSM-035", disciplina: "Fisioterapia em Saúde da Mulher", assunto: "Coloproctologia", subassunto: "Continência fecal",
+    id: "FSM-035", disciplina: "Fisioterapia", assunto: "Coloproctologia", subassunto: "Continência fecal",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de troca de conceitos)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 85, probReaparecer: 0.71,
@@ -715,7 +715,7 @@ const QUESTOES_SESAUAL_LOTE68 = [
     }
   },
   {
-    id: "FSM-036", disciplina: "Fisioterapia em Saúde da Mulher", assunto: "Coloproctologia", subassunto: "Incontinência anal — fatores obstétricos",
+    id: "FSM-036", disciplina: "Fisioterapia", assunto: "Coloproctologia", subassunto: "Incontinência anal — fatores obstétricos",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de troca numérica — contraexemplo)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 80, probReaparecer: 0.7,
@@ -734,7 +734,7 @@ const QUESTOES_SESAUAL_LOTE68 = [
     }
   },
   {
-    id: "FSM-037", disciplina: "Fisioterapia em Saúde da Mulher", assunto: "Coloproctologia", subassunto: "Dissinergia do assoalho pélvico",
+    id: "FSM-037", disciplina: "Fisioterapia", assunto: "Coloproctologia", subassunto: "Dissinergia do assoalho pélvico",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de troca de conceitos)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 90, probReaparecer: 0.64,
@@ -753,7 +753,7 @@ const QUESTOES_SESAUAL_LOTE68 = [
     }
   },
   {
-    id: "FSM-038", disciplina: "Fisioterapia em Saúde da Mulher", assunto: "Coloproctologia", subassunto: "Orientações no manejo da constipação",
+    id: "FSM-038", disciplina: "Fisioterapia", assunto: "Coloproctologia", subassunto: "Orientações no manejo da constipação",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de troca de conceitos — contraexemplo)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 70, probReaparecer: 0.62,
@@ -774,7 +774,7 @@ const QUESTOES_SESAUAL_LOTE68 = [
 
   /* ===== DISFUNÇÕES SEXUAIS ===== */
   {
-    id: "FSM-039", disciplina: "Fisioterapia em Saúde da Mulher", assunto: "Disfunções sexuais femininas", subassunto: "Vaginismo e dispareunia",
+    id: "FSM-039", disciplina: "Fisioterapia", assunto: "Disfunções sexuais femininas", subassunto: "Vaginismo e dispareunia",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de troca de conceitos)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 85, probReaparecer: 0.72,
@@ -793,7 +793,7 @@ const QUESTOES_SESAUAL_LOTE68 = [
     }
   },
   {
-    id: "FSM-040", disciplina: "Fisioterapia em Saúde da Mulher", assunto: "Disfunções sexuais femininas", subassunto: "Hipertonia do assoalho pélvico",
+    id: "FSM-040", disciplina: "Fisioterapia", assunto: "Disfunções sexuais femininas", subassunto: "Hipertonia do assoalho pélvico",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de restrição indevida)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 90, probReaparecer: 0.77,
@@ -814,7 +814,7 @@ const QUESTOES_SESAUAL_LOTE68 = [
 
   /* ===== SAÚDE COLETIVA APLICADA ===== */
   {
-    id: "FSM-041", disciplina: "Fisioterapia em Saúde da Mulher", assunto: "Saúde da mulher no SUS", subassunto: "Rastreamento do câncer de colo do útero",
+    id: "FSM-041", disciplina: "Fisioterapia", assunto: "Saúde da mulher no SUS", subassunto: "Rastreamento do câncer de colo do útero",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de troca numérica)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 85, probReaparecer: 0.75,
@@ -833,7 +833,7 @@ const QUESTOES_SESAUAL_LOTE68 = [
     }
   },
   {
-    id: "FSM-042", disciplina: "Fisioterapia em Saúde da Mulher", assunto: "Saúde da mulher no SUS", subassunto: "Níveis de atenção e prevenção",
+    id: "FSM-042", disciplina: "Fisioterapia", assunto: "Saúde da mulher no SUS", subassunto: "Níveis de atenção e prevenção",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de troca de conceitos)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 85, probReaparecer: 0.68,
@@ -852,7 +852,7 @@ const QUESTOES_SESAUAL_LOTE68 = [
     }
   },
   {
-    id: "FSM-043", disciplina: "Fisioterapia em Saúde da Mulher", assunto: "Saúde da mulher no SUS", subassunto: "Rastreamento do câncer de mama",
+    id: "FSM-043", disciplina: "Fisioterapia", assunto: "Saúde da mulher no SUS", subassunto: "Rastreamento do câncer de mama",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de restrição indevida — contraexemplo)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 80, probReaparecer: 0.7,
@@ -873,7 +873,7 @@ const QUESTOES_SESAUAL_LOTE68 = [
 
   /* ===== APROFUNDAMENTO ===== */
   {
-    id: "FSM-044", disciplina: "Fisioterapia em Saúde da Mulher", assunto: "Incontinência urinária", subassunto: "Knack",
+    id: "FSM-044", disciplina: "Fisioterapia", assunto: "Incontinência urinária", subassunto: "Knack",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de troca de conceitos)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 85, probReaparecer: 0.66,
@@ -892,7 +892,7 @@ const QUESTOES_SESAUAL_LOTE68 = [
     }
   },
   {
-    id: "FSM-045", disciplina: "Fisioterapia em Saúde da Mulher", assunto: "Avaliação do assoalho pélvico", subassunto: "Manometria e eletromiografia",
+    id: "FSM-045", disciplina: "Fisioterapia", assunto: "Avaliação do assoalho pélvico", subassunto: "Manometria e eletromiografia",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de troca de conceitos)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 85, probReaparecer: 0.65,
@@ -911,7 +911,7 @@ const QUESTOES_SESAUAL_LOTE68 = [
     }
   },
   {
-    id: "FSM-046", disciplina: "Fisioterapia em Saúde da Mulher", assunto: "Fisioterapia na gestação", subassunto: "Decúbito e síndrome hipotensiva",
+    id: "FSM-046", disciplina: "Fisioterapia", assunto: "Fisioterapia na gestação", subassunto: "Decúbito e síndrome hipotensiva",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de troca de conceitos)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 85, probReaparecer: 0.79,
@@ -930,7 +930,7 @@ const QUESTOES_SESAUAL_LOTE68 = [
     }
   },
   {
-    id: "FSM-047", disciplina: "Fisioterapia em Saúde da Mulher", assunto: "Fisioterapia na gestação", subassunto: "Massagem perineal",
+    id: "FSM-047", disciplina: "Fisioterapia", assunto: "Fisioterapia na gestação", subassunto: "Massagem perineal",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de troca numérica — contraexemplo)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 80, probReaparecer: 0.73,
@@ -949,7 +949,7 @@ const QUESTOES_SESAUAL_LOTE68 = [
     }
   },
   {
-    id: "FSM-048", disciplina: "Fisioterapia em Saúde da Mulher", assunto: "Mastologia e oncologia", subassunto: "Linfedema — estadiamento",
+    id: "FSM-048", disciplina: "Fisioterapia", assunto: "Mastologia e oncologia", subassunto: "Linfedema — estadiamento",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de troca de conceitos)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 85, probReaparecer: 0.69,
@@ -968,7 +968,7 @@ const QUESTOES_SESAUAL_LOTE68 = [
     }
   },
   {
-    id: "FSM-049", disciplina: "Fisioterapia em Saúde da Mulher", assunto: "Mastologia e oncologia", subassunto: "Aferição do linfedema",
+    id: "FSM-049", disciplina: "Fisioterapia", assunto: "Mastologia e oncologia", subassunto: "Aferição do linfedema",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de exigência inexistente)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 85, probReaparecer: 0.63,
@@ -987,7 +987,7 @@ const QUESTOES_SESAUAL_LOTE68 = [
     }
   },
   {
-    id: "FSM-050", disciplina: "Fisioterapia em Saúde da Mulher", assunto: "Incontinência urinária", subassunto: "Incontinência mista",
+    id: "FSM-050", disciplina: "Fisioterapia", assunto: "Incontinência urinária", subassunto: "Incontinência mista",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de verdade seguida de falso)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 90, probReaparecer: 0.7,
@@ -1006,7 +1006,7 @@ const QUESTOES_SESAUAL_LOTE68 = [
     }
   },
   {
-    id: "FSM-051", disciplina: "Fisioterapia em Saúde da Mulher", assunto: "Fisioterapia na gestação", subassunto: "Incontinência urinária gestacional",
+    id: "FSM-051", disciplina: "Fisioterapia", assunto: "Fisioterapia na gestação", subassunto: "Incontinência urinária gestacional",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de generalização)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 80, probReaparecer: 0.74,
@@ -1025,7 +1025,7 @@ const QUESTOES_SESAUAL_LOTE68 = [
     }
   },
   {
-    id: "FSM-052", disciplina: "Fisioterapia em Saúde da Mulher", assunto: "Anatomia funcional do assoalho pélvico", subassunto: "Períneo superficial",
+    id: "FSM-052", disciplina: "Fisioterapia", assunto: "Anatomia funcional do assoalho pélvico", subassunto: "Períneo superficial",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de troca de conceitos)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 80, probReaparecer: 0.61,
@@ -1044,7 +1044,7 @@ const QUESTOES_SESAUAL_LOTE68 = [
     }
   },
   {
-    id: "FSM-053", disciplina: "Fisioterapia em Saúde da Mulher", assunto: "Marco regulatório da especialidade", subassunto: "Ambientes de atuação",
+    id: "FSM-053", disciplina: "Fisioterapia", assunto: "Marco regulatório da especialidade", subassunto: "Ambientes de atuação",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de restrição indevida)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 70, probReaparecer: 0.64,
@@ -1063,7 +1063,7 @@ const QUESTOES_SESAUAL_LOTE68 = [
     }
   },
   {
-    id: "FSM-054", disciplina: "Fisioterapia em Saúde da Mulher", assunto: "Coloproctologia", subassunto: "Ângulo anorretal",
+    id: "FSM-054", disciplina: "Fisioterapia", assunto: "Coloproctologia", subassunto: "Ângulo anorretal",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de troca de conceitos)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 85, probReaparecer: 0.62,
@@ -1082,7 +1082,7 @@ const QUESTOES_SESAUAL_LOTE68 = [
     }
   },
   {
-    id: "FSM-055", disciplina: "Fisioterapia em Saúde da Mulher", assunto: "Puerpério", subassunto: "Reabilitação do assoalho pélvico pós-parto",
+    id: "FSM-055", disciplina: "Fisioterapia", assunto: "Puerpério", subassunto: "Reabilitação do assoalho pélvico pós-parto",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de generalização)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 80, probReaparecer: 0.72,
@@ -1101,7 +1101,7 @@ const QUESTOES_SESAUAL_LOTE68 = [
     }
   },
   {
-    id: "FSM-056", disciplina: "Fisioterapia em Saúde da Mulher", assunto: "Disfunções sexuais femininas", subassunto: "Abordagem da dor pélvica crônica",
+    id: "FSM-056", disciplina: "Fisioterapia", assunto: "Disfunções sexuais femininas", subassunto: "Abordagem da dor pélvica crônica",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de restrição indevida — contraexemplo)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 85, probReaparecer: 0.67,
@@ -1120,7 +1120,7 @@ const QUESTOES_SESAUAL_LOTE68 = [
     }
   },
   {
-    id: "FSM-057", disciplina: "Fisioterapia em Saúde da Mulher", assunto: "Avaliação do assoalho pélvico", subassunto: "Recrutamento de músculos acessórios",
+    id: "FSM-057", disciplina: "Fisioterapia", assunto: "Avaliação do assoalho pélvico", subassunto: "Recrutamento de músculos acessórios",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de troca de conceitos)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 80, probReaparecer: 0.71,
@@ -1139,7 +1139,7 @@ const QUESTOES_SESAUAL_LOTE68 = [
     }
   },
   {
-    id: "FSM-058", disciplina: "Fisioterapia em Saúde da Mulher", assunto: "Mastologia e oncologia", subassunto: "Compressão no linfedema",
+    id: "FSM-058", disciplina: "Fisioterapia", assunto: "Mastologia e oncologia", subassunto: "Compressão no linfedema",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de termo absoluto)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 90, probReaparecer: 0.68,
@@ -1158,7 +1158,7 @@ const QUESTOES_SESAUAL_LOTE68 = [
     }
   },
   {
-    id: "FSM-059", disciplina: "Fisioterapia em Saúde da Mulher", assunto: "Saúde da mulher no SUS", subassunto: "Rede de atenção e acolhimento",
+    id: "FSM-059", disciplina: "Fisioterapia", assunto: "Saúde da mulher no SUS", subassunto: "Rede de atenção e acolhimento",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de literalidade técnica)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 70, probReaparecer: 0.66,
@@ -1177,7 +1177,7 @@ const QUESTOES_SESAUAL_LOTE68 = [
     }
   },
   {
-    id: "FSM-060", disciplina: "Fisioterapia em Saúde da Mulher", assunto: "Marco regulatório da especialidade", subassunto: "Registro e obtenção do título",
+    id: "FSM-060", disciplina: "Fisioterapia", assunto: "Marco regulatório da especialidade", subassunto: "Registro e obtenção do título",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de generalização)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 75, probReaparecer: 0.58,
@@ -1200,10 +1200,10 @@ const QUESTOES_SESAUAL_LOTE68 = [
 
 QUESTOES.push(...QUESTOES_SESAUAL_LOTE68);
 
-/* Frequência de temas — Fisioterapia em Saúde da Mulher */
+/* Frequência de temas — Fisioterapia (bloco de saúde da mulher) */
 (function () {
-  let d = FREQUENCIA_TEMAS.find(f => f.disciplina === "Fisioterapia em Saúde da Mulher");
-  if (!d) { d = { disciplina: "Fisioterapia em Saúde da Mulher", temas: [] }; FREQUENCIA_TEMAS.push(d); }
+  let d = FREQUENCIA_TEMAS.find(f => f.disciplina === "Fisioterapia");
+  if (!d) { d = { disciplina: "Fisioterapia", temas: [] }; FREQUENCIA_TEMAS.push(d); }
   d.temas.push(
     { tema: "Uroginecologia — incontinência, avaliação funcional e recursos", freq: 90, tendencia: "alta", prob: 0.90 },
     { tema: "Mastologia e oncologia — linfedema, TCD e complicações axilares", freq: 86, tendencia: "alta", prob: 0.86 },

@@ -1036,7 +1036,7 @@ const INTELIGENCIA = {
        no caderno de Fisioterapia analisado. São estimativas declaradas como
        tal na interface — não há série histórica deste concurso. */
     frequenciaTemas: [
-      { disciplina: "Fisioterapia em Saúde da Mulher", temas: [
+      { disciplina: "Fisioterapia", temas: [
         { tema: "Assoalho pélvico e disfunções uroginecológicas", freq: 92, tendencia: "alta", prob: 0.94 },
         { tema: "Pré e pós-operatório de mastectomia e linfedema", freq: 88, tendencia: "alta", prob: 0.9 },
         { tema: "Obstetrícia: gestação, parto e puerpério", freq: 85, tendencia: "estavel", prob: 0.88 },
@@ -1079,9 +1079,9 @@ const INTELIGENCIA = {
     timeline: null,
 
     predicoes: [
-      { tema: "Disfunções do assoalho pélvico — avaliação e cinesioterapia", disciplina: "Fisioterapia em Saúde da Mulher", score: 95,
+      { tema: "Disfunções do assoalho pélvico — avaliação e cinesioterapia", disciplina: "Fisioterapia", score: 95,
         motivos: ["Núcleo do bloco 1 do edital (uroginecologia)", "Descrição do cargo cita avaliação cinésio-funcional uroginecológica", "Tema com escalas e graduações — terreno de troca numérica"] },
-      { tema: "Linfedema pós-mastectomia e drenagem linfática manual", disciplina: "Fisioterapia em Saúde da Mulher", score: 93,
+      { tema: "Linfedema pós-mastectomia e drenagem linfática manual", disciplina: "Fisioterapia", score: 93,
         motivos: ["Edital cita expressamente pré e pós-operatório de câncer de mama", "Contraindicações são armadilha clássica em item C/E", "Apareceu em prova CEBRASPE de fisioterapia analisada"] },
       { tema: "Lei 8.080/1990 — princípios e diretrizes do SUS", disciplina: "Legislação Aplicada ao SUS", score: 91,
         motivos: ["Dispositivo mais transcrito da legislação do SUS", "Art. 7º tem 14 incisos — rol longo favorece supressão e acréscimo"] },
@@ -1091,11 +1091,11 @@ const INTELIGENCIA = {
         motivos: ["Subitem nomeado no edital (5.1)", "Dois incisos consecutivos que só diferem pelo destinatário"] },
       { tema: "Estabilidade: 3 anos da CF x 24 meses da lei estadual", disciplina: "Legislação Estadual (AL)", score: 86,
         motivos: ["Lei estadual de 1991 não recepcionada quanto ao prazo pela EC 19/98", "Conflito entre norma estadual antiga e emenda posterior é alvo típico"] },
-      { tema: "Fisioterapia no pré e pós-parto e no puerpério", disciplina: "Fisioterapia em Saúde da Mulher", score: 84,
+      { tema: "Fisioterapia no pré e pós-parto e no puerpério", disciplina: "Fisioterapia", score: 84,
         motivos: ["Bloco 4 do edital trata expressamente de gestação, parto e puerpério", "Conteúdo com muitas condutas contraindicadas por fase"] },
       { tema: "Decreto 7.508/2011 — Portas de Entrada e RENASES/RENAME", disciplina: "Legislação Aplicada ao SUS", score: 82,
         motivos: ["Duas siglas quase idênticas do mesmo decreto", "Atenção especializada NÃO é porta de entrada — inversão frequente"] },
-      { tema: "Eletrotermofototerapia: indicações e contraindicações", disciplina: "Fisioterapia em Saúde da Mulher", score: 80,
+      { tema: "Eletrotermofototerapia: indicações e contraindicações", disciplina: "Fisioterapia", score: 80,
         motivos: ["Bloco 3 do edital lista onze recursos terapêuticos", "Prova CEBRASPE analisada trouxe cinco itens só sobre laser"] },
       { tema: "Licenças da Lei 5.247/1991 — prazos e remuneração", disciplina: "Legislação Estadual (AL)", score: 78,
         motivos: ["Sete licenças com prazos distintos e regras de remuneração", "Terreno natural de troca numérica"] },
@@ -1506,9 +1506,30 @@ const EDITAIS = {
           prova objetiva, Atualidades não entra — as questões C/E do banco
           servem como repertório para a redação, não como treino de item.
 
-       O específico não é fisioterapia geral: o edital delimita saúde da
-       mulher (uroginecologia, coloproctologia, obstetrícia, mastologia e
-       oncologia). Ortopedia, respiratória e neurofuncional não caem. */
+       3. CORREÇÃO IMPORTANTE. Este comentário afirmava que o específico se
+          limitava à saúde da mulher e que "ortopedia, respiratória e
+          neurofuncional não caem". Estava ERRADO, e o erro tem origem
+          identificável: a DESCRIÇÃO SUMÁRIA DAS ATIVIDADES do cargo é mesmo
+          centrada em uroginecologia, coloproctologia, mama e aparelho
+          reprodutor feminino — mas descrição de atribuições do cargo não é
+          conteúdo programático da prova. O item 16.2.4 do edital, para o
+          CARGO 5, cobra fisioterapia GERAL:
+
+            1 métodos e técnicas de avaliação, tratamento e procedimentos;
+            2 provas de função muscular; 3 cinesiologia e biomecânica;
+            4 análise da marcha; 5 exercícios terapêuticos e treinamento
+            funcional; 6 indicação, contraindicação, técnicas e efeitos
+            fisiológicos da hidroterapia, massoterapia, mecanoterapia,
+            crioterapia, eletroterapia, termoterapia superficial e profunda;
+            7 prescrição e treinamento de órteses e próteses; 8 anatomia,
+            fisiologia, fisiologia do exercício e fisiopatologia, semiologia
+            e procedimentos nas áreas neurológica e neuropediátrica,
+            ortopedia e traumatologia, cardiologia, pneumologia, ginecologia
+            e obstetrícia; 9 geriatria; 10 ética profissional.
+
+          Por isso a disciplina passou a se chamar "Fisioterapia", e não
+          "Fisioterapia em Saúde da Mulher": saúde da mulher é UM dos dez
+          tópicos, não o recorte da prova. */
     itensPorDisciplina: {
       /* P1 — conhecimentos básicos: 50 itens, 4 disciplinas na objetiva */
       "Língua Portuguesa": 12.5,
@@ -1516,7 +1537,7 @@ const EDITAIS = {
       "Legislação Estadual (AL)": 12.5,
       "Legislação Aplicada ao SUS": 12.5,
       /* P2 — conhecimentos específicos: 70 itens num bloco único */
-      "Fisioterapia em Saúde da Mulher": 70,
+      "Fisioterapia": 70,
     },
   },
 };
@@ -1550,8 +1571,8 @@ const DISCIPLINAS_JURIDICAS = [
   /* Trilha SESAU/AL: ambas são norma (CF arts. 194-200, Leis 8.080 e
      8.142, Decreto 7.508, Constituição estadual, Lei 5.247/1991), então
      recebem as estratégias de radar legislativo e checagem de literalidade.
-     "Fisioterapia em Saúde da Mulher" fica de fora de propósito: ali
-     `literalidade` significa conferir o protocolo clínico, não o artigo. */
+     "Fisioterapia" fica de fora de propósito: ali `literalidade` significa
+     conferir o protocolo clínico, não o artigo. */
   "Legislação Aplicada ao SUS",
   "Legislação Estadual (AL)",
 ];
