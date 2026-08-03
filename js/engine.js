@@ -76,7 +76,7 @@ function loadLocalState() {
     const raw = localStorage.getItem(STORAGE_KEY);
     if (raw) return JSON.parse(raw);
   } catch (e) { /* estado corrompido: recomeça */ }
-  return { respostas: {}, srs: {}, sessoes: [], config: { tema: "dark", concursoFoco: null, cargoFoco: "Escrivão", isAdmin: false, plano: "gratuito", onboardingVisitas: {}, metaTaxa: 0.75, dataProva: null } };
+  return { respostas: {}, srs: {}, sessoes: [], config: { tema: "dark", concursoFoco: null, cargoFoco: "Escrivão", isAdmin: false, plano: "gratuito", onboardingVisitas: {}, metaTaxa: 0.75, metaDiaria: null, dataProva: null } };
 }
 function saveLocalState() { localStorage.setItem(STORAGE_KEY, JSON.stringify(APP_STATE)); }
 const APP_STATE = loadLocalState();
@@ -133,6 +133,7 @@ async function carregarEstadoNuvem(user) {
     assinaturaTipo: assinaturaAtiva?.plano_tipo || null,
     onboardingVisitas: perfil?.onboarding_visitas || {},
     metaTaxa: perfil?.meta_taxa ?? 0.75,
+    metaDiaria: perfil?.meta_diaria ?? null,
     dataProva: perfil?.data_prova || null,
   };
 }
@@ -807,6 +808,108 @@ function faseDoPlano(diasRestantes) {
   return PLANO_FASES.base;
 }
 
+/* ---------------- Meta do dia ----------------
+   O plano sabia sugerir uma cota diária, mas nunca fechava o ciclo: não
+   contava o que já tinha sido feito hoje nem quanto faltava. Na prática a
+   cota virava número solto — o candidato abria a aba, lia "14 questões
+   hoje" e não tinha como saber se já as tinha feito. As funções abaixo
+   fecham esse laço.
+
+   ESCOPO: por trilha, e não global como o XP/streak. A distinção é a
+   mesma já documentada na seção de gamificação — engajamento é global,
+   desempenho é por trilha —, e aqui pesa um motivo extra e concreto: a
+   cota do dia é consumida pelas disciplinas do plano, que são as do
+   edital ativo. Contar respostas de outra trilha faria o total do dia
+   não bater com a soma das disciplinas exibidas logo abaixo dele. */
+const META_DIARIA_MIN = 1;
+const META_DIARIA_MAX = 200;
+function metaDiariaPadrao() { return Math.max(5, Math.round(META_SEMANAL_QUESTOES / 7)); }
+function metaDiariaConfigurada() {
+  const v = APP_STATE.config.metaDiaria;
+  return Number.isFinite(v) && v > 0
+    ? Math.min(META_DIARIA_MAX, Math.max(META_DIARIA_MIN, Math.round(v)))
+    : metaDiariaPadrao();
+}
+/* Passar null volta ao padrão derivado da meta semanal. */
+function definirMetaDiaria(valor) {
+  const n = valor === null || valor === undefined || !Number.isFinite(+valor)
+    ? null
+    : Math.min(META_DIARIA_MAX, Math.max(META_DIARIA_MIN, Math.round(+valor)));
+  APP_STATE.config.metaDiaria = n;
+  if (MODO === "cloud" && CURRENT_USER) {
+    supa.from("profiles").update({
+      meta_diaria: n,
+      updated_at: new Date().toISOString(),
+    }).eq("id", CURRENT_USER.id).then(({ error }) => { if (error) console.error("Erro ao salvar meta diária:", error); });
+  } else {
+    saveLocalState();
+  }
+}
+
+/* Quanto do dia já foi cumprido, com a quebra por disciplina que alimenta
+   o "3 de 5 feitas" de cada linha do plano. Conta respostas, não questões
+   distintas: refazer um item que você errou é estudo, e o contador do dia
+   mede esforço do dia. */
+function metaDoDia() {
+  const inicio = new Date(); inicio.setHours(0, 0, 0, 0);
+  const t0 = inicio.getTime();
+  const discPorId = new Map(questoesDoEscopo().map(q => [q.id, q.disciplina]));
+  const porDisciplina = {};
+  let feitas = 0, acertos = 0, erros = 0, brancos = 0;
+  for (const qid in APP_STATE.respostas) {
+    const disc = discPorId.get(qid);
+    if (!disc) continue;
+    for (const h of APP_STATE.respostas[qid]) {
+      if (h.data < t0) continue;
+      feitas++;
+      porDisciplina[disc] = (porDisciplina[disc] || 0) + 1;
+      if (h.branco) brancos++; else if (h.correta) acertos++; else erros++;
+    }
+  }
+  const meta = metaDiariaConfigurada();
+  return { meta, feitas, porDisciplina, acertos, erros, brancos,
+    restantes: Math.max(0, meta - feitas),
+    pct: Math.min(100, Math.round(feitas / meta * 100)),
+    cumprida: feitas >= meta,
+    taxa: (acertos + erros) ? acertos / (acertos + erros) : null };
+}
+
+/* Monta a fila exata que fecha o dia: percorre o foco na ordem de
+   prioridade e saca de cada disciplina a cota que ela ainda deve,
+   respeitando o modo da fase (revisar erros x explorar conteúdo novo).
+   É o que permite um único clique resolver "o que falta hoje" em vez de
+   obrigar o candidato a entrar disciplina por disciplina. */
+function montarFilaDoDia(foco, restantes) {
+  if (restantes <= 0 || !foco.length) return [];
+  const escopo = questoesDoEscopo();
+  const usados = new Set();
+  const fila = [];
+  const saca = (it, n) => {
+    if (n <= 0) return;
+    const pool = escopo.filter(q => {
+      if (q.disciplina !== it.disciplina || usados.has(q.id)) return false;
+      const hist = APP_STATE.respostas[q.id] || [];
+      if (it.modo === "revisar") {
+        const u = hist[hist.length - 1];
+        return !!u && !u.branco && !u.correta;
+      }
+      return !hist.length;
+    });
+    for (const q of embaralhar(pool).slice(0, n)) { usados.add(q.id); fila.push(q); }
+  };
+  /* Primeira passada respeita a cota de cada disciplina; a segunda completa
+     o que sobrou quando alguma delas esgotou o próprio estoque. */
+  for (const it of foco) {
+    if (fila.length >= restantes) break;
+    saca(it, Math.min(it.restantesHoje, restantes - fila.length));
+  }
+  for (const it of foco) {
+    if (fila.length >= restantes) break;
+    saca(it, restantes - fila.length);
+  }
+  return fila.slice(0, restantes);
+}
+
 function planoEstudoDirigido() {
   /* A data informada pelo candidato prevalece; na falta dela, usa-se a do
      edital da trilha, que agora existe em EDITAIS. Antes, quem não digitasse
@@ -868,12 +971,20 @@ function planoEstudoDirigido() {
       taxa, statusId, statusNome: PLANO_STATUS[statusId].nome, peso, modo, prioridade };
   }).filter(it => it.pendentes > 0).sort((a, b) => b.prioridade - a.prioridade);
 
-  const metaDiaria = Math.max(5, Math.round(META_SEMANAL_QUESTOES / 7));
+  /* A cota do dia agora sai de metaDoDia(), que já resolve o padrão x o
+     valor escolhido pelo candidato. A soma por disciplina continua sendo
+     uma redistribuição dessa cota pelo peso do edital e pela fraqueza. */
+  const hoje = metaDoDia();
+  const metaDiaria = hoje.meta;
   const somaPrioridade = itens.reduce((s, it) => s + it.prioridade, 0) || 1;
-  const foco = itens.slice(0, 5).map(it => ({
-    ...it,
-    questoesSugeridas: Math.max(1, Math.round((it.prioridade / somaPrioridade) * metaDiaria)),
-  }));
+  const foco = itens.slice(0, 5).map(it => {
+    const questoesSugeridas = Math.max(1, Math.round((it.prioridade / somaPrioridade) * metaDiaria));
+    const feitasHoje = hoje.porDisciplina[it.disciplina] || 0;
+    return { ...it, questoesSugeridas, feitasHoje,
+      restantesHoje: Math.max(0, questoesSugeridas - feitasHoje),
+      cumprida: feitasHoje >= questoesSugeridas };
+  });
+  const fila = montarFilaDoDia(foco, hoje.restantes);
 
   /* Revisão do dia, agregada: erros acumulados e questões vencidas no SRS. */
   const totalErros = Object.values(porDisc).reduce((s, d) => s + d.erros, 0);
@@ -905,7 +1016,8 @@ function planoEstudoDirigido() {
     };
   }
 
-  return { dataProva, diasRestantes, fase, metaDiaria, foco,
+  return { dataProva, diasRestantes, fase, metaDiaria, foco, hoje, fila,
+    metaPersonalizada: Number.isFinite(APP_STATE.config.metaDiaria) && APP_STATE.config.metaDiaria > 0,
     totalDisciplinasPendentes: itens.length, totalErros, devidasSRS, progresso, ritmo };
 }
 

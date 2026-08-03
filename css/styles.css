@@ -265,11 +265,31 @@ body {
 .pe-sem-data { display: flex; gap: 10px; flex-wrap: wrap; align-items: flex-end; }
 .pe-sem-data label.f { flex: 1; min-width: 220px; }
 
+/* Meta do dia: placar grande porque é a informação que o candidato abre a
+   aba para ver — "quantas fiz, quantas faltam". */
+.pe-hoje-top { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; margin-top: 12px; }
+.pe-hoje-placar { display: flex; align-items: baseline; gap: 2px; line-height: 1; }
+.pe-hoje-placar b { font-size: 40px; font-weight: 800; color: var(--accent); }
+.pe-hoje-sep { font-size: 26px; color: var(--muted); margin: 0 2px; }
+.pe-hoje-meta { font-size: 26px; font-weight: 700; color: var(--muted); }
+.pe-hoje-txt { flex: 1; min-width: 200px; }
+.pe-hoje-falta { font-size: 14.5px; margin-bottom: 3px; }
+.pe-hoje-falta b { color: var(--accent); }
+.pe-hoje-acoes { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 12px; }
+.pe-hoje-sugestao { margin-top: 10px; padding: 9px 12px; border-radius: var(--r-md);
+  background: var(--surface2); font-size: 13px; color: var(--muted); }
+.pe-hoje-sugestao b { color: var(--text); }
+.pe-hoje-sugestao a { color: var(--accent); font-weight: 600; }
+.pe-hoje.cumprida .pe-hoje-placar b { color: var(--ok); }
+.pe-hoje.cumprida .gami-bar i { background: var(--ok); }
+
 .pe-item { padding: 14px 0; border-bottom: 1px solid var(--border); }
 .pe-item:last-child { border-bottom: none; }
+.pe-item.cumprida { opacity: .72; }
 .pe-item-top { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin-bottom: 8px; }
 .pe-disc { font-size: 14px; }
 .pe-cota { margin-left: auto; font-size: 12.5px; font-weight: 700; color: var(--accent); white-space: nowrap; }
+.pe-cota.ok { color: var(--ok); }
 .pe-item .diag-bar { margin-bottom: 8px; }
 .pe-item-bottom { display: flex; align-items: center; justify-content: space-between; gap: 10px; flex-wrap: wrap; }
 
@@ -967,6 +987,8 @@ mark.trecho-estrategia {
 .gami-bottom { display: flex; justify-content: space-between; align-items: flex-end; gap: 16px; margin-top: 16px; flex-wrap: wrap; }
 .gami-meta { flex: 1; min-width: 180px; }
 .gami-meta-lbl { font-size: 12.5px; color: var(--muted); }
+.gami-meta-lbl a { color: var(--accent); font-weight: 600; }
+.gami-bar.small.ok i { background: var(--ok); }
 .gami-conquistas { display: flex; gap: 6px; flex-wrap: wrap; max-width: 100%; }
 .gami-badge-mini {
   width: 30px; height: 30px; border-radius: var(--r-md); background: var(--accent-soft);

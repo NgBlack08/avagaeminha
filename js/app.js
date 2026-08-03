@@ -421,6 +421,10 @@ function dispensarOnboarding() {
    ================================================================ */
 function gamiCardHtml(gam) {
   const { nivel, streak, semana, conquistas } = gam;
+  /* A meta do dia é por trilha (ver metaDoDia, em engine.js) enquanto a
+     semanal é global — as duas convivem aqui de propósito: a de hoje diz
+     o que fazer agora, a da semana mede o hábito. */
+  const dia = metaDoDia();
   return `<div class="card gami-card" style="margin-bottom:16px">
     <div class="gami-top">
       <div class="gami-patente">
@@ -435,7 +439,11 @@ function gamiCardHtml(gam) {
     <div class="gami-bar"><i style="width:${nivel.pct}%"></i></div>
     <div class="gami-bottom">
       <div class="gami-meta">
-        <div class="gami-meta-lbl">Meta semanal: ${semana.respondidas}/${semana.meta} questões</div>
+        <div class="gami-meta-lbl">Meta de hoje: ${dia.feitas}/${dia.meta} questões ${dia.cumprida
+          ? '<span class="tag ok">✓ batida</span>'
+          : `<a href="#" onclick="navigate('planoestudo');return false;">faltam ${dia.restantes} →</a>`}</div>
+        <div class="gami-bar small ${dia.cumprida ? "ok" : ""}"><i style="width:${dia.pct}%"></i></div>
+        <div class="gami-meta-lbl" style="margin-top:8px">Meta semanal: ${semana.respondidas}/${semana.meta} questões</div>
         <div class="gami-bar small"><i style="width:${semana.pct}%"></i></div>
       </div>
       <div class="gami-conquistas">
@@ -1901,6 +1909,45 @@ function estudarDisciplinaAgora(disciplina, modo) {
   bancoPagina = 0;
   navigate("banco");
 }
+/* Fecha a meta do dia em um clique: monta a fila já priorizada pelo plano
+   e a roda pelo simulado, que é a única tela que aceita uma lista pronta
+   de questões. Sem isso, cumprir a cota exigia entrar disciplina por
+   disciplina e contar de cabeça quantas ainda faltavam. */
+async function iniciarMetaDoDia() {
+  const plano = planoEstudoDirigido();
+  /* Com a meta já cumprida a fila vem vazia (restantes = 0), então
+     remonta-se uma rodada extra do tamanho da própria cota. */
+  const fila = plano.fila.length
+    ? plano.fila
+    : montarFilaDoDia(plano.foco.map(it => ({ ...it, restantesHoje: it.questoesSugeridas })), plano.metaDiaria);
+  if (!fila.length) {
+    await mostrarAlerta("Não há questões pendentes nas disciplinas prioritárias para montar a fila de hoje. Use a revisão de erros ou o Simulado Adaptativo.");
+    return;
+  }
+  /* Navega antes de montar o SIM porque renderSimulado() desenha o
+     formulário de configuração e sobrescreveria a fila; e sai fora se a
+     navegação for barrada (prova ou duelo em andamento). */
+  await navigate("simulado");
+  if (currentView !== "simulado") return;
+  SIM = { questoes: fila, idx: 0, respostas: [], inicio: Date.now(), finalizado: false };
+  renderQuestaoSimulado();
+}
+
+/* Editor da meta diária. O número deixou de ser fixo em META_SEMANAL/7
+   porque rotina de estudo é pessoal — e porque, com data de prova
+   marcada, o ritmo que fecha o edital é calculável e vira sugestão. */
+async function abrirEditorMetaDiaria() {
+  const valor = await mostrarPromptNumero({
+    titulo: "Meta diária de questões",
+    mensagem: `Quantas questões você quer resolver por dia? O padrão é ${metaDiariaPadrao()} (sua meta semanal dividida por 7).`,
+    valorInicial: metaDiariaConfigurada(),
+    min: META_DIARIA_MIN, max: META_DIARIA_MAX, sufixo: "questões/dia",
+  });
+  if (valor === null) return;
+  definirMetaDiaria(valor);
+  renderPlanoEstudo();
+}
+
 /* Revisão agregada: manda ao Banco só os itens que o usuário errou, em
    todas as disciplinas — é o modo mais direto de atacar os erros. */
 function revisarErrosAgora() {
@@ -1956,6 +2003,50 @@ function renderPlanoEstudo() {
     ${ritmoHtml}
   </div>` : "";
 
+  /* Card da meta do dia. É o primeiro da tela por ser a única resposta que
+     o candidato precisa antes de qualquer outra: quantas já fiz hoje e
+     quantas faltam. Antes disso, a cota por disciplina aparecia sem placar
+     nenhum e não dava para saber se o dia estava cumprido. */
+  const hj = plano.hoje;
+  const podeFechar = plano.fila.length > 0;
+  const streakAtual = calcularStreak().atual;
+  /* Ritmo necessário só vira sugestão quando de fato aperta o passo atual —
+     oferecer "ajuste para 9/dia" a quem já faz 14 seria ruído. */
+  const sugestaoRitmo = plano.ritmo && !plano.ritmo.noRitmo && plano.ritmo.ritmoNecessario > hj.meta
+    ? plano.ritmo.ritmoNecessario : null;
+  const taxaHoje = hj.taxa === null ? null : Math.round(hj.taxa * 100);
+  const metaDiaHtml = `
+  <div class="card pe-hoje ${hj.cumprida ? "cumprida" : ""}" style="margin-bottom:16px">
+    <h3>🎯 Meta de hoje</h3>
+    <div class="pe-hoje-top">
+      <div class="pe-hoje-placar">
+        <b>${hj.feitas}</b><span class="pe-hoje-sep">/</span><span class="pe-hoje-meta">${hj.meta}</span>
+      </div>
+      <div class="pe-hoje-txt">
+        <div class="pe-hoje-falta">${hj.cumprida
+          ? `✓ Meta batida${hj.feitas > hj.meta ? ` — e você passou ${hj.feitas - hj.meta}` : ""}.`
+          : `Faltam <b>${hj.restantes}</b> ${hj.restantes === 1 ? "questão" : "questões"} para fechar o dia.`}</div>
+        <div class="hint">${hj.feitas === 0
+          ? "Nenhuma questão respondida hoje nesta trilha."
+          : `Hoje: ${hj.acertos} ${hj.acertos === 1 ? "certa" : "certas"} · ${hj.erros} ${hj.erros === 1 ? "errada" : "erradas"}${hj.brancos ? ` · ${hj.brancos} em branco` : ""}${taxaHoje === null ? "" : ` · ${taxaHoje}% de acerto`}`}</div>
+      </div>
+    </div>
+    <div class="gami-bar" style="margin-top:10px"><i style="width:${hj.pct}%"></i></div>
+    <div class="pe-hoje-acoes">
+      ${hj.cumprida
+        ? `<button class="btn ghost small" onclick="iniciarMetaDoDia()" ${podeFechar ? "" : "disabled"}>Continuar estudando →</button>`
+        : `<button class="btn small" onclick="iniciarMetaDoDia()" ${podeFechar ? "" : "disabled"}>▶ Fazer ${podeFechar ? `as ${plano.fila.length}` : "as"} que faltam</button>`}
+      <button class="btn ghost small" onclick="abrirEditorMetaDiaria()">Ajustar meta (${hj.meta}/dia)</button>
+    </div>
+    ${!podeFechar && !hj.cumprida
+      ? `<div class="hint" style="margin-top:8px">Sem questões pendentes nas disciplinas prioritárias para montar a fila — use a revisão abaixo ou o Simulado Adaptativo.</div>` : ""}
+    ${sugestaoRitmo
+      ? `<div class="pe-hoje-sugestao">Para cobrir o edital até a prova, o ritmo necessário é <b>${sugestaoRitmo}/dia</b>.
+         <a href="#" onclick="definirMetaDiaria(${sugestaoRitmo});renderPlanoEstudo();return false;">Adotar esse ritmo</a></div>` : ""}
+    ${hj.feitas === 0 && streakAtual > 0
+      ? `<div class="pe-hoje-sugestao">🔥 Sua sequência de ${streakAtual} dia${streakAtual === 1 ? "" : "s"} se mantém com pelo menos uma questão hoje.</div>` : ""}
+  </div>`;
+
   /* Card de revisão do dia — só aparece se há o que revisar. */
   const revisaoHtml = (plano.totalErros > 0 || plano.devidasSRS > 0) ? `
   <div class="card pe-revisao" style="margin-bottom:16px">
@@ -1980,22 +2071,25 @@ function renderPlanoEstudo() {
       <span class="pe-fase-desc">${plano.fase.desc}</span>
     </div>
   </div>
+  ${metaDiaHtml}
   ${progressoHtml}
   ${revisaoHtml}
   <div class="card">
-    <h3>🎯 Prioridades de hoje <span class="hint">cota sugerida somando ${plano.metaDiaria} questões/dia (sua meta semanal ÷ 7)</span></h3>
+    <h3>📌 Prioridades de hoje <span class="hint">a meta de ${plano.metaDiaria}/dia, redistribuída pelo peso no edital e pelo seu desempenho${plano.metaPersonalizada ? "" : " (padrão: meta semanal ÷ 7)"}</span></h3>
     ${plano.foco.length ? plano.foco.map(it => `
-      <div class="pe-item">
+      <div class="pe-item ${it.cumprida ? "cumprida" : ""}">
         <div class="pe-item-top">
           <span class="tag ${statusCls[it.statusId]}">${statusIco[it.statusId]} ${escapeHtml(it.statusNome)}</span>
           <span class="tag" title="Itens que esta disciplina vale na prova, conforme o Edital nº 1 - PC/AL de 2 de julho de 2026">≈ ${it.peso} itens na prova</span>
           ${modoBadge[it.modo] || ""}
           <b class="pe-disc">${escapeHtml(it.disciplina)}</b>
-          <span class="pe-cota">${it.questoesSugeridas} ${it.questoesSugeridas === 1 ? "questão" : "questões"} hoje</span>
+          <span class="pe-cota ${it.cumprida ? "ok" : ""}" title="Feitas hoje nesta disciplina / cota do dia">${it.cumprida
+            ? `✓ ${it.feitasHoje} hoje`
+            : `${it.feitasHoje}/${it.questoesSugeridas} hoje`}</span>
         </div>
         <div class="diag-bar ${statusCls[it.statusId]}"><i style="width:${it.taxa === null ? 100 : Math.round(it.taxa * 100)}%"></i></div>
         <div class="pe-item-bottom">
-          <span class="hint">${it.taxa === null ? "Ainda não iniciada" : Math.round(it.taxa * 100) + "% de acerto"} · ${modoBottom(it)}</span>
+          <span class="hint">${it.taxa === null ? "Ainda não iniciada" : Math.round(it.taxa * 100) + "% de acerto"} · ${modoBottom(it)} · ${it.cumprida ? "cota do dia cumprida" : `${it.restantesHoje === 1 ? "falta 1" : `faltam ${it.restantesHoje}`} para a cota`}</span>
           <button class="btn ghost small" onclick="estudarDisciplinaAgora('${it.disciplina}','${it.modo}')">${modoBtn(it)}</button>
         </div>
       </div>`).join("")
