@@ -284,16 +284,42 @@ function registrarSessao(sessao) {
 /* ---------------- Repetição espaçada (SM-2 simplificado) ----------------
    Intervalos base em dias: erro→0 (revisar já), depois 1, 3, 7, 15, 30, 60 */
 const SRS_INTERVALOS = [1, 3, 7, 15, 30, 60];
+
+/* Um erro NÃO devolve a questão à fila no mesmo instante, e um acerto obtido
+   antes do vencimento não promove o nível. As duas regras atacam o mesmo
+   defeito, que corrompia ao mesmo tempo o aprendizado e a medição:
+
+   antes, errar gravava `proxima = agora`. A questão voltava disponível de
+   imediato e, respondida minutos depois com a explicação ainda na memória de
+   curto prazo, era "acertada" — mas isso é reconhecimento, não evocação. O
+   acerto falso subia o nível para 1, o item saía da fila com apenas um dia de
+   intervalo e o buraco reaparecia no dia da prova. De quebra, a taxa de
+   acerto inflava: bastava insistir no mesmo item para ver o percentual subir
+   sem ter aprendido nada.
+
+   Isto NÃO fecha a porta da revisão imediata de erros: o botão "Revisar meus
+   erros" e o filtro "só as que errei" leem APP_STATE.respostas, não o SRS.
+   Reestudar hoje continua possível e é desejável — o que muda é que esse
+   reestudo deixa de ser contabilizado como retenção comprovada. */
+const SRS_LAG_ERRO_DIAS = 1;
+
 function atualizarSRS(qid, acertou, branco) {
   const s = APP_STATE.srs[qid] || { nivel: 0, proxima: 0 };
+  const agora = Date.now();
+  const aindaNaoVenceu = s.proxima > agora;
   if (branco) { /* branco não avança nem zera: revisa amanhã */
-    s.proxima = Date.now() + 1 * 864e5;
+    s.proxima = agora + 1 * 864e5;
   } else if (acertou) {
-    s.nivel = Math.min(s.nivel + 1, SRS_INTERVALOS.length);
-    s.proxima = Date.now() + SRS_INTERVALOS[Math.min(s.nivel - 1, SRS_INTERVALOS.length - 1)] * 864e5;
+    /* Só promove quem acertou uma questão de fato vencida. Acertar de novo
+       o que ainda não venceu não é prova de retenção — e não pode empurrar
+       o intervalo para frente. */
+    if (!aindaNaoVenceu) {
+      s.nivel = Math.min(s.nivel + 1, SRS_INTERVALOS.length);
+      s.proxima = agora + SRS_INTERVALOS[Math.min(s.nivel - 1, SRS_INTERVALOS.length - 1)] * 864e5;
+    }
   } else {
     s.nivel = 0;
-    s.proxima = Date.now(); /* devida imediatamente */
+    s.proxima = agora + SRS_LAG_ERRO_DIAS * 864e5;
   }
   APP_STATE.srs[qid] = s;
 }
@@ -1024,6 +1050,11 @@ function planoEstudoDirigido() {
 /* ---------------- Seleção adaptativa (Módulo 7) ----------------
    Peso da questão = erroTopico*3 + devidaSRS*2.5 + naoVista*2
    + proximidadeDificuldade + prioridadeConcursoFoco */
+/* Bônus máximo do peso do edital. Fica na casa dos demais termos da fórmula
+   (erro na disciplina vale até 3, SRS vencido 2,5, questão nova 2) para
+   pesar sem dominar: o edital diz o que mais cai, não o que você mais erra. */
+const PESO_MAX_EDITAL = 3;
+
 function pesoAdaptativo(q, ctx) {
   let w = 1;
   const s = statsQuestao(q.id);
@@ -1041,9 +1072,23 @@ function pesoAdaptativo(q, ctx) {
      "+1 se q.concurso == foco", que virou redundante quando o foco passou a
      escopar o banco — e que estava errado no modelo novo, porque
      `q.concurso` é procedência, não pertinência à trilha. */
+  /* O divisor fixo /10 com teto de 1,5 foi calibrado para a PC-AL, onde
+     nenhuma disciplina passa de 10 itens — ali o teto nunca chegava a atuar.
+     Na SESAU-AL ele quebrava o modelo: Fisioterapia vale 70 itens (58% da
+     prova) e deveria receber 7,0, mas era achatada para 1,5, contra 1,25 de
+     uma disciplina de 12,5 itens. Ou seja, uma diferença de 5,6x no peso da
+     prova virava 1,2x no sorteio, e o simulado adaptativo tratava a
+     disciplina que decide a aprovação quase como qualquer outra.
+
+     Normalizar pelo maior peso da própria trilha corrige isso e torna a
+     escala comparável entre editais de tamanhos diferentes: a disciplina
+     mais pesada de cada trilha recebe o bônus máximo, e as demais entram na
+     proporção exata em que a prova as cobra. */
   const itensDaTrilha = editalDoFoco()?.itensPorDisciplina;
-  if (itensDaTrilha && itensDaTrilha[q.disciplina]) {
-    w += Math.min(1.5, itensDaTrilha[q.disciplina] / 10);
+  const itensDaQuestao = itensDaTrilha?.[q.disciplina];
+  if (itensDaQuestao) {
+    const maior = Math.max(...Object.values(itensDaTrilha));
+    if (maior > 0) w += (itensDaQuestao / maior) * PESO_MAX_EDITAL;
   }
   if (s.ultima && !s.ultima.correta && !s.ultima.branco) w += 1.5;
   return Math.max(w, 0.1);
