@@ -467,10 +467,29 @@ label.f select, label.f input { max-width: 100%; }
 .q-card:hover { box-shadow: var(--shadow); border-color: color-mix(in srgb, var(--accent) 30%, var(--border)); }
 
 /* Card ampliado — modo "questão única" do Banco de Questões */
-.q-card.ampliada { max-width: 760px; margin: 0 auto 16px; padding: 36px; }
+/* Largura do modo "Questão única".
+   Era 760px fixo, o que rendia 57 caracteres por linha a 19px — abaixo da
+   faixa confortável de leitura (65-75) — e ocupava só 75% da área útil num
+   monitor de 1280px, com a barra de navegação (919px) mais larga que o
+   próprio card. O card parecia encolhido porque literalmente estava, e
+   porque nada se alinhava a ele.
+
+   --q-unica-largura centraliza a medida: o card e a navegação passam a
+   compartilhar o mesmo limite, e 960px entrega ~73 caracteres por linha,
+   dentro da faixa e adequado a texto jurídico denso. */
+:root { --q-unica-largura: 960px; }
+.q-card.ampliada { max-width: var(--q-unica-largura); margin: 0 auto 16px;
+  padding: clamp(24px, 3vw, 44px); }
 .q-card.ampliada .q-enunciado { font-size: 19px; line-height: 1.75; }
 .q-card.ampliada .q-texto-apoio { font-size: 14.5px; }
-.q-card.ampliada .q-actions .btn { padding: 14px 22px; font-size: 15.5px; }
+.q-card.ampliada .q-actions { gap: 12px; margin-top: 4px; }
+.q-card.ampliada .q-actions .btn { padding: 14px 26px; font-size: 15.5px; }
+/* O bloco de confiança precisa acompanhar a escala do card ampliado, senão
+   fica miúdo ao lado de um enunciado de 19px. */
+.q-card.ampliada .conf-bloco { padding: 14px 16px; margin: 18px 0 14px; }
+.q-card.ampliada .conf { font-size: 13.5px; }
+.q-card.ampliada .conf button { padding: 8px 14px; font-size: 13px; }
+.q-card.ampliada .conf-feedback:not(:empty) { font-size: 13.5px; }
 
 /* Alternância de modo de visualização (Banco de Questões: Lista/Questão única) */
 .view-toggle { display: inline-flex; gap: 4px; background: var(--surface2); border-radius: var(--r-md); padding: 4px; }
@@ -482,8 +501,29 @@ label.f select, label.f input { max-width: 100%; }
 .vt-btn.active { background: var(--surface); color: var(--text); box-shadow: var(--shadow-sm); }
 .vt-btn:focus-visible { box-shadow: var(--ring); }
 
-.banco-nav { display: flex; align-items: center; justify-content: center; gap: 16px; margin-bottom: 16px; }
-.banco-nav-pos { font-size: 13.5px; color: var(--muted); font-variant-numeric: tabular-nums; }
+/* A navegação compartilha a largura do card e gruda no topo: em questão
+   longa, voltar ao início da página só para avançar quebrava o ritmo, que é
+   justamente o que o modo "uma por vez" existe para treinar. */
+.banco-nav { display: flex; align-items: center; justify-content: space-between; gap: 16px;
+  max-width: var(--q-unica-largura); margin: 0 auto 16px; padding: 8px 0;
+  position: sticky; top: 0; z-index: 5;
+  background: linear-gradient(var(--bg) 78%, transparent); }
+.banco-nav-pos { font-size: 13.5px; color: var(--muted); font-variant-numeric: tabular-nums;
+  display: flex; flex-direction: column; align-items: center; gap: 5px; min-width: 132px; }
+.banco-nav-pos b { color: var(--text); font-weight: 700; }
+/* Barra de progresso: "247 de 1838" não diz onde você está; a barra diz. */
+.banco-nav-prog { width: 100%; height: 3px; border-radius: var(--r-full); background: var(--surface2); overflow: hidden; }
+.banco-nav-prog i { display: block; height: 100%; background: var(--accent); border-radius: var(--r-full);
+  transition: width var(--t-med); }
+.banco-nav-dica { font-size: 11.5px; color: var(--muted); text-align: center; margin: -6px auto 16px;
+  max-width: var(--q-unica-largura); }
+.banco-nav-dica kbd { background: var(--surface2); border: 1px solid var(--border); border-bottom-width: 2px;
+  border-radius: 5px; padding: 1px 6px; font-family: inherit; font-size: 11px; color: var(--text); }
+@media (max-width: 640px) {
+  .banco-nav { gap: 8px; }
+  .banco-nav-pos { min-width: 96px; font-size: 12.5px; }
+  .banco-nav-dica { display: none; }
+}
 @media (max-width: 640px) {
   .q-card.ampliada { padding: 22px; }
   .q-card.ampliada .q-enunciado { font-size: 17px; }

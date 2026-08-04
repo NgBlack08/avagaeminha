@@ -758,7 +758,28 @@ function setBancoModoVisual(modo) {
 function irQuestaoBanco(delta) {
   bancoIndice += delta;
   renderBanco();
+  window.scrollTo({ top: 0, behavior: "smooth" });
 }
+
+/* Setas navegam no modo "Questão única". O modo existe para treinar ritmo,
+   e ter de buscar o mouse a cada item quebra exatamente isso.
+
+   Só as setas: responder por teclado seria mais rápido ainda, mas uma tecla
+   apertada sem querer grava resposta definitiva no histórico e contamina a
+   taxa de acerto — velocidade não compensa esse risco.
+
+   O guarda de foco evita sequestrar as setas de quem está escrevendo na
+   busca ou navegando um select de filtro. */
+document.addEventListener("keydown", e => {
+  if (currentView !== "banco" || bancoModoVisual !== "unica") return;
+  if (e.key !== "ArrowLeft" && e.key !== "ArrowRight") return;
+  if (e.ctrlKey || e.altKey || e.metaKey) return;
+  const alvo = e.target;
+  if (alvo && (alvo.isContentEditable || /^(INPUT|TEXTAREA|SELECT)$/.test(alvo.tagName))) return;
+  if (document.querySelector(".modal-overlay")) return;
+  e.preventDefault();
+  irQuestaoBanco(e.key === "ArrowRight" ? 1 : -1);
+});
 
 /* Barra de escopo da trilha. O escopo esconde ~90% do acervo de quem
    escolheu uma carreira, e esconder em silêncio é o modo de falha que este
@@ -1004,11 +1025,16 @@ function renderBancoUnica(lista) {
   if (bancoIndice > lista.length - 1) bancoIndice = lista.length - 1;
   if (bancoIndice < 0) bancoIndice = 0;
   const q = lista[bancoIndice];
+  const pct = lista.length > 1 ? (bancoIndice / (lista.length - 1)) * 100 : 100;
   return `<div class="banco-nav">
     <button class="btn ghost small" onclick="irQuestaoBanco(-1)" ${bancoIndice <= 0 ? "disabled" : ""}>← Anterior</button>
-    <span class="banco-nav-pos">${bancoIndice + 1} de ${lista.length}</span>
+    <span class="banco-nav-pos">
+      <span><b>${bancoIndice + 1}</b> de ${lista.length}</span>
+      <span class="banco-nav-prog"><i style="width:${pct}%"></i></span>
+    </span>
     <button class="btn ghost small" onclick="irQuestaoBanco(1)" ${bancoIndice >= lista.length - 1 ? "disabled" : ""}>Próxima →</button>
   </div>
+  <div class="banco-nav-dica">Use <kbd>←</kbd> e <kbd>→</kbd> para navegar entre as questões</div>
   <div id="q-lista">${questaoCardHtml(q, { modo: "banco", ampliada: true })}</div>`;
 }
 
