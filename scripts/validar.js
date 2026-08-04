@@ -65,9 +65,18 @@ const LIMIAR_PADRAO_ENVIESADO = 0.90; /* padrão que quase sempre cai no mesmo g
 const LIMIAR_CE_GLOBAL = 0.05;        /* desvio tolerado em torno de 50/50 */
 const LIMIAR_VIES_TAMANHO = 0.12;     /* diferença de comprimento entre C e E */
 /* Quanto uma "regra cega" pode acertar acima do puro chute antes de virar
-   problema. Cinco pontos percentuais é tolerância, não meta: acima disso o
-   banco está ensinando a forma em vez do conteúdo. */
-const LIMIAR_REGRA_CEGA = 0.05;
+   problema.
+
+   O limiar deixou de ser arbitrário: em 130 itens de provas REAIS da
+   CEBRASPE com gabarito oficial (PC-DF 2021, PF 2025, PC-SE 2021), o mesmo
+   chutador cego ganha apenas +0,8pp sobre o chute — ou seja, na prova a
+   forma não entrega nada. Ver AUDITORIA-PROVA-REAL-2021.md.
+
+   Logo, qualquer ganho relevante aqui é artefato NOSSO, e artefato que o
+   candidato treina como se fosse técnica. Os 3pp de tolerância existem só
+   para absorver ruído amostral, não para acomodar vazamento. */
+const REGRA_CEGA_REFERENCIA_REAL = 0.008;
+const LIMIAR_REGRA_CEGA = 0.03;
 
 /* Perfil de comprimento medido na prova real: CEBRASPE / PC-AL 2021,
    cargo Agente, 120 itens C/E extraídos do caderno oficial. Ver
@@ -313,7 +322,7 @@ function validar({ quieto = false } = {}) {
 
     const ganho = melhor.taxa - baseChute;
     if (ganho > LIMIAR_REGRA_CEGA) {
-      avisos.push(`Regra cega (comprimento + termo absoluto, sem ler o conteúdo) acerta ${pct(melhor.taxa, 1)} contra ${pct(baseChute, 1)} do chute puro — ${(ganho * 100).toFixed(1)}pp de vazamento. O banco premia quem treina o formato.`);
+      avisos.push(`Regra cega (comprimento + termo absoluto, sem ler o conteúdo) acerta ${pct(melhor.taxa, 1)} contra ${pct(baseChute, 1)} do chute puro — ${(ganho * 100).toFixed(1)}pp de vazamento, contra ${(REGRA_CEGA_REFERENCIA_REAL * 100).toFixed(1)}pp medidos em prova real. É reflexo falso sendo treinado.`);
       /* Aponta onde doer mais, para o próximo lote saber o que corrigir. */
       const porDisc = new Map();
       for (const q of itensCE) {

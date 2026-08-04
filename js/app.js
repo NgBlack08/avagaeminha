@@ -1911,9 +1911,16 @@ function renderPegadinhas() {
   <div class="card">
     <h3>⚠ Palavras perigosas <span class="hint">ordenadas por força medida — marcador é ponto de parada, não gabarito</span></h3>
     <div class="radar-aviso">
-      <b>Como usar:</b> o marcador diz <b>onde olhar</b>, nunca <b>o que responder</b>. Medimos cada termo nos ${QUESTOES.filter(q => q.tipo === "CE").length} itens do banco e a diferença entre eles é enorme:
-      <b>“exclusivamente”</b> acerta 80% das vezes, mas <b>“apenas”</b> e <b>“todos”</b> — os mais ensinados por aí — valem uma moeda jogada para o alto.
-      Quem responde pelo marcador acerta metade e tem a sensação de estar raciocinando.
+      <b>Leia isto antes da lista.</b> Testamos estes marcadores contra <b>130 itens de provas reais da CEBRASPE</b>
+      (PC-DF 2021, PF 2025 e PC-SE 2021, com gabarito oficial). O resultado foi duro:
+      <b>nenhum marcador de superfície mostrou poder preditivo distinguível de ruído</b>.
+      Termos absolutos aparecem em só 14% dos itens reais, e ali acertam 61% — contra 55% da taxa-base, diferença dentro da margem de erro.
+      “Exclusivamente”, líder da nossa medição interna, aparece <b>zero vezes</b> em 250 itens reais.
+      <br><br>
+      Então use a lista como <b>localizador</b>, não como preditor: ela aponta <b>onde parar dentro do item</b> —
+      a restrição, a condicionante, o quantificador — e a resposta tem de vir do conteúdo.
+      As porcentagens abaixo são do <b>nosso acervo</b>, servem para você entender como estas questões foram construídas,
+      e <b>não se transferem para a prova</b>. Detalhes em AUDITORIA-PROVA-REAL-2021.md.
     </div>
     <div style="font-size:12px;margin:10px 0 8px">
       <span class="tag bad">tende a ERRADO</span> <span class="tag ok">tende a CERTO</span> <span class="tag warn">neutra — exige atenção</span>
