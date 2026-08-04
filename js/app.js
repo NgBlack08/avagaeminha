@@ -375,6 +375,11 @@ function topbar(titulo, sub, actionsHtml) {
 
 const AVISO_ESTATISTICO = `<div class="aviso">⚠ As probabilidades e índices exibidos são <b>estimativas estatísticas</b> baseadas em frequência histórica, tendências legislativas e perfil da banca — não constituem garantia sobre o conteúdo de provas futuras.</div>`;
 
+/* Ordena o radar lexical do marcador mais informativo para o menos. Sem
+   isso a lista sugere que todos os termos têm o mesmo peso, que é
+   justamente o erro que a calibração desfez. */
+const ORDEM_FORCA = { forte: 4, moderado: 3, fraco: 2, nulo: 1 };
+
 /* ================================================================
    ONBOARDING — checklist de primeiros passos (Dashboard)
    Calculado sobre dados já existentes (respostas/sessões) + flags de
@@ -1904,13 +1909,23 @@ function renderPegadinhas() {
     })), { max: 100 })}</div>
   </div>` : ""}
   <div class="card">
-    <h3>⚠ Palavras perigosas <span class="hint">tendência estatística — nunca regra absoluta</span></h3>
-    <div style="font-size:12px;margin-bottom:8px">
-      <span class="tag bad">tende a ERRADO</span> <span class="tag ok">tende a CERTO</span> <span class="tag warn">neutra — exige atenção</span>
+    <h3>⚠ Palavras perigosas <span class="hint">ordenadas por força medida — marcador é ponto de parada, não gabarito</span></h3>
+    <div class="radar-aviso">
+      <b>Como usar:</b> o marcador diz <b>onde olhar</b>, nunca <b>o que responder</b>. Medimos cada termo nos ${QUESTOES.filter(q => q.tipo === "CE").length} itens do banco e a diferença entre eles é enorme:
+      <b>“exclusivamente”</b> acerta 80% das vezes, mas <b>“apenas”</b> e <b>“todos”</b> — os mais ensinados por aí — valem uma moeda jogada para o alto.
+      Quem responde pelo marcador acerta metade e tem a sensação de estar raciocinando.
     </div>
-    ${PALAVRAS_PERIGOSAS.map(p => `
+    <div style="font-size:12px;margin:10px 0 8px">
+      <span class="tag bad">tende a ERRADO</span> <span class="tag ok">tende a CERTO</span> <span class="tag warn">neutra — exige atenção</span>
+      <span class="tag">força: forte &gt; moderado &gt; fraco &gt; nulo</span>
+    </div>
+    ${[...PALAVRAS_PERIGOSAS]
+      .sort((a, b) => (ORDEM_FORCA[b.forca] ?? 0) - (ORDEM_FORCA[a.forca] ?? 0))
+      .map(p => `
       <div class="palavra-item">
-        <span class="termo">${p.termo} <span class="tag ${p.vies === "E" ? "bad" : p.vies === "C" ? "ok" : "warn"}">${p.vies === "E" ? "→ E" : p.vies === "C" ? "→ C" : "atenção"}</span></span>
+        <span class="termo">${p.termo}
+          <span class="tag ${p.vies === "E" ? "bad" : p.vies === "C" ? "ok" : "warn"}">${p.vies === "E" ? "→ E" : p.vies === "C" ? "→ C" : "atenção"}</span>
+          ${p.forca ? `<span class="tag forca-${p.forca}">${p.forca}</span>` : ""}</span>
         <p>${p.explica}</p>
       </div>`).join("")}
     ${AVISO_ESTATISTICO}

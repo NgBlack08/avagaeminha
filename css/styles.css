@@ -1183,3 +1183,13 @@ mark.trecho-estrategia {
   *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
   html { scroll-behavior: auto; }
 }
+
+/* Radar lexical calibrado: a força medida precisa ser visível, senão a
+   lista volta a sugerir que todos os marcadores pesam igual. */
+.radar-aviso { font-size: 13px; line-height: 1.6; padding: 11px 13px; border-radius: var(--r-md);
+  background: var(--surface2); border-left: 3px solid var(--accent); color: var(--muted); }
+.radar-aviso b { color: var(--text); }
+.tag.forca-forte { background: color-mix(in srgb, var(--ok) 18%, transparent); color: var(--ok); }
+.tag.forca-moderado { background: color-mix(in srgb, var(--warn) 18%, transparent); color: var(--warn); }
+.tag.forca-fraco,
+.tag.forca-nulo { background: var(--surface3); color: var(--muted); }

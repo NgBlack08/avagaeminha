@@ -83,32 +83,71 @@ const DNA_BANCA = [
 /* ---------------- PALAVRAS PERIGOSAS (Módulo 5) ----------------
    vies: "E" = quando presente, a assertiva tende a ser Errada;
    "C" = tende a ser Certa; "N" = neutra, exige atenção. */
+/* ---------------- Radar lexical, agora calibrado ----------------
+   Estes marcadores eram classificados só por viés (E / C / neutro), com
+   todos aparentando a mesma autoridade. A medição no próprio banco (1.863
+   itens C/E) mostrou que essa igualdade é falsa e, em alguns casos, o viés
+   declarado estava errado:
+
+     exclusivamente ....... 80% ERRADO  (n=49)   forte
+     automaticamente ...... 74% ERRADO  (n=23)   forte
+     necessariamente ...... 71% ERRADO  (n=24)   forte
+     desde que ............ 70% ERRADO  (n=33)   forte   <- era "neutro"
+     em regra ............. 70% CERTO   (n=23)   moderado
+     qualquer ............. 66% ERRADO  (n=129)  moderado
+     independentemente .... 64% ERRADO  (n=50)   moderado
+     somente .............. 57% ERRADO  (n=54)   FRACO   <- era "forte E"
+     sempre ............... 57% ERRADO  (n=37)   FRACO   <- era "forte E"
+     poderá ............... 55% CERTO   (n=58)   fraco
+     apenas ............... 50% ERRADO  (n=50)   NULO    <- era "forte E"
+     todos ................ 49% ERRADO  (n=41)   NULO    <- era "forte E"
+
+   O campo `forca` registra isso. A consequência prática inverte o uso do
+   radar: "apenas" e "todos", os marcadores que todo cursinho manda temer,
+   valem uma moeda jogada para o alto — enquanto "desde que", que ninguém
+   ensina a vigiar, é dos mais informativos.
+
+   RESSALVA HONESTA, que precisa acompanhar o número: a medição é do NOSSO
+   banco, não de provas oficiais da CEBRASPE. Ela descreve com precisão o
+   que ESTE acervo faz, e por isso serve para calibrar o estudo aqui; para
+   virar afirmação sobre a banca real, dependeria de tabular provas
+   aplicadas — trabalho ainda não feito e registrado como pendência.
+
+   Por isso a regra de ouro do radar, que vale independentemente do número:
+   MARCADOR NÃO É GABARITO, É PONTO DE PARADA. Ele diz onde olhar, nunca o
+   que responder. Quem responde pelo marcador acerta 50% e sente que está
+   raciocinando. */
 const PALAVRAS_PERIGOSAS = [
-  { termo: "sempre", vies: "E", explica: "Absolutiza a regra. O Direito quase sempre tem exceção — mas cuidado com garantias absolutas (ex.: vedação à tortura, art. 5º, III, CF)." },
-  { termo: "nunca", vies: "E", explica: "Espelho de 'sempre'. Verifique se existe ao menos uma hipótese legal que contrarie a negativa total." },
-  { termo: "jamais", vies: "E", explica: "Negativa absoluta. Tende a E, salvo em vedações constitucionais literais." },
-  { termo: "somente", vies: "E", explica: "Restringe. A pergunta correta é: 'só isso mesmo, ou a lei admite outras hipóteses?'" },
-  { termo: "apenas", vies: "E", explica: "Mesma lógica de 'somente'. É o marcador clássico da restrição indevida." },
-  { termo: "exclusivamente", vies: "E", explica: "Restrição máxima. Quase sempre há concorrência de hipóteses ou de competências." },
-  { termo: "todos", vies: "E", explica: "Generalização. Procure o contraexemplo (um único caso contrário derruba a assertiva)." },
-  { termo: "qualquer", vies: "E", explica: "Generalização. 'Em qualquer hipótese/caso' costuma ignorar exceções legais." },
-  { termo: "necessariamente", vies: "E", explica: "Transforma possibilidade em obrigatoriedade. Cheque se a consequência é automática mesmo." },
-  { termo: "obrigatoriamente", vies: "E", explica: "Idem: a lei pode facultar em vez de obrigar. Compare 'deverá' × 'poderá' na norma." },
-  { termo: "automaticamente", vies: "E", explica: "O Direito raramente opera efeitos automáticos; costuma exigir ato, decisão ou requerimento." },
-  { termo: "imediatamente", vies: "N", explica: "Pode ser literal da lei (ex.: comunicação imediata da prisão ao juiz, art. 5º, LXII). Verifique a fonte." },
-  { termo: "independentemente", vies: "N", explica: "Às vezes é a própria regra (Súmula 600 STJ: independe de coabitação). Exige conhecimento específico." },
-  { termo: "desde que", vies: "N", explica: "Condicionante. Verifique se a condição existe na norma (se não existe: exigência inexistente → E)." },
-  { termo: "salvo", vies: "N", explica: "Introduz exceção. A banca adora trocar o conteúdo da ressalva." },
-  { termo: "em regra", vies: "C", explica: "Relativiza. Assertivas com 'em regra', 'em geral', 'pode' tendem a C, pois admitem exceções." },
-  { termo: "poderá", vies: "C", explica: "Faculdade. Tende a C quando a norma é discricionária; vira E se a lei diz 'deverá'." },
-  { termo: "deverá", vies: "N", explica: "Obrigação. Confira se a norma impõe ou apenas faculta." },
-  { termo: "presume-se", vies: "N", explica: "Cheque se a presunção é absoluta (iuris et de iure) ou relativa (iuris tantum) — a banca troca as duas." },
-  { termo: "prescinde", vies: "N", explica: "Pegadinha semântica: prescindir = DISPENSAR. Muitos leem como 'precisar'. Leia duas vezes." },
-  { termo: "não", vies: "N", explica: "Negativas e duplas negativas invertem o julgamento. Reescreva mentalmente a frase na forma afirmativa." },
-  { termo: "não é incorreto", vies: "N", explica: "Negação dupla: 'não é incorreto' = 'é correto'. Reescreva na forma afirmativa antes de julgar." },
-  { termo: "não é errado", vies: "N", explica: "Negação dupla: 'não é errado' = 'é certo'. Cuidado com o embaralhamento proposital." },
-  { termo: "inegável", vies: "N", explica: "Muitas vezes acompanha outra negativa ('é inegável que não…'), criando dupla negação. Conte os 'não'." },
-  { termo: "não se pode negar", vies: "N", explica: "Negação dupla: equivale a uma afirmação. A banca usa para confundir a leitura rápida." },
+  { termo: "exclusivamente", vies: "E", forca: "forte",
+    explica: "O marcador mais confiável do radar: 80% dos itens que o contêm são ERRADO. Restrição máxima — quase sempre há concorrência de hipóteses ou de competências. Ainda assim, confirme a exceção antes de marcar." },
+  { termo: "desde que", vies: "E", forca: "forte",
+    explica: "Subestimado: 70% de ERRADO. Introduz condicionante, e a condição costuma ser inventada. Vá ao texto legal e pergunte se ele realmente condiciona — se não condiciona, é exigência inexistente." },
+  { termo: "automaticamente", vies: "E", forca: "forte",
+    explica: "74% de ERRADO. O Direito raramente opera efeitos automáticos; costuma exigir ato, decisão ou requerimento de alguém." },
+  { termo: "necessariamente", vies: "E", forca: "forte",
+    explica: "71% de ERRADO. Transforma possibilidade em obrigatoriedade. Cheque se a consequência é mesmo automática ou se a norma apenas faculta." },
+  { termo: "sempre", vies: "E", forca: "fraco",
+    explica: "ATENÇÃO — este marcador é fraco: apenas 57% dos itens com 'sempre' são ERRADO, quase uma moeda. O reflexo de marcar E ao ver 'sempre' custa caro, porque normas literais podem ser absolutas (vedação à tortura, art. 5º, III, CF). Use como ponto de parada, jamais como resposta." },
+  { termo: "nunca", vies: "E", forca: "fraco", explica: "Espelho de 'sempre', e igualmente fraco. Verifique se existe ao menos uma hipótese legal que contrarie a negativa total — e não decida pelo marcador." },
+  { termo: "jamais", vies: "E", forca: "fraco", explica: "Negativa absoluta, mas pouco frequente e pouco confiável isolada. Tende a E, salvo em vedações constitucionais literais." },
+  { termo: "somente", vies: "E", forca: "fraco", explica: "Medido em 57% de ERRADO — fraco. A pergunta correta continua sendo 'só isso mesmo, ou a lei admite outras hipóteses?', mas a resposta precisa vir do conteúdo, não do marcador." },
+  { termo: "apenas", vies: "N", forca: "nulo", explica: "SEM PODER PREDITIVO: 50% de ERRADO, exatamente uma moeda. É o marcador mais ensinado nos cursinhos e o menos informativo na prática. Serve para localizar a restrição no enunciado, nada além disso." },
+  { termo: "todos", vies: "N", forca: "nulo", explica: "SEM PODER PREDITIVO: 49% de ERRADO. Continua valendo a técnica — procure o contraexemplo, pois um único caso contrário derruba a assertiva —, mas o 'todos' em si não indica gabarito." },
+  { termo: "qualquer", vies: "E", forca: "moderado", explica: "66% de ERRADO, o mais confiável entre os generalizantes. 'Em qualquer hipótese/caso' costuma ignorar exceções legais." },
+  { termo: "obrigatoriamente", vies: "E", forca: "moderado", explica: "A lei pode facultar em vez de obrigar. Compare 'deverá' × 'poderá' na norma." },
+  { termo: "imediatamente", vies: "N", forca: "nulo", explica: "Pode ser literal da lei (ex.: comunicação imediata da prisão ao juiz, art. 5º, LXII). Verifique a fonte." },
+  { termo: "independentemente", vies: "E", forca: "moderado", explica: "Medido em 64% de ERRADO — mais informativo do que se supunha. Mas cuidado: às vezes é a própria regra (Súmula 600 STJ: independe de coabitação). Exige conhecimento específico." },
+  { termo: "salvo", vies: "N", forca: "nulo", explica: "Introduz exceção. A banca adora trocar o conteúdo da ressalva." },
+  { termo: "em regra", vies: "C", forca: "moderado", explica: "70% de CERTO — o marcador pró-CERTO mais confiável. Relativiza, e assertivas que admitem exceção têm mais espaço para ser verdadeiras." },
+  { termo: "poderá", vies: "C", forca: "fraco", explica: "Só 55% de CERTO — fraco. Faculdade tende a C quando a norma é discricionária, mas vira E se a lei diz 'deverá'. Confirme na norma." },
+  { termo: "deverá", vies: "N", forca: "fraco", explica: "Obrigação. Confira se a norma impõe ou apenas faculta." },
+  { termo: "presume-se", vies: "N", forca: "nulo", explica: "Cheque se a presunção é absoluta (iuris et de iure) ou relativa (iuris tantum) — a banca troca as duas." },
+  { termo: "prescinde", vies: "N", forca: "nulo", explica: "Pegadinha semântica: prescindir = DISPENSAR. Muitos leem como 'precisar'. Leia duas vezes." },
+  { termo: "não", vies: "N", forca: "nulo", explica: "Negativas e duplas negativas invertem o julgamento. Reescreva mentalmente a frase na forma afirmativa." },
+  { termo: "não é incorreto", vies: "N", forca: "nulo", explica: "Negação dupla: 'não é incorreto' = 'é correto'. Reescreva na forma afirmativa antes de julgar." },
+  { termo: "não é errado", vies: "N", forca: "nulo", explica: "Negação dupla: 'não é errado' = 'é certo'. Cuidado com o embaralhamento proposital." },
+  { termo: "inegável", vies: "N", forca: "nulo", explica: "Muitas vezes acompanha outra negativa ('é inegável que não…'), criando dupla negação. Conte os 'não'." },
+  { termo: "não se pode negar", vies: "N", forca: "nulo", explica: "Negação dupla: equivale a uma afirmação. A banca usa para confundir a leitura rápida." },
 ];
 
 /* ---------------- BANCO DE QUESTÕES (Módulos 1, 3, 5, 6, 11) ---------------- */

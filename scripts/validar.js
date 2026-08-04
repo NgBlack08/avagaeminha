@@ -64,6 +64,10 @@ const PADRAO_EXIGE_TEXTO_APOIO =
 const LIMIAR_PADRAO_ENVIESADO = 0.90; /* padrão que quase sempre cai no mesmo gabarito */
 const LIMIAR_CE_GLOBAL = 0.05;        /* desvio tolerado em torno de 50/50 */
 const LIMIAR_VIES_TAMANHO = 0.12;     /* diferença de comprimento entre C e E */
+/* Quanto uma "regra cega" pode acertar acima do puro chute antes de virar
+   problema. Cinco pontos percentuais é tolerância, não meta: acima disso o
+   banco está ensinando a forma em vez do conteúdo. */
+const LIMIAR_REGRA_CEGA = 0.05;
 const MIN_ITENS_PARA_AVALIAR = 15;    /* abaixo disso, a amostra não diz nada */
 
 /* Resolução que só devolve o enunciado.
@@ -233,6 +237,70 @@ function validar({ quieto = false } = {}) {
   const viesTam = Math.abs(mediaC - mediaE) / Math.max(mediaC, mediaE);
   if (viesTam > LIMIAR_VIES_TAMANHO) {
     avisos.push(`Enunciados CERTO têm ${Math.round(mediaC)} caracteres contra ${Math.round(mediaE)} dos ERRADO (${(viesTam * 100).toFixed(0)}% de diferença) — vira pista de comprimento.`);
+  }
+
+  /* ---------- Teste da regra cega ----------
+     A comparação de médias acima é fraca: duas distribuições bem diferentes
+     podem ter médias parecidas, e o aviso não dispara mesmo quando o
+     comprimento entrega o gabarito. O que interessa medir não é a média, e
+     sim a EXPLORABILIDADE — quanto um candidato acerta sem ler o conteúdo.
+
+     Simula-se um "chutador cego" que decide apenas por forma: comprimento
+     do enunciado e presença de termo absoluto. Se ele bate o chute puro por
+     margem relevante, o banco tem um vazamento estrutural, porque um aluno
+     pode subir a taxa de acerto treinando o formato em vez da matéria — e a
+     taxa de acerto, que é o painel de controle do estudo, deixa de medir
+     preparo. Pior: essa heurística NÃO se transfere para a prova real, então
+     o vazamento não é só ruído de medição, é treino de um reflexo errado. */
+  const itensCE = QUESTOES.filter(q => q.tipo === "CE" && q.enunciado);
+  if (itensCE.length >= 200) {
+    const semAcento = s => s.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "");
+    const ABSOLUTOS = /\b(sempre|nunca|jamais|somente|apenas|exclusivamente|todos?|toda|qualquer|necessariamente|obrigatoriamente|automaticamente)\b/;
+    const baseChute = Math.max(
+      itensCE.filter(q => q.gabarito === "C").length,
+      itensCE.filter(q => q.gabarito === "E").length,
+    ) / itensCE.length;
+
+    /* Varre o corte de comprimento e fica com o melhor para o chutador —
+       supor um corte fixo subestimaria o vazamento. */
+    let melhor = { corte: 0, taxa: 0 };
+    for (let corte = 100; corte <= 400; corte += 10) {
+      let ok = 0;
+      for (const q of itensCE) {
+        const palpite = ABSOLUTOS.test(semAcento(q.enunciado)) ? "E"
+          : (q.enunciado.length >= corte ? "C" : "E");
+        if (palpite === q.gabarito) ok++;
+      }
+      const taxa = ok / itensCE.length;
+      if (taxa > melhor.taxa) melhor = { corte, taxa };
+    }
+
+    const ganho = melhor.taxa - baseChute;
+    if (ganho > LIMIAR_REGRA_CEGA) {
+      avisos.push(`Regra cega (comprimento + termo absoluto, sem ler o conteúdo) acerta ${pct(melhor.taxa, 1)} contra ${pct(baseChute, 1)} do chute puro — ${(ganho * 100).toFixed(1)}pp de vazamento. O banco premia quem treina o formato.`);
+      /* Aponta onde doer mais, para o próximo lote saber o que corrigir. */
+      const porDisc = new Map();
+      for (const q of itensCE) {
+        if (!porDisc.has(q.disciplina)) porDisc.set(q.disciplina, []);
+        porDisc.get(q.disciplina).push(q);
+      }
+      const ranking = [...porDisc.entries()]
+        .filter(([, arr]) => arr.length >= 40)
+        .map(([d, arr]) => {
+          let ok = 0;
+          for (const q of arr) {
+            const palpite = ABSOLUTOS.test(semAcento(q.enunciado)) ? "E"
+              : (q.enunciado.length >= melhor.corte ? "C" : "E");
+            if (palpite === q.gabarito) ok++;
+          }
+          return { d, n: arr.length, taxa: ok / arr.length };
+        })
+        .sort((a, b) => b.taxa - a.taxa)
+        .slice(0, 3);
+      for (const r of ranking) {
+        avisos.push(`    pior em "${r.d}": ${pct(r.taxa, 1)} de acerto cego em ${r.n} itens.`);
+      }
+    }
   }
 
   /* Resolução que devolve o enunciado sem acrescentar nada verificável. */
