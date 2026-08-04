@@ -67,15 +67,16 @@ const LIMIAR_VIES_TAMANHO = 0.12;     /* diferença de comprimento entre C e E *
 /* Quanto uma "regra cega" pode acertar acima do puro chute antes de virar
    problema.
 
-   O limiar deixou de ser arbitrário: em 130 itens de provas REAIS da
-   CEBRASPE com gabarito oficial (PC-DF 2021, PF 2025, PC-SE 2021), o mesmo
-   chutador cego ganha apenas +0,8pp sobre o chute — ou seja, na prova a
-   forma não entrega nada. Ver AUDITORIA-PROVA-REAL-2021.md.
+   O limiar deixou de ser arbitrário: em 198 itens de provas REAIS da
+   CEBRASPE com gabarito oficial (PC-DF 2021 Agente, PC-SE 2021 Agente de
+   Polícia Judiciária, PF 2025 básicos), o mesmo chutador cego rende
+   -1,5pp — ou seja, na prova real a forma não só não entrega nada, como
+   atrapalha quem a usa. Ver AUDITORIA-PROVA-REAL-2021.md.
 
-   Logo, qualquer ganho relevante aqui é artefato NOSSO, e artefato que o
-   candidato treina como se fosse técnica. Os 3pp de tolerância existem só
-   para absorver ruído amostral, não para acomodar vazamento. */
-const REGRA_CEGA_REFERENCIA_REAL = 0.008;
+   Logo, qualquer ganho aqui é artefato NOSSO, e artefato que o candidato
+   treina como se fosse técnica. Os 3pp de tolerância existem só para
+   absorver ruído amostral, não para acomodar vazamento. */
+const REGRA_CEGA_REFERENCIA_REAL = -0.015;
 const LIMIAR_REGRA_CEGA = 0.03;
 
 /* Perfil de comprimento medido na prova real: CEBRASPE / PC-AL 2021,
