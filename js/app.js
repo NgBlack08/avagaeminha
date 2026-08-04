@@ -1084,15 +1084,18 @@ function questaoCardHtml(q, opts) {
     <div class="q-enunciado" id="qe-${q.id}">${dest
       ? marcarTrechoEstrategia(q.enunciado, dest.trecho, "Trecho que materializa a estratégia: " + e.nome)
       : escapeHtml(q.enunciado)}</div>
+    <div class="conf-bloco" id="qcb-${q.id}">
+      <div class="conf">Antes de marcar, qual sua confiança?
+        <button onclick="setConf('${q.id}',1,this)">chute</button>
+        <button onclick="setConf('${q.id}',2,this)">dúvida</button>
+        <button onclick="setConf('${q.id}',3,this)">certeza</button>
+      </div>
+      <div class="conf-feedback" id="qcf-${q.id}"></div>
+    </div>
     <div class="q-actions" id="qa-${q.id}">
       <button class="btn ok" onclick="responder('${q.id}','C')">CERTO</button>
       <button class="btn bad" onclick="responder('${q.id}','E')">ERRADO</button>
       <button class="btn ghost" onclick="responder('${q.id}','B')">Em branco</button>
-      <div class="conf">confiança:
-        <button onclick="setConf('${q.id}',1,this)">baixa</button>
-        <button onclick="setConf('${q.id}',2,this)">média</button>
-        <button onclick="setConf('${q.id}',3,this)">alta</button>
-      </div>
       <span class="q-timer" id="qt-${q.id}" data-ideal="${q.tempoIdealSeg}">0:00</span>
     </div>
     <div id="qr-${q.id}"></div>
@@ -1128,10 +1131,57 @@ function estrategiasDaQuestaoHtml(q) {
   </details>`;
 }
 
+/* Veredito da faixa, entregue no instante da decisão. O cálculo já existia
+   em orientacaoBranco(), mas só aparecia como resumo no Dashboard — ou
+   seja, depois de a questão ter sido marcada, quando não muda mais nada.
+   Numa prova em que erro anula acerto, saber que "quando eu chuto acerto
+   38%" só vale se a informação chegar ANTES do clique. */
+function dicaConfiancaHtml(nivel) {
+  const f = orientacaoBranco().porNivel[nivel];
+  const rotulo = CONFIANCA_ROTULOS[nivel];
+  if (!f) {
+    return `<span class="hint">Sem histórico suficiente na faixa "${rotulo}" ainda. Continue marcando: a partir de 5 respostas eu calculo se, para você, arriscar compensa.</span>`;
+  }
+  const pct = Math.round(f.taxa * 100);
+  const ve = f.valorEsperado;
+  return f.recomendaBranco
+    ? `<span class="conf-aviso bad">⚠ Quando você marca <b>${rotulo}</b>, acerta <b>${pct}%</b> (${f.n} itens). Abaixo de 50%, o erro anula mais do que o acerto rende — <b>em branco vale mais</b> (saldo esperado ${ve.toFixed(2)} por item arriscado).</span>`
+    : `<span class="conf-aviso ok">✓ Quando você marca <b>${rotulo}</b>, acerta <b>${pct}%</b> (${f.n} itens) — acima dos 50% em que arriscar compensa (saldo esperado +${ve.toFixed(2)}).</span>`;
+}
+
+/* Fecha o laço da calibração: relaciona o que o candidato DECLAROU saber
+   com o que de fato aconteceu. É a única forma de a confiança deixar de ser
+   um dado que o app coleta e passar a ser uma habilidade que ele treina —
+   perceber que "certeza" errada é o padrão mais caro da prova, e que chutar
+   numa faixa perdedora custa pontos mesmo quando dá certo. */
+function notaCalibracaoHtml(conf, resposta, correta) {
+  if (!conf) {
+    return `<div class="calib-nota hint">Você não marcou a confiança nesta. Marcar leva um clique e é o que me permite dizer, com o seu histórico, quando vale deixar em branco.</div>`;
+  }
+  const rotulo = CONFIANCA_ROTULOS[conf];
+  const f = orientacaoBranco().porNivel[conf];
+  if (resposta === "B") {
+    return conf === 3
+      ? `<div class="calib-nota warn">Você deixou em branco algo que marcou como <b>${rotulo}</b>. Se a confiança se confirma no seu histórico, aqui você deixou ponto na mesa.</div>`
+      : `<div class="calib-nota ok">Branco declarado como <b>${rotulo}</b> — decisão coerente: zero é melhor que arriscar o que você não domina.</div>`;
+  }
+  if (!correta && conf === 3) {
+    return `<div class="calib-nota bad">Atenção: você errou algo que marcou como <b>certeza</b>. Esse é o padrão mais caro da prova — não é falta de conteúdo, é excesso de confiança, e nenhuma estratégia de branco protege contra ele. Vale reler a resolução com atenção redobrada.</div>`;
+  }
+  if (f && f.recomendaBranco) {
+    return correta
+      ? `<div class="calib-nota warn">Deu certo, mas foi aposta desfavorável: na faixa <b>${rotulo}</b> você acerta ${Math.round(f.taxa * 100)}%, e no saldo líquido esse hábito custa pontos. Em prova, o branco renderia mais.</div>`
+      : `<div class="calib-nota bad">Erro na faixa <b>${rotulo}</b>, em que você acerta ${Math.round(f.taxa * 100)}%. Em prova este item custaria dois: o erro anula um acerto seu. O branco valeria zero — melhor que negativo.</div>`;
+  }
+  return "";
+}
+
 function setConf(qid, n, btn) {
   qUI[qid].confianca = n;
   btn.parentElement.querySelectorAll("button").forEach(b => b.classList.remove("sel"));
   btn.classList.add("sel");
+  const alvo = $("#qcf-" + qid);
+  if (alvo) alvo.innerHTML = dicaConfiancaHtml(n);
 }
 let timerInterval = null;
 function iniciarTimersVisiveis() {
@@ -1172,6 +1222,8 @@ async function responder(qid, resposta) {
     ? highlightEnunciado(q.enunciado, dest.trecho, "Trecho que materializa a estratégia: " + dest.estrategia.nome)
     : highlightPerigos(q.enunciado);
   $("#qa-" + qid).style.display = "none";
+  const blocoConf = $("#qcb-" + qid);
+  if (blocoConf) blocoConf.style.display = "none";
 
   const dna = DNA_BANCA.find(d => d.slug === q.pegadinha);
   const tSeg = Math.round(tempoMs / 1000);
@@ -1183,7 +1235,8 @@ async function responder(qid, resposta) {
   /* O acerto/erro aparece na hora; só a explicação espera, porque
      comentario/cognitivo vêm de um arquivo carregado sob demanda. */
   const alvo = $("#qr-" + qid);
-  const resultadoHtml = `<div class="resultado ${cls}">${msg} · seu tempo: ${tSeg}s (ideal: ${q.tempoIdealSeg}s)</div>`;
+  const resultadoHtml = `<div class="resultado ${cls}">${msg} · seu tempo: ${tSeg}s (ideal: ${q.tempoIdealSeg}s)</div>`
+    + notaCalibracaoHtml(ui.confianca, resposta, res.correta);
 
   let falhouDetalhe = false;
   if (!q.comentario) {

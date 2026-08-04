@@ -562,7 +562,20 @@ details.cog summary:hover { opacity: .8; }
 /* Comentário livre na fila do admin — citação curta, várias por linha. */
 .fb-cmt { font-size: 12px; color: var(--muted); font-style: italic; line-height: 1.45; margin-bottom: 3px; }
 
-.conf { display: flex; gap: 5px; align-items: center; font-size: 12.5px; color: var(--muted); }
+/* Bloco de confiança: sobe para antes dos botões de resposta porque a
+   declaração só tem valor se vier ANTES da decisão. */
+.conf-bloco { margin: 12px 0 4px; padding: 10px 12px; border-radius: var(--r-md);
+  background: var(--surface2); border: 1px solid var(--border); }
+.conf-feedback:not(:empty) { margin-top: 8px; font-size: 12.5px; line-height: 1.5; }
+.conf-aviso { display: block; padding: 8px 10px; border-radius: var(--r-sm); border-left: 3px solid var(--muted); }
+.conf-aviso.bad { border-left-color: var(--bad); color: var(--text); }
+.conf-aviso.ok { border-left-color: var(--ok); color: var(--text); }
+.calib-nota { margin-top: 8px; font-size: 12.5px; line-height: 1.5; padding: 8px 11px;
+  border-radius: var(--r-sm); background: var(--surface2); border-left: 3px solid var(--muted); }
+.calib-nota.ok { border-left-color: var(--ok); }
+.calib-nota.warn { border-left-color: var(--warn); }
+.calib-nota.bad { border-left-color: var(--bad); }
+.conf { display: flex; gap: 5px; align-items: center; flex-wrap: wrap; font-size: 12.5px; color: var(--muted); }
 .conf button { background: var(--surface2); border: 1px solid var(--border); border-radius: 8px; padding: 6px 10px; cursor: pointer; color: var(--muted); font-size: 12px; transition: all var(--t-fast); }
 .conf button:hover { color: var(--text); }
 .conf button.sel { background: var(--accent-soft); color: var(--accent); border-color: var(--accent); font-weight: 700; }

@@ -799,8 +799,19 @@ function orientacaoBranco() {
         recomendaBranco: p < 0.5,
       };
     });
-  return { limiar: 0.5, linhas, temDados: linhas.length > 0 };
+  /* Índice por nível para consulta pontual: a orientação passou a ser
+     mostrada também dentro da questão, no momento em que o candidato
+     declara a confiança — antes ela só existia como resumo no Dashboard,
+     isto é, depois de a decisão já ter sido tomada. */
+  const porNivel = Object.fromEntries(linhas.map(l => [l.nivel, l]));
+  return { limiar: 0.5, linhas, porNivel, temDados: linhas.length > 0 };
 }
+
+/* Rótulos das faixas de confiança. Ficam aqui, e não na interface, porque
+   a orientação de branco raciocina sobre eles: "chute" e "certeza" nomeiam
+   a decisão que o candidato toma na prova, coisa que "baixa" e "alta" não
+   faziam. */
+const CONFIANCA_ROTULOS = { 1: "chute", 2: "dúvida", 3: "certeza" };
 
 /* ---------------- Plano de Estudo Dirigido ----------------
    Cruza três coisas que já existiam isoladas no app: dias até a prova
