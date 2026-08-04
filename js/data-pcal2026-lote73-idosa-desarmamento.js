@@ -1,0 +1,1172 @@
+/* =====================================================================
+   QUESTLAB — Lote 73: ESTATUTO DA PESSOA IDOSA + ESTATUTO DO DESARMAMENTO
+
+   Duas leis expressamente nomeadas no edital PC-AL 2026 e quase sem
+   cobertura no banco:
+   - Lei 10.741/2003 — "Crimes cometidos contra a pessoa idosa"
+     (LEGISLAÇÃO PENAL ESPECIAL, item 17). Tinha 3 itens, e os três
+     versavam sobre ação penal e conceito de pessoa idosa: NENHUM sobre
+     os crimes em espécie (arts. 96 a 109), que é justamente o recorte
+     que o edital nomeia.
+   - Lei 10.826/2003 — Estatuto do Desarmamento (LEGISLAÇÃO INSTITUCIONAL
+     DO ESTADO DE ALAGOAS, item 9). Tinha 6 itens.
+
+   Fonte: legislação comentada fornecida pelo usuário (Pessoa Idosa
+   atualizada até junho/2026; Desarmamento até julho/2026). Leis são
+   texto público (Lei 9.610/98, art. 8º, IV) e a jurisprudência citada é
+   pública — todos os itens são originais, redigidos a partir do texto
+   legal e dos julgados, sem reprodução de questões de terceiros.
+
+   DUAS ATUALIZAÇÕES LEGISLATIVAS RECENTES, ambas com item próprio por
+   serem alvo natural de uma prova de 2026:
+   - Lei 15.163/2025: afastou o JECRIM dos crimes contra a pessoa idosa
+     independentemente da pena (art. 94, par. único) e elevou as penas do
+     art. 99.
+   - Lei 15.358/2026 ("Lei Antifacção", de 24/03/2026): criou o art. 21-A
+     do Estatuto do Desarmamento — aumento de 2/3 restrito aos arts. 12,
+     14 e 16 quando ligados ao tráfico de drogas.
+
+   Dois dispositivos exigiram cuidado redobrado, porque a letra da lei
+   continua no texto mas NÃO é a norma aplicável — o mesmo problema do
+   art. 105 da Constituição alagoana (LEA-059):
+   - art. 14, par. único, e art. 15, par. único (inafiançabilidade); e
+   - art. 21 (vedação à liberdade provisória).
+   Os três foram declarados inconstitucionais pelo STF na ADI 3.112/DF.
+   Cobrar a literalidade aqui ensinaria regra revogada, então os itens
+   correspondentes cobram justamente a distância entre texto e norma.
+
+   RESULTADO: 55 itens (LE-176 a LE-230) — 21 da Pessoa Idosa e 34 do
+   Desarmamento. 26 CERTO / 29 ERRADO; dificuldade 2 em 18 e 3 em 37; dez
+   padrões de pegadinha distintos.
+
+   Sobre o rebalanceamento: os padrões foram distribuídos durante a
+   redação (técnica do lote 71) e, desta vez, o validador NÃO acusou
+   previsibilidade nova. Ainda assim, os 10 itens inicialmente marcados
+   como "literalidade" eram todos CERTO e empurraram o padrão para exatos
+   90,0% no banco — o limite do alerta. Cinco foram retagueados para o
+   padrão que o próprio comentário do item já nomeava (troca de artigos,
+   supressão de requisito, inversão de regra e exceção), e o LE-195 foi
+   reescrito como ERRADO, distorcendo a espécie de pena do art. 109. Com
+   isso o padrão caiu de 89,82% (antes do lote) para 89,76%: pela primeira
+   vez um lote reduz esse desvio em vez de agravá-lo.
+
+   O que continua descoberto nestas duas leis: do Estatuto do Desarmamento,
+   os arts. 6º-A a 11 (autorizações de porte por categoria, taxas) e os
+   arts. 24 a 27 (competências do Comando do Exército); da Pessoa Idosa,
+   toda a parte não penal — que, de todo modo, está fora do recorte do
+   edital, restrito aos crimes.
+   ===================================================================== */
+const QUESTOES_PCAL_LOTE73 = [
+
+  /* =================================================================
+     PARTE I — ESTATUTO DA PESSOA IDOSA (Lei 10.741/2003), arts. 93-109
+     ================================================================= */
+
+  {
+    id: "LE-176", disciplina: "Legislação Especial", assunto: "Estatuto da Pessoa Idosa",
+    subassunto: "Disposições gerais — afastamento do JECRIM (Lei 15.163/2025)",
+    concurso: "PCAL", cargo: ["Agente", "Escrivão"], ano: 2026,
+    origem: "Inédita — estilo CEBRASPE (Lei 10.741/2003, art. 94, par. único, incluído pela Lei 15.163/2025)",
+    tipo: "CE", dificuldade: 3, tempoIdealSeg: 70, probReaparecer: 0.86,
+    enunciado: "Aos crimes previstos no Estatuto da Pessoa Idosa e aos crimes praticados com violência contra a pessoa idosa não se aplica a Lei nº 9.099/1995, independentemente da pena cominada.",
+    gabarito: "C", pegadinha: "literalidade", palavraChave: "independentemente da pena cominada",
+    cognitivo: {
+      motivo: "Cobrar a inovação da Lei 15.163/2025, que é o recorte mais provável da matéria em prova de 2026.",
+      palavraCritica: "independentemente da pena",
+    },
+    comentario: {
+      resolucao: "CERTO. O parágrafo único do art. 94, incluído pela Lei nº 15.163/2025, afasta integralmente a Lei nº 9.099/1995 — e não apenas para as infrações de menor potencial ofensivo. A redação anterior mandava aplicar o procedimento da Lei dos Juizados aos crimes com pena não superior a quatro anos, o que gerava enorme controvérsia. Hoje ficam afastados a transação penal, a suspensão condicional do processo e a composição civil, tanto nos crimes do próprio Estatuto quanto em qualquer crime praticado com violência contra a pessoa idosa.",
+      fundamento: "Lei 10.741/2003, art. 94, parágrafo único (incluído pela Lei 15.163/2025).",
+      macete: "Violência contra pessoa idosa: JECRIM não entra, pouco importa a pena.",
+      erroComum: "Aplicar a redação antiga, que remetia ao procedimento da Lei 9.099/1995.",
+      comoBancaPensa: "Cobra a lei nova em estado puro, apostando que o candidato estudou por material desatualizado.",
+    },
+  },
+  {
+    id: "LE-177", disciplina: "Legislação Especial", assunto: "Estatuto da Pessoa Idosa",
+    subassunto: "Disposições gerais — aplicação subsidiária",
+    concurso: "PCAL", cargo: ["Agente", "Escrivão"], ano: 2026,
+    origem: "Inédita — estilo CEBRASPE (Lei 10.741/2003, arts. 93 e 94)",
+    tipo: "CE", dificuldade: 2, tempoIdealSeg: 60, probReaparecer: 0.7,
+    enunciado: "Aos crimes definidos no Estatuto da Pessoa Idosa aplicam-se subsidiariamente, no que couber, as disposições do Código Penal e do Código de Processo Penal.",
+    gabarito: "C", pegadinha: "troca-conceito", palavraChave: "subsidiariamente, no que couber",
+    cognitivo: {
+      motivo: "Fixar a cláusula de aplicação subsidiária, que sustenta toda a leitura sistemática do Título VI.",
+      palavraCritica: "subsidiariamente",
+    },
+    comentario: {
+      resolucao: "CERTO. É a literalidade do art. 94. O Estatuto não é um microssistema fechado: as regras gerais de imputação, concurso, causas de exclusão e o rito processual comum continuam valendo naquilo que a lei especial não dispuser diferentemente. Não confundir com o art. 93, que manda aplicar subsidiariamente a Lei nº 7.347/1985 (Ação Civil Pública) — este último cuida do plano coletivo, não do penal.",
+      fundamento: "Lei 10.741/2003, arts. 93 e 94.",
+      macete: "Art. 93 = ACP (coletivo). Art. 94 = CP e CPP (penal).",
+      erroComum: "Trocar o objeto dos arts. 93 e 94.",
+      comoBancaPensa: "Costuma inverter os dois dispositivos em item posterior.",
+    },
+  },
+  {
+    id: "LE-178", disciplina: "Legislação Especial", assunto: "Estatuto da Pessoa Idosa",
+    subassunto: "Imunidades penais dos arts. 181 e 182 do CP",
+    concurso: "PCAL", cargo: ["Agente", "Escrivão"], ano: 2026,
+    origem: "Inédita — estilo CEBRASPE (Lei 10.741/2003, art. 95; CP, arts. 181 a 183)",
+    tipo: "CE", dificuldade: 3, tempoIdealSeg: 75, probReaparecer: 0.74,
+    enunciado: "Tratando-se de crime patrimonial previsto no Estatuto da Pessoa Idosa praticado por filho contra o pai, incide a imunidade penal absoluta do art. 181 do Código Penal, ficando o agente isento de pena.",
+    gabarito: "E", pegadinha: "exigencia-inexistente", palavraChave: "incide a imunidade penal absoluta",
+    cognitivo: {
+      motivo: "Cobrar o afastamento expresso das imunidades, ponto sensível porque o parentesco é a regra nesses crimes.",
+      palavraCritica: "incide a imunidade penal absoluta",
+    },
+    comentario: {
+      resolucao: "ERRADO. O art. 95 é expresso ao dizer que aos crimes do Estatuto não se aplicam os arts. 181 e 182 do Código Penal. E há reforço independente: o próprio art. 183, III, do CP já exclui as imunidades quando o crime é cometido contra pessoa com 60 anos ou mais. Ou seja, por dois caminhos distintos, a escusa absolutória não socorre o agente. A lógica é evidente — a imunidade existe para preservar a harmonia familiar, e não faria sentido invocá-la justamente para blindar quem se aproveita do vínculo familiar para lesar a pessoa idosa.",
+      fundamento: "Lei 10.741/2003, art. 95; CP, arts. 181, 182 e 183, III.",
+      macete: "Contra pessoa idosa não há escusa absolutória — nem pelo Estatuto, nem pelo CP.",
+      erroComum: "Transportar automaticamente a imunidade do furto entre parentes.",
+      comoBancaPensa: "Monta o caso com vínculo familiar para induzir à resposta intuitiva.",
+    },
+  },
+  {
+    id: "LE-179", disciplina: "Legislação Especial", assunto: "Estatuto da Pessoa Idosa",
+    subassunto: "Discriminação (art. 96) — elemento normativo do tipo",
+    concurso: "PCAL", cargo: ["Agente", "Escrivão"], ano: 2026,
+    origem: "Inédita — estilo CEBRASPE (Lei 10.741/2003, art. 96, caput e § 1º)",
+    tipo: "CE", dificuldade: 3, tempoIdealSeg: 80, probReaparecer: 0.8,
+    enunciado: "O crime do caput do art. 96 do Estatuto da Pessoa Idosa, consistente em discriminar pessoa idosa impedindo ou dificultando seu acesso a operações bancárias, configura-se qualquer que seja o motivo da discriminação.",
+    gabarito: "E", pegadinha: "restricao-indevida", palavraChave: "qualquer que seja o motivo",
+    cognitivo: {
+      motivo: "Cobrar o elemento normativo 'por motivo de idade', que separa o caput do § 1º.",
+      palavraCritica: "qualquer que seja o motivo",
+    },
+    comentario: {
+      resolucao: "ERRADO — e o erro está exatamente onde o item alarga o tipo. O caput exige que a discriminação seja POR MOTIVO DE IDADE: é elemento normativo do tipo. Ausente essa motivação específica, a conduta não desaparece do mundo penal, mas migra para o § 1º, que pune quem desdenha, humilha, menospreza ou discrimina pessoa idosa POR QUALQUER MOTIVO. São figuras distintas, com âmbitos de incidência distintos — e é essa distinção que o item apaga.",
+      fundamento: "Lei 10.741/2003, art. 96, caput e § 1º.",
+      macete: "Caput = por motivo de IDADE. § 1º = por QUALQUER motivo.",
+      erroComum: "Tratar caput e § 1º como se tivessem a mesma elementar subjetiva.",
+      comoBancaPensa: "Substitui a elementar restritiva por uma fórmula ampla e espera que passe despercebido.",
+    },
+  },
+  {
+    id: "LE-180", disciplina: "Legislação Especial", assunto: "Estatuto da Pessoa Idosa",
+    subassunto: "Discriminação (art. 96, § 2º) — causa de aumento",
+    concurso: "PCAL", cargo: ["Agente", "Escrivão"], ano: 2026,
+    origem: "Inédita — estilo CEBRASPE (Lei 10.741/2003, art. 96, § 2º)",
+    tipo: "CE", dificuldade: 2, tempoIdealSeg: 60, probReaparecer: 0.68,
+    enunciado: "No crime de discriminação contra pessoa idosa, a pena é aumentada de metade se a vítima se encontrar sob os cuidados ou responsabilidade do agente.",
+    gabarito: "E", pegadinha: "troca-numerica", palavraChave: "aumentada de metade",
+    cognitivo: {
+      motivo: "Cobrar a fração exata da majorante, alvo clássico da banca.",
+      palavraCritica: "de metade",
+    },
+    comentario: {
+      resolucao: "ERRADO. O aumento é de UM TERÇO, não de metade (art. 96, § 2º). A hipótese fática descrita está correta — vítima sob cuidados ou responsabilidade do agente —, e é justamente por isso que o item engana: tudo soa familiar, e a única alteração é a fração. Vale reter que 'metade' é a fração das majorantes dos arts. 19 e 20 do Estatuto do Desarmamento, não desta.",
+      fundamento: "Lei 10.741/2003, art. 96, § 2º.",
+      macete: "Sob os cuidados do agente: aumento de 1/3.",
+      erroComum: "Uniformizar as frações de aumento entre leis especiais diferentes.",
+      comoBancaPensa: "Mantém todo o enunciado fiel e troca só o número.",
+    },
+  },
+  {
+    id: "LE-181", disciplina: "Legislação Especial", assunto: "Estatuto da Pessoa Idosa",
+    subassunto: "Discriminação (art. 96, § 3º) — superendividamento",
+    concurso: "PCAL", cargo: ["Agente", "Escrivão"], ano: 2026,
+    origem: "Inédita — estilo CEBRASPE (Lei 10.741/2003, art. 96, § 3º)",
+    tipo: "CE", dificuldade: 2, tempoIdealSeg: 60, probReaparecer: 0.66,
+    enunciado: "Não constitui crime a negativa de crédito motivada por superendividamento da pessoa idosa.",
+    gabarito: "C", pegadinha: "literalidade", palavraChave: "superendividamento",
+    cognitivo: {
+      motivo: "Fixar a excludente típica expressa, pouco lembrada porque parece contraintuitiva.",
+      palavraCritica: "não constitui crime",
+    },
+    comentario: {
+      resolucao: "CERTO. É o § 3º do art. 96, em sua literalidade. A ressalva é coerente com o sistema: negar crédito a quem está superendividado é medida de proteção do próprio consumidor idoso, alinhada à política de prevenção ao superendividamento da Lei nº 14.181/2021. O que o tipo pune é a recusa discriminatória — não a recusa fundada em critério objetivo e legítimo de análise de risco.",
+      fundamento: "Lei 10.741/2003, art. 96, § 3º.",
+      macete: "Negar crédito por superendividamento protege, não discrimina.",
+      erroComum: "Presumir que toda negativa de crédito a idoso é criminosa.",
+      comoBancaPensa: "Apresenta a excludente corretamente e aposta na desconfiança do candidato.",
+    },
+  },
+  {
+    id: "LE-182", disciplina: "Legislação Especial", assunto: "Estatuto da Pessoa Idosa",
+    subassunto: "Art. 96, § 1º x injúria preconceituosa (CP, art. 140, § 3º)",
+    concurso: "PCAL", cargo: ["Agente", "Escrivão"], ano: 2026,
+    origem: "Inédita — estilo CEBRASPE (Lei 10.741/2003, arts. 95 e 96, § 1º; CP, arts. 140, § 3º, e 145, par. único)",
+    tipo: "CE", dificuldade: 3, tempoIdealSeg: 85, probReaparecer: 0.72,
+    enunciado: "A injúria preconceituosa do Código Penal e o crime do § 1º do art. 96 do Estatuto da Pessoa Idosa distinguem-se, entre outros aspectos, pela espécie de ação penal: aquela é pública condicionada à representação; este, público incondicionada.",
+    gabarito: "C", pegadinha: "troca-conceito", palavraChave: "condicionada à representação",
+    cognitivo: {
+      motivo: "Cobrar o critério de distinção entre dois tipos que descrevem condutas quase idênticas.",
+      palavraCritica: "pública condicionada",
+    },
+    comentario: {
+      resolucao: "CERTO. A injúria preconceituosa (art. 140, § 3º, do CP) ofende a honra subjetiva e é de ação penal pública condicionada à representação (art. 145, parágrafo único, do CP). Já o crime do art. 96, § 1º, do Estatuto — desdenhar, humilhar, menosprezar ou discriminar pessoa idosa — visa a reduzir o valor da pessoa como ser humano e segue a regra geral do art. 95 do Estatuto: ação penal pública INCONDICIONADA. A diferença de bem jurídico protegido explica a diferença de titularidade da iniciativa.",
+      fundamento: "Lei 10.741/2003, arts. 95 e 96, § 1º; CP, arts. 140, § 3º, e 145, parágrafo único.",
+      macete: "Todo crime do Estatuto: ação pública incondicionada.",
+      erroComum: "Exigir representação da vítima idosa nos crimes do Estatuto.",
+      comoBancaPensa: "Aproxima dois tipos parecidos e cobra o critério que os separa.",
+    },
+  },
+  {
+    id: "LE-183", disciplina: "Legislação Especial", assunto: "Estatuto da Pessoa Idosa",
+    subassunto: "Omissão de assistência (art. 97)",
+    concurso: "PCAL", cargo: ["Agente", "Escrivão"], ano: 2026,
+    origem: "Inédita — estilo CEBRASPE (Lei 10.741/2003, art. 97, parágrafo único)",
+    tipo: "CE", dificuldade: 3, tempoIdealSeg: 75, probReaparecer: 0.7,
+    enunciado: "No crime de omissão de assistência à pessoa idosa em situação de iminente perigo, a pena é aumentada de metade se da omissão resulta lesão corporal de natureza grave e triplicada se resulta a morte.",
+    gabarito: "C", pegadinha: "troca-numerica", palavraChave: "aumentada de metade ... triplicada",
+    cognitivo: {
+      motivo: "Fixar as duas frações do parágrafo único, que a banca costuma embaralhar.",
+      palavraCritica: "triplicada",
+    },
+    comentario: {
+      resolucao: "CERTO. É a redação do parágrafo único do art. 97: metade para a lesão grave e triplicação para a morte. O detalhe que costuma escapar é o verbo do segundo caso — a pena não é dobrada, e sim TRIPLICADA, o que é incomum no ordenamento e por isso mesmo cobrável. A figura se aproxima da omissão de socorro do art. 135 do CP, distinguindo-se por exigir que o sujeito passivo seja pessoa idosa.",
+      fundamento: "Lei 10.741/2003, art. 97, parágrafo único; CP, art. 135.",
+      macete: "Lesão grave: metade. Morte: triplica.",
+      erroComum: "Trocar 'triplicada' por 'dobrada'.",
+      comoBancaPensa: "Explora frações incomuns, que resistem à memória por analogia.",
+    },
+  },
+  {
+    id: "LE-184", disciplina: "Legislação Especial", assunto: "Estatuto da Pessoa Idosa",
+    subassunto: "Abandono (art. 98) — crime próprio",
+    concurso: "PCAL", cargo: ["Agente", "Escrivão"], ano: 2026,
+    origem: "Inédita — estilo CEBRASPE (Lei 10.741/2003, art. 98; CP, art. 244)",
+    tipo: "CE", dificuldade: 3, tempoIdealSeg: 80, probReaparecer: 0.68,
+    enunciado: "O crime de abandono de pessoa idosa em hospitais, casas de saúde ou entidades de longa permanência pode ser praticado por qualquer pessoa, tratando-se de crime comum.",
+    gabarito: "E", pegadinha: "generalizacao", palavraChave: "por qualquer pessoa, tratando-se de crime comum",
+    cognitivo: {
+      motivo: "Cobrar a natureza de crime próprio, que decorre da elementar 'quando obrigado por lei ou mandado'.",
+      palavraCritica: "qualquer pessoa",
+    },
+    comentario: {
+      resolucao: "ERRADO. O art. 98 é crime PRÓPRIO: a elementar 'quando obrigado por lei ou mandado' restringe o sujeito ativo a quem tem o dever jurídico de cuidado — familiares, curadores, responsáveis por decisão judicial. Um terceiro sem esse vínculo que deixa a pessoa idosa em um hospital não pratica o art. 98; a depender do caso, o fato pode configurar abandono material (art. 244 do CP) ou outra figura. Confundir crime próprio com crime comum é um dos erros mais recorrentes na matéria.",
+      fundamento: "Lei 10.741/2003, art. 98; CP, art. 244.",
+      macete: "Sem dever legal de cuidado, não há art. 98.",
+      erroComum: "Ignorar a elementar 'quando obrigado por lei ou mandado'.",
+      comoBancaPensa: "Afirma que o crime é comum, suprimindo a elementar restritiva.",
+    },
+  },
+  {
+    id: "LE-185", disciplina: "Legislação Especial", assunto: "Estatuto da Pessoa Idosa",
+    subassunto: "Exposição a perigo (art. 99) — penas da Lei 15.163/2025",
+    concurso: "PCAL", cargo: ["Agente", "Escrivão"], ano: 2026,
+    origem: "Inédita — estilo CEBRASPE (Lei 10.741/2003, art. 99, com a redação da Lei 15.163/2025)",
+    tipo: "CE", dificuldade: 3, tempoIdealSeg: 80, probReaparecer: 0.82,
+    enunciado: "Após as alterações promovidas pela Lei nº 15.163/2025, o crime de expor a perigo a integridade e a saúde de pessoa idosa, submetendo-a a condições desumanas ou degradantes, passou a ser punido com reclusão de 2 a 5 anos, chegando a reclusão de 8 a 14 anos se do fato resulta a morte.",
+    gabarito: "C", pegadinha: "troca-numerica", palavraChave: "8 a 14 anos",
+    cognitivo: {
+      motivo: "Cobrar o novo patamar de penas, provável recorte de prova pela recência.",
+      palavraCritica: "2 a 5 ... 8 a 14",
+    },
+    comentario: {
+      resolucao: "CERTO. A Lei nº 15.163/2025 elevou substancialmente as penas do art. 99: caput, reclusão de 2 a 5 anos; § 1º (lesão corporal grave), reclusão de 3 a 7 anos; § 2º (morte), reclusão de 8 a 14 anos. O tipo se assemelha aos maus-tratos do art. 136 do CP, e na modalidade de privar de alimentos e cuidados indispensáveis é crime próprio — só responde quem tem o dever legal, salvo se o agente assume a posição de garantidor (art. 13, § 2º, do CP), como o enfermeiro ou o cuidador contratado.",
+      fundamento: "Lei 10.741/2003, art. 99, caput e §§ 1º e 2º (redação da Lei 15.163/2025); CP, arts. 13, § 2º, e 136.",
+      macete: "Art. 99 após 2025: 2-5 / 3-7 / 8-14.",
+      erroComum: "Usar as penas antigas, anteriores à Lei 15.163/2025.",
+      comoBancaPensa: "Cobra a lei nova pelos números, onde o material desatualizado falha.",
+    },
+  },
+  {
+    id: "LE-186", disciplina: "Legislação Especial", assunto: "Estatuto da Pessoa Idosa",
+    subassunto: "Obstar acesso a cargo público (art. 100, I)",
+    concurso: "PCAL", cargo: ["Agente", "Escrivão"], ano: 2026,
+    origem: "Inédita — estilo CEBRASPE (Lei 10.741/2003, art. 100, I; Súmulas 14 e 683 do STF)",
+    tipo: "CE", dificuldade: 3, tempoIdealSeg: 85, probReaparecer: 0.7,
+    enunciado: "Segundo o STF, é vedada em qualquer hipótese a fixação de limite de idade para inscrição em concurso público, razão pela qual toda exigência dessa natureza configura o crime de obstar o acesso a cargo público por motivo de idade.",
+    gabarito: "E", pegadinha: "termo-absoluto", palavraChave: "vedada em qualquer hipótese",
+    cognitivo: {
+      motivo: "Cobrar a ressalva da Súmula 683, que o candidato tende a suprimir.",
+      palavraCritica: "em qualquer hipótese",
+    },
+    comentario: {
+      resolucao: "ERRADO. A Súmula 683 do STF admite o limite de idade quando justificado pela natureza das atribuições do cargo — daí a validade dos limites em carreiras policiais e militares. O que a Súmula 14 do STF veda é a restrição por ato administrativo: a limitação exige previsão em lei e justificativa funcional. Logo, não é verdade que 'toda' exigência de idade seja ilícita, nem que configure automaticamente o crime do art. 100, I, do Estatuto, que pressupõe obstar o acesso por motivo de idade sem esse respaldo.",
+      fundamento: "Lei 10.741/2003, art. 100, I; Súmulas 14 e 683 do STF; CF, art. 7º, XXX.",
+      macete: "Limite de idade vale se a natureza do cargo justificar — e se vier em lei.",
+      erroComum: "Ler a vedação como absoluta, ignorando a ressalva sumular.",
+      comoBancaPensa: "Constrói a regra correta e retira a exceção com um advérbio totalizante.",
+    },
+  },
+  {
+    id: "LE-187", disciplina: "Legislação Especial", assunto: "Estatuto da Pessoa Idosa",
+    subassunto: "Art. 100, IV, x art. 101 — descumprimento de ordem judicial",
+    concurso: "PCAL", cargo: ["Agente", "Escrivão"], ano: 2026,
+    origem: "Inédita — estilo CEBRASPE (Lei 10.741/2003, arts. 100, IV, e 101)",
+    tipo: "CE", dificuldade: 3, tempoIdealSeg: 90, probReaparecer: 0.66,
+    enunciado: "O crime do art. 101 do Estatuto da Pessoa Idosa, consistente em deixar de cumprir, retardar ou frustrar, sem justo motivo, a execução de ordem judicial, restringe-se às ordens expedidas em ação civil pública prevista no próprio Estatuto.",
+    gabarito: "E", pegadinha: "restricao-indevida", palavraChave: "restringe-se às ordens expedidas em ação civil pública",
+    cognitivo: {
+      motivo: "Cobrar a diferença de abrangência entre o art. 100, IV, e o art. 101 — recorte fino e discriminativo.",
+      palavraCritica: "restringe-se",
+    },
+    comentario: {
+      resolucao: "ERRADO, e a inversão é precisa. O art. 101 alcança qualquer ação em que a pessoa idosa seja parte ou interveniente — cível ou criminal —, bastando que a ordem tenha sido expedida em seu benefício. Quem se limita à ação civil pública prevista no Estatuto é o art. 100, IV. O item, portanto, atribui ao art. 101 a restrição que pertence ao outro dispositivo. É exatamente esse par que a banca gosta de embaralhar, porque os verbos dos dois tipos são idênticos.",
+      fundamento: "Lei 10.741/2003, arts. 100, IV, e 101.",
+      macete: "Art. 100, IV: só ação civil do Estatuto. Art. 101: qualquer ação.",
+      erroComum: "Tratar os dois tipos como redundantes.",
+      comoBancaPensa: "Troca o âmbito de incidência entre dois tipos de verbos idênticos.",
+    },
+  },
+  {
+    id: "LE-188", disciplina: "Legislação Especial", assunto: "Estatuto da Pessoa Idosa",
+    subassunto: "Apropriação ou desvio de bens (art. 102)",
+    concurso: "PCAL", cargo: ["Agente", "Escrivão"], ano: 2026,
+    origem: "Inédita — estilo CEBRASPE (Lei 10.741/2003, art. 102; CP, art. 168)",
+    tipo: "CE", dificuldade: 3, tempoIdealSeg: 85, probReaparecer: 0.76,
+    enunciado: "O crime de apropriação ou desvio de bens da pessoa idosa alcança apenas bens móveis, à semelhança da apropriação indébita prevista no Código Penal.",
+    gabarito: "E", pegadinha: "troca-conceito", palavraChave: "apenas bens móveis",
+    cognitivo: {
+      motivo: "Cobrar as duas diferenças estruturais entre o art. 102 e o art. 168 do CP.",
+      palavraCritica: "apenas bens móveis",
+    },
+    comentario: {
+      resolucao: "ERRADO — e são duas as diferenças, não uma. Primeira: o art. 168 do CP prevê apenas o verbo 'apropriar-se', ao passo que o art. 102 do Estatuto pune 'apropriar-se DE ou DESVIAR'. Segunda: a apropriação indébita alcança apenas coisa móvel, enquanto o art. 102 abarca bens móveis E imóveis, além de proventos, pensão e qualquer outro rendimento. Como o art. 102 não tem causas de aumento próprias, entende-se possível aplicar o § 1º do art. 168 do CP.",
+      fundamento: "Lei 10.741/2003, art. 102; CP, art. 168 e § 1º.",
+      macete: "Art. 102: apropriar-se OU desviar; móveis E imóveis.",
+      erroComum: "Colar no art. 102 as limitações da apropriação indébita comum.",
+      comoBancaPensa: "Aproxima do tipo do CP para importar restrição que a lei especial não tem.",
+    },
+  },
+  {
+    id: "LE-189", disciplina: "Legislação Especial", assunto: "Estatuto da Pessoa Idosa",
+    subassunto: "Art. 102 — jurisprudência do STJ",
+    concurso: "PCAL", cargo: ["Agente", "Escrivão"], ano: 2026,
+    origem: "Inédita — estilo CEBRASPE (STJ, 6ª Turma, REsp 1.358.865/RS, Inf. 547)",
+    tipo: "CE", dificuldade: 3, tempoIdealSeg: 80, probReaparecer: 0.64,
+    enunciado: "Segundo o STJ, pratica o crime do art. 102 do Estatuto da Pessoa Idosa o funcionário de banco que, ao auxiliar pessoa idosa a sacar dinheiro em caixa eletrônico, aproveita a oportunidade e transfere quantias para conta própria.",
+    gabarito: "C", pegadinha: "juris-mais-lei", palavraChave: "transfere quantias para conta própria",
+    cognitivo: {
+      motivo: "Ancorar o tipo em um caso concreto julgado, que é como a banca costuma cobrá-lo.",
+      palavraCritica: "conta própria",
+    },
+    comentario: {
+      resolucao: "CERTO. O julgado é o REsp 1.358.865/RS (6ª Turma, j. 4/9/2014, Inf. 547). A subsunção é direta: houve desvio de rendimento da pessoa idosa, dando-lhe aplicação diversa da finalidade. O ponto relevante é que o STJ afastou o enquadramento em furto ou apropriação indébita comum, aplicando a lei especial em razão da condição da vítima — o que confirma que o art. 102 prevalece sobre os tipos gerais quando presente a elementar etária.",
+      fundamento: "Lei 10.741/2003, art. 102; STJ, REsp 1.358.865/RS, Inf. 547.",
+      macete: "Desvio de rendimento de idoso: art. 102, não furto.",
+      erroComum: "Enquadrar o caso como furto mediante fraude.",
+      comoBancaPensa: "Descreve o caso julgado com fidelidade e pede a subsunção.",
+    },
+  },
+  {
+    id: "LE-190", disciplina: "Legislação Especial", assunto: "Estatuto da Pessoa Idosa",
+    subassunto: "Retenção de cartão magnético (art. 104)",
+    concurso: "PCAL", cargo: ["Agente", "Escrivão"], ano: 2026,
+    origem: "Inédita — estilo CEBRASPE (Lei 10.741/2003, art. 104)",
+    tipo: "CE", dificuldade: 3, tempoIdealSeg: 75, probReaparecer: 0.72,
+    enunciado: "O crime de reter cartão magnético de conta bancária relativa a benefícios da pessoa idosa, com o objetivo de assegurar recebimento de dívida, somente se consuma com o efetivo pagamento ou ressarcimento do crédito.",
+    gabarito: "E", pegadinha: "exigencia-inexistente", palavraChave: "somente se consuma com o efetivo pagamento",
+    cognitivo: {
+      motivo: "Cobrar a natureza formal do crime, sensível porque o tipo menciona uma finalidade.",
+      palavraCritica: "somente se consuma com o efetivo pagamento",
+    },
+    comentario: {
+      resolucao: "ERRADO. O crime do art. 104 é FORMAL: consuma-se com a simples retenção do cartão ou documento, sendo dispensável que o agente efetivamente receba ou seja ressarcido. A finalidade de assegurar o recebimento integra o tipo como elemento subjetivo especial — orienta a conduta, mas não precisa se realizar. Trata-se ainda de crime próprio, praticável por quem detém algum crédito financeiro perante a pessoa idosa.",
+      fundamento: "Lei 10.741/2003, art. 104.",
+      macete: "Reteve o cartão, consumou — receber ou não é exaurimento.",
+      erroComum: "Confundir elemento subjetivo especial com resultado exigido.",
+      comoBancaPensa: "Converte a finalidade do tipo em condição de consumação.",
+    },
+  },
+  {
+    id: "LE-191", disciplina: "Legislação Especial", assunto: "Estatuto da Pessoa Idosa",
+    subassunto: "Veiculação de imagens depreciativas (art. 105)",
+    concurso: "PCAL", cargo: ["Agente", "Escrivão"], ano: 2026,
+    origem: "Inédita — estilo CEBRASPE (Lei 10.741/2003, art. 105)",
+    tipo: "CE", dificuldade: 2, tempoIdealSeg: 70, probReaparecer: 0.68,
+    enunciado: "O crime de exibir ou veicular, por qualquer meio de comunicação, informações ou imagens depreciativas ou injuriosas à pessoa idosa consuma-se independentemente de a vítima tomar conhecimento do conteúdo.",
+    gabarito: "C", pegadinha: "verdade-mais-falso", palavraChave: "independentemente de a vítima tomar conhecimento",
+    cognitivo: {
+      motivo: "Cobrar a consumação formal, que dispensa a ciência da vítima.",
+      palavraCritica: "independentemente",
+    },
+    comentario: {
+      resolucao: "CERTO. O art. 105 descreve crime formal: basta a exibição ou veiculação do conteúdo depreciativo. O bem jurídico protegido tem dimensão supraindividual — a imagem social da pessoa idosa e o respeito devido a esse grupo —, razão pela qual a lei não condiciona a consumação ao conhecimento da vítima. Esse é justamente o ponto que distingue o tipo da injúria comum, cuja ofensa à honra subjetiva pressupõe, em regra, que o ofendido tome ciência.",
+      fundamento: "Lei 10.741/2003, art. 105.",
+      macete: "Veiculou, consumou — a vítima nem precisa saber.",
+      erroComum: "Exigir ciência da vítima, por analogia com a injúria.",
+      comoBancaPensa: "Testa se o candidato distingue honra subjetiva de bem jurídico coletivo.",
+    },
+  },
+  {
+    id: "LE-192", disciplina: "Legislação Especial", assunto: "Estatuto da Pessoa Idosa",
+    subassunto: "Indução a outorgar procuração (art. 106) x coação (art. 107)",
+    concurso: "PCAL", cargo: ["Agente", "Escrivão"], ano: 2026,
+    origem: "Inédita — estilo CEBRASPE (Lei 10.741/2003, arts. 106 e 107)",
+    tipo: "CE", dificuldade: 3, tempoIdealSeg: 90, probReaparecer: 0.7,
+    enunciado: "O crime de induzir pessoa idosa sem discernimento a outorgar procuração para administração de bens exige, para a consumação, que o agente pratique atos de administração ou disposição do patrimônio.",
+    gabarito: "E", pegadinha: "exigencia-inexistente", palavraChave: "exige, para a consumação",
+    cognitivo: {
+      motivo: "Cobrar a consumação antecipada do art. 106, que é crime formal.",
+      palavraCritica: "exige, para a consumação",
+    },
+    comentario: {
+      resolucao: "ERRADO. O art. 106 é crime formal: consuma-se com a OUTORGA da procuração, sem necessidade de atos posteriores de administração ou disposição, e sem exigência de prejuízo efetivo. Dois complementos úteis: quem induz pode não ser o beneficiário da procuração, e se o outorgado estiver em conluio com o agente, ambos respondem. Já o art. 107 pune a COAÇÃO para doar, contratar, testar ou outorgar procuração — ali o meio é a violência ou grave ameaça, não a indução.",
+      fundamento: "Lei 10.741/2003, arts. 106 e 107.",
+      macete: "Outorgou a procuração: art. 106 consumado.",
+      erroComum: "Exigir o exaurimento (uso da procuração) para a consumação.",
+      comoBancaPensa: "Empurra a consumação para a fase de exaurimento.",
+    },
+  },
+  {
+    id: "LE-193", disciplina: "Legislação Especial", assunto: "Estatuto da Pessoa Idosa",
+    subassunto: "Coação (art. 107) — beneficiário do ato",
+    concurso: "PCAL", cargo: ["Agente", "Escrivão"], ano: 2026,
+    origem: "Inédita — estilo CEBRASPE (Lei 10.741/2003, art. 107)",
+    tipo: "CE", dificuldade: 2, tempoIdealSeg: 65, probReaparecer: 0.62,
+    enunciado: "No crime de coagir pessoa idosa a doar, contratar, testar ou outorgar procuração, é indispensável que o agente coator seja o beneficiário do ato imposto à vítima.",
+    gabarito: "E", pegadinha: "exigencia-inexistente", palavraChave: "indispensável que o agente coator seja o beneficiário",
+    cognitivo: {
+      motivo: "Cobrar a ausência de elementar exigindo proveito próprio.",
+      palavraCritica: "indispensável",
+    },
+    comentario: {
+      resolucao: "ERRADO. O art. 107 não exige que o coator seja o beneficiário. Quem pratica a coação pode ou não vir a ser favorecido pela doação, pelo contrato, pelo testamento ou pela procuração imposta — o tipo se satisfaz com a coação em si, seja em proveito próprio ou de terceiro. A pena é de reclusão de 2 a 5 anos, a mais grave entre os crimes de proteção patrimonial do Estatuto, o que revela a censura à supressão da vontade da pessoa idosa.",
+      fundamento: "Lei 10.741/2003, art. 107.",
+      macete: "Coagiu, responde — beneficiário pode ser terceiro.",
+      erroComum: "Inserir elementar de proveito próprio inexistente no tipo.",
+      comoBancaPensa: "Acrescenta requisito que a lei não previu, com aparência de razoabilidade.",
+    },
+  },
+  {
+    id: "LE-194", disciplina: "Legislação Especial", assunto: "Estatuto da Pessoa Idosa",
+    subassunto: "Ato notarial sem representação (art. 108)",
+    concurso: "PCAL", cargo: ["Agente", "Escrivão"], ano: 2026,
+    origem: "Inédita — estilo CEBRASPE (Lei 10.741/2003, art. 108)",
+    tipo: "CE", dificuldade: 3, tempoIdealSeg: 75, probReaparecer: 0.6,
+    enunciado: "O crime de lavrar ato notarial que envolva pessoa idosa sem discernimento, sem a devida representação legal, é próprio do notário ou registrador e consuma-se sem que se exija prejuízo à vítima.",
+    gabarito: "C", pegadinha: "verdade-mais-falso", palavraChave: "sem que se exija prejuízo",
+    cognitivo: {
+      motivo: "Fixar simultaneamente a natureza própria e a consumação sem resultado naturalístico.",
+      palavraCritica: "sem que se exija prejuízo",
+    },
+    comentario: {
+      resolucao: "CERTO nas duas afirmações. É crime próprio do notário/tabelião e do registrador/oficial — ou do funcionário delegado que atue em seu nome —, pois só quem detém a função pode lavrar o ato. E consuma-se com a prática do verbo do tipo, sem exigir prejuízo à pessoa idosa: o bem jurídico é a segurança jurídica dos atos notariais e a proteção de quem não tem discernimento, o que se viola no momento mesmo da lavratura. Pena de reclusão de 2 a 4 anos.",
+      fundamento: "Lei 10.741/2003, art. 108.",
+      macete: "Lavrou o ato: consumou, ainda que ninguém perca nada.",
+      erroComum: "Exigir dano patrimonial efetivo.",
+      comoBancaPensa: "Reúne dois atributos corretos, esperando que o candidato duvide de um deles.",
+    },
+  },
+  {
+    id: "LE-195", disciplina: "Legislação Especial", assunto: "Estatuto da Pessoa Idosa",
+    subassunto: "Embaraço à fiscalização (art. 109)",
+    concurso: "PCAL", cargo: ["Agente", "Escrivão"], ano: 2026,
+    origem: "Inédita — estilo CEBRASPE (Lei 10.741/2003, art. 109)",
+    tipo: "CE", dificuldade: 2, tempoIdealSeg: 60, probReaparecer: 0.58,
+    enunciado: "Impedir ou embaraçar ato do representante do Ministério Público ou de qualquer outro agente fiscalizador constitui crime previsto no Estatuto da Pessoa Idosa, punido com detenção de seis meses a um ano e multa.",
+    gabarito: "E", pegadinha: "literalidade", palavraChave: "detenção de seis meses a um ano",
+    cognitivo: {
+      motivo: "Cobrar a espécie de pena privativa de liberdade do art. 109, alterada em um enunciado no mais fiel ao texto.",
+      palavraCritica: "detenção",
+    },
+    comentario: {
+      resolucao: "ERRADO, e o vício está apenas na espécie de pena. A conduta descrita realmente configura o crime do art. 109 — impedir ou embaraçar ato do representante do Ministério Público ou de qualquer outro agente fiscalizador —, mas a pena cominada é de RECLUSÃO de 6 meses a 1 ano e multa, não de detenção. O dispositivo está topograficamente no Título VII (Disposições Finais e Transitórias), e não no Título VI, o que explica por que tantos candidatos o esquecem. É crime formal: consuma-se com a prática do verbo, ainda que a fiscalização venha a se realizar.",
+      fundamento: "Lei 10.741/2003, art. 109.",
+      macete: "Art. 109: reclusão, não detenção.",
+      erroComum: "Presumir detenção por se tratar de pena baixa.",
+      comoBancaPensa: "Reproduz o tipo com fidelidade e troca só a espécie de pena.",
+    },
+  },
+  {
+    id: "LE-196", disciplina: "Legislação Especial", assunto: "Estatuto da Pessoa Idosa",
+    subassunto: "Estelionato majorado (CP, art. 171, § 4º)",
+    concurso: "PCAL", cargo: ["Agente", "Escrivão"], ano: 2026,
+    origem: "Inédita — estilo CEBRASPE (Lei 10.741/2003, art. 106; CP, art. 171, § 4º)",
+    tipo: "CE", dificuldade: 3, tempoIdealSeg: 85, probReaparecer: 0.68,
+    enunciado: "O agente que, visando a obter vantagem patrimonial ilícita, induz em erro pessoa idosa plenamente capaz e com discernimento preservado responde pelo crime do art. 106 do Estatuto da Pessoa Idosa.",
+    gabarito: "E", pegadinha: "troca-conceito", palavraChave: "plenamente capaz e com discernimento preservado",
+    cognitivo: {
+      motivo: "Cobrar a elementar 'sem discernimento', que delimita o art. 106 e afasta o estelionato.",
+      palavraCritica: "com discernimento preservado",
+    },
+    comentario: {
+      resolucao: "ERRADO. O art. 106 exige que a pessoa idosa esteja SEM DISCERNIMENTO de seus atos — é elementar do tipo. Se a vítima é plenamente capaz e a fraude visa a vantagem patrimonial ilícita, o enquadramento adequado é o estelionato majorado do art. 171, § 4º, do Código Penal, cuja pena é aumentada de um terço ao dobro quando a vítima é idosa ou vulnerável. O item troca a hipótese fática mantendo a conclusão jurídica da outra.",
+      fundamento: "Lei 10.741/2003, art. 106; CP, art. 171, § 4º.",
+      macete: "Sem discernimento: art. 106. Com discernimento: estelionato majorado.",
+      erroComum: "Aplicar o Estatuto sempre que a vítima for idosa.",
+      comoBancaPensa: "Altera um único dado fático e mantém a conclusão anterior.",
+    },
+  },
+
+  /* =================================================================
+     PARTE II — ESTATUTO DO DESARMAMENTO (Lei 10.826/2003)
+     ================================================================= */
+
+  {
+    id: "LE-197", disciplina: "Legislação Especial", assunto: "Estatuto do Desarmamento",
+    subassunto: "SINARM x SIGMA",
+    concurso: "PCAL", cargo: ["Agente", "Escrivão"], ano: 2026,
+    origem: "Inédita — estilo CEBRASPE (Lei 10.826/2003, arts. 1º a 3º; Decreto 11.615/2023)",
+    tipo: "CE", dificuldade: 3, tempoIdealSeg: 80, probReaparecer: 0.84,
+    enunciado: "O SINARM, no âmbito da Polícia Federal, controla as armas de fogo de uso permitido, ao passo que o SIGMA, a cargo do Comando do Exército, controla as de uso restrito e proibido e as das Forças Armadas e Auxiliares.",
+    gabarito: "C", pegadinha: "troca-conceito", palavraChave: "SIGMA ... Comando do Exército",
+    cognitivo: {
+      motivo: "Fixar a divisão de competências entre os dois sistemas, base de toda a matéria administrativa da lei.",
+      palavraCritica: "uso restrito e proibido",
+    },
+    comentario: {
+      resolucao: "CERTO. O SINARM (Sistema Nacional de Armas), instituído no Ministério da Justiça e operado no âmbito da Polícia Federal, tem circunscrição em todo o território nacional e cuida do uso permitido. O SIGMA (Sistema de Gerenciamento Militar de Armas), do Comando do Exército, cuida do uso restrito e proibido. Coerentemente, o art. 3º, parágrafo único, determina que as armas de uso restrito sejam registradas no Comando do Exército, e o parágrafo único do art. 2º ressalva que as competências do SINARM não alcançam as armas das Forças Armadas e Auxiliares.",
+      fundamento: "Lei 10.826/2003, arts. 1º, 2º, parágrafo único, e 3º, parágrafo único.",
+      macete: "SINARM/PF = permitido. SIGMA/Exército = restrito e proibido.",
+      erroComum: "Inverter os dois sistemas.",
+      comoBancaPensa: "Alterna a atribuição dos sistemas de um item para outro.",
+    },
+  },
+  {
+    id: "LE-198", disciplina: "Legislação Especial", assunto: "Estatuto do Desarmamento",
+    subassunto: "Requisitos para aquisição (art. 4º)",
+    concurso: "PCAL", cargo: ["Agente", "Escrivão"], ano: 2026,
+    origem: "Inédita — estilo CEBRASPE (Lei 10.826/2003, art. 4º, I a III)",
+    tipo: "CE", dificuldade: 2, tempoIdealSeg: 70, probReaparecer: 0.74,
+    enunciado: "Para adquirir arma de fogo de uso permitido, o interessado deve declarar a efetiva necessidade e comprovar idoneidade, ocupação lícita e residência certa, além de capacidade técnica e aptidão psicológica para o manuseio.",
+    gabarito: "C", pegadinha: "restricao-indevida", palavraChave: "declarar a efetiva necessidade",
+    cognitivo: {
+      motivo: "Fixar o rol de requisitos, cobrado com frequência por supressão de um deles.",
+      palavraCritica: "efetiva necessidade",
+    },
+    comentario: {
+      resolucao: "CERTO. O art. 4º exige, ALÉM da declaração de efetiva necessidade, três requisitos: (I) idoneidade, comprovada por certidões negativas das Justiças Federal, Estadual, Militar e Eleitoral e de não estar respondendo a inquérito ou processo criminal; (II) documento comprobatório de ocupação lícita e residência certa; e (III) capacidade técnica e aptidão psicológica. Repare que a declaração de efetiva necessidade não é um dos incisos — é exigência autônoma do caput, o que a banca explora ao apresentá-la como dispensável.",
+      fundamento: "Lei 10.826/2003, art. 4º, caput e incisos I a III.",
+      macete: "Necessidade declarada + idoneidade + ocupação/residência + técnica e psicológico.",
+      erroComum: "Esquecer a declaração de efetiva necessidade, que está no caput.",
+      comoBancaPensa: "Suprime um dos requisitos e mantém os demais intactos.",
+    },
+  },
+  {
+    id: "LE-199", disciplina: "Legislação Especial", assunto: "Estatuto do Desarmamento",
+    subassunto: "Certificado de registro (art. 5º) — posse x porte",
+    concurso: "PCAL", cargo: ["Agente", "Escrivão"], ano: 2026,
+    origem: "Inédita — estilo CEBRASPE (Lei 10.826/2003, arts. 5º e 6º)",
+    tipo: "CE", dificuldade: 3, tempoIdealSeg: 80, probReaparecer: 0.88,
+    enunciado: "O Certificado de Registro de Arma de Fogo, por ter validade em todo o território nacional, autoriza seu proprietário a conduzir a arma consigo em qualquer ponto do país.",
+    gabarito: "E", pegadinha: "troca-conceito", palavraChave: "conduzir a arma consigo",
+    cognitivo: {
+      motivo: "Cobrar a distinção posse x porte, que é a maior armadilha conceitual da lei.",
+      palavraCritica: "conduzir a arma consigo",
+    },
+    comentario: {
+      resolucao: "ERRADO, e a armadilha está na leitura da expressão 'validade em todo o território nacional'. Ela significa que o registro é reconhecido em qualquer unidade da federação — não que autorize o porte. O certificado autoriza apenas MANTER a arma no interior da residência ou domicílio, ou dependência destes, ou no local de trabalho, desde que o titular seja o responsável legal pelo estabelecimento. Isso é POSSE. O PORTE — condução pessoal — é disciplina distinta, dos arts. 6º e seguintes, e em regra é proibido em todo o território nacional.",
+      fundamento: "Lei 10.826/2003, arts. 5º, caput, e 6º, caput.",
+      macete: "Registro = posse (em casa/trabalho). Porte = andar com ela.",
+      erroComum: "Ler 'validade nacional' como se fosse autorização de porte.",
+      comoBancaPensa: "Usa uma expressão verdadeira da lei para extrair consequência que ela não tem.",
+    },
+  },
+  {
+    id: "LE-200", disciplina: "Legislação Especial", assunto: "Estatuto do Desarmamento",
+    subassunto: "Renovação do certificado (art. 5º, § 2º)",
+    concurso: "PCAL", cargo: ["Agente", "Escrivão"], ano: 2026,
+    origem: "Inédita — estilo CEBRASPE (Lei 10.826/2003, art. 5º, §§ 2º e 5º)",
+    tipo: "CE", dificuldade: 2, tempoIdealSeg: 65, probReaparecer: 0.62,
+    enunciado: "Os requisitos de idoneidade, ocupação lícita e capacidade técnica devem ser comprovados periodicamente, em período não inferior a cinco anos, para a renovação do Certificado de Registro de Arma de Fogo.",
+    gabarito: "E", pegadinha: "troca-numerica", palavraChave: "não inferior a cinco anos",
+    cognitivo: {
+      motivo: "Cobrar o prazo exato da renovação periódica.",
+      palavraCritica: "cinco anos",
+    },
+    comentario: {
+      resolucao: "ERRADO. O período é NÃO INFERIOR A 3 (TRÊS) ANOS, conforme o art. 5º, § 2º. Note a formulação: a lei fixa um piso, e não um prazo fechado, deixando ao regulamento a definição concreta. Aproveite para reter outro detalhe do mesmo artigo: para os residentes em área rural, considera-se residência ou domicílio toda a extensão do respectivo imóvel rural (§ 5º) — o que amplia significativamente o espaço em que a posse é lícita.",
+      fundamento: "Lei 10.826/2003, art. 5º, §§ 2º e 5º.",
+      macete: "Renovação periódica: piso de 3 anos.",
+      erroComum: "Assumir 5 anos por analogia com outros prazos administrativos.",
+      comoBancaPensa: "Troca o número mantendo intacta a estrutura da frase.",
+    },
+  },
+  {
+    id: "LE-201", disciplina: "Legislação Especial", assunto: "Estatuto do Desarmamento",
+    subassunto: "Omissão de cautela (art. 13) — única modalidade culposa",
+    concurso: "PCAL", cargo: ["Agente", "Escrivão"], ano: 2026,
+    origem: "Inédita — estilo CEBRASPE (Lei 10.826/2003, arts. 13 e 16, § 1º, V)",
+    tipo: "CE", dificuldade: 3, tempoIdealSeg: 85, probReaparecer: 0.86,
+    enunciado: "A omissão de cautela, consistente em deixar de observar as cautelas necessárias para impedir que menor de dezoito anos ou pessoa com deficiência mental se apodere de arma de fogo que esteja sob a posse do agente, é a única modalidade culposa prevista no Estatuto do Desarmamento.",
+    gabarito: "C", pegadinha: "termo-absoluto", palavraChave: "única modalidade culposa",
+    cognitivo: {
+      motivo: "Fixar a excepcionalidade do art. 13 no sistema da lei — informação de alto valor discriminativo.",
+      palavraCritica: "única modalidade culposa",
+    },
+    comentario: {
+      resolucao: "CERTO. Este é um dos raros casos em que um termo totalizante está correto: o art. 13 é de fato a única figura culposa da Lei nº 10.826/2003, e todos os demais crimes são dolosos. Consuma-se com o mero apoderamento pelo menor ou pela pessoa com deficiência mental, sem necessidade de outro resultado. Se houver DOLO no apoderamento — isto é, se o agente entrega ou permite conscientemente —, o enquadramento migra para o art. 16, § 1º, V. Pena de detenção de 1 a 2 anos e multa.",
+      fundamento: "Lei 10.826/2003, arts. 13, caput, e 16, § 1º, V.",
+      macete: "Culpa no Estatuto do Desarmamento só no art. 13.",
+      erroComum: "Supor que o porte ou a posse admitem forma culposa.",
+      comoBancaPensa: "Aqui o absoluto é verdadeiro — o item pune quem descarta termos totalizantes por reflexo.",
+    },
+  },
+  {
+    id: "LE-202", disciplina: "Legislação Especial", assunto: "Estatuto do Desarmamento",
+    subassunto: "Omissão de cautela (art. 13, parágrafo único) — prazo",
+    concurso: "PCAL", cargo: ["Agente", "Escrivão"], ano: 2026,
+    origem: "Inédita — estilo CEBRASPE (Lei 10.826/2003, art. 13, parágrafo único)",
+    tipo: "CE", dificuldade: 3, tempoIdealSeg: 75, probReaparecer: 0.68,
+    enunciado: "Incorre nas penas da omissão de cautela o proprietário ou diretor responsável de empresa de segurança e transporte de valores que deixar de registrar ocorrência policial e de comunicar à Polícia Federal a perda, o furto ou o roubo de arma de fogo sob sua guarda, nas primeiras quarenta e oito horas depois de ocorrido o fato.",
+    gabarito: "E", pegadinha: "troca-numerica", palavraChave: "quarenta e oito horas",
+    cognitivo: {
+      motivo: "Cobrar o prazo de comunicação, número isolado e por isso frágil na memória.",
+      palavraCritica: "quarenta e oito horas",
+    },
+    comentario: {
+      resolucao: "ERRADO. O prazo é de 24 (VINTE E QUATRO) HORAS, e não de quarenta e oito. Todo o restante do enunciado reproduz corretamente o parágrafo único do art. 13: são duas as providências cumulativas — registrar ocorrência policial E comunicar à Polícia Federal —, e o sujeito ativo é o proprietário ou diretor responsável da empresa de segurança e transporte de valores. Basta descumprir uma delas no prazo para incidir nas penas do caput.",
+      fundamento: "Lei 10.826/2003, art. 13, parágrafo único.",
+      macete: "Extravio de arma em empresa de segurança: comunicar em 24h.",
+      erroComum: "Ampliar o prazo para 48 horas.",
+      comoBancaPensa: "Dobra o prazo legal, alteração pequena o bastante para passar batida.",
+    },
+  },
+  {
+    id: "LE-203", disciplina: "Legislação Especial", assunto: "Estatuto do Desarmamento",
+    subassunto: "Porte ilegal (art. 14) — inafiançabilidade e a ADI 3.112",
+    concurso: "PCAL", cargo: ["Agente", "Escrivão"], ano: 2026,
+    origem: "Inédita — estilo CEBRASPE (Lei 10.826/2003, art. 14, parágrafo único; STF, Pleno, ADI 3.112/DF)",
+    tipo: "CE", dificuldade: 3, tempoIdealSeg: 95, probReaparecer: 0.9,
+    enunciado: "Embora o parágrafo único do art. 14 do Estatuto do Desarmamento declare inafiançável o porte ilegal de arma de fogo de uso permitido, esse dispositivo não subsiste, pois o STF o declarou inconstitucional ao julgar a ADI 3.112/DF.",
+    gabarito: "C", pegadinha: "juris-mais-lei", palavraChave: "declarou inconstitucional",
+    cognitivo: {
+      motivo: "Separar o texto ainda vigente da norma efetivamente aplicável — recorte em que a literalidade leva ao erro.",
+      palavraCritica: "não subsiste",
+    },
+    comentario: {
+      resolucao: "CERTO. O STF, no julgamento da ADI 3.112/DF (Pleno, j. 2/5/2007), declarou inconstitucional a vedação à fiança tanto para o porte ilegal (art. 14) quanto para o disparo de arma de fogo (art. 15), ao fundamento de que são crimes de mera conduta e perigo abstrato, que não se equiparam àqueles que lesam efetivamente a vida ou o patrimônio. O texto legal continua impresso na lei, mas não é norma aplicável — e é exatamente essa distância entre letra e vigência que a banca explora, cobrando ora a literalidade, ora a jurisprudência.",
+      fundamento: "Lei 10.826/2003, arts. 14, parágrafo único, e 15, parágrafo único; STF, ADI 3.112/DF.",
+      macete: "Inafiançabilidade dos arts. 14 e 15: texto vivo, norma morta.",
+      erroComum: "Responder pela letra da lei, ignorando a declaração de inconstitucionalidade.",
+      comoBancaPensa: "Alterna entre cobrar o texto e cobrar o julgado, punindo quem só decorou um deles.",
+    },
+  },
+  {
+    id: "LE-204", disciplina: "Legislação Especial", assunto: "Estatuto do Desarmamento",
+    subassunto: "Liberdade provisória (art. 21) e a ADI 3.112",
+    concurso: "PCAL", cargo: ["Agente", "Escrivão"], ano: 2026,
+    origem: "Inédita — estilo CEBRASPE (Lei 10.826/2003, art. 21; STF, Pleno, ADI 3.112/DF)",
+    tipo: "CE", dificuldade: 3, tempoIdealSeg: 85, probReaparecer: 0.84,
+    enunciado: "Os crimes de posse ou porte de arma de uso restrito, comércio ilegal e tráfico internacional de arma de fogo são insuscetíveis de liberdade provisória, conforme entendimento atualmente aplicável.",
+    gabarito: "E", pegadinha: "juris-mais-lei", palavraChave: "conforme entendimento atualmente aplicável",
+    cognitivo: {
+      motivo: "Cobrar a mesma tensão texto-x-norma do art. 21, agora com gabarito invertido.",
+      palavraCritica: "atualmente aplicável",
+    },
+    comentario: {
+      resolucao: "ERRADO. O art. 21 realmente diz isso — ele veda a liberdade provisória nos crimes dos arts. 16, 17 e 18 —, mas o STF declarou essa vedação inconstitucional na ADI 3.112/DF. A razão é estrutural: a Constituição não autoriza prisão ex lege, e a proibição apriorística viola a presunção de inocência e o dever de fundamentação individualizada das prisões. Como o item se ancora expressamente no 'entendimento atualmente aplicável', a resposta correta é a jurisprudencial, não a literal.",
+      fundamento: "Lei 10.826/2003, art. 21; STF, ADI 3.112/DF; CF, art. 5º, LVII e LXI.",
+      macete: "Nenhuma prisão ex lege sobrevive: art. 21 caiu.",
+      erroComum: "Reproduzir a letra do art. 21 como se estivesse íntegra.",
+      comoBancaPensa: "Sinaliza no enunciado qual plano quer (texto ou jurisprudência) e pune quem não lê a sinalização.",
+    },
+  },
+  {
+    id: "LE-205", disciplina: "Legislação Especial", assunto: "Estatuto do Desarmamento",
+    subassunto: "Art. 21-A — Lei Antifacção (Lei 15.358/2026)",
+    concurso: "PCAL", cargo: ["Agente", "Escrivão"], ano: 2026,
+    origem: "Inédita — estilo CEBRASPE (Lei 10.826/2003, art. 21-A, incluído pela Lei 15.358/2026)",
+    tipo: "CE", dificuldade: 3, tempoIdealSeg: 95, probReaparecer: 0.9,
+    enunciado: "A causa de aumento de dois terços introduzida pela Lei nº 15.358/2026 no Estatuto do Desarmamento, aplicável quando o crime é praticado em concurso com delito da Lei de Drogas, incide sobre a posse irregular, o porte ilegal, a posse ou porte de uso restrito e também sobre o disparo de arma de fogo.",
+    gabarito: "E", pegadinha: "restricao-indevida", palavraChave: "e também sobre o disparo de arma de fogo",
+    cognitivo: {
+      motivo: "Cobrar o rol fechado do art. 21-A, dispositivo novíssimo e de alta probabilidade em prova de 2026.",
+      palavraCritica: "também sobre o disparo",
+    },
+    comentario: {
+      resolucao: "ERRADO. O art. 21-A, acrescentado pela Lei nº 15.358/2026 (Lei Antifacção, de 24/03/2026), alcança APENAS os arts. 12, 14 e 16 — posse irregular, porte ilegal de uso permitido e posse ou porte de uso restrito. Não abrange o disparo de arma de fogo (art. 15) nem o comércio ilegal e o tráfico internacional (arts. 17 e 18). A majorante de 2/3 incide quando o crime é praticado em concurso com delito da Lei nº 11.343/2006, está diretamente ligado ao comércio ilícito de entorpecentes ou o artefato foi utilizado para assegurar o sucesso da mercancia.",
+      fundamento: "Lei 10.826/2003, art. 21-A (incluído pela Lei 15.358/2026); Lei 11.343/2006.",
+      macete: "Art. 21-A: só 12, 14 e 16.",
+      erroComum: "Estender a majorante a todos os crimes da lei.",
+      comoBancaPensa: "Acrescenta um item ao rol fechado de um dispositivo recém-criado.",
+    },
+  },
+  {
+    id: "LE-206", disciplina: "Legislação Especial", assunto: "Estatuto do Desarmamento",
+    subassunto: "Hediondez — uso proibido x uso restrito",
+    concurso: "PCAL", cargo: ["Agente", "Escrivão"], ano: 2026,
+    origem: "Inédita — estilo CEBRASPE (Lei 10.826/2003, art. 16, § 2º; Lei 8.072/1990, art. 1º, par. único, II)",
+    tipo: "CE", dificuldade: 3, tempoIdealSeg: 85, probReaparecer: 0.86,
+    enunciado: "Portar fuzil de uso restrito, sem autorização e em desacordo com determinação legal, configura crime hediondo.",
+    gabarito: "E", pegadinha: "troca-conceito", palavraChave: "fuzil de uso restrito",
+    cognitivo: {
+      motivo: "Cobrar a fronteira entre restrito e proibido, que decide a hediondez.",
+      palavraCritica: "uso restrito",
+    },
+    comentario: {
+      resolucao: "ERRADO. É hediondo apenas o crime de posse ou porte de arma de fogo de uso PROIBIDO, previsto no art. 16, § 2º (Lei 8.072/1990, art. 1º, parágrafo único, II). O uso restrito, do caput do art. 16, não é hediondo — e o fuzil, pela classificação do Decreto nº 11.615/2023, é arma de uso restrito. O exemplo é deliberadamente contraintuitivo: portar um fuzil não é hediondo, ao passo que portar uma arma dissimulada, por ser de uso proibido, é. Tampouco é hedionda a posse de munição ou acessório.",
+      fundamento: "Lei 10.826/2003, art. 16, caput e § 2º; Lei 8.072/1990, art. 1º, par. único, II; Decreto 11.615/2023.",
+      macete: "Hediondo só o PROIBIDO. Fuzil é restrito.",
+      erroComum: "Associar hediondez ao poder de fogo aparente da arma.",
+      comoBancaPensa: "Escolhe a arma que intuitivamente parece mais grave e que, tecnicamente, não é a hedionda.",
+    },
+  },
+  {
+    id: "LE-207", disciplina: "Legislação Especial", assunto: "Estatuto do Desarmamento",
+    subassunto: "Art. 16 — tipo misto alternativo",
+    concurso: "PCAL", cargo: ["Agente", "Escrivão"], ano: 2026,
+    origem: "Inédita — estilo CEBRASPE (STJ, Teses Ed. 102, En. 5; HC 516.153/SC)",
+    tipo: "CE", dificuldade: 3, tempoIdealSeg: 80, probReaparecer: 0.7,
+    enunciado: "Conforme o STJ, o agente que porta e transporta a mesma arma de fogo de uso restrito, no mesmo contexto fático, responde por um único delito, pois o art. 16 é tipo misto alternativo.",
+    gabarito: "C", pegadinha: "juris-mais-lei", palavraChave: "tipo misto alternativo",
+    cognitivo: {
+      motivo: "Fixar a consequência prática do tipo misto alternativo, cobrada por meio de exemplo.",
+      palavraCritica: "um único delito",
+    },
+    comentario: {
+      resolucao: "CERTO. É o Enunciado 5 das Teses do STJ (Ed. 102), confirmado no HC 516.153/SC (5ª Turma, j. 18/8/2020). Sendo o art. 16 tipo misto alternativo — ou de conteúdo variado —, a prática de vários núcleos no mesmo contexto fático caracteriza crime único, e não concurso. O raciocínio vale igualmente para o art. 14. Diferente seria se as condutas recaíssem sobre armas distintas ou em contextos fáticos autônomos.",
+      fundamento: "Lei 10.826/2003, art. 16; STJ, Teses Ed. 102, En. 5; HC 516.153/SC.",
+      macete: "Vários verbos, mesmo contexto, mesma arma: crime único.",
+      erroComum: "Somar os núcleos em concurso de crimes.",
+      comoBancaPensa: "Testa a compreensão do tipo misto alternativo por meio de caso concreto.",
+    },
+  },
+  {
+    id: "LE-208", disciplina: "Legislação Especial", assunto: "Estatuto do Desarmamento",
+    subassunto: "Arma desmuniciada e munição desacompanhada",
+    concurso: "PCAL", cargo: ["Agente", "Escrivão"], ano: 2026,
+    origem: "Inédita — estilo CEBRASPE (STF, 1ª Turma, HC 131771/RJ, Inf. 844)",
+    tipo: "CE", dificuldade: 3, tempoIdealSeg: 80, probReaparecer: 0.82,
+    enunciado: "Segundo o STF, o porte de arma de fogo desmuniciada é atípico, por ausência de perigo concreto ao bem jurídico tutelado.",
+    gabarito: "E", pegadinha: "troca-conceito", palavraChave: "atípico, por ausência de perigo concreto",
+    cognitivo: {
+      motivo: "Cobrar a coerência entre perigo abstrato e a irrelevância da munição.",
+      palavraCritica: "perigo concreto",
+    },
+    comentario: {
+      resolucao: "ERRADO. O STF firmou que a posse ou o porte de arma desmuniciada — e também o de munição desacompanhada da arma — configura crime, precisamente porque se trata de delito de PERIGO ABSTRATO, em que é indiferente o resultado concreto (HC 131771/RJ, 1ª Turma, j. 18/10/2016, Inf. 844). O item se contradiz ao exigir perigo concreto de um crime que a jurisprudência classifica como de perigo abstrato. Situação distinta é a da arma comprovadamente inapta a disparar, tratada em item próprio.",
+      fundamento: "Lei 10.826/2003, arts. 12, 14 e 16; STF, HC 131771/RJ, Inf. 844.",
+      macete: "Perigo abstrato: desmuniciada ou só a munição, é crime.",
+      erroComum: "Exigir potencialidade lesiva concreta.",
+      comoBancaPensa: "Introduz a exigência de perigo concreto em crime de perigo abstrato.",
+    },
+  },
+  {
+    id: "LE-209", disciplina: "Legislação Especial", assunto: "Estatuto do Desarmamento",
+    subassunto: "Arma inapta a disparar — crime impossível",
+    concurso: "PCAL", cargo: ["Agente", "Escrivão"], ano: 2026,
+    origem: "Inédita — estilo CEBRASPE (STJ, HC 445.564/SP)",
+    tipo: "CE", dificuldade: 3, tempoIdealSeg: 85, probReaparecer: 0.74,
+    enunciado: "Comprovada por laudo pericial a total ineficácia da arma de fogo, incapaz de efetuar disparos, reconhece-se a atipicidade da conduta por crime impossível.",
+    gabarito: "C", pegadinha: "juris-mais-lei", palavraChave: "total ineficácia",
+    cognitivo: {
+      motivo: "Delimitar a única hipótese em que a inaptidão da arma afasta o crime, contrastando com a arma desmuniciada.",
+      palavraCritica: "total ineficácia",
+    },
+    comentario: {
+      resolucao: "CERTO. O STJ reconhece a atipicidade quando a perícia comprova a TOTAL ineficácia do artefato — crime impossível por ineficácia absoluta do meio (HC 445.564/SP, j. 15/5/2018). Dois cuidados: a ineficácia precisa ser absoluta, não relativa, e precisa estar comprovada por laudo, não presumida. Note o contraste com a arma meramente desmuniciada, que continua típica: ali a arma funciona, apenas não está carregada; aqui ela não funciona de modo algum.",
+      fundamento: "Lei 10.826/2003, arts. 14 e 16; CP, art. 17; STJ, HC 445.564/SP.",
+      macete: "Desmuniciada: crime. Inapta comprovada por laudo: atípico.",
+      erroComum: "Equiparar arma desmuniciada a arma inapta.",
+      comoBancaPensa: "Aproxima duas situações de desfecho oposto para testar a distinção.",
+    },
+  },
+  {
+    id: "LE-210", disciplina: "Legislação Especial", assunto: "Estatuto do Desarmamento",
+    subassunto: "Princípio da insignificância",
+    concurso: "PCAL", cargo: ["Agente", "Escrivão"], ano: 2026,
+    origem: "Inédita — estilo CEBRASPE (STJ, EREsp 1.856.980/SC, Inf. 710; AgRg no REsp 1.695.811/SP)",
+    tipo: "CE", dificuldade: 3, tempoIdealSeg: 90, probReaparecer: 0.72,
+    enunciado: "A jurisprudência admite, em hipóteses excepcionais, a aplicação do princípio da insignificância à posse de ínfima quantidade de munição desacompanhada de arma, mas o afasta quando a munição é apreendida no contexto de tráfico de drogas.",
+    gabarito: "C", pegadinha: "verdade-mais-falso", palavraChave: "afasta quando ... contexto de tráfico de drogas",
+    cognitivo: {
+      motivo: "Cobrar a regra e sua exceção no mesmo item, formato em que a banca costuma inserir um erro.",
+      palavraCritica: "hipóteses excepcionais",
+    },
+    comentario: {
+      resolucao: "CERTO nas duas partes. O STJ (EREsp 1.856.980/SC, Inf. 710) e o STF (HC 133984/MG, Inf. 826) admitem excepcionalmente a insignificância diante de quantidade ínfima de munição desacompanhada de arma apta a disparar. Mas o próprio STJ afasta a atipicidade quando a apreensão se dá em contexto de tráfico de drogas (AgRg no REsp 1.695.811/SP), porque nesse cenário a munição integra a estrutura da atividade criminosa e a lesividade deixa de ser mínima. Regra excepcional e exceção à exceção — ambas corretas aqui.",
+      fundamento: "Lei 10.826/2003; STJ, EReSp 1.856.980/SC, Inf. 710, e AgRg no REsp 1.695.811/SP; STF, HC 133984/MG, Inf. 826.",
+      macete: "Munição ínfima pode ser insignificante — salvo no contexto de tráfico.",
+      erroComum: "Negar em absoluto a insignificância nos crimes de arma.",
+      comoBancaPensa: "Encadeia regra e exceção, apostando que o candidato rejeite uma delas.",
+    },
+  },
+  {
+    id: "LE-211", disciplina: "Legislação Especial", assunto: "Estatuto do Desarmamento",
+    subassunto: "Veículo como extensão da residência",
+    concurso: "PCAL", cargo: ["Agente", "Escrivão"], ano: 2026,
+    origem: "Inédita — estilo CEBRASPE (STJ, RHC 31.492/SP)",
+    tipo: "CE", dificuldade: 3, tempoIdealSeg: 80, probReaparecer: 0.7,
+    enunciado: "Para fins do crime de posse irregular de arma de fogo, o interior do caminhão utilizado pelo motorista profissional equipara-se ao local de trabalho, afastando o enquadramento no porte ilegal.",
+    gabarito: "E", pegadinha: "generalizacao", palavraChave: "equipara-se ao local de trabalho",
+    cognitivo: {
+      motivo: "Cobrar o limite espacial da posse, que decide entre os arts. 12 e 14.",
+      palavraCritica: "equipara-se",
+    },
+    comentario: {
+      resolucao: "ERRADO. O STJ decidiu que o interior do veículo não é extensão da residência nem do local de trabalho (RHC 31.492/SP). A consequência é relevante: quem transporta arma no veículo pratica PORTE ilegal (art. 14), e não a mera posse irregular (art. 12) — com pena bem mais grave, de reclusão de 2 a 4 anos contra detenção de 1 a 3 anos. O art. 12 exige que a arma esteja no interior da residência, em dependência desta, ou no local de trabalho de quem seja titular ou responsável legal do estabelecimento.",
+      fundamento: "Lei 10.826/2003, arts. 12 e 14; STJ, RHC 31.492/SP.",
+      macete: "Arma no carro é porte, não posse.",
+      erroComum: "Tratar o veículo de trabalho como 'local de trabalho' do art. 12.",
+      comoBancaPensa: "Estende por analogia um conceito espacial que a jurisprudência delimitou.",
+    },
+  },
+  {
+    id: "LE-212", disciplina: "Legislação Especial", assunto: "Estatuto do Desarmamento",
+    subassunto: "Tráfico internacional (art. 18) — competência",
+    concurso: "PCAL", cargo: ["Agente", "Escrivão"], ano: 2026,
+    origem: "Inédita — estilo CEBRASPE (Lei 10.826/2003, art. 18; CF, art. 109, V; STJ, Teses Ed. 108, En. 7 a 10)",
+    tipo: "CE", dificuldade: 3, tempoIdealSeg: 85, probReaparecer: 0.78,
+    enunciado: "O tráfico internacional de arma de fogo é de competência da Justiça Federal, mas, para sua configuração, não basta a procedência estrangeira do artefato, exigindo-se a comprovação da internacionalidade da ação.",
+    gabarito: "C", pegadinha: "verdade-mais-falso", palavraChave: "não basta a procedência estrangeira",
+    cognitivo: {
+      motivo: "Reunir competência e elementar da internacionalidade, que costumam ser cobradas em conjunto.",
+      palavraCritica: "internacionalidade da ação",
+    },
+    comentario: {
+      resolucao: "CERTO nas duas afirmações. A competência é da Justiça Federal por força do art. 109, V, da CF, já que o crime está previsto em tratado internacional de que o Brasil é signatário (STJ, Teses Ed. 108, En. 7). E o Enunciado 9 é expresso: a mera procedência estrangeira da arma não configura o tráfico internacional — é preciso demonstrar a internacionalidade da conduta, isto é, o efetivo cruzamento de fronteira promovido ou favorecido pelo agente. Vale lembrar ainda que é típico importar sem autorização mesmo que o réu tenha porte legal da arma (En. 10). Fora dessa hipótese, a competência dos crimes do Estatuto é, em regra, da Justiça Estadual.",
+      fundamento: "Lei 10.826/2003, art. 18; CF, art. 109, V; STJ, Teses Ed. 108, En. 7 a 10.",
+      macete: "Arma importada não basta: precisa provar que a ação cruzou a fronteira.",
+      erroComum: "Deslocar para a Justiça Federal todo caso com arma de origem estrangeira.",
+      comoBancaPensa: "Junta a regra de competência com a elementar que a condiciona.",
+    },
+  },
+  {
+    id: "LE-213", disciplina: "Legislação Especial", assunto: "Estatuto do Desarmamento",
+    subassunto: "Majorantes dos arts. 19 e 20",
+    concurso: "PCAL", cargo: ["Agente", "Escrivão"], ano: 2026,
+    origem: "Inédita — estilo CEBRASPE (Lei 10.826/2003, arts. 19 e 20)",
+    tipo: "CE", dificuldade: 3, tempoIdealSeg: 90, probReaparecer: 0.72,
+    enunciado: "Nos crimes de comércio ilegal e de tráfico internacional de arma de fogo, a pena é aumentada da metade se a arma, o acessório ou a munição forem de uso proibido ou restrito.",
+    gabarito: "C", pegadinha: "troca-conceito", palavraChave: "aumentada da metade",
+    cognitivo: {
+      motivo: "Fixar a majorante do art. 19 e seu âmbito restrito aos arts. 17 e 18.",
+      palavraCritica: "da metade",
+    },
+    comentario: {
+      resolucao: "CERTO. É o art. 19, cujo âmbito é limitado aos arts. 17 (comércio ilegal) e 18 (tráfico internacional). Não confundir com o art. 20, que também aumenta de metade, mas nos crimes dos arts. 14 a 18 e por outras razões: se praticados por integrante dos órgãos e empresas referidos nos arts. 6º, 7º e 8º, ou se o agente for reincidente específico em crimes dessa natureza. A reincidência específica aqui se afere entre os crimes do caput (arts. 14 a 18), não no mesmo tipo penal — e é possível o concurso de causas de aumento, como no caso do agente público que importa arma de uso restrito, sobre quem incidem os arts. 19 e 20, I.",
+      fundamento: "Lei 10.826/2003, arts. 19 e 20.",
+      macete: "Art. 19: só 17 e 18, pela natureza da arma. Art. 20: 14 a 18, pelo agente.",
+      erroComum: "Fundir os dois artigos em uma única majorante.",
+      comoBancaPensa: "Cobra um dos artigos com fidelidade e, em outro item, troca os âmbitos.",
+    },
+  },
+  {
+    id: "LE-214", disciplina: "Legislação Especial", assunto: "Estatuto do Desarmamento",
+    subassunto: "Agente policial disfarçado (arts. 17, § 2º, e 18, par. único)",
+    concurso: "PCAL", cargo: ["Agente", "Escrivão"], ano: 2026,
+    origem: "Inédita — estilo CEBRASPE (Lei 10.826/2003, arts. 17, § 2º, e 18, par. único; Súmula 145 do STF)",
+    tipo: "CE", dificuldade: 3, tempoIdealSeg: 95, probReaparecer: 0.76,
+    enunciado: "A venda de arma de fogo a agente policial disfarçado configura crime independentemente de haver elementos probatórios razoáveis de conduta criminal preexistente do vendedor.",
+    gabarito: "E", pegadinha: "exigencia-inexistente", palavraChave: "independentemente de haver elementos probatórios",
+    cognitivo: {
+      motivo: "Cobrar a condicionante que separa a ação controlada legítima do flagrante preparado.",
+      palavraCritica: "independentemente",
+    },
+    comentario: {
+      resolucao: "ERRADO — e o item suprime justamente a cláusula que dá legitimidade à figura. Tanto o art. 17, § 2º, quanto o parágrafo único do art. 18 exigem expressamente que estejam presentes ELEMENTOS PROBATÓRIOS RAZOÁVEIS DE CONDUTA CRIMINAL PREEXISTENTE. Sem esse requisito, o que há é flagrante preparado, hipótese de crime impossível na dicção da Súmula 145 do STF: 'Não há crime quando a preparação do flagrante pela polícia torna impossível a sua consumação.' A exigência existe precisamente para impedir que o Estado fabrique o delito que depois pune.",
+      fundamento: "Lei 10.826/2003, arts. 17, § 2º, e 18, parágrafo único; Súmula 145 do STF.",
+      macete: "Agente disfarçado só vale com conduta criminal preexistente.",
+      erroComum: "Ignorar a condicionante e validar qualquer atuação disfarçada.",
+      comoBancaPensa: "Retira o requisito legal e transforma ação controlada em flagrante preparado.",
+    },
+  },
+  {
+    id: "LE-215", disciplina: "Legislação Especial", assunto: "Estatuto do Desarmamento",
+    subassunto: "Comércio ilegal (art. 17, § 1º) — equiparação",
+    concurso: "PCAL", cargo: ["Agente", "Escrivão"], ano: 2026,
+    origem: "Inédita — estilo CEBRASPE (Lei 10.826/2003, art. 17, caput e § 1º)",
+    tipo: "CE", dificuldade: 3, tempoIdealSeg: 80, probReaparecer: 0.66,
+    enunciado: "Para a configuração do crime de comércio ilegal de arma de fogo, exige-se que a atividade seja exercida em estabelecimento comercial regularmente constituído, não se equiparando a ela o comércio clandestino exercido em residência.",
+    gabarito: "E", pegadinha: "restricao-indevida", palavraChave: "estabelecimento comercial regularmente constituído",
+    cognitivo: {
+      motivo: "Cobrar a cláusula de equiparação do § 1º, que amplia o alcance do tipo.",
+      palavraCritica: "não se equiparando",
+    },
+    comentario: {
+      resolucao: "ERRADO, e o item inverte o sentido da lei. O § 1º do art. 17 equipara à atividade comercial ou industrial QUALQUER forma de prestação de serviços, fabricação ou comércio irregular ou clandestino, INCLUSIVE o exercido em residência. A ressalva expressa à residência existe justamente porque é a hipótese mais comum na prática. Além disso, a posição majoritária dispensa a habitualidade: o crime se consuma com qualquer das condutas típicas do caput. Pena de reclusão de 6 a 12 anos e multa.",
+      fundamento: "Lei 10.826/2003, art. 17, caput e § 1º.",
+      macete: "Comércio clandestino em casa também é art. 17.",
+      erroComum: "Exigir estabelecimento formal e habitualidade.",
+      comoBancaPensa: "Nega expressamente a equiparação que a lei faz questão de afirmar.",
+    },
+  },
+  {
+    id: "LE-216", disciplina: "Legislação Especial", assunto: "Estatuto do Desarmamento",
+    subassunto: "Disparo de arma de fogo (art. 15) — subsidiariedade",
+    concurso: "PCAL", cargo: ["Agente", "Escrivão"], ano: 2026,
+    origem: "Inédita — estilo CEBRASPE (Lei 10.826/2003, art. 15; STJ, AgRg no AREsp 1.823.600/PR)",
+    tipo: "CE", dificuldade: 3, tempoIdealSeg: 85, probReaparecer: 0.7,
+    enunciado: "O crime de disparo de arma de fogo é expressamente subsidiário: se o disparo é praticado como meio para a execução de outro crime, por este será absorvido, prevalecendo a vontade final do agente.",
+    gabarito: "C", pegadinha: "literalidade", palavraChave: "desde que essa conduta não tenha como finalidade a prática de outro crime",
+    cognitivo: {
+      motivo: "Fixar a cláusula de subsidiariedade expressa e o critério de aferição.",
+      palavraCritica: "vontade final do agente",
+    },
+    comentario: {
+      resolucao: "CERTO. A parte final do art. 15 — 'desde que essa conduta não tenha como finalidade a prática de outro crime' — é cláusula de subsidiariedade expressa. Assim, quem dispara para matar responde por homicídio (tentado ou consumado), e não por disparo de arma de fogo em concurso. O STJ esclarece que o critério é a VONTADE FINAL do agente, não o grau do resultado produzido (AgRg no AREsp 1.823.600/PR): mesmo que o crime-fim reste tentado, o disparo permanece absorvido.",
+      fundamento: "Lei 10.826/2003, art. 15; STJ, AgRg no AREsp 1.823.600/PR.",
+      macete: "Disparou para outro crime: absorvido pela finalidade.",
+      erroComum: "Somar disparo e crime-fim em concurso material.",
+      comoBancaPensa: "Cobra a cláusula final do tipo, que muitos leem apressadamente.",
+    },
+  },
+  {
+    id: "LE-217", disciplina: "Legislação Especial", assunto: "Estatuto do Desarmamento",
+    subassunto: "Súmula 513 do STJ — abolitio criminis temporária",
+    concurso: "PCAL", cargo: ["Agente", "Escrivão"], ano: 2026,
+    origem: "Inédita — estilo CEBRASPE (Lei 10.826/2003, arts. 30 e 32; Súmula 513 do STJ)",
+    tipo: "CE", dificuldade: 3, tempoIdealSeg: 90, probReaparecer: 0.62,
+    enunciado: "Segundo a Súmula 513 do STJ, a abolitio criminis temporária prevista no Estatuto do Desarmamento aplica-se ao crime de posse de arma de fogo de uso permitido com numeração raspada, suprimida ou adulterada, praticado a qualquer tempo.",
+    gabarito: "E", pegadinha: "restricao-indevida", palavraChave: "praticado a qualquer tempo",
+    cognitivo: {
+      motivo: "Cobrar o marco temporal da súmula, que é o seu núcleo e costuma ser suprimido.",
+      palavraCritica: "a qualquer tempo",
+    },
+    comentario: {
+      resolucao: "ERRADO. A Súmula 513 do STJ delimita expressamente o marco: a abolitio criminis temporária alcança esse crime apenas quando praticado ATÉ 23/10/2005. A supressão da data esvazia a súmula, transformando um benefício transitório em permanente. O contexto ajuda a fixar: os arts. 30 e 32 estabeleceram prazos para regularização e entrega espontânea de armas, e a doutrina majoritária reconheceu nesse intervalo um período em que a posse irregular de arma de uso permitido não era punível.",
+      fundamento: "Lei 10.826/2003, arts. 30 e 32; Súmula 513 do STJ.",
+      macete: "Súmula 513: só até 23/10/2005.",
+      erroComum: "Tratar a abolitio temporária como permanente.",
+      comoBancaPensa: "Remove o marco temporal e mantém o resto do enunciado sumular intacto.",
+    },
+  },
+  {
+    id: "LE-218", disciplina: "Legislação Especial", assunto: "Estatuto do Desarmamento",
+    subassunto: "Entrega espontânea (art. 32)",
+    concurso: "PCAL", cargo: ["Agente", "Escrivão"], ano: 2026,
+    origem: "Inédita — estilo CEBRASPE (Lei 10.826/2003, art. 32)",
+    tipo: "CE", dificuldade: 2, tempoIdealSeg: 70, probReaparecer: 0.68,
+    enunciado: "Os possuidores e proprietários de arma de fogo poderão entregá-la espontaneamente, mediante recibo e, presumindo-se a boa-fé, serão indenizados, ficando extinta a punibilidade de eventual posse irregular da referida arma.",
+    gabarito: "C", pegadinha: "troca-conceito", palavraChave: "extinta a punibilidade",
+    cognitivo: {
+      motivo: "Fixar a causa extintiva de punibilidade específica da lei.",
+      palavraCritica: "presumindo-se a boa-fé",
+    },
+    comentario: {
+      resolucao: "CERTO. É a literalidade do art. 32. Três elementos merecem destaque: a entrega é espontânea e mediante recibo; a boa-fé é PRESUMIDA, cabendo ao Estado eventual prova em contrário; e a consequência é a extinção da punibilidade da posse irregular — não mera causa de diminuição. Não se confunde com o art. 31, que trata da entrega de armas adquiridas REGULARMENTE à Polícia Federal, a qualquer tempo, mediante indenização, e onde não há punibilidade a extinguir.",
+      fundamento: "Lei 10.826/2003, arts. 31 e 32.",
+      macete: "Entregou a arma irregular: extingue a punibilidade.",
+      erroComum: "Confundir os arts. 31 (arma regular) e 32 (arma irregular).",
+      comoBancaPensa: "Reproduz o dispositivo fielmente para depois inverter os arts. 31 e 32.",
+    },
+  },
+  {
+    id: "LE-219", disciplina: "Legislação Especial", assunto: "Estatuto do Desarmamento",
+    subassunto: "Vedação ao menor de 25 anos (art. 28)",
+    concurso: "PCAL", cargo: ["Agente", "Escrivão"], ano: 2026,
+    origem: "Inédita — estilo CEBRASPE (Lei 10.826/2003, arts. 6º e 28)",
+    tipo: "CE", dificuldade: 2, tempoIdealSeg: 65, probReaparecer: 0.7,
+    enunciado: "É vedado ao menor de vinte e cinco anos adquirir arma de fogo, sem qualquer exceção.",
+    gabarito: "E", pegadinha: "termo-absoluto", palavraChave: "sem qualquer exceção",
+    cognitivo: {
+      motivo: "Cobrar as ressalvas do art. 28, suprimidas por um advérbio totalizante.",
+      palavraCritica: "sem qualquer exceção",
+    },
+    comentario: {
+      resolucao: "ERRADO. O art. 28 ressalva expressamente os integrantes das entidades dos incisos I, II, III, V, VI, VII e X do caput do art. 6º — entre eles as Forças Armadas, os órgãos do art. 144 da CF e a Força Nacional de Segurança Pública. A ressalva é indispensável: sem ela, um policial ou militar de 22 anos não poderia adquirir a própria arma. A idade em si está correta no enunciado; o vício está no fechamento absoluto.",
+      fundamento: "Lei 10.826/2003, arts. 6º e 28.",
+      macete: "Menor de 25 não compra — salvo as carreiras do art. 6º.",
+      erroComum: "Ler a vedação como absoluta.",
+      comoBancaPensa: "Acerta o número e fecha a regra com um termo totalizante.",
+    },
+  },
+  {
+    id: "LE-220", disciplina: "Legislação Especial", assunto: "Estatuto do Desarmamento",
+    subassunto: "Porte (art. 6º) — regra e exceções",
+    concurso: "PCAL", cargo: ["Agente", "Escrivão"], ano: 2026,
+    origem: "Inédita — estilo CEBRASPE (Lei 10.826/2003, art. 6º, caput e incisos)",
+    tipo: "CE", dificuldade: 2, tempoIdealSeg: 70, probReaparecer: 0.76,
+    enunciado: "O porte de arma de fogo é proibido em todo o território nacional, salvo para os casos previstos em legislação própria e para as categorias expressamente arroladas no art. 6º do Estatuto do Desarmamento, entre as quais os integrantes dos órgãos de segurança pública referidos no art. 144 da Constituição Federal.",
+    gabarito: "C", pegadinha: "troca-conceito", palavraChave: "proibido em todo o território nacional, salvo",
+    cognitivo: {
+      motivo: "Fixar a estrutura regra-exceção do porte, base da matéria.",
+      palavraCritica: "salvo",
+    },
+    comentario: {
+      resolucao: "CERTO. O art. 6º inverte a lógica intuitiva: a regra é a PROIBIÇÃO do porte em todo o território nacional, e as autorizações são exceções taxativas. O rol inclui os integrantes das Forças Armadas, os dos órgãos dos incisos I a V do art. 144 da CF e da Força Nacional de Segurança Pública, os agentes da ABIN e do GSI, os integrantes das polícias legislativas e as guardas municipais, entre outros. Quanto às guardas municipais, registre-se que expressões do inciso III foram declaradas inconstitucionais na ADI 5538, ampliando o alcance da autorização originalmente restrita por porte populacional.",
+      fundamento: "Lei 10.826/2003, art. 6º, caput e incisos; CF, art. 144; STF, ADI 5538.",
+      macete: "Porte: proibido é a regra; autorização é exceção taxativa.",
+      erroComum: "Inverter regra e exceção.",
+      comoBancaPensa: "Confirma a estrutura para, em outro item, apresentar o porte como regra geral.",
+    },
+  },
+  {
+    id: "LE-221", disciplina: "Legislação Especial", assunto: "Estatuto do Desarmamento",
+    subassunto: "Classificação das armas (art. 23)",
+    concurso: "PCAL", cargo: ["Agente", "Escrivão"], ano: 2026,
+    origem: "Inédita — estilo CEBRASPE (Lei 10.826/2003, art. 23)",
+    tipo: "CE", dificuldade: 2, tempoIdealSeg: 70, probReaparecer: 0.6,
+    enunciado: "A classificação legal, técnica e geral das armas de fogo em usos proibidos, restritos, permitidos ou obsoletos será disciplinada em lei complementar de iniciativa privativa do Presidente da República.",
+    gabarito: "E", pegadinha: "troca-sujeito", palavraChave: "lei complementar de iniciativa privativa",
+    cognitivo: {
+      motivo: "Cobrar o veículo normativo da classificação, que é infralegal.",
+      palavraCritica: "lei complementar",
+    },
+    comentario: {
+      resolucao: "ERRADO. O art. 23 determina que a classificação seja disciplinada em ATO DO CHEFE DO PODER EXECUTIVO FEDERAL, mediante proposta do Comando do Exército — atualmente o Decreto nº 11.615/2023. Não se trata de lei complementar, nem de lei alguma: é regulamento. Essa opção do legislador é deliberada, pois permite atualizar a classificação conforme a evolução tecnológica do armamento sem depender de novo processo legislativo. Daí a importância de acompanhar o decreto vigente.",
+      fundamento: "Lei 10.826/2003, art. 23; Decreto 11.615/2023.",
+      macete: "Classificação das armas vem por decreto, sob proposta do Exército.",
+      erroComum: "Exigir lei em sentido formal para a classificação.",
+      comoBancaPensa: "Eleva a hierarquia do veículo normativo para criar exigência inexistente.",
+    },
+  },
+  {
+    id: "LE-222", disciplina: "Legislação Especial", assunto: "Estatuto do Desarmamento",
+    subassunto: "Posse irregular (art. 12) — bem jurídico e perigo abstrato",
+    concurso: "PCAL", cargo: ["Agente", "Escrivão"], ano: 2026,
+    origem: "Inédita — estilo CEBRASPE (Lei 10.826/2003, art. 12; STJ, Teses Ed. 102, En. 1 e 2)",
+    tipo: "CE", dificuldade: 2, tempoIdealSeg: 70, probReaparecer: 0.74,
+    enunciado: "Os crimes de posse e de porte ilegal de arma de fogo de uso permitido são de perigo abstrato e de mera conduta, bastando a prática de um dos núcleos do tipo, sendo desnecessária a realização de perícia.",
+    gabarito: "C", pegadinha: "verdade-mais-falso", palavraChave: "desnecessária a realização de perícia",
+    cognitivo: {
+      motivo: "Reunir as duas teses do STJ sobre a natureza dos crimes, incluindo a dispensa de perícia.",
+      palavraCritica: "desnecessária a realização de perícia",
+    },
+    comentario: {
+      resolucao: "CERTO. São os Enunciados 1 e 2 das Teses do STJ (Ed. 102): tanto a posse (art. 12) quanto o porte (art. 14) de uso permitido são crimes de perigo abstrato e de mera conduta, e o objeto tutelado é a segurança pública e a paz social. A dispensa da perícia é consequência lógica dessa natureza — se não se exige perigo concreto, não é preciso demonstrar a potencialidade lesiva do artefato. Isso não contradiz o item sobre arma inapta: ali, existindo laudo que comprove a total ineficácia, a atipicidade é reconhecida; o que a tese afirma é que a perícia não é condição de procedibilidade.",
+      fundamento: "Lei 10.826/2003, arts. 12 e 14; STJ, Teses Ed. 102, En. 1 e 2.",
+      macete: "Perigo abstrato dispensa perícia — mas laudo de total ineficácia absolve.",
+      erroComum: "Exigir perícia como condição para a denúncia.",
+      comoBancaPensa: "Encadeia natureza jurídica e consequência processual no mesmo item.",
+    },
+  },
+  {
+    id: "LE-223", disciplina: "Legislação Especial", assunto: "Estatuto do Desarmamento",
+    subassunto: "Art. 16, § 1º — condutas equiparadas",
+    concurso: "PCAL", cargo: ["Agente", "Escrivão"], ano: 2026,
+    origem: "Inédita — estilo CEBRASPE (Lei 10.826/2003, art. 16, § 1º, I a VI)",
+    tipo: "CE", dificuldade: 3, tempoIdealSeg: 85, probReaparecer: 0.72,
+    enunciado: "Incorre nas penas do art. 16 do Estatuto do Desarmamento quem porta arma de fogo com numeração, marca ou sinal de identificação raspado, suprimido ou adulterado, ainda que se trate de arma de uso permitido.",
+    gabarito: "C", pegadinha: "troca-conceito", palavraChave: "ainda que se trate de arma de uso permitido",
+    cognitivo: {
+      motivo: "Cobrar a equiparação do § 1º, que desloca o uso permitido para a pena do uso restrito.",
+      palavraCritica: "ainda que ... uso permitido",
+    },
+    comentario: {
+      resolucao: "CERTO. O § 1º, IV, do art. 16 pune quem porta, possui, adquire, transporta ou fornece arma de fogo com numeração, marca ou sinal de identificação raspado, suprimido ou adulterado — e a lei não distingue por categoria de uso. Assim, uma arma de uso permitido com numeração raspada atrai a pena do art. 16 (reclusão de 3 a 6 anos), muito mais grave que a do art. 14 (reclusão de 2 a 4 anos). A razão é evidente: a supressão da identificação inviabiliza o rastreamento, que é o núcleo do sistema de controle instituído pela lei.",
+      fundamento: "Lei 10.826/2003, art. 16, § 1º, IV.",
+      macete: "Numeração raspada puxa para o art. 16, mesmo se a arma é permitida.",
+      erroComum: "Enquadrar no art. 14 por se tratar de arma de uso permitido.",
+      comoBancaPensa: "Testa se o candidato sabe que o § 1º equipara por conduta, não por categoria de arma.",
+    },
+  },
+  {
+    id: "LE-224", disciplina: "Legislação Especial", assunto: "Estatuto do Desarmamento",
+    subassunto: "Registro de armas de uso restrito (art. 3º, par. único)",
+    concurso: "PCAL", cargo: ["Agente", "Escrivão"], ano: 2026,
+    origem: "Inédita — estilo CEBRASPE (Lei 10.826/2003, art. 3º)",
+    tipo: "CE", dificuldade: 2, tempoIdealSeg: 60, probReaparecer: 0.64,
+    enunciado: "É obrigatório o registro de arma de fogo no órgão competente, devendo as armas de uso restrito ser registradas na Polícia Federal.",
+    gabarito: "E", pegadinha: "troca-sujeito", palavraChave: "registradas na Polícia Federal",
+    cognitivo: {
+      motivo: "Cobrar o órgão de registro do uso restrito, coerente com a divisão SINARM/SIGMA.",
+      palavraCritica: "Polícia Federal",
+    },
+    comentario: {
+      resolucao: "ERRADO. O caput do art. 3º está corretamente reproduzido — o registro é obrigatório —, mas o parágrafo único determina que as armas de uso RESTRITO sejam registradas no COMANDO DO EXÉRCITO, na forma do regulamento. É a mesma lógica da divisão entre SINARM e SIGMA: à Polícia Federal cabe o uso permitido; ao Comando do Exército, o restrito e o proibido. O item mantém a primeira metade fiel e altera apenas o órgão.",
+      fundamento: "Lei 10.826/2003, art. 3º, caput e parágrafo único.",
+      macete: "Uso restrito registra no Exército.",
+      erroComum: "Centralizar todo registro na Polícia Federal.",
+      comoBancaPensa: "Preserva a parte verdadeira e troca o órgão competente.",
+    },
+  },
+  {
+    id: "LE-225", disciplina: "Legislação Especial", assunto: "Estatuto do Desarmamento",
+    subassunto: "Eventos com aglomeração (art. 34)",
+    concurso: "PCAL", cargo: ["Agente", "Escrivão"], ano: 2026,
+    origem: "Inédita — estilo CEBRASPE (Lei 10.826/2003, art. 34)",
+    tipo: "CE", dificuldade: 2, tempoIdealSeg: 65, probReaparecer: 0.56,
+    enunciado: "Os promotores de eventos em locais fechados, com aglomeração superior a mil pessoas, devem adotar, sob pena de responsabilidade, as providências necessárias para evitar o ingresso de pessoas armadas.",
+    gabarito: "C", pegadinha: "literalidade", palavraChave: "superior a mil pessoas",
+    cognitivo: {
+      motivo: "Fixar um número periférico da lei, cobrável justamente por ser pouco estudado.",
+      palavraCritica: "mil pessoas",
+    },
+    comentario: {
+      resolucao: "CERTO. É o art. 34, que fixa o patamar em aglomeração superior a 1.000 (mil) pessoas em locais fechados. A lei ressalva os eventos garantidos pelo inciso VI do art. 5º da Constituição Federal — isto é, os de natureza religiosa, em respeito à liberdade de culto. O parágrafo único estende dever análogo às empresas de transporte internacional e interestadual de passageiros, que devem evitar o embarque de passageiros armados.",
+      fundamento: "Lei 10.826/2003, art. 34, caput e parágrafo único; CF, art. 5º, VI.",
+      macete: "Evento fechado com mais de mil pessoas: barrar armados.",
+      erroComum: "Alterar o número ou esquecer a ressalva dos cultos religiosos.",
+      comoBancaPensa: "Cobra números de dispositivos periféricos, menos revisados.",
+    },
+  },
+  {
+    id: "LE-226", disciplina: "Legislação Especial", assunto: "Estatuto do Desarmamento",
+    subassunto: "Aquisição de munição (art. 4º, § 2º)",
+    concurso: "PCAL", cargo: ["Agente", "Escrivão"], ano: 2026,
+    origem: "Inédita — estilo CEBRASPE (Lei 10.826/2003, art. 4º, §§ 1º e 2º)",
+    tipo: "CE", dificuldade: 2, tempoIdealSeg: 65, probReaparecer: 0.6,
+    enunciado: "A aquisição de munição somente poderá ser feita no calibre correspondente à arma registrada e na quantidade estabelecida no regulamento, sendo a autorização de compra expedida pelo SINARM intransferível.",
+    gabarito: "C", pegadinha: "verdade-mais-falso", palavraChave: "intransferível",
+    cognitivo: {
+      motivo: "Reunir duas regras administrativas correlatas do art. 4º.",
+      palavraCritica: "intransferível",
+    },
+    comentario: {
+      resolucao: "CERTO nas duas afirmações. O § 2º do art. 4º limita a aquisição de munição ao calibre correspondente à arma registrada e à quantidade do regulamento. E o § 1º estabelece que o SINARM expedirá a autorização de compra em nome do requerente e para a arma indicada, sendo essa autorização INTRANSFERÍVEL. As duas regras servem ao mesmo propósito: vincular cada munição e cada arma a um titular determinado, viabilizando o rastreamento.",
+      fundamento: "Lei 10.826/2003, art. 4º, §§ 1º e 2º.",
+      macete: "Munição: só no calibre da sua arma. Autorização: só sua.",
+      erroComum: "Supor que a autorização de compra pode ser cedida a terceiro.",
+      comoBancaPensa: "Combina dois parágrafos do mesmo artigo em um único item.",
+    },
+  },
+  {
+    id: "LE-227", disciplina: "Legislação Especial", assunto: "Estatuto do Desarmamento",
+    subassunto: "Competência para julgamento — regra geral",
+    concurso: "PCAL", cargo: ["Agente", "Escrivão"], ano: 2026,
+    origem: "Inédita — estilo CEBRASPE (Lei 10.826/2003; CF, art. 109, V)",
+    tipo: "CE", dificuldade: 2, tempoIdealSeg: 70, probReaparecer: 0.68,
+    enunciado: "Por se tratar de matéria de interesse nacional, sujeita a sistema federal de controle, a competência para processar e julgar os crimes do Estatuto do Desarmamento é, em regra, da Justiça Federal.",
+    gabarito: "E", pegadinha: "generalizacao", palavraChave: "em regra, da Justiça Federal",
+    cognitivo: {
+      motivo: "Cobrar a regra de competência, cuja exceção (art. 18) costuma ser generalizada.",
+      palavraCritica: "em regra",
+    },
+    comentario: {
+      resolucao: "ERRADO. A competência é, EM REGRA, da JUSTIÇA ESTADUAL. A existência de um sistema federal de registro e controle não desloca a competência criminal — o critério constitucional é outro, definido no art. 109 da CF. A Justiça Federal só incide na hipótese do tráfico internacional de arma de fogo (art. 18), por força do art. 109, V, da CF, já que o crime está previsto em tratado internacional de que o Brasil é signatário. O item transforma a exceção em regra.",
+      fundamento: "Lei 10.826/2003, art. 18; CF, art. 109, V.",
+      macete: "Regra: Justiça Estadual. Só o art. 18 é federal.",
+      erroComum: "Deduzir competência federal do fato de o registro ser federal.",
+      comoBancaPensa: "Oferece uma justificativa plausível para inverter regra e exceção.",
+    },
+  },
+  {
+    id: "LE-228", disciplina: "Legislação Especial", assunto: "Estatuto do Desarmamento",
+    subassunto: "Posse irregular (art. 12) — delimitação espacial",
+    concurso: "PCAL", cargo: ["Agente", "Escrivão"], ano: 2026,
+    origem: "Inédita — estilo CEBRASPE (Lei 10.826/2003, art. 12)",
+    tipo: "CE", dificuldade: 3, tempoIdealSeg: 80, probReaparecer: 0.74,
+    enunciado: "Configura o crime de posse irregular de arma de fogo de uso permitido a conduta de manter a arma, em desacordo com determinação legal, no local de trabalho, ainda que o agente seja mero empregado do estabelecimento.",
+    gabarito: "E", pegadinha: "restricao-indevida", palavraChave: "ainda que o agente seja mero empregado",
+    cognitivo: {
+      motivo: "Cobrar a condicionante de titularidade do estabelecimento, que restringe o art. 12.",
+      palavraCritica: "mero empregado",
+    },
+    comentario: {
+      resolucao: "ERRADO. O art. 12 só alcança o local de trabalho DESDE QUE o agente seja o titular ou o responsável legal do estabelecimento ou empresa. O empregado comum que mantém arma no trabalho não pratica posse irregular, e sim PORTE ilegal (art. 14) — com pena significativamente maior. A condicionante existe porque a posse pressupõe um espaço sobre o qual o agente exerce domínio equiparável ao da residência, o que não é o caso de quem apenas presta serviços no local.",
+      fundamento: "Lei 10.826/2003, arts. 12 e 14.",
+      macete: "No trabalho, art. 12 só para o dono ou responsável legal.",
+      erroComum: "Ignorar a cláusula de titularidade e enquadrar todo empregado no art. 12.",
+      comoBancaPensa: "Suprime a condicionante e amplia o tipo mais brando.",
+    },
+  },
+  {
+    id: "LE-229", disciplina: "Legislação Especial", assunto: "Estatuto do Desarmamento",
+    subassunto: "Bem jurídico tutelado",
+    concurso: "PCAL", cargo: ["Agente", "Escrivão"], ano: 2026,
+    origem: "Inédita — estilo CEBRASPE (Lei 10.826/2003; STJ, Teses Ed. 102, En. 1)",
+    tipo: "CE", dificuldade: 2, tempoIdealSeg: 65, probReaparecer: 0.62,
+    enunciado: "O bem jurídico tutelado pelos crimes do Estatuto do Desarmamento é o patrimônio individual do proprietário da arma de fogo regularmente registrada.",
+    gabarito: "E", pegadinha: "troca-conceito", palavraChave: "patrimônio individual",
+    cognitivo: {
+      motivo: "Fixar o bem jurídico, que explica a natureza de perigo abstrato de toda a lei.",
+      palavraCritica: "patrimônio individual",
+    },
+    comentario: {
+      resolucao: "ERRADO. O bem jurídico tutelado é a INCOLUMIDADE PÚBLICA — mais precisamente a segurança pública e a paz social —, e não qualquer interesse patrimonial individual. Essa definição não é detalhe acadêmico: é dela que decorre a classificação dos crimes como de perigo abstrato e de mera conduta, a dispensa de demonstração de perigo concreto e a irrelevância de a arma estar desmuniciada. Trocar o bem jurídico desmonta toda a coerência do sistema da lei.",
+      fundamento: "Lei 10.826/2003; STJ, Teses Ed. 102, En. 1.",
+      macete: "Bem jurídico: incolumidade pública, não patrimônio.",
+      erroComum: "Ler os crimes de arma como crimes patrimoniais.",
+      comoBancaPensa: "Troca o bem jurídico para testar a base conceitual da matéria.",
+    },
+  },
+  {
+    id: "LE-230", disciplina: "Legislação Especial", assunto: "Estatuto do Desarmamento",
+    subassunto: "Registro vencido — irregularidade administrativa",
+    concurso: "PCAL", cargo: ["Agente", "Escrivão"], ano: 2026,
+    origem: "Inédita — estilo CEBRASPE (STJ, APn 686/AP, Inf. 572)",
+    tipo: "CE", dificuldade: 3, tempoIdealSeg: 80, probReaparecer: 0.76,
+    enunciado: "Segundo o STJ, a manutenção, na própria residência, de arma de fogo de uso permitido cujo registro esteja vencido caracteriza mera irregularidade administrativa, desde que o agente já tenha promovido o registro da arma.",
+    gabarito: "C", pegadinha: "juris-mais-lei", palavraChave: "mera irregularidade administrativa",
+    cognitivo: {
+      motivo: "Delimitar a atipicidade do registro vencido, que depende de o registro ter existido.",
+      palavraCritica: "desde que o agente já tenha promovido o registro",
+    },
+    comentario: {
+      resolucao: "CERTO, e a condicionante final é decisiva. O STJ entende que o registro vencido configura simples irregularidade administrativa, não o crime do art. 12 (APn 686/AP, Inf. 572) — mas isso pressupõe que a arma TENHA SIDO registrada em algum momento. Quem nunca registrou não tem registro vencido: tem arma sem registro, e aí o crime se configura. A distinção separa o descuido burocrático de quem regularizou a arma da conduta de quem jamais se submeteu ao controle estatal.",
+      fundamento: "Lei 10.826/2003, art. 12; STJ, APn 686/AP, Inf. 572.",
+      macete: "Registro vencido: administrativo. Nunca registrado: crime.",
+      erroComum: "Estender a atipicidade a quem nunca registrou a arma.",
+      comoBancaPensa: "Testa se o candidato retém a condicionante que sustenta o entendimento.",
+    },
+  },
+];
+
+QUESTOES.push(...QUESTOES_PCAL_LOTE73);
