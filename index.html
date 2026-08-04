@@ -14,7 +14,7 @@
     // Garante que a aplicação sempre inicie na versão mais recente:
     // consulta version.json sem cache e força reload se a página
     // carregada (possivelmente em cache do navegador/CDN) estiver desatualizada.
-    var APP_VERSION = "7.91";
+    var APP_VERSION = "7.92";
     if (sessionStorage.getItem("_appVersionRefreshed") === APP_VERSION) return;
     fetch("version.json?_=" + Date.now(), { cache: "no-store" })
       .then(function (r) { return r.ok ? r.json() : null; })
@@ -68,7 +68,7 @@
   <script src="js/engine.js?v=e7f46c0d"></script>
   <script src="js/auth.js?v=539faaba"></script>
   <script src="js/charts.js?v=88cda6b4"></script>
-  <script src="js/app.js?v=510881eb"></script>
+  <script src="js/app.js?v=6cd53dc7"></script>
   <script src="js/desafios.js?v=abef25fc"></script>
   <script src="js/admin.js?v=9a82a9dd"></script>
   <script>
