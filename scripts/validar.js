@@ -68,6 +68,23 @@ const LIMIAR_VIES_TAMANHO = 0.12;     /* diferença de comprimento entre C e E *
    problema. Cinco pontos percentuais é tolerância, não meta: acima disso o
    banco está ensinando a forma em vez do conteúdo. */
 const LIMIAR_REGRA_CEGA = 0.05;
+
+/* Perfil de comprimento medido na prova real: CEBRASPE / PC-AL 2021,
+   cargo Agente, 120 itens C/E extraídos do caderno oficial. Ver
+   material/auditoria-prova-real-2021.md.
+
+   Serve de alvo porque a auditoria mostrou que escrevemos itens bem mais
+   longos que os da banca — mediana de 203 caracteres contra 152 — e,
+   sobretudo, que usamos item curto quase quatro vezes menos. O item curto
+   é onde a CEBRASPE concentra a afirmação categórica seca, que é um tipo
+   de dificuldade que o nosso acervo quase não treina. */
+const PERFIL_REAL_2021 = [
+  { ate: 120, alvo: 0.242 },
+  { ate: 200, alvo: 0.450 },
+  { ate: 300, alvo: 0.233 },
+  { ate: Infinity, alvo: 0.075 },
+];
+const LIMIAR_DESVIO_PERFIL = 0.12; /* 12pp de diferença em qualquer faixa */
 const MIN_ITENS_PARA_AVALIAR = 15;    /* abaixo disso, a amostra não diz nada */
 
 /* Resolução que só devolve o enunciado.
@@ -252,6 +269,25 @@ function validar({ quieto = false } = {}) {
      taxa de acerto, que é o painel de controle do estudo, deixa de medir
      preparo. Pior: essa heurística NÃO se transfere para a prova real, então
      o vazamento não é só ruído de medição, é treino de um reflexo errado. */
+  /* ---------- Aderência ao perfil de comprimento da prova real ----------
+     Complementa o teste da regra cega atacando a causa, e não o sintoma: se
+     a distribuição de comprimento imita a da banca, o reflexo aprendido
+     aqui vale lá. Enquanto ela não imitar, o candidato treina em um formato
+     que não é o da prova. */
+  const comprimentos = QUESTOES.filter(q => q.tipo === "CE" && q.enunciado).map(q => q.enunciado.length);
+  if (comprimentos.length >= 200) {
+    let piso = 0;
+    for (const faixa of PERFIL_REAL_2021) {
+      const nossa = comprimentos.filter(c => c > piso && c <= faixa.ate).length / comprimentos.length;
+      const desvio = nossa - faixa.alvo;
+      if (Math.abs(desvio) > LIMIAR_DESVIO_PERFIL) {
+        const rotulo = faixa.ate === Infinity ? `acima de ${piso}` : `${piso + 1}-${faixa.ate}`;
+        avisos.push(`Comprimento fora do perfil da prova real na faixa ${rotulo} caracteres: temos ${pct(nossa, 1)} contra ${pct(faixa.alvo, 1)} da CEBRASPE 2021 (${desvio > 0 ? "+" : ""}${(desvio * 100).toFixed(1)}pp).`);
+      }
+      piso = faixa.ate;
+    }
+  }
+
   const itensCE = QUESTOES.filter(q => q.tipo === "CE" && q.enunciado);
   if (itensCE.length >= 200) {
     const semAcento = s => s.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "");
