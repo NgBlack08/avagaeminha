@@ -1911,11 +1911,11 @@ function renderPegadinhas() {
   <div class="card">
     <h3>⚠ Palavras perigosas <span class="hint">ordenadas por força medida — marcador é ponto de parada, não gabarito</span></h3>
     <div class="radar-aviso">
-      <b>Leia isto antes da lista.</b> Testamos estes marcadores contra <b>198 itens de provas reais da CEBRASPE</b>
+      <b>Leia isto antes da lista.</b> Testamos estes marcadores contra <b>265 itens de provas reais da CEBRASPE</b>
       (PC-DF 2021 e PC-SE 2021, ambas Agente, e PF 2025, com gabarito oficial). O resultado foi duro:
-      <b>nenhum marcador mostrou poder preditivo distinguível da taxa-base</b>.
-      Os termos absolutos — “sempre”, “somente”, “apenas”, “todos” — não alcançam <b>sequer 10 ocorrências</b> em 198 itens:
-      a banca quase não os usa. E “exclusivamente”, líder da nossa medição interna com 80%, aparece <b>zero vezes</b> em 318 itens reais.
+      <b>nenhum marcador mostrou poder preditivo distinguível da taxa-base</b> de 53% ERRADO.
+      Os termos absolutos aparecem em só <b>12% dos itens reais</b> e ali acertam 61% — intervalo que ainda contém a taxa-base.
+      E “exclusivamente”, líder da nossa medição interna com 80%, aparece <b>zero vezes</b> em 385 itens reais.
       <br><br>
       Então use a lista como <b>localizador</b>, não como preditor: ela aponta <b>onde parar dentro do item</b> —
       a restrição, a condicionante, o quantificador — e a resposta tem de vir do conteúdo.
