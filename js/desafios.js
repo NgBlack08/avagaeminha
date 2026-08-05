@@ -83,7 +83,13 @@ async function renderRanking() {
   /* Sem nickname: precisa criar para participar */
   if (!APP_STATE.config.nickname) {
     const [ranking, pontuadores] = await Promise.all([carregarRanking(rankingPeriodo), carregarRankingPontuadores(rankingPeriodo)]);
-    MAIN().querySelector("#ranking-load")?.remove();
+
+    /* Mesma guarda de renderAdmin: se o usuário trocou de tela enquanto o
+       ranking carregava, o insertAdjacentHTML abaixo colaria o conteúdo no
+       fim da view errada. */
+    if (currentView !== "ranking") return;
+    if (currentView !== "ranking") return;
+  MAIN().querySelector("#ranking-load")?.remove();
     MAIN().insertAdjacentHTML("beforeend", `
       <div class="card" style="margin-bottom:16px">
         <h3>🎭 Crie seu nickname para competir</h3>

@@ -1193,3 +1193,8 @@ mark.trecho-estrategia {
 .tag.forca-moderado { background: color-mix(in srgb, var(--warn) 18%, transparent); color: var(--warn); }
 .tag.forca-fraco,
 .tag.forca-nulo { background: var(--surface3); color: var(--muted); }
+
+/* Botões de envio do convite: quebram em duas linhas no celular em vez de
+   estourar a largura da tabela. */
+.envio-convite { display: flex; gap: 5px; flex-wrap: wrap; }
+.envio-convite .btn { padding: 5px 9px; font-size: 11.5px; white-space: nowrap; }

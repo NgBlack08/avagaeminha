@@ -20,6 +20,13 @@ async function renderAdmin() {
     supa.rpc("admin_listar_convites"),
     supa.rpc("admin_fila_feedback"),
   ]);
+
+  /* As três chamadas levam tempo, e nesse intervalo o usuário pode ter
+     trocado de tela. Sem esta guarda, o insertAdjacentHTML abaixo colava as
+     tabelas do painel no fim de QUALQUER view que estivesse aberta — o
+     Dashboard aparecia com a lista de usuários grudada embaixo. */
+  if (currentView !== "admin") return;
+
   MAIN().querySelector("#admin-load")?.remove();
 
   if (e1 || e2 || e3) {
@@ -67,7 +74,7 @@ function filaFeedbackHtml(fila) {
                 ? (f.comentarios || []).map(c => `<div class="fb-cmt">“${escapeHtml(c)}”</div>`).join("")
                 : '<span style="color:var(--muted)">—</span>'
             }</td>
-            <td><button class="btn ghost small" onclick="resolverFeedback('${f.questao_id}')">Resolver</button></td>
+            <td><button class="btn ghost small" onclick="resolverFeedback(${argHtml(f.questao_id)})">Resolver</button></td>
           </tr>`).join("")}
       </tbody>
     </table></div>
@@ -112,24 +119,93 @@ function usuariosTabelaHtml(usuarios) {
 }
 
 function convitesCardHtml(convites) {
+  const disponivel = c => !c.usado_em && c.ativo;
   return `<div class="card">
     <h3>🎟 Convites de acesso <span class="tag accent">${convites.length}</span></h3>
-    <div style="font-size:12px;color:var(--muted);margin-bottom:10px">Cada código é de uso único. Compartilhe com o futuro aluno para que ele consiga criar a conta.</div>
+    <div style="font-size:12px;color:var(--muted);margin-bottom:10px">Cada código é de uso único. Use os botões de envio para abrir o WhatsApp, o Telegram ou o e-mail já com a mensagem pronta — você escolhe o destinatário e envia.</div>
     <div class="chart-scroll">
     <table class="ranking-tab">
-      <thead><tr><th>Código</th><th>Status</th><th>Criado em</th><th>Usado por</th><th>Ação</th></tr></thead>
+      <thead><tr><th>Código</th><th>Para</th><th>Status</th><th>Criado em</th><th>Usado por</th><th>Enviar</th><th></th></tr></thead>
       <tbody>
         ${convites.map(c => `
           <tr>
             <td class="rk-nome" style="font-family:monospace">${escapeHtml(c.code)}</td>
+            <td>${c.observacao ? escapeHtml(c.observacao) : "—"}</td>
             <td>${c.usado_em ? '<span class="tag ok">usado</span>' : c.ativo ? '<span class="tag accent">disponível</span>' : '<span class="tag bad">revogado</span>'}</td>
             <td>${formatarDataAdmin(c.criado_em)}</td>
             <td>${c.usado_por_nickname ? escapeHtml(c.usado_por_nickname) : "—"}</td>
-            <td>${(!c.usado_em && c.ativo) ? `<button class="btn ghost small" onclick="revogarConvite('${c.code}')">Revogar</button>` : ""}</td>
-          </tr>`).join("") || `<tr><td colspan="5" style="text-align:center;color:var(--muted)">Nenhum convite gerado ainda.</td></tr>`}
+            <td>${disponivel(c) ? botoesEnvioHtml(c.code) : '<span style="color:var(--muted)">—</span>'}</td>
+            <td>${disponivel(c) ? `<button class="btn ghost small" onclick="revogarConvite(${argHtml(c.code)})">Revogar</button>` : ""}</td>
+          </tr>`).join("") || `<tr><td colspan="7" style="text-align:center;color:var(--muted)">Nenhum convite gerado ainda.</td></tr>`}
       </tbody>
     </table></div>
   </div>`;
+}
+
+/* ---------------- Envio do convite ----------------
+   Nada é enviado pelo sistema: cada botão apenas ABRE o aplicativo do
+   administrador com a mensagem pronta, e o envio (destinatário incluído)
+   continua sendo um ato dele. É o padrão de "share intent", e é também o
+   arranjo correto do ponto de vista de responsabilidade — o QuestLab não
+   dispara mensagem em nome de ninguém. */
+function mensagemConvite(code) {
+  const url = window.location.origin + window.location.pathname;
+  return `Olá! Seu acesso ao QuestLab está liberado.\n\n`
+    + `Código de convite: ${code}\n`
+    + `Acesse ${url} e informe esse código na tela de criar conta.\n\n`
+    + `O código é de uso único.`;
+}
+
+/* O argumento passa por duas camadas: JSON.stringify produz um literal
+   JavaScript válido, e escapeHtml protege o atributo HTML que o envolve.
+   Só JSON.stringify não bastaria — um apóstrofo no valor encerraria o
+   atributo antes da hora. Os códigos gerados hoje são alfanuméricos, mas
+   um handler inline não deve depender do formato do dado. */
+function argHtml(valor) {
+  return escapeHtml(JSON.stringify(valor));
+}
+
+function botoesEnvioHtml(code) {
+  const j = argHtml(code);
+  return `<div class="envio-convite">
+    <button class="btn ghost small" title="Enviar por WhatsApp" onclick="enviarConvite(${j},'whatsapp')">WhatsApp</button>
+    <button class="btn ghost small" title="Enviar por Telegram" onclick="enviarConvite(${j},'telegram')">Telegram</button>
+    <button class="btn ghost small" title="Enviar por e-mail" onclick="enviarConvite(${j},'email')">E-mail</button>
+    <button class="btn ghost small" title="Copiar a mensagem" onclick="enviarConvite(${j},'copiar')">Copiar</button>
+  </div>`;
+}
+
+async function enviarConvite(code, canal) {
+  const texto = mensagemConvite(code);
+  const url = window.location.origin + window.location.pathname;
+
+  if (canal === "copiar") {
+    try {
+      await navigator.clipboard.writeText(texto);
+      await mostrarAlerta("Mensagem copiada. Cole no aplicativo que preferir.", "Convite copiado");
+    } catch {
+      /* clipboard exige HTTPS e permissão; sem ela, mostra o texto para
+         seleção manual em vez de falhar em silêncio. */
+      await mostrarAlerta("Não foi possível copiar automaticamente. Selecione e copie a mensagem:\n\n" + texto, "Copiar convite");
+    }
+    return;
+  }
+
+  /* Compartilhamento nativo do celular, quando existir: abre a bandeja do
+     sistema com todos os apps instalados, não só os três previstos aqui. */
+  if (canal === "sistema" && navigator.share) {
+    try { await navigator.share({ title: "Convite QuestLab", text: texto }); } catch { /* cancelado pelo usuário */ }
+    return;
+  }
+
+  const destinos = {
+    whatsapp: "https://wa.me/?text=" + encodeURIComponent(texto),
+    telegram: "https://t.me/share/url?url=" + encodeURIComponent(url) + "&text=" + encodeURIComponent(texto),
+    email: "mailto:?subject=" + encodeURIComponent("Seu acesso ao QuestLab") + "&body=" + encodeURIComponent(texto),
+  };
+  const alvo = destinos[canal];
+  if (!alvo) return;
+  window.open(alvo, "_blank", "noopener,noreferrer");
 }
 
 function formatarDataAdmin(iso) {
@@ -137,10 +213,24 @@ function formatarDataAdmin(iso) {
 }
 
 async function gerarConvite() {
-  const { data, error } = await supa.rpc("admin_criar_convite");
+  /* A observação é opcional, mas pedi-la aqui resolve um problema real do
+     painel: sem ela, a lista vira uma coluna de códigos aleatórios e o
+     administrador não lembra qual foi para quem. */
+  const para = await mostrarPromptTexto({
+    titulo: "Gerar convite",
+    mensagem: "Para quem é este convite? (opcional — serve só para você identificar o código na lista)",
+    placeholder: "ex.: João, indicação da Ana",
+    opcional: true,
+  });
+  if (para === null) return; /* cancelou */
+
+  const { data, error } = await supa.rpc("admin_criar_convite", { p_observacao: para || null });
   if (error) { await mostrarAlerta("Não foi possível gerar o convite: " + error.message); return; }
-  await mostrarAlerta(`Código gerado: ${data.code} — compartilhe com o futuro aluno; ele deve informá-lo na tela de criar conta.`, "Convite gerado");
-  renderAdmin();
+
+  await renderAdmin();
+  await mostrarAlerta(
+    `Código gerado: ${data.code}\n\nUse os botões WhatsApp, Telegram, E-mail ou Copiar na linha do convite para enviá-lo.`,
+    "Convite gerado");
 }
 
 async function revogarConvite(code) {

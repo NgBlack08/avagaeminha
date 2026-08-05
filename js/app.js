@@ -340,6 +340,57 @@ function mostrarPromptNumero({ titulo, mensagem, valorInicial, min = 0, max = 10
     setTimeout(() => { input.focus(); input.select(); }, 20);
   });
 }
+/* Modal com campo de texto livre. Irmão de mostrarPromptNumero, criado
+   para o convite poder registrar a quem se destina — sem isso, uma lista
+   de códigos aleatórios não diz ao administrador quem é quem. */
+function mostrarPromptTexto({ titulo, mensagem, valorInicial = "", placeholder = "", maxlength = 80, opcional = false }) {
+  return new Promise(resolve => {
+    const overlay = document.createElement("div");
+    overlay.className = "modal-overlay";
+    overlay.innerHTML = `
+      <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modal-titulo">
+        ${titulo ? `<div class="modal-titulo" id="modal-titulo">${escapeHtml(titulo)}</div>` : ""}
+        <div class="modal-msg">${escapeHtml(mensagem)}</div>
+        <div class="modal-prompt-wrap">
+          <input type="text" class="modal-prompt-input" id="modal-prompt-txt"
+                 maxlength="${maxlength}" placeholder="${escapeHtml(placeholder)}" autocomplete="off">
+        </div>
+        <div class="modal-actions"></div>
+      </div>`;
+    const input = overlay.querySelector("#modal-prompt-txt");
+    input.value = valorInicial;
+    const actions = overlay.querySelector(".modal-actions");
+    let resolvido = false;
+    function fechar(v) {
+      if (resolvido) return;
+      resolvido = true;
+      document.removeEventListener("keydown", onKey);
+      overlay.remove();
+      resolve(v);
+    }
+    function confirmar() {
+      const v = input.value.trim();
+      if (!v && !opcional) return input.focus();
+      fechar(v);
+    }
+    [{ label: "Cancelar", v: null, cls: "ghost" }, { label: "Confirmar", v: "ok", cls: "" }].forEach(b => {
+      const btn = document.createElement("button");
+      btn.className = "btn small " + b.cls;
+      btn.textContent = b.label;
+      btn.onclick = () => b.v === "ok" ? confirmar() : fechar(null);
+      actions.appendChild(btn);
+    });
+    function onKey(e) {
+      if (e.key === "Escape") fechar(null);
+      if (e.key === "Enter") confirmar();
+    }
+    document.addEventListener("keydown", onKey);
+    overlay.addEventListener("click", e => { if (e.target === overlay) fechar(null); });
+    document.body.appendChild(overlay);
+    setTimeout(() => { input.focus(); input.select(); }, 20);
+  });
+}
+
 async function editarMetaTaxa() {
   const atual = Math.round((APP_STATE.config.metaTaxa ?? 0.75) * 100);
   const valor = await mostrarPromptNumero({
