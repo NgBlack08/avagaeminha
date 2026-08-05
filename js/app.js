@@ -794,8 +794,22 @@ function limparDestaqueEstrategia() {
   renderBanco();
 }
 
+/* A chave inclui plano e trilha, não só os filtros.
+   Sem o plano, um assinante que acabava de pagar continuava vendo as ~98
+   questões do plano gratuito: `carregarEstadoNuvem` atualizava
+   APP_STATE.config.plano no retorno do Mercado Pago, mas a lista já estava
+   em cache e só se renovava se ele mexesse em algum filtro. Bug de cliente
+   pagante, e silencioso — a tela não dava nenhum sinal de estar velha.
+
+   Trilha e cargo entram pela mesma razão, embora hoje `trocarFoco` já
+   limpe o cache: a chave passa a ser autossuficiente, e o cache deixa de
+   depender de alguém lembrar de invalidá-lo. */
+function chaveCacheBanco() {
+  const c = APP_STATE.config;
+  return JSON.stringify([bancoFiltros, c.plano, c.concursoFoco, c.cargoFoco]);
+}
 function listaBancoAtual() {
-  const chave = JSON.stringify(bancoFiltros);
+  const chave = chaveCacheBanco();
   if (!bancoListaCache || bancoListaCache.chave !== chave) {
     bancoListaCache = { chave, lista: embaralhar(filtrarQuestoes(bancoFiltros)) };
   }

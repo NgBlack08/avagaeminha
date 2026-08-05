@@ -71,12 +71,45 @@ function carregarTodosDetalhes() {
 let MODO = "offline";
 let CURRENT_USER = null;
 
+function estadoInicial() {
+  return {
+    respostas: {}, srs: {}, sessoes: [],
+    config: {
+      tema: "dark", concursoFoco: null, cargoFoco: "Escrivão", isAdmin: false,
+      plano: "gratuito", onboardingVisitas: {}, metaTaxa: 0.75,
+      metaDiaria: null, dataProva: null,
+    },
+  };
+}
+
+/* O try/catch sozinho só cobria JSON inválido. Um JSON VÁLIDO porém
+   malformado passava direto e derrubava o app no boot: `null`, `[]` ou
+   `{"respostas":null,"config":null}` viravam APP_STATE, e a primeira
+   leitura de APP_STATE.config.tema estourava antes de qualquer tela
+   aparecer — tela branca, sem caminho de recuperação para o usuário.
+
+   Isso não é hipótese remota: acontece com escrita interrompida por
+   quota estourada, com formato antigo de uma versão anterior e com
+   qualquer extensão que mexa no storage. Por isso cada campo é conferido
+   e completado a partir do padrão, em vez de descartar tudo — quem tinha
+   respostas válidas e só perdeu a config não perde o histórico. */
 function loadLocalState() {
+  const padrao = estadoInicial();
+  let salvo = null;
   try {
     const raw = localStorage.getItem(STORAGE_KEY);
-    if (raw) return JSON.parse(raw);
-  } catch (e) { /* estado corrompido: recomeça */ }
-  return { respostas: {}, srs: {}, sessoes: [], config: { tema: "dark", concursoFoco: null, cargoFoco: "Escrivão", isAdmin: false, plano: "gratuito", onboardingVisitas: {}, metaTaxa: 0.75, metaDiaria: null, dataProva: null } };
+    if (raw) salvo = JSON.parse(raw);
+  } catch (e) { /* JSON inválido: segue com o padrão */ }
+
+  if (!salvo || typeof salvo !== "object" || Array.isArray(salvo)) return padrao;
+
+  const ehObjeto = v => v && typeof v === "object" && !Array.isArray(v);
+  return {
+    respostas: ehObjeto(salvo.respostas) ? salvo.respostas : padrao.respostas,
+    srs: ehObjeto(salvo.srs) ? salvo.srs : padrao.srs,
+    sessoes: Array.isArray(salvo.sessoes) ? salvo.sessoes : padrao.sessoes,
+    config: { ...padrao.config, ...(ehObjeto(salvo.config) ? salvo.config : {}) },
+  };
 }
 function saveLocalState() { localStorage.setItem(STORAGE_KEY, JSON.stringify(APP_STATE)); }
 const APP_STATE = loadLocalState();
