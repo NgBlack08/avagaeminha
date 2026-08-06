@@ -183,11 +183,12 @@ function renderAuthScreen(erro) {
       <div class="landing-panel landing-panel-form">
         <section class="card auth-card fx-stagger" aria-label="Acesso à plataforma">
           ${erro ? `<div class="resultado bad" style="margin-bottom:12px">${escapeHtml(erro)}</div>` : ""}
-          <div class="auth-tabs">
-            <button class="auth-tab" id="tab-entrar" onclick="setAuthTab('entrar')">Entrar</button>
-            <button class="auth-tab" id="tab-criar" onclick="setAuthTab('criar')">Criar conta</button>
+          <div id="auth-offline" class="auth-offline" role="status" aria-live="polite" hidden></div>
+          <div class="auth-tabs" role="tablist" aria-label="Entrar ou criar conta">
+            <button class="auth-tab" id="tab-entrar" role="tab" aria-selected="true" aria-controls="auth-form" onclick="setAuthTab('entrar')">Entrar</button>
+            <button class="auth-tab" id="tab-criar" role="tab" aria-selected="false" aria-controls="auth-form" onclick="setAuthTab('criar')">Criar conta</button>
           </div>
-          <form onsubmit="return submitAuthForm(event)">
+          <form id="auth-form" role="tabpanel" onsubmit="return submitAuthForm(event)">
             <label class="f">E-mail<input type="email" id="auth-email" required autocomplete="email" placeholder="voce@email.com"></label>
             <label class="f" style="margin-top:12px">Senha
               <div class="pw-wrap">
@@ -226,8 +227,31 @@ function renderAuthScreen(erro) {
     </div>
   </div>`;
   setAuthTab("entrar");
+  atualizarAvisoAuthOffline();
   initLandingFX();
 }
+
+/* Antes do service worker, ficar sem rede simplesmente não carregava a
+   página — não havia o que avisar. Agora a casca abre offline, então dá
+   para chegar a um formulário de login que não tem como funcionar.
+   Melhor dizer isso de saída do que deixar o aluno digitar a senha,
+   esperar e receber um erro. */
+function atualizarAvisoAuthOffline() {
+  const el = document.getElementById("auth-offline");
+  if (!el) return;
+  const offline = navigator.onLine === false;
+  el.hidden = !offline;
+  el.textContent = offline
+    ? "Você está sem conexão. Entrar exige internet — reconecte para continuar."
+    : "";
+  for (const id of ["auth-submit", "btn-google"]) {
+    const b = document.getElementById(id);
+    if (b) b.disabled = offline;
+  }
+}
+
+window.addEventListener("online", atualizarAvisoAuthOffline);
+window.addEventListener("offline", atualizarAvisoAuthOffline);
 
 /* Tela de redefinição de senha — chegada por link de e-mail (evento
    PASSWORD_RECOVERY). Não faz parte do fluxo normal de login: o
@@ -334,9 +358,18 @@ function initLandingFX() {
 
 function setAuthTab(tab) {
   authTab = tab;
-  $("#tab-entrar").className = tab === "entrar" ? "auth-tab active" : "auth-tab";
-  $("#tab-criar").className = tab === "criar" ? "auth-tab active" : "auth-tab";
-  $("#auth-submit").textContent = tab === "entrar" ? "Entrar" : "Criar conta";
+  const entrar = tab === "entrar";
+  $("#tab-entrar").className = entrar ? "auth-tab active" : "auth-tab";
+  $("#tab-criar").className = entrar ? "auth-tab" : "auth-tab active";
+  /* A cor de fundo dizia qual aba está ativa; para quem usa leitor de
+     tela, não dizia nada. */
+  $("#tab-entrar").setAttribute("aria-selected", String(entrar));
+  $("#tab-criar").setAttribute("aria-selected", String(!entrar));
+  $("#auth-submit").textContent = entrar ? "Entrar" : "Criar conta";
+  /* O campo de senha é o mesmo nas duas abas, e ficava sempre como
+     "current-password": ao criar conta, o gerenciador oferecia a senha
+     já salva em vez de sugerir uma nova. */
+  $("#auth-senha").setAttribute("autocomplete", entrar ? "current-password" : "new-password");
   $("#auth-msg").textContent = "";
   const cadastro = $("#auth-cadastro-wrap");
   if (cadastro) {
@@ -469,6 +502,17 @@ async function submitAuthForm(ev) {
 }
 
 function traduzErroAuth(msg) {
+  /* Primeiro de todos: sem rede, o supabase-js devolve a mensagem crua do
+     fetch ("Failed to fetch", "NetworkError...", "Load failed" no Safari),
+     e ela caía no `return msg` do fim — o aluno via erro técnico em inglês
+     e não entendia que o problema era a conexão dele.
+
+     Ficou mais provável desde que o service worker passou a abrir o app
+     sem rede: dá para chegar à tela de login offline, coisa que antes nem
+     acontecia. */
+  if (/failed to fetch|networkerror|load failed|network ?request ?failed|err_internet/i.test(msg)) {
+    return "Sem conexão com o servidor. Verifique sua internet e tente de novo.";
+  }
   if (/already registered|already exists/i.test(msg)) return "Este e-mail já está cadastrado. Tente entrar.";
   if (/invalid login credentials/i.test(msg)) return "E-mail ou senha incorretos.";
   if (/password should be|at least 6/i.test(msg)) return "A senha deve ter pelo menos 6 caracteres.";

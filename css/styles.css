@@ -865,6 +865,11 @@ mark.trecho-estrategia {
 .landing-panel-brand, .landing-panel-form {
   --bg: #0b1220; --surface: #0d1526; --surface2: #141f36; --surface3: #1d2b4a;
   --border: #1e2c4a; --text: #eaf0fb; --muted: #8fa0c0;
+  /* As cores semânticas faltavam nesta lista: quem tinha tema claro e
+     saía da conta via o vermelho/âmbar da paleta CLARA sobre estas
+     superfícies escuras. Atingia o aviso de erro do OAuth e o de falta
+     de conexão, os dois dentro deste card. */
+  --ok: #10b981; --warn: #f59e0b; --bad: #ef4444;
   --accent: #3b82f6; --accent-2: #60a5fa;
   --accent-grad: linear-gradient(135deg, #2563eb, #7c3aed);
   --accent-soft: rgba(59,130,246,.14);
@@ -1267,4 +1272,14 @@ mark.trecho-estrategia {
 
 @media (max-width: 640px) {
   .net-status { bottom: 12px; font-size: 12.5px; padding: 8px 13px; }
+}
+
+/* Aviso de falta de conexão na tela de login. Só passou a ser possível
+   chegar aqui offline depois que o service worker ganhou cache — antes,
+   sem rede, a página nem carregava. */
+.auth-offline {
+  margin-bottom: 14px; padding: 10px 13px; border-radius: var(--r-md);
+  font-size: 13px; line-height: 1.5; font-weight: 600;
+  color: var(--warn); border: 1px solid var(--warn);
+  background: color-mix(in srgb, var(--warn) 12%, var(--surface2));
 }
