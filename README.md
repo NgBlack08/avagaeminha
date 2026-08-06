@@ -218,6 +218,35 @@ pior que o problema. O caminho é escrever os itens que faltam — no caso da
 `literalidade`, o item pseudo-literal: aparência de transcrição fiel com uma
 única alteração cirúrgica.
 
+## Segurança do banco de dados
+
+Todo acesso a dados passa por **RPCs `SECURITY DEFINER`** que checam
+`auth.uid()` e, quando é o caso, `is_admin` no próprio corpo da função. A UI
+nunca é a única barreira: esconder o botão não protege nada, e uma conta comum
+que chame `admin_listar_usuarios` direto pelo endpoint é recusada pelo Postgres.
+
+**Nenhuma função é alcançável por usuário não autenticado.** O site inteiro
+exige login, então `EXECUTE` foi revogado de `PUBLIC` e de `anon` em todas as
+RPCs. Isso é defesa em profundidade — elas já checariam a identidade sozinhas —
+mas reduz a superfície exposta em `/rest/v1/rpc/` e impede sondagem anônima.
+Duas delas (`ranking_desafios`, `ranking_pontuadores_desafios`) chegavam a
+devolver apelidos e pontuações para qualquer um com a chave pública.
+
+A tabela `invites` tem **RLS ligada e nenhuma policy, de propósito**: isso nega
+todo acesso direto pelo PostgREST, e o acesso legítimo passa pelas funções de
+convite. O linter do Supabase sinaliza isso como `rls_enabled_no_policy`; é
+esperado, e criar uma policy ali afrouxaria a segurança em vez de aumentá-la.
+O motivo está registrado num `COMMENT ON TABLE`.
+
+O linter também sinaliza `authenticated_security_definer_function_executable`
+para as RPCs. Também é esperado: é exatamente o desenho descrito acima —
+administrador é um usuário autenticado como outro qualquer, e quem decide se ele
+é admin é o corpo da função, não a permissão de execução.
+
+**Pendente, e só resolvível no painel do Supabase:** a proteção contra senhas
+vazadas (checagem contra o HaveIBeenPwned) está desligada.
+Authentication → Policies → *Leaked password protection*.
+
 ## Integridade pedagógica
 
 - As questões do banco são **inéditas**, geradas no estilo da banca — não são reproduções de provas oficiais. Cada uma indica o padrão que imita (ex.: "estilo PCAL").

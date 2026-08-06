@@ -32,7 +32,7 @@
 
 /* Trocado a cada release por scripts/versionar.js. Mudar o nome do cache
    é o que descarta em bloco o conteúdo da versão anterior. */
-const VERSAO = "7.107";
+const VERSAO = "7.108";
 const CACHE = `questlab-${VERSAO}`;
 
 /* Casca mínima para abrir o app sem rede. Os arquivos com hash entram

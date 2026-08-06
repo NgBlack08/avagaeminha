@@ -15,10 +15,12 @@ async function renderAdmin() {
     `<button class="btn small" onclick="gerarConvite()">➕ Gerar convite</button>`) +
     `<div class="empty" id="admin-load"><div class="big">👥</div>Carregando dados…</div>`;
 
-  const [{ data: usuarios, error: e1 }, { data: convites, error: e2 }, { data: fila, error: e3 }] = await Promise.all([
+  const [{ data: usuarios, error: e1 }, { data: convites, error: e2 }, { data: fila, error: e3 },
+         { data: suspeitas, error: e4 }] = await Promise.all([
     supa.rpc("admin_listar_usuarios"),
     supa.rpc("admin_listar_convites"),
     supa.rpc("admin_fila_feedback"),
+    supa.rpc("admin_questoes_suspeitas", { p_min_respostas: 3 }),
   ]);
 
   /* As três chamadas levam tempo, e nesse intervalo o usuário pode ter
@@ -29,15 +31,73 @@ async function renderAdmin() {
 
   MAIN().querySelector("#admin-load")?.remove();
 
-  if (e1 || e2 || e3) {
+  if (e1 || e2 || e3 || e4) {
     MAIN().insertAdjacentHTML("beforeend",
-      `<div class="card"><div class="resultado bad">Erro ao carregar dados: ${escapeHtml((e1 || e2 || e3).message)}</div></div>`);
+      `<div class="card"><div class="resultado bad">Erro ao carregar dados: ${escapeHtml((e1 || e2 || e3 || e4).message)}</div></div>`);
     return;
   }
 
-  /* A fila vem primeiro: é a única parte do painel que pede ação. */
+  /* As duas primeiras pedem ação; as outras são consulta. Suspeitas antes da
+     fila de feedback porque um gabarito invertido no ar é mais grave que uma
+     explicação confusa. */
   MAIN().insertAdjacentHTML("beforeend",
-    filaFeedbackHtml(fila || []) + usuariosTabelaHtml(usuarios || []) + convitesCardHtml(convites || []));
+    questoesSuspeitasHtml(suspeitas || []) + filaFeedbackHtml(fila || []) +
+    usuariosTabelaHtml(usuarios || []) + convitesCardHtml(convites || []));
+}
+
+/* Questões em que os alunos vão pior do que iriam chutando.
+   Ver admin_questoes_suspeitas() no Supabase para o raciocínio completo; em
+   resumo: item Certo/Errado dá ~50% no chute, então desempenho
+   significativamente ABAIXO disso não tem explicação inocente — o caso mais
+   provável é gabarito invertido.
+
+   A lista NÃO é veredito. São centenas de questões testadas ao mesmo tempo,
+   e a 95% alguns falsos positivos são esperados por acaso; por isso ela vem
+   ordenada da mais suspeita para a menos, com o placar à vista, para leitura
+   humana. A coluna de sinalizações cruza o sinal estatístico com o relato de
+   quem respondeu — as duas coisas juntas valem muito mais que cada uma. */
+function questoesSuspeitasHtml(lista) {
+  if (!lista.length) {
+    return `<div class="card" style="margin-bottom:16px">
+      <h3>🎯 Gabaritos sob suspeita</h3>
+      <div style="font-size:13px;color:var(--muted)">
+        Nenhuma questão com desempenho significativamente abaixo do acaso.
+        <b>Isso ainda não é atestado de qualidade do banco:</b> o teste só
+        alcança significância a partir de ~5 respostas na mesma questão, e a
+        maioria ainda não chegou lá. O sinal fica confiável conforme o uso cresce.
+      </div>
+    </div>`;
+  }
+  return `<div class="card" style="margin-bottom:16px">
+    <h3>🎯 Gabaritos sob suspeita <span class="tag bad">${lista.length}</span></h3>
+    <div style="font-size:12px;color:var(--muted);margin-bottom:10px">
+      Questões em que os alunos acertam <b>menos do que acertariam chutando</b>, com
+      significância a 95% (limite superior do intervalo de Wilson abaixo de 50%).
+      Em item Certo/Errado, a explicação mais provável é gabarito invertido.
+      Confira a questão antes de mexer: com muitas questões testadas ao mesmo
+      tempo, alguns alarmes falsos são esperados — isto é fila de triagem, não
+      veredito.
+    </div>
+    <div class="chart-scroll">
+    <table class="ranking-tab">
+      <thead><tr>
+        <th>Questão</th><th>Placar</th><th>Taxa</th><th>Teto (95%)</th>
+        <th>Brancos</th><th>Alunos</th><th>Sinalizações</th>
+      </tr></thead>
+      <tbody>
+        ${lista.map(q => `
+          <tr>
+            <td class="rk-nome" style="font-family:monospace">${escapeHtml(q.qid)}</td>
+            <td>${q.acertos}/${q.n}</td>
+            <td><span class="tag bad">${Math.round(q.taxa * 100)}%</span></td>
+            <td>${Math.round(q.wilson_sup * 100)}%</td>
+            <td>${q.brancos}</td>
+            <td>${q.usuarios}</td>
+            <td>${q.feedbacks > 0 ? `<span class="tag warn">${q.feedbacks}</span>` : "—"}</td>
+          </tr>`).join("")}
+      </tbody>
+    </table></div>
+  </div>`;
 }
 
 /* Fila de explicações que os alunos sinalizaram, uma linha por questão.
