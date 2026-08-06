@@ -41,30 +41,20 @@ window.addEventListener("popstate", (e) => {
   navigate(view, { fromPopstate: true });
 });
 
-/* `novoAcesso` distingue quem ACABOU DE AUTENTICAR (login, cadastro, troca de
-   senha) de quem apenas recarregou a página com sessão já ativa.
+/* Todo acesso inicial ao site (login, cadastro, ou F5 com sessão já ativa)
+   abre no Dashboard — nunca restaura a aba do hash da URL. O estado já
+   chega atualizado porque carregarEstadoNuvem() (js/auth.js) é sempre
+   aguardado ANTES de iniciarApp() em todos os caminhos de entrada.
 
-   A diferença existe para conciliar duas regras que se contradizem à primeira
-   vista: todo acesso novo deve começar no Dashboard, onde fica o seletor de
-   trilha em destaque; mas dar F5 no meio de uma lista de questões não pode
-   jogar o aluno de volta ao Dashboard e fazê-lo perder o lugar. Como o hash
-   já carrega a view (ver pushState em navigate()), basta ignorá-lo quando o
-   acesso é novo e honrá-lo quando é recarga.
-
-   O retorno do OAuth do Google cai no caminho de recarga, mas chega com
-   tokens no hash em vez de nome de view — então não passa em viewsValidas e
-   vai para o Dashboard sozinho, que é o comportamento desejado. */
-function iniciarApp({ novoAcesso = false } = {}) {
+   Única exceção: retorno do checkout do Mercado Pago, que precisa cair em
+   Planos para mostrar a confirmação da assinatura. */
+function iniciarApp() {
   const root = document.getElementById("approot");
   if (root) root.classList.remove("no-sidebar");
   document.documentElement.dataset.theme = APP_STATE.config.tema || "dark";
   renderSidebar();
   const mpStatus = checkMpRedirectStatus();
-  const hashView = (location.hash || "").replace(/^#/, "");
-  const viewsValidas = VIEWS.map(v => v.id).concat(["admin"]);
-  const manterAba = !novoAcesso && viewsValidas.includes(hashView);
-  const destino = mpStatus ? "planos" : (manterAba ? hashView : "dashboard");
-  navigate(destino);
+  navigate(mpStatus ? "planos" : "dashboard");
   if (mpStatus) tratarRetornoMercadoPago();
 }
 

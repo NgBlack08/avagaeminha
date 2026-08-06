@@ -236,7 +236,7 @@ async function submitNovaSenha(ev) {
     msg.style.color = "var(--ok)";
     msg.textContent = "Senha atualizada! Entrando…";
     await carregarEstadoNuvem(data.user);
-    iniciarApp({ novoAcesso: true });
+    iniciarApp();
   } catch (err) {
     msg.style.color = "var(--bad)";
     msg.textContent = traduzErroAuth(err.message);
@@ -398,7 +398,7 @@ async function submitAuthForm(ev) {
       if (error) throw error;
       if (data.session) {
         await carregarEstadoNuvem(data.user);
-        iniciarApp({ novoAcesso: true });
+        iniciarApp();
         return false;
       }
       msg.style.color = "var(--ok)";
@@ -407,7 +407,7 @@ async function submitAuthForm(ev) {
       const { data, error } = await supa.auth.signInWithPassword({ email, password: senha });
       if (error) throw error;
       await carregarEstadoNuvem(data.user);
-      iniciarApp({ novoAcesso: true });
+      iniciarApp();
       return false;
     }
   } catch (err) {
