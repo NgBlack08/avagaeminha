@@ -120,6 +120,7 @@ function saveLocalState() {
     return true;
   } catch (e) {
     console.error("Não foi possível gravar o estado local:", e);
+    registrarEvento("storage_cheio", "saveLocalState: " + (e && e.name || e));
     return false;
   }
 }
@@ -203,7 +204,10 @@ function gravarFila(fila) {
     localStorage.setItem(FILA_KEY, JSON.stringify(fila));
     return true;
   } catch (e) {
+    /* Grave: sem gravar a fila, uma resposta respondida offline não
+       sobrevive ao fechar a aba. */
     console.error("Não foi possível gravar a fila de envio:", e);
+    registrarEvento("storage_cheio", "gravarFila: " + (e && e.name || e));
     return false;
   }
 }
@@ -249,6 +253,10 @@ function atualizarNaFila(item) {
   if (i >= 0) { fila[i] = item; gravarFila(fila); }
 }
 
+/* Último motivo de falha, para a telemetria dizer POR QUE um item foi
+   descartado — "sumiu uma resposta" sem a causa não orienta correção. */
+let ultimoErroDaFila = "";
+
 /* "ok" saiu | "descartar" nunca vai passar | "falhou" tentar de novo */
 async function enviarItemDaFila(item) {
   const p = item.payload;
@@ -266,12 +274,15 @@ async function enviarItemDaFila(item) {
       return "descartar";
     }
   } catch (e) {
+    ultimoErroDaFila = String(e && e.message || e);
     return "falhou"; /* rede caiu no meio da requisição */
   }
   const erro = resultado?.error;
   if (!erro) return "ok";
+  ultimoErroDaFila = (erro.code ? erro.code + " " : "") + (erro.message || "");
   if (FILA_ERROS_PERMANENTES.has(erro.code)) {
     console.error("Escrita irrecuperável descartada:", item.tipo, erro);
+    registrarEvento("escrita_descartada", `${item.tipo} irrecuperável: ${ultimoErroDaFila}`);
     return "descartar";
   }
   return "falhou";
@@ -300,6 +311,10 @@ async function flushFila() {
       item.tentativas = (item.tentativas || 0) + 1;
       if (item.tentativas >= FILA_MAX_TENTATIVAS) {
         console.error("Item excedeu o limite de tentativas e foi descartado:", item.tipo, item.payload);
+        /* Perda de dado REAL do aluno — o evento mais importante que esta
+           telemetria existe para contar. */
+        registrarEvento("escrita_descartada",
+          `${item.tipo} após ${item.tentativas} tentativas: ${ultimoErroDaFila}`);
         removerDaFila(item.id);
         continue;
       }
@@ -407,6 +422,54 @@ function reaplicarPendentes(userId) {
    padrão é a resposta certa) da falha de rede (em que o padrão é uma
    mentira).
    ================================================================ */
+/* ================================================================
+   TELEMETRIA DE FALHAS
+
+   Existe por um motivo concreto. O bug do rebaixamento de plano atingia
+   quem paga, viveu semanas em produção, e só apareceu porque alguém
+   abriu o app e reparou num número estranho. E a correção dele PIOROU o
+   ponto cego: agora a leitura que falha cai na cópia local e o app segue
+   funcionando — o sintoma sumiu, a falha não.
+
+   Três caminhos por onde dado do aluno some em silêncio, todos daqui:
+   item da fila descartado após esgotar as tentativas (perda real),
+   leitura caindo na cópia, e exceção não tratada.
+
+   Regras que este código não pode quebrar:
+
+     - Nunca vira erro na cara do aluno. Falhou o envio, azar.
+     - Nunca dispara telemetria de si mesma. A rejeição da própria
+       chamada é engolida ali no `.then(ok, erro)`; sem isso, um erro de
+       rede viraria `unhandledrejection`, que chamaria isto de novo, em
+       laço.
+     - Nunca passa pela fila de escrita. A fila é para o que não pode se
+       perder; perder um evento de telemetria é aceitável, e enfileirar
+       aqui seria circular (a falha da fila gerando item na fila).
+     - Nunca carrega conteúdo de estudo: nem enunciado, nem resposta,
+       nem gabarito. Só tipo de falha, mensagem curta e versão.
+   ================================================================ */
+const EVENTO_TETO_SESSAO = 10;
+let eventosEnviados = 0;
+const eventosJaVistos = new Set();
+
+function registrarEvento(tipo, detalhe) {
+  try {
+    if (MODO !== "cloud" || !CURRENT_USER) return;
+    if (eventosEnviados >= EVENTO_TETO_SESSAO) return;
+    /* O mesmo erro repetido não é informação nova, e é justamente o que
+       um laço de falha produz aos milhares. */
+    const chave = tipo + "|" + String(detalhe || "").slice(0, 120);
+    if (eventosJaVistos.has(chave)) return;
+    eventosJaVistos.add(chave);
+    eventosEnviados++;
+    supa.rpc("registrar_evento", {
+      p_tipo: tipo,
+      p_detalhe: String(detalhe || "").slice(0, 300),
+      p_versao: String(globalThis.APP_VERSION || ""),
+    }).then(() => {}, () => {});
+  } catch (e) { /* telemetria nunca propaga */ }
+}
+
 const CACHE_NUVEM_KEY = STORAGE_KEY + ":nuvem";
 const CARGA_TENTATIVAS = 3;
 const CARGA_ESPERA_MS = [0, 400, 1200];
@@ -580,8 +643,13 @@ async function carregarEstadoNuvem(user) {
   const houveFalha = leitura.some(falhou);
   if (houveFalha) {
     ESTADO_DESATUALIZADO = { desde: Date.now() };
-    console.error("Estado carregado de forma incompleta:",
-      leitura.filter(falhou).map(r => r.error?.message || r.error?.code));
+    const motivos = leitura.filter(falhou).map(r => r.error?.message || r.error?.code);
+    console.error("Estado carregado de forma incompleta:", motivos);
+    /* Sem isto, a correção do rebaixamento silencioso apenas trocaria um
+       problema invisível por outro: o aluno pararia de ver dado errado, e
+       a falha continuaria acontecendo sem ninguém saber. */
+    registrarEvento("estado_incompleto",
+      `${motivos.length}/6 consultas falharam: ${motivos[0] || "?"}`);
   } else {
     ESTADO_DESATUALIZADO = null;
     /* Só grava a cópia quando a leitura veio inteira — cache montado a

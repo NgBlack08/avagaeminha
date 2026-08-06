@@ -122,6 +122,10 @@ function mostrarErroInesperado(origem, detalhe) {
   if (assinatura === erroGlobalUltimo) return; /* não repete o mesmo erro em loop */
   erroGlobalUltimo = assinatura;
   console.error("[QuestLab]", origem, detalhe);
+  /* registrarEvento engole a própria rejeição — se não engolisse, um erro
+     de rede aqui viraria unhandledrejection, que chamaria esta função de
+     novo, em laço. */
+  registrarEvento("excecao", `${origem}: ${String(detalhe || "").slice(0, 200)}`);
 
   let el = document.getElementById("erro-global");
   if (!el) {

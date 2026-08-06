@@ -16,11 +16,12 @@ async function renderAdmin() {
     `<div class="empty" id="admin-load"><div class="big">👥</div>Carregando dados…</div>`;
 
   const [{ data: usuarios, error: e1 }, { data: convites, error: e2 }, { data: fila, error: e3 },
-         { data: suspeitas, error: e4 }] = await Promise.all([
+         { data: suspeitas, error: e4 }, { data: eventos, error: e5 }] = await Promise.all([
     supa.rpc("admin_listar_usuarios"),
     supa.rpc("admin_listar_convites"),
     supa.rpc("admin_fila_feedback"),
     supa.rpc("admin_questoes_suspeitas", { p_min_respostas: 3 }),
+    supa.rpc("admin_eventos_cliente", { p_dias: 7 }),
   ]);
 
   /* As três chamadas levam tempo, e nesse intervalo o usuário pode ter
@@ -31,18 +32,76 @@ async function renderAdmin() {
 
   MAIN().querySelector("#admin-load")?.remove();
 
-  if (e1 || e2 || e3 || e4) {
+  if (e1 || e2 || e3 || e4 || e5) {
     MAIN().insertAdjacentHTML("beforeend",
-      `<div class="card"><div class="resultado bad">Erro ao carregar dados: ${escapeHtml((e1 || e2 || e3 || e4).message)}</div></div>`);
+      `<div class="card"><div class="resultado bad">Erro ao carregar dados: ${escapeHtml((e1 || e2 || e3 || e4 || e5).message)}</div></div>`);
     return;
   }
 
-  /* As duas primeiras pedem ação; as outras são consulta. Suspeitas antes da
-     fila de feedback porque um gabarito invertido no ar é mais grave que uma
-     explicação confusa. */
+  /* Falhas primeiro: perda de dado do aluno é mais urgente que qualquer
+     outra coisa aqui. Depois gabarito suspeito (conteúdo errado no ar),
+     depois explicação confusa, e por fim o que é só consulta. */
   MAIN().insertAdjacentHTML("beforeend",
-    questoesSuspeitasHtml(suspeitas || []) + filaFeedbackHtml(fila || []) +
-    usuariosTabelaHtml(usuarios || []) + convitesCardHtml(convites || []));
+    eventosClienteHtml(eventos || []) + questoesSuspeitasHtml(suspeitas || []) +
+    filaFeedbackHtml(fila || []) + usuariosTabelaHtml(usuarios || []) +
+    convitesCardHtml(convites || []));
+}
+
+/* Falhas que os aplicativos dos alunos reportaram nos últimos 7 dias.
+   Ver registrar_evento() no Supabase para o desenho.
+
+   Este card existe porque o bug do rebaixamento de plano viveu semanas em
+   produção sem ninguém saber, e a correção dele deixou a falha ainda mais
+   silenciosa: o app passou a mostrar a cópia local e seguir funcionando.
+   Sem contagem, "com que frequência isso acontece?" era especulação. */
+const EVENTO_ROTULOS = {
+  escrita_descartada: { titulo: "Resposta perdida no envio", cls: "bad",
+    ajuda: "A fila esgotou as tentativas e descartou o item. É perda de dado real do aluno — se aparecer, investigue antes de qualquer outra coisa." },
+  estado_incompleto: { titulo: "Leitura do estado falhou", cls: "warn",
+    ajuda: "O app caiu na cópia local. O aluno não viu dado errado, mas o servidor não respondeu." },
+  excecao: { titulo: "Erro não tratado na tela", cls: "warn",
+    ajuda: "Exceção que chegou ao window.onerror." },
+  storage_cheio: { titulo: "Navegador recusou gravar", cls: "bad",
+    ajuda: "localStorage sem espaço. A fila offline depende dele: sem gravar, resposta feita sem rede não sobrevive a fechar a aba." },
+};
+
+function eventosClienteHtml(lista) {
+  if (!lista.length) {
+    return `<div class="card" style="margin-bottom:16px">
+      <h3>🩺 Falhas reportadas pelos alunos</h3>
+      <div style="font-size:13px;color:var(--muted)">
+        Nenhuma falha nos últimos 7 dias. Cobre perda de resposta no envio,
+        leitura do estado, erro de tela e storage cheio — os quatro caminhos
+        por onde dado do aluno some em silêncio.
+      </div>
+    </div>`;
+  }
+  const total = lista.reduce((s, e) => s + e.ocorrencias, 0);
+  return `<div class="card" style="margin-bottom:16px">
+    <h3>🩺 Falhas reportadas pelos alunos <span class="tag bad">${total}</span></h3>
+    <div style="font-size:12px;color:var(--muted);margin-bottom:10px">
+      Últimos 7 dias. Nenhum evento carrega conteúdo de estudo — só tipo de
+      falha, mensagem e versão.
+    </div>
+    <div class="chart-scroll">
+    <table class="ranking-tab">
+      <thead><tr><th>Falha</th><th>Ocorr.</th><th>Alunos</th><th>Última</th><th>Versões</th><th>Exemplo</th></tr></thead>
+      <tbody>
+        ${lista.map(e => {
+          const r = EVENTO_ROTULOS[e.tipo] || { titulo: e.tipo, cls: "", ajuda: "" };
+          return `<tr>
+            <td class="rk-nome"><span class="tag ${r.cls}">${escapeHtml(r.titulo)}</span>
+              <div style="font-size:11.5px;color:var(--muted);white-space:normal;max-width:280px;margin-top:4px">${escapeHtml(r.ajuda)}</div></td>
+            <td>${e.ocorrencias}</td>
+            <td>${e.usuarios}</td>
+            <td style="white-space:nowrap">${new Date(e.ultima).toLocaleString("pt-BR")}</td>
+            <td style="white-space:nowrap">${escapeHtml(e.versoes || "—")}</td>
+            <td style="max-width:300px;white-space:normal;font-size:11.5px">${escapeHtml(e.exemplo || "—")}</td>
+          </tr>`;
+        }).join("")}
+      </tbody>
+    </table></div>
+  </div>`;
 }
 
 /* Questões em que os alunos vão pior do que iriam chutando.
