@@ -61,6 +61,10 @@
 }
 
 :root[data-theme="dark"] {
+  /* Faz o navegador desenhar os controles NATIVOS no tom certo: o ícone
+     de calendário do type="date", a barra de rolagem, o seletor de data.
+     Sem isto, o calendário sai escuro sobre fundo escuro. */
+  color-scheme: dark;
   --bg: #070d1a;             /* azul-escuro profundo (confiança) */
   --surface: #0d1526;
   --surface2: #141f36;
@@ -87,6 +91,7 @@
   --glass: rgba(13,21,38,.72);
 }
 :root[data-theme="light"] {
+  color-scheme: light;
   --bg: #f6f8fc;
   --surface: #ffffff;
   --surface2: #eef2f9;
@@ -369,8 +374,21 @@ body {
 .btn.bad { background: linear-gradient(135deg, #dc2626, #ef4444); box-shadow: 0 4px 14px rgba(239,68,68,.3); }
 .btn:disabled { opacity: .45; cursor: not-allowed; transform: none; }
 
-select, input[type="text"], input[type="search"], input[type="number"],
-input[type="email"], input[type="password"], textarea {
+/* Lista de EXCLUSÃO, não de inclusão. A versão anterior enumerava os tipos
+   a estilizar (text, search, number, email, password) — e qualquer tipo
+   fora dessa lista aparecia cru, com fundo branco e borda inset do
+   navegador, dentro de um card escuro.
+
+   Aconteceu duas vezes sem ninguém notar: o telefone do cadastro
+   (`type="tel"`) e a data da prova (`type="date"`). Medido antes da
+   correção: 19px de altura contra 42px dos demais campos, fundo branco
+   contra #141f36.
+
+   Enumerar o que NÃO se estiliza (botões e caixas de marcar, que têm
+   regra própria) faz um tipo novo nascer no padrão certo, em vez de
+   nascer quebrado esperando alguém reparar. */
+select, textarea,
+input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="button"]):not([type="reset"]):not([type="file"]):not([type="range"]):not([type="color"]) {
   font: inherit; font-size: 13.5px; color: var(--text);
   background: var(--surface2); border: 1px solid var(--border); border-radius: 10px;
   padding: 9px 13px; outline: none; min-width: 0;
@@ -863,6 +881,9 @@ mark.trecho-estrategia {
 /* Área de login SEMPRE escura — sem opção de tema claro, independente do
    que o usuário tiver escolhido no resto do app (ou de sessão anterior). */
 .landing-panel-brand, .landing-panel-form {
+  /* A área de login ignora o tema do usuário, então os controles nativos
+     dentro dela precisam ser fixados em escuro também. */
+  color-scheme: dark;
   --bg: #0b1220; --surface: #0d1526; --surface2: #141f36; --surface3: #1d2b4a;
   --border: #1e2c4a; --text: #eaf0fb; --muted: #8fa0c0;
   /* As cores semânticas faltavam nesta lista: quem tinha tema claro e
