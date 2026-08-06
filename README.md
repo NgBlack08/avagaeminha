@@ -30,14 +30,33 @@ Abra o arquivo **`index.html`** em qualquer navegador (duplo clique). Não preci
 
 ```
 index.html          → shell da SPA
-css/styles.css      → design system (temas via CSS variables)
+css/styles.css      → design system (temas via CSS variables) + @font-face local
 js/data*.js         → FONTE editável dos dados (questões, DNA, frequências, predições, estratégias)
 js/gerado/          → o que o navegador carrega; produzido por scripts/dividir-dados.js
-js/engine.js        → motor: perfil, SRS, seleção adaptativa, filtros, detector, estatística
+js/engine.js        → motor: perfil, SRS, seleção adaptativa, filtros, detector, estatística,
+                      fila de escrita resiliente
 js/charts.js        → gráficos SVG nativos (barras, linhas, gauge, heatmap)
 js/app.js           → telas/rotas da aplicação
-scripts/            → build: validação do banco, divisão leve/pesado, cache-busting, ícones
+js/vendor/          → dependências de terceiros, em versão fixa (ver LEIA-ME.md de lá)
+fonts/              → Inter variável, servida do próprio domínio (SIL OFL 1.1)
+sw.js               → service worker: casca offline
+scripts/            → build: validação do banco, testes, divisão leve/pesado, cache-busting, ícones
+scripts/testes/     → suíte do motor (node --test, sem dependências)
 ```
+
+**Zero requisições a terceiros no carregamento.** O cliente Supabase e a fonte
+Inter eram baixados de CDN (jsDelivr e Google Fonts); hoje saem deste mesmo
+repositório. Isso remove dois pontos únicos de falha fora do nosso controle,
+elimina o risco de o código mudar sem commit (a URL do Supabase apontava para a
+faixa flutuante `@2`) e evita mandar o IP de cada aluno para o Google.
+
+**Funciona sem rede.** O `sw.js` guarda a casca do app e todo asset com
+`?v=<hash>` — que é imutável por construção, então cache-first ali nunca serve
+conteúdo errado. O `index.html` vai de rede primeiro, para que uma release nova
+apareça assim que houver conexão. A API do Supabase **nunca** é cacheada:
+guardar resposta de dados ou de autenticação criaria progresso fantasma e sessão
+zumbi. Quem cuida de escrever sem rede é a fila de `js/engine.js`, que persiste
+a resposta e a reenvia depois.
 
 ## Como publicar uma versão
 

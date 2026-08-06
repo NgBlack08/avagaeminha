@@ -129,10 +129,19 @@ function ehLocal(url) {
   return !/^(https?:)?\/\//.test(url) && !url.startsWith("data:") && !url.startsWith("#");
 }
 
+/* As fontes ficam de fora: o nome do arquivo já é a versão (trocar a fonte
+   significa outro arquivo), e elas são referenciadas em DOIS lugares — o
+   `@font-face` do CSS e o `<link rel=preload>` do index.html. Só o segundo
+   passa por aqui; hashear um e não o outro faria o navegador baixar a fonte
+   duas vezes e desperdiçar o preload. */
+function ehFonte(url) {
+  return /^fonts\//.test(url);
+}
+
 /* Troca "arquivo.ext" ou "arquivo.ext?v=qualquer" por "arquivo.ext?v=<hash>". */
 function versionarUrl(url) {
   const semQuery = url.split("?")[0];
-  if (!ehLocal(semQuery)) return url;
+  if (!ehLocal(semQuery) || ehFonte(semQuery)) return url;
   const hash = hashDe(semQuery);
   if (!hash) return url;
   return `${semQuery}?v=${hash}`;
@@ -178,6 +187,19 @@ index = index.replace(
   `$1${versaoNova}$2`
 );
 
+/* ---------- service worker ---------- */
+/* O nome do cache carrega a versão: trocá-lo é o que descarta em bloco os
+   arquivos da release anterior. Esquecer esta linha faria o worker novo
+   continuar servindo o cache velho — exatamente o risco que levou a versão
+   original do sw.js a não guardar nada. */
+
+const ARQ_SW = path.join(RAIZ, "sw.js");
+const swOriginal = fs.readFileSync(ARQ_SW, "utf8");
+const sw = swOriginal.replace(/(const VERSAO = ")[^"]*(";)/, `$1${versaoNova}$2`);
+if (sw === swOriginal && !swOriginal.includes(`const VERSAO = "${versaoNova}"`)) {
+  console.error("! sw.js: não encontrei `const VERSAO = \"...\"` para atualizar.\n");
+}
+
 /* ---------- gravação ---------- */
 
 /* O manifest já foi gravado acima (precisava existir em sua forma final
@@ -185,6 +207,7 @@ index = index.replace(
    para efeito de relatório. */
 const pendentes = [
   [ARQ_INDEX, index],
+  [ARQ_SW, sw],
   [ARQ_VERSAO, JSON.stringify({ v: versaoNova }) + "\n"],
 ].filter(([arquivo, conteudo]) => fs.readFileSync(arquivo, "utf8") !== conteudo);
 

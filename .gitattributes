@@ -1,0 +1,12 @@
+# Dependências de terceiros e fontes precisam chegar ao disco com os bytes
+# EXATOS do original. Sem isto, a conversão automática de fim de linha
+# (core.autocrlf) reescreveria o bundle do Supabase num clone Windows, e o
+# SHA-256 registrado em js/vendor/LEIA-ME.md deixaria de conferir — tornando
+# inútil justamente a verificação que motivou vendorizar o arquivo.
+js/vendor/**   -text
+fonts/**       -text
+
+# Fontes são binário; marcar explicitamente evita que o git tente adivinhar.
+*.woff2        binary
+*.woff         binary
+*.ttf          binary
