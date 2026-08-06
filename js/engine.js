@@ -126,18 +126,37 @@ function saveLocalState() {
 }
 const APP_STATE = loadLocalState();
 
-/* Salva a config (tema/foco) no destino certo conforme o modo atual. */
-function saveState() {
+/* Grava colunas do perfil (tema, foco, metas, data da prova, onboarding).
+   Antes cada uma dessas escritas era dispare-e-esqueça, com um
+   console.error como único vestígio da falha — a mesma família do defeito
+   que rebaixava assinante em silêncio, só que do lado da escrita.
+
+   O efeito para o aluno era desconcertante: ele ajustava a meta diária,
+   via o número mudar na tela (porque APP_STATE já tinha sido alterado) e,
+   ao recarregar, encontrava o valor antigo de volta, sem explicação.
+
+   Agora vai pela mesma fila das respostas. Encaixa bem porque é `update`
+   por id: idempotente e último-escreve-vence, então reenviar nunca
+   duplica nada. E como só o estado final importa, os itens colapsam —
+   mudar de trilha cinco vezes seguidas deixa um item na fila, não cinco. */
+function salvarPerfil(campos) {
   if (MODO === "cloud" && CURRENT_USER) {
-    supa.from("profiles").update({
-      tema: APP_STATE.config.tema,
-      concurso_foco: APP_STATE.config.concursoFoco,
-      cargo_foco: APP_STATE.config.cargoFoco,
-      updated_at: new Date().toISOString(),
-    }).eq("id", CURRENT_USER.id).then(({ error }) => { if (error) console.error("Erro ao salvar perfil:", error); });
+    enfileirar("perfil", {
+      user_id: CURRENT_USER.id,
+      campos: { ...campos, updated_at: new Date().toISOString() },
+    });
   } else {
     saveLocalState();
   }
+}
+
+/* Salva a config (tema/foco) no destino certo conforme o modo atual. */
+function saveState() {
+  salvarPerfil({
+    tema: APP_STATE.config.tema,
+    concurso_foco: APP_STATE.config.concursoFoco,
+    cargo_foco: APP_STATE.config.cargoFoco,
+  });
 }
 
 /* ================================================================
@@ -233,6 +252,20 @@ function enfileirar(tipo, payload) {
       return;
     }
   }
+  /* Perfil colapsa MESCLANDO, não substituindo: cada chamada mexe em
+     colunas diferentes (tema aqui, meta ali), e substituir perderia o que
+     ainda não subiu. Trocar de trilha cinco vezes deixa um item, não
+     cinco — só o estado final importa. */
+  if (tipo === "perfil") {
+    const i = fila.findIndex(x => x.tipo === "perfil" && x.userId === CURRENT_USER.id);
+    if (i >= 0) {
+      fila[i].payload.campos = { ...fila[i].payload.campos, ...payload.campos };
+      fila[i].tentativas = 0;
+      gravarFila(fila);
+      agendarFlush(0);
+      return;
+    }
+  }
   if (fila.length >= FILA_MAX) {
     console.error("Fila de envio cheia; descartando o item mais antigo.");
     fila.shift();
@@ -270,6 +303,10 @@ async function enviarItemDaFila(item) {
         .upsert({ ...p, client_id: item.id }, { onConflict: "user_id,client_id", ignoreDuplicates: true });
     } else if (item.tipo === "srs") {
       resultado = await supa.from("srs").upsert(p, { onConflict: "user_id,qid" });
+    } else if (item.tipo === "perfil") {
+      /* Sem client_id: é update por id, idempotente por natureza — o
+         reenvio reescreve o mesmo valor. */
+      resultado = await supa.from("profiles").update(p.campos).eq("id", p.user_id);
     } else {
       return "descartar";
     }
@@ -365,6 +402,18 @@ function notificarStatusFila() {
   } catch (e) { /* ambiente sem window (testes em Node) */ }
 }
 
+/* Coluna do banco -> chave em APP_STATE.config. `updated_at` fica de fora
+   de propósito: é carimbo de servidor, não configuração do aluno. */
+const PERFIL_COLUNA_PARA_CONFIG = {
+  tema: "tema",
+  concurso_foco: "concursoFoco",
+  cargo_foco: "cargoFoco",
+  meta_taxa: "metaTaxa",
+  meta_diaria: "metaDiaria",
+  data_prova: "dataProva",
+  onboarding_visitas: "onboardingVisitas",
+};
+
 /* Reaplica sobre o APP_STATE recém-carregado o que ainda não subiu,
    para que recarregar a página offline não faça as respostas do dia
    desaparecerem da tela. A deduplicação por timestamp cobre o caso de
@@ -389,6 +438,14 @@ function reaplicarPendentes(userId) {
         data: quando, n: p.n, acertos: p.acertos, erros: p.erros,
         brancos: p.brancos, liquida: p.liquida, tempoTotal: p.tempo_total,
       });
+    } else if (item.tipo === "perfil") {
+      /* Sem isto, mudar a meta diária sem rede e recarregar mostraria o
+         valor antigo: a leitura traz o do servidor, que ainda não recebeu
+         a alteração. */
+      for (const [coluna, valor] of Object.entries(p.campos || {})) {
+        const chave = PERFIL_COLUNA_PARA_CONFIG[coluna];
+        if (chave) APP_STATE.config[chave] = valor;
+      }
     }
   }
   APP_STATE.sessoes.sort((a, b) => a.data - b.data);
@@ -665,14 +722,7 @@ async function carregarEstadoNuvem(user) {
 function definirMetaTaxa(valor) {
   const meta = Math.min(1, Math.max(0.1, valor));
   APP_STATE.config.metaTaxa = meta;
-  if (MODO === "cloud" && CURRENT_USER) {
-    supa.from("profiles").update({
-      meta_taxa: meta,
-      updated_at: new Date().toISOString(),
-    }).eq("id", CURRENT_USER.id).then(({ error }) => { if (error) console.error("Erro ao salvar meta de aprovação:", error); });
-  } else {
-    saveLocalState();
-  }
+  salvarPerfil({ meta_taxa: meta });
 }
 
 /* ---------------- Feedback sobre a explicação ----------------
@@ -723,14 +773,7 @@ async function removerFeedback(qid) {
    Plano de Estudo Dirigido para calcular dias restantes e ritmo diário. */
 function definirDataProva(valorISO) {
   APP_STATE.config.dataProva = valorISO || null;
-  if (MODO === "cloud" && CURRENT_USER) {
-    supa.from("profiles").update({
-      data_prova: valorISO || null,
-      updated_at: new Date().toISOString(),
-    }).eq("id", CURRENT_USER.id).then(({ error }) => { if (error) console.error("Erro ao salvar data da prova:", error); });
-  } else {
-    saveLocalState();
-  }
+  salvarPerfil({ data_prova: valorISO || null });
 }
 
 /* Marca uma "visita" de onboarding (ex.: Raio-X, Perfil) e sincroniza na
@@ -740,14 +783,7 @@ function marcarVisitaOnboarding(chave) {
   if (!APP_STATE.config.onboardingVisitas) APP_STATE.config.onboardingVisitas = {};
   if (APP_STATE.config.onboardingVisitas[chave]) return;
   APP_STATE.config.onboardingVisitas[chave] = true;
-  if (MODO === "cloud" && CURRENT_USER) {
-    supa.from("profiles").update({
-      onboarding_visitas: APP_STATE.config.onboardingVisitas,
-      updated_at: new Date().toISOString(),
-    }).eq("id", CURRENT_USER.id).then(({ error }) => { if (error) console.error("Erro ao salvar visita de onboarding:", error); });
-  } else {
-    saveLocalState();
-  }
+  salvarPerfil({ onboarding_visitas: APP_STATE.config.onboardingVisitas });
 }
 
 /* Volta o app para modo local (após logout), recarregando o localStorage. */
@@ -1410,14 +1446,7 @@ function definirMetaDiaria(valor) {
     ? null
     : Math.min(META_DIARIA_MAX, Math.max(META_DIARIA_MIN, Math.round(+valor)));
   APP_STATE.config.metaDiaria = n;
-  if (MODO === "cloud" && CURRENT_USER) {
-    supa.from("profiles").update({
-      meta_diaria: n,
-      updated_at: new Date().toISOString(),
-    }).eq("id", CURRENT_USER.id).then(({ error }) => { if (error) console.error("Erro ao salvar meta diária:", error); });
-  } else {
-    saveLocalState();
-  }
+  salvarPerfil({ meta_diaria: n });
 }
 
 /* Quanto do dia já foi cumprido, com a quebra por disciplina que alimenta
@@ -1836,7 +1865,8 @@ function resetarDados() {
        acabou de mandar apagar. A cópia local vai junto, pelo mesmo
        motivo: uma leitura que falhasse em seguida restauraria da cópia
        o histórico recém-apagado. */
-    gravarFila(lerFila().filter(i => i.userId !== CURRENT_USER.id));
+    gravarFila(lerFila().filter(i =>
+      i.userId !== CURRENT_USER.id || i.tipo === "perfil"));
     salvarCacheNuvem(CURRENT_USER.id);
     notificarStatusFila();
     Promise.all([

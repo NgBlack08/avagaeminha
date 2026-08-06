@@ -282,3 +282,83 @@ test("itens malformados na fila são ignorados", () => {
   app.logar("u1");
   assert.deepEqual(app.json("lerFila()"), [], "todo item sem id/tipo/payload é descartado");
 });
+
+/* ---------------- configuração do perfil ----------------
+   Estas escritas eram dispare-e-esqueça: o aluno ajustava a meta, via o
+   número mudar na tela, e ao recarregar encontrava o valor antigo de
+   volta. Passaram para a mesma fila das respostas. */
+
+test("mudança de configuração é enfileirada, não disparada às cegas", async () => {
+  const { app } = appLogado({ online: false });
+  app.chamar("definirMetaDiaria", 40);
+  await app.timers.rodar();
+
+  const item = fila(app).find(i => i.tipo === "perfil");
+  assert.ok(item, "configuração precisa sobreviver à falta de rede");
+  assert.equal(item.payload.campos.meta_diaria, 40);
+  assert.equal(app.supa.chamadas.length, 0);
+});
+
+test("configurações pendentes colapsam mesclando, sem perder campo", async () => {
+  const { app } = appLogado({ online: false });
+  app.chamar("definirMetaDiaria", 40);
+  app.chamar("definirDataProva", "2026-12-06");
+  app.chamar("definirMetaTaxa", 0.9);
+  await app.timers.rodar();
+
+  const perfis = fila(app).filter(i => i.tipo === "perfil");
+  assert.equal(perfis.length, 1, "só o estado final importa");
+  /* Substituir em vez de mesclar perderia os dois primeiros campos. */
+  assert.equal(perfis[0].payload.campos.meta_diaria, 40);
+  assert.equal(perfis[0].payload.campos.data_prova, "2026-12-06");
+  assert.equal(perfis[0].payload.campos.meta_taxa, 0.9);
+});
+
+test("quando a rede volta, a configuração sobe como update do perfil", async () => {
+  const { app } = appLogado({ online: false });
+  app.chamar("definirMetaDiaria", 40);
+  await app.timers.rodar();
+
+  app.rodar(`navigator.onLine = true;`);
+  await app.chamar("flushFila");
+
+  assert.equal(pendentes(app), 0);
+  assert.equal(app.supa.escritas("profiles")[0].op, "update");
+});
+
+test("configuração pendente reaparece após recarga offline", async () => {
+  const { app } = appLogado({ online: false });
+  app.chamar("definirMetaDiaria", 40);
+  await app.timers.rodar();
+
+  /* Simula o que carregarEstadoNuvem faz: sobrescreve com o servidor,
+     que ainda não recebeu a alteração. */
+  app.rodar(`APP_STATE.config.metaDiaria = null;`);
+  app.chamar("reaplicarPendentes", "u1");
+
+  assert.equal(app.get("APP_STATE.config.metaDiaria"), 40);
+});
+
+test("zerar o progresso não descarta configuração pendente", async () => {
+  const { app } = appLogado({ online: false });
+  app.chamar("definirMetaDiaria", 40);
+  const q = app.json("QUESTOES[0]");
+  app.chamar("registrarResposta", q.id, q.gabarito, 4000, 2);
+  await app.timers.rodar();
+
+  app.chamar("resetarDados");
+
+  /* Apagar o progresso é uma coisa; a preferência do aluno é outra. */
+  assert.ok(fila(app).some(i => i.tipo === "perfil"), "configuração preservada");
+  assert.ok(!fila(app).some(i => i.tipo === "resposta"), "progresso descartado");
+});
+
+test("configuração não conta como resposta no aviso ao aluno", async () => {
+  const { app } = appLogado({ online: false });
+  app.chamar("definirMetaDiaria", 40);
+  await app.timers.rodar();
+
+  const st = app.json("statusFila()");
+  assert.equal(st.pendentes, 1);
+  assert.equal(st.respostas, 0, "'1 resposta guardada' seria mentira");
+});
