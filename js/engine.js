@@ -111,7 +111,18 @@ function loadLocalState() {
     config: { ...padrao.config, ...(ehObjeto(salvo.config) ? salvo.config : {}) },
   };
 }
-function saveLocalState() { localStorage.setItem(STORAGE_KEY, JSON.stringify(APP_STATE)); }
+/* Sem try/catch, um QuotaExceededError (storage cheio, modo privado do
+   Safari, extensão que bloqueia storage) estourava para quem chamou e
+   abortava o fluxo no meio — inclusive dentro de registrarResposta(). */
+function saveLocalState() {
+  try {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(APP_STATE));
+    return true;
+  } catch (e) {
+    console.error("Não foi possível gravar o estado local:", e);
+    return false;
+  }
+}
 const APP_STATE = loadLocalState();
 
 /* Salva a config (tema/foco) no destino certo conforme o modo atual. */
@@ -128,10 +139,255 @@ function saveState() {
   }
 }
 
+/* ================================================================
+   FILA DE ESCRITA RESILIENTE
+
+   Antes, gravar uma resposta na nuvem era dispare-e-esqueça: o insert
+   saía, e se falhasse o único vestígio era um console.error. Como em
+   modo "cloud" nada era gravado localmente, a resposta existia apenas
+   na memória — no F5 seguinte carregarEstadoNuvem() sobrescrevia o
+   APP_STATE com o que estava no servidor e a questão voltava a constar
+   como não respondida. Uma sessão inteira estudada no 4G do ônibus
+   sumia sem nenhum aviso.
+
+   Agora toda escrita de progresso é primeiro enfileirada no
+   localStorage (síncrono, sobrevive a crash e a fechar a aba) e só
+   depois enviada. O item sai da fila quando o servidor confirma; se
+   não confirmar, fica e é retentado com espera crescente.
+
+   Idempotência: cada item carrega um `client_id` que vai junto no
+   upsert (índice único (user_id, client_id), migração
+   client_id_idempotencia_fila_escrita). Sem isso, um insert que
+   commitou mas cuja resposta se perdeu na rede viraria uma resposta
+   duplicada no retry, inflando as estatísticas. `srs` dispensa
+   client_id porque já é upsert por (user_id, qid).
+
+   O `created_at` vai explícito, com o horário em que o aluno de fato
+   respondeu — e não com o now() do momento do envio. Sem isso, uma
+   fila drenada horas depois jogaria as respostas no dia errado e
+   quebraria a meta do dia e a sequência de estudo.
+   ================================================================ */
+const FILA_KEY = STORAGE_KEY + ":fila";
+const FILA_MAX = 2000;
+const FILA_MAX_TENTATIVAS = 12;
+const FILA_BACKOFF_MS = [5e3, 10e3, 20e3, 40e3, 80e3, 160e3, 300e3];
+/* Erros de forma do dado: retentar nunca vai resolver, e manter o item
+   na fila só trava tudo que está atrás dele. 23505 aparece por
+   segurança — com ignoreDuplicates ele já não deveria surgir. */
+const FILA_ERROS_PERMANENTES = new Set(["23505", "23503", "23502", "22P02", "22007"]);
+
+let filaTimer = null;
+let filaEmVoo = false;
+let filaFalhasSeguidas = 0;
+
+function novoId() {
+  if (globalThis.crypto?.randomUUID) return crypto.randomUUID();
+  return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, c => {
+    const r = Math.random() * 16 | 0;
+    return (c === "x" ? r : (r & 0x3 | 0x8)).toString(16);
+  });
+}
+
+function lerFila() {
+  try {
+    const raw = localStorage.getItem(FILA_KEY);
+    const fila = raw ? JSON.parse(raw) : [];
+    return Array.isArray(fila) ? fila.filter(i => i && i.id && i.tipo && i.payload) : [];
+  } catch (e) {
+    return [];
+  }
+}
+
+function gravarFila(fila) {
+  try {
+    localStorage.setItem(FILA_KEY, JSON.stringify(fila));
+    return true;
+  } catch (e) {
+    console.error("Não foi possível gravar a fila de envio:", e);
+    return false;
+  }
+}
+
+function filaPendentes(userId) {
+  return lerFila().filter(i => i.userId === userId);
+}
+
+/* Enfileira e tenta enviar já. Escritas de SRS do mesmo item são
+   colapsadas: só o último nível/vencimento importa, e sem isso uma
+   sessão longa offline encheria a fila de estados intermediários que
+   o servidor sobrescreveria em seguida. */
+function enfileirar(tipo, payload) {
+  if (!CURRENT_USER) return;
+  const fila = lerFila();
+  if (tipo === "srs") {
+    const i = fila.findIndex(x => x.tipo === "srs" && x.userId === CURRENT_USER.id && x.payload.qid === payload.qid);
+    if (i >= 0) {
+      fila[i].payload = payload;
+      fila[i].tentativas = 0;
+      gravarFila(fila);
+      agendarFlush(0);
+      return;
+    }
+  }
+  if (fila.length >= FILA_MAX) {
+    console.error("Fila de envio cheia; descartando o item mais antigo.");
+    fila.shift();
+  }
+  fila.push({ id: novoId(), tipo, userId: CURRENT_USER.id, payload, tentativas: 0 });
+  gravarFila(fila);
+  notificarStatusFila();
+  agendarFlush(0);
+}
+
+function removerDaFila(id) {
+  gravarFila(lerFila().filter(i => i.id !== id));
+}
+
+function atualizarNaFila(item) {
+  const fila = lerFila();
+  const i = fila.findIndex(x => x.id === item.id);
+  if (i >= 0) { fila[i] = item; gravarFila(fila); }
+}
+
+/* "ok" saiu | "descartar" nunca vai passar | "falhou" tentar de novo */
+async function enviarItemDaFila(item) {
+  const p = item.payload;
+  let resultado;
+  try {
+    if (item.tipo === "resposta") {
+      resultado = await supa.from("respostas")
+        .upsert({ ...p, client_id: item.id }, { onConflict: "user_id,client_id", ignoreDuplicates: true });
+    } else if (item.tipo === "sessao") {
+      resultado = await supa.from("sessoes")
+        .upsert({ ...p, client_id: item.id }, { onConflict: "user_id,client_id", ignoreDuplicates: true });
+    } else if (item.tipo === "srs") {
+      resultado = await supa.from("srs").upsert(p, { onConflict: "user_id,qid" });
+    } else {
+      return "descartar";
+    }
+  } catch (e) {
+    return "falhou"; /* rede caiu no meio da requisição */
+  }
+  const erro = resultado?.error;
+  if (!erro) return "ok";
+  if (FILA_ERROS_PERMANENTES.has(erro.code)) {
+    console.error("Escrita irrecuperável descartada:", item.tipo, erro);
+    return "descartar";
+  }
+  return "falhou";
+}
+
+/* Drena a fila em ordem. Para na primeira falha de rede: se uma
+   requisição não passou, as seguintes provavelmente também não
+   passariam, e insistir só gastaria bateria. Preservar a ordem
+   também evita gravar o SRS de uma resposta que ainda não subiu. */
+async function flushFila() {
+  if (filaEmVoo || MODO !== "cloud" || !CURRENT_USER) return;
+  if (navigator.onLine === false) { notificarStatusFila(); return; }
+
+  const meus = filaPendentes(CURRENT_USER.id);
+  if (!meus.length) { filaFalhasSeguidas = 0; notificarStatusFila(); return; }
+
+  filaEmVoo = true;
+  let travou = false;
+  try {
+    for (const item of meus) {
+      const r = await enviarItemDaFila(item);
+      if (r === "ok" || r === "descartar") {
+        removerDaFila(item.id);
+        continue;
+      }
+      item.tentativas = (item.tentativas || 0) + 1;
+      if (item.tentativas >= FILA_MAX_TENTATIVAS) {
+        console.error("Item excedeu o limite de tentativas e foi descartado:", item.tipo, item.payload);
+        removerDaFila(item.id);
+        continue;
+      }
+      atualizarNaFila(item);
+      travou = true;
+      break;
+    }
+  } finally {
+    filaEmVoo = false;
+  }
+
+  if (travou) { filaFalhasSeguidas++; agendarFlush(); }
+  else { filaFalhasSeguidas = 0; }
+  notificarStatusFila();
+}
+
+function agendarFlush(ms) {
+  clearTimeout(filaTimer);
+  const espera = ms != null
+    ? ms
+    : FILA_BACKOFF_MS[Math.min(filaFalhasSeguidas, FILA_BACKOFF_MS.length - 1)];
+  filaTimer = setTimeout(flushFila, espera);
+}
+
+function pararFila() {
+  clearTimeout(filaTimer);
+  filaTimer = null;
+  filaFalhasSeguidas = 0;
+}
+
+/* `pendentes` conta tudo (controla o flush); `respostas` conta só o que
+   o aluno reconhece como trabalho dele — mostrar o registro de SRS no
+   aviso faria "1 questão respondida" aparecer como "2 respostas". */
+function statusFila() {
+  const itens = CURRENT_USER ? filaPendentes(CURRENT_USER.id) : [];
+  return {
+    pendentes: itens.length,
+    respostas: itens.filter(i => i.tipo === "resposta").length,
+    online: navigator.onLine !== false,
+  };
+}
+
+/* Evento de DOM em vez de callback direto para o engine não precisar
+   conhecer a camada de UI (js/app.js escuta e desenha o aviso). */
+function notificarStatusFila() {
+  try {
+    window.dispatchEvent(new CustomEvent("questlab:fila", { detail: statusFila() }));
+  } catch (e) { /* ambiente sem window (testes em Node) */ }
+}
+
+/* Reaplica sobre o APP_STATE recém-carregado o que ainda não subiu,
+   para que recarregar a página offline não faça as respostas do dia
+   desaparecerem da tela. A deduplicação por timestamp cobre o caso de
+   um item ter subido mas ainda constar na fila. */
+function reaplicarPendentes(userId) {
+  for (const item of filaPendentes(userId)) {
+    const p = item.payload;
+    if (item.tipo === "resposta") {
+      const quando = new Date(p.created_at).getTime();
+      if (!APP_STATE.respostas[p.qid]) APP_STATE.respostas[p.qid] = [];
+      if (APP_STATE.respostas[p.qid].some(r => r.data === quando)) continue;
+      APP_STATE.respostas[p.qid].push({
+        qid: p.qid, resposta: p.resposta, correta: p.correta, branco: p.branco,
+        tempoMs: p.tempo_ms, confianca: p.confianca, data: quando,
+      });
+    } else if (item.tipo === "srs") {
+      APP_STATE.srs[p.qid] = { nivel: p.nivel, proxima: new Date(p.proxima).getTime() };
+    } else if (item.tipo === "sessao") {
+      const quando = new Date(p.created_at).getTime();
+      if (APP_STATE.sessoes.some(s => s.data === quando)) continue;
+      APP_STATE.sessoes.push({
+        data: quando, n: p.n, acertos: p.acertos, erros: p.erros,
+        brancos: p.brancos, liquida: p.liquida, tempoTotal: p.tempo_total,
+      });
+    }
+  }
+  APP_STATE.sessoes.sort((a, b) => a.data - b.data);
+}
+
 /* Busca todo o estado do usuário logado no Supabase e popula o APP_STATE. */
 async function carregarEstadoNuvem(user) {
   CURRENT_USER = user;
   MODO = "cloud";
+  /* Drena antes de ler: o que ficou da sessão anterior precisa estar no
+     servidor para vir de volta na consulta abaixo. Se ainda não der
+     (segue offline), reaplicarPendentes() ao final garante que nada
+     suma da tela. */
+  await flushFila();
   const [{ data: perfil }, { data: respostasRows }, { data: srsRows }, { data: sessoesRows }, { data: assinaturaAtiva }, { data: feedbackRows }] = await Promise.all([
     supa.from("profiles").select("*").eq("id", user.id).single(),
     supa.from("respostas").select("*").eq("user_id", user.id).order("created_at", { ascending: true }),
@@ -169,6 +425,8 @@ async function carregarEstadoNuvem(user) {
     metaDiaria: perfil?.meta_diaria ?? null,
     dataProva: perfil?.data_prova || null,
   };
+  reaplicarPendentes(user.id);
+  notificarStatusFila();
 }
 
 /* Define a meta de taxa de acerto do Radar de Aprovação (0.10–1.00) e
@@ -263,6 +521,10 @@ function marcarVisitaOnboarding(chave) {
 
 /* Volta o app para modo local (após logout), recarregando o localStorage. */
 function voltarModoLocal() {
+  /* A fila em si NÃO é apagada: se algo ficou para trás, sobe no
+     próximo login do mesmo usuário (os itens são carimbados com o
+     userId e só são enviados para o dono). */
+  pararFila();
   MODO = "offline";
   CURRENT_USER = null;
   const local = loadLocalState();
@@ -288,16 +550,19 @@ function registrarResposta(qid, resposta, tempoMs, confianca) {
 }
 
 function persistirRespostaNuvem(registro) {
-  supa.from("respostas").insert({
+  enfileirar("resposta", {
     user_id: CURRENT_USER.id, qid: registro.qid, resposta: registro.resposta,
-    correta: registro.correta, branco: registro.branco, tempo_ms: registro.tempoMs, confianca: registro.confianca,
-  }).then(({ error }) => { if (error) console.error("Erro ao salvar resposta:", error); });
+    correta: registro.correta, branco: registro.branco, tempo_ms: registro.tempoMs,
+    confianca: registro.confianca,
+    /* horário real da resposta, não o do envio — ver comentário da fila */
+    created_at: new Date(registro.data).toISOString(),
+  });
   const s = APP_STATE.srs[registro.qid];
   if (s) {
-    supa.from("srs").upsert({
+    enfileirar("srs", {
       user_id: CURRENT_USER.id, qid: registro.qid, nivel: s.nivel,
       proxima: new Date(s.proxima).toISOString(), updated_at: new Date().toISOString(),
-    }).then(({ error }) => { if (error) console.error("Erro ao salvar SRS:", error); });
+    });
   }
 }
 
@@ -305,10 +570,11 @@ function persistirRespostaNuvem(registro) {
 function registrarSessao(sessao) {
   APP_STATE.sessoes.push(sessao);
   if (MODO === "cloud" && CURRENT_USER) {
-    supa.from("sessoes").insert({
+    enfileirar("sessao", {
       user_id: CURRENT_USER.id, n: sessao.n, acertos: sessao.acertos, erros: sessao.erros,
       brancos: sessao.brancos, liquida: sessao.liquida, tempo_total: sessao.tempoTotal,
-    }).then(({ error }) => { if (error) console.error("Erro ao salvar sessão:", error); });
+      created_at: new Date(sessao.data || Date.now()).toISOString(),
+    });
   } else {
     saveLocalState();
   }
@@ -1327,6 +1593,11 @@ function listaAssuntos(disciplina, { todoOBanco } = {}) {
 function resetarDados() {
   APP_STATE.respostas = {}; APP_STATE.srs = {}; APP_STATE.sessoes = [];
   if (MODO === "cloud" && CURRENT_USER) {
+    /* Descarta o que ainda não subiu: sem isso, a fila drenaria depois
+       do DELETE e ressuscitaria justamente o progresso que o usuário
+       acabou de mandar apagar. */
+    gravarFila(lerFila().filter(i => i.userId !== CURRENT_USER.id));
+    notificarStatusFila();
     Promise.all([
       supa.from("respostas").delete().eq("user_id", CURRENT_USER.id),
       supa.from("srs").delete().eq("user_id", CURRENT_USER.id),

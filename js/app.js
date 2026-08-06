@@ -32,6 +32,110 @@ document.addEventListener("DOMContentLoaded", () => {
   bootstrapAuth();
 });
 
+/* ================================================================
+   STATUS DE REDE E SINCRONIZAÇÃO
+
+   O app salvava em silêncio: sem conexão ele continuava respondendo
+   normalmente, sem nada indicando que as respostas não estavam indo
+   para o servidor. Agora a fila de escrita (js/engine.js) avisa por
+   evento sempre que muda, e este aviso traduz isso para o aluno —
+   "está guardado, vai subir depois" em vez de descoberta tardia.
+   ================================================================ */
+let netEsconderTimer = null;
+let netTinhaPendencia = false;
+
+function barraStatusRede() {
+  let el = document.getElementById("net-status");
+  if (!el) {
+    el = document.createElement("div");
+    el.id = "net-status";
+    el.className = "net-status";
+    el.setAttribute("role", "status");
+    el.setAttribute("aria-live", "polite");
+    document.body.appendChild(el);
+  }
+  return el;
+}
+
+function atualizarStatusRede() {
+  const el = barraStatusRede();
+  clearTimeout(netEsconderTimer);
+  if (MODO !== "cloud") { el.className = "net-status"; return; }
+
+  const { pendentes, respostas, online } = statusFila();
+  const plural = respostas === 1 ? "resposta" : "respostas";
+  if (!online) {
+    el.textContent = respostas > 0
+      ? `Sem conexão · ${respostas} ${plural} guardada${respostas === 1 ? "" : "s"} para enviar depois`
+      : "Sem conexão · seu progresso continua sendo salvo";
+    el.className = "net-status visivel off";
+    netTinhaPendencia = netTinhaPendencia || pendentes > 0;
+  } else if (pendentes > 0) {
+    el.textContent = respostas > 0 ? `Enviando ${respostas} ${plural}…` : "Sincronizando…";
+    el.className = "net-status visivel sync";
+    netTinhaPendencia = true;
+  } else if (netTinhaPendencia) {
+    el.textContent = "Tudo sincronizado";
+    el.className = "net-status visivel ok";
+    netTinhaPendencia = false;
+    netEsconderTimer = setTimeout(() => { el.className = "net-status"; }, 2600);
+  } else {
+    el.className = "net-status";
+  }
+}
+
+window.addEventListener("questlab:fila", atualizarStatusRede);
+window.addEventListener("offline", atualizarStatusRede);
+window.addEventListener("online", () => { atualizarStatusRede(); flushFila(); });
+/* Voltar para a aba é o momento mais provável de a conexão ter
+   voltado sem que o evento "online" tenha disparado (suspensão do
+   aparelho, troca de rede). */
+document.addEventListener("visibilitychange", () => { if (!document.hidden) flushFila(); });
+
+/* ================================================================
+   REDE DE SEGURANÇA PARA EXCEÇÕES NÃO TRATADAS
+
+   Uma exceção em qualquer função de render deixava a tela em branco,
+   sem explicação e sem caminho de volta — e, como nada era reportado,
+   o defeito só aparecia se o próprio usuário avisasse.
+   ================================================================ */
+let erroGlobalUltimo = "";
+
+function mostrarErroInesperado(origem, detalhe) {
+  const assinatura = origem + ":" + String(detalhe || "");
+  if (assinatura === erroGlobalUltimo) return; /* não repete o mesmo erro em loop */
+  erroGlobalUltimo = assinatura;
+  console.error("[QuestLab]", origem, detalhe);
+
+  let el = document.getElementById("erro-global");
+  if (!el) {
+    el = document.createElement("div");
+    el.id = "erro-global";
+    el.className = "erro-global";
+    el.setAttribute("role", "alert");
+    document.body.appendChild(el);
+  }
+  const telaVazia = !MAIN() || MAIN().children.length === 0;
+  el.innerHTML = `
+    <strong>Algo deu errado nesta tela.</strong>
+    <span>Suas respostas estão salvas${telaVazia ? " — recarregue para continuar" : ""}.</span>
+    <div class="erro-global-acoes">
+      <button class="btn small" onclick="location.reload()">Recarregar</button>
+      <button class="btn ghost small" onclick="this.closest('.erro-global').remove()">Fechar</button>
+    </div>`;
+}
+
+window.addEventListener("error", (e) => {
+  /* Falha de carregamento de recurso (script/imagem) borbulha aqui com
+     target != window; quem trata isso é quem pediu o recurso — ver o
+     onerror de carregarDetalhes() em js/engine.js. */
+  if (e.target && e.target !== window) return;
+  mostrarErroInesperado("erro", e.message || e.error);
+});
+window.addEventListener("unhandledrejection", (e) => {
+  mostrarErroInesperado("promessa", e.reason?.message || e.reason);
+});
+
 /* Botão voltar/avançar do navegador: retorna para a view anterior DENTRO
    do app, em vez de sair do site (só passa a existir histórico depois
    que o app é inicializado — historyInitialized). */
@@ -62,6 +166,7 @@ function iniciarApp({ novoAcesso = false } = {}) {
   document.documentElement.dataset.theme = APP_STATE.config.tema || "dark";
   renderSidebar();
   iniciarMonitorInatividade();
+  atualizarStatusRede(); /* pode haver fila herdada de uma sessão offline anterior */
   const mpStatus = checkMpRedirectStatus();
   const hashView = (location.hash || "").replace(/^#/, "");
   const viewsValidas = VIEWS.map(v => v.id).concat(["admin"]);

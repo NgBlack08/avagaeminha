@@ -1198,3 +1198,39 @@ mark.trecho-estrategia {
    estourar a largura da tabela. */
 .envio-convite { display: flex; gap: 5px; flex-wrap: wrap; }
 .envio-convite .btn { padding: 5px 9px; font-size: 11.5px; white-space: nowrap; }
+
+/* Aviso de rede/sincronização: o app grava offline sem alarde, então
+   precisa dizer isso — em pílula discreta no rodapé, que não disputa
+   espaço com a questão nem exige interação para sumir. */
+.net-status {
+  position: fixed; left: 50%; bottom: 16px; transform: translate(-50%, 14px);
+  z-index: 60; max-width: min(92vw, 460px);
+  padding: 9px 15px; border-radius: var(--r-full);
+  font-size: 13px; font-weight: 600; line-height: 1.35; text-align: center;
+  border: 1px solid var(--border); background: var(--surface2); color: var(--text);
+  box-shadow: var(--shadow);
+  opacity: 0; visibility: hidden; pointer-events: none;
+  transition: opacity var(--t-med), transform var(--t-med), visibility var(--t-med);
+}
+.net-status.visivel { opacity: 1; visibility: visible; transform: translate(-50%, 0); }
+.net-status.off  { border-color: var(--warn); color: var(--warn); background: color-mix(in srgb, var(--warn) 12%, var(--surface2)); }
+.net-status.sync { border-color: var(--accent); color: var(--accent-2); background: color-mix(in srgb, var(--accent) 12%, var(--surface2)); }
+.net-status.ok   { border-color: var(--ok); color: var(--ok); background: color-mix(in srgb, var(--ok) 12%, var(--surface2)); }
+
+/* Rede de segurança para exceção não tratada: sem isto a tela ficava
+   branca, sem explicação e sem caminho de volta. */
+.erro-global {
+  position: fixed; left: 50%; top: 16px; transform: translateX(-50%);
+  z-index: 70; width: min(92vw, 440px);
+  padding: 14px 16px; border-radius: var(--r-md);
+  background: var(--surface); color: var(--text);
+  border: 1px solid var(--bad); border-left: 4px solid var(--bad);
+  box-shadow: var(--shadow-lg); font-size: 13.5px; line-height: 1.5;
+}
+.erro-global strong { display: block; margin-bottom: 3px; }
+.erro-global span { color: var(--muted); }
+.erro-global-acoes { display: flex; gap: 8px; margin-top: 11px; }
+
+@media (max-width: 640px) {
+  .net-status { bottom: 12px; font-size: 12.5px; padding: 8px 13px; }
+}

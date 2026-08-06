@@ -14,7 +14,7 @@
     // Garante que a aplicação sempre inicie na versão mais recente:
     // consulta version.json sem cache e força reload se a página
     // carregada (possivelmente em cache do navegador/CDN) estiver desatualizada.
-    var APP_VERSION = "7.101";
+    var APP_VERSION = "7.103";
     if (sessionStorage.getItem("_appVersionRefreshed") === APP_VERSION) return;
     fetch("version.json?_=" + Date.now(), { cache: "no-store" })
       .then(function (r) { return r.ok ? r.json() : null; })
@@ -32,7 +32,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css?v=994400da">
+  <link rel="stylesheet" href="css/styles.css?v=347d56d1">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%234f8cff'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='white' font-family='Arial' font-weight='bold'>QL</text></svg>">
   <link rel="manifest" href="manifest.json?v=6fc4fddd">
   <link rel="apple-touch-icon" href="icons/icon-180.png?v=95010e6a">
@@ -65,10 +65,10 @@
   <script src="js/gerado/dados-base.js?v=e8749c74"></script>
   <script src="js/plano-gratis.js?v=7d0ce746"></script>
   <script src="js/supabase-client.js?v=cd5cf8e4"></script>
-  <script src="js/engine.js?v=54b56efd"></script>
+  <script src="js/engine.js?v=dd791d45"></script>
   <script src="js/auth.js?v=5a27e4ff"></script>
   <script src="js/charts.js?v=88cda6b4"></script>
-  <script src="js/app.js?v=a85e5731"></script>
+  <script src="js/app.js?v=847ea9bd"></script>
   <script src="js/desafios.js?v=769bb2c4"></script>
   <script src="js/admin.js?v=57feabae"></script>
   <script>
