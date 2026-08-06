@@ -50,13 +50,28 @@ function criarLocalStorage(inicial = {}) {
 
 /* Relógio controlado pelo teste. `rodar()` dispara uma rodada dos timers
    pendentes; timers agendados por essa rodada ficam para a próxima, o que
-   evita laço infinito quando o retry se reagenda sozinho. */
-function criarTimers() {
+   evita laço infinito quando o retry se reagenda sozinho.
+
+   `automatico: true` troca isso por timers reais com espera zero. É o que
+   serve a código que ESPERA por um setTimeout dentro de um await — a
+   carga do estado espera entre as tentativas, e com relógio manual esse
+   await nunca resolveria e o teste travaria. Quem precisa inspecionar o
+   agendamento (a fila e seu backoff) continua no modo manual. */
+function criarTimers({ automatico = false } = {}) {
   let seq = 1;
   const pendentes = new Map();
+  const real = setTimeout;
   return {
-    setTimeout(fn, ms) { const id = seq++; pendentes.set(id, { fn, ms }); return id; },
-    clearTimeout(id) { pendentes.delete(id); },
+    setTimeout(fn, ms) {
+      if (automatico) return real(fn, 0);
+      const id = seq++;
+      pendentes.set(id, { fn, ms });
+      return id;
+    },
+    clearTimeout(id) {
+      if (automatico) return clearTimeout(id);
+      pendentes.delete(id);
+    },
     get quantidade() { return pendentes.size; },
     esperas() { return [...pendentes.values()].map(t => t.ms); },
     async rodar() {
@@ -73,14 +88,44 @@ function criarSupaFake() {
   const chamadas = [];
   const controle = { modo: "ok", erro: null };
 
+  /* Leitura: `linhas` define o que cada tabela devolve, e `falhar` quais
+     delas erram. Existe separado da escrita porque a carga do estado
+     precisa poder falhar TABELA A TABELA — é justamente a falha parcial
+     (perfil erra, resto vem) que rebaixava um assinante em silêncio. */
+  const leitura = {
+    linhas: { profiles: null, respostas: [], srs: [], sessoes: [], assinaturas: null, feedback_questao: [] },
+    falhar: new Set(),
+    erro: { message: "Failed to fetch", code: "" },
+  };
+
   async function resultado() {
     if (controle.modo === "rede") throw new TypeError("Failed to fetch");
     if (controle.modo === "erro") return { error: controle.erro, data: null };
     return { error: null, data: null };
   }
 
+  /* Encadeamento preguiçoso: select().eq().order().maybeSingle() e
+     qualquer prefixo disso resolvem para o mesmo resultado, porque o
+     objeto é thenable. Evita reimplementar o construtor de query. */
+  function consulta(nome) {
+    const resolver = () => (
+      leitura.falhar.has(nome)
+        ? { data: null, error: leitura.erro }
+        : { data: leitura.linhas[nome] ?? null, error: null }
+    );
+    const encadeavel = {
+      eq: () => encadeavel,
+      order: () => encadeavel,
+      maybeSingle: async () => resolver(),
+      single: async () => resolver(),
+      then: (aceita, rejeita) => Promise.resolve(resolver()).then(aceita, rejeita),
+    };
+    return encadeavel;
+  }
+
   function tabela(nome) {
     return {
+      select: () => { chamadas.push({ tabela: nome, op: "select" }); return consulta(nome); },
       upsert: async (linha, opts) => { chamadas.push({ tabela: nome, op: "upsert", linha, opts }); return resultado(); },
       insert: async (linha) => { chamadas.push({ tabela: nome, op: "insert", linha }); return resultado(); },
       delete: () => ({ eq: async () => { chamadas.push({ tabela: nome, op: "delete" }); return resultado(); } }),
@@ -92,6 +137,7 @@ function criarSupaFake() {
     cliente: { from: tabela, rpc: async () => ({ error: null, data: null }) },
     chamadas,
     controle,
+    leitura,
     escritas(tabelaNome) { return chamadas.filter(c => c.tabela === tabelaNome); },
     limpar() { chamadas.length = 0; },
   };
@@ -102,9 +148,9 @@ function criarSupaFake() {
  *   online   — valor de navigator.onLine
  *   storage  — conteúdo inicial do localStorage (para simular estado salvo)
  */
-function criarApp({ online = true, storage = {} } = {}) {
+function criarApp({ online = true, storage = {}, relogioAutomatico = false } = {}) {
   const localStorage = criarLocalStorage(storage);
-  const timers = criarTimers();
+  const timers = criarTimers({ automatico: relogioAutomatico });
   const supa = criarSupaFake();
   const eventos = [];
 

@@ -379,17 +379,88 @@ function reaplicarPendentes(userId) {
   APP_STATE.sessoes.sort((a, b) => a.data - b.data);
 }
 
-/* Busca todo o estado do usuário logado no Supabase e popula o APP_STATE. */
-async function carregarEstadoNuvem(user) {
-  CURRENT_USER = user;
-  MODO = "cloud";
-  /* Drena antes de ler: o que ficou da sessão anterior precisa estar no
-     servidor para vir de volta na consulta abaixo. Se ainda não der
-     (segue offline), reaplicarPendentes() ao final garante que nada
-     suma da tela. */
-  await flushFila();
-  const [{ data: perfil }, { data: respostasRows }, { data: srsRows }, { data: sessoesRows }, { data: assinaturaAtiva }, { data: feedbackRows }] = await Promise.all([
-    supa.from("profiles").select("*").eq("id", user.id).single(),
+/* ================================================================
+   CARGA DO ESTADO DA NUVEM, COM CÓPIA LOCAL DE SEGURANÇA
+
+   A versão anterior desta função descartava o erro das seis consultas
+   (`const [{ data: perfil }, ...]`): bastava uma falhar para o campo
+   virar o padrão, em silêncio. Duas consequências, as duas observadas
+   em produção:
+
+     - perfil ilegível => plano "gratuito" e isAdmin false. Um assinante
+       pagante era REBAIXADO sem nenhum aviso, até recarregar a página.
+     - respostas ilegíveis => `APP_STATE.respostas = {}`. O dado seguia
+       intacto no servidor, mas o aluno via meses de estudo sumirem da
+       tela.
+
+   Sem rede as seis falham de uma vez, o que anulava na prática a casca
+   offline do service worker: abrir sem conexão mostrava um app zerado.
+
+   A regra agora é uma só: **falha de LEITURA nunca vira dado**. Só o
+   que o servidor de fato respondeu pode rebaixar plano ou esvaziar
+   histórico. Se não deu para ler, mostramos a última cópia boa e
+   avisamos que está desatualizada.
+
+   Por isso `.maybeSingle()` no lugar de `.single()` no perfil: com
+   `single()`, "não existe linha" e "não consegui ler" chegavam os dois
+   como erro, e era impossível distinguir o usuário sem perfil (em que o
+   padrão é a resposta certa) da falha de rede (em que o padrão é uma
+   mentira).
+   ================================================================ */
+const CACHE_NUVEM_KEY = STORAGE_KEY + ":nuvem";
+const CARGA_TENTATIVAS = 3;
+const CARGA_ESPERA_MS = [0, 400, 1200];
+
+/* Marca que o que está na tela é a cópia local, não o servidor. */
+let ESTADO_DESATUALIZADO = null;
+
+function statusSincronizacao() {
+  return { desatualizado: !!ESTADO_DESATUALIZADO, desde: ESTADO_DESATUALIZADO?.desde || null };
+}
+
+function notificarSincronizacao() {
+  try {
+    window.dispatchEvent(new CustomEvent("questlab:estado", { detail: statusSincronizacao() }));
+  } catch (e) { /* ambiente sem window (testes em Node) */ }
+}
+
+/* A cópia é carimbada com o dono: usar cache de outra conta exibiria o
+   progresso de um usuário para outro. */
+function salvarCacheNuvem(userId) {
+  try {
+    localStorage.setItem(CACHE_NUVEM_KEY, JSON.stringify({
+      userId, em: Date.now(),
+      respostas: APP_STATE.respostas, srs: APP_STATE.srs,
+      sessoes: APP_STATE.sessoes, config: APP_STATE.config,
+    }));
+    return true;
+  } catch (e) {
+    console.error("Não foi possível guardar a cópia local do estado:", e);
+    return false;
+  }
+}
+
+function lerCacheNuvem(userId) {
+  try {
+    const c = JSON.parse(localStorage.getItem(CACHE_NUVEM_KEY) || "null");
+    if (!c || typeof c !== "object" || c.userId !== userId) return null;
+    const ehObj = v => v && typeof v === "object" && !Array.isArray(v);
+    if (!ehObj(c.config)) return null;
+    return {
+      em: c.em || null,
+      respostas: ehObj(c.respostas) ? c.respostas : {},
+      srs: ehObj(c.srs) ? c.srs : {},
+      sessoes: Array.isArray(c.sessoes) ? c.sessoes : [],
+      config: c.config,
+    };
+  } catch (e) {
+    return null;
+  }
+}
+
+function consultarNuvem(user) {
+  return Promise.all([
+    supa.from("profiles").select("*").eq("id", user.id).maybeSingle(),
     supa.from("respostas").select("*").eq("user_id", user.id).order("created_at", { ascending: true }),
     supa.from("srs").select("*").eq("user_id", user.id),
     supa.from("sessoes").select("*").eq("user_id", user.id).order("created_at", { ascending: true }),
@@ -399,33 +470,125 @@ async function carregarEstadoNuvem(user) {
        custar mais um tempo de ida e volta no boot. */
     supa.from("feedback_questao").select("questao_id, motivo, comentario").eq("user_id", user.id),
   ]);
-  const respostas = {};
-  for (const r of (respostasRows || [])) {
-    if (!respostas[r.qid]) respostas[r.qid] = [];
-    respostas[r.qid].push({ qid: r.qid, resposta: r.resposta, correta: r.correta, branco: r.branco, tempoMs: r.tempo_ms, confianca: r.confianca, data: new Date(r.created_at).getTime() });
+}
+
+/* Busca todo o estado do usuário logado no Supabase e popula o APP_STATE. */
+async function carregarEstadoNuvem(user) {
+  /* Quem era o dono do que está em memória, ANTES de trocar. Sem isso, o
+     recuo para "o que já estava carregado" exibiria o progresso do
+     usuário anterior para o novo, numa troca de conta com o servidor
+     fora do ar. */
+  const donoAnterior = CURRENT_USER?.id || null;
+  CURRENT_USER = user;
+  MODO = "cloud";
+  /* Drena antes de ler: o que ficou da sessão anterior precisa estar no
+     servidor para vir de volta na consulta abaixo. Se ainda não der
+     (segue offline), reaplicarPendentes() ao final garante que nada
+     suma da tela. */
+  await flushFila();
+
+  /* Repete em caso de falha: o defeito que motivou tudo isto era uma
+     corrida no primeiro carregamento a frio, com a consulta saindo antes
+     de o token estar pronto — some com uma segunda tentativa. Sem rede
+     não há o que repetir, e esperar 1,6 s à toa só atrasaria a tela. */
+  let leitura = null;
+  for (let i = 0; i < CARGA_TENTATIVAS; i++) {
+    if (CARGA_ESPERA_MS[i]) await new Promise(r => setTimeout(r, CARGA_ESPERA_MS[i]));
+    leitura = await consultarNuvem(user).catch(e => {
+      /* Rede caindo no meio pode rejeitar em vez de devolver `error`. */
+      return Array(6).fill({ data: null, error: { message: String(e && e.message || e) } });
+    });
+    if (!leitura.some(r => r && r.error)) break;
+    if (navigator.onLine === false) break;
   }
-  const srs = {};
-  for (const s of (srsRows || [])) srs[s.qid] = { nivel: s.nivel, proxima: new Date(s.proxima).getTime() };
-  const sessoes = (sessoesRows || []).map(s => ({ data: new Date(s.created_at).getTime(), n: s.n, acertos: s.acertos, erros: s.erros, brancos: s.brancos, liquida: s.liquida, tempoTotal: s.tempo_total }));
-  FEEDBACK_ENVIADO.clear();
-  for (const f of (feedbackRows || [])) FEEDBACK_ENVIADO.set(f.questao_id, { motivo: f.motivo, comentario: f.comentario });
-  APP_STATE.respostas = respostas;
-  APP_STATE.srs = srs;
-  APP_STATE.sessoes = sessoes;
-  APP_STATE.config = {
-    tema: perfil?.tema || "dark",
-    concursoFoco: perfil?.concurso_foco || null,
-    cargoFoco: perfil?.cargo_foco || "Escrivão",
-    nickname: perfil?.nickname || null,
-    isAdmin: perfil?.is_admin || false,
-    plano: (perfil?.plano === "completo" || assinaturaAtiva) ? "completo" : "gratuito",
-    assinaturaTipo: assinaturaAtiva?.plano_tipo || null,
-    onboardingVisitas: perfil?.onboarding_visitas || {},
-    metaTaxa: perfil?.meta_taxa ?? 0.75,
-    metaDiaria: perfil?.meta_diaria ?? null,
-    dataProva: perfil?.data_prova || null,
+
+  const [rPerfil, rRespostas, rSrs, rSessoes, rAssinatura, rFeedback] = leitura;
+  const falhou = r => !!(r && r.error);
+  const cache = lerCacheNuvem(user.id);
+
+  /* De onde recuar quando a leitura falha, em ordem de confiança:
+     a cópia local DESTE usuário; senão o que já está em memória, mas só
+     se for dele; senão o padrão. Nunca o dado de outra conta — é a
+     diferença entre "não consegui atualizar" e "mostrei o progresso de
+     outra pessoa". */
+  const memoriaEhDele = donoAnterior === user.id;
+  const padrao = estadoInicial();
+  const recuo = {
+    respostas: cache ? cache.respostas : (memoriaEhDele ? APP_STATE.respostas : padrao.respostas),
+    srs:       cache ? cache.srs       : (memoriaEhDele ? APP_STATE.srs       : padrao.srs),
+    sessoes:   cache ? cache.sessoes   : (memoriaEhDele ? APP_STATE.sessoes   : padrao.sessoes),
+    config:    cache ? cache.config    : (memoriaEhDele ? APP_STATE.config    : padrao.config),
   };
+
+  /* --- histórico: só substitui o que veio de verdade --- */
+  if (falhou(rRespostas)) {
+    APP_STATE.respostas = recuo.respostas;
+  } else {
+    const respostas = {};
+    for (const r of (rRespostas.data || [])) {
+      if (!respostas[r.qid]) respostas[r.qid] = [];
+      respostas[r.qid].push({ qid: r.qid, resposta: r.resposta, correta: r.correta, branco: r.branco, tempoMs: r.tempo_ms, confianca: r.confianca, data: new Date(r.created_at).getTime() });
+    }
+    APP_STATE.respostas = respostas;
+  }
+
+  if (falhou(rSrs)) {
+    APP_STATE.srs = recuo.srs;
+  } else {
+    const srs = {};
+    for (const s of (rSrs.data || [])) srs[s.qid] = { nivel: s.nivel, proxima: new Date(s.proxima).getTime() };
+    APP_STATE.srs = srs;
+  }
+
+  if (falhou(rSessoes)) {
+    APP_STATE.sessoes = recuo.sessoes;
+  } else {
+    APP_STATE.sessoes = (rSessoes.data || []).map(s => ({ data: new Date(s.created_at).getTime(), n: s.n, acertos: s.acertos, erros: s.erros, brancos: s.brancos, liquida: s.liquida, tempoTotal: s.tempo_total }));
+  }
+
+  if (!falhou(rFeedback)) {
+    FEEDBACK_ENVIADO.clear();
+    for (const f of (rFeedback.data || [])) FEEDBACK_ENVIADO.set(f.questao_id, { motivo: f.motivo, comentario: f.comentario });
+  }
+
+  /* --- plano e permissões: o ponto mais sensível ---
+     Só rebaixa quem o SERVIDOR disse que é gratuito. Perfil ilegível cai
+     na cópia local; sem cópia, mantém o que já estava em memória. */
+  if (falhou(rPerfil) || falhou(rAssinatura)) {
+    APP_STATE.config = { ...padrao.config, ...recuo.config };
+  } else {
+    const perfil = rPerfil.data;
+    const assinaturaAtiva = rAssinatura.data;
+    if (!perfil) console.error("Usuário autenticado sem linha em profiles:", user.id);
+    APP_STATE.config = {
+      tema: perfil?.tema || "dark",
+      concursoFoco: perfil?.concurso_foco || null,
+      cargoFoco: perfil?.cargo_foco || "Escrivão",
+      nickname: perfil?.nickname || null,
+      isAdmin: perfil?.is_admin || false,
+      plano: (perfil?.plano === "completo" || assinaturaAtiva) ? "completo" : "gratuito",
+      assinaturaTipo: assinaturaAtiva?.plano_tipo || null,
+      onboardingVisitas: perfil?.onboarding_visitas || {},
+      metaTaxa: perfil?.meta_taxa ?? 0.75,
+      metaDiaria: perfil?.meta_diaria ?? null,
+      dataProva: perfil?.data_prova || null,
+    };
+  }
+
   reaplicarPendentes(user.id);
+
+  const houveFalha = leitura.some(falhou);
+  if (houveFalha) {
+    ESTADO_DESATUALIZADO = { desde: Date.now() };
+    console.error("Estado carregado de forma incompleta:",
+      leitura.filter(falhou).map(r => r.error?.message || r.error?.code));
+  } else {
+    ESTADO_DESATUALIZADO = null;
+    /* Só grava a cópia quando a leitura veio inteira — cache montado a
+       partir de leitura parcial congelaria o buraco. */
+    salvarCacheNuvem(user.id);
+  }
+  notificarSincronizacao();
   notificarStatusFila();
 }
 
@@ -525,6 +688,13 @@ function voltarModoLocal() {
      próximo login do mesmo usuário (os itens são carimbados com o
      userId e só são enviados para o dono). */
   pararFila();
+  /* A cópia local, ao contrário, vai embora. Ela guarda o histórico
+     inteiro, e sair da conta em máquina compartilhada não pode deixar
+     meses de estudo legíveis para o próximo — é a mesma preocupação que
+     motivou o logout por inatividade. Perde-se abrir offline depois de
+     sair, o que é justamente o que "sair" significa. */
+  try { localStorage.removeItem(CACHE_NUVEM_KEY); } catch (e) {}
+  ESTADO_DESATUALIZADO = null;
   MODO = "offline";
   CURRENT_USER = null;
   const local = loadLocalState();
@@ -1595,8 +1765,11 @@ function resetarDados() {
   if (MODO === "cloud" && CURRENT_USER) {
     /* Descarta o que ainda não subiu: sem isso, a fila drenaria depois
        do DELETE e ressuscitaria justamente o progresso que o usuário
-       acabou de mandar apagar. */
+       acabou de mandar apagar. A cópia local vai junto, pelo mesmo
+       motivo: uma leitura que falhasse em seguida restauraria da cópia
+       o histórico recém-apagado. */
     gravarFila(lerFila().filter(i => i.userId !== CURRENT_USER.id));
+    salvarCacheNuvem(CURRENT_USER.id);
     notificarStatusFila();
     Promise.all([
       supa.from("respostas").delete().eq("user_id", CURRENT_USER.id),

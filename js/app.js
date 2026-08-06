@@ -64,6 +64,21 @@ function atualizarStatusRede() {
 
   const { pendentes, respostas, online } = statusFila();
   const plural = respostas === 1 ? "resposta" : "respostas";
+
+  /* Prioridade sobre o estado da fila: se o que está na tela é a cópia
+     local, o aluno precisa saber ANTES de tirar conclusão do que vê —
+     um plano ou um histórico defasado são mais enganosos que um envio
+     pendente. */
+  const { desatualizado } = statusSincronizacao();
+  if (desatualizado) {
+    el.textContent = online
+      ? "Não foi possível atualizar seus dados · mostrando a última versão salva"
+      : "Sem conexão · mostrando a última versão salva";
+    el.className = "net-status visivel off";
+    netTinhaPendencia = netTinhaPendencia || pendentes > 0;
+    return;
+  }
+
   if (!online) {
     el.textContent = respostas > 0
       ? `Sem conexão · ${respostas} ${plural} guardada${respostas === 1 ? "" : "s"} para enviar depois`
@@ -85,6 +100,7 @@ function atualizarStatusRede() {
 }
 
 window.addEventListener("questlab:fila", atualizarStatusRede);
+window.addEventListener("questlab:estado", atualizarStatusRede);
 window.addEventListener("offline", atualizarStatusRede);
 window.addEventListener("online", () => { atualizarStatusRede(); flushFila(); });
 /* Voltar para a aba é o momento mais provável de a conexão ter
