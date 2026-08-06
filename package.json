@@ -1,0 +1,11 @@
+{
+  "name": "questlab",
+  "version": "1.0.0",
+  "private": true,
+  "description": "QuestLab — plataforma de preparação para concursos de carreiras policiais (site estático, sem dependências de runtime).",
+  "scripts": {
+    "test": "node --test scripts/testes/*.test.js",
+    "validar": "node scripts/validar.js",
+    "publicar": "node scripts/versionar.js"
+  }
+}

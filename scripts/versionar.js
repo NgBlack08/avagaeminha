@@ -63,6 +63,36 @@ if (erros.length) {
 console.log(`Banco validado: ${metricas.questoes} questões, nenhum erro` +
   (avisos.length ? `, ${avisos.length} aviso(s) — veja \`node scripts/validar.js\`.` : "."));
 
+/* ---------- testes do motor ---------- */
+/* O validar.js cuida do CONTEÚDO; estes testes cuidam do CÓDIGO que lê
+   esse conteúdo — fila de escrita, carga do estado, SRS, peso do edital.
+   Rodam aqui, e não só sob demanda, porque suíte que depende de alguém
+   lembrar de rodar apodrece: os defeitos que ela cobre (resposta perdida
+   por falha de rede, tela branca por estado corrompido) já passaram por
+   várias revisões manuais sem serem vistos.
+
+   Custa menos de um segundo. `--sem-testes` existe como saída de
+   emergência, não como atalho de rotina. */
+
+if (!args.includes("--sem-testes")) {
+  const { execFileSync } = require("child_process");
+  const dirTestes = path.join(__dirname, "testes");
+  const arquivos = fs.readdirSync(dirTestes)
+    .filter(f => f.endsWith(".test.js"))
+    .map(f => path.join(dirTestes, f));
+
+  try {
+    execFileSync(process.execPath, ["--test", ...arquivos], { cwd: RAIZ, stdio: "pipe" });
+    console.log(`Testes do motor: ${arquivos.length} arquivo(s), todos passaram.`);
+  } catch (e) {
+    const saida = (e.stdout || Buffer.alloc(0)).toString();
+    console.error("\nTestes do motor FALHARAM. Nada foi gerado nem publicado.\n");
+    console.error(saida.split("\n").filter(l => /^(not ok|✖|\s+at |\s+Assertion|\s+actual|\s+expected)/.test(l)).slice(0, 25).join("\n"));
+    console.error("\nRelatório completo: `node --test scripts/testes/*.test.js`");
+    process.exit(1);
+  }
+}
+
 /* ---------- regenerar o banco dividido ---------- */
 /* Roda antes de qualquer hash: dados-base.js é referenciado pelo
    index.html, então precisa estar em sua forma final. Editar um lote e

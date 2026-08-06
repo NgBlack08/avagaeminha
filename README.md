@@ -47,18 +47,21 @@ Depois de alterar qualquer arquivo de `js/`, `css/` ou `icons/`, rode:
 node scripts/versionar.js
 ```
 
-O script faz três coisas, nesta ordem:
+O script faz quatro coisas, nesta ordem:
 
 1. **Valida o banco** (`scripts/validar.js`). Se houver erro, aborta sem gerar
    nem publicar nada — ver *Validação* abaixo.
-2. **Regenera o banco dividido** (`scripts/dividir-dados.js`) — ver
+2. **Roda os testes do motor** (`scripts/testes/`). Se algum falhar, aborta —
+   ver *Testes* abaixo.
+3. **Regenera o banco dividido** (`scripts/dividir-dados.js`) — ver
    *Banco de questões* abaixo.
-3. **Incrementa a versão** (`7.23` → `7.24`) e reescreve o `?v=` de cada asset em
+4. **Incrementa a versão** (`7.23` → `7.24`) e reescreve o `?v=` de cada asset em
    `index.html` e `manifest.json` com o **hash do conteúdo do próprio arquivo**.
    Nunca edite esses `?v=` à mão.
 
 - `node scripts/versionar.js 8.0` — define a versão explicitamente.
 - `node scripts/versionar.js --dry` — mostra o que mudaria, sem gravar.
+- `node scripts/versionar.js --sem-testes` — saída de emergência; não use como rotina.
 
 Por que hash em vez da versão da aplicação: com um `?v=` único para tudo, corrigir
 uma linha do CSS obrigava cada usuário a rebaixar os ~478 KB (gzip) do banco de
@@ -96,6 +99,45 @@ A única restrição de ordem é o `data.js` vir primeiro, porque é ele que dec
 
 O diretório `js/gerado/` **é versionado no git**, porque o GitHub Pages serve
 direto do repositório.
+
+## Testes
+
+```bash
+npm test          # ou: node --test scripts/testes/*.test.js
+```
+
+Sem dependências: usa o runner nativo do Node (`node --test`). Rodam também
+dentro do `versionar.js`, porque suíte que depende de alguém lembrar de rodar
+apodrece.
+
+O app é feito de scripts clássicos que conversam por variáveis globais — sem
+módulos, sem bundler, por escolha. Isso costuma ser tratado como "não
+testável", mas não é: `scripts/testes/harness.js` monta um `global` de mentira
+(localStorage, navigator, timers e cliente Supabase falsos) e avalia os
+arquivos dentro dele, do mesmo jeito que o `fontes.js` já fazia para validar o
+banco. Cada teste recebe um app zerado.
+
+Os relógios são falsos de propósito: teste que depende de espera real é lento e
+intermitente. Quem decide que o tempo passou é o teste, chamando
+`timers.rodar()`.
+
+Cobertura, por ordem de risco:
+
+| Arquivo | O que protege |
+| --- | --- |
+| `fila.test.js` | Fila de escrita: enfileirar offline, idempotência do reenvio, retry com espera crescente, descarte só de erro irrecuperável, isolamento por usuário |
+| `estado.test.js` | Carga do estado local contra storage corrompido, e recuperação parcial |
+| `srs.test.js` | Repetição espaçada: erro não devolve o item na hora, acerto antes do vencimento não promove |
+| `edital.test.js` | Peso proporcional ao edital, escopo da trilha, gate de plano, aritmética do branco |
+
+Não é cobertura por cobertura: cada arquivo existe por causa de um defeito que
+de fato chegou a produção, ou de uma regra cuja quebra seria silenciosa. Os
+testes de peso fixam a **propriedade** (proporcionalidade ao edital), não os
+números mágicos, para não travar recalibração legítima.
+
+**A camada de interface (`js/app.js`) não tem cobertura automatizada** — ela
+manipula DOM direto e exigiria um DOM de mentira que hoje não existe aqui.
+Continua sendo verificada no navegador.
 
 ## Validação do banco
 

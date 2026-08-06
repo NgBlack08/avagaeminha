@@ -21,3 +21,9 @@ desktop.ini
 # Material de estudo baixado (fonte de consulta, nao faz parte do site).
 # O deploy e publico: nada aqui deve ir ao repositorio.
 material/
+
+# Node: o projeto nao tem dependencias de runtime nem de build (os testes
+# usam so o runner nativo `node --test`), mas um `npm install` acidental
+# criaria estes aqui.
+node_modules/
+npm-debug.log*
