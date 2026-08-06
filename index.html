@@ -14,7 +14,7 @@
     // Garante que a aplicação sempre inicie na versão mais recente:
     // consulta version.json sem cache e força reload se a página
     // carregada (possivelmente em cache do navegador/CDN) estiver desatualizada.
-    var APP_VERSION = "7.99";
+    var APP_VERSION = "7.100";
     if (sessionStorage.getItem("_appVersionRefreshed") === APP_VERSION) return;
     fetch("version.json?_=" + Date.now(), { cache: "no-store" })
       .then(function (r) { return r.ok ? r.json() : null; })
@@ -66,9 +66,9 @@
   <script src="js/plano-gratis.js?v=7d0ce746"></script>
   <script src="js/supabase-client.js?v=cd5cf8e4"></script>
   <script src="js/engine.js?v=54b56efd"></script>
-  <script src="js/auth.js?v=05fe5749"></script>
+  <script src="js/auth.js?v=4abed8d5"></script>
   <script src="js/charts.js?v=88cda6b4"></script>
-  <script src="js/app.js?v=5e536c86"></script>
+  <script src="js/app.js?v=e03ac51f"></script>
   <script src="js/desafios.js?v=769bb2c4"></script>
   <script src="js/admin.js?v=57feabae"></script>
   <script>

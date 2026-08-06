@@ -41,20 +41,32 @@ window.addEventListener("popstate", (e) => {
   navigate(view, { fromPopstate: true });
 });
 
-/* Todo acesso inicial ao site (login, cadastro, ou F5 com sessão já ativa)
-   abre no Dashboard — nunca restaura a aba do hash da URL. O estado já
-   chega atualizado porque carregarEstadoNuvem() (js/auth.js) é sempre
-   aguardado ANTES de iniciarApp() em todos os caminhos de entrada.
+/* `novoAcesso` distingue o ACESSO INICIAL ao site (login, cadastro, troca de
+   senha) de um F5 no meio de uma sessão já ativa.
 
-   Única exceção: retorno do checkout do Mercado Pago, que precisa cair em
-   Planos para mostrar a confirmação da assinatura. */
-function iniciarApp() {
+   Acesso inicial sempre abre no Dashboard, já com dados atualizados (o
+   estado chega fresco da nuvem porque carregarEstadoNuvem() é sempre
+   aguardado ANTES de iniciarApp() em todos os caminhos de entrada). Um F5,
+   por outro lado, deve apenas atualizar a página na MESMA vista em que o
+   aluno estava — ele não pode ser jogado de volta ao Dashboard e perder o
+   lugar no meio de uma lista de questões. Como o hash já carrega a view
+   (ver pushState em navigate()), basta ignorá-lo quando o acesso é novo e
+   honrá-lo quando é recarga.
+
+   O retorno do OAuth do Google cai no caminho de recarga, mas chega com
+   tokens no hash em vez de nome de view — então não passa em viewsValidas e
+   vai para o Dashboard sozinho, que é o comportamento desejado. */
+function iniciarApp({ novoAcesso = false } = {}) {
   const root = document.getElementById("approot");
   if (root) root.classList.remove("no-sidebar");
   document.documentElement.dataset.theme = APP_STATE.config.tema || "dark";
   renderSidebar();
   const mpStatus = checkMpRedirectStatus();
-  navigate(mpStatus ? "planos" : "dashboard");
+  const hashView = (location.hash || "").replace(/^#/, "");
+  const viewsValidas = VIEWS.map(v => v.id).concat(["admin"]);
+  const manterAba = !novoAcesso && viewsValidas.includes(hashView);
+  const destino = mpStatus ? "planos" : (manterAba ? hashView : "dashboard");
+  navigate(destino);
   if (mpStatus) tratarRetornoMercadoPago();
 }
 
