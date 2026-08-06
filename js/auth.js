@@ -61,6 +61,7 @@ async function bootstrapAuth() {
      seria perdido — por isso a ordem aqui importa. */
   supa.auth.onAuthStateChange((event) => {
     if (event === "SIGNED_OUT") {
+      pararMonitorInatividade();
       voltarModoLocal();
       renderAuthScreen();
     } else if (event === "PASSWORD_RECOVERY") {
@@ -81,6 +82,48 @@ async function bootstrapAuth() {
 
 async function sair() {
   await supa.auth.signOut();
+}
+
+/* ============ Logout automático por inatividade ============
+   Depois de 30min sem nenhuma interação (mouse, teclado, toque ou scroll),
+   a sessão é encerrada por segurança — importante numa plataforma acessada
+   de dispositivos compartilhados/públicos. Os listeners de atividade são
+   registrados uma única vez (monitorInatividadeAtivo); o que liga e
+   desliga o relógio é iniciarMonitorInatividade()/pararMonitorInatividade(),
+   chamados a cada acesso autenticado (iniciarApp(), js/app.js) e no
+   SIGNED_OUT (bootstrapAuth(), acima). */
+const INATIVIDADE_LIMITE_MS = 30 * 60 * 1000;
+let inatividadeTimer = null;
+let monitorInatividadeAtivo = false;
+
+function iniciarMonitorInatividade() {
+  resetInatividadeTimer();
+  if (monitorInatividadeAtivo) return;
+  monitorInatividadeAtivo = true;
+  ["mousemove", "mousedown", "keydown", "touchstart", "scroll"].forEach(evento =>
+    document.addEventListener(evento, resetInatividadeTimer, { passive: true })
+  );
+}
+
+function pararMonitorInatividade() {
+  clearTimeout(inatividadeTimer);
+  inatividadeTimer = null;
+}
+
+function resetInatividadeTimer() {
+  if (!CURRENT_USER) return;
+  clearTimeout(inatividadeTimer);
+  inatividadeTimer = setTimeout(logoutPorInatividade, INATIVIDADE_LIMITE_MS);
+}
+
+async function logoutPorInatividade() {
+  if (!CURRENT_USER) return;
+  pararMonitorInatividade();
+  await supa.auth.signOut();
+  await mostrarAlerta(
+    "Por segurança, sua sessão foi encerrada após 30 minutos sem atividade. Entre novamente para continuar de onde parou.",
+    "Sessão encerrada por inatividade"
+  );
 }
 
 function renderAuthScreen(erro) {

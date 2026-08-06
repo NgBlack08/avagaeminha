@@ -61,6 +61,7 @@ function iniciarApp({ novoAcesso = false } = {}) {
   if (root) root.classList.remove("no-sidebar");
   document.documentElement.dataset.theme = APP_STATE.config.tema || "dark";
   renderSidebar();
+  iniciarMonitorInatividade();
   const mpStatus = checkMpRedirectStatus();
   const hashView = (location.hash || "").replace(/^#/, "");
   const viewsValidas = VIEWS.map(v => v.id).concat(["admin"]);
