@@ -1315,3 +1315,45 @@ mark.trecho-estrategia {
   color: var(--warn); border: 1px solid var(--warn);
   background: color-mix(in srgb, var(--warn) 12%, var(--surface2));
 }
+
+/* ---------- Modo Prova: estrutura oficial do edital ---------- */
+.pv-modelo { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 6px; }
+.pv-modelo-op {
+  text-align: left; padding: 12px 14px; border-radius: var(--r-md); cursor: pointer;
+  background: var(--surface2); border: 1px solid var(--border); color: var(--text);
+  transition: border-color var(--t-fast), background var(--t-fast);
+}
+.pv-modelo-op:hover { border-color: var(--accent); }
+.pv-modelo-op.ativo { border-color: var(--accent); background: var(--accent-soft); }
+.pv-modelo-op b { display: block; font-size: 14px; margin-bottom: 3px; }
+.pv-modelo-op span { font-size: 12px; color: var(--muted); line-height: 1.45; }
+
+.pv-oficial { display: flex; flex-direction: column; gap: 12px; }
+.pv-resumo { display: flex; gap: 10px; }
+.pv-resumo > div {
+  flex: 1; text-align: center; padding: 10px; border-radius: var(--r-md);
+  background: var(--surface2); border: 1px solid var(--border);
+}
+.pv-resumo b { display: block; font-size: 22px; font-variant-numeric: tabular-nums; }
+.pv-resumo span { font-size: 11.5px; color: var(--muted); text-transform: uppercase; letter-spacing: .04em; }
+
+.pv-bloco-tit { font-size: 13px; font-weight: 700; margin-bottom: 6px; display: flex; justify-content: space-between; gap: 8px; }
+.pv-discs { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 2px; }
+.pv-discs li {
+  display: flex; justify-content: space-between; align-items: baseline; gap: 10px;
+  padding: 6px 10px; border-radius: var(--r-sm); background: var(--surface2); font-size: 13px;
+}
+.pv-discs li.falta { border-left: 3px solid var(--warn); }
+.pv-discs b { font-variant-numeric: tabular-nums; }
+
+/* Separador na paleta: começo de uma disciplina nova. */
+.q-pal.nova-disc { margin-left: 14px; position: relative; }
+.q-pal.nova-disc::before {
+  content: ""; position: absolute; left: -9px; top: 10%; bottom: 10%;
+  width: 2px; background: var(--border); border-radius: 1px;
+}
+
+@media (max-width: 640px) {
+  .pv-modelo { grid-template-columns: 1fr; }
+  .pv-resumo b { font-size: 18px; }
+}

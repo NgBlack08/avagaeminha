@@ -1246,7 +1246,88 @@ function mediana(v) {
   return s.length % 2 ? s[m] : (s[m - 1] + s[m]) / 2;
 }
 
-function analiseRitmo({ reservaDiscursivaMin = 60 } = {}) {
+/* Quanto das 4h30 a discursiva consome. Não dá para saber ao certo — o
+   edital dá o tempo somado —, então a análise de ritmo e o Modo Prova
+   trabalham com a mesma reserva declarada, em vez de cada um inventar a
+   sua. */
+const RESERVA_DISCURSIVA_MIN = 60;
+
+/* ================================================================
+   MONTAGEM DA PROVA OFICIAL
+
+   O Modo Prova sorteava do banco inteiro e fatiava: as disciplinas
+   saíam embaralhadas entre si, e a quantidade de cada uma era o que o
+   acaso desse. Treinava a responder questões, não a fazer AQUELA prova.
+
+   A prova real da CEBRASPE não é assim. Os itens vêm em blocos
+   contíguos por disciplina, na ordem do edital, e cada disciplina vale
+   um número fixo de itens. Isso muda como se resolve: o candidato entra
+   e sai de um assunto por vez, e precisa administrar o tempo sabendo
+   que Português acabou e agora são 10 itens seguidos de RLM.
+   ================================================================ */
+
+/* Reparte `total` itens entre disciplinas na proporção dos pesos do
+   edital. Os pesos são fracionários (9 disciplinas × 7,8 = 70,2 para um
+   bloco de 70), então arredondar cada uma isolada não fecha a conta.
+   Método do maior resto: distribui o piso e entrega as sobras a quem
+   tem a maior parte fracionária, empate resolvido pela ordem do edital
+   — assim a mesma trilha sempre gera a mesma estrutura. */
+function repartirItens(pesos, total) {
+  const soma = pesos.reduce((s, p) => s + p.peso, 0) || 1;
+  const exatos = pesos.map(p => ({ ...p, exato: p.peso / soma * total }));
+  const cotas = exatos.map(e => ({ ...e, itens: Math.floor(e.exato) }));
+  let sobra = total - cotas.reduce((s, c) => s + c.itens, 0);
+  const porResto = cotas
+    .map((c, i) => ({ i, resto: c.exato - Math.floor(c.exato) }))
+    .sort((a, b) => b.resto - a.resto || a.i - b.i);
+  for (let k = 0; k < sobra; k++) cotas[porResto[k % porResto.length].i].itens++;
+  return cotas;
+}
+
+/* Monta a prova na estrutura do edital do foco. Devolve null se não há
+   trilha escolhida — nesse caso a tela cai no modo livre. */
+function montarProvaOficial() {
+  const ed = editalDoFoco();
+  if (!ed || !ed.blocos || !ed.corte) return null;
+
+  const questoes = [];
+  const estrutura = [];
+  const faltantes = [];
+
+  for (const [chave, nomes] of Object.entries(ed.blocos)) {
+    const alvoBloco = ed.corte[chave] ? ed.corte[chave].itens : 0;
+    const cotas = repartirItens(
+      nomes.map(nome => ({ nome, peso: ed.itensPorDisciplina[nome] || 0 })),
+      alvoBloco
+    );
+    const doBloco = [];
+    for (const c of cotas) {
+      /* Embaralha DENTRO da disciplina: a ordem entre os blocos é a do
+         edital, mas quais itens caem é sorteio. */
+      const pool = embaralhar(filtrarQuestoes({ disciplina: c.nome }));
+      const escolhidas = pool.slice(0, c.itens);
+      if (escolhidas.length < c.itens) {
+        faltantes.push({ disciplina: c.nome, previstos: c.itens, disponiveis: escolhidas.length });
+      }
+      doBloco.push({ disciplina: c.nome, previstos: c.itens, obtidos: escolhidas.length });
+      questoes.push(...escolhidas);
+    }
+    estrutura.push({ bloco: chave, itensPrevistos: alvoBloco, disciplinas: doBloco });
+  }
+
+  const minutos = ed.duracaoMin ? ed.duracaoMin - RESERVA_DISCURSIVA_MIN : Math.round(questoes.length * 2.5);
+  return {
+    trilha: ed.curto || ed.id,
+    questoes,
+    estrutura,
+    faltantes,
+    itensPrevistos: ed.corte.total ? ed.corte.total.itens : questoes.length,
+    duracaoSeg: minutos * 60,
+    reservaDiscursivaMin: ed.duracaoMin ? RESERVA_DISCURSIVA_MIN : 0,
+  };
+}
+
+function analiseRitmo({ reservaDiscursivaMin = RESERVA_DISCURSIVA_MIN } = {}) {
   const porId = new Map(QUESTOES.map(q => [q.id, q]));
   const linha = historicoOrdenado({ incluirBrancos: true })
     .filter(h => h.tempoMs > 0 && h.tempoMs < TEMPO_MAX_PLAUSIVEL_MS);

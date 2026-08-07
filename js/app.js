@@ -1667,14 +1667,78 @@ function finalizarSimulado() {
    ================================================================ */
 let provaTimerInterval = null;
 
+/* "oficial" segue a estrutura do edital; "livre" é o modo antigo, com
+   quantidade e disciplinas à escolha. */
+let pvModelo = "oficial";
+function setProvaModelo(m) { pvModelo = m; renderProva(); }
+
+/* Prévia da prova oficial: mostra ANTES de começar quantos itens cada
+   disciplina vale e em que ordem vão cair, que é a informação que o
+   modo livre nunca deu. */
+function provaOficialHtml(p) {
+  const nomeBloco = { p1: "Conhecimentos básicos", p2: "Conhecimentos específicos" };
+  const blocos = p.estrutura.map(b => `
+    <div class="pv-bloco">
+      <div class="pv-bloco-tit">${nomeBloco[b.bloco] || b.bloco.toUpperCase()}
+        <span class="hint">${b.disciplinas.reduce((s, d) => s + d.obtidos, 0)} de ${b.itensPrevistos} itens</span></div>
+      <ol class="pv-discs">
+        ${b.disciplinas.map(d => `<li${d.obtidos < d.previstos ? ' class="falta"' : ""}>
+          <span>${escapeHtml(d.disciplina)}</span>
+          <b>${d.obtidos}${d.obtidos < d.previstos ? ` <span class="hint">de ${d.previstos}</span>` : ""}</b>
+        </li>`).join("")}
+      </ol>
+    </div>`).join("");
+
+  const falta = p.faltantes.length
+    ? `<div class="aviso" style="border-left-color:var(--warn)">
+         O banco ainda não tem itens suficientes em
+         ${escapeHtml(p.faltantes.map(f => f.disciplina).join(", "))}.
+         A prova sai com ${p.questoes.length} itens em vez de ${p.itensPrevistos} — o
+         restante da estrutura é respeitado.
+       </div>`
+    : "";
+
+  return `
+    <div class="pv-oficial">
+      <div class="pv-resumo">
+        <div><b>${p.questoes.length}</b><span>itens</span></div>
+        <div><b>${Math.round(p.duracaoSeg / 60)}</b><span>minutos</span></div>
+        <div><b>${p.estrutura.reduce((s, b) => s + b.disciplinas.length, 0)}</b><span>disciplinas</span></div>
+      </div>
+      ${blocos}
+      ${falta}
+      <div style="font-size:12px;color:var(--muted)">
+        As disciplinas caem em blocos seguidos, na ordem do edital — como na prova real.
+        Quais itens de cada disciplina aparecem é sorteio.
+        ${p.reservaDiscursivaMin ? `O edital dá ${Math.round((p.duracaoSeg / 60) + p.reservaDiscursivaMin)} min para objetiva e discursiva juntas; aqui reservamos ${p.reservaDiscursivaMin} min para a discursiva.` : ""}
+      </div>
+    </div>`;
+}
+
 function renderProva() {
   if (PROVA && !PROVA.finalizada) { renderProvaRunner(); return; }
   const discs = listaDisciplinas();
+  const oficial = pvModelo === "oficial" ? montarProvaOficial() : null;
+
   MAIN().innerHTML = topbar("Modo Prova",
     "Simulado em condições reais: cronômetro correndo, navegação livre e correção só no final — como na prova de verdade.") +
   `<div class="card sim-setup">
     <h3>◈ Configurar prova</h3>
-    <div class="opts">
+    <div class="pv-modelo" role="radiogroup" aria-label="Modelo de prova">
+      <button class="pv-modelo-op ${pvModelo === "oficial" ? "ativo" : ""}" role="radio"
+        aria-checked="${pvModelo === "oficial"}" onclick="setProvaModelo('oficial')">
+        <b>Prova oficial</b><span>Estrutura do edital: blocos por disciplina, na quantidade que cada uma vale</span>
+      </button>
+      <button class="pv-modelo-op ${pvModelo === "livre" ? "ativo" : ""}" role="radio"
+        aria-checked="${pvModelo === "livre"}" onclick="setProvaModelo('livre')">
+        <b>Livre</b><span>Você escolhe quantas questões e de quais disciplinas</span>
+      </button>
+    </div>
+    ${pvModelo === "oficial" && !oficial
+      ? `<div class="aviso" style="border-left-color:var(--warn)">Escolha uma trilha no Dashboard para montar a prova oficial. Sem trilha, só o modo livre funciona.</div>`
+      : ""}
+    ${oficial ? provaOficialHtml(oficial) : ""}
+    <div class="opts" ${pvModelo === "oficial" ? 'hidden' : ""}>
       <label class="f">Número de questões<select id="pv-n">
         <option value="10">10 questões</option>
         <option value="20" selected>20 questões</option>
@@ -1692,8 +1756,8 @@ function renderProva() {
       </select></label>
       ${mselHtml(pvFiltros, "disciplina", "pv:disciplina", "Disciplina", discs.map(d => ({ v: d, t: d })), "toggleFiltroProvaMulti")}
     </div>
-    <div style="font-size:12px;color:var(--muted);margin-top:2px">Sem marcar disciplina, a prova sai com mistura balanceada entre todas.</div>
-    <button class="btn" onclick="iniciarProva()">◈ Iniciar prova</button>
+    <div style="font-size:12px;color:var(--muted);margin-top:2px" ${pvModelo === "oficial" ? 'hidden' : ""}>Sem marcar disciplina, a prova sai com mistura balanceada entre todas.</div>
+    <button class="btn" onclick="iniciarProva()" ${pvModelo === "oficial" && !oficial ? "disabled" : ""}>◈ Iniciar prova${pvModelo === "oficial" && oficial ? ` — ${oficial.questoes.length} itens` : ""}</button>
     <div class="aviso">
       <b>Regras da prova:</b> o cronômetro não para; você navega livremente e pode marcar questões para revisar;
       <b>não há gabarito nem comentário até você finalizar</b>. Correção estilo CEBRASPE (cada erro anula um acerto;
@@ -1721,20 +1785,40 @@ function montarProva(n, filtros) {
 }
 
 async function iniciarProva() {
-  const n = +$("#pv-n").value;
-  const tempoSel = $("#pv-tempo").value;
-  const filtros = { disciplina: pvFiltros.disciplina };
-  const questoes = montarProva(n, filtros);
-  if (!questoes.length) { await mostrarAlerta("Nenhuma questão encontrada com esses filtros."); return; }
-  if (questoes.length < n) {
-    const ok = await mostrarConfirm(`Apenas ${questoes.length} questão(ões) encontradas com esses filtros (menos que as ${n} solicitadas). Iniciar a prova mesmo assim com ${questoes.length} questões?`, "Menos questões que o solicitado");
-    if (!ok) return;
+  let questoes, duracaoSeg, estrutura = null;
+
+  if (pvModelo === "oficial") {
+    const p = montarProvaOficial();
+    if (!p) { await mostrarAlerta("Escolha uma trilha no Dashboard para montar a prova oficial."); return; }
+    if (!p.questoes.length) { await mostrarAlerta("Não há questões suficientes no banco para montar esta prova."); return; }
+    if (p.faltantes.length) {
+      const lista = p.faltantes.map(f => `${f.disciplina} (${f.disponiveis} de ${f.previstos})`).join("; ");
+      const ok = await mostrarConfirm(
+        `O banco ainda não cobre a estrutura inteira: ${lista}. A prova sai com ${p.questoes.length} itens em vez de ${p.itensPrevistos}, mantendo a ordem e a proporção do edital. Começar assim?`,
+        "Banco incompleto para a prova oficial");
+      if (!ok) return;
+    }
+    questoes = p.questoes;
+    duracaoSeg = p.duracaoSeg;
+    estrutura = p.estrutura;
+  } else {
+    const n = +$("#pv-n").value;
+    const tempoSel = $("#pv-tempo").value;
+    const filtros = { disciplina: pvFiltros.disciplina };
+    questoes = montarProva(n, filtros);
+    if (!questoes.length) { await mostrarAlerta("Nenhuma questão encontrada com esses filtros."); return; }
+    if (questoes.length < n) {
+      const ok = await mostrarConfirm(`Apenas ${questoes.length} questão(ões) encontradas com esses filtros (menos que as ${n} solicitadas). Iniciar a prova mesmo assim com ${questoes.length} questões?`, "Menos questões que o solicitado");
+      if (!ok) return;
+    }
+    duracaoSeg = tempoSel === "auto" ? Math.round(questoes.length * 150) : +tempoSel * 60;
   }
-  const duracaoSeg = tempoSel === "auto" ? Math.round(questoes.length * 150) : +tempoSel * 60;
+
   PROVA = {
     questoes, respostas: {}, marcadas: {}, tempoPorQ: {},
     idx: 0, inicio: Date.now(), fim: Date.now() + duracaoSeg * 1000,
     duracaoSeg, desde: Date.now(), finalizada: false,
+    modelo: pvModelo, estrutura,
   };
   renderProvaRunner();
   iniciarTimerProva();
@@ -1778,8 +1862,18 @@ function renderProvaRunner() {
     if (i === PROVA.idx) cls.push("cur");
     if (resp) cls.push("done");
     if (PROVA.marcadas[qq.id]) cls.push("mark");
-    return `<button class="${cls.join(" ")}" onclick="provaIr(${i})" title="Questão ${i + 1}${resp ? " · respondida" : ""}${PROVA.marcadas[qq.id] ? " · marcada" : ""}">${i + 1}</button>`;
+    /* Marca onde uma disciplina termina e outra começa, para a paleta
+       refletir os blocos da prova em vez de virar um bloco só de números. */
+    const inicioDeBloco = i > 0 && PROVA.questoes[i - 1].disciplina !== qq.disciplina;
+    if (inicioDeBloco) cls.push("nova-disc");
+    return `<button class="${cls.join(" ")}" onclick="provaIr(${i})" title="Questão ${i + 1} · ${qq.disciplina}${resp ? " · respondida" : ""}${PROVA.marcadas[qq.id] ? " · marcada" : ""}">${i + 1}</button>`;
   }).join("");
+
+  /* Posição dentro do bloco da disciplina atual. Na prova real o
+     candidato sabe que está no 3º de 10 itens de Português; sem isso ele
+     perde a noção de ritmo que o formato em blocos deveria dar. */
+  const mesmaDisc = PROVA.questoes.filter(x => x.disciplina === q.disciplina);
+  const posNoBloco = PROVA.questoes.slice(0, PROVA.idx + 1).filter(x => x.disciplina === q.disciplina).length;
 
   const sel = PROVA.respostas[q.id] || null;
   const btn = (val, label, cls) =>
@@ -1789,6 +1883,7 @@ function renderProvaRunner() {
   <div class="prova-bar">
     <div class="pv-meta">
       <span class="tag accent">Questão ${PROVA.idx + 1} / ${n}</span>
+      <span class="tag">${escapeHtml(q.disciplina)} · ${posNoBloco} de ${mesmaDisc.length}</span>
       <span class="tag">${respondidas} respondidas · ${n - respondidas} em aberto</span>
     </div>
     <div class="pv-timerwrap">

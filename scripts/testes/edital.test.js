@@ -295,3 +295,107 @@ test("normalAcumulada confere com a tabela", () => {
     assert.ok(Math.abs(app.chamar("normalAcumulada", z) - esperado) < 1e-3, `Φ(${z})`);
   }
 });
+
+/* ---------------- prova no modelo oficial ----------------
+   O Modo Prova sorteava do banco inteiro e fatiava: disciplinas
+   embaralhadas entre si e quantidade ao acaso. A prova da CEBRASPE traz
+   os itens em blocos contíguos por disciplina, na ordem do edital, com
+   número fixo de itens cada. */
+
+test("a prova oficial tem exatamente os itens que o edital manda", () => {
+  const app = comTrilha("PCAL");
+  const p = app.json("montarProvaOficial()");
+  assert.equal(p.questoes.length, 120);
+  assert.equal(p.itensPrevistos, 120);
+});
+
+test("cada bloco fecha com o total do corte oficial", () => {
+  for (const trilha of ["PCAL", "SESAUAL_FISIO"]) {
+    const app = comTrilha(trilha);
+    const p = app.json("montarProvaOficial()");
+    const corte = app.json(`EDITAIS.${trilha}.corte`);
+    for (const b of p.estrutura) {
+      const soma = b.disciplinas.reduce((s, d) => s + d.obtidos, 0);
+      assert.equal(soma, corte[b.bloco].itens, `${trilha} bloco ${b.bloco}`);
+    }
+  }
+});
+
+test("as disciplinas saem em blocos contíguos, não intercaladas", () => {
+  const app = comTrilha("PCAL");
+  const seq = app.json("montarProvaOficial().questoes.map(q => q.disciplina)");
+  /* Uma disciplina que reaparece depois de outra significa prova
+     embaralhada — exatamente o que o modo antigo produzia. */
+  const trocas = seq.filter((d, i) => d !== seq[i - 1]);
+  assert.equal(trocas.length, new Set(seq).size,
+    "cada disciplina deve aparecer num bloco só");
+});
+
+test("a ordem dos blocos é a do edital: básicos antes de específicos", () => {
+  const app = comTrilha("PCAL");
+  const p = app.json("montarProvaOficial()");
+  assert.deepEqual(p.estrutura.map(b => b.bloco), ["p1", "p2"]);
+
+  const seq = p.questoes.map(q => q.disciplina);
+  const p1 = app.json("EDITAIS.PCAL.blocos.p1");
+  /* Os 50 primeiros itens têm de ser todos de disciplinas do P1. */
+  assert.ok(seq.slice(0, 50).every(d => p1.includes(d)));
+  assert.ok(seq.slice(50).every(d => !p1.includes(d)));
+});
+
+test("pesos fracionários são repartidos sem sobrar nem faltar item", () => {
+  const app = comTrilha("PCAL");
+  /* 9 disciplinas × 7,8 = 70,2 para um bloco de 70: arredondar cada uma
+     isolada daria 72 ou 63. */
+  const p2 = app.json("montarProvaOficial()").estrutura.find(b => b.bloco === "p2");
+  assert.equal(p2.disciplinas.reduce((s, d) => s + d.previstos, 0), 70);
+  for (const d of p2.disciplinas) {
+    assert.ok(d.previstos === 7 || d.previstos === 8, `${d.disciplina}: ${d.previstos}`);
+  }
+});
+
+test("a repartição é estável entre execuções", () => {
+  const app = comTrilha("PCAL");
+  const a = app.json("montarProvaOficial().estrutura");
+  const b = app.json("montarProvaOficial().estrutura");
+  /* O sorteio muda quais itens caem; a ESTRUTURA não pode mudar, senão a
+     mesma trilha geraria provas com pesos diferentes. */
+  assert.deepEqual(a.map(x => x.disciplinas.map(d => d.previstos)),
+                   b.map(x => x.disciplinas.map(d => d.previstos)));
+});
+
+test("os itens de cada disciplina variam entre execuções", () => {
+  const app = comTrilha("PCAL");
+  const a = app.json("montarProvaOficial().questoes.map(q => q.id)").join();
+  const b = app.json("montarProvaOficial().questoes.map(q => q.id)").join();
+  assert.notEqual(a, b, "quais itens caem é sorteio");
+});
+
+test("o tempo desconta a reserva da discursiva", () => {
+  const app = comTrilha("PCAL");
+  const p = app.json("montarProvaOficial()");
+  const ed = app.json("EDITAIS.PCAL");
+  assert.equal(p.duracaoSeg / 60, ed.duracaoMin - app.get("RESERVA_DISCURSIVA_MIN"));
+});
+
+test("banco incompleto reduz a prova mas preserva a estrutura", () => {
+  const app = comTrilha("PCAL");
+  app.rodar(`globalThis.__todas = QUESTOES.slice();`);
+  /* Deixa Atualidades com uma questão só. */
+  app.rodar(`
+    const sobra = QUESTOES.find(q => q.disciplina === "Atualidades");
+    QUESTOES.length = 0;
+    QUESTOES.push(...__todas.filter(q => q.disciplina !== "Atualidades"), sobra);
+  `);
+  const p = app.json("montarProvaOficial()");
+  const at = p.estrutura[0].disciplinas.find(d => d.disciplina === "Atualidades");
+  assert.equal(at.previstos, 5);
+  assert.ok(at.obtidos < 5, "sai o que existe");
+  assert.ok(p.faltantes.some(f => f.disciplina === "Atualidades"), "e a falta é reportada");
+});
+
+test("sem trilha escolhida não há prova oficial", () => {
+  const app = criarApp();
+  app.rodar(`APP_STATE.config.concursoFoco = null;`);
+  assert.equal(app.json("montarProvaOficial()"), null);
+});
