@@ -261,6 +261,38 @@ function validar({ quieto = false } = {}) {
 
   /* ================= AVISOS ================= */
 
+  /* ---------- Poder de discriminação da escala de dificuldade ----------
+     Medido contra as respostas reais em 06/08/2026: as questões de nível
+     1 ("fácil") tiveram 70,3% de acerto (n=37) contra 69,1% de todo o
+     resto (n=515). Diferença de 1,2 ponto, dentro do ruído — a escala
+     não previa nada.
+
+     A distribuição explica: 3,9% no nível 1, 38,8% no 2 e 57,3% no 3.
+     Quando mais da metade do banco é "difícil" e quase nada é "fácil",
+     o rótulo deixa de separar questões e vira decoração.
+
+     Isso não é cosmético. `pesoAdaptativo` (js/engine.js) usa
+     `q.dificuldade` para mirar uma dificuldade-alvo conforme o
+     desempenho do aluno; com o rótulo sem poder preditivo, esse termo
+     injeta ruído na escolha das questões do simulado. E o filtro de
+     dificuldade do Banco promete ao aluno um recorte que não se
+     confirma na prática.
+
+     O limiar abaixo é frouxo de propósito: só reclama de distribuição
+     claramente degenerada, não de desequilíbrio moderado. */
+  const LIMIAR_NIVEL_DOMINANTE = 0.55;
+  const LIMIAR_NIVEL_RESIDUAL = 0.05;
+  const porDificuldade = { 1: 0, 2: 0, 3: 0 };
+  for (const q of QUESTOES) if (porDificuldade[q.dificuldade] !== undefined) porDificuldade[q.dificuldade]++;
+  for (const [nivel, n] of Object.entries(porDificuldade)) {
+    const fatia = n / QUESTOES.length;
+    if (fatia > LIMIAR_NIVEL_DOMINANTE) {
+      avisos.push(`Dificuldade ${nivel} concentra ${pct(n, QUESTOES.length)} do banco — a escala perde poder de separar questões, e pesoAdaptativo depende dela.`);
+    } else if (fatia < LIMIAR_NIVEL_RESIDUAL) {
+      avisos.push(`Dificuldade ${nivel} tem só ${pct(n, QUESTOES.length)} do banco — faixa quase vazia, o filtro do Banco entrega pouca coisa.`);
+    }
+  }
+
   const total = QUESTOES.length;
   const certos = QUESTOES.filter(q => q.gabarito === "C").length;
   const taxaC = certos / total;
