@@ -1515,6 +1515,23 @@ const EDITAIS = {
       "Estatística": 7.8,
       "Crimes Cibernéticos e Segurança Digital": 7.8,
     },
+    /* A que bloco de corte cada disciplina pertence. Isso existia só como
+       comentário acima, e comentário não dá para projetar P1 e P2
+       separadamente — a projeção precisava saber quanto de cada bloco o
+       aluno domina, não uma média geral.
+
+       A repetição dos nomes é conferida pelo validador (soma dos itens de
+       cada bloco tem de bater com `corte`, e toda disciplina precisa estar
+       em exatamente um), então não há como as duas listas divergirem em
+       silêncio. */
+    blocos: {
+      p1: ["Língua Portuguesa", "TI e Segurança Cibernética", "Raciocínio Lógico-Matemático",
+           "Direitos Humanos", "Atualidades", "Ética no Serviço Público"],
+      p2: ["Direito Penal", "Processo Penal", "Direito Constitucional", "Direito Administrativo",
+           "Legislação Institucional (AL)", "Legislação Especial",
+           "Contabilidade e Análise Financeira", "Estatística",
+           "Crimes Cibernéticos e Segurança Digital"],
+    },
   },
 
   SESAUAL_FISIO: {
@@ -1577,6 +1594,13 @@ const EDITAIS = {
       "Legislação Aplicada ao SUS": 12.5,
       /* P2 — conhecimentos específicos: 70 itens num bloco único */
       "Fisioterapia": 70,
+    },
+    /* Ver o comentário homônimo em PCAL: a projeção de corte precisa saber
+       a que bloco cada disciplina pertence, e isso era só comentário. */
+    blocos: {
+      p1: ["Língua Portuguesa", "Ética no Serviço Público",
+           "Legislação Estadual (AL)", "Legislação Aplicada ao SUS"],
+      p2: ["Fisioterapia"],
     },
   },
 };

@@ -254,12 +254,23 @@ body {
 }
 .corte-barra i.ok { background: var(--ok); }
 .corte-barra i.bad { background: var(--bad); }
+.corte-barra i.warn { background: var(--warn); }
+/* Faixa provável (IC 95%). Fica ATRÁS da barra e do marcador do corte:
+   a leitura principal continua sendo "onde estou x onde é o corte", e a
+   faixa responde a pergunta seguinte — o quanto disso é chute. */
+.corte-faixa {
+  position: absolute; top: 0; bottom: 0; z-index: 0;
+  background: var(--text); opacity: .16; border-radius: var(--r-full);
+  pointer-events: none;
+}
+.corte-barra i, .corte-marca { position: relative; z-index: 1; }
 .corte-marca {
   position: absolute; top: -4px; bottom: -4px; width: 2px;
   background: var(--text); opacity: .75; border-radius: 1px;
 }
 .corte-num { font-size: 13px; font-weight: 700; font-variant-numeric: tabular-nums; white-space: nowrap; }
 .corte-num.ok { color: var(--ok); }
+.corte-num.warn { color: var(--warn); }
 .corte-num.bad { color: var(--bad); }
 .corte-num .hint { display: block; font-weight: 400; font-size: 11px; }
 @media (max-width: 640px) {

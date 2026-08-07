@@ -225,6 +225,40 @@ function validar({ quieto = false } = {}) {
     }
   }
 
+  /* ---------- Coerência de `blocos` com `itensPorDisciplina` e `corte` ----------
+     A projeção de corte precisa saber a que bloco (P1/P2) cada disciplina
+     pertence, e isso obriga a repetir os nomes das disciplinas em
+     `blocos`. Repetição sem conferência diverge: renomear uma disciplina
+     num lugar e esquecer o outro faria a projeção simplesmente ignorar
+     aquele peso, sem erro visível — o aluno veria um prognóstico de
+     aprovação calculado sobre menos prova do que a real. */
+  for (const ed of Object.values(EDITAIS)) {
+    const onde = `EDITAIS.${ed.id}`;
+    if (!ed.blocos) { erros.push(`${onde}: falta \`blocos\` (necessário para a projeção de corte)`); continue; }
+
+    const daTabela = Object.keys(ed.itensPorDisciplina);
+    const nosBlocos = Object.values(ed.blocos).flat();
+
+    for (const d of daTabela) {
+      const em = Object.entries(ed.blocos).filter(([, ds]) => ds.includes(d)).map(([b]) => b);
+      if (em.length === 0) erros.push(`${onde}: disciplina "${d}" tem itens mas não está em nenhum bloco`);
+      if (em.length > 1) erros.push(`${onde}: disciplina "${d}" aparece em mais de um bloco (${em.join(", ")})`);
+    }
+    for (const d of nosBlocos) {
+      if (!daTabela.includes(d)) erros.push(`${onde}: bloco cita "${d}", que não existe em itensPorDisciplina`);
+    }
+
+    /* A soma dos pesos de cada bloco tem de bater com os itens que o
+       corte oficial atribui àquele bloco. */
+    for (const [chave, c] of Object.entries(ed.corte)) {
+      if (chave === "total") continue;
+      const soma = (ed.blocos[chave] || []).reduce((s, d) => s + (ed.itensPorDisciplina[d] || 0), 0);
+      if (Math.abs(soma - c.itens) > 0.5) {
+        erros.push(`${onde}: bloco ${chave} soma ${soma.toFixed(1)} itens, mas o corte declara ${c.itens}`);
+      }
+    }
+  }
+
   /* ================= AVISOS ================= */
 
   const total = QUESTOES.length;

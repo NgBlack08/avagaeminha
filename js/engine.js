@@ -1327,23 +1327,149 @@ function composicaoPadroes() {
    líquida é A − (N − A) = 2A − N, porque no método Cebraspe o erro anula um
    acerto. É estimativa, não promessa: taxa medida em banco de questões tende
    a ser otimista frente à prova real. */
+/* Φ(z) — acumulada da normal padrão, por aproximação de Abramowitz &
+   Stegun (erro < 7,5e-8, muito além do que uma projeção de corte pede).
+   Existe aqui porque o projeto não tem — nem quer — dependência externa. */
+function normalAcumulada(z) {
+  const sinal = z < 0 ? -1 : 1;
+  const x = Math.abs(z) / Math.SQRT2;
+  const t = 1 / (1 + 0.3275911 * x);
+  const y = 1 - ((((1.061405429 * t - 1.453152027) * t + 1.421413741) * t
+                  - 0.284496736) * t + 0.254829592) * t * Math.exp(-x * x);
+  return 0.5 * (1 + sinal * y);
+}
+
+/* Desempenho contando SÓ a primeira resposta não-branca de cada questão.
+   Reencontrar um item depois de ler a explicação e acertar é
+   reconhecimento, não evocação — foi por isso que o SRS deixou de
+   promover nesse caso. A taxa que projeta aprovação também não pode
+   contar isso: medido no banco real, a diferença é de 8,4 pontos
+   percentuais (78,7% com repetições contra 70,3% na primeira tentativa,
+   com 92,5% de acerto nas repetições). */
+function statsPrimeiraTentativa() {
+  const porDisc = {};
+  for (const q of questoesDoEscopo()) {
+    const d = porDisc[q.disciplina] || (porDisc[q.disciplina] = { disciplina: q.disciplina, acertos: 0, n: 0 });
+    const primeira = (APP_STATE.respostas[q.id] || []).find(h => !h.branco);
+    if (!primeira) continue;
+    d.n++;
+    if (primeira.correta) d.acertos++;
+  }
+  const lista = Object.values(porDisc);
+  const acertos = lista.reduce((s, d) => s + d.acertos, 0);
+  const n = lista.reduce((s, d) => s + d.n, 0);
+  return { porDisc, acertos, n, taxa: n ? acertos / n : null };
+}
+
+/* Projeção contra a nota de corte oficial.
+ *
+ * Três defeitos da versão anterior, os três com o mesmo efeito — dizer ao
+ * aluno que ele passa quando não passa:
+ *
+ *  1. Usava a taxa de TODAS as tentativas, inflada pelas revisões.
+ *  2. Extrapolava uma média geral para os 120 itens, ignorando que a
+ *     prova tem composição fixa por disciplina. Quem responde só o que
+ *     gosta via essa preferência virar prognóstico de aprovação.
+ *  3. Devolvia um booleano. Com 40 respostas, "você passa" tem a mesma
+ *     cara que com 4.000.
+ *
+ * Agora: taxa por disciplina (primeira tentativa, suavizada pela taxa
+ * geral quando a amostra é pequena), ponderada pelos itens que cada
+ * disciplina vale no bloco, com intervalo de confiança.
+ *
+ * A variância soma duas fontes distintas, que é o ponto de mostrar
+ * intervalo: o sorteio da prova (mesmo sabendo exatamente sua taxa, cair
+ * uma prova boa ou ruim varia) e a incerteza sobre a própria taxa (que
+ * encolhe conforme o aluno responde mais). Disciplinas tratadas como
+ * independentes — aproximação, mas o erro é pequeno perto do que se
+ * ganha em não fingir precisão que não existe.
+ */
 function projecaoCorte() {
   const ed = editalDoFoco();
-  if (!ed || !ed.corte) return null;
-  const taxa = statsGerais().taxa ?? 0;
+  if (!ed || !ed.corte || !ed.blocos) return null;
+
+  const st = statsPrimeiraTentativa();
+  if (st.taxa === null) return null;
+  const itens = ed.itensPorDisciplina;
+
+  /* Cada disciplina encolhe em direção a 0,5 — não em direção à taxa
+     geral do aluno. A diferença importa e não é sutil:
+
+     Com o prior sendo a média do próprio aluno, quem estudou 4 das 15
+     disciplinas e vai bem nelas fazia as outras 11 herdarem esse mesmo
+     desempenho, e a ponderação pelo edital não corrigia nada — era só um
+     jeito mais elaborado de repetir a média das favoritas.
+
+     0,5 é a linha de base honesta num item Certo/Errado: é o que se
+     obtém chutando. Uma disciplina em que o aluno nunca respondeu nada
+     entra valendo o chute, e não a competência que ele demonstrou em
+     outra matéria. Isso também alinha a projeção com o que a prova
+     cobra: cobrir o edital inteiro passa a melhorar o prognóstico,
+     porque de fato melhora a nota. */
+  const PRIOR_NEUTRO = 0.5;
+
+  /* Disciplinas do bloco; "total" é a prova inteira. */
+  const disciplinasDo = chave => chave === "total"
+    ? Object.keys(itens)
+    : (ed.blocos[chave] || []);
+
   const proj = ([chave, c]) => {
-    const acertos = taxa * c.itens;
-    const liquida = 2 * acertos - c.itens;      /* erro anula acerto */
+    const discs = disciplinasDo(chave);
+    const pesoTotal = discs.reduce((s, d) => s + (itens[d] || 0), 0) || 1;
+    let esperado = 0, variancia = 0;
+
+    for (const nome of discs) {
+      /* Itens que esta disciplina vale DENTRO deste bloco, reescalados
+         para o total do bloco (os pesos do edital somam ~120, e p1/p2
+         valem 50 e 70). */
+      const nItens = (itens[nome] || 0) / pesoTotal * c.itens;
+      if (!nItens) continue;
+      const d = st.porDisc[nome] || { acertos: 0, n: 0 };
+      const p = taxaSuavizada(d.acertos, d.n, PRIOR_NEUTRO) ?? PRIOR_NEUTRO;
+      const m = d.n + PESO_PRIOR;               /* amostra efetiva com o prior */
+      esperado += nItens * p;
+      variancia += nItens * p * (1 - p)         /* sorteio da prova */
+                 + nItens * nItens * p * (1 - p) / m;  /* incerteza da taxa */
+    }
+
+    /* Erro anula acerto, e a projeção supõe que o aluno responde tudo. */
+    const liquida = 2 * esperado - c.itens;
+    const desvio = 2 * Math.sqrt(Math.max(variancia, 0));
+
+    /* A pergunta do aluno não é "qual meu intervalo", é "eu passo?". Um
+       intervalo de 95% responde isso mal: numa prova de 120 itens a sorte
+       sozinha vale ±19 pontos líquidos, então quase todo mundo cai em
+       cima do corte e receberia "incerto" — inclusive quem tem 96% de
+       chance de passar. A probabilidade responde direto. */
+    const chance = desvio > 0
+      ? 1 - normalAcumulada((c.pontos - liquida) / desvio)
+      : (liquida >= c.pontos ? 1 : 0);
+
     return {
       chave, itens: c.itens, exigido: c.pontos, acertosExigidos: c.acertos,
       taxaExigida: c.acertos / c.itens,
+      acertosProjetados: esperado,
       liquidaProjetada: liquida,
-      acertosProjetados: acertos,
-      passa: liquida >= c.pontos,
       folga: liquida - c.pontos,
+      chance,
+      intervalo: { min: liquida - 1.96 * desvio, max: liquida + 1.96 * desvio, desvio },
+      /* Três estados em vez de booleano. Os cortes são de decisão, não de
+         estatística: abaixo de 90% ainda há risco real de eliminação, e
+         é honesto dizer isso em vez de garantir aprovação. */
+      veredito: chance >= 0.90 ? "passa" : chance <= 0.10 ? "reprova" : "incerto",
     };
   };
-  return { taxa, trilha: ed.curto || ed.id, blocos: Object.entries(ed.corte).map(proj) };
+
+  return {
+    taxa: st.taxa,
+    /* A taxa cheia fica exposta para a interface poder explicar a
+       diferença em vez de deixar o aluno achar que um dos números está
+       errado. */
+    taxaComRevisoes: statsGerais().taxa,
+    respostasConsideradas: st.n,
+    trilha: ed.curto || ed.id,
+    blocos: Object.entries(ed.corte).map(proj),
+  };
 }
 
 /* Em prova com erro anulando acerto, chutar tem valor esperado 2p − 1, sendo p

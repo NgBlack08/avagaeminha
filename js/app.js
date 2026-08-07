@@ -650,28 +650,64 @@ function corteHtml() {
   if (g.taxa === null || g.respondidasUnicas < 20) return "";
 
   const nome = { p1: "Básicos (P1)", p2: "Específicos (P2)", total: "Conjunto" };
+  const CLS = { passa: "ok", reprova: "bad", incerto: "warn" };
+  /* Nunca 0% nem 100%: o modelo não merece essa confiança, e um "100% de
+     passar" a quatro meses da prova convida a parar de estudar. */
+  const pctChance = c => Math.min(99, Math.max(1, Math.round(c * 100)));
+  /* "A e B e C" não é português; com três blocos a lista aparecia assim. */
+  const listar = ns => ns.length > 1
+    ? ns.slice(0, -1).join(", ") + " e " + ns[ns.length - 1]
+    : (ns[0] || "");
+  /* A projeção trabalha em pontos líquidos (acerto − erro), que é como o
+     edital define o corte; a barra continua em acertos porque é o que o
+     aluno reconhece. Converter de volta mantém as duas coisas coerentes. */
+  const acertosDe = (liquida, itens) => (liquida + itens) / 2;
+
   const linhas = p.blocos.map(b => {
-    const cls = b.passa ? "ok" : "bad";
-    const pctProj = Math.max(0, Math.min(100, 100 * b.acertosProjetados / b.itens));
+    const cls = CLS[b.veredito];
+    const pct = v => Math.max(0, Math.min(100, 100 * acertosDe(v, b.itens) / b.itens));
+    const pctProj = pct(b.liquidaProjetada);
+    const pctMin = pct(b.intervalo.min);
+    const pctMax = pct(b.intervalo.max);
     const pctCorte = 100 * b.acertosExigidos / b.itens;
     return `
       <div class="corte-linha">
         <div class="corte-rot">${nome[b.chave] || b.chave}</div>
-        <div class="corte-barra">
+        <div class="corte-barra" title="faixa provável: ${Math.round(acertosDe(b.intervalo.min, b.itens))} a ${Math.round(acertosDe(b.intervalo.max, b.itens))} acertos">
           <i class="${cls}" style="width:${pctProj.toFixed(1)}%"></i>
+          <span class="corte-faixa" style="left:${pctMin.toFixed(1)}%;width:${(pctMax - pctMin).toFixed(1)}%"></span>
           <span class="corte-marca" style="left:${pctCorte.toFixed(1)}%" title="corte: ${b.acertosExigidos} de ${b.itens} acertos"></span>
         </div>
         <div class="corte-num ${cls}">
           ${Math.round(b.acertosProjetados)}/${b.itens}
-          <span class="hint">corte ${b.acertosExigidos}</span>
+          <span class="hint">${pctChance(b.chance)}% de passar · corte ${b.acertosExigidos}</span>
         </div>
       </div>`;
   }).join("");
 
-  const reprova = p.blocos.filter(b => !b.passa);
+  /* Veredito em três estados. O booleano anterior afirmava com 40
+     respostas o mesmo que afirmaria com 4.000 — e afirmava para cima,
+     porque a taxa vinha inflada pelas revisões. */
+  const reprova = p.blocos.filter(b => b.veredito === "reprova");
+  const incertos = p.blocos.filter(b => b.veredito === "incerto");
+  const total = p.blocos.find(b => b.chave === "total") || p.blocos[0];
+  const chanceGeral = pctChance(total.chance);
   const veredito = reprova.length
-    ? `<b class="bad">No ritmo atual você seria eliminado</b> em ${reprova.map(b => nome[b.chave]).join(" e ")}.`
-    : `<b class="ok">No ritmo atual você passa do corte</b> nos três critérios — o corte elimina, mas não aprova: a classificação depende do número de vagas.`;
+    ? `<b class="bad">No ritmo atual você seria eliminado</b> em ${listar(reprova.map(b => nome[b.chave]))}. Chance de passar no conjunto: <b>${chanceGeral}%</b>.`
+    : incertos.length
+      ? `<b class="warn">Ainda está no limite</b> em ${listar(incertos.map(b => nome[b.chave]))} — chance de passar no conjunto: <b>${chanceGeral}%</b>. Numa prova de 120 itens a sorte sozinha vale muito; a margem some respondendo mais e acertando mais.`
+      : `<b class="ok">Você passa do corte</b> nos três critérios (chance de <b>${chanceGeral}%</b> no conjunto) — mas o corte elimina, não aprova: a classificação depende do número de vagas.`;
+
+  /* Explica por que este número difere do mostrado no resto do app. Sem
+     isso, o aluno vê duas taxas diferentes e conclui que uma está errada. */
+  const bruta = p.taxaComRevisoes;
+  const notaTaxa = (bruta !== null && bruta - p.taxa > 0.02)
+    ? `<div style="font-size:12.5px;color:var(--muted);margin-top:8px">
+         A projeção usa sua taxa de <b>primeira tentativa</b> (${Math.round(p.taxa * 100)}%), não os
+         ${Math.round(bruta * 100)}% que incluem revisões. Rever uma questão já respondida e acertar é
+         reconhecimento, não memória — contaria a seu favor aqui e cobraria o preço no dia da prova.
+       </div>`
+    : "";
 
   const ob = orientacaoBranco();
   const arriscadas = ob.linhas.filter(l => l.recomendaBranco);
@@ -683,9 +719,10 @@ function corteHtml() {
 
   return `
   <div class="card" style="margin-top:16px">
-    <h3>🎯 Nota de corte oficial <span class="hint">${escapeHtml(p.trilha)} · projeção pela sua taxa de ${Math.round(p.taxa * 100)}%</span></h3>
+    <h3>🎯 Nota de corte oficial <span class="hint">${escapeHtml(p.trilha)} · ${Math.round(p.taxa * 100)}% em ${p.respostasConsideradas} questões, ponderado pelo peso de cada disciplina</span></h3>
     <div class="corte-wrap">${linhas}</div>
     <div style="font-size:13px;color:var(--muted);margin-top:10px">${veredito}</div>
+    ${notaTaxa}
     <div style="font-size:13px;color:var(--muted);margin-top:8px;padding-top:8px;border-top:1px solid var(--border)">
       <b>Erro anula acerto; branco vale zero.</b> ${dicaBranco}
     </div>
