@@ -1738,7 +1738,8 @@ function renderProva() {
       ? `<div class="aviso" style="border-left-color:var(--warn)">Escolha uma trilha no Dashboard para montar a prova oficial. Sem trilha, só o modo livre funciona.</div>`
       : ""}
     ${oficial ? provaOficialHtml(oficial) : ""}
-    <div class="opts" ${pvModelo === "oficial" ? 'hidden' : ""}>
+    ${pvModelo === "livre" ? `
+    <div class="opts">
       <label class="f">Número de questões<select id="pv-n">
         <option value="10">10 questões</option>
         <option value="20" selected>20 questões</option>
@@ -1756,7 +1757,8 @@ function renderProva() {
       </select></label>
       ${mselHtml(pvFiltros, "disciplina", "pv:disciplina", "Disciplina", discs.map(d => ({ v: d, t: d })), "toggleFiltroProvaMulti")}
     </div>
-    <div style="font-size:12px;color:var(--muted);margin-top:2px" ${pvModelo === "oficial" ? 'hidden' : ""}>Sem marcar disciplina, a prova sai com mistura balanceada entre todas.</div>
+    <div style="font-size:12px;color:var(--muted);margin-top:2px">Sem marcar disciplina, a prova sai com mistura balanceada entre todas.</div>
+    ` : ""}
     <button class="btn" onclick="iniciarProva()" ${pvModelo === "oficial" && !oficial ? "disabled" : ""}>◈ Iniciar prova${pvModelo === "oficial" && oficial ? ` — ${oficial.questoes.length} itens` : ""}</button>
     <div class="aviso">
       <b>Regras da prova:</b> o cronômetro não para; você navega livremente e pode marcar questões para revisar;
