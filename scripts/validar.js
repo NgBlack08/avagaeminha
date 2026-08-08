@@ -261,6 +261,55 @@ function validar({ quieto = false } = {}) {
 
   /* ================= AVISOS ================= */
 
+  /* ---------- Formato das questões de Língua Portuguesa ----------
+     Medido na prova REAL da CEBRASPE para PC-AL (2021, cargo de Agente),
+     itens 1 a 20, que são os de Língua Portuguesa:
+
+       ancorados num texto-base .......... 20 de 20  (100%)
+       reescritura / substituição ........ 30%
+       compreensão / inferência .......... 25%
+       pontuação ......................... 15%
+       coesão / referenciação ............ 10%
+       sintaxe (função de termos) ........ 10%
+
+     A banca não cobra gramática solta: cobra gramática A SERVIÇO DO
+     TEXTO. Todos os vinte itens partem de um texto, e mesmo os de sintaxe
+     perguntam sobre um trecho dele ("o termo X exerce a função de...",
+     citando o texto).
+
+     O banco vinha fazendo o contrário — 18% com texto-base e quase metade
+     em análise morfossintática isolada, que na prova real é 10%. Treinar
+     assim ensina a classificar oração no vácuo, que não é a habilidade
+     cobrada: reconhecer o termo é o meio, julgar o efeito dele no texto é
+     o fim.
+
+     Os limiares são folgados de propósito. Exigir 100% de texto-base
+     seria irreal — treinar regra isolada tem valor pedagógico próprio.
+     O que os avisos pegam é a INVERSÃO da proporção. */
+  const PORTUGUES_TEXTO_MINIMO = 0.50;      /* real: 100% */
+  const PORTUGUES_MORFOSSINTAXE_MAX = 0.30; /* real: ~10% */
+  /* Assuntos que, no banco, tratam de análise da oração fora de um texto. */
+  const ASSUNTOS_MORFOSSINTAXE = new Set([
+    "Termos essenciais da oração", "Termos integrantes da oração",
+    "Termos acessórios da oração", "Complemento nominal e adjunto adnominal",
+    "Tipos de predicado", "Predicativo", "Predicação verbal",
+    "Orações subordinadas", "Frase, oração e período", "Sintaxe",
+  ]);
+
+  const portugues = QUESTOES.filter(q => q.disciplina === "Língua Portuguesa");
+  if (portugues.length >= 30) {
+    const comTexto = portugues.filter(q => q.textoApoio).length;
+    const fatiaTexto = comTexto / portugues.length;
+    if (fatiaTexto < PORTUGUES_TEXTO_MINIMO) {
+      avisos.push(`Português: só ${pct(comTexto, portugues.length)} das questões têm texto-base — na prova real da PC-AL foram 20 de 20 (100%). A banca cobra gramática a serviço do texto.`);
+    }
+    const morfo = portugues.filter(q => ASSUNTOS_MORFOSSINTAXE.has(q.assunto)).length;
+    const fatiaMorfo = morfo / portugues.length;
+    if (fatiaMorfo > PORTUGUES_MORFOSSINTAXE_MAX) {
+      avisos.push(`Português: ${pct(morfo, portugues.length)} das questões são análise da oração isolada — na prova real isso foi ~10%, contra 55% de reescritura e compreensão.`);
+    }
+  }
+
   /* ---------- Poder de discriminação da escala de dificuldade ----------
      Medido contra as respostas reais em 06/08/2026: as questões de nível
      1 ("fácil") tiveram 70,3% de acerto (n=37) contra 69,1% de todo o
