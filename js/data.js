@@ -1172,7 +1172,18 @@ const ESTRATEGIA_CATEGORIAS = [
 const ESTRATEGIAS = [
   /* ============ LEITURA E DECOMPOSIÇÃO ============ */
   {
-    id: "leitura-reversa", categoria: "leitura", nome: "Leitura reversa",
+    /* `escopo: "juridica"` porque a técnica descrita aqui é a de conferir o
+       fecho contra a LETRA DA NORMA: o `padrao`, o `aplicar` e o exemplo
+       (art. 144, § 4º, da CF) só fazem sentido diante de um dispositivo.
+       Sem essa marcação, o casamento por `contraDNA: ["literalidade"]`
+       recomendava "leia a última oração e confira se está na norma" a 301
+       questões de Português, RLM, TI, Estatística, Atualidades e
+       Fisioterapia — onde `literalidade` quer dizer conferir a regra
+       gramatical ou a fórmula, não o texto legal. Foi o que motivou o
+       feedback "a estratégia mostrada não se aplica" em PT-030 (vírgula em
+       aposto explicativo). Nenhuma questão fica órfã: `item-longo` cobre o
+       mesmo padrão sem pressupor norma escrita. */
+    id: "leitura-reversa", categoria: "leitura", escopo: "juridica", nome: "Leitura reversa",
     desc: "Leia primeiro a última oração do item — é a posição preferida da banca para inserir a troca. Depois volte ao início já sabendo o que procurar.",
     aplicar: "Itens longos (3+ linhas) e reprodução literal de dispositivo constitucional.",
     padrao: "Em itens de literalidade, a banca costuma reproduzir o dispositivo de forma fiel e concentrar a alteração no fecho da assertiva. O começo correto cria adesão: o candidato reconhece o texto legal, baixa a guarda e valida o restante por inércia.",

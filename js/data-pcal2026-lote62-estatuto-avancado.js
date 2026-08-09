@@ -783,11 +783,11 @@ const QUESTOES_PCAL_LOTE62 = [
       palavraCritica: "informar pedidos de habeas corpus",
     },
     comentario: {
-      resolucao: "CERTO. Todas constam do art. 15 da Lei 3.437/1975. O rol reúne atos que hoje se associam ao delegado de polícia, e é essa aparente incompatibilidade que gera dúvida — mas o Estatuto é de 1975 e desenha o Inspetor como autoridade policial, o que se harmoniza com o parágrafo único ao exigir dele o curso de Direito. Informar pedidos de habeas corpus é o item menos lembrado do conjunto e por isso o mais provável de ser suprimido numa versão adulterada.",
-      fundamento: "Lei estadual 3.437/1975, art. 15, caput e parágrafo único.",
-      macete: "O Inspetor do Estatuto de 1975 é autoridade policial — daí exigir curso de Direito.",
-      erroComum: "Negar atribuições de autoridade ao Inspetor por associá-las só ao delegado.",
-      comoBancaPensa: "Rol longo e correto: cobra a leitura completa sem alteração alguma."
+      resolucao: "CERTO em relação ao Estatuto, que é o que o edital cobra. Todas as atribuições constam do art. 15 da Lei estadual 3.437/1975, e o parágrafo único exige do Inspetor o curso de Direito — o texto de 1975 realmente o desenha como autoridade policial. RESSALVA IMPORTANTE: esse desenho não sobreviveu à ordem constitucional atual. O art. 144, § 4º, da CF/88 atribui às polícias civis, DIRIGIDAS POR DELEGADOS DE POLÍCIA DE CARREIRA, as funções de polícia judiciária e a apuração de infrações penais; e o art. 2º, § 1º, da Lei nº 12.830/2013 reserva ao delegado a condução da investigação por meio do inquérito policial. Hoje, portanto, instaurar e presidir inquérito é atribuição privativa do delegado. Leia o comando: se ele disser 'nos termos da Lei 3.437/1975', vale a literalidade do Estatuto; se disser 'segundo a Constituição Federal' ou 'atualmente', a mesma assertiva fica ERRADA.",
+      fundamento: "Lei estadual 3.437/1975, art. 15, caput e parágrafo único. Em sentido contrário, no plano atual: CF/88, art. 144, § 4º, e Lei nº 12.830/2013, art. 2º, § 1º.",
+      macete: "O Inspetor de 1975 é autoridade policial no papel; desde 1988, quem preside inquérito é o delegado. O comando da questão decide qual dos dois planos vale.",
+      erroComum: "Responder pelo plano errado — negar a literalidade do Estatuto, ou afirmá-la quando o enunciado pergunta pelo regime vigente.",
+      comoBancaPensa: "Rol longo e fiel ao texto estadual. A banca também explora o inverso: cobra o mesmo rol sob a ótica da CF/88, e aí a resposta se inverte."
     }
   },
   {

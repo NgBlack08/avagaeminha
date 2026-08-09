@@ -40,15 +40,15 @@ const QUESTOES_PCAL_LOTE8 = [
     enunciado: "No crime de ameaça, consistente em ameaçar alguém, por palavra, escrito ou gesto, de causar-lhe mal injusto e grave, a ação penal é pública condicionada à representação do ofendido.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "condicionada à representação",
     cognitivo: {
-      motivo: "Cobrar a natureza da ação penal na ameaça (art. 147, parágrafo único).",
+      motivo: "Cobrar a natureza da ação penal na ameaça, hoje no art. 147, § 2º — regra que passou a conviver com uma exceção.",
       palavraCritica: "condicionada à representação",
     },
     comentario: {
-      resolucao: "CERTO. CP, art. 147: ameaçar alguém de causar-lhe mal injusto e grave. O parágrafo único condiciona a ação penal à representação do ofendido. O mal prometido deve ser injusto, grave e verossímil.",
-      fundamento: "CP, art. 147, parágrafo único.",
-      macete: "Ameaça: mal injusto e grave + representação.",
-      erroComum: "Considerar a ameaça de ação penal incondicionada.",
-      comoBancaPensa: "Natureza da ação penal é ponto recorrente nos crimes contra a pessoa."
+      resolucao: "CERTO, na figura do caput, que é a descrita no item. A regra está no art. 147, § 2º: somente se procede mediante representação. ATENÇÃO À EXCEÇÃO: a Lei nº 14.994/2024 acrescentou o § 1º — se a ameaça é praticada contra a mulher por razões da condição do sexo feminino (art. 121-A, § 1º), a pena é aplicada em dobro e, por ressalva expressa do § 2º, a ação penal passa a ser PÚBLICA INCONDICIONADA. Nessa hipótese, o Ministério Público age mesmo sem representação da ofendida.",
+      fundamento: "CP, art. 147, caput, §§ 1º e 2º (redação da Lei nº 14.994/2024).",
+      macete: "Ameaça comum: representação. Ameaça por razões da condição do sexo feminino: incondicionada e pena em dobro.",
+      erroComum: "Aplicar a exigência de representação também à hipótese do § 1º, que é justamente a ressalva do § 2º.",
+      comoBancaPensa: "Item que descreve só o caput é CERTO; se o enunciado disser 'em qualquer hipótese' ou citar violência de gênero, o mesmo conteúdo vira ERRADO."
     }
   },
   {

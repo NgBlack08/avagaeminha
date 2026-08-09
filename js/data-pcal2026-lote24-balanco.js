@@ -297,10 +297,10 @@ const QUESTOES_PCAL_LOTE24 = [
       palavraCritica: "detenção, em regime fechado ou aberto",
     },
     comentario: {
-      resolucao: "ERRADO. Conforme o art. 33, caput, do CP, a pena de detenção deve ser cumprida em regime SEMIABERTO ou aberto (não fechado), salvo necessidade de transferência para regime fechado no curso da execução. A assertiva erra ao listar 'fechado' como regime inicial da detenção.",
-      fundamento: "CP, art. 33, caput.",
-      macete: "Detenção: começa semiaberto/aberto. Reclusão: pode começar em qualquer regime.",
-      erroComum: "Confundir os regimes iniciais admitidos para cada tipo de pena.",
+      resolucao: "ERRADO. Conforme o art. 33, caput, do CP, a pena de detenção deve ser cumprida em regime SEMIABERTO ou aberto (não fechado), salvo necessidade de transferência para regime fechado no curso da execução. A assertiva erra ao listar 'fechado' como regime inicial da detenção. COMPLEMENTO — o caput diz quais regimes cada pena ADMITE; qual deles será o inicial é o § 2º que define, pela quantidade da pena e pela reincidência: acima de 8 anos, início obrigatório em fechado; não reincidente, entre 4 e 8 anos, pode iniciar no semiaberto; não reincidente, até 4 anos, pode iniciar no aberto. E o § 3º manda observar as circunstâncias judiciais do art. 59, que permitem fixar regime mais severo do que o do § 2º — daí a Súmula 719 do STF exigir motivação idônea para isso, e a Súmula 718 do STF recusar a gravidade abstrata do crime como fundamento.",
+      fundamento: "CP, art. 33, caput e §§ 2º e 3º; art. 59; Súmulas 718 e 719 do STF.",
+      macete: "Caput diz o que a pena admite; § 2º diz por onde ela começa (quantum + reincidência); § 3º deixa endurecer, mas exige fundamentação concreta.",
+      erroComum: "Confundir os regimes iniciais admitidos para cada tipo de pena, e parar no caput sem checar o § 2º, que é onde a banca costuma trocar as faixas de anos.",
       comoBancaPensa: "Acerta a primeira metade da frase (reclusão) para 'validar' a segunda, errada (detenção)."
     }
   },
