@@ -15,6 +15,35 @@
    distinguir o que vale hoje do que a maioria do material de estudo ainda
    ensina.
 
+   DUAS LEIS DE 2022 QUE **NÃO** ALTERARAM O ESTATUTO — leia antes de
+   escrever qualquer item novo aqui. Circula em material de cursinho a
+   ideia de que a Lei 8.641/2022 e a Lei 8.782/2022 seriam "atualizações
+   do Estatuto". Os dois textos foram conferidos na íntegra no SAPL da
+   Assembleia Legislativa de Alagoas, e não são:
+
+     Lei 8.641/2022 (28/03/2022) — lei AUTÔNOMA, de 6 artigos. Reestrutura
+       só a carreira de DELEGADO: 4 Classes (DPC-1 a DPC-4), ingresso na
+       4ª Classe, subsídio do art. 144, § 9º, da CF, 40 h semanais.
+       Converte as antigas Categorias em Classes com INVERSÃO de
+       simbologia (1ª Categoria/DC-3 → 1ª Classe/DPC-1). Não cita nenhum
+       artigo da Lei 3.437/1975; traz apenas a cláusula genérica
+       "revogam-se as disposições em contrário". Não toca em Inspetor,
+       Agente ou Escrivão, e NÃO revoga o art. 15 — por isso LI-053,
+       LI-117 e LI-118 seguem válidos.
+
+     Lei 8.782/2022 (20/12/2022) — cria o Núcleo de Qualidade de Vida,
+       Saúde e Segurança no Trabalho (NQVSST), subordinado ao
+       Delegado-Geral. O dispositivo que ela altera é o art. 37 da LEI
+       DELEGADA Nº 47/2015, não o Estatuto.
+
+   Consequência prática, dupla: (a) um item que diga "o Estatuto, com a
+   redação da Lei 8.641/2022..." é falso, porque essa lei não alterou o
+   Estatuto; (b) nenhuma das duas consta da lista de diplomas do edital,
+   e como não alteram a Lei 3.437/1975 também não entram pela cláusula
+   "e suas alterações". Escrever itens sobre elas seria cobrar matéria
+   fora do edital. Se um dia entrarem, o gancho correto é a carreira de
+   Delegado — que não é o cargo desta trilha (Agente e Escrivão).
+
    O EIXO DE DIFICULDADE É EXATAMENTE ESSE. O art. 4º foi reescrito três
    vezes. A redação original e as de 2003 e 2005 impunham tempo integral e
    dedicação exclusiva; a vigente, dada pela Lei 7.959/2017, autoriza o
