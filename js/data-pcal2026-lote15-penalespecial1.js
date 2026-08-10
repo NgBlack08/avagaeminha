@@ -349,18 +349,18 @@ const QUESTOES_PCAL_LOTE15 = [
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Lei 9.455/1997, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 55, probReaparecer: 0.82,
-    enunciado: "A condenação por crime de tortura acarreta, como efeito, a perda do cargo, função ou emprego público e a interdição para o seu exercício pelo dobro do prazo da pena aplicada.",
-    gabarito: "C", pegadinha: "literalidade", palavraChave: "dobro do prazo da pena",
+    enunciado: "A perda do cargo, função ou emprego público decorrente de condenação por crime de tortura depende de declaração expressa e motivada na sentença, não sendo efeito automático da condenação.",
+    gabarito: "E", pegadinha: "troca-conceito", palavraChave: "depende de declaração expressa e motivada",
     cognitivo: {
-      motivo: "Cobrar o efeito automático da condenação (art. 1º, § 5º).",
-      palavraCritica: "dobro do prazo da pena",
+      motivo: "Aplicar à tortura a regra geral do art. 92 do CP, que a lei especial afasta.",
+      palavraCritica: "não sendo efeito automático",
     },
     comentario: {
-      resolucao: "CERTO. O art. 1º, § 5º, da Lei 9.455/1997 estabelece que a condenação acarreta a perda do cargo, função ou emprego público e a interdição para seu exercício pelo dobro do prazo da pena aplicada. Trata-se de efeito automático da condenação, independentemente de motivação específica na sentença (diferentemente da regra geral do art. 92 do CP).",
-      fundamento: "Lei 9.455/1997, art. 1º, § 5º.",
-      macete: "Perda do cargo + interdição em DOBRO, automaticamente.",
-      erroComum: "Aplicar o 'mesmo prazo' em vez do dobro.",
-      comoBancaPensa: "Troca numérica no efeito da condenação."
+      resolucao: "ERRADO. Na Lei nº 9.455/1997 a perda do cargo é efeito AUTOMÁTICO da condenação: o art. 1º, § 5º, a impõe junto com a interdição para o exercício pelo dobro do prazo da pena, sem exigir declaração motivada. A exigência descrita no item é a do art. 92, parágrafo único, do Código Penal — regra GERAL, que a lei especial afasta neste ponto. É o par espelhado do LE-018, que enuncia o mesmo dispositivo sem a distorção.",
+      fundamento: "Lei nº 9.455/1997, art. 1º, § 5º; CP, art. 92, parágrafo único (regra geral afastada).",
+      macete: "Tortura: perda do cargo sai sozinha. No CP comum, o juiz precisa declarar.",
+      erroComum: "Generalizar a exigência de motivação do art. 92 do CP para as leis especiais.",
+      comoBancaPensa: "Traz uma regra verdadeira — só que de outro diploma — e a aplica onde há norma específica em sentido contrário."
     }
   },
   {

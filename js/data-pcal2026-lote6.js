@@ -13,21 +13,21 @@ const QUESTOES_PCAL_LOTE6 = [
 
   /* ==================== LEI 9.099/95 — JUIZADOS ESPECIAIS ==================== */
   {
-    id: "PP-020", disciplina: "Processo Penal", assunto: "Lei 9.099/1995", subassunto: "Infração de menor potencial ofensivo",
-    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
-    tipo: "CE", dificuldade: 2, tempoIdealSeg: 40, probReaparecer: 0.9,
-    enunciado: "Consideram-se infrações penais de menor potencial ofensivo, para os fins da Lei nº 9.099/1995, as contravenções penais e os crimes a que a lei comine pena máxima não superior a dois anos, cumulada ou não com multa.",
-    gabarito: "C", pegadinha: "literalidade", palavraChave: "pena máxima não superior a dois anos",
+    id: "PP-020", disciplina: "Processo Penal", assunto: "Lei 9.099/1995", subassunto: "IMPO e procedimento especial (art. 61, redação da Lei 11.313/2006)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (Lei 9.099/1995, art. 61)",
+    tipo: "CE", dificuldade: 3, tempoIdealSeg: 55, probReaparecer: 0.82,
+    enunciado: "Ficam excluídos do conceito de infração de menor potencial ofensivo os crimes cuja pena máxima não ultrapasse dois anos quando a lei preveja, para eles, procedimento especial.",
+    gabarito: "E", pegadinha: "literalidade", palavraChave: "procedimento especial",
     cognitivo: {
-      motivo: "Cobrar o conceito legal de IMPO (art. 61 da Lei 9.099/1995).",
-      palavraCritica: "pena máxima ≤ 2 anos",
+      motivo: "Reproduzir a ressalva final da redação ORIGINAL do art. 61, suprimida pela Lei 11.313/2006.",
+      palavraCritica: "procedimento especial",
     },
     comentario: {
-      resolucao: "CERTO. Lei 9.099/1995, art. 61: infrações de menor potencial ofensivo são as contravenções penais e os crimes com pena máxima não superior a 2 anos, cumulada ou não com multa. Define a competência do Juizado Especial Criminal.",
-      fundamento: "Lei 9.099/1995, art. 61.",
-      macete: "IMPO = 2 anos de MÁXIMA. Suspensão condicional = 1 ano de MÍNIMA.",
-      erroComum: "Trocar pena máxima por mínima ou os números 2 e 1.",
-      comoBancaPensa: "Conceitos com números próximos (1 × 2 anos) são cruzados na assertiva."
+      resolucao: "ERRADO — pela redação VIGENTE. A ressalva existiu: o art. 61, na redação original de 1995, excluía do conceito os crimes para os quais a lei previsse procedimento especial. A Lei nº 11.313/2006 SUPRIMIU essa parte final, de modo que hoje o único critério é a pena máxima não superior a dois anos, cumulada ou não com multa, mais as contravenções. Havendo conflito entre redações, prevalece a mais recente.",
+      fundamento: "Lei nº 9.099/1995, art. 61, com a redação da Lei nº 11.313/2006.",
+      macete: "Hoje só o quantum importa: 2 anos de máxima. Procedimento especial não exclui mais nada.",
+      erroComum: "Responder pela redação original, que ainda aparece em material antigo e em resumos.",
+      comoBancaPensa: "Cita fielmente um trecho revogado — padrão de atualização legislativa, o mesmo do art. 4º da Lei 6.276/2001."
     }
   },
   {

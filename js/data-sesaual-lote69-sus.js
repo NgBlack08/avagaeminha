@@ -849,22 +849,22 @@ const QUESTOES_SESAUAL_LOTE69 = [
 
   /* ===================== LEI 8.142/1990 ===================== */
   {
-    id: "SUS-083", disciplina: "Legislação Aplicada ao SUS", assunto: "Lei 8.142/1990 e controle social", subassunto: "Art. 1º — instâncias colegiadas",
+    id: "SUS-083", disciplina: "Legislação Aplicada ao SUS", assunto: "Lei 8.142/1990 e controle social", subassunto: "Art. 1º, § 1º — convocação da Conferência de Saúde",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (padrão de termo absoluto)",
+    origem: "Inédita — estilo CEBRASPE (Lei nº 8.142/1990, art. 1º, § 1º)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 75, probReaparecer: 0.8,
-    enunciado: "O SUS contará, em cada esfera de governo, sem prejuízo das funções do Poder Legislativo, com duas instâncias colegiadas: a Conferência de Saúde e o Conselho de Saúde.",
-    gabarito: "C", pegadinha: "termo-absoluto", palavraChave: "duas instâncias colegiadas ... Conferência ... Conselho",
+    enunciado: "A Conferência de Saúde reunir-se-á a cada quatro anos com a representação dos vários segmentos sociais, sendo sua convocação privativa do Poder Executivo do nível de governo correspondente.",
+    gabarito: "E", pegadinha: "restricao-indevida", palavraChave: "privativa do Poder Executivo",
     cognitivo: {
-      motivo: "Contraexemplo: numeral exato que corresponde ao art. 1º.",
-      palavraCritica: "duas instâncias",
+      motivo: "Suprimir as hipóteses de convocação extraordinária do § 1º, que não são do Executivo.",
+      palavraCritica: "privativa",
     },
     comentario: {
-      resolucao: "CERTO. É o art. 1º, caput. São exatamente duas — Conferência e Conselho —, em cada esfera de governo, e a ressalva quanto ao Legislativo deixa claro que o controle social não substitui o controle parlamentar. Comissões intergestores (CIT, CIB, CIR) não são instâncias de controle social, e sim de pactuação entre gestores.",
-      fundamento: "Lei nº 8.142/1990, art. 1º, caput.",
-      macete: "Controle social: Conferência (a cada 4 anos) e Conselho (permanente). Só esses dois.",
-      erroComum: "Incluir as comissões intergestores entre as instâncias colegiadas do art. 1º.",
-      comoBancaPensa: "Numeral fechado num rol que é mesmo taxativo."
+      resolucao: "ERRADO. O intervalo de quatro anos está certo, mas a convocação não é privativa do Executivo: o § 1º do art. 1º prevê que a Conferência é convocada pelo Poder Executivo ou, EXTRAORDINARIAMENTE, por ela própria ou pelo Conselho de Saúde. A alternativa importa: sem ela, o controle social dependeria da iniciativa do gestor que ele mesmo fiscaliza.",
+      fundamento: "Lei nº 8.142/1990, art. 1º, § 1º.",
+      macete: "Ordinária: Executivo, a cada 4 anos. Extraordinária: a própria Conferência ou o Conselho.",
+      erroComum: "Aceitar a exclusividade do Executivo por ser quem convoca no caso ordinário.",
+      comoBancaPensa: "Acerta o prazo para dar credibilidade e fecha indevidamente o rol de legitimados."
     }
   },
   {

@@ -258,6 +258,18 @@ async function navigate(view, opts = {}) {
     if (typeof pararTimerDuelo === "function") pararTimerDuelo();
     DUELO = null;
   }
+  /* Entrar no Banco vindo de outra tela conta como visita nova: a lista é
+     reembaralhada. Sem isto, `bancoListaCache` só caía quando a CHAVE mudava
+     (filtros, plano, trilha, cargo), de modo que sair para o Dashboard e
+     voltar reapresentava exatamente a mesma sequência — e o aluno passava a
+     decorar a ordem em vez do conteúdo. O cache continua valendo dentro da
+     visita, que é o que impede a lista de saltar a cada Anterior/Próxima,
+     a cada troca de página e depois de responder. */
+  if (view === "banco" && currentView !== "banco") {
+    bancoListaCache = null;
+    bancoIndice = 0;
+    bancoPagina = 0;
+  }
   currentView = view;
   if (!fromPopstate) {
     if (!historyInitialized) {
@@ -1226,6 +1238,9 @@ function toggleFiltroBancoMulti(campo, valor) {
 
 function limparFiltrosBanco() {
   bancoFiltros = {};
+  /* Zera o cache explicitamente: se os filtros JÁ estavam vazios, a chave não
+     muda e o clique não teria efeito nenhum — nem visual, nem de ordem. */
+  bancoListaCache = null;
   bancoIndice = 0;
   bancoPagina = 0;
   renderBanco();

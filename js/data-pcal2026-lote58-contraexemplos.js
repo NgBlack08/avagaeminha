@@ -493,18 +493,18 @@ const QUESTOES_PCAL_LOTE58 = [
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (contraexemplo de padrão)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 70, probReaparecer: 0.85,
-    enunciado: "A colaboração premiada é meio de obtenção de prova, e nenhuma sentença condenatória poderá ser proferida com fundamento apenas nas declarações do colaborador.",
-    gabarito: "C", pegadinha: "troca-conceito", palavraChave: "meio de obtenção de prova ... nenhuma sentença ... apenas nas declarações",
+    enunciado: "A colaboração premiada constitui negócio jurídico processual e meio de prova, sendo vedado proferir sentença condenatória com fundamento apenas nas declarações do colaborador.",
+    gabarito: "E", pegadinha: "troca-conceito", palavraChave: "meio de prova",
     cognitivo: {
-      motivo: "Fixar a natureza da colaboração e sua limitação probatória.",
-      palavraCritica: "meio de obtenção de prova ... nenhuma sentença",
+      motivo: "Trocar 'meio de obtenção de prova' por 'meio de prova' — categorias distintas que a lei nomeia expressamente.",
+      palavraCritica: "meio de prova",
     },
     comentario: {
-      resolucao: "CERTO. O art. 3º-A da Lei 12.850/2013 define a colaboração premiada como negócio jurídico processual e meio de obtenção de prova; o art. 4º, §16, veda que sentença condenatória seja proferida com fundamento apenas nas declarações do colaborador, exigindo elementos de corroboração.",
-      fundamento: "Lei 12.850/2013, art. 3º-A e art. 4º, §16.",
-      macete: "Colaboração precisa de corroboração.",
-      erroComum: "Chamá-la de meio de prova.",
-      comoBancaPensa: "Dois acertos técnicos num item que o candidato tende a rejeitar."
+      resolucao: "ERRADO. O art. 3º-A da Lei 12.850/2013 define a colaboração premiada como negócio jurídico processual e MEIO DE OBTENÇÃO DE PROVA — não meio de prova. A distinção não é preciosismo: meio de prova é a fonte que vai ao juízo (o depoimento, o documento); meio de obtenção é a técnica que serve para chegar até ela. Daí a exigência de corroboração do art. 4º, § 16, que a segunda metade do item reproduz corretamente. É o par espelhado do LE-030.",
+      fundamento: "Lei 12.850/2013, art. 3º-A e art. 4º, § 16.",
+      macete: "Colaboração, infiltração e ação controlada: todas são meio de OBTENÇÃO de prova.",
+      erroComum: "Tratar as duas expressões como sinônimas por proximidade vocabular.",
+      comoBancaPensa: "Suprime uma palavra de uma definição legal — 'obtenção' — e mantém todo o resto correto."
     }
   },
   {

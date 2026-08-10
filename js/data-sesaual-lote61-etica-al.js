@@ -540,18 +540,18 @@ const QUESTOES_SESAUAL_LOTE61 = [
     concurso: "SESAU", cargo: ["Escrivão","Agente","Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (contraexemplo de padrão)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.75,
-    enunciado: "Incumbe à Comissão de Ética fornecer, aos organismos encarregados da execução do quadro de carreira, os registros sobre a conduta ética dos servidores, para o efeito de instruir e fundamentar promoções e demais procedimentos próprios da carreira.",
-    gabarito: "C", pegadinha: "exigencia-inexistente", palavraChave: "para o efeito de instruir e fundamentar promoções",
+    enunciado: "Incumbe à Comissão de Ética fornecer aos organismos encarregados da execução do quadro de carreira os registros sobre a conduta ética dos servidores, desde que haja autorização expressa do servidor avaliado quanto à divulgação desses dados.",
+    gabarito: "E", pegadinha: "exigencia-inexistente", palavraChave: "autorização expressa do servidor avaliado",
     cognitivo: {
-      motivo: "Contraexemplo: a exigência parece burocracia inventada, mas está expressa no art. 7º.",
-      palavraCritica: "instruir e fundamentar promoções",
+      motivo: "Condicionar a um consentimento que o art. 7º não exige o dever de informar da Comissão de Ética.",
+      palavraCritica: "desde que",
     },
     comentario: {
-      resolucao: "CERTO. É o art. 7º da Lei 6.754/2006, e o comando é literal. O item costuma ser negado por parecer um acréscimo administrativo verossímil demais — a intuição de que juízo ético e progressão funcional correm em trilhos separados. Não correm: o dispositivo amarra os dois, e o parágrafo único do art. 9º reforça a amarração ao manter a cominação na ficha funcional por cinco anos justamente 'para todos os efeitos legais'. Antes de marcar ERRADO por achar a exigência inventada, confira se ela não está no texto — aqui está.",
-      fundamento: "Lei estadual 6.754/2006, art. 7º; art. 9º, parágrafo único.",
-      macete: "Conduta ética alimenta a carreira: a Comissão informa quem cuida de promoções.",
-      erroComum: "Negar a atribuição por supor que ética e progressão funcional não se comunicam.",
-      comoBancaPensa: "Pune quem responde por reflexo 'exigência que não existe' sem verificar o dispositivo."
+      resolucao: "ERRADO. O art. 7º da Lei 6.754/2006 impõe à Comissão de Ética o dever de fornecer esses registros, sem condicioná-lo a qualquer autorização do servidor. O consentimento acrescentado pelo item inverteria a lógica do dispositivo: quem é avaliado passaria a controlar o que a Administração pode saber a seu respeito para fins de promoção. É o par espelhado do ET-018, que traz o mesmo artigo sem o acréscimo.",
+      fundamento: "Lei estadual 6.754/2006, art. 7º.",
+      macete: "Dever de informar não pede licença ao avaliado.",
+      erroComum: "Aceitar a condição por ela soar protetiva da privacidade do servidor.",
+      comoBancaPensa: "Enxerta um requisito de consentimento — plausível hoje, e por isso eficaz — num dever legal incondicionado."
     }
   },
 ];

@@ -556,18 +556,18 @@ const QUESTOES_PCAL_LOTE62 = [
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de literalidade normativa)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.76,
-    enunciado: "A sindicância será instaurada quando as irregularidades não se revelarem evidentes ou quando for incerta a sua autoria.",
-    gabarito: "C", pegadinha: "literalidade", palavraChave: "não se revelarem evidentes ou ... incerta a sua autoria",
+    enunciado: "A sindicância será instaurada quando as irregularidades não se revelarem evidentes ou quando for incerta a sua autoria, cabendo a sua condução a um único funcionário policial de categoria igual ou superior à do sindicado.",
+    gabarito: "E", pegadinha: "troca-numerica", palavraChave: "um único funcionário policial",
     cognitivo: {
-      motivo: "Fixar as duas hipóteses alternativas de cabimento da sindicância.",
-      palavraCritica: "ou",
+      motivo: "Reduzir para um o número de condutores da sindicância, que o art. 117 fixa em dois.",
+      palavraCritica: "um único",
     },
     comentario: {
-      resolucao: "CERTO. É o art. 117 da Lei 3.437/1975, e as hipóteses são ALTERNATIVAS — basta uma delas. A conjunção importa: item que exija a presença simultânea de irregularidade não evidente E autoria incerta restringe indevidamente o cabimento. A função do instituto explica a regra: a sindicância é procedimento preparatório, serve para esclarecer o que ainda não está claro. Havendo evidência e autoria certa, vai-se direto ao caminho do art. 115.",
+      resolucao: "ERRADO. As hipóteses de cabimento estão certas e são mesmo alternativas, mas o art. 117 da Lei 3.437/1975 atribui a condução da sindicância a DOIS funcionários policiais de categoria igual ou superior à do sindicado — não a um só. O item acerta a primeira metade para dar credibilidade e altera apenas o número de condutores. É o par espelhado do LI-073, que enuncia o dispositivo completo e correto.",
       fundamento: "Lei estadual 3.437/1975, arts. 113 e 117.",
-      macete: "Irregularidade não evidente OU autoria incerta — basta uma.",
-      erroComum: "Ler as hipóteses como cumulativas.",
-      comoBancaPensa: "Troca 'ou' por 'e' — a menor alteração possível, e a mais difícil de ver."
+      macete: "Sindicância: DOIS condutores, de categoria igual ou superior à do sindicado.",
+      erroComum: "Supor condução singular, por analogia com o sindicante único de outros estatutos.",
+      comoBancaPensa: "Metade verdadeira seguida de troca numérica — o candidato valida no primeiro trecho e não confere o segundo."
     }
   },
   {

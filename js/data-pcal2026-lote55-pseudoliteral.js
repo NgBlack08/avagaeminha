@@ -421,18 +421,18 @@ const QUESTOES_PCAL_LOTE55 = [
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (pseudo-literalidade)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 70, probReaparecer: 0.9,
-    enunciado: "Considera-se organização criminosa a associação de três ou mais pessoas, estruturalmente ordenada e caracterizada pela divisão de tarefas, ainda que informalmente, com objetivo de obter, direta ou indiretamente, vantagem de qualquer natureza, mediante a prática de infrações penais cujas penas máximas sejam superiores a quatro anos, ou que sejam de caráter transnacional.",
-    gabarito: "E", pegadinha: "literalidade", palavraChave: "associação de três ou mais pessoas",
+    enunciado: "Considera-se organização criminosa a associação de quatro ou mais pessoas, estruturalmente ordenada e caracterizada pela divisão de tarefas, ainda que informalmente, com objetivo de obter, direta ou indiretamente, vantagem de qualquer natureza, mediante a prática de infrações penais cujas penas máximas sejam superiores a quatro anos, ou que sejam de caráter transnacional.",
+    gabarito: "C", pegadinha: "literalidade", palavraChave: "quatro ou mais pessoas",
     cognitivo: {
-      motivo: "Distinguir organização criminosa de associação criminosa pelo número mínimo de integrantes.",
-      palavraCritica: "três ou mais pessoas",
+      motivo: "Fixar o conceito legal íntegro, para servir de referência ao par espelhado que troca o numeral.",
+      palavraCritica: "quatro ou mais pessoas",
     },
     comentario: {
-      resolucao: "ERRADO. A organização criminosa exige associação de 4 (quatro) ou mais pessoas. O número de 3 pessoas corresponde ao crime de associação criminosa do art. 288 do Código Penal. Os demais elementos do conceito — estrutura ordenada, divisão de tarefas ainda que informal, vantagem de qualquer natureza e o patamar de penas máximas superiores a 4 anos ou caráter transnacional — estão corretos.",
-      fundamento: "Lei 12.850/2013, art. 1º, §1º; CP, art. 288.",
-      macete: "Organização criminosa: mínimo de 4 pessoas.",
-      erroComum: "Trocar pelo número da associação criminosa.",
-      comoBancaPensa: "Reproduz um conceito longo com absoluta fidelidade e altera o primeiro numeral, que já foi lido antes de o candidato entrar em modo de conferência."
+      resolucao: "CERTO. É a definição do art. 1º, § 1º, da Lei 12.850/2013, reproduzida sem alteração: quatro ou mais pessoas, estrutura ordenada, divisão de tarefas ainda que informal, vantagem de qualquer natureza e infrações com pena máxima superior a quatro anos OU de caráter transnacional. Note que os dois requisitos finais são alternativos, não cumulativos.",
+      fundamento: "Lei 12.850/2013, art. 1º, § 1º.",
+      macete: "Organização criminosa: 4 pessoas e pena acima de 4 anos. Associação criminosa (CP, art. 288): 3 pessoas.",
+      erroComum: "Baixar o mínimo para três, que é o número da associação criminosa do art. 288 do CP.",
+      comoBancaPensa: "O par deste item é o LE-007, que altera exatamente o primeiro numeral — treinar os dois juntos ensina onde olhar."
     }
   },
   {
