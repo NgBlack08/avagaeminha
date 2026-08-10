@@ -566,6 +566,30 @@ function topbar(titulo, sub, actionsHtml) {
 
 const AVISO_ESTATISTICO = `<div class="aviso">⚠ As probabilidades e índices exibidos são <b>estimativas estatísticas</b> baseadas em frequência histórica, tendências legislativas e perfil da banca — não constituem garantia sobre o conteúdo de provas futuras.</div>`;
 
+/* Bloco "Padrão da banca detectado", mostrado depois do gabarito.
+
+   Antes ele imprimia "(incidência 82%)" cru ao lado do nome do padrão. O
+   número é a `incidencia` do DNA_BANCA, que o comentário daquela constante
+   descreve como ESTIMATIVA EDITORIAL — "não foi medida, e por isso não deve
+   ser exibida como se fosse estatística apurada". O bloco violava essa regra
+   justamente onde o aluno passa mais tempo: uma vez por questão respondida.
+
+   Passa a seguir o mesmo modelo que o Dashboard já adotava — a estimativa
+   nomeada como estimativa, e ao lado dela a composição MEDIDA deste banco,
+   com o alerta quando o padrão for previsível demais aqui dentro. São
+   grandezas de origem diferente e agora aparecem rotuladas como tais. */
+function padraoDetectadoHtml(dna) {
+  if (!dna) return "";
+  const c = composicaoPadroes().find(x => x.slug === dna.slug);
+  const viciado = c && c.total >= 30 && c.previsibilidade >= 0.85;
+  const medido = c
+    ? `<div class="dna-comp">Neste banco: ${c.total} itens deste padrão · ${Math.round(c.previsibilidade * 100)}% caem em <b>${c.ladoDominante === "C" ? "CERTO" : "ERRADO"}</b>${viciado ? ` <span class="dna-alerta" title="Dentro deste banco o padrão é previsível demais. É característica do acervo, não da banca — não use como regra de chute.">⚠ previsível aqui</span>` : ""}</div>`
+    : "";
+  return `<div class="bloco"><b>Padrão da banca detectado: ${escapeHtml(dna.nome)}</b>${escapeHtml(dna.gatilho)}
+    <div class="dna-origem">Uso estimado pela banca: ${dna.incidencia}% — leitura editorial de provas anteriores, não contagem item a item.</div>
+    ${medido}</div>`;
+}
+
 /* Ordena o radar lexical do marcador mais informativo para o menos. Sem
    isso a lista sugere que todos os termos têm o mesmo peso, que é
    justamente o erro que a calibração desfez. */
@@ -1534,7 +1558,7 @@ async function responder(qid, resposta) {
         <div class="bloco"><b>Macete</b>${escapeHtml(c.macete)}</div>
         <div class="bloco"><b>Erro mais comum</b>${escapeHtml(c.erroComum)}</div>
         <div class="bloco"><b>Como a banca pensa</b>${escapeHtml(c.comoBancaPensa)}</div>
-        ${dna ? `<div class="bloco"><b>Padrão da banca detectado: ${escapeHtml(dna.nome)} (incidência ${dna.incidencia}%)</b>${escapeHtml(dna.gatilho)}</div>` : ""}
+        ${padraoDetectadoHtml(dna)}
       </div>
       ${estrategiasDaQuestaoHtml(q)}
       ${feedbackHtml(q)}`;
@@ -2114,7 +2138,7 @@ function provaRevisaoHtml(d, i) {
       ${c.jurisprudencia ? `<div class="bloco"><b>Jurisprudência</b>${escapeHtml(c.jurisprudencia)}</div>` : ""}
       <div class="bloco"><b>Macete</b>${escapeHtml(c.macete)}</div>
       <div class="bloco"><b>Como a banca pensa</b>${escapeHtml(c.comoBancaPensa)}</div>
-      ${dna ? `<div class="bloco"><b>Padrão detectado: ${escapeHtml(dna.nome)} (incidência ${dna.incidencia}%)</b>${escapeHtml(dna.gatilho)}</div>` : ""}
+      ${padraoDetectadoHtml(dna)}
     </div>
     ${estrategiasDaQuestaoHtml(q)}
     ${feedbackHtml(q)}`}
@@ -2151,14 +2175,26 @@ function renderRaioX() {
   MAIN().innerHTML = topbar("Raio-X da Banca",
     "Engenharia reversa do CEBRASPE: padrões, frequências e evolução histórica") +
   `<div class="card" style="margin-bottom:16px">
-    <h3>🧬 DNA da CEBRASPE <span class="hint">índice de incidência estimado por padrão</span></h3>
-    ${dna.map(d => `
+    <h3>🧬 DNA da CEBRASPE <span class="hint">estimativa editorial de uso, por padrão</span></h3>
+    ${(() => {
+      /* Mesmo par que o Dashboard mostra: barra = estimativa editorial;
+         linha abaixo = composição MEDIDA deste banco. O Raio-X exibia só a
+         barra, o que deixava a estimativa parecendo apuração. */
+      const comp = new Map(composicaoPadroes().map(c => [c.slug, c]));
+      return dna.map(d => {
+        const c = comp.get(d.slug);
+        const viciado = c && c.total >= 30 && c.previsibilidade >= 0.85;
+        return `
       <div class="dna-item">
         <h4>${d.nome}</h4>
         <div style="display:flex;gap:10px"><div class="dna-bar"><i style="width:${d.incidencia}%"></i></div><span class="dna-pct">${d.incidencia}%</span></div>
+        ${c ? `<div class="dna-comp">Neste banco: ${c.total} itens · ${Math.round(c.previsibilidade * 100)}% caem em <b>${c.ladoDominante === "C" ? "CERTO" : "ERRADO"}</b>${viciado ? ` <span class="dna-alerta" title="Previsível demais dentro deste acervo — característica do banco, não da banca.">⚠ previsível aqui</span>` : ""}</div>` : ""}
         <p>${d.desc}</p>
         <div class="gatilho">⚡ Gatilho mental: ${d.gatilho}</div>
-      </div>`).join("")}
+      </div>`;
+      }).join("");
+    })()}
+    <div class="dna-nota">A barra é <b>estimativa editorial</b> de quanto a banca usa cada padrão. A linha "neste banco" é <b>medida</b>, mas mede este acervo — não a prova.</div>
     ${dna.length < DNA_BANCA.length ? `<div style="font-size:12.5px;color:var(--muted);margin-top:10px">
       Exibindo os ${dna.length} padrões que ocorrem nas questões da sua trilha. Os demais existem no banco, mas em disciplinas que não caem na sua prova — <b>jurisprudência inventada</b>, por exemplo, não tem como aparecer em conteúdo clínico.</div>` : ""}
     ${AVISO_ESTATISTICO}
@@ -2584,7 +2620,7 @@ function estrategiaCardHtml(e) {
   return `<details class="estrategia">
     <summary class="estr-top">
       <h4>✦ ${escapeHtml(e.nome)}</h4>
-      ${dnas.map(d => `<span class="tag dna" title="${escapeHtml(d.desc)}">neutraliza: ${escapeHtml(d.nome)} · ${d.incidencia}%</span>`).join("")}
+      ${dnas.map(d => `<span class="tag dna" title="${escapeHtml(d.desc)}">neutraliza: ${escapeHtml(d.nome)}</span>`).join("")}
     </summary>
     <p class="estr-desc">${escapeHtml(e.desc)}</p>
 

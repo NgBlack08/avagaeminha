@@ -36,11 +36,21 @@ const CARGOS = ["Escrivão", "Agente", "Delegado", "Perito Criminal", "Papilosco
      • o desempenho do candidato por padrão — ver `statsPorPegadinha()`.
 
    A distinção importa porque a composição do banco é enviesada por
-   construção: `literalidade` responde por 43% dos itens e cai em CERTO em
+   construção: `literalidade` responde por ~40% dos itens e cai em CERTO em
    cerca de 90% deles. Quem treinar aqui e concluir "citação fiel da lei
    costuma ser CERTO" terá aprendido o banco, não a banca. O app precisa
    dizer isso em vez de esconder — daí a tela expor as três grandezas
-   separadas, cada uma com sua origem. */
+   separadas, cada uma com sua origem.
+
+   ONDE ISSO APARECE, e por quê em todos os lugares. A regra vale para as
+   QUATRO telas que exibem `incidencia`, e não só para o Dashboard:
+     • Dashboard e Raio-X — barra da estimativa + linha medida do banco;
+     • bloco pós-resposta — `padraoDetectadoHtml()` em js/app.js;
+     • Estratégias — a etiqueta "neutraliza:" não mostra número nenhum,
+       porque ali o padrão é só o alvo da técnica, não uma medida.
+   Até a versão 7.140 o bloco pós-resposta e a etiqueta imprimiam
+   "(incidência 82%)" cru, o que contrariava este comentário justamente no
+   ponto de maior exposição — uma vez por questão respondida. */
 const DNA_BANCA = [
   { slug: "termo-absoluto", nome: "Termos absolutos", incidencia: 82,
     desc: "Uso de 'sempre', 'nunca', 'somente', 'qualquer', 'todos'. Termos absolutos frequentemente tornam a assertiva ERRADA — mas não automaticamente: normas literais podem ser absolutas (ex.: vedação à tortura).",
