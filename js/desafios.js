@@ -17,36 +17,51 @@ let rankingPeriodo = "semana";
 function setRankingPeriodo(p) { rankingPeriodo = p; renderRanking(); }
 
 /* ---------------- Wrappers de dados (Supabase) ---------------- */
+/* Devolvem null quando a leitura FALHA, e [] quando ela deu certo e não há
+   ninguém. A distinção existe porque as duas situações produziam a mesma
+   tela — "Ainda não há duelos concluídos" —, e uma delas é mentira: sessão
+   expirada, rede caída ou permissão negada viravam "o ranking está vazio".
+   É a mesma degradação silenciosa que carregarEstadoNuvem já corrigiu. */
 async function carregarRanking(periodo) {
   const { data, error } = await supa.rpc("ranking_desafios", { p_periodo: periodo });
-  if (error) { console.error("Erro ao carregar ranking:", error); return []; }
+  if (error) { console.error("Erro ao carregar ranking:", error); return null; }
   return data || [];
 }
 async function carregarRankingPontuadores(periodo) {
   const { data, error } = await supa.rpc("ranking_pontuadores_desafios", { p_periodo: periodo });
-  if (error) { console.error("Erro ao carregar ranking de pontuadores:", error); return []; }
+  if (error) { console.error("Erro ao carregar ranking de pontuadores:", error); return null; }
   return data || [];
 }
+/* Sessão pode ter caído entre abrir a tela e a consulta sair — o logout por
+   inatividade é de 30 minutos e a aba costuma ficar aberta. Sem esta guarda,
+   `CURRENT_USER.id` lançava TypeError de dentro do Promise.all de
+   renderRanking, a exceção escapava e o loader "Carregando ranking…" nunca
+   era removido: a tela ficava parada para sempre, sem erro visível. */
+function semSessao() { return !CURRENT_USER || !CURRENT_USER.id; }
+
 async function carregarDesafiosPendentes() {
+  if (semSessao()) return null;
   const { data, error } = await supa.from("desafios").select("*")
     .eq("desafiado_id", CURRENT_USER.id).eq("status", "pendente")
     .order("created_at", { ascending: false });
-  if (error) { console.error("Erro ao carregar pendentes:", error); return []; }
+  if (error) { console.error("Erro ao carregar pendentes:", error); return null; }
   return data || [];
 }
 async function carregarDesafiosEnviados() {
+  if (semSessao()) return null;
   const { data, error } = await supa.from("desafios").select("*")
     .eq("desafiante_id", CURRENT_USER.id).eq("status", "pendente")
     .order("created_at", { ascending: false });
-  if (error) { console.error("Erro ao carregar enviados:", error); return []; }
+  if (error) { console.error("Erro ao carregar enviados:", error); return null; }
   return data || [];
 }
 async function carregarHistoricoDesafios() {
+  if (semSessao()) return null;
   const uid = CURRENT_USER.id;
   const { data, error } = await supa.from("desafios").select("*")
     .or(`desafiante_id.eq.${uid},desafiado_id.eq.${uid}`).eq("status", "concluido")
     .order("concluido_at", { ascending: false }).limit(12);
-  if (error) { console.error("Erro ao carregar histórico:", error); return []; }
+  if (error) { console.error("Erro ao carregar histórico:", error); return null; }
   return data || [];
 }
 
@@ -88,8 +103,7 @@ async function renderRanking() {
        ranking carregava, o insertAdjacentHTML abaixo colaria o conteúdo no
        fim da view errada. */
     if (currentView !== "ranking") return;
-    if (currentView !== "ranking") return;
-  MAIN().querySelector("#ranking-load")?.remove();
+    MAIN().querySelector("#ranking-load")?.remove();
     MAIN().insertAdjacentHTML("beforeend", `
       <div class="card" style="margin-bottom:16px">
         <h3>🎭 Crie seu nickname para competir</h3>
@@ -109,16 +123,22 @@ async function renderRanking() {
     return;
   }
 
-  const [ranking, pontuadores, pendentes, enviados, historico] = await Promise.all([
+  /* allSettled em vez de all: com `all`, uma única rejeição abortava o
+     render inteiro e o loader "Carregando ranking…" ficava na tela para
+     sempre. Aqui cada fonte falha por conta própria e a tela ainda sai. */
+  const partes = await Promise.allSettled([
     carregarRanking(rankingPeriodo), carregarRankingPontuadores(rankingPeriodo), carregarDesafiosPendentes(), carregarDesafiosEnviados(), carregarHistoricoDesafios()
   ]);
+  const [ranking, pontuadores, pendentes, enviados, historico] =
+    partes.map(r => (r.status === "fulfilled" ? r.value : null));
   const eu = APP_STATE.config.nickname;
+  if (currentView !== "ranking") return;
   MAIN().querySelector("#ranking-load")?.remove();
 
   let html = "";
 
   /* Desafios pendentes recebidos */
-  if (pendentes.length) {
+  if (pendentes && pendentes.length) {
     html += `<div class="card" style="margin-bottom:16px">
       <h3>📥 Desafios esperando por você <span class="tag bad">${pendentes.length}</span></h3>
       ${pendentes.map(d => `
@@ -143,7 +163,7 @@ async function renderRanking() {
   html += rankingTabelaHtml(ranking, eu);
 
   /* Enviados aguardando resposta */
-  if (enviados.length) {
+  if (enviados && enviados.length) {
     html += `<div class="card" style="margin-top:16px">
       <h3>📤 Seus desafios aguardando resposta</h3>
       ${enviados.map(d => `<div class="radar-linha">⏳ Você desafiou <b>${escapeHtml(d.nickname_desafiado)}</b> · ${d.n} questões
@@ -152,7 +172,7 @@ async function renderRanking() {
   }
 
   /* Histórico de duelos concluídos */
-  if (historico.length) {
+  if (historico && historico.length) {
     html += `<div class="card" style="margin-top:16px">
       <h3>🗡 Histórico de duelos</h3>
       ${historico.map(d => desafioHistoricoLinha(d)).join("")}
@@ -215,6 +235,9 @@ function podioHtml(lista, { titulo, icone, sufixo, vazio }) {
   </div>`;
 }
 function podiosHtml(ranking, pontuadores, eu) {
+  /* null em qualquer das duas listas = leitura falhou. Quem avisa é a
+     tabela, logo abaixo; pódio vazio aqui apenas reforçaria o engano. */
+  if (ranking === null || pontuadores === null) return "";
   const rotulo = periodoLabel(rankingPeriodo);
   const vencedores = ranking.filter(r => Number(r.vitorias) > 0).slice(0, 3)
     .map(r => ({ nickname: r.nickname, valor: r.vitorias, sub: `${r.derrotas}D · ${r.empates}E`, souEu: eu && r.nickname === eu }));
@@ -235,6 +258,14 @@ function podiosHtml(ranking, pontuadores, eu) {
 
 function rankingTabelaHtml(rankingCompleto, eu) {
   const rotulo = periodoLabel(rankingPeriodo);
+  /* null = a leitura falhou. Dizer isso é obrigatório: o aluno precisa saber
+     que o que está vendo não é o estado real da competição. */
+  if (rankingCompleto === null) {
+    return `<div class="card"><h3>🏆 Ranking dos maiores vencedores — ${rotulo}</h3>
+      <div class="aviso" style="border-left-color:var(--warn)">Não foi possível carregar o ranking agora.
+      Isso costuma ser sessão expirada ou falha de rede — <b>não</b> quer dizer que não há duelos.
+      Entre novamente ou tente daqui a pouco.</div></div>`;
+  }
   const vazioPeriodo = rankingPeriodo === "geral" ? "" : ` ${periodoPrep(rankingPeriodo)}`;
   /* Fora do "geral", esconde quem não jogou no período — senão a tabela
      vira a lista inteira de nicknames cadastrados, quase toda zerada. */
@@ -286,6 +317,11 @@ function desafioHistoricoLinha(d) {
 /* ---------------- Criar desafio ---------------- */
 async function abrirNovoDesafio() {
   const ranking = await carregarRanking();
+  if (ranking === null) {
+    await mostrarAlerta("Não foi possível carregar a lista de adversários agora. Verifique sua conexão ou entre novamente.", "Falha ao abrir o desafio");
+    navigate("ranking");
+    return;
+  }
   const eu = APP_STATE.config.nickname;
   const oponentes = ranking.filter(r => r.nickname !== eu);
   MAIN().innerHTML = topbar("Novo desafio", "Escolha o adversário e o tamanho do duelo", `<button class="btn ghost small" onclick="navigate('ranking')">← Voltar</button>`) +
