@@ -82,6 +82,30 @@
   --warn: #f59e0b;
   --bad: #ef4444;
 
+  /* Cores de identidade dos dois painéis de inteligência: pegadinhas em
+     roxo, predições em ciano. Estavam em hex fixo lá embaixo, iguais nos
+     dois temas — e sobre o branco do tema claro caíam para 2,6:1 e 1,8:1,
+     abaixo dos 4,5:1 que texto pequeno exige. Viraram token justamente
+     para poder ter valor por tema. Aqui, no escuro, são os originais. */
+  --dna-roxo: #c084fc;
+  --pred-ciano: #22d3ee;
+  --muted-forte: #a7b6d2;
+  /* Texto de acento POSADO SOBRE --accent-soft (etiquetas e chips ativos).
+     Usar o proprio --accent ali dá azul sobre azul translúcido: 4,2:1 no
+     escuro e 4,5:1 no claro, na fronteira do mínimo para texto pequeno.
+     Este token afasta um degrau, mantendo a mesma família de matiz. */
+  --accent-texto: #7fb3ff;
+  /* Mesmo raciocínio do --accent-texto, para as cores semânticas: uma
+     etiqueta "tende a CERTO" pinta --ok sobre um fundo que é o próprio
+     --ok a 12% de opacidade. A relação fica em 2,9–4,4:1, abaixo do
+     mínimo. Estes tokens são SÓ para texto sobre esses fundos suaves;
+     borda e preenchimento continuam usando --ok/--warn/--bad. */
+  --ok-texto: #34d399;
+  --bad-texto: #f87171;
+  /* `--warn` é ótimo para borda e fundo, mas como TEXTO de 12px sobre
+     superfície clara não alcança 4,5:1. Este token existe só para texto. */
+  --warn-texto: #f59e0b;
+
   --mark-e: rgba(239,68,68,.22); --mark-c: rgba(16,185,129,.2); --mark-n: rgba(245,158,11,.22);
 
   --shadow-sm: 0 1px 2px rgba(0,0,0,.3);
@@ -108,6 +132,17 @@
   --ok: #059669;
   --warn: #d97706;
   --bad: #dc2626;
+
+  /* Versões escurecidas para o fundo claro. Mesma família de matiz — a
+     identidade roxo/ciano se mantém —, só com luminosidade suficiente
+     para o texto ser legível sobre branco. */
+  --dna-roxo: #7e22ce;
+  --pred-ciano: #0e7490;
+  --muted-forte: #4d5b79;
+  --accent-texto: #1d4ed8;
+  --ok-texto: #065f46;
+  --bad-texto: #b91c1c;
+  --warn-texto: #92400e;
 
   --mark-e: rgba(220,38,38,.14); --mark-c: rgba(5,150,105,.14); --mark-n: rgba(217,119,6,.16);
 
@@ -303,7 +338,7 @@ body {
   font-size: 11px; color: var(--muted); opacity: .85;
   margin-top: 6px; font-style: italic;
 }
-.dna-alerta { color: var(--warn); font-weight: 600; white-space: nowrap; }
+.dna-alerta { color: var(--warn-texto); font-weight: 600; white-space: nowrap; }
 .dna-nota {
   font-size: 11.5px; color: var(--muted); line-height: 1.5;
   margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border);
@@ -336,7 +371,7 @@ body {
 .pe-hoje-sugestao { margin-top: 10px; padding: 9px 12px; border-radius: var(--r-md);
   background: var(--surface2); font-size: 13px; color: var(--muted); }
 .pe-hoje-sugestao b { color: var(--text); }
-.pe-hoje-sugestao a { color: var(--accent); font-weight: 600; }
+.pe-hoje-sugestao a { color: var(--accent-texto); font-weight: 600; }
 .pe-hoje.cumprida .pe-hoje-placar b { color: var(--ok); }
 .pe-hoje.cumprida .gami-bar i { background: var(--ok); }
 
@@ -522,13 +557,13 @@ label.f select, label.f input { max-width: 100%; }
 
 .tag {
   display: inline-flex; align-items: center; gap: 5px; font-size: 11.5px; font-weight: 600;
-  padding: 3.5px 11px; border-radius: var(--r-full); background: var(--surface2); color: var(--muted);
+  padding: 3.5px 11px; border-radius: var(--r-full); background: var(--surface2); color: var(--muted-forte);
   border: 1px solid var(--border);
 }
-.tag.accent { background: var(--accent-soft); color: var(--accent); border-color: transparent; }
-.tag.ok { background: rgba(16,185,129,.12); color: var(--ok); border-color: transparent; }
-.tag.warn { background: rgba(245,158,11,.14); color: var(--warn); border-color: transparent; }
-.tag.bad { background: rgba(239,68,68,.12); color: var(--bad); border-color: transparent; }
+.tag.accent { background: var(--accent-soft); color: var(--accent-texto); border-color: transparent; }
+.tag.ok { background: rgba(16,185,129,.12); color: var(--ok-texto); border-color: transparent; }
+.tag.warn { background: rgba(245,158,11,.14); color: var(--warn-texto); border-color: transparent; }
+.tag.bad { background: rgba(239,68,68,.12); color: var(--bad-texto); border-color: transparent; }
 
 .diff { letter-spacing: 2px; font-size: 11px; }
 
@@ -702,9 +737,9 @@ details.cog summary:hover { opacity: .8; }
 /* Identidade de cor por tipo de dado: pegadinhas (roxo/magenta) vs
    predições de cobrança (ciano/azul) — evita confundir com botões primários. */
 .card-dna .dna-bar i { background: linear-gradient(135deg, #7c3aed, #d946ef); }
-.card-dna .dna-pct { color: #c084fc; }
-.card-pred .pred-score { color: #22d3ee; }
-.card-pred .pred-rank { color: color-mix(in srgb, #22d3ee 55%, var(--muted)); }
+.card-dna .dna-pct { color: var(--dna-roxo); }
+.card-pred .pred-score { color: var(--pred-ciano); }
+.card-pred .pred-rank { color: color-mix(in srgb, var(--pred-ciano) 55%, var(--muted)); }
 
 .palavra-item { padding: 13px 0; border-bottom: 1px solid var(--border); display: flex; gap: 12px; align-items: baseline; }
 .palavra-item:last-child { border-bottom: none; }
@@ -726,11 +761,11 @@ details.cog summary:hover { opacity: .8; }
 .chip {
   font: inherit; font-size: 12.5px; font-weight: 600; cursor: pointer;
   padding: 7px 14px; border-radius: var(--r-full);
-  background: var(--surface2); color: var(--muted); border: 1px solid var(--border);
+  background: var(--surface2); color: var(--muted-forte); border: 1px solid var(--border);
   transition: color var(--t-fast), background var(--t-fast), border-color var(--t-fast), transform var(--t-fast);
 }
 .chip:hover { color: var(--text); transform: translateY(-1px); }
-.chip.active { background: var(--accent-soft); color: var(--accent); border-color: transparent; }
+.chip.active { background: var(--accent-soft); color: var(--accent-texto); border-color: transparent; }
 
 .estr-cat { margin-bottom: 16px; }
 .estr-cat-desc { margin: -6px 0 4px; font-size: 12.5px; line-height: 1.55; }
@@ -769,9 +804,9 @@ details.cog summary:hover { opacity: .8; }
 .estr-duo { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
 .estr-duo .estr-bloco { padding: 11px 13px; border-radius: 10px; margin-bottom: 12px; }
 .estr-bloco.ganho { background: rgba(16,185,129,.08); }
-.estr-bloco.ganho > b { color: var(--ok); }
+.estr-bloco.ganho > b { color: var(--ok-texto); }
 .estr-bloco.risco { background: rgba(245,158,11,.09); }
-.estr-bloco.risco > b { color: var(--warn); }
+.estr-bloco.risco > b { color: var(--warn-texto); }
 
 .estr-exemplo {
   margin-top: 14px; padding: 14px; border: 1px solid var(--border);
@@ -1267,10 +1302,10 @@ mark.trecho-estrategia {
 .radar-aviso { font-size: 13px; line-height: 1.6; padding: 11px 13px; border-radius: var(--r-md);
   background: var(--surface2); border-left: 3px solid var(--accent); color: var(--muted); }
 .radar-aviso b { color: var(--text); }
-.tag.forca-forte { background: color-mix(in srgb, var(--ok) 18%, transparent); color: var(--ok); }
-.tag.forca-moderado { background: color-mix(in srgb, var(--warn) 18%, transparent); color: var(--warn); }
+.tag.forca-forte { background: color-mix(in srgb, var(--ok) 18%, transparent); color: var(--ok-texto); }
+.tag.forca-moderado { background: color-mix(in srgb, var(--warn) 18%, transparent); color: var(--warn-texto); }
 .tag.forca-fraco,
-.tag.forca-nulo { background: var(--surface3); color: var(--muted); }
+.tag.forca-nulo { background: var(--surface3); color: var(--muted-forte); }
 
 /* Botões de envio do convite: quebram em duas linhas no celular em vez de
    estourar a largura da tabela. */
