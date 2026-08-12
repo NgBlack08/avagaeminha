@@ -33,7 +33,12 @@
    rasos no banco — corrupção passiva privilegiada, culpa concorrente e
    calamidade em licitação estavam em ZERO.
 
-   RESULTADO MEDIDO: 31 itens, 55% ERRADO (alvo 54%), mediana de 115
+   RESULTADO MEDIDO: 31 itens, 55% ERRADO, mediana de 115
+   [NOTA DE AGOSTO/2026: o "alvo 54%" citado aqui veio da auditoria de
+   372 itens e foi SUPERADO. Com 2.474 itens de 36 cadernos, a taxa-base
+   real e 49,2% ERRADO — meio a meio. Este lote nao precisa de correcao,
+   porque 55% em 31 itens esta dentro do ruido; mas o alvo, para lotes
+   novos, e 50%. Ver AUDITORIA-PROVA-REAL-2021.md, revisao de 2026.]
    caracteres. E, sobretudo, o teste que importa: a regra cega aplicada
    SÓ a este lote rende +0,0pp — contra +8,7pp do banco inteiro. Ou seja,
    aqui dentro a forma não entrega nada, que é como a prova real se

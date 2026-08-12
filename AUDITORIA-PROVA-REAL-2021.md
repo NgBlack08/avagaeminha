@@ -175,5 +175,45 @@ qualquer material que prometa um está vendendo o que não mediu.
 - **Corrigir o vazamento de 8,4pp** exige reescrever itens nas três
   disciplinas mais afetadas (Atualidades, Direito Administrativo, RLM),
   aproximando a distribuição de comprimento da real. Trabalho de lote.
-- **Aproximar a taxa-base.** Nosso banco está em 48% ERRADO contra 53–54%
-  das quatro provas. É o ajuste mais simples e o de efeito mais direto.
+- ~~**Aproximar a taxa-base.** Nosso banco está em 48% ERRADO contra 53–54%
+  das quatro provas.~~ **SUPERADO — ver a revisão de agosto/2026 abaixo.**
+  A recomendação estava errada: o alvo de 53–54% era artefato da amostra
+  pequena, e persegui-lo teria afastado o banco do valor real.
+
+## Revisão de agosto/2026 — 2.474 itens, 36 cadernos
+
+Um compilado de provas de carreiras policiais permitiu refazer a medição
+da taxa-base com corpus **6,6 vezes maior** que o de 2021. Gabaritos
+oficiais definitivos, parseados das tabelas do próprio caderno; itens
+anulados (72) excluídos.
+
+| medida | auditoria 2021 | revisão 2026 |
+|---|---|---|
+| itens | 372 | **2.474** |
+| cadernos | 4 | **36** |
+| taxa de ERRADO | 54,1% | **49,2%** |
+| IC 95% | — | **47,3% a 51,2%** |
+
+O valor de 2021 caiu **fora** do intervalo de confiança do corpus maior.
+A explicação é amostragem: entre os 36 cadernos, o percentual de CERTO
+vai de 44,8% a 56,1%, com mediana de 50,0%. As quatro provas de 2021
+calharam de estar no lado alto dessa faixa, e quatro cadernos não bastam
+para separar tendência de ruído.
+
+**O que muda.** Não existe lado mais provável para chutar — a banca
+trabalha essencialmente em 50/50. O limiar `LIMIAR_CE_GLOBAL` de 5% em
+torno de 50/50, no validador, já estava bem calibrado por outro caminho e
+segue valendo. O banco, hoje em 48,5% ERRADO, está dentro do intervalo
+real e **não precisa de correção** — ao contrário do que a pendência
+acima recomendava.
+
+**O que NÃO foi possível refazer.** O perfil de comprimento e a regra
+cega dependem do TEXTO de cada item casado com seu gabarito. O compilado
+é diagramado em duas colunas, e a extração ainda funde trecho de um item
+com o do vizinho (mediana de 251 caracteres contra 152 esperados, e 67
+itens com comando de bloco no meio do enunciado). Os arquivos separados
+por prova resolveriam isso — o par 01 chegou com o PDF da prova
+corrompido (282 KB de bytes nulos) e os pares 02 a 10 ainda não estão no
+disco. Até lá, `REGRA_CEGA_REFERENCIA_REAL = -0.011` e
+`PERFIL_COMPRIMENTO_REAL` continuam valendo, apoiados nos 372 itens de
+2021.

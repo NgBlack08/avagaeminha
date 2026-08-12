@@ -2291,7 +2291,7 @@ function renderPegadinhas() {
     <div class="radar-aviso">
       <b>Leia isto antes da lista.</b> Testamos estes marcadores contra <b>372 itens de provas reais da CEBRASPE</b>
       com gabarito oficial — 257 deles de carreira policial (PC-DF, PC-SE e PF, todas de Agente). O resultado foi duro:
-      <b>nenhum marcador mostrou poder preditivo distinguível da taxa-base</b> de 54% ERRADO.
+      <b>nenhum marcador mostrou poder preditivo distinguível da taxa-base</b>.
       Os termos absolutos aparecem em só <b>14% dos itens reais</b>, e ali a taxa é 55,6% contra 53,8% de quando estão ausentes — <b>1,8 ponto</b>, ou seja, nada.
       E “exclusivamente”, líder da nossa medição interna com 80%, aparece <b>zero vezes</b> em 492 itens reais.
       <br><br>
@@ -2299,6 +2299,13 @@ function renderPegadinhas() {
       a restrição, a condicionante, o quantificador — e a resposta tem de vir do conteúdo.
       As porcentagens abaixo são do <b>nosso acervo</b>, servem para você entender como estas questões foram construídas,
       e <b>não se transferem para a prova</b>. Detalhes em AUDITORIA-PROVA-REAL-2021.md.
+      <br><br>
+      <b>Atualização — agosto/2026.</b> Um compilado de <b>2.474 itens com gabarito oficial</b>, de 36 cadernos de
+      carreiras policiais, mediu a taxa-base real em <b>49,2% ERRADO</b> (IC 95%: 47,3% a 51,2%) — ou seja,
+      essencialmente <b>meio a meio</b>. A auditoria de 2021 estimava 54% ERRADO a partir de 372 itens; com um corpus
+      6,6 vezes maior, aquele número ficou <b>fora do intervalo de confiança</b> e foi abandonado.
+      Consequência prática para você: <b>não existe lado “mais provável” para chutar</b>. Entre os 36 cadernos, o
+      mínimo foi 44,8% e o máximo 56,1% de CERTO — variação de prova para prova, sem tendência.
     </div>
     <div style="font-size:12px;margin:10px 0 8px">
       <span class="tag bad">tende a ERRADO</span> <span class="tag ok">tende a CERTO</span> <span class="tag warn">neutra — exige atenção</span>

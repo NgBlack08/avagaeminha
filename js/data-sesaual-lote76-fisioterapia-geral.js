@@ -47,7 +47,9 @@
    campo. Vinte itens foram reetiquetados pela armadilha que o TÓPICO
    oferece, e não pelo gabarito que calhou.
 
-   Resultado final: 60 itens, 55% ERRADO (real: 53–54%), mediana de 172
+   Resultado final: 60 itens, 55% ERRADO, mediana de 172
+   [NOTA DE AGOSTO/2026: o "real: 53–54%" foi superado pela medicao em
+   2.474 itens, que da 49,2% ERRADO. O alvo correto e 50%.]
    caracteres, distribuição por faixa dentro de 2pp do perfil real em
    todas as quatro, taxa de ERRADO entre 50% e 60% em cada faixa, e regra
    cega de +1,7pp — dentro da tolerância de 3pp ancorada em prova real.
