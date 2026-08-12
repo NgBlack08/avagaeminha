@@ -207,6 +207,58 @@ segue valendo. O banco, hoje em 48,5% ERRADO, está dentro do intervalo
 real e **não precisa de correção** — ao contrário do que a pendência
 acima recomendava.
 
+### Segunda rodada — 292 itens policiais com texto E gabarito
+
+Os arquivos separados por prova resolveram a junção: cada par
+prova/gabarito é um caderno, com numeração inequívoca. Sete provas
+extraíram limpo; duas (PC-DF Agente e Escrivão) são **provas
+comentadas** — trazem a JUSTIFICATIVA oficial no corpo, que contém a
+resposta — e foram descartadas inteiras. Uma (PC-PE 2023) é de múltipla
+escolha, fora do escopo C/E.
+
+Corpus final: **292 itens de carreira policial** (PF 2014 Agente, PF
+2025 Agente e Escrivão, PC-SE Agente Judiciário e Escrivão), mais 102
+administrativos. Independente dos 372 de 2021.
+
+**1. Regra cega — CONFIRMADA, e com mais força que antes.**
+
+    ganho observado ............ +1,7pp
+    mediana sob gabarito
+      embaralhado (20k perm.) .. +2,1pp
+    p-valor .................... 0,644
+
+O ganho fica ABAIXO da mediana do acaso. Varrer 31 cortes e ficar com o
+melhor infla qualquer resultado; descontada essa inflação, não sobra
+nada. As duas rodadas concordam: **a forma não entrega o gabarito na
+prova real**. `REGRA_CEGA_REFERENCIA_REAL` mantido.
+
+**2. Termos absolutos — CONFIRMADO que não predizem.**
+
+Presentes em 11,0% dos itens. Taxa de ERRADO: 56,3% com, 50,0% sem —
+diferença de 6,3pp, IC 95% de **−12,0 a +24,5pp**. O intervalo cruza o
+zero com folga. Mesma conclusão de 2021, agora com marcador de força
+maior e ainda assim insignificante.
+
+**3. Perfil de comprimento — AJUSTADO. O alvo antigo estava errado.**
+
+    faixa        alvo antigo   medido (292)   provas independentes
+    1-120           24,2%         14,7%       11,8 / 13,9 / 21,3
+    121-200         45,0%         38,7%       38,2 / 37,5 / 37,5
+    201-300         23,3%         27,4%       33,6 / 22,2 / 21,3
+    >300             7,5%         19,2%       16,4 / 26,4 / 20,0
+
+A faixa longa é 2,5 a 3,5 vezes o alvo antigo, em três provas
+independentes. Não é artefato de extração: nas duas do PC-SE, nenhum
+item terminou sem pontuação final — o sinal de linha truncada ou
+fundida. O alvo antigo vinha de UM caderno de 120 itens.
+
+Efeito no diagnóstico do banco, que **se inverteu**: o alarme de "faltam
+itens curtos" (8,7% contra 24,2%) desapareceu, porque o alvo real é
+14,7%. Em lugar dele apareceram dois novos — sobra concentração em
+201-300 (42,4% contra 27,4%) e **faltam itens longos** (6,3% contra
+19,2%). Parte do que o validador vinha cobrando do banco era o alvo que
+estava errado.
+
 **O que NÃO foi possível refazer.** O perfil de comprimento e a regra
 cega dependem do TEXTO de cada item casado com seu gabarito. O compilado
 é diagramado em duas colunas, e a extração ainda funde trecho de um item

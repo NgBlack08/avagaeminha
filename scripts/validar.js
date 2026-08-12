@@ -77,23 +77,46 @@ const LIMIAR_VIES_TAMANHO = 0.12;     /* diferença de comprimento entre C e E *
    Logo, qualquer ganho aqui é artefato NOSSO, e artefato que o candidato
    treina como se fosse técnica. Os 3pp de tolerância existem só para
    absorver ruído amostral, não para acomodar vazamento. */
+/* Reconfirmado em agosto/2026 sobre 292 itens policiais NOVOS, casados um
+   a um com o gabarito oficial: o chutador cego rende +1,7pp, contra uma
+   mediana de 2,1pp sob gabarito embaralhado (20 mil permutações, p=0,64).
+   Ou seja, abaixo do acaso — o sinal continua inexistente na prova real.
+   O valor negativo abaixo é o ponto estimado de 2021; o que ele codifica,
+   e que as duas medições sustentam, é "não há vazamento a explorar". */
 const REGRA_CEGA_REFERENCIA_REAL = -0.011;
 const LIMIAR_REGRA_CEGA = 0.03;
 
-/* Perfil de comprimento medido na prova real: CEBRASPE / PC-AL 2021,
-   cargo Agente, 120 itens C/E extraídos do caderno oficial. Ver
-   material/auditoria-prova-real-2021.md.
+/* Perfil de comprimento da prova real — REVISADO EM AGOSTO/2026.
 
-   Serve de alvo porque a auditoria mostrou que escrevemos itens bem mais
-   longos que os da banca — mediana de 203 caracteres contra 152 — e,
-   sobretudo, que usamos item curto quase quatro vezes menos. O item curto
-   é onde a CEBRASPE concentra a afirmação categórica seca, que é um tipo
-   de dificuldade que o nosso acervo quase não treina. */
+   O perfil anterior vinha de UM caderno (PC-AL 2021, Agente, 120 itens) e
+   dizia que só 7,5% dos itens da banca passavam de 300 caracteres. Cinco
+   cadernos policiais, casados um a um com seu gabarito oficial, desmentem
+   isso com folga:
+
+     prova                        1-120   121-200  201-300   >300
+     PF 2014 Agente (110 itens)   11,8%    38,2%    33,6%   16,4%
+     PC-SE Agente Jud. (72)       13,9%    37,5%    22,2%   26,4%
+     PC-SE Escrivão (80)          21,3%    37,5%    21,3%   20,0%
+     agregado policial (292)      14,7%    38,7%    27,4%   19,2%
+     ALVO ANTIGO                  24,2%    45,0%    23,3%    7,5%
+
+   A faixa longa é 2,5 a 3,5 vezes maior que o alvo antigo, em três provas
+   independentes. Não é ruído de extração: nas duas provas do PC-SE
+   nenhum item terminou sem pontuação final, que é o sinal de linha
+   truncada ou fundida — a extração ali está íntegra.
+
+   O alvo passa a ser o agregado dos 292 itens policiais. Consequência
+   direta: parte do "excesso de itens longos" que o validador vinha
+   acusando no banco era o alvo que estava errado, não o banco.
+
+   Segue valendo o achado original de que escrevemos poucos itens CURTOS:
+   14,7% é o alvo, e é ali que a CEBRASPE concentra a afirmação categórica
+   seca. Ver AUDITORIA-PROVA-REAL-2021.md, revisão de 2026. */
 const PERFIL_REAL_2021 = [
-  { ate: 120, alvo: 0.242 },
-  { ate: 200, alvo: 0.450 },
-  { ate: 300, alvo: 0.233 },
-  { ate: Infinity, alvo: 0.075 },
+  { ate: 120, alvo: 0.147 },
+  { ate: 200, alvo: 0.387 },
+  { ate: 300, alvo: 0.274 },
+  { ate: Infinity, alvo: 0.192 },
 ];
 const LIMIAR_DESVIO_PERFIL = 0.12; /* 12pp de diferença em qualquer faixa */
 const MIN_ITENS_PARA_AVALIAR = 15;    /* abaixo disso, a amostra não diz nada */
@@ -408,7 +431,7 @@ function validar({ quieto = false } = {}) {
       const desvio = nossa - faixa.alvo;
       if (Math.abs(desvio) > LIMIAR_DESVIO_PERFIL) {
         const rotulo = faixa.ate === Infinity ? `acima de ${piso}` : `${piso + 1}-${faixa.ate}`;
-        avisos.push(`Comprimento fora do perfil da prova real na faixa ${rotulo} caracteres: temos ${pct(nossa, 1)} contra ${pct(faixa.alvo, 1)} da CEBRASPE 2021 (${desvio > 0 ? "+" : ""}${(desvio * 100).toFixed(1)}pp).`);
+        avisos.push(`Comprimento fora do perfil da prova real na faixa ${rotulo} caracteres: temos ${pct(nossa, 1)} contra ${pct(faixa.alvo, 1)} da CEBRASPE (5 cadernos policiais, 292 itens) (${desvio > 0 ? "+" : ""}${(desvio * 100).toFixed(1)}pp).`);
       }
       piso = faixa.ate;
     }
