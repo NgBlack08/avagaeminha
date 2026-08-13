@@ -726,15 +726,3 @@ const QUESTOES_PCAL_LOTE64 = [
 ];
 
 QUESTOES.push(...QUESTOES_PCAL_LOTE64);
-
-/* Frequência de temas — TI e Segurança Cibernética (Módulo Linux/Android) */
-(function () {
-  let d = FREQUENCIA_TEMAS.find(f => f.disciplina === "TI e Segurança Cibernética");
-  if (!d) { d = { disciplina: "TI e Segurança Cibernética", temas: [] }; FREQUENCIA_TEMAS.push(d); }
-  d.temas.push(
-    { tema: "Linux — permissões, bits especiais e umask", freq: 82, tendencia: "alta", prob: 0.82 },
-    { tema: "Linux — processos, sinais e systemd", freq: 78, tendencia: "alta", prob: 0.78 },
-    { tema: "Linux — pacotes, atualizações e comandos de rede", freq: 80, tendencia: "media", prob: 0.8 },
-    { tema: "Android — SELinux, sandbox, permissões e Verified Boot", freq: 77, tendencia: "alta", prob: 0.77 },
-  );
-})();

@@ -162,6 +162,7 @@ function validar({ quieto = false } = {}) {
   const {
     QUESTOES, DNA_BANCA, EDITAIS, ESTRATEGIAS, DISCIPLINAS_JURIDICAS,
     PONTOS_RUPTURA, RUPTURA_POR_PEGADINHA, CHECKLIST_RESOLUCAO, VIGENCIA_STATUS,
+    LIMIARES_ATENCAO, INCIDENCIA_PCAL2021, FREQUENCIA_TEMAS, PREDICOES,
   } = carregarDados(manifesto);
 
   const erros = [];
@@ -184,6 +185,141 @@ function validar({ quieto = false } = {}) {
     }
     if (!["alta", "media", "baixa"].includes(d.atencao)) {
       erros.push(`DNA_BANCA ${d.slug}: atencao "${d.atencao}" inválida (esperado alta, media ou baixa)`);
+    }
+  }
+
+  /* A faixa de `atencao` deixou de ser opinião: ela é DERIVADA da
+     frequência de cada padrão nos itens de PROVA REAL do acervo. Este
+     bloco refaz a conta e quebra o build se o arquivo divergir.
+
+     Sem ele, a faixa voltaria a andar sozinha — foi exatamente o que
+     aconteceu na versão anterior, em que `termo-absoluto` figurava em
+     "alta" e `literalidade` em "media", quando a medição em prova real
+     diz o contrário com folga.
+
+     A mesma regra de escopo do motor: conta itens reais de TODAS as
+     disciplinas, porque a pergunta é sobre a banca, não sobre a trilha. */
+  {
+    const reais = QUESTOES.filter(q => /CEBRASPE\s+(PC|PF|PRF)/i.test(q.origem || ""));
+    if (reais.length < 50) {
+      erros.push(`Itens de prova real caíram para ${reais.length} — abaixo de 50 a faixa de atenção do DNA perde base. Verifique o campo "origem" dos lotes de provas reais.`);
+    }
+    const faixaEsperada = p =>
+      p >= LIMIARES_ATENCAO.alta ? "alta" : p >= LIMIARES_ATENCAO.media ? "media" : "baixa";
+
+    for (const d of DNA_BANCA) {
+      const n = reais.filter(q => q.pegadinha === d.slug).length;
+      const p = 100 * n / reais.length;
+      const esperada = faixaEsperada(p);
+      if (d.atencao !== esperada) {
+        erros.push(
+          `DNA_BANCA ${d.slug}: atencao "${d.atencao}" não bate com a medição — ` +
+          `${n} de ${reais.length} itens reais (${p.toFixed(1)}%) dão faixa "${esperada}". ` +
+          `A faixa é derivada, não escolhida: ajuste o valor ou os limiares em LIMIARES_ATENCAO.`);
+      }
+      /* Padrão sem nenhuma ocorrência em prova real precisa dizê-lo. A
+         tela apaga o card e escreve "não observado"; sem a marca, ele
+         apareceria como um mecanismo da banca como os outros. */
+      if (n === 0 && !d.naoObservado) {
+        erros.push(`DNA_BANCA ${d.slug}: zero ocorrências em ${reais.length} itens de prova real — marque "naoObservado: true" ou remova o padrão.`);
+      }
+      if (n > 0 && d.naoObservado) {
+        erros.push(`DNA_BANCA ${d.slug}: marcado "naoObservado" mas tem ${n} ocorrência(s) em prova real — remova a marca.`);
+      }
+    }
+  }
+
+  /* ---- Incidência medida × tabelas que a consomem ----
+
+     `FREQUENCIA_TEMAS` e `PREDICOES` deixaram de carregar `freq`/`score`
+     escritos à mão e passaram a carregar contagem de itens do caderno
+     PC/AL 2021. Como a contagem está declarada em dois lugares (a tabela
+     de origem e as tabelas de consumo), elas podem divergir em silêncio —
+     e é justamente esse tipo de divergência silenciosa que produz número
+     inventado sem ninguém perceber. Aqui elas são conferidas uma contra a
+     outra, item a item. */
+  {
+    const somaDisc = INCIDENCIA_PCAL2021.disciplinas.reduce((s, d) => s + d.itens, 0);
+    if (somaDisc !== INCIDENCIA_PCAL2021.totalItens) {
+      erros.push(`INCIDENCIA_PCAL2021: disciplinas somam ${somaDisc} itens, mas totalItens declara ${INCIDENCIA_PCAL2021.totalItens}.`);
+    }
+    for (const d of INCIDENCIA_PCAL2021.disciplinas) {
+      const somaTemas = d.temas.reduce((s, t) => s + t.itens, 0);
+      if (somaTemas !== d.itens) {
+        erros.push(`INCIDENCIA_PCAL2021 ${d.disciplina}: temas somam ${somaTemas}, disciplina declara ${d.itens}.`);
+      }
+    }
+
+    /* A conferência que dá confiança na captura: os blocos têm de bater
+       com a estrutura histórica registrada por caminho independente (o
+       Relatório Consolidado do usuário). Se a extração do caderno tivesse
+       perdido ou duplicado item, algum bloco não fecharia. */
+    const hist = EDITAIS.PCAL.estruturaHistorica2021;
+    const somaHist = Object.values(hist.basicos).reduce((a, b) => a + b, 0) +
+                     Object.values(hist.especificos).reduce((a, b) => a + b, 0);
+    if (somaHist !== INCIDENCIA_PCAL2021.totalItens) {
+      erros.push(`estruturaHistorica2021 soma ${somaHist} itens e INCIDENCIA_PCAL2021 soma ${INCIDENCIA_PCAL2021.totalItens} — as duas leituras da mesma prova divergiram.`);
+    }
+    for (const [disc, n] of Object.entries({ ...hist.basicos, ...hist.especificos })) {
+      /* Os dois nomes divergem só em "Processo Penal e legislação
+         correlata", que é como o edital de 2021 chamava o bloco. */
+      const alvo = disc.startsWith("Processo Penal") ? "Processo Penal" : disc;
+      const medida = INCIDENCIA_PCAL2021.disciplinas.find(d => d.disciplina === alvo);
+      if (!medida) { erros.push(`estruturaHistorica2021 tem "${disc}" sem correspondente em INCIDENCIA_PCAL2021.`); continue; }
+      if (medida.itens !== n) {
+        erros.push(`${disc}: estruturaHistorica2021 diz ${n} itens, INCIDENCIA_PCAL2021 conta ${medida.itens}.`);
+      }
+    }
+
+    /* FREQUENCIA_TEMAS: ou é medida e bate com a contagem, ou é estreia
+       e não tem número nenhum. Terceira via não existe — era ela que
+       trazia os "freq: 95". */
+    const porNome2026 = new Map(INCIDENCIA_PCAL2021.disciplinas.map(d => [d.nome2026, d]));
+    const estreiam = new Set(INCIDENCIA_PCAL2021.estreiam2026.map(e => e.disciplina));
+    for (const f of FREQUENCIA_TEMAS) {
+      if (f.estreia) {
+        if (!estreiam.has(f.disciplina)) {
+          erros.push(`FREQUENCIA_TEMAS ${f.disciplina}: marcada "estreia" mas não consta de INCIDENCIA_PCAL2021.estreiam2026.`);
+        }
+        for (const t of f.temas) {
+          if (t.itens != null || t.freq != null) {
+            erros.push(`FREQUENCIA_TEMAS ${f.disciplina} / "${t.tema}": disciplina de estreia não pode ter número de incidência — não há prova anterior para medir.`);
+          }
+        }
+        continue;
+      }
+      const medida = porNome2026.get(f.disciplina);
+      if (!medida) continue;   /* trilha SESAU, que tem outro modelo */
+      if (f.itens2021 !== medida.itens) {
+        erros.push(`FREQUENCIA_TEMAS ${f.disciplina}: itens2021 = ${f.itens2021}, mas a contagem do caderno dá ${medida.itens}.`);
+      }
+      for (const t of f.temas) {
+        const orig = medida.temas.find(x => x.tema === t.tema);
+        if (!orig) { erros.push(`FREQUENCIA_TEMAS ${f.disciplina}: tema "${t.tema}" não existe em INCIDENCIA_PCAL2021.`); continue; }
+        if (orig.itens !== t.itens) {
+          erros.push(`FREQUENCIA_TEMAS ${f.disciplina} / "${t.tema}": ${t.itens} itens contra ${orig.itens} na contagem do caderno.`);
+        }
+        if (orig.onde !== t.onde) {
+          erros.push(`FREQUENCIA_TEMAS ${f.disciplina} / "${t.tema}": localização "${t.onde}" diverge de "${orig.onde}" na contagem do caderno.`);
+        }
+      }
+    }
+
+    /* PREDICOES da trilha PC-AL: `score` percentual não volta. Ou o tema
+       tem contagem em prova real, ou é declarado de estreia. */
+    for (const p of PREDICOES) {
+      if ("score" in p) {
+        erros.push(`PREDICOES "${p.tema}": campo "score" foi removido do modelo da trilha PC-AL — use "itens2021" (contagem no caderno) ou "estreia: true". Porcentagem não medida não volta para a tela.`);
+      }
+      if (p.itens2021 == null && !p.estreia) {
+        erros.push(`PREDICOES "${p.tema}": sem "itens2021" e sem "estreia" — toda predição precisa declarar se é medida ou se não tem histórico.`);
+      }
+      if (p.itens2021 != null && p.estreia) {
+        erros.push(`PREDICOES "${p.tema}": tem contagem e está marcada como estreia ao mesmo tempo.`);
+      }
+      if (!p.base) {
+        erros.push(`PREDICOES "${p.tema}": falta "base" — a origem da expectativa precisa ficar visível na tela.`);
+      }
     }
   }
   const idsVigencia = new Set(VIGENCIA_STATUS.map(v => v.id));

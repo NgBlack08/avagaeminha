@@ -324,14 +324,3 @@ const QUESTOES_PCAL_LOTE17 = [
 ];
 
 QUESTOES.push(...QUESTOES_PCAL_LOTE17);
-
-/* Frequência de temas — Direitos Humanos (Módulo 2) */
-(function () {
-  let d = FREQUENCIA_TEMAS.find(f => f.disciplina === "Direitos Humanos");
-  if (!d) { d = { disciplina: "Direitos Humanos", temas: [] }; FREQUENCIA_TEMAS.push(d); }
-  d.temas.push(
-    { tema: "CADH — prisão civil e status supralegal", freq: 88, tendencia: "alta", prob: 0.9 },
-    { tema: "CADH — garantias judiciais (arts. 7º e 8º)", freq: 84, tendencia: "alta", prob: 0.86 },
-    { tema: "PNDH-3 — eixos e segurança pública", freq: 78, tendencia: "estavel", prob: 0.8 },
-  );
-})();

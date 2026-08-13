@@ -567,29 +567,3 @@ const QUESTOES_PCAL_LOTE4 = [
 ];
 
 QUESTOES.push(...QUESTOES_PCAL_LOTE4);
-
-/* Reforço de frequência para disciplinas básicas ampliadas (Módulo 2) */
-(function () {
-  const add = (disc, temas) => {
-    let d = FREQUENCIA_TEMAS.find(f => f.disciplina === disc);
-    if (!d) { d = { disciplina: disc, temas: [] }; FREQUENCIA_TEMAS.push(d); }
-    d.temas.push(...temas);
-  };
-  add("Língua Portuguesa", [
-    { tema: "Concordância (verbos impessoais)", freq: 85, tendencia: "estavel", prob: 0.86 },
-    { tema: "Colocação pronominal", freq: 78, tendencia: "estavel", prob: 0.8 },
-  ]);
-  add("Raciocínio Lógico-Matemático", [
-    { tema: "Equivalências e negações (condicional)", freq: 92, tendencia: "alta", prob: 0.93 },
-    { tema: "Negação de quantificadores", freq: 85, tendencia: "estavel", prob: 0.86 },
-  ]);
-  add("Direitos Humanos", [
-    { tema: "Características dos DH", freq: 88, tendencia: "alta", prob: 0.9 },
-    { tema: "Convenção Americana (Pacto de São José)", freq: 84, tendencia: "alta", prob: 0.86 },
-  ]);
-  add("TI e Segurança Cibernética", [
-    { tema: "Malwares (trojan/worm/vírus)", freq: 90, tendencia: "alta", prob: 0.91 },
-    { tema: "Criptografia simétrica × assimétrica", freq: 84, tendencia: "alta", prob: 0.85 },
-    { tema: "Tríade CID", freq: 86, tendencia: "alta", prob: 0.88 },
-  ]);
-})();

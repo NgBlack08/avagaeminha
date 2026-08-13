@@ -423,24 +423,3 @@ const QUESTOES_PCAL_LOTE7 = [
 ];
 
 QUESTOES.push(...QUESTOES_PCAL_LOTE7);
-
-/* Reforço de frequência de temas do lote 7 (Módulo 2) */
-(function () {
-  const add = (disc, temas) => {
-    let d = FREQUENCIA_TEMAS.find(f => f.disciplina === disc);
-    if (!d) { d = { disciplina: disc, temas: [] }; FREQUENCIA_TEMAS.push(d); }
-    d.temas.push(...temas);
-  };
-  add("Contabilidade e Análise Financeira", [
-    { tema: "Balanço patrimonial e DRE", freq: 84, tendencia: "alta", prob: 0.86 },
-    { tema: "Índices de liquidez", freq: 76, tendencia: "estavel", prob: 0.78 },
-  ]);
-  add("Direito Administrativo", [
-    { tema: "Descentralização × desconcentração", freq: 85, tendencia: "estavel", prob: 0.87 },
-    { tema: "Responsabilidade do Estado por omissão", freq: 82, tendencia: "estavel", prob: 0.84 },
-  ]);
-  add("Estatística", [
-    { tema: "Aprendizado supervisionado × não supervisionado", freq: 84, tendencia: "alta", prob: 0.86 },
-    { tema: "CRISP-DM", freq: 74, tendencia: "alta", prob: 0.77 },
-  ]);
-})();

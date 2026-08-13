@@ -245,19 +245,3 @@ const QUESTOES_PCAL_LOTE38 = [
 ];
 
 QUESTOES.push(...QUESTOES_PCAL_LOTE38);
-
-/* Frequência de temas — TI e Segurança Cibernética / Crimes Cibernéticos (Módulo 2) */
-(function () {
-  const addTema = (disc, temas) => {
-    let d = FREQUENCIA_TEMAS.find(f => f.disciplina === disc);
-    if (!d) { d = { disciplina: disc, temas: [] }; FREQUENCIA_TEMAS.push(d); }
-    d.temas.push(...temas);
-  };
-  addTema("TI e Segurança Cibernética", [
-    { tema: "Sistemas operacionais Linux e banco de dados (modelagem)", freq: 76, tendencia: "alta", prob: 0.76 },
-    { tema: "Fundamentos de segurança: DDoS, risco residual, gestão de identidades", freq: 80, tendencia: "alta", prob: 0.8 },
-  ]);
-  addTema("Crimes Cibernéticos e Segurança Digital", [
-    { tema: "Interceptação de comunicações (Lei 9.296/1996)", freq: 76, tendencia: "alta", prob: 0.76 },
-  ]);
-})();

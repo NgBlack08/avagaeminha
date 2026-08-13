@@ -191,12 +191,3 @@ const QUESTOES_PCAL_LOTE39 = [
 ];
 
 QUESTOES.push(...QUESTOES_PCAL_LOTE39);
-
-/* Frequência de temas — Ética no Serviço Público (Módulo 2) */
-(function () {
-  let d = FREQUENCIA_TEMAS.find(f => f.disciplina === "Ética no Serviço Público");
-  if (!d) { d = { disciplina: "Ética no Serviço Público", temas: [] }; FREQUENCIA_TEMAS.push(d); }
-  d.temas.push(
-    { tema: "Lei Estadual nº 6.754/2006: Comissão de Ética (arts. 7º, 8º, 11 e 12)", freq: 84, tendencia: "alta", prob: 0.84 },
-  );
-})();

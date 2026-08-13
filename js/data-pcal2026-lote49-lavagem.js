@@ -261,15 +261,3 @@ const QUESTOES_PCAL_LOTE49 = [
 ];
 
 QUESTOES.push(...QUESTOES_PCAL_LOTE49);
-
-/* Frequência de temas — Legislação Especial (Lavagem de Dinheiro) */
-(function () {
-  let d = FREQUENCIA_TEMAS.find(f => f.disciplina === "Legislação Especial");
-  if (!d) { d = { disciplina: "Legislação Especial", temas: [] }; FREQUENCIA_TEMAS.push(d); }
-  d.temas.push(
-    { tema: "Origem ilícita e sujeito ativo da lavagem (arts. 1º e 2º, II)", freq: 80, tendencia: "alta", prob: 0.8 },
-    { tema: "Causa de aumento — ativo virtual, reiteração, organização criminosa (art. 1º, § 4º)", freq: 82, tendencia: "alta", prob: 0.82 },
-    { tema: "Colaboração premiada e medidas assecuratórias (art. 1º, § 5º e art. 4º-B)", freq: 78, tendencia: "media", prob: 0.78 },
-    { tema: "Afastamento de servidor público indiciado (art. 17-D)", freq: 78, tendencia: "media", prob: 0.78 },
-  );
-})();

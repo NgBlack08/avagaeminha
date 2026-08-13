@@ -203,16 +203,3 @@ const QUESTOES_PCAL_LOTE3 = [
 ];
 
 QUESTOES.push(...QUESTOES_PCAL_LOTE3);
-
-/* Reforço de frequência de temas para as lacunas preenchidas (Módulo 2) */
-(function () {
-  const dp = FREQUENCIA_TEMAS.find(f => f.disciplina === "Direito Penal");
-  if (dp) dp.temas.push(
-    { tema: "Crimes contra a pessoa (dolo/preterdolo)", freq: 84, tendencia: "estavel", prob: 0.85 },
-    { tema: "Crimes contra o patrimônio (roubo/extorsão/estelionato)", freq: 86, tendencia: "alta", prob: 0.88 },
-  );
-  const pp = FREQUENCIA_TEMAS.find(f => f.disciplina === "Processo Penal");
-  if (pp) pp.temas.push(
-    { tema: "Modalidades de prisão em flagrante (art. 302)", freq: 90, tendencia: "alta", prob: 0.92 },
-  );
-})();

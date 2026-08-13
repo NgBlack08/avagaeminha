@@ -1191,16 +1191,3 @@ const QUESTOES_PCAL_LOTE67 = [
 ];
 
 QUESTOES.push(...QUESTOES_PCAL_LOTE67);
-
-/* Frequência de temas — Língua Portuguesa (Módulo Sintaxe e Morfologia) */
-(function () {
-  let d = FREQUENCIA_TEMAS.find(f => f.disciplina === "Língua Portuguesa");
-  if (!d) { d = { disciplina: "Língua Portuguesa", temas: [] }; FREQUENCIA_TEMAS.push(d); }
-  d.temas.push(
-    { tema: "Sintaxe — complemento nominal x adjunto adnominal", freq: 86, tendencia: "alta", prob: 0.86 },
-    { tema: "Sintaxe — tipos de sujeito, oração sem sujeito e concordância com 'se'", freq: 88, tendencia: "alta", prob: 0.88 },
-    { tema: "Sintaxe — predicação verbal, complementos e tipos de predicado", freq: 85, tendencia: "alta", prob: 0.85 },
-    { tema: "Sintaxe — predicativo do sujeito x adjunto adverbial", freq: 78, tendencia: "media", prob: 0.78 },
-    { tema: "Morfologia — classes de palavras e função sintática", freq: 76, tendencia: "media", prob: 0.76 },
-  );
-})();

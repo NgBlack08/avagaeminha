@@ -351,22 +351,3 @@ const QUESTOES_PCAL_LOTE20 = [
 ];
 
 QUESTOES.push(...QUESTOES_PCAL_LOTE20);
-
-/* Frequência de temas — Jurisprudência (Módulo 2) */
-(function () {
-  const addTema = (disc, temas) => {
-    let d = FREQUENCIA_TEMAS.find(f => f.disciplina === disc);
-    if (!d) { d = { disciplina: disc, temas: [] }; FREQUENCIA_TEMAS.push(d); }
-    d.temas.push(...temas);
-  };
-  addTema("Direito Constitucional", [
-    { tema: "Remédios constitucionais (HC, MS, HD, MI)", freq: 90, tendencia: "alta", prob: 0.92 },
-  ]);
-  addTema("Processo Penal", [
-    { tema: "Provas ilícitas e teoria da derivação", freq: 88, tendencia: "alta", prob: 0.9 },
-    { tema: "Súmulas: SV 14, 145 e 523", freq: 82, tendencia: "alta", prob: 0.85 },
-  ]);
-  addTema("Direito Administrativo", [
-    { tema: "Improbidade após a Lei 14.230/2021", freq: 86, tendencia: "alta", prob: 0.88 },
-  ]);
-})();

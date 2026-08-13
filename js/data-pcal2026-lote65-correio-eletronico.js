@@ -883,15 +883,3 @@ const QUESTOES_PCAL_LOTE65 = [
 ];
 
 QUESTOES.push(...QUESTOES_PCAL_LOTE65);
-
-/* Frequência de temas — TI e Segurança Cibernética (Módulo Correio Eletrônico) */
-(function () {
-  let d = FREQUENCIA_TEMAS.find(f => f.disciplina === "TI e Segurança Cibernética");
-  if (!d) { d = { disciplina: "TI e Segurança Cibernética", temas: [] }; FREQUENCIA_TEMAS.push(d); }
-  d.temas.push(
-    { tema: "Correio eletrônico — protocolos SMTP, POP3 e IMAP e portas", freq: 86, tendencia: "alta", prob: 0.86 },
-    { tema: "Correio eletrônico — campos Para/Cc/Cco, encaminhar e responder", freq: 84, tendencia: "alta", prob: 0.84 },
-    { tema: "Correio eletrônico — webmail x cliente, pastas e Outlook", freq: 81, tendencia: "media", prob: 0.81 },
-    { tema: "Correio eletrônico — spoofing, SPF/DKIM/DMARC e análise de cabeçalhos", freq: 74, tendencia: "alta", prob: 0.74 },
-  );
-})();

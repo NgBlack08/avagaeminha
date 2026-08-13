@@ -245,15 +245,3 @@ const QUESTOES_PCAL_LOTE32 = [
 ];
 
 QUESTOES.push(...QUESTOES_PCAL_LOTE32);
-
-/* Frequência de temas — Direito Constitucional (Módulo 2) */
-(function () {
-  let d = FREQUENCIA_TEMAS.find(f => f.disciplina === "Direito Constitucional");
-  if (!d) { d = { disciplina: "Direito Constitucional", temas: [] }; FREQUENCIA_TEMAS.push(d); }
-  d.temas.push(
-    { tema: "Nacionalidade: extradição e cargos privativos de nato", freq: 82, tendencia: "alta", prob: 0.82 },
-    { tema: "Remédios constitucionais (habeas data, injunção, MS coletivo)", freq: 78, tendencia: "alta", prob: 0.78 },
-    { tema: "Direitos fundamentais: domicílio e direito ao esquecimento (STF)", freq: 84, tendencia: "alta", prob: 0.84 },
-    { tema: "Estado de defesa e estado de sítio (competências)", freq: 68, tendencia: "estavel", prob: 0.7 },
-  );
-})();

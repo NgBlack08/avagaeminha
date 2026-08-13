@@ -611,60 +611,107 @@ QUESTOES.forEach(q => { if (q.disciplina === "Informática") q.disciplina = "TI 
 const FORA_EDITAL_PCAL2026 = ["LE-001", "LE-002", "LE-003"];
 QUESTOES.forEach(q => { if (FORA_EDITAL_PCAL2026.includes(q.id)) q.foraEdital = true; });
 
-/* 3) Frequências estimadas das novas disciplinas (Módulo 2) */
+/* 3) Disciplinas que ESTREIAM no edital de 2026 (Módulo 2)
+
+   Estas seis não caíram na PC/AL 2021 — quatro não existiam no edital de
+   então, Legislação Especial caía diluída dentro de "Processo Penal e
+   legislação correlata", e crimes cibernéticos aparecia como um pedaço de
+   Informática. Por isso entram SEM número de frequência.
+
+   O que havia aqui antes eram pesos como "Lógica sentencial: 95" e
+   "LGPD aplicada: 85", escritos à mão e exibidos ao lado dos temas
+   medidos, indistinguíveis deles. Um candidato lendo a tela não tinha
+   como saber que um número vinha de contagem e o outro de palpite.
+
+   O que fica é a lista de temas do CONTEÚDO PROGRAMÁTICO do edital, que é
+   informação real e verificável, com `estreia: true` avisando que não há
+   histórico. Sem histórico, a ordem dentro da disciplina segue a do
+   próprio edital — não uma precedência inventada por nós. */
 FREQUENCIA_TEMAS.push(
-  { disciplina: "Raciocínio Lógico-Matemático", temas: [
-    { tema: "Lógica sentencial (equivalências, negações)", freq: 95, tendencia: "estavel", prob: 0.95 },
-    { tema: "Tabelas-verdade e conectivos", freq: 88, tendencia: "estavel", prob: 0.9 },
-    { tema: "Porcentagem e proporções", freq: 78, tendencia: "estavel", prob: 0.8 },
-    { tema: "Contagem e probabilidade", freq: 75, tendencia: "estavel", prob: 0.78 },
-    { tema: "Diagramas lógicos e conjuntos", freq: 70, tendencia: "estavel", prob: 0.72 },
-  ]},
-  { disciplina: "Direitos Humanos", temas: [
-    { tema: "Tratados internacionais (art. 5º, §§ 2º e 3º)", freq: 90, tendencia: "alta", prob: 0.92 },
-    { tema: "Pacto de São José da Costa Rica", freq: 88, tendencia: "alta", prob: 0.9 },
-    { tema: "Teoria geral e características", freq: 85, tendencia: "estavel", prob: 0.87 },
-    { tema: "Dimensões/gerações", freq: 75, tendencia: "estavel", prob: 0.78 },
-    { tema: "DH na Constituição Federal", freq: 80, tendencia: "estavel", prob: 0.82 },
-  ]},
-  { disciplina: "Ética no Serviço Público", temas: [
-    { tema: "Ética × moral (conceitos)", freq: 85, tendencia: "estavel", prob: 0.85 },
-    { tema: "Ética e função pública", freq: 82, tendencia: "estavel", prob: 0.84 },
-    { tema: "Código de Ética de AL (Lei 6.754/2006)", freq: 78, tendencia: "alta", prob: 0.8 },
-  ]},
-  { disciplina: "Crimes Cibernéticos e Segurança Digital", temas: [
-    { tema: "Art. 154-A do CP (Lei 12.737 + Lei 14.155/2021)", freq: 92, tendencia: "alta", prob: 0.93 },
-    { tema: "Busca e apreensão de itens digitais", freq: 88, tendencia: "alta", prob: 0.9 },
-    { tema: "LGPD aplicada", freq: 85, tendencia: "alta", prob: 0.87 },
-    { tema: "Golpes virtuais e MFA", freq: 80, tendencia: "alta", prob: 0.83 },
-  ]},
-  { disciplina: "Estatística", temas: [
-    { tema: "Estatística descritiva (posição e dispersão)", freq: 90, tendencia: "alta", prob: 0.9 },
-    { tema: "Probabilidade e Bayes", freq: 85, tendencia: "estavel", prob: 0.87 },
-    { tema: "Distribuição normal e regra empírica", freq: 82, tendencia: "estavel", prob: 0.84 },
-    { tema: "Machine learning (overfitting, paradigmas)", freq: 78, tendencia: "alta", prob: 0.8 },
-    { tema: "Amostragem", freq: 75, tendencia: "estavel", prob: 0.77 },
-  ]},
-  { disciplina: "Contabilidade e Análise Financeira", temas: [
-    { tema: "Tipologias de lavagem (smurfing, laranjas)", freq: 88, tendencia: "alta", prob: 0.9 },
-    { tema: "Equação patrimonial e situação líquida", freq: 85, tendencia: "estavel", prob: 0.86 },
-    { tema: "Fatos contábeis (permutativo/modificativo/misto)", freq: 80, tendencia: "estavel", prob: 0.82 },
-    { tema: "Débito, crédito e balancete", freq: 78, tendencia: "estavel", prob: 0.8 },
-  ]},
+  { disciplina: "Legislação Especial", estreia: true, itens2021: null,
+    nota: "Em 2021 a matéria caía diluída dentro de \"Processo Penal e legislação correlata\", sem bloco próprio. O edital de 2026 a destaca como disciplina autônoma.",
+    temas: [
+      { tema: "Lei Maria da Penha (Lei 11.340/2006)" },
+      { tema: "Lei de Drogas (Lei 11.343/2006)" },
+      { tema: "Abuso de Autoridade (Lei 13.869/2019)" },
+      { tema: "Organização Criminosa (Lei 12.850/2013)" },
+      { tema: "Estatuto do Desarmamento (Lei 10.826/2003)" },
+      { tema: "Crimes Hediondos (Lei 8.072/1990)" },
+    ]},
+  { disciplina: "Raciocínio Lógico-Matemático", estreia: true, itens2021: null,
+    nota: "Não constava dos conhecimentos básicos de 2021.",
+    temas: [
+      { tema: "Lógica sentencial (equivalências, negações)" },
+      { tema: "Tabelas-verdade e conectivos" },
+      { tema: "Diagramas lógicos e conjuntos" },
+      { tema: "Porcentagem e proporções" },
+      { tema: "Contagem e probabilidade" },
+    ]},
+  { disciplina: "Atualidades", estreia: true, itens2021: null,
+    nota: "Não constava dos conhecimentos básicos de 2021.",
+    temas: [
+      { tema: "Segurança pública e política criminal" },
+      { tema: "Cenário nacional e internacional recente" },
+      { tema: "Tecnologia, dados e sociedade" },
+    ]},
+  { disciplina: "Crimes Cibernéticos e Segurança Digital", estreia: true, itens2021: null,
+    nota: "Disciplina nova. Em 2021 o assunto aparecia apenas como segurança da informação dentro de Informática (itens 49 e 50).",
+    temas: [
+      { tema: "Art. 154-A do CP (Lei 12.737/2012 + Lei 14.155/2021)" },
+      { tema: "Busca e apreensão de itens digitais" },
+      { tema: "LGPD aplicada à investigação" },
+      { tema: "Golpes virtuais e autenticação multifator" },
+    ]},
+  { disciplina: "Estatística", estreia: true, itens2021: null,
+    nota: "Disciplina nova, ligada à análise de dados na investigação.",
+    temas: [
+      { tema: "Estatística descritiva (posição e dispersão)" },
+      { tema: "Probabilidade e teorema de Bayes" },
+      { tema: "Distribuição normal e regra empírica" },
+      { tema: "Amostragem" },
+      { tema: "Noções de aprendizado de máquina" },
+    ]},
+  { disciplina: "Contabilidade e Análise Financeira", estreia: true, itens2021: null,
+    nota: "Disciplina nova, alinhada ao perfil investigativo-financeiro do edital de 2026.",
+    temas: [
+      { tema: "Tipologias de lavagem (smurfing, laranjas)" },
+      { tema: "Equação patrimonial e situação líquida" },
+      { tema: "Fatos contábeis (permutativo/modificativo/misto)" },
+      { tema: "Débito, crédito e balancete" },
+    ]},
 );
 
-/* 4) Predições específicas do certame PC-AL 2026 (Módulo 9) */
+/* 4) Predições de ESTREIA — o que entra em 2026 sem histórico
+
+   Estes temas não têm contagem em 2021 porque não havia onde cair. Não
+   estão abaixo dos temas medidos por serem menos importantes: estão
+   abaixo por não haver número que os ordene. `base` diz de onde vem a
+   expectativa em cada caso — sempre do texto do edital ou de alteração
+   legislativa datada, nunca de impressão sobre a banca. */
 PREDICOES.push(
-  { tema: "Lei 14.735/2023 — Lei Orgânica Nacional das Polícias Civis", disciplina: "Legislação Institucional (AL)", score: 97,
-    motivos: ["Lei recente citada nominalmente no edital", "Padrão da banca: cobrança literal de norma nova (números, prazos e competências)", "⚠ Atenção: o edital a indica como 'Lei estadual nº 14.735/2026' — trata-se, na verdade, da LEI FEDERAL nº 14.735, de 23/11/2023"] },
-  { tema: "Invasão de dispositivo pós-Lei 14.155/2021 (art. 154-A, CP)", disciplina: "Crimes Cibernéticos e Segurança Digital", score: 93,
-    motivos: ["Edital criou disciplina própria de crimes cibernéticos", "Alteração legislativa que muda gabarito de questões antigas"] },
-  { tema: "Injúria racial como racismo (Lei 14.532/2023)", disciplina: "Legislação Especial", score: 92,
-    motivos: ["Alteração recente com grande repercussão", "Cruza CF (imprescritibilidade) + lei + STF (HC 154.248)"] },
-  { tema: "Convenção de Budapeste (Decreto 11.491/2023)", disciplina: "Legislação Especial", score: 90,
-    motivos: ["Tratado recém-promulgado citado nominalmente no edital", "Tema cibernético em expansão na banca"] },
-  { tema: "Smurfing, laranjas e red flags financeiras", disciplina: "Contabilidade e Análise Financeira", score: 89,
-    motivos: ["Tipologias listadas item a item no edital — sinal claro de intenção de cobrança", "Perfil investigativo-financeiro do certame"] },
-  { tema: "Acesso a dados de celular apreendido (STJ)", disciplina: "Crimes Cibernéticos e Segurança Digital", score: 88,
-    motivos: ["Item expresso do edital (busca e apreensão de itens digitais)", "Jurisprudência consolidada de aplicação operacional diária"] },
+  { tema: "Lei 14.735/2023 — Lei Orgânica Nacional das Polícias Civis", disciplina: "Legislação Institucional (AL)", itens2021: null, estreia: true,
+    base: "Citada nominalmente no conteúdo programático do edital de 2026.",
+    motivos: ["Lei federal de 2023, posterior à última prova da PC/AL",
+              "Norma nova costuma ser cobrada na letra: números, prazos e competências",
+              "⚠ Atenção: o edital a indica como 'Lei estadual nº 14.735/2026' — trata-se, na verdade, da LEI FEDERAL nº 14.735, de 23/11/2023"] },
+  { tema: "Invasão de dispositivo informático (art. 154-A do CP, pós-Lei 14.155/2021)", disciplina: "Crimes Cibernéticos e Segurança Digital", itens2021: null, estreia: true,
+    base: "Disciplina criada pelo edital de 2026; o tipo penal é item expresso do programa.",
+    motivos: ["A lei de 2021 aumentou penas e ampliou o tipo — muda a resposta de questões anteriores",
+              "Conteúdo com números (penas, causas de aumento) e verbo nuclear definido"] },
+  { tema: "Injúria racial equiparada a racismo (Lei 14.532/2023)", disciplina: "Legislação Especial", itens2021: null, estreia: true,
+    base: "Legislação especial vira bloco próprio em 2026; alteração de 2023, posterior à prova de 2021.",
+    motivos: ["Cruza Constituição (imprescritibilidade), lei e STF (HC 154.248)",
+              "Mudança de regime jurídico que inverte gabaritos antigos"] },
+  { tema: "Convenção de Budapeste (Decreto 11.491/2023)", disciplina: "Legislação Especial", itens2021: null, estreia: true,
+    base: "Tratado citado nominalmente no conteúdo programático do edital de 2026.",
+    motivos: ["Promulgado em 2023, sem histórico de cobrança na PC/AL",
+              "Cooperação internacional em prova de investigação cibernética"] },
+  { tema: "Tipologias de lavagem: smurfing, laranjas e red flags", disciplina: "Contabilidade e Análise Financeira", itens2021: null, estreia: true,
+    base: "Tipologias listadas item a item no conteúdo programático do edital de 2026.",
+    motivos: ["Disciplina inteiramente nova, sem qualquer item em 2021",
+              "O edital detalha as tipologias uma a uma — nível de especificação incomum"] },
+  { tema: "Acesso a dados de celular apreendido", disciplina: "Crimes Cibernéticos e Segurança Digital", itens2021: null, estreia: true,
+    base: "Item expresso do edital de 2026 (busca e apreensão de itens digitais).",
+    motivos: ["Jurisprudência do STJ consolidada e de aplicação operacional diária",
+              "Conecta-se ao item 67 de 2021, que já tratava de dados armazenados em dispositivo"] },
 );

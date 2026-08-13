@@ -523,16 +523,3 @@ const QUESTOES_PCAL_LOTE40 = [
 ];
 
 QUESTOES.push(...QUESTOES_PCAL_LOTE40);
-
-/* Frequência de temas — TI e Segurança Cibernética (Módulo 2) */
-(function () {
-  let d = FREQUENCIA_TEMAS.find(f => f.disciplina === "TI e Segurança Cibernética");
-  if (!d) { d = { disciplina: "TI e Segurança Cibernética", temas: [] }; FREQUENCIA_TEMAS.push(d); }
-  d.temas.push(
-    { tema: "Malwares: worm, vírus, trojan, ransomware, spyware", freq: 90, tendencia: "alta", prob: 0.9 },
-    { tema: "Tipos de backup: completo, diferencial e incremental", freq: 88, tendencia: "alta", prob: 0.88 },
-    { tema: "Firewall × antivírus × backup (separação de funções)", freq: 84, tendencia: "alta", prob: 0.84 },
-    { tema: "Computação em nuvem, OneDrive e resiliência de dados", freq: 82, tendencia: "alta", prob: 0.82 },
-    { tema: "DoS/DDoS e tríade CID (fundamentos)", freq: 86, tendencia: "alta", prob: 0.86 },
-  );
-})();

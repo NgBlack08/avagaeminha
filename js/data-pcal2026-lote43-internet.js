@@ -495,15 +495,3 @@ const QUESTOES_PCAL_LOTE43 = [
 ];
 
 QUESTOES.push(...QUESTOES_PCAL_LOTE43);
-
-/* Frequência de temas — TI e Segurança Cibernética (Módulo Internet) */
-(function () {
-  let d = FREQUENCIA_TEMAS.find(f => f.disciplina === "TI e Segurança Cibernética");
-  if (!d) { d = { disciplina: "TI e Segurança Cibernética", temas: [] }; FREQUENCIA_TEMAS.push(d); }
-  d.temas.push(
-    { tema: "Computação em nuvem (SaaS x PaaS x IaaS, armazenamento, nuvem pública)", freq: 80, tendencia: "alta", prob: 0.8 },
-    { tema: "Navegação anônima, intranet/extranet e ferramentas de acesso remoto", freq: 78, tendencia: "alta", prob: 0.78 },
-    { tema: "Mecanismos de busca (pesquisa aprimorada, dados estruturados, aspas)", freq: 78, tendencia: "media", prob: 0.78 },
-    { tema: "Redes de computadores — endereço IP, DNS e ARP", freq: 79, tendencia: "media", prob: 0.79 },
-  );
-})();

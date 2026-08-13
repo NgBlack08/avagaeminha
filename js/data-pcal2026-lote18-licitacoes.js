@@ -280,14 +280,3 @@ const QUESTOES_PCAL_LOTE18 = [
 ];
 
 QUESTOES.push(...QUESTOES_PCAL_LOTE18);
-
-/* Frequência de temas — Lei de Licitações (Módulo 2) */
-(function () {
-  let d = FREQUENCIA_TEMAS.find(f => f.disciplina === "Direito Administrativo");
-  if (!d) { d = { disciplina: "Direito Administrativo", temas: [] }; FREQUENCIA_TEMAS.push(d); }
-  d.temas.push(
-    { tema: "Licitações 14.133 — modalidades e diálogo competitivo", freq: 86, tendencia: "alta", prob: 0.88 },
-    { tema: "Licitações 14.133 — fases e inversão", freq: 82, tendencia: "alta", prob: 0.84 },
-    { tema: "Licitações 14.133 — dispensa e inexigibilidade", freq: 84, tendencia: "alta", prob: 0.86 },
-  );
-})();

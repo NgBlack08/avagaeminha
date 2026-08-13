@@ -347,6 +347,96 @@ banco não tinha:
 O validador passou a checar a integridade desse eixo: exemplo inexistente
 ou de disciplina fora do escopo declarado quebra o build.
 
+---
+
+## Quarta rodada — o DNA e a Predição param de medir a nós mesmos
+
+Uma pergunta do usuário expôs um defeito que as três rodadas anteriores
+não tinham alcançado: o painel **DNA da banca** desenhava, como se fosse
+comportamento da CEBRASPE, a **fatia de cada padrão dentro deste banco**.
+A barra media as questões que nós escrevemos. O mesmo valia para a
+Predição de Cobrança e para a Frequência de Temas, que trabalhavam com
+`score` e `freq` de 0 a 100 nunca medidos.
+
+### O caderno de 2021, contado item a item
+
+`material/txt/prova-pcal-2021-agente.txt` guardava o texto da PC/AL 2021
+(cargo 1, Agente, aplicada em 29/08/2021) desde uma rodada anterior. A
+diagramação em duas colunas funde o começo de um item ao fim do anterior;
+captura por numeração **monotônica** (só aceita o próximo número
+esperado) resolve, e rendeu **120 de 120 itens, sem lacuna**.
+
+A conferência que dá confiança no número não é essa. É que os blocos,
+somados por disciplina, batem exatamente com `estruturaHistorica2021` —
+que veio do Relatório Consolidado por caminho independente:
+
+```
+básicos      LP 20 · Ética 10 · DH 12 · Informática 8          = 50 ✔
+específicos  DA 14 · DC 12 · DP 15 · PP 15 · Leg. Inst. 14     = 70 ✔
+```
+
+Duas leituras da mesma prova, mesma repartição. O validador refaz essa
+comparação a cada build.
+
+### O que a contagem mostrou
+
+Os cinco maiores temas de 2021, que agora abrem a Predição de Cobrança:
+
+| tema | itens | onde |
+|---|---|---|
+| Direitos e garantias fundamentais (art. 5º) | 8 | 65 a 72 |
+| Compreensão, inferência e argumentação | 7 | 2, 3, 7–9, 14, 15 |
+| Crimes contra a pessoa | 7 | 77 a 83 |
+| Teoria geral dos direitos humanos e DUDH | 7 | 36 a 42 |
+| Inquérito policial | 6 | 92, 102 a 106 |
+
+**Nenhum dos dez temas que o ranking antigo listava com score de 85 a 96
+correspondia a um tema efetivamente cobrado.** Medida protetiva autônoma
+teve 1 item; busca domiciliar, 1; cadeia de custódia, zero.
+
+### O DNA, medido em prova real
+
+Frequência de cada mecanismo nos **131 itens de caderno aplicado** do
+acervo (PC-AL 2021, PC-DF 2021, PF 2025, PC-PE 2024):
+
+```
+literalidade ........... 40,5%  (53)   alta     era "media"
+troca-conceito ......... 19,1%  (25)   alta
+troca-numerica .......... 9,2%  (12)   media
+termo-absoluto .......... 6,9%   (9)   media    era "alta"
+restricao-indevida ...... 6,1%   (8)   media    era "alta"
+exigencia-inexistente ... 4,6%   (6)   baixa    era "alta"
+juris-mais-lei .......... 1,5%   (2)   baixa    era "media"
+juris-inventada ......... 0,0%   (0)   NUNCA OBSERVADO
+```
+
+A ordem editorial estava **invertida no topo**: punha em "alta" o termo
+absoluto, que a rodada anterior já havia mostrado não predizer nada, e
+rebaixava a literalidade, que é o mecanismo mais frequente por larga
+margem. E `juris-inventada` — padrão que catalogamos a partir de material
+de cursinho e para o qual chegamos a escrever 9 itens — **não aparece
+nenhuma vez** em prova aplicada.
+
+A faixa `atencao` deixou de ser escrita à mão: é derivada por limiares
+declarados (≥15% alta, 5–15% media, <5% baixa), e o validador quebra o
+build se o arquivo divergir da medição.
+
+**Ressalva.** O enunciado é da banca; a classificação do mecanismo é
+nossa leitura, e a amostra é a que conseguimos obter. O número sustenta a
+ordem entre padrões, não a precisão decimal.
+
+### O que foi removido
+
+- **48 blocos** espalhados pelos arquivos de lote, cada um empurrando
+  `freq`/`prob` inventados para a Frequência de Temas. Somados, eram
+  ~160 números que a tela exibia ao lado dos medidos, indistinguíveis
+  deles. Um deles vazava disciplina de SESAU para o Raio-X da PC-AL.
+- **`TIMELINE_DISCIPLINAS`** — série de 2018 a 2025 com itens por
+  disciplina por ano, inteiramente inventada, da qual a tela ainda
+  extraía a conclusão de que Legislação Especial estaria "em maior
+  expansão". No lugar entrou a comparação 2021 → 2026, com os dois lados
+  verificáveis.
+
 ### Pendência declarada
 
 O relatório recomenda `variavel_critica` e `ponto_ruptura` **por item**.

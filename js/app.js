@@ -581,14 +581,25 @@ const AVISO_ESTATISTICO = `<div class="aviso">⚠ As probabilidades e índices e
 function padraoDetectadoHtml(dna) {
   if (!dna) return "";
   const c = composicaoPadroes().find(x => x.slug === dna.slug);
+  const r = incidenciaRealPadroes().find(x => x.slug === dna.slug);
   const viciado = c && c.total >= 30 && c.previsibilidade >= 0.85;
+  /* Duas linhas, duas origens, nomeadas. A de cima é a banca; a de baixo
+     somos nós. Elas discordarem é informação — é o alarme de viés de
+     autoria funcionando. */
+  const real = r
+    ? `<div class="dna-origem">Em prova real: <b>${r.n} de ${totalProvaReal()}</b> itens da CEBRASPE que catalogamos usam este padrão (${dec1(r.pct)}%)${r.n === 0 ? " — <b>nunca observado</b> nos cadernos que medimos" : ""}. Frequência não prevê gabarito.</div>`
+    : "";
   const medido = c
     ? `<div class="dna-comp">Neste banco: ${c.total} itens deste padrão · ${Math.round(c.previsibilidade * 100)}% caem em <b>${c.ladoDominante === "C" ? "CERTO" : "ERRADO"}</b>${viciado ? ` <span class="dna-alerta" title="Dentro deste banco o padrão é previsível demais. É característica do acervo, não da banca — não use como regra de chute.">⚠ previsível aqui</span>` : ""}</div>`
     : "";
   return `<div class="bloco"><b>Padrão da banca detectado: ${escapeHtml(dna.nome)}</b>${escapeHtml(dna.gatilho)}
-    <div class="dna-origem">Prioridade de atenção: <b>${escapeHtml(dna.atencao)}</b> — leitura editorial de provas anteriores. Não é porcentagem, e não prevê o gabarito.</div>
-    ${medido}</div>`;
+    ${real}${medido}</div>`;
 }
+
+/* Uma casa decimal com vírgula. O app já escrevia preço e peso assim
+   (`R$ 29,90`, `peso 12,7`); as porcentagens do DNA saíam com ponto e
+   destoavam no meio da mesma frase. */
+function dec1(n) { return n.toFixed(1).replace(".", ","); }
 
 /* Ordena o radar lexical do marcador mais informativo para o menos. Sem
    isso a lista sugere que todos os termos têm o mesmo peso, que é
@@ -918,37 +929,45 @@ function renderDashboard() {
     <div class="card card-dna">
       <h3>🧬 DNA da banca — padrões de maior incidência</h3>
       ${(() => {
-        /* A barra mostra a incidência ESTIMADA (leitura editorial de provas
-           anteriores). Ao lado dela vai, quando houver, a composição medida
-           do banco — quantos itens daquele padrão existem aqui e para que
-           lado caem. Quando um padrão é muito previsível dentro do banco, o
-           aviso aparece: treinar por ele ensina o reflexo do banco, não o da
-           banca. Ver o comentário de DNA_BANCA em js/data.js. */
+        /* A BARRA É A PROVA REAL. Até a 7.162 ela desenhava a fatia do
+           padrão DENTRO DESTE BANCO — a estatística das questões que nós
+           mesmos escrevemos, exibida sob o título "DNA da banca". Agora
+           desenha a frequência medida nos itens de caderno aplicado da
+           CEBRASPE, e a composição do banco desceu para a linha de baixo,
+           onde serve ao que sempre serviu: denunciar viés de autoria.
+           Ver DNA_BANCA em js/data.js. */
         const comp = new Map(composicaoPadroes().map(c => [c.slug, c]));
-        return dnaDoFoco().slice(0, 5).map(d => {
-          const c = comp.get(d.slug);
+        const real = new Map(incidenciaRealPadroes().map(r => [r.slug, r]));
+        const nReal = totalProvaReal();
+        const escopo = new Set(dnaDoFoco().map(d => d.slug));
+        return incidenciaRealPadroes().filter(r => escopo.has(r.slug)).slice(0, 5).map(r => {
+          const d = DNA_BANCA.find(x => x.slug === r.slug);
+          const c = comp.get(r.slug);
           const viciado = c && c.total >= 30 && c.previsibilidade >= 0.85;
+          /* Escala relativa ao líder: com o maior padrão em ~40%, barras
+             proporcionais ao absoluto ficariam todas rasteiras. */
+          const topo = Math.max(...[...real.values()].map(x => x.pct), 1);
           return `
         <div class="dna-item">
           <h4>${d.nome}</h4>
           <div class="dna-medida">
           <span class="dna-atencao at-${d.atencao}">atenção ${d.atencao}</span>
-          ${c ? `<div class="dna-bar" title="Fatia deste padrão no banco: ${c.total} de ${QUESTOES.length} itens"><i style="width:${Math.min(100, Math.round(1000 * c.total / QUESTOES.length))}%"></i></div><span class="dna-pct">${(100 * c.total / QUESTOES.length).toFixed(1)}% do banco</span>` : ""}
+          <div class="dna-bar" title="Medido em ${r.n} de ${nReal} itens de prova real da CEBRASPE"><i style="width:${Math.round(100 * r.pct / topo)}%"></i></div><span class="dna-pct">${dec1(r.pct)}% da prova real</span>
         </div>
-          ${c ? `<div class="dna-comp">${c.total} itens no banco · ${Math.round(c.previsibilidade * 100)}% caem em <b>${c.ladoDominante === "C" ? "CERTO" : "ERRADO"}</b>${viciado ? ` <span class="dna-alerta" title="Dentro deste banco o padrão é previsível demais. Não conclua que a banca se comporta assim.">⚠ previsível aqui</span>` : ""}</div>` : ""}
+          ${c ? `<div class="dna-comp">Neste banco: ${c.total} itens · ${Math.round(c.previsibilidade * 100)}% caem em <b>${c.ladoDominante === "C" ? "CERTO" : "ERRADO"}</b>${viciado ? ` <span class="dna-alerta" title="Dentro deste banco o padrão é previsível demais. Não conclua que a banca se comporta assim.">⚠ previsível aqui</span>` : ""}</div>` : ""}
         </div>`;
         }).join("");
       })()}
-      <div class="dna-nota">A faixa de <b>atenção</b> é leitura editorial de provas anteriores — ordena o que merece mais cuidado, e não é porcentagem de nada. A barra e os números ao lado são <b>medidos neste banco</b>, não na prova.</div>
+      <div class="dna-nota">A barra é <b>medida em ${totalProvaReal()} itens de prova aplicada</b> da CEBRASPE — enunciado e gabarito da banca. A linha "neste banco" mede o que <b>nós</b> escrevemos, e existe para você notar quando as duas discordam. Frequência não prevê gabarito.</div>
       <button class="btn ghost small" style="margin-top:12px" onclick="navigate('raiox')">Ver Raio-X completo →</button>
     </div>
     <div class="card card-pred">
       <h3>↗ Top predições de cobrança</h3>
-      ${inteligenciaDoFoco().predicoes.slice().sort((a, b) => b.score - a.score).slice(0, 5).map((p, i) => `
+      ${ordenarPredicoes(inteligenciaDoFoco().predicoes).slice(0, 5).map((p, i) => `
         <div class="pred-item">
           <div class="pred-rank">${i + 1}º</div>
           <div class="pred-body"><h4>${p.tema}</h4><div class="motivos">${p.disciplina}</div></div>
-          <div class="pred-score">${p.score}%</div>
+          ${predScoreHtml(p)}
         </div>`).join("")}
       <button class="btn ghost small" style="margin-top:12px" onclick="navigate('predicao')">Ranking completo →</button>
     </div>
@@ -2158,9 +2177,18 @@ function renderRaioX() {
   const ed = editalDoFoco();
   const tabela = intel.frequenciaTemas;
   const freq = tabela.find(f => f.disciplina === raioxDisc) || tabela[0];
-  const freqData = freq.temas.slice().sort((a, b) => b.freq - a.freq).map(t => ({
-    label: t.tema, value: t.freq, display: `${t.freq} · ${t.tendencia === "alta" ? "↗" : t.tendencia === "caindo" ? "↘" : "→"}`,
-  }));
+  /* Três formatos convivem, e cada um se identifica pelo campo que tem:
+       `itens` — contagem no caderno da PC/AL 2021 (trilha PC-AL);
+       `freq`  — peso programático do edital (trilha SESAU, primeira edição);
+       nenhum  — disciplina que estreia em 2026, sem histórico.
+     O gráfico só é desenhado nos dois primeiros; no terceiro a tela lista
+     o conteúdo programático e diz por que não há número. */
+  const medido = freq.temas.some(t => t.itens != null);
+  const freqData = freq.estreia ? [] : freq.temas.slice()
+    .sort((a, b) => (b.itens ?? b.freq ?? 0) - (a.itens ?? a.freq ?? 0))
+    .map(t => (medido
+      ? { label: t.tema, value: t.itens, display: `${t.itens} ${t.itens === 1 ? "item" : "itens"}` }
+      : { label: t.tema, value: t.freq, display: `${t.freq}` }));
 
   /* heatmap: disciplina × padrão. Escopado por trilha nos dois eixos —
      mostrar Direito Penal a candidato de Fisioterapia era exatamente o
@@ -2176,23 +2204,28 @@ function renderRaioX() {
   }));
 
   MAIN().innerHTML = topbar("Raio-X da Banca",
-    "Engenharia reversa do CEBRASPE: padrões, frequências e evolução histórica") +
+    "Engenharia reversa do CEBRASPE: padrões medidos em prova real, incidência por tema e o que muda em 2026") +
   `<div class="card" style="margin-bottom:16px">
-    <h3>🧬 DNA da CEBRASPE <span class="hint">estimativa editorial de uso, por padrão</span></h3>
+    <h3>🧬 DNA da CEBRASPE <span class="hint">frequência medida em ${totalProvaReal()} itens de prova aplicada</span></h3>
     ${(() => {
-      /* Mesmo par que o Dashboard mostra: barra = estimativa editorial;
-         linha abaixo = composição MEDIDA deste banco. O Raio-X exibia só a
-         barra, o que deixava a estimativa parecendo apuração. */
+      /* Duas grandezas, duas origens, sempre rotuladas: a barra mede
+         PROVA REAL da banca; a linha "neste banco" mede o que nós
+         escrevemos. Elas divergirem é o alarme de viés de autoria. */
       const comp = new Map(composicaoPadroes().map(c => [c.slug, c]));
-      return dna.map(d => {
-        const c = comp.get(d.slug);
+      const reais = incidenciaRealPadroes();
+      const escopo = new Set(dna.map(d => d.slug));
+      const topo = Math.max(...reais.map(r => r.pct), 1);
+      return reais.filter(r => escopo.has(r.slug)).map(r => {
+        const d = DNA_BANCA.find(x => x.slug === r.slug);
+        const c = comp.get(r.slug);
         const viciado = c && c.total >= 30 && c.previsibilidade >= 0.85;
         return `
-      <div class="dna-item">
+      <div class="dna-item${r.n === 0 ? " dna-ausente" : ""}">
         <h4>${d.nome}</h4>
         <div class="dna-medida">
           <span class="dna-atencao at-${d.atencao}">atenção ${d.atencao}</span>
-          ${c ? `<div class="dna-bar" title="Fatia deste padrão no banco: ${c.total} de ${QUESTOES.length} itens"><i style="width:${Math.min(100, Math.round(1000 * c.total / QUESTOES.length))}%"></i></div><span class="dna-pct">${(100 * c.total / QUESTOES.length).toFixed(1)}% do banco</span>` : ""}
+          <div class="dna-bar" title="Medido em ${r.n} de ${totalProvaReal()} itens de prova real"><i style="width:${Math.round(100 * r.pct / topo)}%"></i></div>
+          <span class="dna-pct">${r.n === 0 ? "não observado" : `${dec1(r.pct)}% · ${r.n} itens`}</span>
         </div>
         ${c ? `<div class="dna-comp">Neste banco: ${c.total} itens · ${Math.round(c.previsibilidade * 100)}% caem em <b>${c.ladoDominante === "C" ? "CERTO" : "ERRADO"}</b>${viciado ? ` <span class="dna-alerta" title="Previsível demais dentro deste acervo — característica do banco, não da banca.">⚠ previsível aqui</span>` : ""}</div>` : ""}
         <p>${d.desc}</p>
@@ -2200,7 +2233,7 @@ function renderRaioX() {
       </div>`;
       }).join("");
     })()}
-    <div class="dna-nota">A barra é <b>estimativa editorial</b> de quanto a banca usa cada padrão. A linha "neste banco" é <b>medida</b>, mas mede este acervo — não a prova.</div>
+    <div class="dna-nota">A barra mede <b>itens de caderno aplicado</b> da CEBRASPE (PC-AL 2021, PC-DF 2021, PF 2025, PC-PE 2024) — enunciado e gabarito da banca. A linha "neste banco" mede o que <b>nós</b> escrevemos. <b>Ressalva:</b> o enunciado é da banca, mas a classificação do mecanismo é nossa leitura, e a amostra é a que conseguimos obter — o número sustenta a <b>ordem</b> entre padrões, não a precisão decimal.</div>
     ${dna.length < DNA_BANCA.length ? `<div style="font-size:12.5px;color:var(--muted);margin-top:10px">
       Exibindo os ${dna.length} padrões que ocorrem nas questões da sua trilha. Os demais existem no banco, mas em disciplinas que não caem na sua prova — <b>jurisprudência inventada</b>, por exemplo, não tem como aparecer em conteúdo clínico.</div>` : ""}
     ${AVISO_ESTATISTICO}
@@ -2208,25 +2241,36 @@ function renderRaioX() {
   <div class="card" style="margin-bottom:16px">
     <h3>📈 Frequência de temas
       <select style="margin-left:auto" onchange="raioxDisc=this.value;renderRaioX()">
-        ${tabela.map(f => `<option ${f.disciplina === raioxDisc ? "selected" : ""}>${escapeHtml(f.disciplina)}</option>`).join("")}
+        ${tabela.map(f => `<option ${f.disciplina === raioxDisc ? "selected" : ""}>${escapeHtml(f.disciplina)}${f.estreia ? " (estreia)" : ""}</option>`).join("")}
       </select></h3>
-    <div class="chart-scroll">${chartHBar(freqData)}</div>
-    <div style="font-size:12px;color:var(--muted)">peso 0–100 estimado por incidência histórica · ↗ em alta · → estável · ↘ em queda</div>
+    ${freq.estreia
+      ? `<div class="empty" style="padding:20px 12px">
+           <div class="big">🆕</div>
+           <b>${escapeHtml(freq.disciplina)}</b> estreia no edital de 2026.
+           <div style="font-size:12.5px;color:var(--muted);margin-top:8px;max-width:52ch;margin-inline:auto">
+             ${escapeHtml(freq.nota || "")} Sem prova anterior, não há incidência para medir — e atribuir uma seria inventar histórico.
+             O que dá para mostrar é o conteúdo programático do edital:
+           </div>
+           <div style="margin-top:14px;display:grid;gap:6px;max-width:46ch;margin-inline:auto;text-align:left">
+             ${freq.temas.map(t => `<div class="bloco" style="background:var(--surface2);border-radius:8px;padding:8px 12px;font-size:13px">${escapeHtml(t.tema)}</div>`).join("")}
+           </div>
+         </div>`
+      : `<div class="chart-scroll">${chartHBar(freqData)}</div>
+         <div style="font-size:12px;color:var(--muted)">${medido
+           ? `itens que cada tema teve no caderno <b>PC/AL 2021 (Agente)</b> — ${freq.itens2021} itens na disciplina, 120 na prova. Contagem, não estimativa.`
+           : "peso derivado do conteúdo programático do edital — não há prova anterior deste concurso para medir"}</div>`}
   </div>
   <div class="grid cols-2">
     <div class="card">
-      <h3>⏳ Evolução histórica <span class="hint">itens por disciplina/ano (estimativa)</span></h3>
-      ${intel.timeline
-        ? `<div class="chart-scroll">${chartLines(intel.timeline.anos, intel.timeline.series.map(s => ({ nome: s.disciplina, valores: s.valores })))}</div>
-           ${chartLegend(intel.timeline.series)}
-           <div style="font-size:12.5px;color:var(--muted);margin-top:10px">Leitura: <b>Legislação Especial</b> é a disciplina em maior expansão no perfil recente da banca para carreiras policiais — reflexo das reformas legislativas (Pacote Anticrime, Lei 14.550/2023, Lei 14.994/2024).</div>`
-        : `${/* Sem série histórica é melhor dizer por quê do que desenhar uma
-               curva inventada — a honestidade sobre a lacuna é o próprio dado. */""}
+      <h3>⏳ O que mudou de 2021 para 2026 <span class="hint">itens medidos × peso de estudo</span></h3>
+      ${intel.comparacao ? comparacao2021x2026Html(ed) : `
+           ${/* Sem prova anterior é melhor dizer por quê do que desenhar uma
+                curva inventada — a honestidade sobre a lacuna é o próprio dado. */""}
            <div class="empty" style="padding:22px 12px">
              <div class="big">📉</div>
-             Sem série histórica para esta trilha.
+             Sem prova anterior para comparar.
              <div style="font-size:12.5px;color:var(--muted);margin-top:8px;max-width:44ch;margin-inline:auto">
-               ${escapeHtml(ed ? ed.nome : "")} é primeira edição — o Edital nº 1 não tem certame anterior para comparar.
+               ${escapeHtml(ed ? ed.nome : "")} é primeira edição — o Edital nº 1 não tem certame anterior.
                Traçar uma curva de anos passados aqui seria inventar dado.
                A <b>Frequência de temas</b> acima usa o peso programático do edital, que é informação real.
              </div>
@@ -2258,6 +2302,55 @@ function renderRaioX() {
     </div>
   </div>`;
 }
+/* Comparação 2021 → 2026, no lugar da antiga "evolução histórica".
+
+   A curva anterior ia de 2018 a 2025 com um número de itens por
+   disciplina em cada ano. Nenhum daqueles pontos veio de caderno: era
+   série inventada, e a tela ainda extraía dela uma conclusão ("Legislação
+   Especial é a disciplina em maior expansão") que nada sustentava.
+
+   Esta comparação tem os dois lados verificáveis. À esquerda, a contagem
+   item a item da PC/AL 2021. À direita, o peso de estudo de 2026,
+   derivado das faixas de prioridade do Relatório Consolidado. O que ela
+   mostra é aritmética do edital: o total continua 120, entram seis
+   disciplinas novas, logo tudo o que já existia encolhe. */
+function comparacao2021x2026Html(ed) {
+  if (!ed || !ed.itensPorDisciplina) return "";
+  const de2021 = new Map();
+  for (const d of INCIDENCIA_PCAL2021.disciplinas) de2021.set(d.nome2026, d.itens);
+
+  const linhas = Object.entries(ed.itensPorDisciplina)
+    .map(([disc, peso2026]) => ({ disc, peso2026, itens2021: de2021.get(disc) ?? null }))
+    .sort((a, b) => b.peso2026 - a.peso2026);
+
+  const topo = Math.max(...linhas.map(l => Math.max(l.peso2026, l.itens2021 || 0)));
+  const larg = v => Math.round(100 * v / topo);
+
+  return `
+    <div class="cmp-legenda"><span class="cmp-chip cmp-a"></span>2021 (medido) <span class="cmp-chip cmp-b"></span>2026 (peso de estudo)</div>
+    <div class="cmp-tabela">
+      ${linhas.map(l => `
+        <div class="cmp-linha">
+          <div class="cmp-nome">${escapeHtml(l.disc)}</div>
+          <div class="cmp-barras">
+            <div class="cmp-barra cmp-a" style="width:${l.itens2021 ? larg(l.itens2021) : 0}%"></div>
+            <div class="cmp-barra cmp-b" style="width:${larg(l.peso2026)}%"></div>
+          </div>
+          <div class="cmp-num">${l.itens2021 !== null
+            ? `${l.itens2021} → ${dec1(l.peso2026)}`
+            : `<span class="cmp-novo">nova</span> ${dec1(l.peso2026)}`}</div>
+        </div>`).join("")}
+    </div>
+    <div style="font-size:12.5px;color:var(--muted);margin-top:12px">
+      Leitura: a prova continua com <b>120 itens</b> (50 + 70), e o edital de 2026 acrescenta
+      <b>seis disciplinas</b>. Como o total não cresce, tudo o que já existia cede espaço —
+      Língua Portuguesa sai de 20 itens para peso 12,7; Direito Penal, de 15 para 9,6.
+      Não é leitura sobre a banca, é aritmética do edital.
+      <br>O lado de 2021 é contagem no caderno oficial; o de 2026 é peso de <b>estudo</b>
+      derivado das faixas de prioridade — o edital define objetos de avaliação, não quota por disciplina.
+    </div>`;
+}
+
 function perfilRedacao() {
   const nPal = QUESTOES.map(q => q.enunciado.split(/\s+/).length);
   const mediaPalavras = Math.round(nPal.reduce((a, b) => a + b, 0) / nPal.length);
@@ -2344,21 +2437,60 @@ function analisarTexto() {
 /* ================================================================
    PREDIÇÃO (Módulo 9)
    ================================================================ */
+
+/* As predições têm DUAS naturezas, e ordená-las juntas por um único
+   número seria voltar a misturá-las.
+
+   MEDIDAS (`itens2021`) — trilha PC-AL. Quantos itens o tema teve na
+   última prova da PC/AL. Ordenam entre si pelo próprio número.
+
+   DE ESTREIA (`estreia`) — o que o edital de 2026 cria. Não têm zero
+   itens por serem irrelevantes; não têm número nenhum porque não havia
+   onde cair. Vão depois das medidas, sem número inventado no lugar.
+
+   ESTIMADAS (`score`) — trilha SESAU/AL, que é primeira edição do
+   concurso e não tem prova anterior para contar. Ali o score continua
+   sendo o que sempre foi, uma leitura do peso programático do edital, e
+   segue rotulado como estimativa na própria tela. */
+function ordenarPredicoes(lista) {
+  const val = p => (p.itens2021 != null ? p.itens2021 : (p.score != null ? p.score : -1));
+  return lista.slice().sort((a, b) => {
+    const ea = a.estreia ? 1 : 0, eb = b.estreia ? 1 : 0;
+    if (ea !== eb) return ea - eb;
+    return val(b) - val(a);
+  });
+}
+
+function predScoreHtml(p) {
+  if (p.itens2021 != null) {
+    return `<div class="pred-score pred-medido" title="Itens que este tema teve na prova PC/AL 2021 (Agente)"><b>${p.itens2021}</b><span>itens<br>em 2021</span></div>`;
+  }
+  if (p.estreia) {
+    return `<div class="pred-score pred-estreia" title="Disciplina ou tema que entra no edital de 2026 — sem prova anterior para contar">estreia<span>sem histórico</span></div>`;
+  }
+  return `<div class="pred-score">${p.score}%</div>`;
+}
+
 function renderPredicao() {
-  const rank = inteligenciaDoFoco().predicoes.slice().sort((a, b) => b.score - a.score);
+  const rank = ordenarPredicoes(inteligenciaDoFoco().predicoes);
+  const medidos = rank.filter(p => p.itens2021 != null);
   MAIN().innerHTML = topbar("Predição de Cobrança",
-    "Ranking de temas por probabilidade estimada para os próximos certames policiais") +
+    medidos.length
+      ? "Temas ordenados por quantos itens tiveram na última prova da PC/AL — contagem no caderno oficial, não estimativa"
+      : "Ranking de temas por peso programático do edital") +
   `<div class="card">
-    <h3>🏆 Ranking de temas quentes</h3>
+    <h3>🏆 Ranking de temas por incidência medida</h3>
+    ${medidos.length ? `<div class="dna-nota" style="margin-bottom:14px">Os ${medidos.length} primeiros vêm da contagem item a item do caderno <b>PC/AL 2021, cargo de Agente</b> — 120 itens. O campo à direita é o número de itens que o tema teve, e <b>onde</b> ele caiu está no detalhe de cada linha. Os temas de <b>estreia</b> vêm depois, sem número: são o que o edital de 2026 cria, e por isso não têm prova anterior para contar.</div>` : ""}
     ${rank.map((p, i) => `
       <div class="pred-item">
         <div class="pred-rank">${i + 1}º</div>
         <div class="pred-body">
           <h4>${p.tema}</h4>
           <div class="motivos"><span class="tag">${p.disciplina}</span></div>
+          ${p.base ? `<div class="motivos" style="color:var(--texto);opacity:.85">📄 ${escapeHtml(p.base)}</div>` : ""}
           <div class="motivos">${p.motivos.map(m => "· " + m).join("<br>")}</div>
         </div>
-        <div class="pred-score">${p.score}%</div>
+        ${predScoreHtml(p)}
       </div>`).join("")}
     ${AVISO_ESTATISTICO}
   </div>

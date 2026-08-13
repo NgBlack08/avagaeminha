@@ -283,15 +283,3 @@ const QUESTOES_PCAL_LOTE37 = [
 ];
 
 QUESTOES.push(...QUESTOES_PCAL_LOTE37);
-
-/* Frequência de temas — Contabilidade e Análise Financeira (Módulo 2) */
-(function () {
-  let d = FREQUENCIA_TEMAS.find(f => f.disciplina === "Contabilidade e Análise Financeira");
-  if (!d) { d = { disciplina: "Contabilidade e Análise Financeira", temas: [] }; FREQUENCIA_TEMAS.push(d); }
-  d.temas.push(
-    { tema: "Balanço patrimonial e DRE (natureza e estrutura)", freq: 82, tendencia: "alta", prob: 0.8 },
-    { tema: "Indícios de fraude e lavagem: valor probatório", freq: 80, tendencia: "alta", prob: 0.8 },
-    { tema: "Análise vertical e horizontal, índices de liquidez", freq: 78, tendencia: "alta", prob: 0.78 },
-    { tema: "Regime de competência x regime de caixa", freq: 76, tendencia: "estavel", prob: 0.76 },
-  );
-})();

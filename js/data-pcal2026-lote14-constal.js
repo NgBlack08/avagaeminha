@@ -411,15 +411,3 @@ const QUESTOES_PCAL_LOTE14 = [
 ];
 
 QUESTOES.push(...QUESTOES_PCAL_LOTE14);
-
-/* Frequência de temas — Constituição de Alagoas (Módulo 2) */
-(function () {
-  let d = FREQUENCIA_TEMAS.find(f => f.disciplina === "Legislação Institucional (AL)");
-  if (!d) { d = { disciplina: "Legislação Institucional (AL)", temas: [] }; FREQUENCIA_TEMAS.push(d); }
-  d.temas.push(
-    { tema: "Const. AL — segurança pública e carreiras policiais", freq: 90, tendencia: "alta", prob: 0.92 },
-    { tema: "Const. AL — servidores: estabilidade e disponibilidade", freq: 84, tendencia: "alta", prob: 0.86 },
-    { tema: "Const. AL — remuneração, jornada e adicionais", freq: 80, tendencia: "estavel", prob: 0.82 },
-    { tema: "Const. AL — servidores militares estaduais", freq: 74, tendencia: "estavel", prob: 0.76 },
-  );
-})();

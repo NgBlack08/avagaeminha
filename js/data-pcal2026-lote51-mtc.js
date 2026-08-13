@@ -383,15 +383,3 @@ const QUESTOES_PCAL_LOTE51 = [
 ];
 
 QUESTOES.push(...QUESTOES_PCAL_LOTE51);
-
-/* Frequência de temas — Estatística (Medidas de Tendência Central) */
-(function () {
-  let d = FREQUENCIA_TEMAS.find(f => f.disciplina === "Estatística");
-  if (!d) { d = { disciplina: "Estatística", temas: [] }; FREQUENCIA_TEMAS.push(d); }
-  d.temas.push(
-    { tema: "Cálculo de mediana, moda e média aritmética", freq: 80, tendencia: "alta", prob: 0.8 },
-    { tema: "Quartis — cálculo e comparação com a média", freq: 76, tendencia: "media", prob: 0.76 },
-    { tema: "Simetria da distribuição e relação entre média, mediana e moda", freq: 78, tendencia: "media", prob: 0.78 },
-    { tema: "Recomposição de médias e sensibilidade a outliers", freq: 78, tendencia: "alta", prob: 0.78 },
-  );
-})();

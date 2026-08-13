@@ -347,17 +347,3 @@ const QUESTOES_PCAL_LOTE44 = [
 ];
 
 QUESTOES.push(...QUESTOES_PCAL_LOTE44);
-
-/* Frequência de temas — Direito Constitucional (Direitos e Deveres Individuais e Coletivos) */
-(function () {
-  let d = FREQUENCIA_TEMAS.find(f => f.disciplina === "Direito Constitucional");
-  if (!d) { d = { disciplina: "Direito Constitucional", temas: [] }; FREQUENCIA_TEMAS.push(d); }
-  d.temas.push(
-    { tema: "Vedação ao anonimato e censura prévia (art. 5º, IV e IX)", freq: 82, tendencia: "alta", prob: 0.82 },
-    { tema: "Direitos do preso — identificação dos responsáveis (art. 5º, LXIV)", freq: 84, tendencia: "alta", prob: 0.84 },
-    { tema: "Liberdade de associação — suspensão x dissolução (art. 5º, XIX)", freq: 82, tendencia: "media", prob: 0.82 },
-    { tema: "Crimes inafiançáveis, imprescritíveis e graça/anistia (art. 5º, XLII-XLIV)", freq: 84, tendencia: "alta", prob: 0.84 },
-    { tema: "Habeas corpus x mandado de segurança; ação popular (art. 5º, LXVIII-LXXIII)", freq: 84, tendencia: "alta", prob: 0.84 },
-    { tema: "Inviolabilidade de domicílio — critério de dia/noite (Lei 13.869/2019)", freq: 78, tendencia: "media", prob: 0.78 },
-  );
-})();

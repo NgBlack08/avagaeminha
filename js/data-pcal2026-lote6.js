@@ -423,22 +423,3 @@ const QUESTOES_PCAL_LOTE6 = [
 ];
 
 QUESTOES.push(...QUESTOES_PCAL_LOTE6);
-
-/* Reforço de frequência de temas do lote 6 (Módulo 2) */
-(function () {
-  const add = (disc, temas) => {
-    let d = FREQUENCIA_TEMAS.find(f => f.disciplina === disc);
-    if (!d) { d = { disciplina: disc, temas: [] }; FREQUENCIA_TEMAS.push(d); }
-    d.temas.push(...temas);
-  };
-  add("Processo Penal", [
-    { tema: "Lei 9.099/1995 (transação e sursis processual)", freq: 88, tendencia: "alta", prob: 0.9 },
-  ]);
-  add("Legislação Especial", [
-    { tema: "Estatuto do Desarmamento (posse × porte)", freq: 84, tendencia: "estavel", prob: 0.86 },
-    { tema: "Crimes contra o Sistema Financeiro (Lei 7.492)", freq: 74, tendencia: "estavel", prob: 0.76 },
-  ]);
-  add("Direito Administrativo", [
-    { tema: "Licitações — dispensa × inexigibilidade (14.133)", freq: 86, tendencia: "alta", prob: 0.88 },
-  ]);
-})();

@@ -1675,16 +1675,3 @@ const QUESTOES_SESAUAL_LOTE69 = [
 ];
 
 QUESTOES.push(...QUESTOES_SESAUAL_LOTE69);
-
-/* Frequência de temas — Legislação Aplicada ao SUS */
-(function () {
-  let d = FREQUENCIA_TEMAS.find(f => f.disciplina === "Legislação Aplicada ao SUS");
-  if (!d) { d = { disciplina: "Legislação Aplicada ao SUS", temas: [] }; FREQUENCIA_TEMAS.push(d); }
-  d.temas.push(
-    { tema: "LC 141/2012 — percentuais mínimos e despesas que contam como ASPS", freq: 84, tendencia: "alta", prob: 0.84 },
-    { tema: "Lei 8.080 — competências das esferas (arts. 15 a 19)", freq: 80, tendencia: "alta", prob: 0.80 },
-    { tema: "Decreto 7.508 — região de saúde, portas de entrada, RENASES e RENAME", freq: 82, tendencia: "alta", prob: 0.82 },
-    { tema: "Lei 8.142 — conferência, conselho e requisitos de repasse", freq: 85, tendencia: "alta", prob: 0.85 },
-    { tema: "Vigilância em saúde — prazos de notificação compulsória", freq: 79, tendencia: "media", prob: 0.79 },
-  );
-})();

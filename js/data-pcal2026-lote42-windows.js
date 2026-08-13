@@ -457,15 +457,3 @@ const QUESTOES_PCAL_LOTE42 = [
 ];
 
 QUESTOES.push(...QUESTOES_PCAL_LOTE42);
-
-/* Frequência de temas — TI e Segurança Cibernética (Módulo Windows 10/11) */
-(function () {
-  let d = FREQUENCIA_TEMAS.find(f => f.disciplina === "TI e Segurança Cibernética");
-  if (!d) { d = { disciplina: "TI e Segurança Cibernética", temas: [] }; FREQUENCIA_TEMAS.push(d); }
-  d.temas.push(
-    { tema: "Recursos do Windows 11 (Menu Iniciar, barra de tarefas, Snap Layouts)", freq: 84, tendencia: "alta", prob: 0.84 },
-    { tema: "Windows Explorer — extensões, renomeação em lote e organização de arquivos", freq: 82, tendencia: "alta", prob: 0.82 },
-    { tema: "Windows Hello, passkeys e Windows Update", freq: 80, tendencia: "alta", prob: 0.8 },
-    { tema: "Permissões NTFS ao mover arquivos entre volumes", freq: 78, tendencia: "media", prob: 0.78 },
-  );
-})();

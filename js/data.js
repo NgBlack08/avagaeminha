@@ -19,86 +19,102 @@ const CONCURSOS = [
 const CARGOS = ["Escrivão", "Agente", "Delegado", "Perito Criminal", "Papiloscopista"];
 
 /* ---------------- DNA DA BANCA (Módulo 4) ----------------
-   incidencia = índice estimado (%) de aparição do padrão nas
-   provas C/E de carreiras policiais analisadas. */
-/* ---------------- DNA da banca ----------------
-   ATENÇÃO ao que `incidencia` é e ao que não é.
 
-   É uma ESTIMATIVA EDITORIAL da frequência com que a CEBRASPE recorre a
-   cada padrão — leitura qualitativa de provas anteriores, não contagem
-   item a item. Não foi medida, e por isso não deve ser exibida como se
-   fosse estatística apurada.
+   A LINHAGEM DESTE CAMPO, porque ela explica o formato atual.
 
-   Ela também NÃO se confunde com duas outras coisas que o app calcula e
-   que são, essas sim, medidas:
-     • a composição do próprio banco (quantos itens de cada padrão existem
-       aqui, e para que lado eles caem) — ver `composicaoPadroes()`;
-     • o desempenho do candidato por padrão — ver `statsPorPegadinha()`.
+   1ª forma — `incidencia`: um número de 0 a 100 que a tela desenhava como
+   barra com "%" ao lado. Nunca foi medido; era ordenação editorial
+   vestida de estatística. Para "termos absolutos" exibia 82% enquanto a
+   medição em 292 itens reais de prova policial dava 11,0% de OCORRÊNCIA.
 
-   A distinção importa porque a composição do banco é enviesada por
-   construção: `literalidade` responde por ~40% dos itens e cai em CERTO em
-   cerca de 90% deles. Quem treinar aqui e concluir "citação fiel da lei
-   costuma ser CERTO" terá aprendido o banco, não a banca. O app precisa
-   dizer isso em vez de esconder — daí a tela expor as três grandezas
-   separadas, cada uma com sua origem.
+   2ª forma — `atencao` escrito à mão: faixa qualitativa (alta/media/
+   baixa). Honesta quanto a não ser porcentagem, mas ainda assim opinião.
+   E opinião que, confrontada com prova real, estava ERRADA na ordem:
+   punha `termo-absoluto` e `exigencia-inexistente` em "alta" e
+   `literalidade` em "media", quando nos itens reais literalidade é o
+   mecanismo mais frequente por larga margem e termo absoluto é minoria.
 
-   ONDE ISSO APARECE, e por quê em todos os lugares. A regra vale para as
-   QUATRO telas que exibem `incidencia`, e não só para o Dashboard:
-     • Dashboard e Raio-X — barra da estimativa + linha medida do banco;
-     • bloco pós-resposta — `padraoDetectadoHtml()` em js/app.js;
-     • Estratégias — a etiqueta "neutraliza:" não mostra número nenhum,
-       porque ali o padrão é só o alvo da técnica, não uma medida.
-   Até a versão 7.140 o bloco pós-resposta e a etiqueta imprimiam
-   "(incidência 82%)" cru, o que contrariava este comentário justamente no
-   ponto de maior exposição — uma vez por questão respondida. */
-/* ATENÇÃO, NÃO INCIDÊNCIA. Este campo já foi `incidencia`, um número de
-   0 a 100 que a tela desenhava como barra com "%" ao lado. Ele nunca foi
-   medido: era ordenação editorial vestida de estatística. Pior, para
-   "termos absolutos" exibia 82% enquanto a medição em 292 itens reais de
-   prova policial deu 11,0% de OCORRÊNCIA e apenas +6,3pp de associação
-   com ERRADO (IC95 de -12,0 a +24,5pp, cruzando o zero).
+   3ª forma — a atual: `atencao` continua no arquivo, mas DERIVADA da
+   frequência de cada mecanismo nos itens de PROVA REAL do acervo, por
+   limiares declarados:
 
-   Agora é uma faixa qualitativa de PRIORIDADE DE ATENÇÃO, que é tudo o
-   que o número honestamente sustentava. A composição real de cada padrão
-   neste banco é medida em composicaoPadroes() e exibida ao lado. */
+       alta   ≥ 15% dos itens reais
+       media    5% a 15%
+       baixa  <  5%
+
+   O validador refaz essa conta a cada build e quebra se o arquivo
+   divergir da medição — do mesmo jeito que já faz com os pesos por
+   disciplina. Mudar uma faixa à mão deixou de ser possível.
+
+   O QUE É "ITEM REAL" AQUI. São os itens cujo `origem` aponta caderno
+   aplicado da CEBRASPE (PC-AL 2021, PC-DF 2021, PF 2025, PC-PE 2024) —
+   enunciado e gabarito da banca, não nossos. Ver `incidenciaRealPadroes()`
+   em js/engine.js.
+
+   RESSALVA QUE PRECISA ACOMPANHAR O NÚMERO. O enunciado é da banca; a
+   classificação do mecanismo é NOSSA leitura de cada item. E a amostra é
+   a que conseguimos obter, não uma amostra aleatória de provas. O que o
+   número sustenta é a ORDEM entre mecanismos, não a precisão decimal.
+
+   TRÊS GRANDEZAS QUE NÃO SE CONFUNDEM, e que a tela mostra separadas:
+     • esta — frequência do mecanismo em itens REAIS de prova;
+     • a composição deste banco — `composicaoPadroes()`, que mede o que
+       NÓS escrevemos e existe para denunciar o próprio viés de autoria;
+     • o desempenho do candidato por padrão — `statsPorPegadinha()`.
+
+   Até a 7.162 o painel do DNA desenhava a barra com a segunda grandeza,
+   apresentando a estatística das nossas questões como se fosse retrato da
+   banca. A barra agora é a primeira; a composição do banco desceu para a
+   linha de baixo, que é o lugar dela. */
 const DNA_BANCA = [
-  { slug: "termo-absoluto", nome: "Termos absolutos", atencao: "alta",
-    desc: "Uso de 'sempre', 'nunca', 'somente', 'qualquer', 'todos'. Termos absolutos frequentemente tornam a assertiva ERRADA — mas não automaticamente: normas literais podem ser absolutas (ex.: vedação à tortura).",
-    gatilho: "Ao ver termo absoluto, procure a exceção. Se existir exceção conhecida, a assertiva tende a ser E." },
-  { slug: "restricao-indevida", nome: "Restrição indevida", atencao: "alta",
-    desc: "A banca pega uma regra ampla e a restringe ('somente durante o dia', 'apenas mediante mandado'). O conteúdo parece correto, mas o recorte torna a frase falsa.",
-    gatilho: "Pergunte: a lei realmente limita a isso, ou há outras hipóteses?" },
+  { slug: "literalidade", nome: "Literalidade legal", atencao: "alta",
+    desc: "Reprodução quase literal do texto legal com UMA palavra trocada (ou nenhuma — e aí é C). É o mecanismo mais frequente nos itens reais medidos, com folga sobre o segundo colocado. Muito comum em CF art. 5º e art. 144.",
+    gatilho: "Compare mentalmente com o texto da lei palavra por palavra nos pontos críticos: prazos, números, sujeitos, verbos." },
   { slug: "troca-conceito", nome: "Troca/inversão de conceitos", atencao: "alta",
     desc: "Define corretamente um instituto, mas com o NOME de outro (concussão × corrupção passiva; excesso × desvio de poder; anulação × revogação).",
     gatilho: "Confira se o rótulo bate com a definição, não apenas se a definição 'soa certa'." },
-  { slug: "exigencia-inexistente", nome: "Exigência inexistente", atencao: "alta",
-    desc: "Acrescenta requisito que a norma não prevê ('desde que haja coabitação', 'exige-se o efetivo recebimento').",
-    gatilho: "Desconfie de 'desde que', 'condicionado a', 'exige-se'." },
-  { slug: "literalidade", nome: "Literalidade legal", atencao: "media",
-    desc: "Reprodução quase literal do texto legal com UMA palavra trocada (ou nenhuma — e aí é C). Muito comum em CF art. 5º e art. 144.",
-    gatilho: "Compare mentalmente com o texto da lei palavra por palavra nos pontos críticos: prazos, números, sujeitos, verbos." },
-  { slug: "verdade-mais-falso", nome: "Verdade + falso emendado", atencao: "media",
-    desc: "Inicia com afirmação verdadeira e emenda uma conclusão falsa. O candidato valida o início e 'carrega' a confiança para o fim.",
-    gatilho: "Julgue cada oração separadamente. Uma parte falsa torna TUDO errado." },
   { slug: "troca-numerica", nome: "Troca numérica", atencao: "media",
     desc: "Altera prazos, quantidades e frações ('3 ou mais pessoas' em vez de 4, no conceito de organização criminosa).",
     gatilho: "Números em assertivas C/E são sempre ponto de verificação obrigatório." },
-  { slug: "juris-mais-lei", nome: "Jurisprudência misturada à lei", atencao: "media",
-    desc: "Combina texto legal com entendimento do STF/STJ (súmulas, teses de repercussão geral). A assertiva só fecha para quem conhece os dois.",
-    gatilho: "Temas clássicos: busca domiciliar, insignificância, Maria da Penha, armas (perigo abstrato)." },
+  { slug: "termo-absoluto", nome: "Termos absolutos", atencao: "media",
+    desc: "Uso de 'sempre', 'nunca', 'somente', 'qualquer', 'todos'. Aparece menos do que os cursinhos sugerem, e NÃO indica gabarito: em 292 itens policiais reais a diferença de ERRADO foi de +6,3pp com IC95 de −12,0 a +24,5 — cruzando o zero. Normas literais podem ser absolutas (vedação à tortura).",
+    gatilho: "Ao ver termo absoluto, procure a exceção. Achou exceção, é E; não achou, o termo não decide nada." },
+  { slug: "restricao-indevida", nome: "Restrição indevida", atencao: "media",
+    desc: "A banca pega uma regra ampla e a restringe ('somente durante o dia', 'apenas mediante mandado'). O conteúdo parece correto, mas o recorte torna a frase falsa.",
+    gatilho: "Pergunte: a lei realmente limita a isso, ou há outras hipóteses?" },
+  { slug: "verdade-mais-falso", nome: "Verdade + falso emendado", atencao: "baixa",
+    desc: "Inicia com afirmação verdadeira e emenda uma conclusão falsa. O candidato valida o início e 'carrega' a confiança para o fim.",
+    gatilho: "Julgue cada oração separadamente. Uma parte falsa torna TUDO errado." },
+  { slug: "exigencia-inexistente", nome: "Exigência inexistente", atencao: "baixa",
+    desc: "Acrescenta requisito que a norma não prevê ('desde que haja coabitação', 'exige-se o efetivo recebimento').",
+    gatilho: "Desconfie de 'desde que', 'condicionado a', 'exige-se'." },
   { slug: "generalizacao", nome: "Generalização indevida", atencao: "baixa",
     desc: "Estende regra de um caso para todos ('todos os atos de polícia são discricionários').",
     gatilho: "Regra + 'todos/qualquer' = procure o contraexemplo." },
-  { slug: "troca-sujeito", nome: "Troca de sujeitos/atribuições", atencao: "baixa",
-    desc: "Atribui competência de um órgão/agente a outro (delegado arquiva IP; PF × PRF; MP × juiz).",
-    gatilho: "Pergunte: QUEM pode praticar esse ato segundo a norma?" },
   { slug: "negacao-dupla", nome: "Negação dupla / embaralhamento", atencao: "baixa",
     desc: "Construções como 'não é incorreto afirmar que…', 'é inegável que não se pode negar…' que invertem o sentido e confundem a leitura. Duas negativas se anulam e viram uma afirmação.",
     gatilho: "Reescreva a frase na forma afirmativa antes de julgar. Cada 'não' inverte o sentido — conte-os." },
-  { slug: "juris-inventada", nome: "Jurisprudência/súmula inventada", atencao: "baixa",
-    desc: "Cita súmula, tese ou informativo com NÚMERO fictício ou enunciado inexistente ('Súmula 999 do STF'), apostando que o candidato aceita a autoridade sem checar.",
+  { slug: "juris-mais-lei", nome: "Jurisprudência misturada à lei", atencao: "baixa",
+    desc: "Combina texto legal com entendimento do STF/STJ (súmulas, teses de repercussão geral). A assertiva só fecha para quem conhece os dois.",
+    gatilho: "Temas clássicos: busca domiciliar, insignificância, Maria da Penha, armas (perigo abstrato)." },
+  { slug: "troca-sujeito", nome: "Troca de sujeitos/atribuições", atencao: "baixa",
+    desc: "Atribui competência de um órgão/agente a outro (delegado arquiva IP; PF × PRF; MP × juiz).",
+    gatilho: "Pergunte: QUEM pode praticar esse ato segundo a norma?" },
+  /* Único padrão com ZERO ocorrências nos itens reais medidos. Foi
+     catalogado a partir de material de cursinho, não de caderno aplicado,
+     e o banco chegou a ter 9 itens nossos treinando-o. Fica no catálogo
+     como alerta de leitura — inventar número de súmula é conduta possível
+     em qualquer prova —, mas a tela precisa dizer que não o observamos,
+     em vez de exibi-lo ao lado dos mecanismos que a banca de fato usa. */
+  { slug: "juris-inventada", nome: "Jurisprudência/súmula inventada", atencao: "baixa", naoObservado: true,
+    desc: "Cita súmula, tese ou informativo com NÚMERO fictício ou enunciado inexistente ('Súmula 999 do STF'). NÃO foi observado nenhuma vez nos itens de prova real que medimos — trate-o como cuidado de leitura, não como padrão da banca.",
     gatilho: "Número de súmula que 'não lembra' é sinal de alerta. Desconfie do conteúdo, não da aparência de autoridade." },
 ];
+
+/* Limiares que convertem a frequência medida em faixa de atenção.
+   Declarados aqui, e não escondidos no validador, para que discordar da
+   calibragem seja mudar um número e recalcular. */
+const LIMIARES_ATENCAO = { alta: 15, media: 5 };
 
 /* ---------------- PALAVRAS PERIGOSAS (Módulo 5) ----------------
    vies: "E" = quando presente, a assertiva tende a ser Errada;
@@ -937,106 +953,188 @@ const QUESTOES = [
 ];
 
 /* ---------------- FREQUÊNCIA DE TEMAS (Módulo 2) ----------------
-   Estimativas de incidência por tema nas provas CEBRASPE de carreiras
-   policiais (base: padrão histórico PCAL/PF/PRF/PCDF). freq = peso 0-100. */
+
+   `itens` = quantos itens o tema teve NA PROVA. Contagem, não estimativa.
+
+   Esta tabela era, até a 7.162, um conjunto de pesos 0–100 escritos à
+   mão: "Inquérito policial: 97", "Compreensão e reescritura: 97". Nenhum
+   deles saiu de caderno nenhum, e a proximidade entre eles (quase tudo
+   entre 70 e 98) denunciava a origem — quando tudo é altíssimo, nada
+   ordena coisa alguma.
+
+   O que entra no lugar é a contagem item a item da PC/AL 2021, cargo de
+   Agente, registrada em `INCIDENCIA_PCAL2021` (js/data-incidencia-real.js)
+   com o número do item de origem de cada tema. O validador confere as
+   duas tabelas uma contra a outra: divergir de um item quebra o build.
+
+   `onde` guarda a localização no caderno. É o que torna a afirmação
+   auditável — quem duvidar abre a prova de 2021 no item indicado.
+
+   AS DISCIPLINAS QUE ESTREIAM EM 2026 continuam na tabela, mas com
+   `estreia: true` e SEM número. Elas não caíram em 2021 porque não
+   existiam no edital de então; atribuir-lhes frequência histórica seria
+   voltar exatamente ao defeito que esta mudança corrige. A tela mostra o
+   conteúdo programático e diz que não há histórico. */
 const FREQUENCIA_TEMAS = [
-  { disciplina: "Direito Penal", temas: [
-    { tema: "Crimes contra a Administração Pública", freq: 95, tendencia: "alta", prob: 0.95 },
-    { tema: "Teoria do crime (dolo, culpa, erro)", freq: 88, tendencia: "estavel", prob: 0.9 },
-    { tema: "Ilicitude e excludentes", freq: 75, tendencia: "estavel", prob: 0.8 },
-    { tema: "Crimes contra a pessoa / feminicídio", freq: 82, tendencia: "alta", prob: 0.9 },
-    { tema: "Crimes contra o patrimônio", freq: 70, tendencia: "estavel", prob: 0.75 },
-    { tema: "Princípios penais e insignificância", freq: 68, tendencia: "estavel", prob: 0.75 },
+  { disciplina: "Língua Portuguesa", itens2021: 20, temas: [
+    { tema: "Compreensão, inferência e argumentação", itens: 7, onde: "2, 3, 7, 8, 9, 14, 15" },
+    { tema: "Reescritura com manutenção de sentido e correção", itens: 5, onde: "4, 5, 11, 13, 17" },
+    { tema: "Pontuação e seus efeitos de sentido", itens: 3, onde: "1, 12, 18" },
+    { tema: "Coesão e referenciação", itens: 2, onde: "10, 19" },
+    { tema: "Sintaxe: funções e termos da oração", itens: 2, onde: "16, 20" },
+    { tema: "Emprego de formas verbais", itens: 1, onde: "6" },
   ]},
-  { disciplina: "Processo Penal", temas: [
-    { tema: "Inquérito policial", freq: 97, tendencia: "alta", prob: 0.97 },
-    { tema: "Prisões e medidas cautelares", freq: 92, tendencia: "alta", prob: 0.95 },
-    { tema: "Provas e cadeia de custódia", freq: 85, tendencia: "alta", prob: 0.9 },
-    { tema: "ANPP e Pacote Anticrime", freq: 78, tendencia: "alta", prob: 0.85 },
-    { tema: "Busca e apreensão", freq: 80, tendencia: "alta", prob: 0.88 },
+  { disciplina: "Direito Penal", itens2021: 15, temas: [
+    { tema: "Crimes contra a pessoa", itens: 7, onde: "77 a 83" },
+    { tema: "Crimes contra a administração pública", itens: 4, onde: "84 a 87" },
+    { tema: "Crimes contra o patrimônio", itens: 4, onde: "88 a 91" },
   ]},
-  { disciplina: "Direito Constitucional", temas: [
-    { tema: "Direitos e garantias (art. 5º)", freq: 98, tendencia: "estavel", prob: 0.98 },
-    { tema: "Segurança pública (art. 144)", freq: 93, tendencia: "alta", prob: 0.95 },
-    { tema: "Remédios constitucionais", freq: 72, tendencia: "estavel", prob: 0.78 },
-    { tema: "Organização do Estado", freq: 60, tendencia: "caindo", prob: 0.6 },
+  { disciplina: "Processo Penal", itens2021: 15, temas: [
+    { tema: "Inquérito policial", itens: 6, onde: "92, 102 a 106" },
+    { tema: "Princípios constitucionais do processo penal", itens: 5, onde: "97 a 101" },
+    { tema: "Juizados especiais criminais (Lei 9.099/1995)", itens: 2, onde: "93, 94" },
+    { tema: "Prisão em flagrante e fiança", itens: 1, onde: "95" },
+    { tema: "Violência doméstica na atuação policial (Lei 11.340/2006)", itens: 1, onde: "96" },
   ]},
-  { disciplina: "Direito Administrativo", temas: [
-    { tema: "Atos administrativos", freq: 88, tendencia: "estavel", prob: 0.9 },
-    { tema: "Poderes administrativos", freq: 85, tendencia: "estavel", prob: 0.88 },
-    { tema: "Improbidade (Lei 14.230/2021)", freq: 82, tendencia: "alta", prob: 0.9 },
-    { tema: "Responsabilidade civil do Estado", freq: 74, tendencia: "estavel", prob: 0.8 },
-    { tema: "Agentes públicos", freq: 65, tendencia: "estavel", prob: 0.7 },
+  { disciplina: "Direito Administrativo", itens2021: 14, temas: [
+    { tema: "Poderes administrativos e abuso de poder", itens: 5, onde: "53 a 57" },
+    { tema: "Licitações e contratos administrativos", itens: 4, onde: "58 a 61" },
+    { tema: "Agentes públicos", itens: 2, onde: "51, 52" },
+    { tema: "Organização administrativa (desconcentração, entidades)", itens: 2, onde: "62, 63" },
+    { tema: "Responsabilidade civil do Estado", itens: 1, onde: "64" },
   ]},
-  { disciplina: "Legislação Especial", temas: [
-    { tema: "Lei Maria da Penha", freq: 96, tendencia: "alta", prob: 0.96 },
-    { tema: "Lei de Drogas", freq: 88, tendencia: "estavel", prob: 0.9 },
-    { tema: "Abuso de Autoridade", freq: 84, tendencia: "alta", prob: 0.88 },
-    { tema: "Organização Criminosa", freq: 78, tendencia: "estavel", prob: 0.82 },
-    { tema: "Estatuto do Desarmamento", freq: 74, tendencia: "estavel", prob: 0.78 },
-    { tema: "Crimes Hediondos", freq: 70, tendencia: "estavel", prob: 0.72 },
+  { disciplina: "Legislação Institucional (AL)", itens2021: 14, temas: [
+    { tema: "Regime Jurídico Único estadual (Lei 5.247/1991)", itens: 5, onde: "107 a 111" },
+    { tema: "Constituição do Estado de Alagoas", itens: 5, onde: "112 a 116" },
+    { tema: "Estatuto da Polícia Civil de AL (Lei 3.437/1975)", itens: 4, onde: "117 a 120" },
   ]},
-  { disciplina: "Língua Portuguesa", temas: [
-    { tema: "Compreensão e reescritura", freq: 97, tendencia: "estavel", prob: 0.97 },
-    { tema: "Coesão e conectivos", freq: 90, tendencia: "estavel", prob: 0.92 },
-    { tema: "Pontuação", freq: 85, tendencia: "estavel", prob: 0.88 },
-    { tema: "Crase e regência", freq: 78, tendencia: "estavel", prob: 0.8 },
-    { tema: "Concordância", freq: 76, tendencia: "estavel", prob: 0.78 },
+  { disciplina: "Direito Constitucional", itens2021: 12, temas: [
+    { tema: "Direitos e garantias fundamentais (art. 5º)", itens: 8, onde: "65 a 72" },
+    { tema: "Segurança pública e atribuições das polícias (art. 144)", itens: 4, onde: "73 a 76" },
   ]},
-  { disciplina: "Informática", temas: [
-    { tema: "Segurança da informação", freq: 92, tendencia: "alta", prob: 0.93 },
-    { tema: "Redes e internet", freq: 80, tendencia: "estavel", prob: 0.82 },
-    { tema: "Sistemas operacionais", freq: 70, tendencia: "caindo", prob: 0.68 },
-    { tema: "Computação em nuvem", freq: 66, tendencia: "alta", prob: 0.72 },
+  { disciplina: "Direitos Humanos", itens2021: 12, temas: [
+    { tema: "Teoria geral: características, DUDH e programa nacional", itens: 7, onde: "36 a 42" },
+    { tema: "Convenção Americana de Direitos Humanos (Pacto de San José)", itens: 5, onde: "31 a 35" },
+  ]},
+  { disciplina: "Ética no Serviço Público", itens2021: 10, temas: [
+    { tema: "Ética, moral e cidadania — conceitos", itens: 5, onde: "21 a 25" },
+    { tema: "Código de Ética Funcional do Servidor Público Civil de AL", itens: 5, onde: "26 a 30" },
+  ]},
+  { disciplina: "TI e Segurança Cibernética", itens2021: 8, temas: [
+    { tema: "Redes de computadores e computação em nuvem", itens: 3, onde: "43, 44, 46" },
+    { tema: "Segurança: malware e ferramentas antimalware", itens: 2, onde: "49, 50" },
+    { tema: "Sistema operacional e organização de arquivos", itens: 2, onde: "47, 48" },
+    { tema: "Ferramentas de busca na Internet", itens: 1, onde: "45" },
   ]},
 ];
 
-/* Evolução histórica (estimativa de nº de itens por disciplina em provas
-   policiais CEBRASPE por ano — Módulo 2, gráfico de timeline). */
-const TIMELINE_DISCIPLINAS = {
-  anos: [2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025],
-  series: [
-    { disciplina: "Direito Penal", valores: [18, 20, 22, 25, 23, 24, 26, 27] },
-    { disciplina: "Processo Penal", valores: [16, 18, 24, 26, 25, 26, 28, 28] },
-    { disciplina: "Direito Constitucional", valores: [15, 15, 16, 18, 17, 16, 17, 18] },
-    { disciplina: "Legislação Especial", valores: [12, 14, 18, 22, 24, 26, 28, 30] },
-    { disciplina: "Direito Administrativo", valores: [14, 14, 15, 16, 15, 16, 15, 16] },
-    { disciplina: "Língua Portuguesa", valores: [20, 20, 20, 20, 20, 20, 20, 20] },
-  ],
-};
-
 /* ---------------- PREDIÇÃO DE COBRANÇA (Módulo 9) ----------------
-   score = combinação de frequência histórica + recência legislativa +
-   jurisprudência nova. SÃO ESTIMATIVAS ESTATÍSTICAS, não garantias. */
+
+   O que este ranking passou a ser: os temas ordenados por QUANTOS ITENS
+   tiveram na última prova da PC/AL, mais os temas que estreiam em 2026 e
+   por isso não têm histórico nenhum.
+
+   O que ele era: uma lista de `score` de 85 a 97 — "Medidas protetivas
+   autônomas: 96", "Busca domiciliar: 93". Aqueles números não vinham de
+   contagem, de modelo ou de série histórica. Vinham de julgamento sobre
+   quais temas pareciam quentes, e o formato "96%" os fazia passar por
+   probabilidade calculada. Nenhum deles, aliás, correspondia a um tema
+   efetivamente cobrado em 2021: medida protetiva autônoma teve 1 item,
+   busca domiciliar teve 1, e cadeia de custódia teve ZERO.
+
+   `itens2021` é contagem no caderno oficial. `estreia` marca o que não
+   tem passado — e a razão fica em `base`, sem número fabricado no lugar.
+
+   O QUE ISTO NÃO PROMETE. Prova de 2021 não determina prova de 2026, e o
+   próprio edital de 2026 muda o desenho ao acrescentar seis disciplinas.
+   O ranking diz onde a banca gastou itens da última vez, que é a melhor
+   informação verificável disponível — não onde ela gastará da próxima. */
 const PREDICOES = [
-  { tema: "Medidas protetivas autônomas (Lei 14.550/2023)", disciplina: "Legislação Especial", score: 96,
-    motivos: ["Alteração legislativa recente", "Tema nº 1 da banca em violência de gênero", "Cobrança literal esperada"] },
-  { tema: "Feminicídio como tipo autônomo (Lei 14.994/2024)", disciplina: "Direito Penal", score: 95,
-    motivos: ["Lei de 2024 — janela típica de cobrança (até 2 anos)", "Grande repercussão social", "Muda resposta de questões antigas"] },
-  { tema: "Busca domiciliar e fundadas razões (RE 603.616 / HC 598.051)", disciplina: "Processo Penal", score: 93,
-    motivos: ["Tese de repercussão geral consolidada", "Tema operacional para polícia", "Combina CF + jurisprudência (padrão favorito)"] },
-  { tema: "Cadeia de custódia (arts. 158-A a 158-F, CPP)", disciplina: "Processo Penal", score: 91,
-    motivos: ["Norma relativamente nova (Pacote Anticrime)", "Essencial para perito e papiloscopista", "Cobrança literal das 10 etapas"] },
-  { tema: "Improbidade pós-Lei 14.230/2021 (dolo específico)", disciplina: "Direito Administrativo", score: 89,
-    motivos: ["Reforma estrutural da LIA", "Tema 1.199/STF define retroatividade", "Pega candidatos com material antigo"] },
-  { tema: "ANPP — requisitos e retroatividade (HC 185.913/STF)", disciplina: "Processo Penal", score: 88,
-    motivos: ["Decisão recente do STF sobre retroatividade", "Números e requisitos = pegadinha numérica fácil de montar"] },
-  { tema: "Porte para consumo — Tema 506/STF (40g maconha)", disciplina: "Legislação Especial", score: 86,
-    motivos: ["Decisão de repercussão geral recente", "Parâmetro objetivo (40g/6 plantas) = ideal para C/E"] },
-  { tema: "Art. 144, § 4º — atribuições da PC", disciplina: "Direito Constitucional", score: 94,
-    motivos: ["Dispositivo-símbolo de prova de polícia civil", "Histórico de cobrança em praticamente todos os certames PC"] },
-  { tema: "Súmula 600/STJ — coabitação Maria da Penha", disciplina: "Legislação Especial", score: 85,
-    motivos: ["Súmula consolidada de alta incidência", "Contraria o senso comum — perfil ideal de pegadinha"] },
-  { tema: "Crimes funcionais (peculato/concussão/corrupção)", disciplina: "Direito Penal", score: 92,
-    motivos: ["Tema central para cargos policiais (sujeito ativo funcionário)", "Padrão de troca de verbos nucleares entre tipos"] },
+  { tema: "Direitos e garantias fundamentais (CF, art. 5º)", disciplina: "Direito Constitucional", itens2021: 8,
+    base: "Itens 65 a 72 do caderno de 2021.",
+    motivos: ["Maior concentração de itens num único tema em toda a prova de 2021",
+              "Domicílio, autoincriminação, prova ilícita e direitos do preso — todos com aplicação policial direta",
+              "Faixa S++ de prioridade no Relatório Consolidado"] },
+  { tema: "Compreensão, inferência e argumentação de texto", disciplina: "Língua Portuguesa", itens2021: 7,
+    base: "Itens 2, 3, 7, 8, 9, 14 e 15 do caderno de 2021.",
+    motivos: ["Maior tema dos conhecimentos básicos em 2021",
+              "Todos os 20 itens de Português vieram presos a texto-base, nenhum isolado",
+              "Não depende de atualização legislativa — o rendimento do estudo se mantém"] },
+  { tema: "Crimes contra a pessoa", disciplina: "Direito Penal", itens2021: 7,
+    base: "Itens 77 a 83 do caderno de 2021.",
+    motivos: ["Metade de todo o Direito Penal cobrado em 2021 (7 de 15 itens)",
+              "Homicídio qualificado, infanticídio, ameaça, induzimento a suicídio e lesão corporal",
+              "A Lei 14.994/2024 reescreveu o feminicídio como tipo autônomo depois dessa prova"] },
+  { tema: "Teoria geral dos direitos humanos e DUDH", disciplina: "Direitos Humanos", itens2021: 7,
+    base: "Itens 36 a 42 do caderno de 2021.",
+    motivos: ["Disciplina inteira somou 12 itens em 2021 — mais que Direito Constitucional em vários blocos",
+              "Cobrança conceitual (características, universalidade, papel da DUDH), pouco decorativa"] },
+  { tema: "Inquérito policial", disciplina: "Processo Penal", itens2021: 6,
+    base: "Itens 92 e 102 a 106 do caderno de 2021.",
+    motivos: ["Bloco próprio de 5 itens mais 1 dentro da situação hipotética",
+              "Tema operacional do cargo: instauração, arquivamento, prova, representação",
+              "Faixa S++ de prioridade no Relatório Consolidado"] },
+  { tema: "Poderes administrativos e abuso de poder", disciplina: "Direito Administrativo", itens2021: 5,
+    base: "Itens 53 a 57 do caderno de 2021.",
+    motivos: ["Maior tema de Direito Administrativo em 2021",
+              "Excesso × desvio de poder é o par que a banca mais troca de nome",
+              "Enunciado ancorado no uso de força em abordagem policial"] },
+  { tema: "Princípios constitucionais do processo penal", disciplina: "Processo Penal", itens2021: 5,
+    base: "Itens 97 a 101 do caderno de 2021.",
+    motivos: ["Não culpabilidade, autodefesa, ampla defesa e contraditório em cinco itens seguidos",
+              "Cruza Constituição com processo — formato recorrente da banca"] },
+  { tema: "Regime Jurídico Único estadual (Lei 5.247/1991)", disciplina: "Legislação Institucional (AL)", itens2021: 5,
+    base: "Itens 107 a 111 do caderno de 2021.",
+    motivos: ["Lei estadual pouco coberta por material de cursinho — vantagem para quem lê a fonte",
+              "Cobrança literal de requisitos, adicionais, licenças, investidura e remoção"] },
+  { tema: "Constituição do Estado de Alagoas", disciplina: "Legislação Institucional (AL)", itens2021: 5,
+    base: "Itens 112 a 116 do caderno de 2021.",
+    motivos: ["Bloco de 5 itens, do mesmo tamanho do RJU estadual",
+              "Conteúdo de circulação restrita: quase não existe questão comercial sobre ele"] },
+  { tema: "Ética, moral e cidadania — conceitos", disciplina: "Ética no Serviço Público", itens2021: 5,
+    base: "Itens 21 a 25 do caderno de 2021.",
+    motivos: ["Metade da disciplina em 2021, cobrada no plano conceitual e não no do código",
+              "Custo de estudo baixo para 5 itens"] },
+  { tema: "Código de Ética Funcional do Servidor Público Civil de AL", disciplina: "Ética no Serviço Público", itens2021: 5,
+    base: "Itens 26 a 30 do caderno de 2021.",
+    motivos: ["A outra metade da disciplina, essa sim de texto normativo estadual",
+              "Cobrança literal de vedações e deveres"] },
+  { tema: "Convenção Americana de Direitos Humanos (Pacto de San José)", disciplina: "Direitos Humanos", itens2021: 5,
+    base: "Itens 31 a 35 do caderno de 2021.",
+    motivos: ["Bloco próprio com comando expresso ao tratado",
+              "Texto curto e fechado — cobrança literal de artigos"] },
+  { tema: "Segurança pública e atribuições das polícias (CF, art. 144)", disciplina: "Direito Constitucional", itens2021: 4,
+    base: "Itens 73 a 76 do caderno de 2021.",
+    motivos: ["Dispositivo-símbolo de prova de polícia civil",
+              "Troca de atribuições entre polícias é o mecanismo típico do bloco"] },
+  { tema: "Crimes contra a administração pública", disciplina: "Direito Penal", itens2021: 4,
+    base: "Itens 84 a 87 do caderno de 2021.",
+    motivos: ["Peculato, facilitação de descaminho e corrupção passiva em quatro itens",
+              "Sujeito ativo funcionário público — tema central do cargo"] },
+  { tema: "Crimes contra o patrimônio", disciplina: "Direito Penal", itens2021: 4,
+    base: "Itens 88 a 91 do caderno de 2021.",
+    motivos: ["Furto mediante fraude, furto de energia, roubo e latrocínio",
+              "Fronteiras entre tipos vizinhos, que é onde a banca rompe"] },
+  { tema: "Licitações e contratos administrativos", disciplina: "Direito Administrativo", itens2021: 4,
+    base: "Itens 58 a 61 do caderno de 2021.",
+    motivos: ["Bloco com situação hipotética de contratação",
+              "Atenção à vigência: em 2021 valia a Lei 8.666/1993; hoje a referência é a Lei 14.133/2021"] },
+  { tema: "Estatuto da Polícia Civil de AL (Lei 3.437/1975)", disciplina: "Legislação Institucional (AL)", itens2021: 4,
+    base: "Itens 117 a 120 do caderno de 2021.",
+    motivos: ["Lei institucional própria, citada nominalmente no edital de 2026",
+              "Magistério, hierarquia, gratificações e Conselho Superior de Polícia"] },
+  { tema: "Redes de computadores e computação em nuvem", disciplina: "TI e Segurança Cibernética", itens2021: 3,
+    base: "Itens 43, 44 e 46 do caderno de 2021.",
+    motivos: ["Maior tema da disciplina em 2021, quando ela ainda se chamava Informática",
+              "Conceitos fechados (MAN/WAN, cabo coaxial, nuvem) — cobrança de atributo técnico"] },
 ];
 
 /* ---------------- INTELIGÊNCIA POR TRILHA ----------------
    Raio-X e Predição são as telas mais específicas de carreira do app: um
    candidato de Fisioterapia não tem o que fazer com a frequência histórica
    de Direito Penal nem com a predição de "medidas protetivas autônomas".
-   Enquanto FREQUENCIA_TEMAS/TIMELINE_DISCIPLINAS/PREDICOES eram globais,
-   essas duas telas mentiam para quem não fosse candidato de polícia.
+   Enquanto FREQUENCIA_TEMAS/PREDICOES eram globais, essas duas telas
+   mentiam para quem não fosse candidato de polícia.
 
    Cada trilha traz o que tem de verdade. Onde não há dado, o campo vem
    `null` e a tela mostra o motivo em vez de inventar número — é o caso da
@@ -1085,7 +1183,15 @@ const PREDICOES = [
 const INTELIGENCIA = {
   PCAL: {
     frequenciaTemas: FREQUENCIA_TEMAS,
-    timeline: TIMELINE_DISCIPLINAS,
+    /* `timeline` guardava uma série de 2018 a 2025 com o número de itens
+       de cada disciplina por ano. Aquela curva não saiu de caderno
+       nenhum: era invenção, e a tela ainda extraía dela a "leitura" de
+       que Legislação Especial estaria em expansão. Saiu inteira. O que
+       ficou no lugar é a comparação 2021 → 2026, cujos dois lados são
+       verificáveis — contagem no caderno de 2021 de um lado, peso
+       derivado das faixas do relatório do outro. */
+    timeline: null,
+    comparacao: true,
     predicoes: PREDICOES,
   },
 

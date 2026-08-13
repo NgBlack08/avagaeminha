@@ -333,15 +333,3 @@ const QUESTOES_PCAL_LOTE19 = [
 ];
 
 QUESTOES.push(...QUESTOES_PCAL_LOTE19);
-
-/* Frequência de temas — Penal atualizado (Módulo 2) */
-(function () {
-  let d = FREQUENCIA_TEMAS.find(f => f.disciplina === "Direito Penal");
-  if (!d) { d = { disciplina: "Direito Penal", temas: [] }; FREQUENCIA_TEMAS.push(d); }
-  d.temas.push(
-    { tema: "Feminicídio autônomo (Lei 14.994/2024)", freq: 94, tendencia: "alta", prob: 0.95 },
-    { tema: "Perseguição e violência psicológica (147-A/147-B)", freq: 82, tendencia: "alta", prob: 0.85 },
-    { tema: "Dosimetria e súmulas (231 e 444 do STJ)", freq: 86, tendencia: "alta", prob: 0.88 },
-    { tema: "Concurso de pessoas e de crimes", freq: 84, tendencia: "estavel", prob: 0.86 },
-  );
-})();

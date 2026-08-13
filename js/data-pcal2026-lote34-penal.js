@@ -283,15 +283,3 @@ const QUESTOES_PCAL_LOTE34 = [
 ];
 
 QUESTOES.push(...QUESTOES_PCAL_LOTE34);
-
-/* Frequência de temas — Direito Penal (Módulo 2) */
-(function () {
-  let d = FREQUENCIA_TEMAS.find(f => f.disciplina === "Direito Penal");
-  if (!d) { d = { disciplina: "Direito Penal", temas: [] }; FREQUENCIA_TEMAS.push(d); }
-  d.temas.push(
-    { tema: "Feminicídio como crime autônomo (Lei 14.994/2024)", freq: 88, tendencia: "alta", prob: 0.88 },
-    { tema: "Insignificância e habitualidade delitiva", freq: 86, tendencia: "alta", prob: 0.86 },
-    { tema: "Latrocínio, furto de energia e peculato (jurisprudência)", freq: 80, tendencia: "alta", prob: 0.8 },
-    { tema: "Aplicação da lei penal e processual no tempo e no espaço", freq: 78, tendencia: "estavel", prob: 0.78 },
-  );
-})();

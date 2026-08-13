@@ -297,15 +297,3 @@ const QUESTOES_PCAL_LOTE47 = [
 ];
 
 QUESTOES.push(...QUESTOES_PCAL_LOTE47);
-
-/* Frequência de temas — Direito Constitucional (Direitos Políticos e Partidos Políticos) */
-(function () {
-  let d = FREQUENCIA_TEMAS.find(f => f.disciplina === "Direito Constitucional");
-  if (!d) { d = { disciplina: "Direito Constitucional", temas: [] }; FREQUENCIA_TEMAS.push(d); }
-  d.temas.push(
-    { tema: "Alistamento eleitoral, voto e alistabilidade (art. 14, §§ 1º-2º)", freq: 83, tendencia: "alta", prob: 0.83 },
-    { tema: "Filiação partidária e inelegibilidade reflexa (art. 14, §§ 3º e 7º)", freq: 83, tendencia: "alta", prob: 0.83 },
-    { tema: "Improbidade administrativa — suspensão de direitos políticos (art. 15 e 37, § 4º)", freq: 83, tendencia: "media", prob: 0.83 },
-    { tema: "Partidos políticos — recursos estrangeiros e coligações (art. 17)", freq: 82, tendencia: "alta", prob: 0.82 },
-  );
-})();

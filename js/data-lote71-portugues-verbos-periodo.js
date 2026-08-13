@@ -1007,16 +1007,3 @@ const QUESTOES_LOTE71 = [
 ];
 
 QUESTOES.push(...QUESTOES_LOTE71);
-
-/* Frequência de temas — Língua Portuguesa (verbos, conectivos e período) */
-(function () {
-  let d = FREQUENCIA_TEMAS.find(f => f.disciplina === "Língua Portuguesa");
-  if (!d) { d = { disciplina: "Língua Portuguesa", temas: [] }; FREQUENCIA_TEMAS.push(d); }
-  d.temas.push(
-    { tema: "Verbo — emprego de tempos e modos e correlação verbal", freq: 84, tendencia: "alta", prob: 0.84 },
-    { tema: "Conectivos — relações de oposição, conclusão, concessão e proporção", freq: 87, tendencia: "alta", prob: 0.87 },
-    { tema: "Período composto — adjetiva restritiva x explicativa e substantivas", freq: 86, tendencia: "alta", prob: 0.86 },
-    { tema: "Crase — regência, locuções femininas e casos facultativos", freq: 85, tendencia: "alta", prob: 0.85 },
-    { tema: "Colocação pronominal — palavras atrativas e mesóclise", freq: 79, tendencia: "media", prob: 0.79 },
-  );
-})();

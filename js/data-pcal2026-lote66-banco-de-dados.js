@@ -963,15 +963,3 @@ const QUESTOES_PCAL_LOTE66 = [
 ];
 
 QUESTOES.push(...QUESTOES_PCAL_LOTE66);
-
-/* Frequência de temas — TI e Segurança Cibernética (Módulo Banco de Dados) */
-(function () {
-  let d = FREQUENCIA_TEMAS.find(f => f.disciplina === "TI e Segurança Cibernética");
-  if (!d) { d = { disciplina: "TI e Segurança Cibernética", temas: [] }; FREQUENCIA_TEMAS.push(d); }
-  d.temas.push(
-    { tema: "Banco de dados — SQL, sublinguagens e cláusulas de consulta", freq: 85, tendencia: "alta", prob: 0.85 },
-    { tema: "Banco de dados — chaves, integridade referencial e normalização", freq: 83, tendencia: "alta", prob: 0.83 },
-    { tema: "Banco de dados — tipologia de dados, Big Data, data lake e ETL", freq: 79, tendencia: "alta", prob: 0.79 },
-    { tema: "Banco de dados — views, índices, transações ACID e NoSQL", freq: 72, tendencia: "media", prob: 0.72 },
-  );
-})();

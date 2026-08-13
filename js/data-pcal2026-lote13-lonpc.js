@@ -444,15 +444,3 @@ const QUESTOES_PCAL_LOTE13 = [
 ];
 
 QUESTOES.push(...QUESTOES_PCAL_LOTE13);
-
-/* Frequência de temas da Legislação Institucional (Módulo 2) */
-(function () {
-  let d = FREQUENCIA_TEMAS.find(f => f.disciplina === "Legislação Institucional (AL)");
-  if (!d) { d = { disciplina: "Legislação Institucional (AL)", temas: [] }; FREQUENCIA_TEMAS.push(d); }
-  d.temas.push(
-    { tema: "LONPC — concurso, investidura e promoção (arts. 20-25)", freq: 92, tendencia: "alta", prob: 0.93 },
-    { tema: "LONPC — organização e Delegacia-Geral (arts. 7º-18)", freq: 88, tendencia: "alta", prob: 0.9 },
-    { tema: "LONPC — direitos, deveres e vedações (arts. 26-35)", freq: 86, tendencia: "alta", prob: 0.88 },
-    { tema: "LONPC — disposições finais (arts. 36-50)", freq: 78, tendencia: "alta", prob: 0.8 },
-  );
-})();

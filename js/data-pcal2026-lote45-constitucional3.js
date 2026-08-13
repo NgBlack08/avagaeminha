@@ -297,15 +297,3 @@ const QUESTOES_PCAL_LOTE45 = [
 ];
 
 QUESTOES.push(...QUESTOES_PCAL_LOTE45);
-
-/* Frequência de temas — Direito Constitucional (Direitos Sociais) */
-(function () {
-  let d = FREQUENCIA_TEMAS.find(f => f.disciplina === "Direito Constitucional");
-  if (!d) { d = { disciplina: "Direito Constitucional", temas: [] }; FREQUENCIA_TEMAS.push(d); }
-  d.temas.push(
-    { tema: "Rol do art. 6º e renda básica familiar (EC 114/2021)", freq: 82, tendencia: "alta", prob: 0.82 },
-    { tema: "Jornada de trabalho e aviso prévio (art. 7º, XIII e XXI)", freq: 82, tendencia: "alta", prob: 0.82 },
-    { tema: "Trabalho do menor e trabalhadores domésticos (art. 7º, XXXIII e p. único)", freq: 82, tendencia: "media", prob: 0.82 },
-    { tema: "Direito de greve — serviços essenciais (art. 9º, § 1º)", freq: 82, tendencia: "alta", prob: 0.82 },
-  );
-})();

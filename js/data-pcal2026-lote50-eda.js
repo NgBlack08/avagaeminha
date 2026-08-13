@@ -422,15 +422,3 @@ const QUESTOES_PCAL_LOTE50 = [
 ];
 
 QUESTOES.push(...QUESTOES_PCAL_LOTE50);
-
-/* Frequência de temas — Estatística (Análise Exploratória de Dados) */
-(function () {
-  let d = FREQUENCIA_TEMAS.find(f => f.disciplina === "Estatística");
-  if (!d) { d = { disciplina: "Estatística", temas: [] }; FREQUENCIA_TEMAS.push(d); }
-  d.temas.push(
-    { tema: "Estatística x parâmetro e tipos de variáveis (contínua, dummy, ordinal)", freq: 78, tendencia: "alta", prob: 0.78 },
-    { tema: "Medidas de tendência central e nível de mensuração exigido", freq: 78, tendencia: "media", prob: 0.78 },
-    { tema: "Visualização de dados — cores e gráfico de setores", freq: 76, tendencia: "alta", prob: 0.76 },
-    { tema: "Tabelas de frequência e histogramas — construção e perda de informação", freq: 76, tendencia: "media", prob: 0.76 },
-  );
-})();

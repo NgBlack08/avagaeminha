@@ -263,15 +263,3 @@ const QUESTOES_PCAL_LOTE29 = [
 ];
 
 QUESTOES.push(...QUESTOES_PCAL_LOTE29);
-
-/* Frequência de temas — Língua Portuguesa (Módulo 2) */
-(function () {
-  let d = FREQUENCIA_TEMAS.find(f => f.disciplina === "Língua Portuguesa");
-  if (!d) { d = { disciplina: "Língua Portuguesa", temas: [] }; FREQUENCIA_TEMAS.push(d); }
-  d.temas.push(
-    { tema: "Regência verbal e nominal (texto-base)", freq: 80, tendencia: "alta", prob: 0.82 },
-    { tema: "Crase e concordância em texto-base", freq: 78, tendencia: "alta", prob: 0.8 },
-    { tema: "Coesão textual (conectivos) e pontuação", freq: 76, tendencia: "alta", prob: 0.78 },
-    { tema: "Tipologia textual e voz verbal", freq: 72, tendencia: "estavel", prob: 0.74 },
-  );
-})();

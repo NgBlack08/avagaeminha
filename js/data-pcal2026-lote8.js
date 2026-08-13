@@ -575,23 +575,3 @@ const QUESTOES_PCAL_LOTE8 = [
 ];
 
 QUESTOES.push(...QUESTOES_PCAL_LOTE8);
-
-/* Reforço de frequência de temas do lote 8 (Módulo 2) */
-(function () {
-  const add = (disc, temas) => {
-    let d = FREQUENCIA_TEMAS.find(f => f.disciplina === disc);
-    if (!d) { d = { disciplina: disc, temas: [] }; FREQUENCIA_TEMAS.push(d); }
-    d.temas.push(...temas);
-  };
-  add("Direito Penal", [
-    { tema: "Crimes contra a liberdade e a dignidade sexual", freq: 82, tendencia: "alta", prob: 0.84 },
-    { tema: "Crimes contra a administração da justiça", freq: 78, tendencia: "estavel", prob: 0.8 },
-  ]);
-  add("Raciocínio Lógico-Matemático", [
-    { tema: "Argumentos válidos e falácias", freq: 90, tendencia: "alta", prob: 0.92 },
-    { tema: "Combinatória e conjuntos", freq: 82, tendencia: "estavel", prob: 0.84 },
-  ]);
-  add("Língua Portuguesa", [
-    { tema: "Pontuação e paralelismo", freq: 86, tendencia: "estavel", prob: 0.88 },
-  ]);
-})();

@@ -21,10 +21,10 @@ const GLOBAIS_PUBLICAS = [
   "CONCURSOS",
   "CARGOS",
   "DNA_BANCA",
+  "LIMIARES_ATENCAO",
   "PALAVRAS_PERIGOSAS",
   "QUESTOES",
   "FREQUENCIA_TEMAS",
-  "TIMELINE_DISCIPLINAS",
   "PREDICOES",
   "ESTRATEGIA_CATEGORIAS",
   "ESTRATEGIAS",
@@ -43,6 +43,10 @@ const GLOBAIS_PUBLICAS = [
   "REGRA_DE_OURO",
   "VIGENCIA_STATUS",
   "DATA_CORTE_PCAL2026",
+  /* Contagem item a item do caderno oficial da PC/AL 2021 — a fonte que
+     substituiu os `freq`/`score` escritos à mão. js/data-incidencia-real.js. */
+  "INCIDENCIA_PCAL2021",
+  "COMPARACAO_2021_2026",
 ];
 
 /* A ordem de carga só tem uma restrição real: data.js precisa vir primeiro,

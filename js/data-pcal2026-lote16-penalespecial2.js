@@ -575,15 +575,3 @@ const QUESTOES_PCAL_LOTE16 = [
 ];
 
 QUESTOES.push(...QUESTOES_PCAL_LOTE16);
-
-/* Frequência de temas — Legislação Penal Especial II (Módulo 2) */
-(function () {
-  let d = FREQUENCIA_TEMAS.find(f => f.disciplina === "Legislação Especial");
-  if (!d) { d = { disciplina: "Legislação Especial", temas: [] }; FREQUENCIA_TEMAS.push(d); }
-  d.temas.push(
-    { tema: "Lavagem — autonomia e infração antecedente", freq: 86, tendencia: "alta", prob: 0.88 },
-    { tema: "Racismo — injúria racial (Lei 14.532/23)", freq: 84, tendencia: "alta", prob: 0.86 },
-    { tema: "Ambientais — responsabilidade penal da PJ", freq: 80, tendencia: "estavel", prob: 0.82 },
-    { tema: "JECRIM — transação, suspensão e menor potencial", freq: 88, tendencia: "alta", prob: 0.89 },
-  );
-})();

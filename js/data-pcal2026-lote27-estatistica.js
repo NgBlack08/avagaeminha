@@ -287,15 +287,3 @@ const QUESTOES_PCAL_LOTE27 = [
 ];
 
 QUESTOES.push(...QUESTOES_PCAL_LOTE27);
-
-/* Frequência de temas — Estatística (Módulo 2) */
-(function () {
-  let d = FREQUENCIA_TEMAS.find(f => f.disciplina === "Estatística");
-  if (!d) { d = { disciplina: "Estatística", temas: [] }; FREQUENCIA_TEMAS.push(d); }
-  d.temas.push(
-    { tema: "Quartis, IIQ e outliers (regra de Tukey)", freq: 82, tendencia: "alta", prob: 0.85 },
-    { tema: "Machine Learning: Naive Bayes, overfitting/underfitting", freq: 76, tendencia: "alta", prob: 0.8 },
-    { tema: "Python para ciência de dados (Pandas, Sklearn)", freq: 74, tendencia: "alta", prob: 0.78 },
-    { tema: "PLN: n-gramas e mineração de dados", freq: 70, tendencia: "estavel", prob: 0.72 },
-  );
-})();

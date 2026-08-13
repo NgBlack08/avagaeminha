@@ -811,16 +811,3 @@ const QUESTOES_SESAUAL_LOTE70 = [
 ];
 
 QUESTOES.push(...QUESTOES_SESAUAL_LOTE70);
-
-/* Frequência de temas — Fisioterapia (bloco aquático) */
-(function () {
-  let d = FREQUENCIA_TEMAS.find(f => f.disciplina === "Fisioterapia");
-  if (!d) { d = { disciplina: "Fisioterapia", temas: [] }; FREQUENCIA_TEMAS.push(d); }
-  d.temas.push(
-    { tema: "Princípios físicos da imersão — empuxo, densidade, pressão e viscosidade", freq: 87, tendencia: "alta", prob: 0.87 },
-    { tema: "Alterações fisiológicas da imersão em repouso e no exercício", freq: 83, tendencia: "alta", prob: 0.83 },
-    { tema: "Método Halliwick — princípios, níveis e dez pontos", freq: 84, tendencia: "alta", prob: 0.84 },
-    { tema: "Método de Bad Ragaz — posicionamento, FNP e irradiação", freq: 80, tendencia: "alta", prob: 0.80 },
-    { tema: "Temperaturas terapêuticas, indicações e contraindicações da hidroterapia", freq: 82, tendencia: "alta", prob: 0.82 },
-  );
-})();

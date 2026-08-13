@@ -1400,6 +1400,59 @@ function composicaoPadroes() {
   }).sort((a, b) => b.total - a.total);
 }
 
+/* ---------------- Incidência dos padrões em PROVA REAL ----------------
+
+   A contrapartida de `composicaoPadroes()`. Aquela mede o que NÓS
+   escrevemos; esta mede o que a CEBRASPE escreveu, restringindo a conta
+   aos itens cujo enunciado e gabarito vieram de caderno aplicado.
+
+   É desta função que sai a faixa de `atencao` do DNA_BANCA — o validador
+   recalcula e quebra o build se o arquivo divergir. Antes, a faixa era
+   escrita à mão, e a ordem que ela declarava estava errada: punha termo
+   absoluto em "alta" e literalidade em "media", quando nos itens reais
+   literalidade responde por mais do que o dobro dos dois seguintes
+   somados.
+
+   ESCOPO. Deliberadamente NÃO passa por `questoesDoEscopo()`. A pergunta
+   aqui é "como a banca constrói item C/E", que é da banca e não da
+   trilha; filtrar por disciplina do candidato reduziria uma amostra já
+   pequena a quase nada. Quando um padrão não faz sentido na trilha (não
+   há jurisprudência em conteúdo clínico), quem resolve é a tela, que já
+   escopa a LISTA de padrões exibidos. */
+const ORIGEM_PROVA_REAL = /CEBRASPE\s+(PC|PF|PRF)/i;
+
+function questoesDeProvaReal() {
+  return QUESTOES.filter(q => ORIGEM_PROVA_REAL.test(q.origem || ""));
+}
+
+function incidenciaRealPadroes() {
+  const base = questoesDeProvaReal();
+  const m = {};
+  for (const q of base) m[q.pegadinha] = (m[q.pegadinha] || 0) + 1;
+
+  return DNA_BANCA.map(d => {
+    const n = m[d.slug] || 0;
+    return {
+      slug: d.slug, nome: d.nome, n,
+      pct: base.length ? (100 * n / base.length) : 0,
+      faixa: faixaDeAtencao(base.length ? (100 * n / base.length) : 0),
+    };
+  }).sort((a, b) => b.n - a.n);
+}
+
+/* Converte a frequência medida na faixa qualitativa. Os limiares vêm de
+   LIMIARES_ATENCAO (js/data.js), declarados junto dos dados para que
+   discordar da calibragem seja mudar um número, não caçar código. */
+function faixaDeAtencao(pct) {
+  if (pct >= LIMIARES_ATENCAO.alta) return "alta";
+  if (pct >= LIMIARES_ATENCAO.media) return "media";
+  return "baixa";
+}
+
+/* Tamanho da amostra real, para a tela poder declará-lo ao lado do
+   número em vez de exibir porcentagem sem denominador. */
+function totalProvaReal() { return questoesDeProvaReal().length; }
+
 /* ---------------- Corte oficial e decisão de marcar em branco ----------------
 
    O edital da trilha traz o piso de eliminação em `corte` (ver EDITAIS, em

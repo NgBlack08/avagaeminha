@@ -244,15 +244,3 @@ const QUESTOES_PCAL_LOTE35 = [
 ];
 
 QUESTOES.push(...QUESTOES_PCAL_LOTE35);
-
-/* Frequência de temas — Processo Penal (Módulo 2) */
-(function () {
-  let d = FREQUENCIA_TEMAS.find(f => f.disciplina === "Processo Penal");
-  if (!d) { d = { disciplina: "Processo Penal", temas: [] }; FREQUENCIA_TEMAS.push(d); }
-  d.temas.push(
-    { tema: "Prisão preventiva: vedação à decretação de ofício (Pacote Anticrime)", freq: 88, tendencia: "alta", prob: 0.88 },
-    { tema: "Presunção de inocência e execução da pena (STF)", freq: 86, tendencia: "alta", prob: 0.86 },
-    { tema: "Modalidades de flagrante (impróprio x presumido)", freq: 80, tendencia: "alta", prob: 0.8 },
-    { tema: "Institutos despenalizadores (Lei 9.099/1995)", freq: 78, tendencia: "estavel", prob: 0.78 },
-  );
-})();

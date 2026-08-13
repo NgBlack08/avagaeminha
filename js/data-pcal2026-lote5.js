@@ -420,25 +420,3 @@ const QUESTOES_PCAL_LOTE5 = [
 ];
 
 QUESTOES.push(...QUESTOES_PCAL_LOTE5);
-
-/* Reforço de frequência de temas do lote 5 (Módulo 2) */
-(function () {
-  const add = (disc, temas) => {
-    let d = FREQUENCIA_TEMAS.find(f => f.disciplina === disc);
-    if (!d) { d = { disciplina: disc, temas: [] }; FREQUENCIA_TEMAS.push(d); }
-    d.temas.push(...temas);
-  };
-  add("Processo Penal", [
-    { tema: "Prisão preventiva e temporária", freq: 90, tendencia: "alta", prob: 0.92 },
-    { tema: "Interceptação telefônica (Lei 9.296)", freq: 82, tendencia: "estavel", prob: 0.84 },
-  ]);
-  add("Legislação Especial", [
-    { tema: "Injúria racial como racismo (Lei 14.532/2023)", freq: 90, tendencia: "alta", prob: 0.92 },
-    { tema: "Tortura — efeitos da condenação", freq: 85, tendencia: "estavel", prob: 0.86 },
-    { tema: "Crimes contra a ordem tributária (SV 24)", freq: 80, tendencia: "alta", prob: 0.82 },
-  ]);
-  add("Crimes Cibernéticos e Segurança Digital", [
-    { tema: "Furto por fraude eletrônica × estelionato", freq: 88, tendencia: "alta", prob: 0.9 },
-    { tema: "Acesso a celular apreendido (STJ)", freq: 86, tendencia: "alta", prob: 0.88 },
-  ]);
-})();

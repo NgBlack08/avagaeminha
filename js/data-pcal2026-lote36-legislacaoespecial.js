@@ -207,15 +207,3 @@ const QUESTOES_PCAL_LOTE36 = [
 ];
 
 QUESTOES.push(...QUESTOES_PCAL_LOTE36);
-
-/* Frequência de temas — Legislação Especial (Módulo 2) */
-(function () {
-  let d = FREQUENCIA_TEMAS.find(f => f.disciplina === "Legislação Especial");
-  if (!d) { d = { disciplina: "Legislação Especial", temas: [] }; FREQUENCIA_TEMAS.push(d); }
-  d.temas.push(
-    { tema: "Crimes falimentares (Lei 11.101/2005): ação penal", freq: 74, tendencia: "estavel", prob: 0.76 },
-    { tema: "Lavagem de dinheiro: efeitos da condenação", freq: 76, tendencia: "alta", prob: 0.76 },
-    { tema: "Crimes hediondos: evolução da Lei 11.464/2007", freq: 82, tendencia: "alta", prob: 0.8 },
-    { tema: "Crimes ambientais: dupla imputação superada (STF)", freq: 80, tendencia: "alta", prob: 0.82 },
-  );
-})();

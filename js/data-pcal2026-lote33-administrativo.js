@@ -206,15 +206,3 @@ const QUESTOES_PCAL_LOTE33 = [
 ];
 
 QUESTOES.push(...QUESTOES_PCAL_LOTE33);
-
-/* Frequência de temas — Direito Administrativo (Módulo 2) */
-(function () {
-  let d = FREQUENCIA_TEMAS.find(f => f.disciplina === "Direito Administrativo");
-  if (!d) { d = { disciplina: "Direito Administrativo", temas: [] }; FREQUENCIA_TEMAS.push(d); }
-  d.temas.push(
-    { tema: "Organização administrativa e poderes administrativos", freq: 80, tendencia: "alta", prob: 0.8 },
-    { tema: "Responsabilidade civil objetiva do Estado", freq: 82, tendencia: "alta", prob: 0.82 },
-    { tema: "Anulação, revogação e silêncio administrativo", freq: 76, tendencia: "estavel", prob: 0.76 },
-    { tema: "Controle legislativo da Administração Pública", freq: 74, tendencia: "estavel", prob: 0.74 },
-  );
-})();

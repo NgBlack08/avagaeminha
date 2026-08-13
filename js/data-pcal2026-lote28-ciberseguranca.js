@@ -247,21 +247,3 @@ const QUESTOES_PCAL_LOTE28 = [
 ];
 
 QUESTOES.push(...QUESTOES_PCAL_LOTE28);
-
-/* Frequência de temas — TI e Segurança Cibernética (Módulo 2) */
-(function () {
-  const addTema = (disc, temas) => {
-    let d = FREQUENCIA_TEMAS.find(f => f.disciplina === disc);
-    if (!d) { d = { disciplina: disc, temas: [] }; FREQUENCIA_TEMAS.push(d); }
-    d.temas.push(...temas);
-  };
-  addTema("Crimes Cibernéticos e Segurança Digital", [
-    { tema: "Autenticação multifator e privacidade digital", freq: 78, tendencia: "alta", prob: 0.8 },
-    { tema: "Art. 154-A pós-Lei 14.155/2021", freq: 74, tendencia: "alta", prob: 0.76 },
-    { tema: "Convenção de Budapeste (Decreto 11.491/2023)", freq: 68, tendencia: "alta", prob: 0.7 },
-  ]);
-  addTema("TI e Segurança Cibernética", [
-    { tema: "Frameworks (NIST CSF) e gestão de identidades (SSO)", freq: 66, tendencia: "alta", prob: 0.68 },
-    { tema: "Criptografia, backup e IDS/IPS", freq: 70, tendencia: "estavel", prob: 0.72 },
-  ]);
-})();

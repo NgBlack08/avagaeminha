@@ -221,15 +221,3 @@ const QUESTOES_PCAL_LOTE46 = [
 ];
 
 QUESTOES.push(...QUESTOES_PCAL_LOTE46);
-
-/* Frequência de temas — Direito Constitucional (Nacionalidade) */
-(function () {
-  let d = FREQUENCIA_TEMAS.find(f => f.disciplina === "Direito Constitucional");
-  if (!d) { d = { disciplina: "Direito Constitucional", temas: [] }; FREQUENCIA_TEMAS.push(d); }
-  d.temas.push(
-    { tema: "Nacionalidade potestativa e naturalização extraordinária (art. 12, I 'c' e II 'b')", freq: 82, tendencia: "alta", prob: 0.82 },
-    { tema: "Cassação x perda de direitos políticos (art. 15)", freq: 82, tendencia: "media", prob: 0.82 },
-    { tema: "Renúncia e reaquisição da nacionalidade (EC 131/2023)", freq: 80, tendencia: "alta", prob: 0.8 },
-    { tema: "Extradição do brasileiro nato — vedação absoluta (art. 5º, LI)", freq: 84, tendencia: "alta", prob: 0.84 },
-  );
-})();

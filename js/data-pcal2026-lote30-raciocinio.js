@@ -321,15 +321,3 @@ const QUESTOES_PCAL_LOTE30 = [
 ];
 
 QUESTOES.push(...QUESTOES_PCAL_LOTE30);
-
-/* Frequência de temas — Raciocínio Lógico-Matemático (Módulo 2) */
-(function () {
-  let d = FREQUENCIA_TEMAS.find(f => f.disciplina === "Raciocínio Lógico-Matemático");
-  if (!d) { d = { disciplina: "Raciocínio Lógico-Matemático", temas: [] }; FREQUENCIA_TEMAS.push(d); }
-  d.temas.push(
-    { tema: "Razão, proporção e regra de três composta", freq: 80, tendencia: "alta", prob: 0.8 },
-    { tema: "Lógica proposicional: negação de condicionais e categóricas", freq: 84, tendencia: "alta", prob: 0.84 },
-    { tema: "Porcentagem (sucessiva) e juros simples", freq: 78, tendencia: "alta", prob: 0.78 },
-    { tema: "Combinatória com restrição e conjuntos", freq: 76, tendencia: "estavel", prob: 0.76 },
-  );
-})();

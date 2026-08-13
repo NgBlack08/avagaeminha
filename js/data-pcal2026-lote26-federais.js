@@ -252,13 +252,3 @@ const QUESTOES_PCAL_LOTE26 = [
 ];
 
 QUESTOES.push(...QUESTOES_PCAL_LOTE26);
-
-/* Frequência de temas — leis federais do edital (Módulo 2) */
-(function () {
-  let d = FREQUENCIA_TEMAS.find(f => f.disciplina === "Legislação Especial");
-  if (!d) { d = { disciplina: "Legislação Especial", temas: [] }; FREQUENCIA_TEMAS.push(d); }
-  d.temas.push(
-    { tema: "Crimes de responsabilidade (Lei 1.079 e DL 201)", freq: 70, tendencia: "estavel", prob: 0.72 },
-    { tema: "Crimes falimentares (Lei 11.101/2005)", freq: 66, tendencia: "estavel", prob: 0.68 },
-  );
-})();

@@ -302,15 +302,3 @@ const QUESTOES_PCAL_LOTE48 = [
 ];
 
 QUESTOES.push(...QUESTOES_PCAL_LOTE48);
-
-/* Frequência de temas — Legislação Especial (Crimes contra a ordem tributária, econômica e relações de consumo) */
-(function () {
-  let d = FREQUENCIA_TEMAS.find(f => f.disciplina === "Legislação Especial");
-  if (!d) { d = { disciplina: "Legislação Especial", temas: [] }; FREQUENCIA_TEMAS.push(d); }
-  d.temas.push(
-    { tema: "Crimes comuns x funcionais e nota fiscal (Lei 8.137/1990, arts. 1º a 3º)", freq: 78, tendencia: "media", prob: 0.78 },
-    { tema: "Elemento subjetivo (dolo/fraude) e agravantes (Lei 8.137/1990, arts. 1º e 12)", freq: 78, tendencia: "media", prob: 0.78 },
-    { tema: "Relações de consumo — destinação comercial (Lei 8.137/1990, art. 7º)", freq: 80, tendencia: "media", prob: 0.8 },
-    { tema: "GLP e usurpação de bens da União (Lei 8.176/1991, arts. 1º e 2º)", freq: 78, tendencia: "alta", prob: 0.78 },
-  );
-})();

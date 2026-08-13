@@ -1199,17 +1199,3 @@ const QUESTOES_SESAUAL_LOTE68 = [
 ];
 
 QUESTOES.push(...QUESTOES_SESAUAL_LOTE68);
-
-/* Frequência de temas — Fisioterapia (bloco de saúde da mulher) */
-(function () {
-  let d = FREQUENCIA_TEMAS.find(f => f.disciplina === "Fisioterapia");
-  if (!d) { d = { disciplina: "Fisioterapia", temas: [] }; FREQUENCIA_TEMAS.push(d); }
-  d.temas.push(
-    { tema: "Uroginecologia — incontinência, avaliação funcional e recursos", freq: 90, tendencia: "alta", prob: 0.90 },
-    { tema: "Mastologia e oncologia — linfedema, TCD e complicações axilares", freq: 86, tendencia: "alta", prob: 0.86 },
-    { tema: "Obstetrícia — gestação, parto e puerpério", freq: 84, tendencia: "alta", prob: 0.84 },
-    { tema: "Anatomia funcional do assoalho pélvico e propedêutica", freq: 82, tendencia: "alta", prob: 0.82 },
-    { tema: "Coloproctologia e disfunções sexuais femininas", freq: 70, tendencia: "media", prob: 0.70 },
-    { tema: "Marco regulatório (COFFITO) e saúde da mulher no SUS", freq: 68, tendencia: "media", prob: 0.68 },
-  );
-})();

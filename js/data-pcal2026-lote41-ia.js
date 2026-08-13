@@ -453,15 +453,3 @@ const QUESTOES_PCAL_LOTE41 = [
 ];
 
 QUESTOES.push(...QUESTOES_PCAL_LOTE41);
-
-/* Frequência de temas — Estatística (Módulo 2) */
-(function () {
-  let d = FREQUENCIA_TEMAS.find(f => f.disciplina === "Estatística");
-  if (!d) { d = { disciplina: "Estatística", temas: [] }; FREQUENCIA_TEMAS.push(d); }
-  d.temas.push(
-    { tema: "IA generativa, LLMs e alucinação", freq: 90, tendencia: "alta", prob: 0.9 },
-    { tema: "Hierarquia IA/ML/redes neurais e Deep Learning", freq: 86, tendencia: "alta", prob: 0.86 },
-    { tema: "Tipos de aprendizado de máquina (supervisionado/não supervisionado/reforço)", freq: 88, tendencia: "alta", prob: 0.88 },
-    { tema: "Embeddings e busca semântica", freq: 78, tendencia: "alta", prob: 0.78 },
-  );
-})();

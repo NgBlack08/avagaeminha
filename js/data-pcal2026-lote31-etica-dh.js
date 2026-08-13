@@ -248,20 +248,3 @@ const QUESTOES_PCAL_LOTE31 = [
 ];
 
 QUESTOES.push(...QUESTOES_PCAL_LOTE31);
-
-/* Frequência de temas — Ética no Serviço Público e Direitos Humanos (Módulo 2) */
-(function () {
-  const addTema = (disc, temas) => {
-    let d = FREQUENCIA_TEMAS.find(f => f.disciplina === disc);
-    if (!d) { d = { disciplina: disc, temas: [] }; FREQUENCIA_TEMAS.push(d); }
-    d.temas.push(...temas);
-  };
-  addTema("Ética no Serviço Público", [
-    { tema: "Moralidade administrativa como princípio autônomo", freq: 78, tendencia: "alta", prob: 0.8 },
-    { tema: "Distinção ética x moral (fundamentos filosóficos)", freq: 74, tendencia: "alta", prob: 0.76 },
-  ]);
-  addTema("Direitos Humanos", [
-    { tema: "Sistema Interamericano: Comissão x Corte (legitimidade)", freq: 80, tendencia: "alta", prob: 0.82 },
-    { tema: "Incorporação de tratados e PNDH-3", freq: 74, tendencia: "estavel", prob: 0.76 },
-  ]);
-})();

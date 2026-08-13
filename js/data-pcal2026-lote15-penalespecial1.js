@@ -599,15 +599,3 @@ const QUESTOES_PCAL_LOTE15 = [
 ];
 
 QUESTOES.push(...QUESTOES_PCAL_LOTE15);
-
-/* Frequência de temas — Legislação Penal Especial I (Módulo 2) */
-(function () {
-  let d = FREQUENCIA_TEMAS.find(f => f.disciplina === "Legislação Especial");
-  if (!d) { d = { disciplina: "Legislação Especial", temas: [] }; FREQUENCIA_TEMAS.push(d); }
-  d.temas.push(
-    { tema: "Maria da Penha — ação penal e vedação da 9.099/95", freq: 92, tendencia: "alta", prob: 0.93 },
-    { tema: "Maria da Penha — medidas protetivas e art. 24-A", freq: 88, tendencia: "alta", prob: 0.9 },
-    { tema: "Tortura — benefícios vedados e regime inicial", freq: 82, tendencia: "estavel", prob: 0.85 },
-    { tema: "Hediondos — vedações, progressão e rol", freq: 90, tendencia: "alta", prob: 0.9 },
-  );
-})();
