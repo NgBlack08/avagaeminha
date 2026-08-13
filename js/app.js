@@ -2566,7 +2566,8 @@ function renderPlanoEstudo() {
       <div class="pe-item ${it.cumprida ? "cumprida" : ""}">
         <div class="pe-item-top">
           <span class="tag ${statusCls[it.statusId]}">${statusIco[it.statusId]} ${escapeHtml(it.statusNome)}</span>
-          <span class="tag" title="Itens que esta disciplina vale na prova, conforme o Edital nº 1 - PC/AL de 2 de julho de 2026">≈ ${it.peso} itens na prova</span>
+          ${faixaPrioridadeTag(it.disciplina)}
+          <span class="tag" title="Peso de estudo desta disciplina: repartição do bloco pela faixa de prioridade. NÃO é previsão de quantos itens a prova terá — o edital define objetos de avaliação, não quota por disciplina.">peso ${it.peso}</span>
           ${modoBadge[it.modo] || ""}
           <b class="pe-disc">${escapeHtml(it.disciplina)}</b>
           <span class="pe-cota ${it.cumprida ? "ok" : ""}" title="Feitas hoje nesta disciplina / cota do dia">${it.cumprida
@@ -2649,6 +2650,17 @@ function estrategiaCardHtml(e) {
     <div class="aplicar">Quando aplicar: ${escapeHtml(e.aplicar)}</div>
     ${e.exemplo ? exemploEstrategiaHtml(e) : ""}
   </details>`;
+}
+
+/* Etiqueta da faixa de prioridade da disciplina na trilha escolhida.
+   Devolve "" quando a trilha não tem faixas declaradas — só a PC-AL tem,
+   porque só ela foi objeto do relatório consolidado. */
+function faixaPrioridadeTag(disciplina) {
+  const ed = editalDoFoco();
+  const faixa = ed && ed.prioridade && ed.prioridade[disciplina];
+  if (!faixa) return "";
+  const cls = faixa.startsWith("S") ? "pri-s" : (faixa.startsWith("A+") ? "pri-a-mais" : "pri-a");
+  return `<span class="tag pri ${cls}" title="Faixa de prioridade no Relatório Consolidado CEBRASPE — PC/AL 2026: S++ é o núcleo de prioridade máxima, A/B o de menor peso.">${escapeHtml(faixa)}</span>`;
 }
 
 /* O protocolo de resolução: oito perguntas que localizam o ponto de

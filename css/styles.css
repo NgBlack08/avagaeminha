@@ -1443,3 +1443,9 @@ mark.trecho-estrategia {
   .proto-rup { float: none; display: block; margin: 3px 0 0; }
   .rup-grade { grid-template-columns: 1fr; }
 }
+
+/* ===== Faixa de prioridade da disciplina (Plano de Estudos) ===== */
+.tag.pri { font-weight: 800; letter-spacing: .04em; }
+.tag.pri-s       { background: color-mix(in srgb, var(--bad) 14%, transparent);  color: var(--bad-texto); }
+.tag.pri-a-mais  { background: color-mix(in srgb, var(--warn) 16%, transparent); color: var(--warn-texto); }
+.tag.pri-a       { background: var(--surface3); color: var(--muted-forte); }

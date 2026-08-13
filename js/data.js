@@ -1513,28 +1513,86 @@ const EDITAIS = {
       p2: { itens: 70, pontos: 21, acertos: 46 },
       total: { itens: 120, pontos: 36, acertos: 78 },
     },
-    /* 120 itens: 50 na P1 (básicos, 5 disciplinas) e 70 na P2 (específicos,
-       9 disciplinas). "Atualidades e Ética no Serviço Público" é um único
-       bloco de 10 itens no edital e aparece como duas disciplinas no banco,
-       então cada uma leva metade. */
+    /* Faixa de prioridade de cada disciplina, conforme o Relatório
+       Consolidado CEBRASPE — PC/AL 2026 (seção 7). É a leitura editorial
+       do estudo sobre o peso de cada bloco na prova-alvo, combinando
+       histórico específico da PC/AL, recorrência em outras policiais da
+       banca e aderência ao edital de 2026. */
+    prioridade: {
+      "Direito Penal": "S++",
+      "Processo Penal": "S++",
+      "Direito Constitucional": "S++",
+      "Direito Administrativo": "S++",
+      "Legislação Institucional (AL)": "S++",
+      "Legislação Especial": "S+",
+      "Língua Portuguesa": "S+",
+      "TI e Segurança Cibernética": "S",
+      "Direitos Humanos": "A+/S",
+      "Contabilidade e Análise Financeira": "A+",
+      "Estatística": "A+",
+      "Crimes Cibernéticos e Segurança Digital": "A+",
+      "Ética no Serviço Público": "A",
+      "Raciocínio Lógico-Matemático": "A",
+      "Atualidades": "A/B",
+    },
+    /* Peso relativo de cada faixa. A escala é declarada aqui em vez de
+       ficar implícita nos números de baixo: quem discordar da calibragem
+       muda um valor e recalcula, em vez de reescrever quinze pesos à mão. */
+    pesoPorPrioridade: { "S++": 4.0, "S+": 3.0, "S": 2.5, "A+/S": 2.25, "A+": 2.0, "A": 1.5, "A/B": 1.0 },
+
+    /* Peso de cada disciplina na composição de simulados, na projeção de
+       corte e na ordem do plano de estudos.
+
+       COMO ESTES NÚMEROS SAÍRAM. Repartição do total de cada bloco (50 e
+       70, que vêm da estrutura de corte do edital) proporcionalmente ao
+       peso da faixa de prioridade acima.
+
+       POR QUE MUDARAM. O bloco P2 estava UNIFORME em 7,8 para as nove
+       disciplinas — um preenchimento neutro que dava a Contabilidade o
+       mesmo peso de Direito Penal na hora de montar o simulado e de
+       ordenar o plano. Não era estimativa, era ausência de estimativa.
+
+       CONFERÊNCIA CONTRA A HISTÓRIA. A estrutura verificável da PC/AL
+       2021 (registrada em `estruturaHistorica2021`) reparte 50 itens
+       entre os básicos e 70 entre os específicos — os mesmos totais de
+       2026. Lá, as cinco áreas específicas tinham 15/15/14/12/14, média
+       14. O edital de 2026 acrescenta QUATRO áreas ao bloco específico,
+       o que necessariamente comprime as cinco históricas; a faixa S++
+       produz 9,6 para cada uma, que é onde a conta da compressão cai.
+       Duas derivações independentes chegando ao mesmo lugar.
+
+       O QUE ESTES NÚMEROS NÃO SÃO. Não são previsão de quantos itens de
+       cada disciplina a prova terá — o edital de 2026 define objetos de
+       avaliação, não quota por disciplina, e o próprio relatório adverte
+       contra converter a distribuição de 2021 em previsão. São peso de
+       ESTUDO: quanto cada disciplina deve ocupar do treino. */
     itensPorDisciplina: {
       /* P1 — conhecimentos básicos: 50 itens */
-      "Língua Portuguesa": 10,
-      "TI e Segurança Cibernética": 10,
-      "Raciocínio Lógico-Matemático": 10,
-      "Direitos Humanos": 10,
-      "Atualidades": 5,
-      "Ética no Serviço Público": 5,
+      "Língua Portuguesa": 12.7,
+      "TI e Segurança Cibernética": 10.6,
+      "Direitos Humanos": 9.6,
+      "Raciocínio Lógico-Matemático": 6.4,
+      "Ética no Serviço Público": 6.4,
+      "Atualidades": 4.3,
       /* P2 — conhecimentos específicos: 70 itens */
-      "Direito Penal": 7.8,
-      "Processo Penal": 7.8,
-      "Direito Constitucional": 7.8,
-      "Direito Administrativo": 7.8,
-      "Legislação Institucional (AL)": 7.8,
-      "Legislação Especial": 7.8,
-      "Contabilidade e Análise Financeira": 7.8,
-      "Estatística": 7.8,
-      "Crimes Cibernéticos e Segurança Digital": 7.8,
+      "Processo Penal": 9.7,
+      "Direito Constitucional": 9.7,
+      "Direito Administrativo": 9.7,
+      "Legislação Institucional (AL)": 9.7,
+      "Direito Penal": 9.6,
+      "Legislação Especial": 7.2,
+      "Contabilidade e Análise Financeira": 4.8,
+      "Estatística": 4.8,
+      "Crimes Cibernéticos e Segurança Digital": 4.8,
+    },
+    /* Estrutura da PC/AL 2021, item a item — a âncora histórica do
+       relatório. Fica registrada como HISTÓRIA, não como previsão: serve
+       para conferir a calibragem acima e para mostrar ao candidato o que
+       mudou de um edital para o outro. */
+    estruturaHistorica2021: {
+      basicos: { "Língua Portuguesa": 20, "Ética no Serviço Público": 10, "Direitos Humanos": 12, "Informática": 8 },
+      especificos: { "Direito Administrativo": 14, "Direito Constitucional": 12, "Direito Penal": 15,
+                     "Processo Penal e legislação correlata": 15, "Legislação Institucional (AL)": 14 },
     },
     /* A que bloco de corte cada disciplina pertence. Isso existia só como
        comentário acima, e comentário não dá para projetar P1 e P2

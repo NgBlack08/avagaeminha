@@ -299,6 +299,46 @@ function validar({ quieto = false } = {}) {
     }
   }
 
+  /* ---------- Coerência entre prioridade, peso e itensPorDisciplina ----------
+     `itensPorDisciplina` é DERIVADO das faixas de prioridade. Se alguém
+     promover uma disciplina de A+ para S++ e esquecer de recalcular o
+     peso, a tela passa a exibir uma prioridade que o motor não aplica —
+     o simulado e o plano continuariam tratando a disciplina como antes.
+     Aqui a derivação é refeita e comparada. */
+  for (const ed of Object.values(EDITAIS)) {
+    if (!ed.prioridade || !ed.pesoPorPrioridade || !ed.blocos || !ed.corte) continue;
+    const onde = `EDITAIS.${ed.id}`;
+
+    for (const disc of Object.keys(ed.itensPorDisciplina)) {
+      if (!ed.prioridade[disc]) erros.push(`${onde}: disciplina "${disc}" não tem faixa de prioridade`);
+    }
+    for (const [disc, faixa] of Object.entries(ed.prioridade)) {
+      if (!(faixa in ed.pesoPorPrioridade)) {
+        erros.push(`${onde}: faixa "${faixa}" (${disc}) não existe em pesoPorPrioridade`);
+      }
+      if (!(disc in ed.itensPorDisciplina)) {
+        erros.push(`${onde}: prioridade declarada para "${disc}", que não está em itensPorDisciplina`);
+      }
+    }
+
+    /* Refaz a repartição por bloco e confere contra o que está gravado. */
+    for (const [chave, nomes] of Object.entries(ed.blocos)) {
+      const alvo = ed.corte[chave] ? ed.corte[chave].itens : 0;
+      const pesos = nomes.map(n => ed.pesoPorPrioridade[ed.prioridade[n]] ?? 0);
+      const somaPeso = pesos.reduce((a, b) => a + b, 0);
+      if (!somaPeso) continue;
+      nomes.forEach((nome, i) => {
+        const esperado = pesos[i] * alvo / somaPeso;
+        const gravado = ed.itensPorDisciplina[nome];
+        /* 0,15 cobre o arredondamento para uma casa e o ajuste de sobra
+           aplicado à maior disciplina do bloco. */
+        if (Math.abs(esperado - gravado) > 0.15) {
+          erros.push(`${onde}: "${nome}" tem peso ${gravado}, mas a faixa ${ed.prioridade[nome]} no bloco ${chave} produz ${esperado.toFixed(1)}`);
+        }
+      });
+    }
+  }
+
   /* ---------- Coerência de `blocos` com `itensPorDisciplina` e `corte` ----------
      A projeção de corte precisa saber a que bloco (P1/P2) cada disciplina
      pertence, e isso obriga a repetir os nomes das disciplinas em
