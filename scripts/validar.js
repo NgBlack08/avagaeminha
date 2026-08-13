@@ -159,8 +159,10 @@ function normalizar(texto) {
 
 function validar({ quieto = false } = {}) {
   const manifesto = sincronizarManifesto({ gravar: false });
-  const { QUESTOES, DNA_BANCA, EDITAIS, ESTRATEGIAS, DISCIPLINAS_JURIDICAS } =
-    carregarDados(manifesto);
+  const {
+    QUESTOES, DNA_BANCA, EDITAIS, ESTRATEGIAS, DISCIPLINAS_JURIDICAS,
+    PONTOS_RUPTURA, RUPTURA_POR_PEGADINHA, CHECKLIST_RESOLUCAO, VIGENCIA_STATUS,
+  } = carregarDados(manifesto);
 
   const erros = [];
   const avisos = [];
@@ -169,6 +171,8 @@ function validar({ quieto = false } = {}) {
   /* ================= ERROS ================= */
 
   const slugsValidos = new Set(DNA_BANCA.map(d => d.slug));
+  const codsRuptura = new Set(PONTOS_RUPTURA.map(r => r.cod));
+  const idsVigencia = new Set(VIGENCIA_STATUS.map(v => v.id));
   const cargosConhecidos = new Set(Object.values(EDITAIS).flatMap(e => e.cargos));
   const vistosId = new Map();
   const vistosEnunciado = new Map();
@@ -225,12 +229,59 @@ function validar({ quieto = false } = {}) {
       erros.push(`${onde}: pegadinha "${q.pegadinha}" não existe em DNA_BANCA`);
     }
 
+    /* Campos opcionais do eixo de ruptura e de vigência normativa: se
+       vierem, precisam vir válidos. Silenciosamente errados seriam piores
+       que ausentes, porque a tela os exibiria como se fossem verdade. */
+    if (q.ruptura !== undefined && !codsRuptura.has(q.ruptura)) {
+      erros.push(`${onde}: ruptura "${q.ruptura}" não existe em PONTOS_RUPTURA`);
+    }
+    if (q.vigencia !== undefined) {
+      if (!idsVigencia.has(q.vigencia)) {
+        erros.push(`${onde}: vigencia "${q.vigencia}" não existe em VIGENCIA_STATUS`);
+      } else if (q.vigencia !== "vigente" && !q.vigenciaNota) {
+        erros.push(`${onde}: vigencia "${q.vigencia}" exige vigenciaNota explicando a mudança normativa`);
+      }
+    }
+
     if (vistosId.has(q.id)) erros.push(`${onde}: ID repetido (já usado)`);
     else vistosId.set(q.id, true);
 
     const chave = normalizar(q.enunciado);
     if (vistosEnunciado.has(chave)) erros.push(`${onde}: enunciado idêntico ao de ${vistosEnunciado.get(chave)}`);
     else vistosEnunciado.set(chave, q.id);
+  }
+
+  /* ---- integridade do eixo de ruptura (js/data-ruptura.js) ----
+     A tela mostra o exemplo de cada ponto de ruptura como prova de que o
+     conceito existe no banco. Exemplo apagado, renomeado ou de disciplina
+     fora do escopo declarado transforma a explicação em afirmação vazia. */
+  {
+    const porId = new Map(QUESTOES.map(q => [q.id, q]));
+    for (const r of PONTOS_RUPTURA) {
+      const q = porId.get(r.exemplo);
+      if (!q) {
+        erros.push(`PONTOS_RUPTURA ${r.cod}: exemplo "${r.exemplo}" não existe no banco`);
+        continue;
+      }
+      const generico = r.escopo.some(e => e.startsWith("todas"));
+      if (!generico && !r.escopo.includes(q.disciplina)) {
+        erros.push(`PONTOS_RUPTURA ${r.cod}: exemplo ${r.exemplo} é de "${q.disciplina}", fora do escopo declarado (${r.escopo.join(", ")})`);
+      }
+    }
+    /* O mapa pegadinha -> ruptura alimenta a sugestão de checagem. Slug
+       novo no DNA_BANCA sem entrada aqui deixa a sugestão em branco. */
+    for (const slug of slugsValidos) {
+      if (!RUPTURA_POR_PEGADINHA[slug]) {
+        erros.push(`RUPTURA_POR_PEGADINHA: falta mapeamento para a pegadinha "${slug}"`);
+      }
+    }
+    const codsCitados = [
+      ...Object.values(RUPTURA_POR_PEGADINHA).flat(),
+      ...CHECKLIST_RESOLUCAO.flatMap(c => c.rup),
+    ];
+    for (const cod of new Set(codsCitados)) {
+      if (!codsRuptura.has(cod)) erros.push(`Código de ruptura citado mas inexistente: "${cod}"`);
+    }
   }
 
   /* O bloco pós-resposta é hoje inteiramente montado a partir das

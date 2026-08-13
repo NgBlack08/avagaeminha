@@ -269,3 +269,90 @@ corrompido (282 KB de bytes nulos) e os pares 02 a 10 ainda não estão no
 disco. Até lá, `REGRA_CEGA_REFERENCIA_REAL = -0.011` e
 `PERFIL_COMPRIMENTO_REAL` continuam valendo, apoiados nos 372 itens de
 2021.
+
+---
+
+## Terceira rodada — o relatório consolidado do usuário (agosto/2026)
+
+O usuário trouxe um estudo próprio das provas policiais da CEBRASPE
+(Relatório Consolidado PC/AL 2026, fases 1–25). A conclusão central dele
+coincide com o que este projeto já vinha medindo de forma independente:
+**não existe fórmula confiável para prever CERTO/ERRADO**; o valor dos
+padrões está em localizar o ponto de ruptura, não em decidir o item.
+
+### O que já convergia
+
+| Achado do relatório | O que o QuestLab já tinha medido |
+|---|---|
+| Distribuição perto de 50/50 | 49,2% ERRADO em 2.474 gabaritos |
+| "Palavra absoluta = ERRADO" rejeitada | +6,3pp, IC95 −12,0 a +24,5pp (292 itens) |
+| "Item longo = ERRADO" não validada | regra cega −1,1pp e depois p=0,644 |
+| Mecanismo isolado não prediz | teste de permutação em duas rodadas |
+
+### O que era novo — e o que aconteceu ao testar
+
+O relatório rejeita também a heurística de **sequência** ("depois de
+vários CERTO vem ERRADO"). Essa eu nunca tinha medido. Ao testar:
+
+**Primeira medição, 5.371 gabaritos lidos das tabelas oficiais:**
+P(C | anterior C) = 43,2% contra P(C | anterior E) = 58,7%. Diferença de
+−15,5pp, p = 0,000 em 20 mil permutações. Contradizia o relatório
+frontalmente e sugeria uma heurística fortíssima.
+
+**Era artefato.** Antes de gravar isso no sistema, fui conferir a
+extração. Os dois cadernos comentados do PC-DF trazem a JUSTIFICATIVA
+oficial item a item — verdade externa que não depende de tabela nenhuma.
+Comparando:
+
+```
+leitura por índice de token .... 92,9% de concordância (7 erros em 99)
+leitura por coluna de caractere. 89,9% de concordância (10 erros em 99)
+```
+
+**A leitura da tabela de gabarito erra ~7%.** A grade do PDF tem lacunas
+horizontais em posições diferentes nas linhas "Item" e "Gabarito", e
+nenhuma das duas formas de parear resolve todos os casos.
+
+**Segunda medição, só com verdade oficial** (156 itens com justificativa,
+apenas trechos consecutivos sem lacuna): −12,5pp com **p = 0,173**. O
+sinal persiste na direção, mas não sobrevive ao acaso. O relatório está
+certo, e o número grande vinha do meu defeito de extração.
+
+### Consequências para as conclusões anteriores
+
+- **Perfil de comprimento** — intacto. Depende só do texto dos itens,
+  nunca dos gabaritos.
+- **Regra cega** — conclusão preservada. Ruído de rótulo atenua efeito em
+  direção ao zero, e o valor observado já estava **abaixo** da mediana do
+  acaso; um erro de 7% não fabrica esse resultado, no máximo o encolhe.
+- **Taxa-base 49,2% ERRADO** — a estimativa fica puxada em direção a 50/50
+  por ruído simétrico. A conclusão "perto do equilíbrio" se sustenta, mas
+  a precisão decimal não deve ser levada a sério.
+
+### O que entrou no sistema
+
+`js/data-ruptura.js`, com três coisas que o relatório acrescenta e o
+banco não tinha:
+
+1. **Pontos de ruptura R1–R12** — eixo ortogonal à `pegadinha`. A
+   pegadinha diz COMO o item foi falseado; a ruptura diz QUAL ELEMENTO
+   foi alterado (competência, prazo, requisito, limiar). Dois itens com a
+   mesma pegadinha podem romper em lugares diferentes.
+2. **Protocolo de resolução** — as oito perguntas que varrem os pontos de
+   ruptura, com o qualificador deliberadamente por último, para que o
+   candidato não comece pela forma.
+3. **Heurísticas rejeitadas** — cada uma com a medição que a derruba,
+   auditável e com o corpus indicado.
+
+O validador passou a checar a integridade desse eixo: exemplo inexistente
+ou de disciplina fora do escopo declarado quebra o build.
+
+### Pendência declarada
+
+O relatório recomenda `variavel_critica` e `ponto_ruptura` **por item**.
+A variável crítica já existia sob outro nome (`palavraChave` +
+`cognitivo.palavraCritica`, em todas as 2.246 questões). O campo
+`ruptura` está criado e validado, mas **nenhuma questão foi etiquetada
+ainda** — fazê-lo exige julgamento item a item, e derivá-lo
+mecanicamente da `pegadinha` seria inventar análise. Fica como trabalho
+declarado, não como funcionalidade entregue pela metade.

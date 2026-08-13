@@ -1408,3 +1408,38 @@ mark.trecho-estrategia {
   .pv-modelo { grid-template-columns: 1fr; }
   .pv-resumo b { font-size: 18px; }
 }
+
+/* ===== Protocolo de resolução e pontos de ruptura (Estratégias) ===== */
+.protocolo .proto-lista { margin: 14px 0 0; padding-left: 20px; display: grid; gap: 9px; }
+.protocolo .proto-lista li { line-height: 1.5; }
+.proto-para { color: var(--muted-forte); }
+.proto-rup { float: right; margin-left: 10px; font-size: .78rem; color: var(--pred-ciano); font-weight: 700; letter-spacing: .04em; }
+.proto-rup abbr { text-decoration: none; border-bottom: 1px dotted currentColor; cursor: help; }
+.proto-det { margin-top: 16px; }
+.proto-det summary { cursor: pointer; font-weight: 700; color: var(--accent-texto); padding: 6px 0; }
+.rup-grade { display: grid; grid-template-columns: repeat(auto-fit, minmax(238px, 1fr)); gap: 12px; margin-top: 12px; }
+.rup-item { background: var(--surface2); border: 1px solid var(--border); border-radius: 10px; padding: 12px; }
+.rup-cab { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; }
+.rup-cod { background: var(--dna-roxo); color: var(--bg); font-weight: 800; font-size: .74rem;
+  padding: 2px 7px; border-radius: 6px; letter-spacing: .04em; }
+.rup-perg { font-style: italic; color: var(--accent-texto); margin-bottom: 5px; }
+.rup-desc { font-size: .88rem; color: var(--muted-forte); line-height: 1.45; }
+.rup-ex { margin-top: 8px; font-size: .82rem; }
+.regra-ouro { margin-top: 16px; padding: 12px 14px; border-left: 3px solid var(--warn);
+  background: var(--surface2); border-radius: 0 8px 8px 0; line-height: 1.55; }
+
+/* ===== Heurísticas rejeitadas ===== */
+.heur-item { border: 1px solid var(--border); border-radius: 10px; padding: 13px 14px;
+  margin-top: 12px; background: var(--surface2); }
+.heur-cab { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-bottom: 8px; }
+.heur-nome { font-weight: 700; }
+.heur-status { font-size: .72rem; font-weight: 800; letter-spacing: .05em;
+  padding: 3px 8px; border-radius: 999px; white-space: nowrap; }
+.heur-rej { background: color-mix(in srgb, var(--bad) 10%, transparent); color: var(--bad-texto); }
+.heur-nv  { background: color-mix(in srgb, var(--warn) 12%, transparent); color: var(--warn-texto); }
+.heur-item > div:not(.heur-cab) { font-size: .89rem; line-height: 1.55; margin-top: 6px; color: var(--muted-forte); }
+.heur-item b { color: var(--text); }
+@media (max-width: 640px) {
+  .proto-rup { float: none; display: block; margin: 3px 0 0; }
+  .rup-grade { grid-template-columns: 1fr; }
+}

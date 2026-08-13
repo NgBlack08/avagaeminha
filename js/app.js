@@ -2651,6 +2651,57 @@ function estrategiaCardHtml(e) {
   </details>`;
 }
 
+/* O protocolo de resolução: oito perguntas que localizam o ponto de
+   ruptura ANTES de o padrão entrar em cena. A ordem importa — a última
+   pergunta é a do qualificador, justamente para que o candidato não
+   comece por ela e decida a questão pela forma. */
+function protocoloResolucaoHtml() {
+  const porCod = Object.fromEntries(PONTOS_RUPTURA.map(r => [r.cod, r]));
+  return `<div class="card protocolo">
+    <h3>◎ Protocolo de resolução — onde o item se rompe</h3>
+    <p>A banca costuma preservar o núcleo verdadeiro da proposição e alterar <b>um</b> elemento determinante.
+    Resolver é localizar esse elemento. As perguntas abaixo varrem os pontos onde a alteração cabe.</p>
+    <ol class="proto-lista">
+      ${CHECKLIST_RESOLUCAO.map(c => `<li>
+        <b>${escapeHtml(c.p)}</b> <span class="proto-para">${escapeHtml(c.para)}</span>
+        <span class="proto-rup">${c.rup.map(r => `<abbr title="${escapeHtml((porCod[r] || {}).nome || r)}">${r}</abbr>`).join(" ")}</span>
+      </li>`).join("")}
+    </ol>
+    <details class="proto-det">
+      <summary>Os 12 pontos de ruptura, com um exemplo do banco em cada</summary>
+      <div class="rup-grade">
+        ${PONTOS_RUPTURA.map(r => `<div class="rup-item">
+          <div class="rup-cab"><span class="rup-cod">${r.cod}</span> <b>${escapeHtml(r.nome)}</b></div>
+          <div class="rup-perg">${escapeHtml(r.pergunta)}</div>
+          <div class="rup-desc">${escapeHtml(r.desc)}</div>
+          <button class="btn-link rup-ex" onclick="abrirQuestaoPorId('${r.exemplo}')">ver ${r.exemplo} no banco →</button>
+        </div>`).join("")}
+      </div>
+    </details>
+    <p class="regra-ouro"><b>${escapeHtml(REGRA_DE_OURO.texto)}</b> ${escapeHtml(REGRA_DE_OURO.detalhe)}</p>
+  </div>`;
+}
+
+/* O contrapeso da biblioteca de estratégias: o que NÃO funciona, e a
+   medição que derruba cada crença. Sem isso, uma tela cheia de padrões
+   convida exatamente ao erro que o sistema deveria evitar. */
+function heuristicasRejeitadasHtml() {
+  return `<div class="card heur-rej">
+    <h3>⊘ Heurísticas que não se sustentam</h3>
+    <p>Todo cursinho repete alguma destas. Cada uma foi testada contra gabaritos oficiais — e nenhuma sobreviveu
+    como <b>decisão</b>. Onde o número aparece, ele é auditável e vem do corpus indicado.</p>
+    ${HEURISTICAS_REJEITADAS.map(h => `<div class="heur-item">
+      <div class="heur-cab">
+        <span class="heur-nome">${escapeHtml(h.heuristica)}</span>
+        <span class="heur-status heur-${h.status.includes("NÃO") ? "nv" : "rej"}">${escapeHtml(h.status)}</span>
+      </div>
+      <div class="heur-med"><b>O que medimos:</b> ${escapeHtml(h.medicao)}</div>
+      ${h.ressalva ? `<div class="heur-res"><b>Ressalva:</b> ${escapeHtml(h.ressalva)}</div>` : ""}
+      <div class="heur-uso"><b>Uso permitido:</b> ${escapeHtml(h.usoPermitido)}</div>
+    </div>`).join("")}
+  </div>`;
+}
+
 function renderEstrategias() {
   const cats = estrategiaCat ? ESTRATEGIA_CATEGORIAS.filter(c => c.id === estrategiaCat) : ESTRATEGIA_CATEGORIAS;
   const nTotal = ESTRATEGIAS.length;
@@ -2669,6 +2720,9 @@ function renderEstrategias() {
     servem para priorizar estudo, não como previsão de prova.</p>
   </div>
 
+  ${protocoloResolucaoHtml()}
+  ${heuristicasRejeitadasHtml()}
+
   <div class="estr-filtros">
     <button class="chip ${!estrategiaCat ? "active" : ""}" onclick="setEstrategiaCat(null)">Todas (${nTotal})</button>
     ${ESTRATEGIA_CATEGORIAS.map(c => {
@@ -2686,6 +2740,23 @@ function renderEstrategias() {
       ${lista.map(estrategiaCardHtml).join("")}
     </div>`;
   }).join("")}`;
+}
+
+/* Abre uma questão qualquer no Banco pelo ID. Mesmo caminho de
+   verExemploEstrategia(), sem o destaque de trecho — usado pelos
+   exemplos dos pontos de ruptura. */
+function abrirQuestaoPorId(id) {
+  const q = QUESTOES.find(x => x.id === id);
+  if (!q) return;
+  if (!questaoLiberada(q)) { navigate("planos"); return; }
+
+  destaqueEstrategia = null;
+  bancoFiltros = { disciplina: q.disciplina, assunto: q.assunto };
+  bancoListaCache = null;
+  const idx = listaBancoAtual().findIndex(x => x.id === q.id);
+  bancoIndice = idx >= 0 ? idx : 0;
+  bancoPagina = idx >= 0 ? Math.floor(idx / tamanhoPaginaBanco()) : 0;
+  navigate("banco");
 }
 
 /* Abre a questão-exemplo no Banco com o trecho da estratégia destacado. */

@@ -34,6 +34,15 @@ const GLOBAIS_PUBLICAS = [
   "EDITAIS",
   "INTELIGENCIA",
   "DISCIPLINAS_JURIDICAS",
+  /* Eixo de ponto de ruptura e guarda-corpo contra heurística não
+     validada — js/data-ruptura.js. */
+  "PONTOS_RUPTURA",
+  "RUPTURA_POR_PEGADINHA",
+  "CHECKLIST_RESOLUCAO",
+  "HEURISTICAS_REJEITADAS",
+  "REGRA_DE_OURO",
+  "VIGENCIA_STATUS",
+  "DATA_CORTE_PCAL2026",
 ];
 
 /* A ordem de carga só tem uma restrição real: data.js precisa vir primeiro,
