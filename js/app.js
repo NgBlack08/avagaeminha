@@ -586,7 +586,7 @@ function padraoDetectadoHtml(dna) {
     ? `<div class="dna-comp">Neste banco: ${c.total} itens deste padrão · ${Math.round(c.previsibilidade * 100)}% caem em <b>${c.ladoDominante === "C" ? "CERTO" : "ERRADO"}</b>${viciado ? ` <span class="dna-alerta" title="Dentro deste banco o padrão é previsível demais. É característica do acervo, não da banca — não use como regra de chute.">⚠ previsível aqui</span>` : ""}</div>`
     : "";
   return `<div class="bloco"><b>Padrão da banca detectado: ${escapeHtml(dna.nome)}</b>${escapeHtml(dna.gatilho)}
-    <div class="dna-origem">Uso estimado pela banca: ${dna.incidencia}% — leitura editorial de provas anteriores, não contagem item a item.</div>
+    <div class="dna-origem">Prioridade de atenção: <b>${escapeHtml(dna.atencao)}</b> — leitura editorial de provas anteriores. Não é porcentagem, e não prevê o gabarito.</div>
     ${medido}</div>`;
 }
 
@@ -931,12 +931,15 @@ function renderDashboard() {
           return `
         <div class="dna-item">
           <h4>${d.nome}</h4>
-          <div style="display:flex;gap:10px"><div class="dna-bar"><i style="width:${d.incidencia}%"></i></div><span class="dna-pct">${d.incidencia}%</span></div>
+          <div class="dna-medida">
+          <span class="dna-atencao at-${d.atencao}">atenção ${d.atencao}</span>
+          ${c ? `<div class="dna-bar" title="Fatia deste padrão no banco: ${c.total} de ${QUESTOES.length} itens"><i style="width:${Math.min(100, Math.round(1000 * c.total / QUESTOES.length))}%"></i></div><span class="dna-pct">${(100 * c.total / QUESTOES.length).toFixed(1)}% do banco</span>` : ""}
+        </div>
           ${c ? `<div class="dna-comp">${c.total} itens no banco · ${Math.round(c.previsibilidade * 100)}% caem em <b>${c.ladoDominante === "C" ? "CERTO" : "ERRADO"}</b>${viciado ? ` <span class="dna-alerta" title="Dentro deste banco o padrão é previsível demais. Não conclua que a banca se comporta assim.">⚠ previsível aqui</span>` : ""}</div>` : ""}
         </div>`;
         }).join("");
       })()}
-      <div class="dna-nota">A barra é <b>estimativa editorial</b> de quanto a banca usa cada padrão — leitura de provas anteriores, não contagem item a item. A linha abaixo dela é medida, mas mede <b>este banco</b>, não a prova.</div>
+      <div class="dna-nota">A faixa de <b>atenção</b> é leitura editorial de provas anteriores — ordena o que merece mais cuidado, e não é porcentagem de nada. A barra e os números ao lado são <b>medidos neste banco</b>, não na prova.</div>
       <button class="btn ghost small" style="margin-top:12px" onclick="navigate('raiox')">Ver Raio-X completo →</button>
     </div>
     <div class="card card-pred">
@@ -2187,7 +2190,10 @@ function renderRaioX() {
         return `
       <div class="dna-item">
         <h4>${d.nome}</h4>
-        <div style="display:flex;gap:10px"><div class="dna-bar"><i style="width:${d.incidencia}%"></i></div><span class="dna-pct">${d.incidencia}%</span></div>
+        <div class="dna-medida">
+          <span class="dna-atencao at-${d.atencao}">atenção ${d.atencao}</span>
+          ${c ? `<div class="dna-bar" title="Fatia deste padrão no banco: ${c.total} de ${QUESTOES.length} itens"><i style="width:${Math.min(100, Math.round(1000 * c.total / QUESTOES.length))}%"></i></div><span class="dna-pct">${(100 * c.total / QUESTOES.length).toFixed(1)}% do banco</span>` : ""}
+        </div>
         ${c ? `<div class="dna-comp">Neste banco: ${c.total} itens · ${Math.round(c.previsibilidade * 100)}% caem em <b>${c.ladoDominante === "C" ? "CERTO" : "ERRADO"}</b>${viciado ? ` <span class="dna-alerta" title="Previsível demais dentro deste acervo — característica do banco, não da banca.">⚠ previsível aqui</span>` : ""}</div>` : ""}
         <p>${d.desc}</p>
         <div class="gatilho">⚡ Gatilho mental: ${d.gatilho}</div>

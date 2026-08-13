@@ -1389,7 +1389,11 @@ function composicaoPadroes() {
     return {
       ...c, total, ladoDominante,
       nome: dna ? dna.nome : c.slug,
-      incidenciaEstimada: dna ? dna.incidencia : null,
+      /* `incidenciaEstimada` saiu daqui junto com o campo que a
+         alimentava: era a estimativa editorial vestida de porcentagem, e
+         nenhuma tela chegou a consumir este valor. O que substitui é a
+         faixa qualitativa, que a tela lê direto do DNA_BANCA. */
+      atencao: dna ? dna.atencao : null,
       participacao: total / base.length,
       previsibilidade: Math.max(c.C, c.E) / total,
     };

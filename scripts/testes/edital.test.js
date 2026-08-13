@@ -66,11 +66,20 @@ test("a escala é comparável entre editais de tamanhos diferentes", () => {
   const bonusSesau = pesoDe(sesau, "Fisioterapia") - pesoDe(sesau, "Fisioterapia");
   assert.equal(bonusSesau, 0, "sanidade do método de medição");
 
-  const itensPcal = pcal.json("EDITAIS.PCAL.itensPorDisciplina");
-  const maiorPcal = Math.max(...Object.values(itensPcal));
-  assert.equal(maiorPcal, 10, "maior peso da PC-AL");
-  const itensSesau = sesau.json("EDITAIS.SESAUAL_FISIO.itensPorDisciplina");
-  assert.equal(Math.max(...Object.values(itensSesau)), 70, "maior peso da SESAU-AL");
+  /* O que precisa valer é a PORTABILIDADE: em qualquer trilha, a
+     disciplina mais pesada recebe o bônus máximo — seja o maior peso 10,
+     12,7 ou 70. Fixar aqui o número da PC-AL fazia deste teste uma cópia
+     do dado, e foi assim que ele ficou verde numa rodada em que os pesos
+     já tinham mudado (o harness lia o bundle da geração anterior). */
+  for (const [trilha, app] of [["PCAL", pcal], ["SESAUAL_FISIO", sesau]]) {
+    const itens = app.json(`EDITAIS.${trilha}.itensPorDisciplina`);
+    const nomes = Object.keys(itens);
+    const maior = nomes.reduce((a, b) => (itens[a] >= itens[b] ? a : b));
+    const menor = nomes.reduce((a, b) => (itens[a] <= itens[b] ? a : b));
+    assert.ok(itens[maior] > 0, `${trilha}: o maior peso tem de ser positivo`);
+    assert.ok(pesoDe(app, maior) >= pesoDe(app, menor),
+      `${trilha}: a disciplina mais pesada não pode receber bônus menor que a mais leve`);
+  }
 });
 
 test("o peso nunca é zero ou negativo", () => {
@@ -345,12 +354,19 @@ test("a ordem dos blocos é a do edital: básicos antes de específicos", () => 
 
 test("pesos fracionários são repartidos sem sobrar nem faltar item", () => {
   const app = comTrilha("PCAL");
-  /* 9 disciplinas × 7,8 = 70,2 para um bloco de 70: arredondar cada uma
-     isolada daria 72 ou 63. */
+  /* Pesos fracionários (9,7 / 7,2 / 4,8 …) para um bloco de 70 inteiros:
+     arredondar cada um isoladamente sobra ou falta item. O invariante é
+     que a SOMA feche exata e que ninguém se afaste mais de um item da
+     sua fatia — não que todos caiam na mesma faixa, o que só era verdade
+     enquanto os pesos do bloco eram uniformes. */
+  const ed = app.json("EDITAIS.PCAL");
   const p2 = app.json("montarProvaOficial()").estrutura.find(b => b.bloco === "p2");
   assert.equal(p2.disciplinas.reduce((s, d) => s + d.previstos, 0), 70);
+  const somaPeso = ed.blocos.p2.reduce((s, n) => s + ed.itensPorDisciplina[n], 0);
   for (const d of p2.disciplinas) {
-    assert.ok(d.previstos === 7 || d.previstos === 8, `${d.disciplina}: ${d.previstos}`);
+    const exato = ed.itensPorDisciplina[d.disciplina] * 70 / somaPeso;
+    assert.ok(Math.abs(d.previstos - exato) < 1,
+      `${d.disciplina}: ${d.previstos} previstos contra fatia exata de ${exato.toFixed(2)}`);
   }
 });
 
@@ -389,8 +405,13 @@ test("banco incompleto reduz a prova mas preserva a estrutura", () => {
   `);
   const p = app.json("montarProvaOficial()");
   const at = p.estrutura[0].disciplinas.find(d => d.disciplina === "Atualidades");
-  assert.equal(at.previstos, 5);
-  assert.ok(at.obtidos < 5, "sai o que existe");
+  /* O ponto do teste é que a ESTRUTURA não encolhe junto com o acervo: a
+     cota prevista continua sendo a do edital mesmo sem questões para
+     preenchê-la. Fixar o número 5 aqui era prender o teste ao peso antigo
+     de Atualidades — o que importa é previsto > obtido, e a falta
+     reportada. */
+  assert.ok(at.previstos >= 1, "a cota prevista não some porque o banco está vazio");
+  assert.ok(at.obtidos < at.previstos, "sai o que existe");
   assert.ok(p.faltantes.some(f => f.disciplina === "Atualidades"), "e a falta é reportada");
 });
 

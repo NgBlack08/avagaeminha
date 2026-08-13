@@ -172,6 +172,20 @@ function validar({ quieto = false } = {}) {
 
   const slugsValidos = new Set(DNA_BANCA.map(d => d.slug));
   const codsRuptura = new Set(PONTOS_RUPTURA.map(r => r.cod));
+
+  /* O DNA já teve um campo `incidencia` de 0 a 100 que a tela desenhava
+     como barra com "%" — número editorial exibido como estatística, e em
+     conflito direto com a medição real (82% contra 11,0% de ocorrência
+     para termos absolutos). Virou faixa qualitativa. Este bloco impede
+     que a porcentagem volte por descuido em algum lote futuro. */
+  for (const d of DNA_BANCA) {
+    if ("incidencia" in d) {
+      erros.push(`DNA_BANCA ${d.slug}: campo "incidencia" foi removido do modelo — use "atencao" (alta/media/baixa). Porcentagem não medida não volta para a tela.`);
+    }
+    if (!["alta", "media", "baixa"].includes(d.atencao)) {
+      erros.push(`DNA_BANCA ${d.slug}: atencao "${d.atencao}" inválida (esperado alta, media ou baixa)`);
+    }
+  }
   const idsVigencia = new Set(VIGENCIA_STATUS.map(v => v.id));
   const cargosConhecidos = new Set(Object.values(EDITAIS).flatMap(e => e.cargos));
   const vistosId = new Map();

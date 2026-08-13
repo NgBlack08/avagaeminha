@@ -51,41 +51,51 @@ const CARGOS = ["Escrivão", "Agente", "Delegado", "Perito Criminal", "Papilosco
    Até a versão 7.140 o bloco pós-resposta e a etiqueta imprimiam
    "(incidência 82%)" cru, o que contrariava este comentário justamente no
    ponto de maior exposição — uma vez por questão respondida. */
+/* ATENÇÃO, NÃO INCIDÊNCIA. Este campo já foi `incidencia`, um número de
+   0 a 100 que a tela desenhava como barra com "%" ao lado. Ele nunca foi
+   medido: era ordenação editorial vestida de estatística. Pior, para
+   "termos absolutos" exibia 82% enquanto a medição em 292 itens reais de
+   prova policial deu 11,0% de OCORRÊNCIA e apenas +6,3pp de associação
+   com ERRADO (IC95 de -12,0 a +24,5pp, cruzando o zero).
+
+   Agora é uma faixa qualitativa de PRIORIDADE DE ATENÇÃO, que é tudo o
+   que o número honestamente sustentava. A composição real de cada padrão
+   neste banco é medida em composicaoPadroes() e exibida ao lado. */
 const DNA_BANCA = [
-  { slug: "termo-absoluto", nome: "Termos absolutos", incidencia: 82,
+  { slug: "termo-absoluto", nome: "Termos absolutos", atencao: "alta",
     desc: "Uso de 'sempre', 'nunca', 'somente', 'qualquer', 'todos'. Termos absolutos frequentemente tornam a assertiva ERRADA — mas não automaticamente: normas literais podem ser absolutas (ex.: vedação à tortura).",
     gatilho: "Ao ver termo absoluto, procure a exceção. Se existir exceção conhecida, a assertiva tende a ser E." },
-  { slug: "restricao-indevida", nome: "Restrição indevida", incidencia: 74,
+  { slug: "restricao-indevida", nome: "Restrição indevida", atencao: "alta",
     desc: "A banca pega uma regra ampla e a restringe ('somente durante o dia', 'apenas mediante mandado'). O conteúdo parece correto, mas o recorte torna a frase falsa.",
     gatilho: "Pergunte: a lei realmente limita a isso, ou há outras hipóteses?" },
-  { slug: "troca-conceito", nome: "Troca/inversão de conceitos", incidencia: 71,
+  { slug: "troca-conceito", nome: "Troca/inversão de conceitos", atencao: "alta",
     desc: "Define corretamente um instituto, mas com o NOME de outro (concussão × corrupção passiva; excesso × desvio de poder; anulação × revogação).",
     gatilho: "Confira se o rótulo bate com a definição, não apenas se a definição 'soa certa'." },
-  { slug: "exigencia-inexistente", nome: "Exigência inexistente", incidencia: 63,
+  { slug: "exigencia-inexistente", nome: "Exigência inexistente", atencao: "alta",
     desc: "Acrescenta requisito que a norma não prevê ('desde que haja coabitação', 'exige-se o efetivo recebimento').",
     gatilho: "Desconfie de 'desde que', 'condicionado a', 'exige-se'." },
-  { slug: "literalidade", nome: "Literalidade legal", incidencia: 61,
+  { slug: "literalidade", nome: "Literalidade legal", atencao: "media",
     desc: "Reprodução quase literal do texto legal com UMA palavra trocada (ou nenhuma — e aí é C). Muito comum em CF art. 5º e art. 144.",
     gatilho: "Compare mentalmente com o texto da lei palavra por palavra nos pontos críticos: prazos, números, sujeitos, verbos." },
-  { slug: "verdade-mais-falso", nome: "Verdade + falso emendado", incidencia: 58,
+  { slug: "verdade-mais-falso", nome: "Verdade + falso emendado", atencao: "media",
     desc: "Inicia com afirmação verdadeira e emenda uma conclusão falsa. O candidato valida o início e 'carrega' a confiança para o fim.",
     gatilho: "Julgue cada oração separadamente. Uma parte falsa torna TUDO errado." },
-  { slug: "troca-numerica", nome: "Troca numérica", incidencia: 52,
+  { slug: "troca-numerica", nome: "Troca numérica", atencao: "media",
     desc: "Altera prazos, quantidades e frações ('3 ou mais pessoas' em vez de 4, no conceito de organização criminosa).",
     gatilho: "Números em assertivas C/E são sempre ponto de verificação obrigatório." },
-  { slug: "juris-mais-lei", nome: "Jurisprudência misturada à lei", incidencia: 49,
+  { slug: "juris-mais-lei", nome: "Jurisprudência misturada à lei", atencao: "media",
     desc: "Combina texto legal com entendimento do STF/STJ (súmulas, teses de repercussão geral). A assertiva só fecha para quem conhece os dois.",
     gatilho: "Temas clássicos: busca domiciliar, insignificância, Maria da Penha, armas (perigo abstrato)." },
-  { slug: "generalizacao", nome: "Generalização indevida", incidencia: 47,
+  { slug: "generalizacao", nome: "Generalização indevida", atencao: "baixa",
     desc: "Estende regra de um caso para todos ('todos os atos de polícia são discricionários').",
     gatilho: "Regra + 'todos/qualquer' = procure o contraexemplo." },
-  { slug: "troca-sujeito", nome: "Troca de sujeitos/atribuições", incidencia: 41,
+  { slug: "troca-sujeito", nome: "Troca de sujeitos/atribuições", atencao: "baixa",
     desc: "Atribui competência de um órgão/agente a outro (delegado arquiva IP; PF × PRF; MP × juiz).",
     gatilho: "Pergunte: QUEM pode praticar esse ato segundo a norma?" },
-  { slug: "negacao-dupla", nome: "Negação dupla / embaralhamento", incidencia: 38,
+  { slug: "negacao-dupla", nome: "Negação dupla / embaralhamento", atencao: "baixa",
     desc: "Construções como 'não é incorreto afirmar que…', 'é inegável que não se pode negar…' que invertem o sentido e confundem a leitura. Duas negativas se anulam e viram uma afirmação.",
     gatilho: "Reescreva a frase na forma afirmativa antes de julgar. Cada 'não' inverte o sentido — conte-os." },
-  { slug: "juris-inventada", nome: "Jurisprudência/súmula inventada", incidencia: 35,
+  { slug: "juris-inventada", nome: "Jurisprudência/súmula inventada", atencao: "baixa",
     desc: "Cita súmula, tese ou informativo com NÚMERO fictício ou enunciado inexistente ('Súmula 999 do STF'), apostando que o candidato aceita a autoridade sem checar.",
     gatilho: "Número de súmula que 'não lembra' é sinal de alerta. Desconfie do conteúdo, não da aparência de autoridade." },
 ];
@@ -1285,7 +1295,7 @@ const ESTRATEGIAS = [
       "Pergunte: consigo apontar o dispositivo que cria essa condição?",
       "Não consigo ⇒ suspeite fortemente. Condição inexistente derruba o item inteiro.",
     ],
-    ganho: "Ataca um padrão de alta incidência (≈63%) com uma pergunta única e objetiva.",
+    ganho: "Troca uma avaliação difusa ('parece razoável?') por uma pergunta única e verificável ('esta condição está no texto?').",
     armadilha: "Nem toda condição é inventada — o Direito é cheio de requisitos legítimos. A pergunta certa não é 'parece razoável?', e sim 'está na norma?'.",
     contraDNA: ["exigencia-inexistente", "restricao-indevida"],
     exemplo: "PP-005", trecho: "desde que corroborado por outros elementos de prova",
@@ -1425,19 +1435,19 @@ const ESTRATEGIAS = [
   },
   {
     id: "atualizacao-legislativa", categoria: "conteudo", escopo: "juridica", nome: "Radar de atualização legislativa",
-    desc: "Lei ou decisão dos últimos 2 anos tem alta chance de cobrança literal — e, nesses casos, com viés de gabarito CERTO.",
+    desc: "Lei ou decisão dos últimos 2 anos costuma ser cobrada em redação próxima à literal. Saber que o tema é novo diz ONDE a banca vai olhar — não diz qual será o gabarito.",
     aplicar: "Revisão pré-prova: liste as novidades do edital e leia a letra da lei nova.",
-    padrao: "Novidade legislativa é material de prova de baixo custo para a banca: o texto é curto, ainda não tem jurisprudência consolidada e discrimina bem quem manteve a revisão em dia. Na estreia de um dispositivo, a cobrança tende a ser mais literal do que interpretativa — o que aumenta a proporção de itens CERTO.",
+    padrao: "Novidade legislativa é material de prova de baixo custo para a banca: o texto é curto, ainda não tem jurisprudência consolidada e discrimina bem quem manteve a revisão em dia. Na estreia de um dispositivo, a cobrança tende a ser mais literal do que interpretativa. Isso diz respeito à FORMA do item, não ao gabarito: a mesma literalidade que produz item correto produz item errado por uma palavra trocada.",
     passos: [
       "Antes da prova, liste toda lei/tese com menos de 2 anos dentro do edital.",
       "Leia a letra do dispositivo novo, não apenas o resumo do professor.",
       "Fixe números da lei nova: penas, prazos e quóruns são o recorte preferido.",
     ],
-    ganho: "Converte um bloco previsível da prova em acerto de baixo esforço.",
-    armadilha: "Viés de CERTO não é garantia. A banca também troca a pena ou o artigo da lei nova — o radar indica o tema, não o gabarito.",
+    ganho: "Concentra a revisão no que mudou recentemente, que é onde a banca busca item novo — e onde o candidato que estudou por material antigo erra sem perceber.",
+    armadilha: "Tratar 'tema novo' como pista de gabarito. Os 90,9% de CERTO que a literalidade tem NESTE banco são defeito de autoria nosso, apontado pelo validador — não comportamento da banca. O radar indica o tema, nunca a resposta.",
     contraDNA: ["literalidade", "troca-numerica"],
     exemplo: "LP-002", trecho: "deixou de ser qualificadora do homicídio e passou a constituir tipo penal autônomo",
-    porqueTrecho: "Reprodução fiel da mudança trazida pela Lei 14.994/2024, que criou o art. 121-A do CP. É o formato típico da novidade recém-editada: literal e CERTO — mas com a pena (20 a 40 anos) exposta no fecho, pronta para ser trocada em outra prova.",
+    porqueTrecho: "Reprodução fiel da mudança trazida pela Lei 14.994/2024, que criou o art. 121-A do CP. É o formato típico da novidade recém-editada: redação colada à letra da lei — e com a pena (20 a 40 anos) exposta no fecho, pronta para ser trocada em outra prova.",
   },
 
   /* ============ GESTÃO DE PROVA ============ */

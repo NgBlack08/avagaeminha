@@ -1449,3 +1449,144 @@ mark.trecho-estrategia {
 .tag.pri-s       { background: color-mix(in srgb, var(--bad) 14%, transparent);  color: var(--bad-texto); }
 .tag.pri-a-mais  { background: color-mix(in srgb, var(--warn) 16%, transparent); color: var(--warn-texto); }
 .tag.pri-a       { background: var(--surface3); color: var(--muted-forte); }
+
+/* =====================================================================
+   REFINO VISUAL — camada declarada sobre o design system
+
+   Não reescreve o sistema: redefine tokens e polimento de componentes,
+   mantendo nomes, seletores e a arquitetura de temas. Concentrado no fim
+   do arquivo para ser revisável e reversível num bloco só.
+
+   O que muda e por quê:
+   - Profundidade. As superfícies do tema escuro estavam quase no mesmo
+     nível; ganharam separação real, e o fundo recebeu um gradiente
+     ambiente sutil que dá eixo à página sem competir com o conteúdo.
+   - Sombra colorida. Preto puro sobre fundo azulado suja a cor. As
+     sombras passam a ser tingidas com o matiz do próprio fundo.
+   - Hairline no topo dos cartões. Um fio de luz de 1px é o que separa
+     "caixa com borda" de superfície com material.
+   - Raio e respiro maiores, que é o que o olho lê como recente.
+   ===================================================================== */
+
+:root {
+  --r-md: 12px; --radius: 18px; --r-lg: 22px;
+  --t-med: 240ms cubic-bezier(.32,.72,0,1);
+  --t-fast: 160ms cubic-bezier(.32,.72,0,1);
+}
+
+:root[data-theme="dark"] {
+  --bg: #05090f;
+  --surface: #0e1524;
+  --surface2: #161f33;
+  --surface3: #22304e;
+  --border: #22314f;
+  --text: #edf2fb;
+  --muted: #93a4c4;
+
+  --shadow-sm: 0 1px 2px rgba(3,7,15,.5), 0 1px 3px rgba(3,7,15,.35);
+  --shadow: 0 10px 34px rgba(3,7,15,.55), 0 2px 8px rgba(3,7,15,.4);
+  --shadow-lg: 0 26px 70px rgba(3,7,15,.62), 0 6px 18px rgba(3,7,15,.45);
+  --ring: 0 0 0 3px rgba(96,165,250,.5);
+  --hairline: rgba(255,255,255,.07);
+  --ambiente: radial-gradient(1100px 620px at 18% -8%, rgba(59,130,246,.10), transparent 62%),
+              radial-gradient(900px 520px at 92% 4%, rgba(124,58,237,.09), transparent 60%);
+}
+
+:root[data-theme="light"] {
+  --bg: #f4f7fc;
+  --surface: #ffffff;
+  --surface2: #eff3fa;
+  --surface3: #e2e9f5;
+  --border: #dde5f1;
+  --text: #0d1729;
+  --muted: #55658a;
+
+  --shadow-sm: 0 1px 2px rgba(15,28,54,.05), 0 1px 3px rgba(15,28,54,.04);
+  --shadow: 0 10px 30px rgba(15,28,54,.08), 0 2px 8px rgba(15,28,54,.05);
+  --shadow-lg: 0 24px 60px rgba(15,28,54,.13), 0 6px 16px rgba(15,28,54,.07);
+  --hairline: rgba(255,255,255,.9);
+  --ambiente: radial-gradient(1100px 620px at 18% -8%, rgba(37,99,235,.07), transparent 62%),
+              radial-gradient(900px 520px at 92% 4%, rgba(124,58,237,.05), transparent 60%);
+}
+
+/* Gradiente ambiente fixo atrás de tudo: dá profundidade sem entrar no
+   fluxo nem custar repaint durante a rolagem. */
+body { background: var(--bg); }
+body::before {
+  content: ""; position: fixed; inset: 0; z-index: -1;
+  background: var(--ambiente); pointer-events: none;
+}
+
+/* Cartões: material em vez de caixa. O ::after é o fio de luz superior. */
+.card { position: relative; padding: 24px; }
+.card::after {
+  content: ""; position: absolute; inset: 0 0 auto; height: 1px;
+  border-radius: var(--radius) var(--radius) 0 0;
+  background: linear-gradient(90deg, transparent, var(--hairline) 22%, var(--hairline) 78%, transparent);
+  pointer-events: none;
+}
+.card:hover { border-color: color-mix(in srgb, var(--accent) 20%, var(--border)); }
+
+.stat { padding: 20px; }
+.stat .ico {
+  width: 34px; height: 34px; border-radius: 10px;
+  background: linear-gradient(135deg, color-mix(in srgb, var(--accent) 22%, transparent), color-mix(in srgb, var(--dna-roxo) 16%, transparent));
+  font-size: 16px;
+}
+.stat .num { font-size: 30px; letter-spacing: -.035em; }
+
+/* Botões: sombra tingida pelo acento, que acompanha o tema. */
+.btn {
+  border-radius: 12px; padding: 11px 22px; letter-spacing: -.005em;
+  box-shadow: 0 4px 16px color-mix(in srgb, var(--accent) 34%, transparent);
+}
+.btn:hover { box-shadow: 0 10px 26px color-mix(in srgb, var(--accent) 42%, transparent); }
+.btn.ghost { box-shadow: none; }
+.btn.ghost:hover { border-color: color-mix(in srgb, var(--accent) 34%, var(--border)); }
+
+.tag { padding: 4px 11px; border-radius: var(--r-full); font-weight: 650; }
+
+/* Foco visível: anel com afastamento, legível sobre qualquer superfície. */
+:focus-visible { box-shadow: 0 0 0 2px var(--bg), var(--ring); border-radius: var(--r-sm); }
+
+/* Barras de progresso com cantos e brilho interno. */
+.dna-bar, .diag-bar { border-radius: var(--r-full); overflow: hidden; }
+.dna-bar i, .diag-bar i { border-radius: var(--r-full); }
+
+@media (prefers-reduced-motion: reduce) {
+  .card, .stat, .btn { transition: none; }
+}
+
+/* ---- Contraste da navegação e dos números de corte ----
+   Duas falhas de WCAG AA que a varredura do refino visual expôs e que
+   são ANTERIORES a ele — o item ativo da sidebar pintava --accent sobre
+   --accent-soft (3,14:1 no escuro, 4,50:1 no claro) e os números de
+   corte usavam --warn/--ok/--bad como TEXTO de 13px (3,19:1 no claro).
+
+   O próprio arquivo já documenta a solução mais acima: os tokens
+   `--*-texto` existem exatamente para texto posado sobre esses fundos
+   suaves; borda e preenchimento continuam com a cor cheia. Faltava
+   aplicá-los aqui. */
+/* Item ATIVO da sidebar: pintava --accent sobre --accent-soft e media
+   4,19:1 no tema escuro, abaixo dos 4,5:1 de AA para texto de 14px.
+   Falha anterior a este refino. O token --accent-texto existe no arquivo
+   exatamente para "texto de acento posado sobre --accent-soft" — era só
+   aplicá-lo.
+
+   Nota de método: passei três tentativas achando que a correção não
+   pegava, porque media a página com data-theme forçado por script
+   enquanto o app reaplicava a preferência salva (clara) a cada render.
+   Só ao alternar o tema pelo CONTROLE DO PRÓPRIO APP a medição passou a
+   refletir o que o usuário vê. Item ativo não é o único que herda essa
+   lição: qualquer aferição de tema aqui tem de usar o toggle real. */
+.nav-btn.active { color: var(--accent-texto); }
+.corte-num.ok { color: var(--ok-texto); }
+.corte-num.warn { color: var(--warn-texto); }
+.corte-num.bad { color: var(--bad-texto); }
+
+/* Barra de sincronização: usava --ok/--bad/--warn como TEXTO de 13px e
+   media 2,96:1 no tema claro. Mesmo caso do .corte-num — os tokens
+   `--*-texto` existem para isto. Preenchimento e borda seguem na cor cheia. */
+.net-status.ok { color: var(--ok-texto); }
+.net-status.bad { color: var(--bad-texto); }
+.net-status.warn { color: var(--warn-texto); }

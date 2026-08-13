@@ -63,6 +63,21 @@ if (erros.length) {
 console.log(`Banco validado: ${metricas.questoes} questões, nenhum erro` +
   (avisos.length ? `, ${avisos.length} aviso(s) — veja \`node scripts/validar.js\`.` : "."));
 
+/* ---------- regenerar o banco dividido ---------- */
+/* ORDEM IMPORTA, e já mordeu uma vez. Este bloco rodava DEPOIS dos
+   testes do motor, e o harness dos testes lê o bundle GERADO — então uma
+   mudança em js/data.js era testada contra a geração ANTERIOR e passava
+   em falso. Foi assim que dois testes de peso do edital ficaram verdes
+   num commit em que já estavam quebrados: liam os pesos velhos.
+
+   Regenerar primeiro custa os mesmos milissegundos e faz os testes verem
+   exatamente o que vai ao ar. */
+
+
+const { dividirDados } = require("./dividir-dados.js");
+dividirDados({ silencioso: dryRun });
+console.log("");
+
 /* ---------- testes do motor ---------- */
 /* O validar.js cuida do CONTEÚDO; estes testes cuidam do CÓDIGO que lê
    esse conteúdo — fila de escrita, carga do estado, SRS, peso do edital.
@@ -92,15 +107,6 @@ if (!args.includes("--sem-testes")) {
     process.exit(1);
   }
 }
-
-/* ---------- regenerar o banco dividido ---------- */
-/* Roda antes de qualquer hash: dados-base.js é referenciado pelo
-   index.html, então precisa estar em sua forma final. Editar um lote e
-   esquecer de regenerar publicaria o banco antigo. */
-
-const { dividirDados } = require("./dividir-dados.js");
-dividirDados({ silencioso: dryRun });
-console.log("");
 
 /* ---------- hash por arquivo ---------- */
 
