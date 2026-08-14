@@ -806,7 +806,16 @@ const FEEDBACK_MOTIVOS = [
   { slug: "nao_explica",            rotulo: "A resolução não explica por que essa é a resposta" },
   { slug: "gabarito_suspeito",      rotulo: "Acho que o gabarito está errado" },
   { slug: "fonte_incorreta",        rotulo: "O fundamento ou a jurisprudência não confere" },
+  { slug: "norma_desatualizada",    rotulo: "A norma mudou — lei nova, revogação ou jurisprudência superada" },
+  { slug: "enunciado_confuso",      rotulo: "O enunciado está ambíguo, genérico ou mal recortado" },
   { slug: "estrategia_nao_encaixa", rotulo: "A estratégia mostrada não se aplica a esta questão" },
+  /* Última da lista de propósito: um leitor pediu "outros" depois de
+     encaixar em `fonte_incorreta` uma crítica que era de redação do
+     enunciado. Lista fechada continua sendo o certo — fila só serve se
+     for contável —, mas fechada DEMAIS empurra o relato para a caixa
+     errada e estraga a contagem que ela existe para produzir. As duas
+     categorias acima nasceram desse mesmo relato; esta recolhe o resto. */
+  { slug: "outro",                  rotulo: "Outro motivo (descreva abaixo)" },
 ];
 
 /* IDs que o usuário já sinalizou, carregados no boot junto do resto do

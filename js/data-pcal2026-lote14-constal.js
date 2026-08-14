@@ -343,12 +343,22 @@ const QUESTOES_PCAL_LOTE14 = [
       motivo: "Cobrar a restrição estadual ao porte de arma pelas guardas municipais.",
       palavraCritica: "sem restrições (falso)",
     },
+    /* Um leitor pediu para conferir se havia alteração legislativa ou
+       conflito de normas aqui. Havia, e dos grandes: a resolução dizia que
+       o porte dependia de autorização específica do Secretário de
+       Segurança, sem citar artigo, e ignorava que o STF já resolvera a
+       questão em sentido contrário. Reescrita com as duas decisões e com o
+       fundamento identificado. O gabarito ERRADO se mantém, mas por outro
+       motivo — e o motivo é o que o candidato precisa levar para a prova. */
+    vigencia: "superada",
+    vigenciaNota: "A resolução anterior apoiava-se em restrição estadual ao porte. O STF, na ADI 5538 (2021), assentou o direito ao porte para todas as guardas municipais, e o Tema 656 (2025) fixou a competência delas em segurança urbana.",
     comentario: {
-      resolucao: "ERRADO. A Constituição do Estado de Alagoas veda o porte de arma de fogo pelos integrantes das guardas municipais, ressalvada a autorização específica do Secretário de Segurança. Não há, portanto, porte livre e irrestrito.",
-      fundamento: "Constituição do Estado de Alagoas — segurança pública; cf. Lei 10.826/2003, art. 6º.",
-      macete: "Guarda municipal: porte só com autorização específica.",
-      erroComum: "Tratar o porte como livre para as guardas municipais.",
-      comoBancaPensa: "Termo absoluto ('sem restrições') sobre direito condicionado."
+      resolucao: "ERRADO — mas atenção, porque o motivo mudou. Não é verdade que o porte seja livre e 'sem restrições': ele se submete aos requisitos da Lei nº 10.826/2003 (capacitação técnica, aptidão psicológica, registro, vinculação à corporação) e ao regramento de uso da própria guarda. O que NÃO se sustenta mais é condicionar o porte a autorização discricionária de autoridade estadual ou ao tamanho do município: no julgamento da ADI 5538 (Rel. Min. Alexandre de Moraes, 01/03/2021), o STF declarou inconstitucionais o inciso IV e as expressões restritivas do inciso III do art. 6º do Estatuto do Desarmamento, garantindo o porte a integrantes de guardas municipais independentemente do número de habitantes, em serviço e fora dele. Norma estadual que vedasse o porte esbarraria nessa decisão e na competência privativa da União para legislar sobre material bélico (CF, art. 22, XXI).",
+      fundamento: "Lei nº 10.826/2003, art. 6º, III e IV, na leitura da ADI 5538/STF; CF, art. 22, XXI, e art. 144, § 8º.",
+      jurisprudencia: "STF, ADI 5538 (01/03/2021): porte de arma para todas as guardas municipais, sem critério demográfico. STF, Tema 656, RE 608.588 (20/02/2025): é constitucional a atuação das guardas em segurança urbana, inclusive policiamento ostensivo e comunitário, respeitadas as atribuições dos demais órgãos do art. 144 — o que exclui, por exemplo, investigar infrações penais, que é da polícia civil.",
+      macete: "Porte da guarda municipal: existe como direito, mas não é irrestrito. Caiu o critério de população (ADI 5538); ficaram os requisitos do Estatuto do Desarmamento.",
+      erroComum: "Responder por material antigo, que ainda repete a exigência de município com mais de 500 mil habitantes.",
+      comoBancaPensa: "Termo absoluto ('sem restrições') sobre direito que é condicionado — e tema cuja base mudou por decisão do STF, o que dobra o valor do item para a banca."
     }
   },
   {

@@ -805,7 +805,14 @@ const QUESTOES_PCAL_LOTE62 = [
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de literalidade normativa)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 70, probReaparecer: 0.76,
-    enunciado: "Entre as atribuições básicas do Inspetor de Polícia incluem-se instaurar e presidir inquéritos policiais, formalizar prisão em flagrante, informar pedidos de habeas corpus e representar à autoridade judiciária sobre a necessidade de prisão preventiva de indiciados.",
+    /* O enunciado GANHOU o recorte "nos termos da Lei estadual 3.437/1975".
+       Sem ele o item era injusto, e um leitor apontou exatamente isso: as
+       atribuições descritas são, hoje, privativas do delegado (CF/88, art.
+       144, § 4º, e Lei 12.830/2013, art. 2º, § 1º), de modo que a mesma
+       frase é CERTA pelo Estatuto e ERRADA pela ordem vigente. A própria
+       resolução mandava "ler o comando" — só que não havia comando algum
+       para ler. Agora há, e o item passa a ter uma resposta só. */
+    enunciado: "Nos termos da Lei estadual nº 3.437/1975 (Estatuto da Polícia Civil de Alagoas), entre as atribuições básicas do Inspetor de Polícia incluem-se instaurar e presidir inquéritos policiais, formalizar prisão em flagrante, informar pedidos de habeas corpus e representar à autoridade judiciária sobre a necessidade de prisão preventiva de indiciados.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "informar pedidos de habeas corpus",
     cognitivo: {
       motivo: "Fixar o rol do art. 15, que reúne atos tipicamente de autoridade policial.",
@@ -841,3 +848,53 @@ const QUESTOES_PCAL_LOTE62 = [
 ];
 
 QUESTOES.push(...QUESTOES_PCAL_LOTE62);
+
+/* =====================================================================
+   CARGOS QUE O ESTATUTO DESCREVE E QUE NÃO EXISTEM MAIS
+
+   O Estatuto da Polícia Civil de Alagoas é de 1975 e desenha um quadro
+   com Inspetor de Polícia, Escrivão Auxiliar, Agente Auxiliar, Motorista
+   Policial, Desenhista Policial, Perito Policial de Local, Carcereiro e
+   Dactiloscopista. A estrutura ATUAL da PC/AL tem três carreiras
+   policiais — Delegado, Agente e Escrivão —, e o próprio Edital nº 1 de
+   2026 provê vagas apenas para Agente e Escrivão.
+
+   POR QUE AS QUESTÕES FICAM. O edital cobra a Lei 3.437/1975 nominalmente,
+   e a CEBRASPE cobra a letra do que o edital lista: em 2021 foram 4 itens
+   sobre este Estatuto (117 a 120 do caderno). Apagar o conteúdo tiraria
+   do candidato exatamente o que pode cair.
+
+   O QUE MUDA. Elas passam a exibir o aviso de vigência. Estudar a letra de
+   um cargo extinto para responder à prova é uma coisa; sair daqui achando
+   que existe concurso de Inspetor de Polícia em Alagoas é outra, e era
+   isso que o app deixava acontecer em silêncio.
+
+   LIMITE DECLARADO DA PESQUISA. Localizei a base da estrutura vigente
+   (Lei Delegada nº 47, de 10/08/2015, com a LC nº 22/1994 e a LC nº
+   293/2014 no caminho) e a composição atual das carreiras, mas NÃO
+   consegui o dispositivo exato que extingue cada um destes cargos. Por
+   isso a nota diz o que é verificável — que não integram a estrutura
+   atual nem o edital de 2026 — e não afirma número de artigo revogador
+   que eu não conferi na fonte.
+   ===================================================================== */
+const CARGOS_HISTORICOS_PCAL = {
+  "LI-053": "Inspetor de Polícia",
+  "LI-117": "Inspetor de Polícia",
+  "LI-118": "Inspetor de Polícia",
+  "LI-087": "Motorista Policial",
+  "LI-088": "Agente Auxiliar de Polícia",
+  "LI-090": "Desenhista Policial",
+  "LI-054": "Escrivão Auxiliar de Polícia",
+  "LI-089": "Escrivão Auxiliar de Polícia",
+};
+QUESTOES.forEach(q => {
+  const cargo = CARGOS_HISTORICOS_PCAL[q.id];
+  if (!cargo) return;
+  q.vigencia = "alterada";
+  q.vigenciaNota =
+    `O cargo de ${cargo} consta do Estatuto de 1975, mas NÃO integra a estrutura atual ` +
+    `da Polícia Civil de Alagoas, cujas carreiras policiais são Delegado, Agente e Escrivão — ` +
+    `e o Edital nº 1/2026 provê vagas somente para Agente e Escrivão. ` +
+    `Estude a letra do dispositivo, porque o edital cobra a Lei 3.437/1975 nominalmente; ` +
+    `só não conclua que existe carreira de ${cargo} para concorrer.`;
+});

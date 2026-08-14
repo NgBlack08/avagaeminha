@@ -596,6 +596,39 @@ function padraoDetectadoHtml(dna) {
     ${real}${medido}</div>`;
 }
 
+/* ---------------- Aviso de vigência normativa ----------------
+
+   O campo `vigencia` existia em js/data-ruptura.js desde a entrada do
+   relatório, o validador já exigia `vigenciaNota` quando ele não fosse
+   "vigente"… e NENHUMA tela o desenhava. Metade do mecanismo, portanto:
+   dava para marcar uma questão como apoiada em norma revogada e o aluno
+   continuava sem enxergar isso.
+
+   Aparece em dois lugares, com propósitos diferentes:
+     • etiqueta no cabeçalho do card — ANTES de responder, porque quem
+       estuda um cargo extinto precisa saber disso enquanto lê o item;
+     • bloco completo depois do gabarito, junto da resolução, que é onde
+       cabe a explicação da mudança.
+
+   Não é o mesmo que `foraEdital`: aquele diz "não cai na sua prova", este
+   diz "cai, mas a norma por trás mudou". */
+function vigenciaDe(q) {
+  if (!q.vigencia || q.vigencia === "vigente") return null;
+  return VIGENCIA_STATUS.find(v => v.id === q.vigencia) || null;
+}
+
+function vigenciaTagHtml(q) {
+  const v = vigenciaDe(q);
+  if (!v) return "";
+  return `<span class="tag warn vig-tag" title="${escapeHtml(q.vigenciaNota || v.desc)}">${v.ico} ${escapeHtml(v.rotulo)}</span>`;
+}
+
+function vigenciaBlocoHtml(q) {
+  const v = vigenciaDe(q);
+  if (!v) return "";
+  return `<div class="bloco vig-bloco"><b>${v.ico} ${escapeHtml(v.rotulo)}</b>${escapeHtml(q.vigenciaNota || v.desc)}</div>`;
+}
+
 /* Uma casa decimal com vírgula. O app já escrevia preço e peso assim
    (`R$ 29,90`, `peso 12,7`); as porcentagens do DNA saíam com ponto e
    destoavam no meio da mesma frase. */
@@ -1399,6 +1432,7 @@ function questaoCardHtml(q, opts) {
       <span class="tag">${q.assunto}</span>
       <span class="tag diff" title="dificuldade">${diff}</span>
       ${q.foraEdital ? '<span class="tag warn" title="Tema não consta do conteúdo programático de Agente/Escrivão no edital PC-AL 2026 — mantido como treino complementar">fora do edital PC-AL 2026</span>' : ""}
+      ${vigenciaTagHtml(q)}
       ${s.tentativas ? `<span class="tag ${s.ultima.branco ? "" : s.ultima.correta ? "ok" : "bad"}">${s.ultima.branco ? "em branco" : s.ultima.correta ? "acertou" : "errou"} na última</span>` : ""}
       <span class="tag" title="tempo ideal de resolução">⏱ ideal: ${q.tempoIdealSeg}s</span>
     </div>
@@ -1574,6 +1608,7 @@ async function responder(qid, resposta) {
     const c = q.comentario;
     alvo.innerHTML = resultadoHtml + `
       <div class="comentario">
+        ${vigenciaBlocoHtml(q)}
         <div class="bloco"><b>Resolução</b>${escapeHtml(c.resolucao)}</div>
         <div class="bloco"><b>Fundamento legal</b>${escapeHtml(c.fundamento)}</div>
         ${c.jurisprudencia ? `<div class="bloco"><b>Jurisprudência</b>${escapeHtml(c.jurisprudencia)}</div>` : ""}

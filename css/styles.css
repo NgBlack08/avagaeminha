@@ -329,6 +329,20 @@ body {
 .vr-notas p { font-size: 13px; color: var(--muted); line-height: 1.55; margin: 0 0 6px; }
 .vr-notas p:last-child { margin-bottom: 0; }
 
+/* ---------- Aviso de vigência normativa ----------
+   A etiqueta reaproveita `.tag.warn`; só ganha o traço pontilhado embaixo
+   para sinalizar que existe explicação no title. O bloco no comentário
+   vem ANTES da resolução e com barra lateral de alerta: quando a norma
+   mudou, essa é a primeira coisa que o aluno precisa ler — antes até do
+   porquê do gabarito. */
+.tag.warn.vig-tag { border-bottom: 1px dotted currentColor; cursor: help; }
+.comentario .bloco.vig-bloco {
+  border-left: 3px solid var(--warn);
+  background: color-mix(in srgb, var(--warn) 9%, transparent);
+  padding-left: 11px;
+}
+.comentario .bloco.vig-bloco b { color: var(--warn-texto); }
+
 /* Transparência do DNA: separa estimativa editorial de medida do banco. */
 .dna-comp { font-size: 11.5px; color: var(--muted); margin-top: 5px; }
 /* Linha que nomeia a origem do número no bloco pós-resposta. Fica mais

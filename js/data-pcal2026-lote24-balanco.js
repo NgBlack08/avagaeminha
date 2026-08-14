@@ -278,10 +278,10 @@ const QUESTOES_PCAL_LOTE24 = [
       palavraCritica: "detenção",
     },
     comentario: {
-      resolucao: "ERRADO. O art. 155, caput, do CP comina ao furto simples pena de RECLUSÃO, de um a quatro anos, e multa — não detenção. A troca do tipo de pena privativa de liberdade torna a assertiva incorreta.",
-      fundamento: "CP, art. 155, caput.",
-      macete: "Furto: reclusão, 1 a 4 anos + multa.",
-      erroComum: "Confundir reclusão com detenção mantendo o prazo correto.",
+      resolucao: "ERRADO. O art. 155, caput, do CP comina ao furto simples pena de RECLUSÃO — não detenção. ATENÇÃO À QUANTIDADE, que mudou: a Lei nº 15.397/2026 elevou o furto simples para reclusão, de 1 (um) a 6 (seis) anos, e multa; a faixa de 1 a 4 anos vigorou até 4 de maio de 2026. O item erra duas vezes, na espécie da pena e no limite máximo.",
+      fundamento: "CP, art. 155, caput, com a redação da Lei nº 15.397/2026.",
+      macete: "Furto: RECLUSÃO, 1 a 6 anos + multa. Era 1 a 4 até maio de 2026 — se o material disser 4, é material velho.",
+      erroComum: "Confundir reclusão com detenção mantendo o prazo correto — ou repetir o teto de 4 anos, revogado.",
       comoBancaPensa: "Mantém números corretos e troca só o regime de pena — teste de atenção ao detalhe."
     }
   },
@@ -392,7 +392,7 @@ const QUESTOES_PCAL_LOTE24 = [
       palavraCritica: "subsidiariedade",
     },
     comentario: {
-      resolucao: "ERRADO. O art. 2º da Lei 9.784/1999 encerra o rol de princípios com EFICIÊNCIA, e não 'subsidiariedade' — princípio que não integra esse dispositivo. A troca no último item de uma lista longa é técnica clássica da banca para explorar o cansaço do candidato.",
+      resolucao: "ERRADO. O art. 2º da Lei 9.784/1999 encerra o rol com EFICIÊNCIA, e não 'subsidiariedade' — princípio que não integra esse dispositivo. O rol completo, na ordem da lei, tem ONZE princípios: legalidade, finalidade, motivação, razoabilidade, proporcionalidade, moralidade, ampla defesa, contraditório, segurança jurídica, interesse público e eficiência. Decorá-lo na ordem é o que permite ver a troca: o item reproduz os dez primeiros com exatidão e só altera o último. Não confunda com o rol do art. 37, caput, da CF (LIMPE: legalidade, impessoalidade, moralidade, publicidade e eficiência) — são listas diferentes, e eficiência é o elo entre as duas.",
       fundamento: "Lei 9.784/1999, art. 2º.",
       macete: "Lista de princípios do art. 2º da 9.784: termina em eficiência.",
       erroComum: "Não conferir o último item de uma enumeração extensa.",

@@ -850,7 +850,12 @@ const QUESTOES_PCAL_LOTE66 = [
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de troca de conceitos)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 85, probReaparecer: 0.69,
-    enunciado: "O isolamento assegura que a transação seja executada integralmente ou não produza efeito algum, ao passo que a atomicidade impede que transações concorrentes interfiram umas nas outras durante a execução.",
+    /* O enunciado ganhou o contexto "propriedades ACID", pedido por um
+       leitor: sem ele, "isolamento" e "atomicidade" ficam soltos e o
+       candidato precisa adivinhar de que modelo se fala. A CEBRASPE ancora
+       o item no domínio antes de trocar os rótulos — a armadilha é a troca,
+       não a ausência de contexto. */
+    enunciado: "Entre as propriedades ACID de uma transação em banco de dados, o isolamento assegura que a transação seja executada integralmente ou não produza efeito algum, ao passo que a atomicidade impede que transações concorrentes interfiram umas nas outras durante a execução.",
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "isolamento ... integralmente ou não produza efeito ... atomicidade impede que transações concorrentes interfiram",
     cognitivo: {
       motivo: "Cobrar as mesmas propriedades com os rótulos permutados.",

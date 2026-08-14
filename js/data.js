@@ -67,9 +67,19 @@ const CARGOS = ["Escrivão", "Agente", "Delegado", "Perito Criminal", "Papilosco
    banca. A barra agora é a primeira; a composição do banco desceu para a
    linha de baixo, que é o lugar dela. */
 const DNA_BANCA = [
-  { slug: "literalidade", nome: "Literalidade legal", atencao: "alta",
-    desc: "Reprodução quase literal do texto legal com UMA palavra trocada (ou nenhuma — e aí é C). É o mecanismo mais frequente nos itens reais medidos, com folga sobre o segundo colocado. Muito comum em CF art. 5º e art. 144.",
-    gatilho: "Compare mentalmente com o texto da lei palavra por palavra nos pontos críticos: prazos, números, sujeitos, verbos." },
+  /* O nome era "Literalidade legal" e a descrição só falava em texto de
+     lei — mas 276 dos 894 itens deste padrão estão em disciplinas sem lei
+     nenhuma (99 em TI, 69 em Estatística, 47 em Português). Um leitor
+     sinalizou justamente isso numa questão de pontuação: a estratégia
+     mostrada não encaixava, porque mandava conferir o artigo.
+
+     O mecanismo é o mesmo em todas elas — reproduzir a fonte e trocar uma
+     palavra. O que muda é QUAL é a fonte: o artigo, a regra gramatical, a
+     definição técnica, a fórmula. Já havia esse raciocínio registrado
+     para a trilha de Fisioterapia; faltava trazê-lo para o catálogo. */
+  { slug: "literalidade", nome: "Literalidade da fonte", atencao: "alta",
+    desc: "Reprodução quase literal da fonte com UMA palavra trocada (ou nenhuma — e aí é C). É o mecanismo mais frequente nos itens reais medidos, com folga sobre o segundo colocado. A fonte muda com a disciplina: o artigo de lei em Direito (clássico na CF, arts. 5º e 144), a regra gramatical em Português, a definição ou o protocolo em TI, Estatística e saúde.",
+    gatilho: "Compare palavra por palavra com a fonte nos pontos críticos — prazos, números, sujeitos, verbos, nomes de propriedades. Se você não sabe qual é a fonte exata, o item já venceu." },
   { slug: "troca-conceito", nome: "Troca/inversão de conceitos", atencao: "alta",
     desc: "Define corretamente um instituto, mas com o NOME de outro (concussão × corrupção passiva; excesso × desvio de poder; anulação × revogação).",
     gatilho: "Confira se o rótulo bate com a definição, não apenas se a definição 'soa certa'." },

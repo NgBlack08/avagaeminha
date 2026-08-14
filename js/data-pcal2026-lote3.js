@@ -110,19 +110,31 @@ const QUESTOES_PCAL_LOTE3 = [
     id: "DP-018", disciplina: "Direito Penal", assunto: "Crimes contra o patrimônio", subassunto: "Estelionato — ação penal",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 40, probReaparecer: 0.85,
-    enunciado: "Após a Lei nº 13.964/2019, a ação penal no crime de estelionato passou a ser, em regra, pública condicionada à representação do ofendido, salvo quando a vítima for a Administração Pública, criança ou adolescente, pessoa idosa ou vulnerável, entre outras hipóteses legais.",
-    gabarito: "C", pegadinha: "literalidade", palavraChave: "condicionada à representação",
+    /* QUESTÃO INVERTIDA PELA LEI 15.397/2026, apontada por um leitor.
+       Ela era CERTA e cobrava a regra do Pacote Anticrime. O art. 3º da
+       Lei nº 15.397, de 30/04/2026 (publicada em 04/05/2026, vigência
+       imediata), REVOGOU o § 5º do art. 171 — e o estelionato voltou a ser
+       de ação penal pública incondicionada.
+
+       A data importa duas vezes: a lei é anterior à data de corte do
+       edital (02/07/2026), então é ela que a prova cobra; e, por ser
+       novatio legis in pejus, não retroage — para fatos até 04/05/2026 a
+       representação continua exigida. */
+    enunciado: "A ação penal no crime de estelionato é, em regra, pública condicionada à representação do ofendido, salvo quando a vítima for a Administração Pública, criança ou adolescente, pessoa idosa ou vulnerável, entre outras hipóteses legais.",
+    gabarito: "E", pegadinha: "literalidade", palavraChave: "condicionada à representação",
+    vigencia: "revogada",
+    vigenciaNota: "O § 5º do art. 171 do CP, que exigia representação, foi REVOGADO pelo art. 3º da Lei nº 15.397/2026. A regra da representação valeu de 2019 até 4 de maio de 2026.",
     cognitivo: {
-      motivo: "Cobrar a mudança do Pacote Anticrime no art. 171, § 5º, do CP — tema de alta atualidade.",
-      palavraCritica: "condicionada à representação (regra) + exceções",
+      motivo: "Cobrar a revogação do art. 171, § 5º, do CP pela Lei 15.397/2026 — alteração dentro da janela do edital.",
+      palavraCritica: "condicionada à representação",
     },
     comentario: {
-      resolucao: "CERTO. CP, art. 171, § 5º (incluído pela Lei 13.964/2019): a ação penal é pública condicionada à representação, salvo se a vítima for a Administração Pública (direta ou indireta), criança/adolescente, pessoa com deficiência mental, maior de 70 anos ou incapaz.",
-      fundamento: "CP, art. 171, § 5º (Lei 13.964/2019).",
-      jurisprudencia: "STJ e STF discutiram a retroatividade da representação a processos já em curso (norma processual-penal híbrida).",
-      macete: "Estelionato virou 'crime que espera a vítima reclamar' — salvo quando a vítima é vulnerável ou é o Estado.",
-      erroComum: "Manter a ação como incondicionada (regime pré-2019).",
-      comoBancaPensa: "Alteração do Pacote Anticrime cobrada de forma literal, geralmente como item CERTO."
+      resolucao: "ERRADO — hoje. O art. 3º da Lei nº 15.397/2026 REVOGOU o § 5º do art. 171 do CP, e o estelionato voltou a ser crime de AÇÃO PENAL PÚBLICA INCONDICIONADA: o Ministério Público age independentemente da vontade da vítima. O item reproduz a regra que vigorou entre a Lei 13.964/2019 (Pacote Anticrime) e 4 de maio de 2026 — correta ontem, falsa agora. Vale para todas as modalidades, inclusive a fraude eletrônica do § 2º-A.",
+      fundamento: "CP, art. 171, § 5º, REVOGADO pelo art. 3º da Lei nº 15.397, de 30/04/2026 (DOU de 04/05/2026, vigência na publicação).",
+      jurisprudencia: "Como a revogação prejudica o réu (novatio legis in pejus), não retroage: para fatos praticados até 04/05/2026 a representação continua sendo condição de procedibilidade.",
+      macete: "Linha do tempo do estelionato: incondicionada até 2019 → condicionada de 2019 a 04/05/2026 → incondicionada de novo. A regra da representação durou sete anos.",
+      erroComum: "Responder pelo Pacote Anticrime, que foi a regra por sete anos e está em todo material anterior a maio de 2026.",
+      comoBancaPensa: "Lei nova dentro da janela do edital, que INVERTE o gabarito de questões antigas — é o material de prova mais barato que existe para a banca."
     }
   },
 

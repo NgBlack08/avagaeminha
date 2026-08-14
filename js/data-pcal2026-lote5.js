@@ -278,7 +278,7 @@ const QUESTOES_PCAL_LOTE5 = [
       palavraCritica: "subtração (furto) × entrega voluntária (estelionato)",
     },
     comentario: {
-      resolucao: "CERTO. CP, art. 155, § 4º-B (Lei 14.155/2021): a subtração mediante fraude por dispositivo eletrônico/informático configura furto qualificado (pena de 4 a 8 anos). No furto, a vítima não entrega o bem voluntariamente — a fraude serve para iludir a vigilância; no estelionato, a vítima, iludida, faz a entrega.",
+      resolucao: "CERTO. CP, art. 155, § 4º-B (Lei 14.155/2021): a subtração mediante fraude por dispositivo eletrônico/informático configura furto qualificado. A PENA FOI ELEVADA pela Lei nº 15.397/2026, de 4 a 8 para 4 a 10 anos — material anterior a maio de 2026 ainda traz o teto antigo. A distinção que o item cobra permanece: no furto, a vítima não entrega o bem voluntariamente e a fraude serve para iludir a vigilância; no estelionato, a vítima, iludida, faz a entrega.",
       fundamento: "CP, art. 155, § 4º-B (Lei 14.155/2021); distinção furto × estelionato.",
       macete: "Invadiu o app e transferiu = furto. Convenceu a vítima a transferir = estelionato.",
       erroComum: "Enquadrar toda fraude eletrônica como estelionato.",

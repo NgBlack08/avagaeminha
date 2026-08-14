@@ -55,7 +55,13 @@ const QUESTOES_PCAL_LOTE23 = [
     id: "DC-030", disciplina: "Direito Constitucional", assunto: "Direitos fundamentais", subassunto: "Inviolabilidade do domicílio (negação dupla)",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (CF, art. 5º, XI)",
-    tipo: "CE", dificuldade: 3, tempoIdealSeg: 55, probReaparecer: 0.8,
+    /* Dificuldade rebaixada de 3 para 1 a pedido de um leitor, e ele tem
+       razão: a negação dupla até exige releitura, mas o conteúdo é o
+       dispositivo mais conhecido do art. 5º, e "lícito ingressar a
+       qualquer hora sem consentimento" cai sozinho mesmo para quem não
+       desembaralhou o "é inegável que não". Dificuldade 3 aqui inflava a
+       faixa alta, que o validador já apontava concentrando 59% do banco. */
+    tipo: "CE", dificuldade: 1, tempoIdealSeg: 35, probReaparecer: 0.8,
     enunciado: "É inegável que a casa não constitui asilo inviolável do indivíduo, sendo lícito nela ingressar, a qualquer hora, sem o consentimento do morador.",
     gabarito: "E", pegadinha: "negacao-dupla", palavraChave: "inegável que a casa não constitui asilo",
     cognitivo: {
