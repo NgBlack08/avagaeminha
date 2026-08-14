@@ -578,17 +578,83 @@ function lerCacheNuvem(userId) {
   }
 }
 
+/* ---------------- Leitura paginada ----------------
+
+   O DEFEITO QUE ISTO CORRIGE, porque ele é silencioso e cresce sozinho.
+
+   O PostgREST devolve no máximo `max-rows` linhas por requisição (mil, no
+   padrão do Supabase). As consultas abaixo não pediam faixa nenhuma, então
+   passavam a ser CORTADAS assim que o aluno cruzava esse total — sem erro,
+   sem aviso: `error` vinha nulo e `data` vinha incompleto. O código tratava
+   isso como leitura bem-sucedida, substituía APP_STATE.respostas pelo
+   pedaço e ainda gravava a cópia local com o buraco dentro.
+
+   O efeito para quem estuda todo dia é cruel de diagnosticar: as respostas
+   CONTINUAM sendo gravadas no servidor (o caminho de escrita nunca teve
+   problema), mas param de voltar na tela. Dashboard, diagnóstico por
+   disciplina, taxa de acerto e revisão espaçada congelam no dia em que a
+   conta passou de mil, e cada resposta nova reforça a impressão de que o
+   app "não está salvando" — quando o que ele não está fazendo é LER.
+
+   Pior ainda pela ordenação: `created_at` ascendente faz o corte cair
+   sobre as linhas MAIS RECENTES. Some exatamente o estudo de hoje.
+
+   COMO A PAGINAÇÃO AVANÇA. Pelo tamanho do lote que VOLTOU, nunca pelo
+   que foi pedido. Se o teto do servidor for menor que PAGINA_NUVEM, um
+   laço que avançasse de PAGINA_NUVEM em PAGINA_NUVEM pularia linhas; e um
+   que parasse no primeiro lote "curto" pararia cedo demais. Avançar pelo
+   recebido é correto sob qualquer teto, inclusive se ele mudar depois.
+
+   O desempate por `id` existe porque paginação sobre ORDER BY só é estável
+   com chave única no fim da ordenação — dois registros no mesmo
+   milissegundo poderiam trocar de página e sumir da leitura. */
+const PAGINA_NUVEM = 1000;
+/* Trava de segurança contra laço infinito se o servidor devolver sempre a
+   mesma página. É folgado de propósito: um ano de estudo pesado não chega
+   perto disto, então bater no teto é sinal de defeito, não de uso. */
+const TETO_NUVEM = 200000;
+
+async function buscarTudo(rotulo, fabrica) {
+  const linhas = [];
+  let inicio = 0;
+  let maiorLote = 0;
+  for (;;) {
+    const r = await fabrica().range(inicio, inicio + PAGINA_NUVEM - 1);
+    if (r.error) return { data: null, error: r.error };
+    const lote = r.data || [];
+    linhas.push(...lote);
+    if (!lote.length) break;
+    inicio += lote.length;
+    /* Lote menor que o maior já visto = última página. */
+    if (lote.length < maiorLote) break;
+    maiorLote = Math.max(maiorLote, lote.length);
+    if (inicio >= TETO_NUVEM) {
+      console.error(`Leitura de ${rotulo} atingiu o teto de ${TETO_NUVEM} linhas.`);
+      registrarEvento("leitura_no_teto", `${rotulo}: ${inicio} linhas`);
+      break;
+    }
+  }
+  return { data: linhas, error: null };
+}
+
 function consultarNuvem(user) {
   return Promise.all([
     supa.from("profiles").select("*").eq("id", user.id).maybeSingle(),
-    supa.from("respostas").select("*").eq("user_id", user.id).order("created_at", { ascending: true }),
-    supa.from("srs").select("*").eq("user_id", user.id),
-    supa.from("sessoes").select("*").eq("user_id", user.id).order("created_at", { ascending: true }),
+    buscarTudo("respostas", () => supa.from("respostas").select("*").eq("user_id", user.id)
+      .order("created_at", { ascending: true }).order("id", { ascending: true })),
+    buscarTudo("srs", () => supa.from("srs").select("*").eq("user_id", user.id)
+      .order("qid", { ascending: true })),
+    buscarTudo("sessoes", () => supa.from("sessoes").select("*").eq("user_id", user.id)
+      .order("created_at", { ascending: true }).order("id", { ascending: true })),
     supa.from("assinaturas").select("plano_tipo").eq("user_id", user.id).eq("status", "autorizada").maybeSingle(),
     /* Só o par questão/motivo: no máximo uma linha por questão sinalizada,
        o que na prática é uma dúzia. Entra no mesmo Promise.all para não
-       custar mais um tempo de ida e volta no boot. */
-    supa.from("feedback_questao").select("questao_id, motivo, comentario").eq("user_id", user.id),
+       custar mais um tempo de ida e volta no boot. Paginado junto com os
+       demais porque "hoje são poucas linhas" foi exatamente a premissa que
+       fez `respostas` passar de mil sem ninguém perceber. */
+    buscarTudo("feedback_questao", () => supa.from("feedback_questao")
+      .select("questao_id, motivo, comentario").eq("user_id", user.id)
+      .order("questao_id", { ascending: true })),
   ]);
 }
 

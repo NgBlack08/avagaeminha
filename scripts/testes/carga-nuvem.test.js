@@ -228,3 +228,78 @@ test("cópia local corrompida não derruba a carga", async () => {
   await app.chamar("carregarEstadoNuvem", USUARIO);
   assert.equal(cfg(app).plano, "completo");
 });
+
+/* ------------------------------------------------------------------
+   Paginação — o defeito que fazia o app "parar de salvar"
+
+   O PostgREST devolve no máximo `max-rows` linhas por requisição (mil,
+   no padrão do Supabase). A consulta não pedia faixa nenhuma, então era
+   cortada em silêncio: `error` nulo e `data` incompleto.
+
+   Visto em produção com conta real de 1.042 respostas. As respostas
+   continuavam sendo GRAVADAS — o caminho de escrita nunca teve
+   problema —, mas paravam de voltar na leitura. Dashboard, diagnóstico
+   por disciplina e revisão espaçada congelavam, e cada resposta nova
+   reforçava a impressão de que nada estava sendo salvo.
+
+   Como a ordenação é por `created_at` ascendente, o corte caía sobre as
+   linhas MAIS RECENTES: sumia exatamente o estudo do dia.
+   ------------------------------------------------------------------ */
+
+/* Gera n respostas distribuídas em qids reais do banco. A mais recente
+   fica por último, que é a posição que o corte comia. */
+function muitasRespostas(app, n) {
+  const qids = app.json("QUESTOES.slice(0, 400).map(q => q.id)");
+  const base = Date.now() - n * 60000;
+  return Array.from({ length: n }, (_, i) => ({
+    id: i + 1,
+    qid: qids[i % qids.length],
+    resposta: "C", correta: true, branco: false, tempo_ms: 30000, confianca: 2,
+    created_at: new Date(base + i * 60000).toISOString(),
+  }));
+}
+
+test("histórico acima do teto do servidor vem INTEIRO, em páginas", async () => {
+  const app = criarApp();
+  povoarServidor(app);
+  const N = 2500;                     /* 2,5 páginas de mil */
+  app.supa.leitura.linhas.respostas = muitasRespostas(app, N);
+
+  await app.chamar("carregarEstadoNuvem", USUARIO);
+
+  const carregadas = app.get(
+    "Object.values(APP_STATE.respostas).reduce((s, l) => s + l.length, 0)");
+  assert.equal(carregadas, N,
+    `esperava ${N} respostas carregadas; o defeito trazia só a 1ª página`);
+});
+
+test("a resposta MAIS RECENTE sobrevive à paginação", async () => {
+  const app = criarApp();
+  povoarServidor(app);
+  const linhas = muitasRespostas(app, 2500);
+  const ultima = linhas[linhas.length - 1];
+  app.supa.leitura.linhas.respostas = linhas;
+
+  await app.chamar("carregarEstadoNuvem", USUARIO);
+
+  const quando = new Date(ultima.created_at).getTime();
+  const achou = app.get(
+    `(APP_STATE.respostas[${JSON.stringify(ultima.qid)}] || []).some(r => r.data === ${quando})`);
+  /* Era esta a queixa: "respondi hoje e o diagnóstico não mudou". */
+  assert.equal(achou, true, "a resposta mais recente não voltou do servidor");
+});
+
+test("teto menor que a página pedida não faz a leitura parar cedo", async () => {
+  const app = criarApp();
+  povoarServidor(app);
+  /* Servidor com max-rows apertado: o laço tem de avançar pelo que
+     RECEBEU, não pelo que pediu — senão pula linhas ou para na 1ª página. */
+  app.supa.leitura.maxRows = 250;
+  app.supa.leitura.linhas.respostas = muitasRespostas(app, 900);
+
+  await app.chamar("carregarEstadoNuvem", USUARIO);
+
+  const carregadas = app.get(
+    "Object.values(APP_STATE.respostas).reduce((s, l) => s + l.length, 0)");
+  assert.equal(carregadas, 900);
+});

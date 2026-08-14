@@ -96,6 +96,12 @@ function criarSupaFake() {
     linhas: { profiles: null, respostas: [], srs: [], sessoes: [], assinaturas: null, feedback_questao: [] },
     falhar: new Set(),
     erro: { message: "Failed to fetch", code: "" },
+    /* Teto de linhas por requisição, como o `max-rows` do PostgREST (mil,
+       no padrão do Supabase). É o que torna o corte silencioso
+       reproduzível: sem ele o mock devolveria a lista inteira e um
+       defeito de paginação passaria despercebido na suíte, que foi
+       exatamente o que aconteceu até a versão 7.164. */
+    maxRows: 1000,
   };
 
   async function resultado() {
@@ -108,14 +114,26 @@ function criarSupaFake() {
      qualquer prefixo disso resolvem para o mesmo resultado, porque o
      objeto é thenable. Evita reimplementar o construtor de query. */
   function consulta(nome) {
-    const resolver = () => (
-      leitura.falhar.has(nome)
-        ? { data: null, error: leitura.erro }
-        : { data: leitura.linhas[nome] ?? null, error: null }
-    );
+    /* `faixa` guarda o último .range() pedido. Fora dele, a consulta
+       devolve tudo — e é assim que o servidor de verdade se comporta
+       também, até bater no `max-rows`. */
+    let faixa = null;
+    const resolver = () => {
+      if (leitura.falhar.has(nome)) return { data: null, error: leitura.erro };
+      const dados = leitura.linhas[nome] ?? null;
+      if (!Array.isArray(dados)) return { data: dados, error: null };
+      /* PostgREST corta em `max-rows` mesmo sem range pedido. É esse corte
+         mudo — `error` nulo e `data` incompleto — que congelava o
+         Dashboard de quem passava de mil respostas. */
+      const de = faixa ? faixa.de : 0;
+      const ate = faixa ? faixa.ate : dados.length - 1;
+      const limite = Math.min(ate, de + leitura.maxRows - 1);
+      return { data: dados.slice(de, limite + 1), error: null };
+    };
     const encadeavel = {
       eq: () => encadeavel,
       order: () => encadeavel,
+      range: (de, ate) => { faixa = { de, ate }; return encadeavel; },
       maybeSingle: async () => resolver(),
       single: async () => resolver(),
       then: (aceita, rejeita) => Promise.resolve(resolver()).then(aceita, rejeita),
