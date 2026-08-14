@@ -1177,9 +1177,17 @@ function radarAprovacao() {
     return { ...d, n, taxaSuave: taxaSuavizada(d.acertos, n, prior), amostraSuficiente: n >= MIN_AMOSTRA };
   });
   const maduras = comTaxa.filter(d => d.amostraSuficiente);
-  const dominadas = maduras.filter(d => d.taxaSuave >= 0.8);
-  const atencao = maduras.filter(d => d.taxaSuave >= 0.6 && d.taxaSuave < 0.8);
-  const risco = maduras.filter(d => d.taxaSuave < 0.6);
+  /* O CORTE É FEITO NO INTEIRO EXIBIDO, não no decimal cru, e a razão é
+     que a tela anuncia as faixas em porcentagem cheia ("Domina ≥80%").
+     Comparando o decimal, uma disciplina em 0,7996 mostrava "80%" e caía
+     em "Precisa melhorar (60–79%)" — a legenda contradizia o número ao
+     lado dela. Aconteceu com Direito Constitucional num histórico real.
+     Arredondar antes de comparar torna a contradição impossível por
+     construção, em vez de depender de o texto e a conta concordarem. */
+  const pctDe = d => Math.round(d.taxaSuave * 100);
+  const dominadas = maduras.filter(d => pctDe(d) >= 80);
+  const atencao = maduras.filter(d => pctDe(d) >= 60 && pctDe(d) < 80);
+  const risco = maduras.filter(d => pctDe(d) < 60);
   /* Amostra ainda insuficiente para julgar: não é domínio nem risco. */
   const emAferricao = comTaxa.filter(d => !d.amostraSuficiente);
   const naoIniciadas = g.porDisc.filter(d => d.acertos + d.erros === 0);

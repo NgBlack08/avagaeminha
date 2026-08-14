@@ -890,13 +890,35 @@ function renderDashboard() {
   const ed = editalDoFoco();
 
   /* Linha do diagnóstico: barra horizontal colorida por faixa de domínio.
-     `idle` = disciplina ainda não respondida (barra neutra, sem peso negativo). */
+     `idle` = disciplina ainda não respondida (barra neutra, sem peso negativo).
+
+     A PORCENTAGEM EXIBIDA É A SUAVIZADA, e isso é uma correção. A tela
+     mostrava a taxa BRUTA e classificava pela SUAVIZADA — dois números
+     diferentes —, então a legenda acima ("⚠ Precisa melhorar, 60–79%")
+     contradizia o que estava escrito ao lado. No histórico real usado
+     para conferir isto, 2 das 15 disciplinas caíam nessa contradição:
+     Crimes Cibernéticos aparecia com "56%" dentro da faixa 60–79 (a
+     suavização levava 56% a 64% com n=9), e Direito Constitucional
+     mostrava "80%" fora da faixa de domínio, porque 0,7996 arredonda para
+     80 na exibição mas não alcança o corte.
+
+     Quem decide a faixa é a taxa suavizada; portanto é ela que o aluno
+     precisa ver. A bruta continua acessível no title, com o n, que é o
+     que explica a diferença entre as duas. */
   const linha = (arr, cls, icone, idle) => arr.length
-    ? arr.map(d => `<div class="diag-linha">
+    ? arr.map(d => {
+        const n = (d.acertos || 0) + (d.erros || 0);
+        const pct = idle ? null : Math.round((d.taxaSuave ?? d.taxa) * 100);
+        const bruta = idle || d.taxa === null ? null : Math.round(d.taxa * 100);
+        const dica = idle ? "Ainda sem respostas nesta disciplina"
+          : `Taxa bruta: ${bruta}% em ${n} ${n === 1 ? "resposta" : "respostas"}. ` +
+            `O valor exibido (${pct}%) é suavizado — com poucas respostas ele é puxado para a sua média geral.`;
+        return `<div class="diag-linha" title="${escapeHtml(dica)}">
         <span class="diag-nome">${icone} ${escapeHtml(d.disciplina)}</span>
-        <span class="diag-pct">${idle ? "—" : Math.round(d.taxa * 100) + "%"}</span>
-        <div class="diag-bar ${cls}"><i style="width:${idle ? 100 : Math.round(d.taxa * 100)}%"></i></div>
-      </div>`).join("")
+        <span class="diag-pct">${idle ? "—" : pct + "%"}</span>
+        <div class="diag-bar ${cls}"><i style="width:${idle ? 100 : pct}%"></i></div>
+      </div>`;
+      }).join("")
     : "";
 
   MAIN().innerHTML = topbar("Dashboard", "") +
@@ -953,7 +975,7 @@ function renderDashboard() {
       <div style="font-size:12px;color:var(--muted);margin-bottom:10px">✔ Domina (≥80%) · ⚠ Precisa melhorar (60–79%) · ✖ Maior risco (&lt;60%) · ◐ Aferindo · ○ Não iniciado</div>
       ${linha(radar.dominadas, "ok", "✔")}${linha(radar.atencao, "warn", "⚠")}${linha(radar.risco, "bad", "✖")}${linha(radar.emAferricao, "idle", "◐", true)}${linha(radar.naoIniciadas, "idle", "○", true)}
       ${radar.dominadas.length + radar.atencao.length + radar.risco.length + radar.emAferricao.length + radar.naoIniciadas.length ? "" : `<div style="color:var(--muted);font-size:13px">— ainda sem dados suficientes</div>`}
-      <div style="font-size:11.5px;color:var(--muted);margin-top:8px">As faixas usam taxa suavizada: com poucas respostas, o resultado é puxado para a sua média geral até haver evidência bastante. Disciplinas com menos de 4 respostas ficam em <b>◐ aferindo</b>, sem virar risco nem domínio.</div>
+      <div style="font-size:11.5px;color:var(--muted);margin-top:8px">A porcentagem mostrada é a <b>taxa suavizada</b> — a mesma que define a faixa. Com poucas respostas ela é puxada para a sua média geral até haver evidência bastante; passe o mouse na linha para ver a <b>taxa bruta</b> e o número de respostas. Disciplinas com menos de 4 respostas ficam em <b>◐ aferindo</b>, sem virar risco nem domínio.</div>
     </div>
   </div>
   ${corteHtml()}
