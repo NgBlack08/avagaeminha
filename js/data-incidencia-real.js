@@ -184,6 +184,52 @@ const COMPARACAO_2021_2026 = {
   nota: "O total de itens não mudou (50 + 70). Seis disciplinas novas entram, e as antigas cedem espaço.",
 };
 
+/* ---------------------------------------------------------------------
+   PROCEDÊNCIA DOS ITENS DE PROVA REAL
+
+   O DEFEITO. Os seis lotes de itens reais (84 a 89) declaram `concurso` e
+   `ano` num objeto BASE espalhado por todos os itens do arquivo, e esse
+   BASE foi copiado dos lotes inéditos: `concurso: "PCAL", ano: 2026`.
+
+   Só que a procedência VARIA DENTRO DE CADA LOTE — o mesmo arquivo tem
+   item de PC-DF 2021 e de PC-AL 2021 —, e nenhum desses itens é de 2026.
+   Resultado: 131 itens reais afirmavam ser da PC-AL de 2026 enquanto o
+   próprio `origem` dizia PC-DF 2021, PF 2025 ou PC-PE 2024.
+
+   O QUE ISSO QUEBRAVA. `q.concurso` alimenta o filtro de procedência do
+   Banco de Questões e do Simulado (`filtrarQuestoes`, js/engine.js).
+   Filtrar por "Polícia Federal" não devolvia nenhum dos 30 itens reais da
+   PF; filtrar por PC-AL devolvia 53 itens que são do Distrito Federal.
+   `q.ano` não tem consumidor hoje, mas estava igualmente errado.
+
+   POR QUE DERIVAR EM VEZ DE CORRIGIR À MÃO. `origem` é o campo
+   autoritativo: é ele que registra o caderno de onde o item veio, e é
+   conferido item a item na ingestão. Derivar dele mantém os dois campos
+   corretos sozinhos quando entrar o próximo lote real — corrigir à mão os
+   131 deixaria o mesmo erro pronto para voltar no lote 90. O validador
+   confere a derivação e quebra o build se `origem` trouxer sigla nova.
+   --------------------------------------------------------------------- */
+const CONCURSO_POR_SIGLA = {
+  "PC-AL": "PCAL",
+  "PC-DF": "PCDF",
+  "PF": "PF",
+  "PRF": "PRF",
+  /* Demais polícias civis estaduais entram no balde "PCE", que é como
+     CONCURSOS as agrupa — não há id próprio por estado. */
+  "PC-PE": "PCE",
+  "PC-SE": "PCE",
+};
+
+const ORIGEM_PROVA_REAL_RE = /^CEBRASPE\s+(PC-[A-Z]{2}|PF|PRF)\s+(\d{4})/;
+
+QUESTOES.forEach(q => {
+  const m = ORIGEM_PROVA_REAL_RE.exec(q.origem || "");
+  if (!m) return;
+  const concurso = CONCURSO_POR_SIGLA[m[1]];
+  if (concurso) q.concurso = concurso;
+  q.ano = Number(m[2]);
+});
+
 if (typeof module !== "undefined" && module.exports) {
-  module.exports = { INCIDENCIA_PCAL2021, COMPARACAO_2021_2026 };
+  module.exports = { INCIDENCIA_PCAL2021, COMPARACAO_2021_2026, CONCURSO_POR_SIGLA, ORIGEM_PROVA_REAL_RE };
 }

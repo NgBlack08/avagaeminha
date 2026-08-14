@@ -47,6 +47,7 @@ const GLOBAIS_PUBLICAS = [
      substituiu os `freq`/`score` escritos à mão. js/data-incidencia-real.js. */
   "INCIDENCIA_PCAL2021",
   "COMPARACAO_2021_2026",
+  "CONCURSO_POR_SIGLA",
 ];
 
 /* A ordem de carga só tem uma restrição real: data.js precisa vir primeiro,

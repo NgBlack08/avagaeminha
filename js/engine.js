@@ -1457,8 +1457,20 @@ function analiseRitmo({ reservaDiscursivaMin = RESERVA_DISCURSIVA_MIN } = {}) {
    quase todos caem para o mesmo lado, treinar por ele ensina o reflexo
    errado, e o app precisa avisar em vez de exibir como se fosse DNA da
    banca. Ver o comentário de DNA_BANCA em js/data.js. */
+/* Separa o que a CEBRASPE escreveu do que nós escrevemos. Fica aqui, e
+   não junto de `incidenciaRealPadroes()` lá embaixo, porque `composicaoPadroes`
+   já precisa dela — declarada depois, funcionava só por a chamada ser em
+   runtime, o que é o tipo de dependência que se quebra numa refatoração. */
+const ORIGEM_PROVA_REAL = /CEBRASPE\s+(PC|PF|PRF)/i;
+
 function composicaoPadroes() {
-  const base = questoesDoEscopo();
+  /* SÓ O QUE NÓS ESCREVEMOS. A tela põe este número ao lado da incidência
+     medida em prova real, e a frase que ele sustenta é "quando os dois
+     discordam, o banco está te ensinando um reflexo que a banca não paga".
+     Com os 131 itens reais dentro da conta, parte da linha de baixo era a
+     mesma coisa da de cima, e a comparação perdia o sentido — além de
+     maquiar o viés de autoria na direção favorável. */
+  const base = questoesDoEscopo().filter(q => !ORIGEM_PROVA_REAL.test(q.origem || ""));
   if (!base.length) return [];
   const m = {};
   for (const q of base) {
@@ -1502,8 +1514,6 @@ function composicaoPadroes() {
    pequena a quase nada. Quando um padrão não faz sentido na trilha (não
    há jurisprudência em conteúdo clínico), quem resolve é a tela, que já
    escopa a LISTA de padrões exibidos. */
-const ORIGEM_PROVA_REAL = /CEBRASPE\s+(PC|PF|PRF)/i;
-
 function questoesDeProvaReal() {
   return QUESTOES.filter(q => ORIGEM_PROVA_REAL.test(q.origem || ""));
 }

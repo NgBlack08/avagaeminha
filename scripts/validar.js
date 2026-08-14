@@ -163,6 +163,7 @@ function validar({ quieto = false } = {}) {
     QUESTOES, DNA_BANCA, EDITAIS, ESTRATEGIAS, DISCIPLINAS_JURIDICAS,
     PONTOS_RUPTURA, RUPTURA_POR_PEGADINHA, CHECKLIST_RESOLUCAO, VIGENCIA_STATUS,
     LIMIARES_ATENCAO, INCIDENCIA_PCAL2021, FREQUENCIA_TEMAS, PREDICOES,
+    CONCURSOS, CONCURSO_POR_SIGLA,
   } = carregarDados(manifesto);
 
   const erros = [];
@@ -199,6 +200,40 @@ function validar({ quieto = false } = {}) {
 
      A mesma regra de escopo do motor: conta itens reais de TODAS as
      disciplinas, porque a pergunta é sobre a banca, não sobre a trilha. */
+  /* ---- Procedência dos itens de prova real ----
+
+     Os lotes reais herdam `concurso`/`ano` de um objeto BASE por arquivo,
+     e esse BASE foi copiado dos lotes inéditos: 131 itens diziam ser da
+     PC-AL de 2026 enquanto o `origem` dizia PC-DF 2021, PF 2025 ou PC-PE
+     2024. Como `concurso` alimenta o filtro de procedência do Banco,
+     filtrar por "Polícia Federal" não devolvia nenhum dos itens da PF.
+
+     Agora os dois campos são DERIVADOS de `origem` em
+     js/data-incidencia-real.js. Este bloco confere a derivação: sigla
+     desconhecida no `origem` quebra o build em vez de deixar o item cair
+     em silêncio no concurso errado. */
+  {
+    const idsConcurso = new Set(CONCURSOS.map(c => c.id));
+    for (const q of QUESTOES) {
+      const m = /^CEBRASPE\s+(PC-[A-Z]{2}|PF|PRF)\s+(\d{4})/.exec(q.origem || "");
+      if (!m) continue;
+      const esperado = CONCURSO_POR_SIGLA[m[1]];
+      if (!esperado) {
+        erros.push(`${q.id}: origem cita "${m[1]}", sigla ausente de CONCURSO_POR_SIGLA — o item cairia no concurso herdado do lote.`);
+        continue;
+      }
+      if (!idsConcurso.has(esperado)) {
+        erros.push(`${q.id}: CONCURSO_POR_SIGLA mapeia "${m[1]}" para "${esperado}", que não existe em CONCURSOS.`);
+      }
+      if (q.concurso !== esperado) {
+        erros.push(`${q.id}: origem diz ${m[1]} mas concurso é "${q.concurso}" (esperado "${esperado}").`);
+      }
+      if (q.ano !== Number(m[2])) {
+        erros.push(`${q.id}: origem diz ${m[2]} mas ano é ${q.ano}.`);
+      }
+    }
+  }
+
   {
     const reais = QUESTOES.filter(q => /CEBRASPE\s+(PC|PF|PRF)/i.test(q.origem || ""));
     if (reais.length < 50) {
@@ -560,7 +595,35 @@ function validar({ quieto = false } = {}) {
     "Orações subordinadas", "Frase, oração e período", "Sintaxe",
   ]);
 
-  const portugues = QUESTOES.filter(q => q.disciplina === "Língua Portuguesa");
+  /* ================================================================
+     A AMOSTRA DOS AVISOS DE AUTORIA É SÓ O QUE NÓS ESCREVEMOS
+
+     Os avisos abaixo existem para responder "o quanto o NOSSO texto imita
+     a banca" e "que reflexo falso estamos treinando". Desde a entrada dos
+     131 itens de prova real, eles vinham rodando sobre um acervo que
+     inclui a própria banca — e o efeito é justamente o pior possível:
+     MELHORA a nota, porque os itens reais, por definição, aderem ao perfil
+     real. Medido:
+
+       métrica                    banco inteiro   só autorais
+       vazamento da regra cega        +6,7pp        +7,5pp
+       desvio na faixa 201-300       +13,7pp       +15,0pp
+       literalidade -> CERTO           90,8%         90,2%
+       CERTO global                    52,0%         51,5%
+
+     Comparar o banco inteiro contra o perfil da prova real é, em parte,
+     comparar a prova real com ela mesma. O denominador correto para um
+     sinal de autoria é a autoria.
+
+     O que NÃO muda de amostra: contagens sobre o banco como material de
+     estudo (distribuição de dificuldade, cobertura por disciplina,
+     proporção frente ao edital). Ali o aluno treina no acervo inteiro, e
+     é o acervo inteiro que interessa. */
+  const EH_PROVA_REAL = q => /CEBRASPE\s+(PC|PF|PRF)/i.test(q.origem || "");
+  const AUTORAIS = QUESTOES.filter(q => !EH_PROVA_REAL(q));
+  const N_REAIS = QUESTOES.length - AUTORAIS.length;
+
+  const portugues = AUTORAIS.filter(q => q.disciplina === "Língua Portuguesa");
   if (portugues.length >= 30) {
     const comTexto = portugues.filter(q => q.textoApoio).length;
     const fatiaTexto = comTexto / portugues.length;
@@ -606,8 +669,8 @@ function validar({ quieto = false } = {}) {
     }
   }
 
-  const total = QUESTOES.length;
-  const certos = QUESTOES.filter(q => q.gabarito === "C").length;
+  const total = AUTORAIS.length;
+  const certos = AUTORAIS.filter(q => q.gabarito === "C").length;
   const taxaC = certos / total;
 
   if (Math.abs(taxaC - 0.5) > LIMIAR_CE_GLOBAL) {
@@ -618,7 +681,7 @@ function validar({ quieto = false } = {}) {
      padrão quase sempre cai no mesmo gabarito, o rótulo vira paráfrase da
      resposta e o feedback pós-resposta deixa de ensinar algo transferível. */
   const porPadrao = new Map();
-  for (const q of QUESTOES) {
+  for (const q of AUTORAIS) {
     if (!porPadrao.has(q.pegadinha)) porPadrao.set(q.pegadinha, []);
     porPadrao.get(q.pegadinha).push(q.gabarito);
   }
@@ -639,8 +702,8 @@ function validar({ quieto = false } = {}) {
   /* Viés de comprimento: item mais longo tendendo a um gabarito é um tell
      que o candidato aprende sem perceber. */
   const media = a => a.reduce((s, x) => s + x, 0) / (a.length || 1);
-  const mediaC = media(QUESTOES.filter(q => q.gabarito === "C").map(q => q.enunciado.length));
-  const mediaE = media(QUESTOES.filter(q => q.gabarito === "E").map(q => q.enunciado.length));
+  const mediaC = media(AUTORAIS.filter(q => q.gabarito === "C").map(q => q.enunciado.length));
+  const mediaE = media(AUTORAIS.filter(q => q.gabarito === "E").map(q => q.enunciado.length));
   const viesTam = Math.abs(mediaC - mediaE) / Math.max(mediaC, mediaE);
   if (viesTam > LIMIAR_VIES_TAMANHO) {
     avisos.push(`Enunciados CERTO têm ${Math.round(mediaC)} caracteres contra ${Math.round(mediaE)} dos ERRADO (${(viesTam * 100).toFixed(0)}% de diferença) — vira pista de comprimento.`);
@@ -664,7 +727,7 @@ function validar({ quieto = false } = {}) {
      a distribuição de comprimento imita a da banca, o reflexo aprendido
      aqui vale lá. Enquanto ela não imitar, o candidato treina em um formato
      que não é o da prova. */
-  const comprimentos = QUESTOES.filter(q => q.tipo === "CE" && q.enunciado).map(q => q.enunciado.length);
+  const comprimentos = AUTORAIS.filter(q => q.tipo === "CE" && q.enunciado).map(q => q.enunciado.length);
   if (comprimentos.length >= 200) {
     let piso = 0;
     for (const faixa of PERFIL_REAL_2021) {
@@ -678,7 +741,7 @@ function validar({ quieto = false } = {}) {
     }
   }
 
-  const itensCE = QUESTOES.filter(q => q.tipo === "CE" && q.enunciado);
+  const itensCE = AUTORAIS.filter(q => q.tipo === "CE" && q.enunciado);
   if (itensCE.length >= 200) {
     const semAcento = s => s.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "");
     const ABSOLUTOS = /\b(sempre|nunca|jamais|somente|apenas|exclusivamente|todos?|toda|qualquer|necessariamente|obrigatoriamente|automaticamente)\b/;
@@ -799,8 +862,13 @@ function validar({ quieto = false } = {}) {
     }
   }
 
+  /* `questoes` é o banco inteiro (é o tamanho do acervo, e é isso que o
+     cabeçalho anuncia); `taxaC` é só dos autorais, porque mede calibragem
+     de autoria. Os dois convivem, e o relatório diz qual é qual — misturá-los
+     num número só foi exatamente o defeito que este ajuste corrige. */
   const metricas = {
-    questoes: total, taxaC, arquivos: manifesto.length,
+    questoes: QUESTOES.length, autorais: AUTORAIS.length, reais: N_REAIS,
+    taxaC, arquivos: manifesto.length,
     padroesEnviesados: enviesados.length, disciplinas: discNoBanco.size,
   };
 
@@ -811,7 +879,8 @@ function validar({ quieto = false } = {}) {
 function relatorio({ erros, avisos, metricas }) {
   const pct = n => (100 * n).toFixed(1) + "%";
   console.log(`Banco: ${metricas.questoes} questões em ${metricas.arquivos} arquivos, ${metricas.disciplinas} disciplinas.`);
-  console.log(`Equilíbrio C/E: ${pct(metricas.taxaC)} CERTO.`);
+  console.log(`  ${metricas.autorais} autorais + ${metricas.reais} de prova real aplicada.`);
+  console.log(`Equilíbrio C/E: ${pct(metricas.taxaC)} CERTO (só autorais — é calibragem de autoria).`);
   console.log("");
 
   if (erros.length) {
