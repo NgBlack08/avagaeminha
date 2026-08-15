@@ -518,21 +518,30 @@ const QUESTOES_PCAL_LOTE90 = [
 
   {
     ...BASE90,
-    id: "PT-197", assunto: "Compreensão e reescritura", subassunto: "Distinção entre divulgar e prestar contas",
+    id: "PT-197", assunto: "Compreensão e reescritura", subassunto: "Utilidade × suficiência do dado divulgado",
     origem: "Inédita — estilo CEBRASPE (texto-base autoral: dados abertos e controle social)",
-    dificuldade: 1, tempoIdealSeg: 40, textoApoio: TXT90_C,
-    enunciado: "De acordo com o texto, divulgar estatísticas de criminalidade não equivale, por si só, a prestar contas.",
-    gabarito: "C", pegadinha: "literalidade", palavraChave: "por si só",
+    /* REFORMULADO a partir de um feedback: o enunciado anterior era
+       "divulgar estatísticas não equivale, por si só, a prestar contas",
+       quase transcrição da primeira linha do texto. Dava para acertar por
+       casamento de palavras, sem ler — o leitor registrou que a questão
+       "ficou sem sentido", e tinha razão: ela não media compreensão
+       nenhuma. A versão atual exige cruzar a tese do primeiro parágrafo
+       com a ressalva "cumpre função útil, mas limitada", e o par
+       útil/insuficiente não aparece no texto: o candidato precisa
+       derivá-lo. */
+    dificuldade: 2, tempoIdealSeg: 50, textoApoio: TXT90_C,
+    enunciado: "Depreende-se do texto que um painel de ocorrências pode ser útil e, ainda assim, insuficiente para a prestação de contas.",
+    gabarito: "C", pegadinha: "literalidade", palavraChave: "útil e, ainda assim, insuficiente",
     cognitivo: {
-      motivo: "Aferir a leitura da tese enunciada na primeira linha.",
-      palavraCritica: "equivale",
+      motivo: "Exigir que o candidato componha duas informações do texto — a tese e a ressalva — em vez de reconhecer uma frase isolada.",
+      palavraCritica: "insuficiente",
     },
     comentario: {
-      resolucao: "CERTO. É a afirmação de abertura: 'Publicar estatísticas de criminalidade não é o mesmo que prestar contas'. O texto reconhece que o painel 'cumpre função útil', mas limitada, porque informa o que ocorreu sem explicar por quê nem o que se fez — logo, publicar é condição insuficiente para prestar contas.",
-      fundamento: "Compreensão de texto — identificação da tese.",
-      macete: "Primeira frase de texto expositivo institucional costuma ser a tese. Volte a ela ao julgar cada item.",
-      erroComum: "Marcar ERRADO por entender que o texto desqualifica a divulgação, quando ele apenas a considera insuficiente.",
-      comoBancaPensa: "Item curto e correto que abre o bloco e calibra a leitura do candidato."
+      resolucao: "CERTO, e a resposta não está numa frase só. O texto afirma que publicar 'não é o mesmo que prestar contas' e, logo depois, que o painel 'cumpre função útil, mas limitada'. Compondo as duas: a utilidade é reconhecida, a suficiência é negada. É exatamente a diferença entre 'não serve' e 'não basta' — o texto sustenta a segunda leitura, nunca a primeira.",
+      fundamento: "Compreensão de texto — composição de informações; utilidade × suficiência.",
+      macete: "Quando o autor elogia e ressalva na mesma frase ('útil, mas limitada'), o item correto costuma preservar as duas partes.",
+      erroComum: "Marcar ERRADO por entender que reconhecer utilidade contradiz a tese de que publicar não basta — quando é justamente a combinação das duas que o texto propõe.",
+      comoBancaPensa: "Item que só se resolve lendo dois trechos distintos, formato que separa quem leu o texto de quem reconheceu palavras nele."
     }
   },
   {

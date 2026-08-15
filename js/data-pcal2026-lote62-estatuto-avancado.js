@@ -199,44 +199,8 @@ const QUESTOES_PCAL_LOTE62 = [
   },
 
   /* ---------- Cargos e requisitos (arts. 15 a 30) ---------- */
-  {
-    id: "LI-087", disciplina: "Legislação Institucional (AL)", assunto: "Estatuto da PC-AL (Lei 3.437/1975)", subassunto: "Escolaridade do Motorista Policial (art. 20)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (padrão de literalidade normativa)",
-    tipo: "CE", dificuldade: 3, tempoIdealSeg: 60, probReaparecer: 0.66,
-    enunciado: "Para o provimento do cargo de Motorista Policial, o Estatuto exige a conclusão do ensino de 1º grau ou equivalente.",
-    gabarito: "E", pegadinha: "troca-numerica", palavraChave: "conclusão do ensino de 1º grau",
-    cognitivo: {
-      motivo: "Cobrar o único requisito de escolaridade abaixo do 1º grau completo em todo o Estatuto.",
-      palavraCritica: "conclusão do ensino de 1º grau",
-    },
-    comentario: {
-      resolucao: "ERRADO. O parágrafo único do art. 20 exige a conclusão da 4ª SÉRIE do ensino de 1º grau, ou curso primário, ou equivalente — não o 1º grau completo. É o requisito mais baixo da lei e por isso o mais trocado. Vale montar a escada inteira: Motorista, 4ª série; Escrivão Auxiliar e Agente Auxiliar, 1º grau; Escrivão de Polícia e Agente de Polícia, 2º grau; Inspetor, curso de Direito; Perito Criminal, curso de Direito mais curso de perícia criminal.",
-      fundamento: "Lei estadual 3.437/1975, art. 20, parágrafo único; arts. 16 a 19 e 21.",
-      macete: "Motorista Policial: 4ª série. É o piso do Estatuto.",
-      erroComum: "Nivelar o Motorista aos demais cargos de nível auxiliar.",
-      comoBancaPensa: "Eleva discretamente o requisito para o patamar imediatamente acima."
-    }
-  },
-  {
-    id: "LI-088", disciplina: "Legislação Institucional (AL)", assunto: "Estatuto da PC-AL (Lei 3.437/1975)", subassunto: "Atribuições do Agente Auxiliar (art. 19)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (padrão de literalidade normativa)",
-    tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.75,
-    enunciado: "Incluem-se entre as atribuições básicas do Agente Auxiliar de Polícia executar intimações e notificações a indiciados, vítimas e testemunhas, proceder à busca de informações e executar a segurança de autoridades.",
-    gabarito: "C", pegadinha: "literalidade", palavraChave: "executar a segurança de autoridades",
-    cognitivo: {
-      motivo: "Fixar a amplitude das atribuições do cargo de menor escolaridade investigativa.",
-      palavraCritica: "segurança de autoridades",
-    },
-    comentario: {
-      resolucao: "CERTO. Todas constam do art. 19 da Lei 3.437/1975, inclusive a segurança de autoridades, que costuma surpreender por parecer atribuição de outro cargo. A distinção com o art. 18 é de comando, não de natureza: ao Agente de Polícia cabe DIRIGIR equipes e INSTRUIR os policiais sob sua chefia, executando, quando necessário, todas as tarefas do agente auxiliar. Ou seja, o superior acumula as do subordinado, e não o contrário.",
-      fundamento: "Lei estadual 3.437/1975, arts. 18 e 19.",
-      macete: "Agente de Polícia dirige e pode fazer tudo do auxiliar; o auxiliar executa.",
-      erroComum: "Excluir a segurança de autoridades do rol do agente auxiliar.",
-      comoBancaPensa: "Escolhe a atribuição menos associada ao cargo dentro de um rol correto."
-    }
-  },
+
+
   {
     id: "LI-089", disciplina: "Legislação Institucional (AL)", assunto: "Estatuto da PC-AL (Lei 3.437/1975)", subassunto: "Atribuições do Escrivão de Polícia (art. 16)",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
@@ -256,25 +220,7 @@ const QUESTOES_PCAL_LOTE62 = [
       comoBancaPensa: "Inverte a cláusula final e apoia a inversão num princípio plausível."
     }
   },
-  {
-    id: "LI-090", disciplina: "Legislação Institucional (AL)", assunto: "Estatuto da PC-AL (Lei 3.437/1975)", subassunto: "Atribuições do Desenhista Policial (art. 30)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (padrão de literalidade normativa)",
-    tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.6,
-    enunciado: "Compete basicamente ao Desenhista Policial proceder ao levantamento de croquis de locais de infração penal.",
-    gabarito: "C", pegadinha: "literalidade", palavraChave: "levantamento de croquis",
-    cognitivo: {
-      motivo: "Fixar um cargo pouco estudado do quadro, que a banca usa como item de desempate.",
-      palavraCritica: "croquis",
-    },
-    comentario: {
-      resolucao: "CERTO. É o art. 30 da Lei 3.437/1975. O quadro da PC-AL tem cargos de apoio técnico que quase nunca são estudados — Desenhista Policial, Motorista Policial, Perito Policial de Local, Dactiloscopista — e é exatamente neles que a banca busca o item que separa quem leu a lei de quem leu resumo. Vale ler os arts. 15 a 35 inteiros pelo menos uma vez, ainda que sem memorizar.",
-      fundamento: "Lei estadual 3.437/1975, art. 30.",
-      macete: "Os cargos de apoio técnico existem e caem — leia os arts. 15 a 35.",
-      erroComum: "Negar por não reconhecer o cargo, supondo que a banca o inventou.",
-      comoBancaPensa: "Escolhe o cargo menos estudado do quadro para cobrar literalidade simples."
-    }
-  },
+
 
   /* ---------- Provimento de cargos de direção (art. 40) ---------- */
   {
@@ -762,70 +708,9 @@ const QUESTOES_PCAL_LOTE62 = [
       comoBancaPensa: "Nega uma inclusão expressa e sustenta a negativa com argumento doutrinário aparentemente sólido."
     }
   },
-  {
-    id: "LI-116", disciplina: "Legislação Institucional (AL)", assunto: "Estatuto da PC-AL (Lei 3.437/1975)", subassunto: "Requisito do Perito Criminal (art. 21, p.u.)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (padrão de literalidade normativa)",
-    tipo: "CE", dificuldade: 3, tempoIdealSeg: 70, probReaparecer: 0.81,
-    enunciado: "Para o provimento do cargo de Perito Criminal, o Estatuto exige, cumulativamente, a conclusão do curso de Direito e de curso em perícia criminal realizado em estabelecimento idôneo.",
-    gabarito: "C", pegadinha: "literalidade", palavraChave: "cumulativamente ... curso de Direito e de curso em perícia criminal",
-    cognitivo: {
-      motivo: "Fixar a exigência dupla e contraintuitiva do cargo mais técnico do quadro.",
-      palavraCritica: "curso de Direito",
-    },
-    comentario: {
-      resolucao: "CERTO. É o parágrafo único do art. 21, e a exigência é mesmo cumulativa: curso de Direito E curso em perícia criminal. Contraria a intuição, porque as atribuições do artigo são eminentemente científicas — exames periciais em local de infração, exames grafotécnicos, perícias contábeis, análises químicas, minerais e orgânicas. Um bacharel em Química com especialização em perícia não preenche o requisito à luz da letra do Estatuto. É um dispositivo antigo, de 1975, e a estranheza é justamente o que o torna cobrável.",
-      fundamento: "Lei estadual 3.437/1975, art. 21, caput e parágrafo único.",
-      macete: "Perito Criminal na Lei 3.437: Direito + perícia criminal. Os dois.",
-      erroComum: "Supor suficiente a formação científica correlata às atribuições.",
-      comoBancaPensa: "Cobra o requisito que contraria a expectativa profissional do cargo."
-    }
-  },
-  {
-    id: "LI-117", disciplina: "Legislação Institucional (AL)", assunto: "Estatuto da PC-AL (Lei 3.437/1975)", subassunto: "Requisito do Inspetor de Polícia (art. 15, p.u.)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (padrão de literalidade normativa)",
-    tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.78,
-    enunciado: "Para o provimento do cargo de Inspetor de Polícia exige-se a conclusão do ensino de 2º grau ou equivalente, sendo o curso de Direito requisito apenas desejável.",
-    gabarito: "E", pegadinha: "troca-conceito", palavraChave: "sendo o curso de Direito requisito apenas desejável",
-    cognitivo: {
-      motivo: "Cobrar que o curso de Direito é habilitação exigida, não preferência.",
-      palavraCritica: "apenas desejável",
-    },
-    comentario: {
-      resolucao: "ERRADO. O parágrafo único do art. 15 exige, como habilitação, o CURSO DE DIREITO — não o 2º grau, e não como preferência. O item rebaixa o requisito e converte exigência em desejo. Vale contrastar com o art. 40, onde a lei realmente usa linguagem de preferência ao dizer 'sempre que possível, com vivência policial': ali é recomendação, aqui é habilitação. Distinguir os dois registros no mesmo Estatuto é o que a banca cobra.",
-      fundamento: "Lei estadual 3.437/1975, art. 15, caput e parágrafo único; art. 40, caput.",
-      macete: "Inspetor exige curso de Direito. 'Desejável' é a linguagem do art. 40, outro contexto.",
-      erroComum: "Nivelar o Inspetor aos cargos de 2º grau do quadro.",
-      comoBancaPensa: "Rebaixa o requisito e importa a linguagem facultativa de outro artigo."
-    }
-  },
-  {
-    id: "LI-118", disciplina: "Legislação Institucional (AL)", assunto: "Estatuto da PC-AL (Lei 3.437/1975)", subassunto: "Atribuições do Inspetor de Polícia (art. 15)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (padrão de literalidade normativa)",
-    tipo: "CE", dificuldade: 3, tempoIdealSeg: 70, probReaparecer: 0.76,
-    /* O enunciado GANHOU o recorte "nos termos da Lei estadual 3.437/1975".
-       Sem ele o item era injusto, e um leitor apontou exatamente isso: as
-       atribuições descritas são, hoje, privativas do delegado (CF/88, art.
-       144, § 4º, e Lei 12.830/2013, art. 2º, § 1º), de modo que a mesma
-       frase é CERTA pelo Estatuto e ERRADA pela ordem vigente. A própria
-       resolução mandava "ler o comando" — só que não havia comando algum
-       para ler. Agora há, e o item passa a ter uma resposta só. */
-    enunciado: "Nos termos da Lei estadual nº 3.437/1975 (Estatuto da Polícia Civil de Alagoas), entre as atribuições básicas do Inspetor de Polícia incluem-se instaurar e presidir inquéritos policiais, formalizar prisão em flagrante, informar pedidos de habeas corpus e representar à autoridade judiciária sobre a necessidade de prisão preventiva de indiciados.",
-    gabarito: "C", pegadinha: "literalidade", palavraChave: "informar pedidos de habeas corpus",
-    cognitivo: {
-      motivo: "Fixar o rol do art. 15, que reúne atos tipicamente de autoridade policial.",
-      palavraCritica: "informar pedidos de habeas corpus",
-    },
-    comentario: {
-      resolucao: "CERTO em relação ao Estatuto, que é o que o edital cobra. Todas as atribuições constam do art. 15 da Lei estadual 3.437/1975, e o parágrafo único exige do Inspetor o curso de Direito — o texto de 1975 realmente o desenha como autoridade policial. RESSALVA IMPORTANTE: esse desenho não sobreviveu à ordem constitucional atual. O art. 144, § 4º, da CF/88 atribui às polícias civis, DIRIGIDAS POR DELEGADOS DE POLÍCIA DE CARREIRA, as funções de polícia judiciária e a apuração de infrações penais; e o art. 2º, § 1º, da Lei nº 12.830/2013 reserva ao delegado a condução da investigação por meio do inquérito policial. Hoje, portanto, instaurar e presidir inquérito é atribuição privativa do delegado. Leia o comando: se ele disser 'nos termos da Lei 3.437/1975', vale a literalidade do Estatuto; se disser 'segundo a Constituição Federal' ou 'atualmente', a mesma assertiva fica ERRADA.",
-      fundamento: "Lei estadual 3.437/1975, art. 15, caput e parágrafo único. Em sentido contrário, no plano atual: CF/88, art. 144, § 4º, e Lei nº 12.830/2013, art. 2º, § 1º.",
-      macete: "O Inspetor de 1975 é autoridade policial no papel; desde 1988, quem preside inquérito é o delegado. O comando da questão decide qual dos dois planos vale.",
-      erroComum: "Responder pelo plano errado — negar a literalidade do Estatuto, ou afirmá-la quando o enunciado pergunta pelo regime vigente.",
-      comoBancaPensa: "Rol longo e fiel ao texto estadual. A banca também explora o inverso: cobra o mesmo rol sob a ótica da CF/88, e aí a resposta se inverte."
-    }
-  },
+
+
+
   {
     id: "LI-119", disciplina: "Legislação Institucional (AL)", assunto: "Estatuto da PC-AL (Lei 3.437/1975)", subassunto: "Delegado Regional exercido por militar (art. 40, § 1º)",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
@@ -854,37 +739,41 @@ QUESTOES.push(...QUESTOES_PCAL_LOTE62);
 
    O Estatuto da Polícia Civil de Alagoas é de 1975 e desenha um quadro
    com Inspetor de Polícia, Escrivão Auxiliar, Agente Auxiliar, Motorista
-   Policial, Desenhista Policial, Perito Policial de Local, Carcereiro e
-   Dactiloscopista. A estrutura ATUAL da PC/AL tem três carreiras
-   policiais — Delegado, Agente e Escrivão —, e o próprio Edital nº 1 de
-   2026 provê vagas apenas para Agente e Escrivão.
+   Policial, Desenhista Policial, Perito Criminal, Perito Policial de
+   Local, Carcereiro e Dactiloscopista. A estrutura ATUAL da PC/AL tem
+   três carreiras policiais — Delegado, Agente e Escrivão —, e o Edital
+   nº 1 de 2026 provê vagas apenas para Agente e Escrivão.
 
-   POR QUE AS QUESTÕES FICAM. O edital cobra a Lei 3.437/1975 nominalmente,
-   e a CEBRASPE cobra a letra do que o edital lista: em 2021 foram 4 itens
-   sobre este Estatuto (117 a 120 do caderno). Apagar o conteúdo tiraria
-   do candidato exatamente o que pode cair.
+   AS NOVE QUESTÕES SOBRE ESSES CARGOS FORAM EXCLUÍDAS. Antes elas
+   ficavam, com aviso de vigência; a decisão mudou porque a evidência
+   mudou, e ela veio da própria prova real.
 
-   O QUE MUDA. Elas passam a exibir o aviso de vigência. Estudar a letra de
-   um cargo extinto para responder à prova é uma coisa; sair daqui achando
-   que existe concurso de Inspetor de Polícia em Alagoas é outra, e era
-   isso que o app deixava acontecer em silêncio.
+   O QUE A PROVA DE 2021 PERGUNTOU sobre este Estatuto (itens 117 a 120):
 
-   LIMITE DECLARADO DA PESQUISA. Localizei a base da estrutura vigente
-   (Lei Delegada nº 47, de 10/08/2015, com a LC nº 22/1994 e a LC nº
-   293/2014 no caminho) e a composição atual das carreiras, mas NÃO
-   consegui o dispositivo exato que extingue cada um destes cargos. Por
-   isso a nota diz o que é verificável — que não integram a estrutura
-   atual nem o edital de 2026 — e não afirma número de artigo revogador
-   que eu não conferi na fonte.
+     117  magistério cumulativo pelo membro da polícia judiciária
+     118  precedência hierárquica na corporação
+     119  gratificação por serviço extraordinário
+     120  Conselho Superior de Polícia — natureza e poderes
+
+   Nenhum requisito de cargo. Nenhum cargo extinto. A CEBRASPE cobrou o
+   regime institucional, que continua valendo, e não o quadro de pessoal
+   de 1975. O argumento que sustentava manter as questões — "o edital
+   cobra a lei nominalmente, então pode cair" — não sobreviveu ao teste
+   contra o caderno.
+
+   EXCLUÍDAS: LI-052 e LI-116 (Perito Criminal), LI-053, LI-117 e LI-118
+   (Inspetor de Polícia), LI-054 (Escrivão Auxiliar), LI-087 (Motorista
+   Policial), LI-088 (Agente Auxiliar), LI-090 (Desenhista Policial).
+
+   O que sobra do Estatuto no banco — 66 questões — trata de investidura,
+   regime disciplinar, gratificações, remoção, acumulação e hierarquia:
+   matéria que se aplica a Agente e Escrivão e que é o que a banca cobrou.
+
+   LI-089 FICA, com o aviso. Ela testa o Escrivão de Polícia, cargo que
+   existe, e o art. 16 não foi revogado. O que a nota explica é que a
+   atribuição de "executar as tarefas do escrivão auxiliar" perdeu objeto.
    ===================================================================== */
 const CARGOS_HISTORICOS_PCAL = {
-  "LI-053": "Inspetor de Polícia",
-  "LI-117": "Inspetor de Polícia",
-  "LI-118": "Inspetor de Polícia",
-  "LI-087": "Motorista Policial",
-  "LI-088": "Agente Auxiliar de Polícia",
-  "LI-090": "Desenhista Policial",
-  "LI-054": "Escrivão Auxiliar de Polícia",
   "LI-089": "Escrivão Auxiliar de Polícia",
 };
 QUESTOES.forEach(q => {
@@ -892,9 +781,9 @@ QUESTOES.forEach(q => {
   if (!cargo) return;
   q.vigencia = "alterada";
   q.vigenciaNota =
-    `O cargo de ${cargo} consta do Estatuto de 1975, mas NÃO integra a estrutura atual ` +
-    `da Polícia Civil de Alagoas, cujas carreiras policiais são Delegado, Agente e Escrivão — ` +
-    `e o Edital nº 1/2026 provê vagas somente para Agente e Escrivão. ` +
-    `Estude a letra do dispositivo, porque o edital cobra a Lei 3.437/1975 nominalmente; ` +
-    `só não conclua que existe carreira de ${cargo} para concorrer.`;
+    `Esta questão trata do Escrivão de Polícia, cargo que existe. A ressalva é sobre a ` +
+    `atribuição citada no art. 16: o cargo de ${cargo} NÃO integra a estrutura atual da ` +
+    `Polícia Civil de Alagoas, cujas carreiras policiais são Delegado, Agente e Escrivão. ` +
+    `A regra do dispositivo continua na lei, mas perdeu objeto — não há mais auxiliar cujas ` +
+    `tarefas o escrivão deva executar.`;
 });

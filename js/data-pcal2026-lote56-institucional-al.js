@@ -158,63 +158,6 @@ const QUESTOES_PCAL_LOTE56 = [
   },
 
   /* ===================== ATRIBUIÇÕES E REQUISITOS DE CARGO ===================== */
-  {
-    id: "LI-052", disciplina: "Legislação Institucional (AL)", assunto: "Estatuto da PC-AL (Lei 3.437/1975)", subassunto: "Requisito do cargo de Perito Criminal (art. 21)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (Estatuto PC-AL, Lei 3.437/1975)",
-    tipo: "CE", dificuldade: 3, tempoIdealSeg: 60, probReaparecer: 0.8,
-    enunciado: "Para o provimento do cargo de Perito Criminal, o Estatuto da PC-AL exige a conclusão de curso superior em qualquer área científica, além de curso de Perícia Criminal em estabelecimento idôneo.",
-    gabarito: "E", pegadinha: "literalidade", palavraChave: "curso superior em qualquer área científica",
-    cognitivo: {
-      motivo: "Cobrar o requisito específico do cargo de Perito Criminal.",
-      palavraCritica: "qualquer área científica",
-    },
-    comentario: {
-      resolucao: "ERRADO. O art. 21, parágrafo único, exige, para o provimento do cargo de Perito Criminal, a conclusão do curso de Direito e de curso em Perícia Criminal em estabelecimento idôneo. Não basta formação superior em qualquer área científica.",
-      fundamento: "Lei 3.437/1975, art. 21, parágrafo único.",
-      macete: "Perito Criminal: Direito, não 'ciências'.",
-      erroComum: "Presumir que perícia exige formação técnica genérica.",
-      comoBancaPensa: "Troca a exigência específica por uma plausível para a função."
-    }
-  },
-  {
-    id: "LI-053", disciplina: "Legislação Institucional (AL)", assunto: "Estatuto da PC-AL (Lei 3.437/1975)", subassunto: "Requisito do cargo de Inspetor de Polícia (art. 15)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (Estatuto PC-AL, Lei 3.437/1975)",
-    tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.75,
-    enunciado: "Para o provimento do cargo de Inspetor de Polícia, exige-se, como habilitação, o curso de Direito.",
-    gabarito: "C", pegadinha: "literalidade", palavraChave: "curso de Direito",
-    cognitivo: {
-      motivo: "Fixar o requisito de habilitação do Inspetor de Polícia.",
-      palavraCritica: "curso de Direito",
-    },
-    comentario: {
-      resolucao: "CERTO. O art. 15, parágrafo único, exige, para o provimento do cargo de Inspetor de Polícia, o curso de Direito como habilitação.",
-      fundamento: "Lei 3.437/1975, art. 15, parágrafo único.",
-      macete: "Inspetor de Polícia = curso de Direito.",
-      erroComum: "Rebaixar o requisito para ensino médio.",
-      comoBancaPensa: "Item correto que testa se o candidato conhece o requisito real."
-    }
-  },
-  {
-    id: "LI-054", disciplina: "Legislação Institucional (AL)", assunto: "Estatuto da PC-AL (Lei 3.437/1975)", subassunto: "Atribuições do Escrivão Auxiliar (art. 17)",
-    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (Estatuto PC-AL, Lei 3.437/1975)",
-    tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.75,
-    enunciado: "Durante uma operação, o Delegado determinou que o Escrivão Auxiliar de Polícia acompanhasse a equipe em diligência externa para lavratura imediata de autos no local. O servidor pode recusar a ordem, pois suas atribuições se limitam à escrituração interna de cartório.",
-    gabarito: "E", pegadinha: "restricao-indevida", palavraChave: "pode recusar a ordem ... se limitam à escrituração interna",
-    cognitivo: {
-      motivo: "Delimitar as atribuições do Escrivão Auxiliar de Polícia.",
-      palavraCritica: "limitam à escrituração interna",
-    },
-    comentario: {
-      resolucao: "ERRADO. Entre as atribuições básicas do Escrivão Auxiliar de Polícia, o art. 17 prevê 'acompanhar a autoridade policial, quando determinado, nas diligências extras'. Logo, não pode recusar a ordem sob o argumento de que atuaria apenas internamente.",
-      fundamento: "Lei 3.437/1975, art. 17.",
-      macete: "Escrivão Auxiliar acompanha diligência externa quando determinado.",
-      erroComum: "Restringir o cargo ao cartório.",
-      comoBancaPensa: "Cria cenário que induz a leitura restritiva das atribuições."
-    }
-  },
 
   /* ===================== PRECEDÊNCIA E VANTAGENS ===================== */
   {
