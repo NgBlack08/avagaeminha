@@ -652,8 +652,13 @@ function consultarNuvem(user) {
        custar mais um tempo de ida e volta no boot. Paginado junto com os
        demais porque "hoje são poucas linhas" foi exatamente a premissa que
        fez `respostas` passar de mil sem ninguém perceber. */
+    /* `resolvido` entra aqui porque sem ele o app não tinha como fechar o
+       ciclo: o aluno sinalizava, a questão era corrigida, e o card
+       continuava dizendo apenas "você sinalizou" — para sempre. Doze
+       feedbacks reais foram enviados antes de alguém notar que nenhum
+       deles jamais dava retorno visível a quem o escreveu. */
     buscarTudo("feedback_questao", () => supa.from("feedback_questao")
-      .select("questao_id, motivo, comentario").eq("user_id", user.id)
+      .select("questao_id, motivo, comentario, resolvido").eq("user_id", user.id)
       .order("questao_id", { ascending: true })),
   ]);
 }
@@ -734,7 +739,7 @@ async function carregarEstadoNuvem(user) {
 
   if (!falhou(rFeedback)) {
     FEEDBACK_ENVIADO.clear();
-    for (const f of (rFeedback.data || [])) FEEDBACK_ENVIADO.set(f.questao_id, { motivo: f.motivo, comentario: f.comentario });
+    for (const f of (rFeedback.data || [])) FEEDBACK_ENVIADO.set(f.questao_id, { motivo: f.motivo, comentario: f.comentario, resolvido: !!f.resolvido });
   }
 
   /* --- plano e permissões: o ponto mais sensível ---

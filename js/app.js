@@ -350,11 +350,19 @@ function mostrarConfirm(mensagem, titulo) {
 function feedbackHtml(q) {
   if (MODO !== "cloud") return ""; /* sem login não há onde gravar */
   const ja = feedbackDaQuestao(q.id);
+  /* Três estados, e não dois. O que faltava era o terceiro: sinalizado E
+     JÁ REVISADO. Sem ele, quem escreveu o feedback via o mesmo aviso
+     antes e depois da correção, e não tinha como saber se o relato tinha
+     ido para algum lugar — o que desestimula o próximo relato, que é
+     justamente a fonte mais barata de conserto que este banco tem. */
   return `<div class="fb-linha" id="fb-${q.id}">${
-    ja
-      ? `<span class="fb-ok">✓ Você sinalizou esta explicação</span>
-         <button class="fb-btn" onclick="desfazerFeedback('${q.id}')">desfazer</button>`
-      : `<button class="fb-btn" onclick="abrirFeedback('${q.id}')">Esta explicação não ficou clara?</button>`
+    ja && ja.resolvido
+      ? `<span class="fb-ok fb-resolvido" title="Sua sinalização foi analisada e a questão foi revisada.">✓ Revisado após a sua sinalização</span>
+         <button class="fb-btn" onclick="abrirFeedback('${q.id}')">sinalizar de novo</button>`
+      : ja
+        ? `<span class="fb-ok">✓ Você sinalizou esta explicação — em análise</span>
+           <button class="fb-btn" onclick="desfazerFeedback('${q.id}')">desfazer</button>`
+        : `<button class="fb-btn" onclick="abrirFeedback('${q.id}')">Esta explicação não ficou clara?</button>`
   }</div>`;
 }
 
