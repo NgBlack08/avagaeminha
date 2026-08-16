@@ -14,6 +14,14 @@
    bloco cobre. Cruzando esse mapa com o banco, apareceram três lacunas em
    203 questões de Direito Constitucional e Direitos Humanos:
 
+   O MATERIAL EM SI, na íntegra e com os comentários do autor, está no
+   LOTE 94 — que entrou depois, a pedido dele. Os dois lotes convivem: o
+   94 traz as assertivas e os comentários originais, adaptados ao formato
+   CERTO/ERRADO do sistema; o 93 traz itens novos sobre os mesmos temas,
+   escritos da fonte primária. Onde as duas leituras divergem — o par
+   teoria interna × externa é o caso —, a divergência está registrada no
+   cabeçalho do lote 94, e nenhuma das duas foi apagada.
+
      art. 5º, § 1º — aplicação imediata ......... ZERO questões
      teoria absoluta × teoria relativa .......... ZERO questões
      teoria interna × teoria externa ............ ZERO questões
