@@ -56,8 +56,14 @@ const CAMPOS_COGNITIVO = ["motivo", "palavraCritica"];
    bruto (não citação entre aspas, que já traz o trecho necessário junto
    ao enunciado — self-contained). Testado contra as 1141 questões do
    banco: zero falsos positivos com essas duas formas. */
+/* "no texto" exige a exceção abaixo: em Direito, "no texto constitucional"
+   e "no texto legal" designam a norma, não uma passagem anexada. Sem o
+   lookahead o validador reprovava DP-209 ("vedação que não comporta
+   exceção no texto constitucional"), que é item autossuficiente. A
+   exceção é estreita de propósito — cobre só os qualificadores que
+   transformam "texto" em referência normativa. */
 const PADRAO_EXIGE_TEXTO_APOIO =
-  /\b(primeiro|segundo|terceiro|quarto|quinto|último|penúltimo)\s+par[aá]grafo\b|\b(no|do|ao)\s+texto\b|predomina no texto|período final do texto|início do texto|ao longo do texto/i;
+  /\b(primeiro|segundo|terceiro|quarto|quinto|último|penúltimo)\s+par[aá]grafo\b|\b(no|do|ao)\s+texto\b(?!\s+(constitucional|legal|normativo|da lei|da norma))|predomina no texto|período final do texto|início do texto|ao longo do texto/i;
 
 /* Limiares dos avisos. Não são leis da natureza — são o ponto em que um
    desequilíbrio deixa de ser ruído e passa a ensinar o reflexo errado. */
@@ -379,7 +385,29 @@ function validar({ quieto = false } = {}) {
       erros.push(`${onde}: enunciado remete a um parágrafo/texto externo, mas textoApoio está vazio`);
     }
 
-    if (!["C", "E"].includes(q.gabarito)) erros.push(`${onde}: gabarito inválido — "${q.gabarito}" (esperado C ou E)`);
+    /* Dois formatos convivem desde 7.179. O gabarito válido depende de
+       `tipo`, e o item de múltipla escolha precisa carregar as próprias
+       alternativas — sem elas a tela não teria o que desenhar, e o erro
+       só apareceria na frente do aluno. */
+    const formato = q.tipo === "ME" ? "ME" : "CE";
+    if (formato === "CE") {
+      if (!["C", "E"].includes(q.gabarito)) erros.push(`${onde}: gabarito inválido — "${q.gabarito}" (esperado C ou E)`);
+      if (q.alternativas) erros.push(`${onde}: item CERTO/ERRADO não pode declarar alternativas`);
+    } else {
+      if (!Array.isArray(q.alternativas) || q.alternativas.length < 2) {
+        erros.push(`${onde}: item de múltipla escolha exige "alternativas" com pelo menos 2 opções`);
+      } else {
+        if (q.alternativas.length > 5) erros.push(`${onde}: ${q.alternativas.length} alternativas — a CEBRASPE usa no máximo 5 (A a E)`);
+        const vazias = q.alternativas.filter(a => typeof a !== "string" || !a.trim()).length;
+        if (vazias) erros.push(`${onde}: ${vazias} alternativa(s) vazia(s) ou que não são texto`);
+        const letras = q.alternativas.map((_, i) => String.fromCharCode(65 + i));
+        if (!letras.includes(q.gabarito)) {
+          erros.push(`${onde}: gabarito "${q.gabarito}" não corresponde a nenhuma alternativa (esperado ${letras.join(", ")})`);
+        }
+        const textos = new Set(q.alternativas.map(a => String(a).trim().toLowerCase()));
+        if (textos.size !== q.alternativas.length) erros.push(`${onde}: alternativas repetidas`);
+      }
+    }
     if (![1, 2, 3].includes(q.dificuldade)) erros.push(`${onde}: dificuldade inválida — "${q.dificuldade}" (esperado 1, 2 ou 3)`);
     if (!Array.isArray(q.cargo) || !q.cargo.length) erros.push(`${onde}: cargo deve ser um array não vazio`);
 
@@ -622,6 +650,12 @@ function validar({ quieto = false } = {}) {
   const EH_PROVA_REAL = q => /CEBRASPE\s+(PC|PF|PRF)/i.test(q.origem || "");
   const AUTORAIS = QUESTOES.filter(q => !EH_PROVA_REAL(q));
   const N_REAIS = QUESTOES.length - AUTORAIS.length;
+  /* Toda medida de equilíbrio C/E, viés de comprimento por gabarito e
+     previsibilidade de padrão só existe no formato CERTO/ERRADO. Item de
+     múltipla escolha não tem "lado" — jogá-lo nessas contas puxaria o
+     numerador para zero e faria o banco parecer enviesado para ERRADO. */
+  const AUTORAIS_CE = AUTORAIS.filter(q => q.tipo !== "ME");
+  const N_ME = QUESTOES.filter(q => q.tipo === "ME").length;
 
   const portugues = AUTORAIS.filter(q => q.disciplina === "Língua Portuguesa");
   if (portugues.length >= 30) {
@@ -669,8 +703,8 @@ function validar({ quieto = false } = {}) {
     }
   }
 
-  const total = AUTORAIS.length;
-  const certos = AUTORAIS.filter(q => q.gabarito === "C").length;
+  const total = AUTORAIS_CE.length;
+  const certos = AUTORAIS_CE.filter(q => q.gabarito === "C").length;
   const taxaC = certos / total;
 
   if (Math.abs(taxaC - 0.5) > LIMIAR_CE_GLOBAL) {
@@ -681,7 +715,7 @@ function validar({ quieto = false } = {}) {
      padrão quase sempre cai no mesmo gabarito, o rótulo vira paráfrase da
      resposta e o feedback pós-resposta deixa de ensinar algo transferível. */
   const porPadrao = new Map();
-  for (const q of AUTORAIS) {
+  for (const q of AUTORAIS_CE) {
     if (!porPadrao.has(q.pegadinha)) porPadrao.set(q.pegadinha, []);
     porPadrao.get(q.pegadinha).push(q.gabarito);
   }
@@ -702,8 +736,8 @@ function validar({ quieto = false } = {}) {
   /* Viés de comprimento: item mais longo tendendo a um gabarito é um tell
      que o candidato aprende sem perceber. */
   const media = a => a.reduce((s, x) => s + x, 0) / (a.length || 1);
-  const mediaC = media(AUTORAIS.filter(q => q.gabarito === "C").map(q => q.enunciado.length));
-  const mediaE = media(AUTORAIS.filter(q => q.gabarito === "E").map(q => q.enunciado.length));
+  const mediaC = media(AUTORAIS_CE.filter(q => q.gabarito === "C").map(q => q.enunciado.length));
+  const mediaE = media(AUTORAIS_CE.filter(q => q.gabarito === "E").map(q => q.enunciado.length));
   const viesTam = Math.abs(mediaC - mediaE) / Math.max(mediaC, mediaE);
   if (viesTam > LIMIAR_VIES_TAMANHO) {
     avisos.push(`Enunciados CERTO têm ${Math.round(mediaC)} caracteres contra ${Math.round(mediaE)} dos ERRADO (${(viesTam * 100).toFixed(0)}% de diferença) — vira pista de comprimento.`);
@@ -868,6 +902,7 @@ function validar({ quieto = false } = {}) {
      num número só foi exatamente o defeito que este ajuste corrige. */
   const metricas = {
     questoes: QUESTOES.length, autorais: AUTORAIS.length, reais: N_REAIS,
+    multiplaEscolha: N_ME, certoErrado: QUESTOES.length - N_ME,
     taxaC, arquivos: manifesto.length,
     padroesEnviesados: enviesados.length, disciplinas: discNoBanco.size,
   };
@@ -880,7 +915,8 @@ function relatorio({ erros, avisos, metricas }) {
   const pct = n => (100 * n).toFixed(1) + "%";
   console.log(`Banco: ${metricas.questoes} questões em ${metricas.arquivos} arquivos, ${metricas.disciplinas} disciplinas.`);
   console.log(`  ${metricas.autorais} autorais + ${metricas.reais} de prova real aplicada.`);
-  console.log(`Equilíbrio C/E: ${pct(metricas.taxaC)} CERTO (só autorais — é calibragem de autoria).`);
+  console.log(`  ${metricas.certoErrado} CERTO/ERRADO + ${metricas.multiplaEscolha} de múltipla escolha.`);
+  console.log(`Equilíbrio C/E: ${pct(metricas.taxaC)} CERTO (só autorais C/E — é calibragem de autoria).`);
   console.log("");
 
   if (erros.length) {

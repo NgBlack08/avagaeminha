@@ -653,11 +653,76 @@ label.f select, label.f input { max-width: 100%; }
   padding: 14px 18px; font-size: 14px; color: var(--muted); margin-bottom: 14px; font-style: italic;
   white-space: pre-line;
 }
-.q-enunciado { font-size: 15.5px; margin-bottom: 18px; line-height: 1.65; }
+/* `pre-line` preserva as quebras de linha e colapsa o resto do espaço em
+   branco. Entrou com a múltipla escolha: enunciados do tipo "analise as
+   afirmativas" trazem I, II, III e IV em linhas próprias, e com
+   white-space normal a lista virava um parágrafo corrido, ilegível. Itens
+   C/E não têm \n no enunciado, então nada muda para eles. */
+.q-enunciado { font-size: 15.5px; margin-bottom: 18px; line-height: 1.65; white-space: pre-line; }
 mark.perigo { background: var(--mark-n); color: inherit; border-radius: 4px; padding: 0 3px; cursor: help; border-bottom: 1.5px dashed var(--warn); }
 mark.perigo[data-vies="E"] { background: var(--mark-e); border-bottom-color: var(--bad); }
 mark.perigo[data-vies="C"] { background: var(--mark-c); border-bottom-color: var(--ok); }
+/* ---- Alternativas de múltipla escolha ----
+   A linha inteira é o alvo do clique: no celular a letra sozinha daria um
+   alvo de ~20px, e as alternativas da CEBRASPE quebram em três ou quatro
+   linhas com frequência. Depois de respondida a questão os botões ficam
+   desabilitados mas visíveis — é sobre eles que o candidato relê o item. */
+.q-alts { display: flex; flex-direction: column; gap: 8px; margin-bottom: 18px; }
+.q-alt {
+  display: flex; align-items: flex-start; gap: 11px; width: 100%;
+  text-align: left; font: inherit; font-size: 14.5px; line-height: 1.55;
+  padding: 11px 14px; cursor: pointer;
+  background: var(--surface2); color: var(--text);
+  border: 1.5px solid var(--border); border-radius: var(--r-md);
+  transition: background var(--t-fast), border-color var(--t-fast), transform var(--t-fast);
+}
+.q-alt:hover:not(:disabled) { background: var(--surface3); border-color: var(--accent); }
+.q-alt:active:not(:disabled) { transform: translateY(1px); }
+.q-alt:focus-visible { box-shadow: var(--ring); outline: none; }
+.q-alt:disabled { cursor: default; opacity: .82; }
+.qa-letra {
+  flex: 0 0 auto; width: 25px; height: 25px; border-radius: var(--r-full);
+  display: grid; place-items: center; font-weight: 700; font-size: 13px;
+  background: var(--surface3); color: var(--muted);
+}
+.qa-texto { flex: 1 1 auto; }
+/* Escolhida no Modo Prova (ainda sem gabarito à vista). */
+.q-alt.escolhida { border-color: var(--accent); background: rgba(59,130,246,.12); }
+.q-alt.escolhida .qa-letra { background: var(--accent); color: #fff; }
+/* Pós-resposta no Banco/Simulado: a correta sempre verde, a marcada
+   errada em vermelho. Quem acertou vê só a verde. */
+.q-alt.certa { border-color: var(--ok); background: rgba(16,185,129,.13); opacity: 1; }
+.q-alt.certa .qa-letra { background: var(--ok); color: #fff; }
+.q-alt.marcada-errada { border-color: var(--bad); background: rgba(239,68,68,.12); }
+.q-alt.marcada-errada .qa-letra { background: var(--bad); color: #fff; }
+
 .q-actions { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
+/* Em múltipla escolha a barra guarda só "Em branco" — as opções estão
+   acima, em .q-alts. Sem isso o botão solitário fica com o mesmo peso
+   visual que tinha ao lado de CERTO e ERRADO. */
+.q-actions.so-branco .btn.ghost { font-size: 13px; padding: 7px 13px; }
+
+/* ---- Seletor de formato (C/E × múltipla escolha) ---- */
+.formato-f { display: flex; flex-direction: column; gap: 6px; }
+.formato-lbl { font-size: 12px; color: var(--muted); font-weight: 600; }
+.formato-toggle { display: inline-flex; gap: 4px; background: var(--surface2); border-radius: var(--r-md); padding: 4px; }
+.fmt-btn {
+  display: inline-flex; align-items: center; gap: 7px;
+  border: 0; background: transparent; color: var(--muted);
+  font: inherit; font-size: 13px; font-weight: 600;
+  padding: 7px 12px; border-radius: var(--r-sm); cursor: pointer;
+  transition: background var(--t-fast), color var(--t-fast);
+}
+.fmt-btn:hover:not(:disabled):not(.active) { color: var(--text); }
+.fmt-btn.active { background: var(--surface); color: var(--text); box-shadow: var(--shadow-sm); }
+.fmt-btn:disabled { opacity: .4; cursor: not-allowed; }
+.fmt-btn:focus-visible { box-shadow: var(--ring); outline: none; }
+.fmt-n {
+  font-variant-numeric: tabular-nums; font-size: 11px; font-weight: 700;
+  background: var(--surface3); color: var(--muted);
+  border-radius: var(--r-full); padding: 1px 7px;
+}
+.fmt-btn.active .fmt-n { background: var(--accent); color: #fff; }
 .q-timer { margin-left: auto; font-variant-numeric: tabular-nums; color: var(--muted); font-size: 14px; }
 .q-timer.over { color: var(--bad); font-weight: 700; }
 

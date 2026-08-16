@@ -1040,7 +1040,11 @@ function renderDashboard() {
 /* ================================================================
    BANCO DE QUESTÕES (Módulo 1)
    ================================================================ */
-let bancoFiltros = {};
+/* O formato do item entra no estado inicial das três telas com o valor
+   FORMATO_PADRAO ("CE"). O pedido foi explícito: o banco abre em CERTO ou
+   Errado e só troca por ação do usuário — múltipla escolha nunca é o
+   estado de partida. */
+let bancoFiltros = { formato: FORMATO_PADRAO };
 /* Modo de visualização do Banco: "scroll" (lista, padrão) ou "unica"
    (uma questão por vez, card ampliado). Persistido para lembrar a
    preferência entre sessões. */
@@ -1196,8 +1200,8 @@ async function trocarTrilha(id) {
   bancoPagina = 0;
   /* Simulado e Modo Prova guardam filtros de disciplina que podem não existir
      na trilha nova — ficariam escondendo tudo em silêncio, como os do Banco. */
-  simFiltros = {};
-  pvFiltros = {};
+  simFiltros = { formato: simFiltros.formato || FORMATO_PADRAO };
+  pvFiltros = { formato: pvFiltros.formato || FORMATO_PADRAO };
   /* O Raio-X guarda a disciplina escolhida no gráfico de frequência, que
      pode não existir na tabela de inteligência da trilha nova. */
   raioxDisc = inteligenciaDoFoco().frequenciaTemas[0].disciplina;
@@ -1224,7 +1228,7 @@ function renderBanco() {
      própria, e contá-la faria "ver banco completo" parecer um filtro a
      mais quando na verdade é um filtro a menos. */
   const nAtivos = Object.entries(bancoFiltros)
-    .filter(([k, v]) => k !== "todoOBanco" && valorFiltroAtivo(v)).length;
+    .filter(([k, v]) => k !== "todoOBanco" && k !== "formato" && valorFiltroAtivo(v)).length;
   const filtrosAbertos = bancoFiltrosAbertos === null
     ? window.innerWidth > 640
     : bancoFiltrosAbertos;
@@ -1236,11 +1240,18 @@ function renderBanco() {
            ontoggle="bancoFiltrosAbertos = this.open">
     <summary class="filtros-resumo">
       <span>⚙ Filtros</span>
+      ${/* No celular os filtros ficam recolhidos. Estar em múltipla escolha
+           é a diferença mais visível que o painel pode produzir — some com
+           99% do acervo —, então o estado sobe para o resumo em vez de
+           ficar escondido junto com o controle. */""}
+      ${(bancoFiltros.formato || FORMATO_PADRAO) !== FORMATO_PADRAO
+        ? `<span class="tag warn">múltipla escolha</span>` : ""}
       ${nAtivos ? `<span class="tag accent">${nAtivos} ativo${nAtivos > 1 ? "s" : ""}</span>
         <button type="button" class="btn ghost small" style="margin-left:auto"
           onclick="event.preventDefault(); event.stopPropagation(); limparFiltrosBanco()">Limpar</button>` : ""}
     </summary>
     <div class="filters">
+      ${formatoToggleHtml(bancoFiltros, opcoesEscopo, "setFormatoBanco")}
       ${/* Concurso e Cargo só aparecem quando têm o que oferecer. Dentro de
            uma trilha, "Concurso" é redundante com o escopo — e listaria
            carreiras que o candidato não presta; "Cargo" fica inútil quando o
@@ -1261,6 +1272,46 @@ function renderBanco() {
   ${bancoModoVisual === "unica" ? renderBancoUnica(lista) : renderBancoLista(lista)}`;
   iniciarTimersVisiveis();
 }
+
+/* Seletor de formato do item — o par CERTO/ERRADO × múltipla escolha.
+
+   Não é um `msel` como os demais filtros por dois motivos. Primeiro,
+   porque não é recorte e sim modo: as duas opções são excludentes e uma
+   delas está sempre ativa, então caixa de seleção múltipla mentiria sobre
+   o que o controle faz. Segundo, porque a contagem precisa aparecer no
+   próprio botão: com 41 itens de múltipla escolha contra mais de 2.400 de
+   C/E, trocar às cegas levaria a uma tela quase vazia sem explicação.
+
+   `escopo` é o conjunto de filtros da tela, usado só para contar — a
+   contagem respeita o escopo da trilha e o "ver banco completo". */
+function formatoToggleHtml(estado, escopo, onSet) {
+  const atual = estado.formato || FORMATO_PADRAO;
+  const contar = id => filtrarQuestoes({ ...escopo, formato: id }).length;
+  return `<div class="f formato-f">
+    <span class="formato-lbl">Formato da questão</span>
+    <div class="formato-toggle" role="group" aria-label="Formato da questão">
+      ${FORMATOS_ITEM.map(f => {
+        const n = contar(f.id);
+        return `<button type="button" class="fmt-btn ${atual === f.id ? "active" : ""}"
+          ${n === 0 && atual !== f.id ? "disabled" : ""}
+          aria-pressed="${atual === f.id}"
+          title="${n} ${n === 1 ? "questão disponível" : "questões disponíveis"} neste formato"
+          onclick="${onSet}('${f.id}')">${escapeHtml(f.nome)} <span class="fmt-n">${n}</span></button>`;
+      }).join("")}
+    </div>
+  </div>`;
+}
+
+function setFormatoBanco(id) {
+  if ((bancoFiltros.formato || FORMATO_PADRAO) === id) return;
+  bancoFiltros = { ...bancoFiltros, formato: id };
+  bancoListaCache = null;
+  bancoIndice = 0;
+  bancoPagina = 0;
+  renderBanco();
+}
+function setFormatoSim(id) { simFiltros = { ...simFiltros, formato: id }; renderSimulado(); }
+function setFormatoProva(id) { pvFiltros = { ...pvFiltros, formato: id }; renderProva(); }
 
 /* Um valor de filtro conta como "ativo" se for array não-vazio, ou um
    escalar não-vazio (compatibilidade com os atalhos que ainda escrevem
@@ -1346,7 +1397,11 @@ function toggleFiltroBancoMulti(campo, valor) {
 }
 
 function limparFiltrosBanco() {
-  bancoFiltros = {};
+  /* O formato sobrevive ao "Limpar". Ele não é um filtro de recorte, é o
+     modo de prova em que o candidato está treinando — zerá-lo junto
+     jogaria quem escolheu múltipla escolha de volta para C/E sem aviso,
+     que é o mesmo tipo de mudança silenciosa que o botão deveria evitar. */
+  bancoFiltros = { formato: bancoFiltros.formato || FORMATO_PADRAO };
   /* Zera o cache explicitamente: se os filtros JÁ estavam vazios, a chave não
      muda e o clique não teria efeito nenhum — nem visual, nem de ordem. */
   bancoListaCache = null;
@@ -1478,15 +1533,33 @@ function questaoCardHtml(q, opts) {
       </div>
       <div class="conf-feedback" id="qcf-${q.id}"></div>
     </div>
-    <div class="q-actions" id="qa-${q.id}">
-      <button class="btn ok" onclick="responder('${q.id}','C')">CERTO</button>
-      <button class="btn bad" onclick="responder('${q.id}','E')">ERRADO</button>
-      <button class="btn ghost" onclick="responder('${q.id}','B')">Em branco</button>
+    ${alternativasHtml(q)}
+    <div class="q-actions ${formatoDaQuestao(q) === "ME" ? "so-branco" : ""}" id="qa-${q.id}">
+      ${formatoDaQuestao(q) === "CE" ? `<button class="btn ok" onclick="responder('${q.id}','C')">CERTO</button>
+      <button class="btn bad" onclick="responder('${q.id}','E')">ERRADO</button>` : ""}
+      <button class="btn ghost" onclick="responder('${q.id}','${tokenBranco(q)}')">Em branco</button>
       <span class="q-timer" id="qt-${q.id}" data-ideal="${q.tempoIdealSeg}">0:00</span>
     </div>
     <div id="qr-${q.id}"></div>
   </div>`;
 }
+/* Alternativas de um item de múltipla escolha, uma por linha e clicáveis
+   inteiras — a letra sozinha é alvo pequeno demais no celular, e a banca
+   escreve alternativas longas o bastante para quebrarem em várias linhas.
+   Em item CERTO/ERRADO devolve string vazia: os dois botões da barra de
+   ação já são as opções. */
+function alternativasHtml(q) {
+  if (formatoDaQuestao(q) !== "ME") return "";
+  return `<div class="q-alts" id="qalts-${q.id}">
+    ${q.alternativas.map((texto, i) => {
+      const letra = String.fromCharCode(65 + i);
+      return `<button class="q-alt" id="qalt-${q.id}-${letra}" onclick="responder('${q.id}','${letra}')">
+        <span class="qa-letra">${letra}</span><span class="qa-texto">${escapeHtml(texto)}</span>
+      </button>`;
+    }).join("")}
+  </div>`;
+}
+
 /* Bloco pós-resposta que substituiu a "Engenharia cognitiva".
    Em vez de reexplicar a questão — o que `comentario` já faz —, entrega a
    técnica que neutraliza o padrão daquele item, casada por `pegadinha`.
@@ -1540,13 +1613,13 @@ function dicaConfiancaHtml(nivel) {
    um dado que o app coleta e passar a ser uma habilidade que ele treina —
    perceber que "certeza" errada é o padrão mais caro da prova, e que chutar
    numa faixa perdedora custa pontos mesmo quando dá certo. */
-function notaCalibracaoHtml(conf, resposta, correta) {
+function notaCalibracaoHtml(conf, branco, correta) {
   if (!conf) {
     return `<div class="calib-nota hint">Você não marcou a confiança nesta. Marcar leva um clique e é o que me permite dizer, com o seu histórico, quando vale deixar em branco.</div>`;
   }
   const rotulo = CONFIANCA_ROTULOS[conf];
   const f = orientacaoBranco().porNivel[conf];
-  if (resposta === "B") {
+  if (branco) {
     return conf === 3
       ? `<div class="calib-nota warn">Você deixou em branco algo que marcou como <b>${rotulo}</b>. Se a confiança se confirma no seu histórico, aqui você deixou ponto na mesa.</div>`
       : `<div class="calib-nota ok">Branco declarado como <b>${rotulo}</b> — decisão coerente: zero é melhor que arriscar o que você não domina.</div>`;
@@ -1611,18 +1684,34 @@ async function responder(qid, resposta) {
   const blocoConf = $("#qcb-" + qid);
   if (blocoConf) blocoConf.style.display = "none";
 
+  /* Em múltipla escolha as alternativas continuam na tela depois de
+     respondidas — some com elas seria esconder o objeto de estudo. Ficam
+     travadas, com a correta em verde e a marcada em vermelho quando
+     errou, que é como o candidato relê a questão. */
+  const branco = respostaEmBranco(q, resposta);
+  if (formatoDaQuestao(q) === "ME") {
+    for (const letra of letrasDaQuestao(q)) {
+      const el = $(`#qalt-${qid}-${letra}`);
+      if (!el) continue;
+      el.disabled = true;
+      if (letra === res.gabarito) el.classList.add("certa");
+      else if (letra === resposta) el.classList.add("marcada-errada");
+    }
+  }
+
   const dna = DNA_BANCA.find(d => d.slug === q.pegadinha);
   const tSeg = Math.round(tempoMs / 1000);
-  const cls = resposta === "B" ? "neutro" : res.correta ? "ok" : "bad";
-  const msg = resposta === "B" ? `⊘ Em branco — gabarito: <b>${res.gabarito === "C" ? "CERTO" : "ERRADO"}</b> (no CEBRASPE, branco não pontua nem desconta)`
-    : res.correta ? `✔ Você ACERTOU — gabarito: <b>${res.gabarito === "C" ? "CERTO" : "ERRADO"}</b>`
-    : `✖ Você ERROU — gabarito: <b>${res.gabarito === "C" ? "CERTO" : "ERRADO"}</b> (no sistema líquido, este erro anula um acerto)`;
+  const cls = branco ? "neutro" : res.correta ? "ok" : "bad";
+  const gabTxt = escapeHtml(rotuloResposta(q, res.gabarito));
+  const msg = branco ? `⊘ Em branco — gabarito: <b>${gabTxt}</b> (no CEBRASPE, branco não pontua nem desconta)`
+    : res.correta ? `✔ Você ACERTOU — gabarito: <b>${gabTxt}</b>`
+    : `✖ Você ERROU — gabarito: <b>${gabTxt}</b> (no sistema líquido, este erro anula um acerto)`;
 
   /* O acerto/erro aparece na hora; só a explicação espera, porque
      comentario/cognitivo vêm de um arquivo carregado sob demanda. */
   const alvo = $("#qr-" + qid);
   const resultadoHtml = `<div class="resultado ${cls}">${msg} · seu tempo: ${tSeg}s (ideal: ${q.tempoIdealSeg}s)</div>`
-    + notaCalibracaoHtml(ui.confianca, resposta, res.correta);
+    + notaCalibracaoHtml(ui.confianca, branco, res.correta);
 
   let falhouDetalhe = false;
   if (!q.comentario) {
@@ -1654,7 +1743,7 @@ async function responder(qid, resposta) {
   /* Fica fora do if: mesmo sem a explicação, o usuário precisa do botão
      para seguir no simulado. */
   if (ui.modo === "simulado" && SIM) {
-    SIM.respostas.push({ qid, resposta, correta: res.correta, branco: resposta === "B", tempoMs });
+    SIM.respostas.push({ qid, resposta, correta: res.correta, branco, tempoMs });
     $("#qr-" + qid).innerHTML += `<div style="margin-top:14px">
       <button class="btn" onclick="proximaSimulado()">${SIM.idx + 1 >= SIM.questoes.length ? "Ver resultado →" : "Próxima questão →"}</button></div>`;
   }
@@ -1675,6 +1764,7 @@ function renderSimulado() {
         <option value="5">5 (rápido)</option><option value="10" selected>10</option>
         <option value="20">20</option><option value="40">40</option><option value="60">60</option><option value="120">120 (prova completa)</option>
       </select></label>
+      ${formatoToggleHtml(simFiltros, {}, "setFormatoSim")}
       ${mselHtml(simFiltros, "concurso", "sim:concurso", "Concurso", CONCURSOS.map(c => ({ v: c.id, t: c.id })), "toggleFiltroSimMulti")}
       ${mselHtml(simFiltros, "disciplina", "sim:disciplina", "Disciplina", listaDisciplinas().map(d => ({ v: d, t: d })), "toggleFiltroSimMulti")}
       <label class="f">Modo<select id="sim-modo">
@@ -1691,7 +1781,7 @@ function renderSimulado() {
 /* Filtros do Simulado (concurso/disciplina) — persistem entre renders,
    mesmo padrão de bancoFiltros; sem isto, marcar uma caixa no dropdown
    fecharia o próprio dropdown a cada re-render. */
-let simFiltros = {};
+let simFiltros = { formato: FORMATO_PADRAO };
 function toggleFiltroSimMulti(campo, valor) {
   const atual = simFiltros[campo];
   const lista = Array.isArray(atual) ? atual : (valorFiltroAtivo(atual) ? [atual] : []);
@@ -1706,7 +1796,7 @@ async function iniciarSimulado() {
      combina() trata array vazio/undefined como "sem restrição", então não
      há necessidade de normalizar para null aqui — []/undefined têm o
      mesmo efeito. */
-  const filtros = { concurso: simFiltros.concurso, disciplina: simFiltros.disciplina };
+  const filtros = { concurso: simFiltros.concurso, disciplina: simFiltros.disciplina, formato: simFiltros.formato || FORMATO_PADRAO };
   let questoes;
   if (modo === "revisao") {
     questoes = embaralhar(questoesDevidas()).slice(0, n);
@@ -1881,6 +1971,7 @@ function renderProva() {
         <option value="180">3 horas</option>
         <option value="240">4 horas</option>
       </select></label>
+      ${formatoToggleHtml(pvFiltros, {}, "setFormatoProva")}
       ${mselHtml(pvFiltros, "disciplina", "pv:disciplina", "Disciplina", discs.map(d => ({ v: d, t: d })), "toggleFiltroProvaMulti")}
     </div>
     <div style="font-size:12px;color:var(--muted);margin-top:2px">Sem marcar disciplina, a prova sai com mistura balanceada entre todas.</div>
@@ -1895,7 +1986,7 @@ function renderProva() {
 }
 /* Filtro de disciplina do Modo Prova — persiste entre renders, mesmo
    padrão de bancoFiltros/simFiltros. */
-let pvFiltros = {};
+let pvFiltros = { formato: FORMATO_PADRAO };
 function toggleFiltroProvaMulti(campo, valor) {
   const atual = pvFiltros[campo];
   const lista = Array.isArray(atual) ? atual : (valorFiltroAtivo(atual) ? [atual] : []);
@@ -1932,7 +2023,7 @@ async function iniciarProva() {
   } else {
     const n = +$("#pv-n").value;
     const tempoSel = $("#pv-tempo").value;
-    const filtros = { disciplina: pvFiltros.disciplina };
+    const filtros = { disciplina: pvFiltros.disciplina, formato: pvFiltros.formato || FORMATO_PADRAO };
     questoes = montarProva(n, filtros);
     if (!questoes.length) { await mostrarAlerta("Nenhuma questão encontrada com esses filtros."); return; }
     if (questoes.length < n) {
@@ -2043,10 +2134,16 @@ function renderProvaRunner() {
       </div>
       ${q.textoApoio ? `<div class="q-texto-apoio">${escapeHtml(q.textoApoio)}</div>` : ""}
       <div class="q-enunciado">${escapeHtml(q.enunciado)}</div>
-      <div class="q-actions">
-        ${btn("C", "CERTO", "ok")}
-        ${btn("E", "ERRADO", "bad")}
-        ${btn("B", "Em branco", "")}
+      ${formatoDaQuestao(q) === "ME" ? `<div class="q-alts">
+        ${q.alternativas.map((texto, i) => {
+          const letra = String.fromCharCode(65 + i);
+          return `<button class="q-alt ${sel === letra ? "escolhida" : ""}" onclick="provaResp('${q.id}','${letra}')">
+            <span class="qa-letra">${letra}</span><span class="qa-texto">${escapeHtml(texto)}</span></button>`;
+        }).join("")}
+      </div>` : ""}
+      <div class="q-actions ${formatoDaQuestao(q) === "ME" ? "so-branco" : ""}">
+        ${formatoDaQuestao(q) === "CE" ? btn("C", "CERTO", "ok") + btn("E", "ERRADO", "bad") : ""}
+        ${btn(tokenBranco(q), "Em branco", "")}
         ${sel ? '<span class="tag ok" style="margin-left:4px">resposta registrada</span>' : '<span class="tag" style="margin-left:4px">sem resposta</span>'}
       </div>
       <div class="prova-nav">
@@ -2093,10 +2190,12 @@ function finalizarProva(porTempo) {
 
   /* correção em lote — registra cada resposta (alimenta stats/SRS/nuvem) */
   const detalhe = PROVA.questoes.map(q => {
-    const resp = PROVA.respostas[q.id] || "B";
+    /* Sem resposta = branco, e o token de branco depende do formato: "B"
+       em CERTO/ERRADO, "-" em múltipla escolha (onde "B" é alternativa). */
+    const resp = PROVA.respostas[q.id] || tokenBranco(q);
     const tempoMs = PROVA.tempoPorQ[q.id] || 0;
     const res = registrarResposta(q.id, resp, tempoMs, null);
-    return { q, resp, correta: res.correta, gabarito: res.gabarito, branco: resp === "B", tempoMs };
+    return { q, resp, correta: res.correta, gabarito: res.gabarito, branco: respostaEmBranco(q, resp), tempoMs };
   });
 
   const acertos = detalhe.filter(d => !d.branco && d.correta).length;
@@ -2201,8 +2300,8 @@ async function renderProvaResultado(r) {
 function provaRevisaoHtml(d, i) {
   const q = d.q, c = q.comentario;
   const dna = DNA_BANCA.find(x => x.slug === q.pegadinha);
-  const gabTxt = d.gabarito === "C" ? "CERTO" : "ERRADO";
-  const suaTxt = d.branco ? "Em branco" : (d.resp === "C" ? "CERTO" : "ERRADO");
+  const gabTxt = escapeHtml(rotuloResposta(q, d.gabarito));
+  const suaTxt = escapeHtml(d.branco ? "Em branco" : rotuloResposta(q, d.resp));
   const cls = d.branco ? "neutro" : d.correta ? "ok" : "bad";
   const icone = d.branco ? "⊘" : d.correta ? "✔" : "✖";
   return `<div class="card q-card">
@@ -2420,7 +2519,10 @@ function perfilRedacao() {
   const nPal = QUESTOES.map(q => q.enunciado.split(/\s+/).length);
   const mediaPalavras = Math.round(nPal.reduce((a, b) => a + b, 0) / nPal.length);
   const comPerig = QUESTOES.filter(q => detectarPalavrasPerigosas(q.enunciado).length).length;
-  const certos = QUESTOES.filter(q => q.gabarito === "C").length;
+  /* Só itens C/E: múltipla escolha não tem lado, e contá-la aqui
+     rebaixaria o percentual de CERTO sem que nada tenha mudado. */
+  const itensCE = QUESTOES.filter(q => formatoDaQuestao(q) === "CE");
+  const certos = itensCE.filter(q => q.gabarito === "C").length;
   const tmi = Math.round(QUESTOES.reduce((a, q) => a + q.tempoIdealSeg, 0) / QUESTOES.length);
   return {
     mediaPalavras,
@@ -2806,13 +2908,14 @@ function exemploEstrategiaHtml(e) {
   const q = QUESTOES.find(x => x.id === e.exemplo);
   if (!q) return "";
   const liberada = questaoLiberada(q);
+  const gabTxtEx = rotuloResposta(q, q.gabarito);
   const gabOk = q.gabarito === "C";
   return `<div class="estr-exemplo">
     <div class="ee-head">
       <span class="tag accent">${q.id}</span>
       <span class="tag">${escapeHtml(q.disciplina)}</span>
       <span class="tag">${escapeHtml(q.assunto)}</span>
-      <span class="tag ${gabOk ? "ok" : "bad"}">gabarito: ${gabOk ? "CERTO" : "ERRADO"}</span>
+      <span class="tag ${formatoDaQuestao(q) === "ME" ? "accent" : gabOk ? "ok" : "bad"}">gabarito: ${escapeHtml(gabTxtEx)}</span>
     </div>
     <blockquote class="ee-enunciado">${marcarTrechoEstrategia(q.enunciado, e.trecho, "Trecho que materializa a estratégia")}</blockquote>
     <p class="ee-porque"><b>Por que este trecho:</b> ${escapeHtml(e.porqueTrecho)}</p>

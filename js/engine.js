@@ -888,16 +888,67 @@ function voltarModoLocal() {
   APP_STATE.config = local.config;
 }
 
+/* ---------------- Formato do item: C/E × múltipla escolha ----------------
+
+   A CEBRASPE aplica os dois formatos. Até a versão 7.178 o banco inteiro
+   era CERTO/ERRADO, e a suposição estava espalhada pelo código: botões
+   fixos no card, o token "B" para branco, contagens de gabarito "C".
+
+   O modelo agora é este:
+
+     q.tipo === "CE"  gabarito "C" ou "E"; branco = "B".
+     q.tipo === "ME"  gabarito "A".."E"; exige q.alternativas (array de
+                      textos, na ordem das letras); branco = "-".
+
+   O branco precisou de token próprio no ME porque "B" ali é alternativa
+   legítima — registrar branco como "B" faria o histórico de quem marcou
+   a letra B virar branco, silenciosamente, para sempre.
+
+   Todo o resto do sistema (SRS, estatísticas, viés, calibração) trabalha
+   com o booleano `correta` e a flag `branco` do registro, que não mudam
+   de significado. Só as leituras que abrem o gabarito para desenhar
+   "CERTO"/"ERRADO" na tela precisam saber o formato — e essas passaram a
+   usar os helpers abaixo. */
+const FORMATOS_ITEM = [
+  { id: "CE", nome: "Certo ou Errado", curto: "C/E" },
+  { id: "ME", nome: "Múltipla escolha", curto: "A–E" },
+];
+/* O padrão é C/E, e é deliberado: é o formato de 99% do acervo e o que a
+   banca usa em Agente e Escrivão na PC-AL. Múltipla escolha é escolha
+   explícita do usuário, nunca estado inicial. */
+const FORMATO_PADRAO = "CE";
+
+function formatoDaQuestao(q) { return q && q.tipo === "ME" ? "ME" : "CE"; }
+function tokenBranco(q) { return formatoDaQuestao(q) === "ME" ? "-" : "B"; }
+function respostaEmBranco(q, resposta) { return resposta === tokenBranco(q); }
+
+/* Letras efetivamente disponíveis — derivadas do array, não fixas em A–E,
+   porque nada impede um item de 4 alternativas. */
+function letrasDaQuestao(q) {
+  return (q.alternativas || []).map((_, i) => String.fromCharCode(65 + i));
+}
+
+/* Texto puro (sem HTML) de uma resposta ou gabarito, para exibição.
+   Quem chama é responsável por escapar. */
+function rotuloResposta(q, valor) {
+  if (respostaEmBranco(q, valor)) return "Em branco";
+  if (formatoDaQuestao(q) === "CE") return valor === "C" ? "CERTO" : "ERRADO";
+  const alt = (q.alternativas || [])[valor.charCodeAt(0) - 65];
+  return alt ? `${valor}) ${alt}` : valor;
+}
+
 /* ---------------- Registro de respostas ---------------- */
-/* resposta: "C" | "E" | "B" (branco). confianca: 1-3 (opcional) */
+/* resposta: no formato CE, "C" | "E" | "B" (branco);
+             no formato ME, "A".."E" | "-" (branco). confianca: 1-3 (opcional) */
 function registrarResposta(qid, resposta, tempoMs, confianca) {
   const q = QUESTOES.find(x => x.id === qid);
   if (!q) return null;
-  const correta = resposta === q.gabarito;
-  const registro = { qid, resposta, correta, branco: resposta === "B", tempoMs, confianca: confianca || null, data: Date.now() };
+  const branco = respostaEmBranco(q, resposta);
+  const correta = !branco && resposta === q.gabarito;
+  const registro = { qid, resposta, correta, branco, tempoMs, confianca: confianca || null, data: Date.now() };
   if (!APP_STATE.respostas[qid]) APP_STATE.respostas[qid] = [];
   APP_STATE.respostas[qid].push(registro);
-  atualizarSRS(qid, resposta === "B" ? false : correta, resposta === "B");
+  atualizarSRS(qid, branco ? false : correta, branco);
   if (MODO === "cloud" && CURRENT_USER) persistirRespostaNuvem(registro);
   else saveLocalState();
   return { correta, gabarito: q.gabarito };
@@ -1285,16 +1336,21 @@ function viesResposta() {
   if (linha.length < 20) return null;
   const porId = new Map(QUESTOES.map(q => [q.id, q]));
 
-  let marcouC = 0, gabaritoC = 0;
+  /* Só itens CERTO/ERRADO entram aqui. "Marcar CERTO demais" não é uma
+     grandeza definida em múltipla escolha, e contar itens ME no
+     denominador diluiria as duas proporções por igual, fazendo um viés
+     real parecer menor do que é. */
+  let marcouC = 0, gabaritoC = 0, n = 0;
   let aceitouIndevido = 0, rejeitouIndevido = 0;   /* erros por direção */
   for (const h of linha) {
     const q = porId.get(h.qid);
-    if (!q) continue;
+    if (!q || formatoDaQuestao(q) !== "CE") continue;
+    n++;
     if (h.resposta === "C") marcouC++;
     if (q.gabarito === "C") gabaritoC++;
     if (!h.correta) (h.resposta === "C" ? aceitouIndevido++ : rejeitouIndevido++);
   }
-  const n = linha.length;
+  if (n < 20) return null;
   const propMarcada = marcouC / n;
   const propEsperada = gabaritoC / n;
   const desvio = propMarcada - propEsperada;
@@ -1392,7 +1448,11 @@ function montarProvaOficial() {
     for (const c of cotas) {
       /* Embaralha DENTRO da disciplina: a ordem entre os blocos é a do
          edital, mas quais itens caem é sorteio. */
-      const pool = embaralhar(filtrarQuestoes({ disciplina: c.nome }));
+      /* A prova oficial replica o caderno da CEBRASPE para Agente e
+         Escrivão, que é inteiramente CERTO/ERRADO. Fixar o formato aqui
+         impede que um item de múltipla escolha entre num simulacro do
+         caderno real — e a correção líquida do modelo pressupõe C/E. */
+      const pool = embaralhar(filtrarQuestoes({ disciplina: c.nome, formato: "CE" }));
       const escolhidas = pool.slice(0, c.itens);
       if (escolhidas.length < c.itens) {
         faltantes.push({ disciplina: c.nome, previstos: c.itens, disponiveis: escolhidas.length });
@@ -2091,6 +2151,11 @@ function filtrarQuestoes(f) {
        modo de falha que este projeto combate. A tela mostra o escopo ativo
        e um botão para ver tudo. */
     if (!f.todoOBanco && !noEscopo(q)) return false;
+    /* Formato do item. Sem o filtro definido, entrega tudo — é o caso das
+       chamadas internas (revisão devida, exemplos de estratégia), que não
+       devem esconder item nenhum. As telas passam sempre um valor, e o
+       valor inicial delas é FORMATO_PADRAO. */
+    if (f.formato && formatoDaQuestao(q) !== f.formato) return false;
     if (!combina(f.concurso, q.concurso)) return false;
     if (!combinaAlgum(f.cargo, q.cargo)) return false;
     if (!combina(f.disciplina, q.disciplina)) return false;
