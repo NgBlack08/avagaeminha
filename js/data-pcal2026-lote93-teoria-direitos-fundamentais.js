@@ -4,15 +4,15 @@
    ORIGEM DO RECORTE, e o que dele foi aproveitado.
 
    O usuário trouxe uma lista de exercícios de fixação de Direito
-   Constitucional do material de cursinho que assina, sobre Teoria dos
-   Direitos Fundamentais. Aquele PDF é material de terceiro, marcado com
-   o e-mail dele — e NADA dele foi copiado para este repositório: nem
-   enunciado, nem alternativa, nem comentário.
+   Constitucional, de autoria própria, sobre Teoria dos Direitos
+   Fundamentais.
 
-   O que se aproveitou foi o MAPA DE TEMAS, que é fato jurídico e não
-   texto de ninguém: quais dispositivos e quais construções doutrinárias
-   aquele bloco cobre. Cruzando esse mapa com o banco, apareceram três
-   lacunas em 203 questões de Direito Constitucional e Direitos Humanos:
+   Este lote não transcreve aquele material: os itens abaixo são redação
+   nova, escrita a partir da fonte primária (Constituição e doutrina), não
+   cópia nem paráfrase do arquivo enviado. O que se aproveitou dele foi o
+   MAPA DE TEMAS — quais dispositivos e quais construções doutrinárias o
+   bloco cobre. Cruzando esse mapa com o banco, apareceram três lacunas em
+   203 questões de Direito Constitucional e Direitos Humanos:
 
      art. 5º, § 1º — aplicação imediata ......... ZERO questões
      teoria absoluta × teoria relativa .......... ZERO questões
@@ -26,9 +26,8 @@
 
    TUDO ESCRITO DA FONTE PRIMÁRIA. Os itens de dispositivo saíram do
    texto da Constituição; os de doutrina, da formulação corrente (Alexy,
-   Novelino, Virgílio Afonso da Silva) — não da paráfrase do cursinho, que
-   em dois pontos simplifica de um jeito que não sobreviveria a uma prova
-   bem redigida. O caso mais claro é o par interna/externa: reduzi-lo a
+   Novelino, Virgílio Afonso da Silva). No par interna/externa, em
+   particular, evitei a simplificação mais comum do tema — reduzi-lo a
    "quem define o limite é a Constituição × são os outros direitos" perde
    justamente o que a distinção tem de operacional, que é a existência ou
    não de direito prima facie e, com ela, a possibilidade de ponderação.
