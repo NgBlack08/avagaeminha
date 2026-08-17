@@ -151,6 +151,23 @@ test("erro de forma do dado é descartado em vez de travar a fila", async () => 
   assert.equal(pendentes(app), 0);
 });
 
+/* Regressão de um incidente real: a múltipla escolha entrou no banco
+   enquanto o CHECK de `respostas.resposta` ainda só aceitava C/E/B. Cada
+   resposta "A", "D" ou "-" voltava como 23514, ficava presa na frente da
+   fila e segurava as respostas seguintes por 12 tentativas — "Envio
+   travado" na tela do aluno e três respostas perdidas. O CHECK foi
+   corrigido; este teste existe para que a fila não volte a tratar
+   violação de CHECK como se fosse rede instável. */
+test("violação de CHECK (23514) é descartada em vez de travar a fila", async () => {
+  const { app, qid, gabarito } = appLogado();
+  app.supa.controle.modo = "erro";
+  app.supa.controle.erro = { code: "23514", message: 'violates check constraint "respostas_resposta_check"' };
+  app.chamar("registrarResposta", qid, gabarito, 4000, 2);
+  await app.timers.rodar();
+
+  assert.equal(pendentes(app), 0, "o item não pode ficar bloqueando quem vem atrás");
+});
+
 test("erro desconhecido do servidor é retentado, não descartado", async () => {
   const { app, qid, gabarito } = appLogado();
   app.supa.controle.modo = "erro";

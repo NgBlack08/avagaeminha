@@ -3,8 +3,8 @@
 Site: `NgBlack08/avagaeminha` (GitHub Pages) + Supabase (`zxhzkucjiipsaumneccg`).
 Vanilla JS, sem build. Prova PC-AL Agente/Escrivão em 2026-12-06.
 
-**Último commit:** `2de7420` — versão 7.181, banco com 2573 questões.
-**Push:** feito, nada pendente.
+**Último commit:** versão 7.183, banco com 2573 questões (2513 C/E + 60 ME).
+**Push:** PENDENTE — a correção do "envio travado" está commitada localmente, mas não subiu.
 
 ## O que mudou nesta sessão
 
@@ -19,6 +19,23 @@ Vanilla JS, sem build. Prova PC-AL Agente/Escrivão em 2026-12-06.
    - `scripts/validar.js` atualizado para validar `alternativas` e escopar estatísticas C/E corretamente.
 4. **Lote 97** — RLM Estruturas Lógicas (84 itens, RL-066 a RL-149): 34 ME + 50 CE derivadas. Origem: banca diversa (FUNDATEC, IBFC etc.), não CEBRASPE — `probReaparecer` mais baixo (0.78).
 
+5. **Incidente "Envio travado" — corrigido.** A múltipla escolha subiu sem que o
+   banco soubesse: o CHECK de `respostas.resposta` no Supabase só aceitava
+   `C/E/B`. Respostas `A`, `D` e o branco de ME (`-`) eram recusadas (23514),
+   ficavam presas na FRENTE da fila e seguravam tudo atrás por 12 tentativas.
+   - Migração `permitir_respostas_multipla_escolha` — CHECK agora aceita `A–E` e `-`.
+   - `FILA_ERROS_PERMANENTES` (js/engine.js) ganhou `23514` — era a rede de
+     proteção que deveria ter evitado o bloqueio da fila, e não tinha o código.
+   - Teste de regressão em `scripts/testes/fila.test.js`.
+   - **3 respostas foram perdidas de verdade** (esgotaram as 12 tentativas antes
+     da correção), registradas em `eventos_cliente`. Não são recuperáveis.
+6. **Dois consumidores que ainda assumiam C/E** (mesma família de causa):
+   - `js/desafios.js` sorteava ME para duelos, que desenham só CERTO/ERRADO/Em
+     branco — a questão chegava sem as alternativas. Risco medido: 21% dos
+     duelos de 10 questões. Agora filtra `formato: "CE"`.
+   - `js/app.js` `finalizarProvaConfirm()` contava respondidas com `!== "B"`,
+     subnotificando quem marcava a alternativa B numa prova ME.
+
 ## Convenções fixas (não perguntar de novo)
 - **Todo texto para o usuário em pt-BR.**
 - **Nunca dar `git push` sem pedido explícito.** Commitar é ok; sempre reportar se não deu push.
@@ -32,6 +49,10 @@ Vanilla JS, sem build. Prova PC-AL Agente/Escrivão em 2026-12-06.
 - Atualidades: viés de regra cega +20pp (não resolvido).
 - Direitos Humanos: banco menor que o peso no edital (~100 questões a menos que o proporcional).
 - Usuário mencionou "ajustar todo o banco" para os dois formatos depois — ainda não iniciado; caminho sugerido é derivar ME a partir de C/E existentes por tema, não o inverso.
+- **Lição do incidente do envio travado:** ao mexer no formato das questões, auditar
+  TODO consumidor que assume C/E — o banco (CHECKs), a fila de escrita, e cada tela
+  que desenha botões ou conta brancos. `grep -n '"B"' js/` é o primeiro lugar a olhar.
+  Duelo e Modo Prova oficial são C/E de propósito, não por esquecimento.
 
 ## Plano em espera (não confirmado se ainda quer)
 `C:\Users\Jonathas Asus Rog\.claude\plans\twinkling-enchanting-snail.md` — "Refinamento de UI/UX do Dashboard" (gauge meta marker, hero card, diagnostic bars, etc). Não relacionado ao trabalho de lotes. Só retomar se o usuário pedir.

@@ -2188,7 +2188,14 @@ function provaNav(delta) { provaIr(Math.max(0, Math.min(PROVA.questoes.length - 
 
 async function finalizarProvaConfirm() {
   const n = PROVA.questoes.length;
-  const respondidas = Object.keys(PROVA.respostas).filter(k => PROVA.respostas[k] && PROVA.respostas[k] !== "B").length;
+  /* "B" só é branco em CERTO/ERRADO — em múltipla escolha é a alternativa
+     B, e o branco é "-". A prova customizada aceita o formato ME, então a
+     comparação crua subnotificava quem marcasse B: o diálogo dizia
+     "respondeu 7" para quem tinha respondido 10. */
+  const respondidas = PROVA.questoes.filter(q => {
+    const r = PROVA.respostas[q.id];
+    return r && !respostaEmBranco(q, r);
+  }).length;
   const emAberto = n - Object.keys(PROVA.respostas).filter(k => PROVA.respostas[k]).length;
   const msg = emAberto > 0
     ? `Você ainda tem ${emAberto} questão(ões) sem nenhuma marcação (serão consideradas EM BRANCO). Finalizar mesmo assim?`

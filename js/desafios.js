@@ -351,7 +351,13 @@ async function iniciarDueloCriar() {
   const eu = APP_STATE.config.nickname;
   if (!oponente) { await mostrarAlerta("Digite o nickname do adversário."); return; }
   if (oponente === eu) { await mostrarAlerta("Você não pode desafiar a si mesmo."); return; }
-  const questoes = montarProva(n, disciplina ? { disciplina } : {});
+  /* Duelo é CERTO/ERRADO, como o Modo Prova oficial. A tela do duelo
+     desenha só os três botões (CERTO/ERRADO/Em branco): um item de
+     múltipla escolha sorteado aqui chegaria ao aluno sem as próprias
+     alternativas na tela — "assinale a correta" sem nada para assinalar,
+     e o acerto viraria sorte de o gabarito ser C ou E. A pontuação
+     líquida do duelo (cada erro anula um acerto) também pressupõe C/E. */
+  const questoes = montarProva(n, { ...(disciplina ? { disciplina } : {}), formato: "CE" });
   if (!questoes.length) { await mostrarAlerta("Nenhuma questão encontrada com esse filtro."); return; }
   DUELO = {
     modo: "criar", oponente, disciplina, desafioId: null,
@@ -435,7 +441,10 @@ function dueloResponder(resp) {
   const q = DUELO.questoes[DUELO.idx];
   const tempoMs = Date.now() - DUELO.inicioQ;
   const res = registrarResposta(q.id, resp, tempoMs, null); /* alimenta stats/SRS/XP também */
-  DUELO.respostas.push({ qid: q.id, resp, correta: res.correta, branco: resp === "B", tempoMs });
+  /* Pelo helper, e não por `resp === "B"`: "B" só significa branco em
+     CERTO/ERRADO. O duelo é C/E hoje, mas a comparação crua era uma
+     armadilha esperando o dia em que deixasse de ser. */
+  DUELO.respostas.push({ qid: q.id, resp, correta: res.correta, branco: respostaEmBranco(q, resp), tempoMs });
   DUELO.idx++;
   if (DUELO.idx >= DUELO.questoes.length) { finalizarDuelo(); return; }
   renderDueloRunner();

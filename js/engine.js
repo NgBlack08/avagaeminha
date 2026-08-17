@@ -193,8 +193,19 @@ const FILA_MAX_TENTATIVAS = 12;
 const FILA_BACKOFF_MS = [5e3, 10e3, 20e3, 40e3, 80e3, 160e3, 300e3];
 /* Erros de forma do dado: retentar nunca vai resolver, e manter o item
    na fila só trava tudo que está atrás dele. 23505 aparece por
-   segurança — com ignoreDuplicates ele já não deveria surgir. */
-const FILA_ERROS_PERMANENTES = new Set(["23505", "23503", "23502", "22P02", "22007"]);
+   segurança — com ignoreDuplicates ele já não deveria surgir.
+
+   23514 (violação de CHECK) faltava nesta lista, e a ausência custou
+   caro. Quando a múltipla escolha entrou no banco, o CHECK da coluna
+   `respostas.resposta` ainda só aceitava C/E/B: toda resposta "A", "D"
+   ou "-" era recusada pelo servidor, ficava presa na FRENTE da fila e
+   segurava tudo o que vinha atrás por 12 tentativas com espera
+   crescente. O aluno via "Envio travado" sem entender por quê, e três
+   respostas acabaram descartadas de verdade. O CHECK já foi corrigido
+   no banco (migração permitir_respostas_multipla_escolha) — o que fica
+   aqui é a rede de proteção para o próximo descompasso entre o formato
+   do dado e o esquema, que deixa de bloquear a fila inteira. */
+const FILA_ERROS_PERMANENTES = new Set(["23505", "23503", "23502", "23514", "22P02", "22007"]);
 
 let filaTimer = null;
 let filaEmVoo = false;
