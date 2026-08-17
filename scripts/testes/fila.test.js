@@ -362,3 +362,61 @@ test("configuração não conta como resposta no aviso ao aluno", async () => {
   assert.equal(st.pendentes, 1);
   assert.equal(st.respostas, 0, "'1 resposta guardada' seria mentira");
 });
+
+/* ------------------------------------------------------------------
+   O aviso "Enviando N respostas…" que não sumia da tela.
+
+   `flushFila` tira uma fotografia da fila (`meus`) no início do voo e
+   itera sobre ela. Toda resposta registrada DEPOIS dessa fotografia
+   chama agendarFlush(0) — mas esse flush encontra `filaEmVoo` verdadeiro
+   e volta sem fazer nada, consumindo o timer. Quando o voo em andamento
+   terminava sem falha, nada era reagendado: os itens que chegaram no meio
+   ficavam na fila sem ninguém para enviá-los, e a barra de status ficava
+   presa até o aluno responder outra questão ou trocar de aba.
+
+   Não era caso raro. O envio de verdade leva dezenas de milissegundos de
+   rede; um setTimeout de 0ms dispara em ~4ms. Ou seja, o timer quase
+   SEMPRE caía no meio do voo — bastava responder duas questões seguidas.
+   ------------------------------------------------------------------ */
+test("resposta registrada durante um envio em andamento não fica órfã", async () => {
+  const { app, qid, gabarito } = appLogado();
+  const outra = app.json("QUESTOES[1]");
+
+  app.chamar("registrarResposta", qid, gabarito, 4000, 2);
+
+  /* Começa o voo sem esperar: é o estado em que o app fica enquanto a
+     requisição está na rede. */
+  const voo = app.timers.rodar();
+
+  /* O aluno responde a segunda questão no meio disso. Ela agenda um flush
+     de 0ms, e esse timer DISPARA antes de o primeiro voo terminar — é o
+     `rodar()` abaixo que modela isso. O flush encontra `filaEmVoo`
+     verdadeiro, volta sem fazer nada, e o timer se esgota no processo. */
+  app.chamar("registrarResposta", outra.id, outra.gabarito, 3000, 3);
+  await app.timers.rodar();
+
+  await voo;
+
+  const restou = pendentes(app);
+  if (restou > 0) {
+    assert.ok(app.timers.quantidade > 0,
+      `${restou} item(ns) na fila e nenhum envio agendado — a barra de status ficaria presa`);
+  }
+
+  /* Drena o que ficou agendado: a fila tem de esvaziar sozinha, sem
+     depender de o aluno responder mais nada. */
+  for (let i = 0; i < 5 && pendentes(app) > 0; i++) await app.timers.rodar();
+  assert.equal(pendentes(app), 0, "a fila esvaziou sem intervenção externa");
+});
+
+test("statusFila informa quantas vezes o item mais insistente já falhou", async () => {
+  const { app, qid, gabarito } = appLogado();
+  app.supa.controle.modo = "rede";
+  app.chamar("registrarResposta", qid, gabarito, 4000, 2);
+  await app.timers.rodar();
+  await app.timers.rodar();
+
+  const st = app.json("statusFila()");
+  assert.ok(st.tentativas >= 1, "a tela precisa saber que o envio está apanhando");
+  assert.equal(st.limiteTentativas, app.get("FILA_MAX_TENTATIVAS"));
+});

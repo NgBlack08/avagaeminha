@@ -62,8 +62,14 @@ function atualizarStatusRede() {
   clearTimeout(netEsconderTimer);
   if (MODO !== "cloud") { el.className = "net-status"; return; }
 
-  const { pendentes, respostas, online } = statusFila();
+  const { pendentes, respostas, online, tentativas } = statusFila();
   const plural = respostas === 1 ? "resposta" : "respostas";
+  /* A partir de três falhas seguidas no mesmo item o problema não é
+     lentidão de rede, é alguma coisa que não vai passar sozinha. Continuar
+     escrevendo "Enviando…" por mais meia hora seria mentira tranquilizante:
+     o aluno precisa saber que o envio está apanhando, e que o progresso
+     está guardado localmente enquanto isso. */
+  const travando = tentativas >= 3;
 
   /* Prioridade sobre o estado da fila: se o que está na tela é a cópia
      local, o aluno precisa saber ANTES de tirar conclusão do que vê —
@@ -86,8 +92,17 @@ function atualizarStatusRede() {
     el.className = "net-status visivel off";
     netTinhaPendencia = netTinhaPendencia || pendentes > 0;
   } else if (pendentes > 0) {
-    el.textContent = respostas > 0 ? `Enviando ${respostas} ${plural}…` : "Sincronizando…";
-    el.className = "net-status visivel sync";
+    if (travando) {
+      /* Curto de propósito: a barra é uma pílula de 460px, e um texto de
+         três linhas dentro de um border-radius arredondado fica ilegível. */
+      el.textContent = respostas > 0
+        ? `Envio travado · ${respostas} ${plural} salva${respostas === 1 ? "" : "s"} aqui, tentando de novo`
+        : "Sincronização travada · tentando de novo";
+      el.className = "net-status visivel off";
+    } else {
+      el.textContent = respostas > 0 ? `Enviando ${respostas} ${plural}…` : "Sincronizando…";
+      el.className = "net-status visivel sync";
+    }
     netTinhaPendencia = true;
   } else if (netTinhaPendencia) {
     el.textContent = "Tudo sincronizado";

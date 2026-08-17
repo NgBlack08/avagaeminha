@@ -331,6 +331,9 @@ async function enviarItemDaFila(item) {
    também evita gravar o SRS de uma resposta que ainda não subiu. */
 async function flushFila() {
   if (filaEmVoo || MODO !== "cloud" || !CURRENT_USER) return;
+  /* Sem rede não se reagenda: a retomada vem do evento "online" e do
+     visibilitychange, e um timer de retorno aqui só queimaria bateria
+     repetindo a mesma checagem enquanto o aparelho está offline. */
   if (navigator.onLine === false) { notificarStatusFila(); return; }
 
   const meus = filaPendentes(CURRENT_USER.id);
@@ -364,7 +367,21 @@ async function flushFila() {
   }
 
   if (travou) { filaFalhasSeguidas++; agendarFlush(); }
-  else { filaFalhasSeguidas = 0; }
+  else {
+    filaFalhasSeguidas = 0;
+    /* CORRIGE O AVISO QUE NÃO SUMIA. `meus` é uma fotografia tirada no
+       início do voo. Toda resposta enfileirada DEPOIS dela chama
+       agendarFlush(0), mas esse flush encontra `filaEmVoo` verdadeiro e
+       retorna sem fazer nada — consumindo o timer. Quando o voo em
+       andamento terminava sem falha, nada era reagendado, e os itens que
+       chegaram no meio ficavam na fila sem ninguém para enviá-los.
+       Resultado: "Enviando N respostas…" fixo na tela até o aluno
+       responder outra questão ou trocar de aba.
+
+       Acontecia justamente em quem responde rápido — várias questões
+       seguidas, cada uma gerando dois itens (resposta + SRS). */
+    if (filaPendentes(CURRENT_USER.id).length) agendarFlush(0);
+  }
   notificarStatusFila();
 }
 
@@ -391,6 +408,12 @@ function statusFila() {
     pendentes: itens.length,
     respostas: itens.filter(i => i.tipo === "resposta").length,
     online: navigator.onLine !== false,
+    /* Quantas vezes o item mais insistente já falhou. Serve para a tela
+       parar de dizer "Enviando…" quando na verdade está apanhando: com o
+       backoff cheio, um item que sempre falha leva ~35 minutos até ser
+       descartado, e nesse intervalo o aviso otimista mente para o aluno. */
+    tentativas: itens.reduce((m, i) => Math.max(m, i.tentativas || 0), 0),
+    limiteTentativas: FILA_MAX_TENTATIVAS,
   };
 }
 
