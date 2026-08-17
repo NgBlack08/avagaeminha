@@ -36,6 +36,28 @@ Vanilla JS, sem build. Prova PC-AL Agente/Escrivão em 2026-12-06.
    - `js/app.js` `finalizarProvaConfirm()` contava respondidas com `!== "B"`,
      subnotificando quem marcava a alternativa B numa prova ME.
 
+7. **Lote 98 — início da conversão do banco para múltipla escolha.** 5 itens
+   (DP-212 a DP-216), Princípios penais, dificuldade 2–3, gabaritos C/A/E/B/D.
+   Formato: 4 afirmativas I–IV vindas de itens C/E já existentes + 5 alternativas
+   combinatórias (o formato do DP-133). Os originais C/E ficam no banco.
+
+   **REGRA QUE NÃO PODE SER QUEBRADA NOS PRÓXIMOS LOTES.** O banco C/E foi
+   escrito em PARES DELIBERADOS — o mesmo ponto tem um item verdadeiro e um
+   falso (ex.: DP-160/DP-189, DP-169/DP-170, DP-178/DP-179, DP-185/DP-207).
+   Pôr os dois lados de um par no mesmo item ME deixa o aluno deduzir por
+   contradição, sem saber o conteúdo — é o vazamento de "regra cega" que o
+   validador mede. **Nenhum campo marca esses pares** (`subassunto` e
+   `palavraChave` são únicos por item: 35 itens = 35 valores distintos). Só
+   dá para detectar LENDO as afirmativas. Por isso a conversão é manual,
+   tema a tema — script não serve.
+
+   Medição do potencial: 2.472 C/E, dos quais 1.563 elegíveis (sem contexto
+   externo, ≤230 chars, dificuldade ≥2). Teto aritmético de 264 itens ME,
+   mas o teto REAL é menor por causa da regra dos pares. Temas mais
+   compatíveis, em ordem: Estatuto da PC-AL (13), Lógica proposicional (11),
+   Estatuto do Desarmamento (8), Princípios penais (8 — 5 já feitos),
+   Banco de dados (6), Constituição de Alagoas (6).
+
 ## Convenções fixas (não perguntar de novo)
 - **Todo texto para o usuário em pt-BR.**
 - **Nunca dar `git push` sem pedido explícito.** Commitar é ok; sempre reportar se não deu push.
