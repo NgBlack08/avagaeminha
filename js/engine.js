@@ -1082,12 +1082,48 @@ function editalDoFoco() {
   const foco = APP_STATE.config.concursoFoco;
   return (foco && EDITAIS[foco]) || null;
 }
+/* MEMOIZAÇÃO DO ESCOPO — medida, não suposta.
+
+   `noEscopo(q)` chamava `disciplinasDoFoco()`, que construía um Set novo a
+   cada invocação. Como `questoesDoEscopo()` roda esse teste uma vez por
+   questão, e as telas de estatística chamam `questoesDoEscopo()` várias
+   vezes por render, o custo se multiplicava: um render do Dashboard com
+   2.578 questões media 632 ms, dos quais 51.560 chamadas a
+   `disciplinasDoFoco()` (um Set alocado em cada uma).
+
+   O escopo só depende de três coisas — o plano do aluno, a trilha
+   escolhida e o tamanho do banco. A chave abaixo cobre as três, então o
+   cache se invalida sozinho quando qualquer uma muda, inclusive na troca
+   de conta e no carregamento de um lote novo.
+
+   Devolver o MESMO array a todos os chamadores é seguro porque nenhum
+   deles muta o que recebe — os catorze usos só leem (map, filter,
+   iteração), e `embaralhar()` copia com slice() antes de trocar posições.
+   Quem for acrescentar um chamador que ordena ou remove precisa copiar
+   antes, ou o escopo de todo mundo vai junto. */
+let escopoMemo = null;
+let escopoMemoChave = "";
+
+function escopoAtual() {
+  const cfg = APP_STATE.config;
+  const chave = cfg.plano + "|" + cfg.concursoFoco + "|" + QUESTOES.length;
+  if (!escopoMemo || escopoMemoChave !== chave) {
+    const ed = editalDoFoco();
+    const discs = ed ? new Set(Object.keys(ed.itensPorDisciplina)) : null;
+    escopoMemo = {
+      discs,
+      questoes: QUESTOES.filter(q => questaoLiberada(q) && (!discs || discs.has(q.disciplina))),
+    };
+    escopoMemoChave = chave;
+  }
+  return escopoMemo;
+}
+
 function disciplinasDoFoco() {
-  const ed = editalDoFoco();
-  return ed ? new Set(Object.keys(ed.itensPorDisciplina)) : null;
+  return escopoAtual().discs;
 }
 function noEscopo(q) {
-  const discs = disciplinasDoFoco();
+  const discs = escopoAtual().discs;
   return !discs || discs.has(q.disciplina);
 }
 /* Trilhas em que a questão de fato cai, pelo mesmo critério de noEscopo():
@@ -1106,9 +1142,10 @@ function cargosDoFoco() {
   if (ed) return ed.cargos;
   return [...new Set(Object.values(EDITAIS).flatMap(e => e.cargos))];
 }
-/* Base de tudo que é análise: liberado pelo plano E dentro da trilha. */
+/* Base de tudo que é análise: liberado pelo plano E dentro da trilha.
+   Array memoizado — ver escopoAtual(). NÃO mutar o retorno. */
 function questoesDoEscopo() {
-  return QUESTOES.filter(q => questaoLiberada(q) && noEscopo(q));
+  return escopoAtual().questoes;
 }
 
 /* Raio-X e Predição são as telas mais específicas de carreira do app. Sem
@@ -2250,10 +2287,29 @@ function estrategiasDaQuestao(q) {
 
 /* ---------------- Detector de pegadinhas (Módulo 5) ---------------- */
 /* \b não funciona com acentos em JS — usamos limites unicode explícitos */
+/* As expressões são compiladas uma vez e reaproveitadas. Sem o cache, o
+   Raio-X media 192 ms só nesta função: `perfilRedacao()` percorre o banco
+   inteiro testando cada palavra sensível, o que dava 257.800 chamadas a
+   `new RegExp` num único render. Os termos vêm de PALAVRAS_PERIGOSAS, que
+   é estática, então o cache não cresce sem limite.
+
+   O `lastIndex` é zerado na entrega porque expressão com flag "g" guarda
+   posição entre usos. Hoje os dois chamadores são seguros — um usa
+   `.test()` sem "g", o outro usa `.replace()`, que já reseta sozinho —
+   mas um `.test()` com "g" reaproveitado passaria a pular ocorrências,
+   e esse é o tipo de defeito que aparece intermitente e longe daqui. */
+const RE_TERMO_CACHE = new Map();
 function reTermo(termo, flags) {
-  /* no modo unicode ('u'), só se pode escapar metacaracteres reais */
-  const esc = termo.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-  return new RegExp("(?<![\\p{L}\\p{N}_])(" + esc + ")(?![\\p{L}\\p{N}_])", flags + "u");
+  const chave = flags + " " + termo;
+  let re = RE_TERMO_CACHE.get(chave);
+  if (!re) {
+    /* no modo unicode ('u'), só se pode escapar metacaracteres reais */
+    const esc = termo.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+    re = new RegExp("(?<![\\p{L}\\p{N}_])(" + esc + ")(?![\\p{L}\\p{N}_])", flags + "u");
+    RE_TERMO_CACHE.set(chave, re);
+  }
+  if (re.global) re.lastIndex = 0;
+  return re;
 }
 function detectarPalavrasPerigosas(texto) {
   const found = [];

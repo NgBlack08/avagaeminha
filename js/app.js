@@ -2537,7 +2537,23 @@ function comparacao2021x2026Html(ed) {
     </div>`;
 }
 
+/* Memoizado por tamanho do banco: são quatro varreduras completas de
+   QUESTOES, e o Raio-X chama esta função quatro vezes seguidas dentro do
+   mesmo template (uma por número exibido) — dezesseis passagens pelo banco
+   para produzir quatro inteiros que não mudam entre elas. É o perfil do
+   BANCO, não do aluno, então só se altera quando entra lote novo, e
+   `QUESTOES.length` já detecta isso. */
+let perfilRedacaoMemo = null;
+let perfilRedacaoMemoN = -1;
+
 function perfilRedacao() {
+  if (perfilRedacaoMemo && perfilRedacaoMemoN === QUESTOES.length) return perfilRedacaoMemo;
+  perfilRedacaoMemo = perfilRedacaoCalcular();
+  perfilRedacaoMemoN = QUESTOES.length;
+  return perfilRedacaoMemo;
+}
+
+function perfilRedacaoCalcular() {
   const nPal = QUESTOES.map(q => q.enunciado.split(/\s+/).length);
   const mediaPalavras = Math.round(nPal.reduce((a, b) => a + b, 0) / nPal.length);
   const comPerig = QUESTOES.filter(q => detectarPalavrasPerigosas(q.enunciado).length).length;
