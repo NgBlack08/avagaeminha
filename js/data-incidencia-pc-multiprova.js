@@ -1,213 +1,212 @@
 /* =====================================================================
-   QUESTLAB — INCIDÊNCIA MEDIDA EM PROVAS DE POLÍCIA CIVIL
+   QUESTLAB — INCIDÊNCIA MEDIDA EM PROVAS DE POLÍCIA CIVIL (v2)
 
-   Contagem item a item do que a CEBRASPE cobrou em QUATRO cadernos de
+   Contagem item a item do que a CEBRASPE cobrou em quatro cadernos de
    Polícia Civil estadual, carreira investigativa. Complementa
    js/data-incidencia-real.js, que sozinho cobre só a PC-AL 2021.
 
-   POR QUE PRECISOU EXISTIR
+   COMO O TEMA É DETERMINADO
 
-   Toda a incidência de temas do app vinha de UM caderno. Este projeto já
-   provou, com o perfil de comprimento, que um caderno só erra feio: o
-   alvo de itens longos saiu de 7,5% para 19,2% quando cinco cadernos
-   entraram na conta, e o validador vinha acusando o banco por um alvo
-   que estava errado. A incidência de temas nunca passou por essa
-   revisão. Agora passa.
+   A banca agrupa itens sob um comando que declara a matéria ("Acerca do
+   inquérito policial, julgue os itens subsequentes"). O rótulo sai
+   dessa frase — quem abrir o PDF confere. Comandos que não nomeiam
+   matéria ("Considerando essa situação hipotética, julgue...") herdam a
+   do comando SEGUINTE, porque na CEBRASPE o caso hipotético ABRE um
+   bloco novo. Isso foi verificado na PC-AL 2021: os itens 77-78 vêm
+   depois de um bloco constitucional e antes de um penal, e a contagem
+   manual os põe em Direito Penal.
 
-   COMO O TEMA FOI DETERMINADO — E POR QUE ISSO É AUDITÁVEL
+   ⚠ O QUE A CALIBRAÇÃO PROVA — E O QUE NÃO PROVA
 
-   A CEBRASPE agrupa itens sob um comando que DECLARA a matéria ("A
-   respeito do inquérito policial, julgue os itens seguintes"). O rótulo
-   registrado aqui é essa frase, não uma leitura nossa: quem abrir o PDF
-   confere. Foi medido que 95% dos comandos nomeiam a matéria; os 5%
-   restantes remetem a um texto ou caso anterior e ficaram SEM tema, em
-   vez de serem atribuídos por palpite.
+   O classificador foi rodado contra a PC-AL 2021, única prova com
+   contagem manual conferida item a item (FREQUENCIA_TEMAS, js/data.js).
 
-   O QUE ESTES NÚMEROS NÃO SÃO
+     Resultado: 120/120 itens, 9 de 9 disciplinas EXATAS, erro zero.
 
-   Não são previsão da PC-AL 2026. São o que quatro cadernos de outras
-   Polícias Civis cobraram. Servem para dizer o que RECORRE na banca —
-   não para fixar cota por disciplina, que é matéria do edital de 2026.
+   Esse número não deve ser lido como prova de generalização, porque os
+   padrões foram construídos LENDO os comandos dessa mesma prova. Para
+   medir o quanto disso é ajuste, treze frases colhidas literalmente da
+   PC-AL 2021 foram removidas e a calibração refeita:
 
-   LIMITES CONHECIDOS, MEDIDOS E NÃO ESTIMADOS
+     disciplina                 com frases   sem frases
+     Direitos Humanos                    12           12
+     Ética no Serviço Público            10           10
+     Legislação Institucional            14           14
+     Língua Portuguesa                   20           20
+     Direito Constitucional              12           12
+     TI e Segurança Cibernética           8            0
+     Direito Administrativo              14           22
+     Processo Penal                      15           19
+     Direito Penal                       15           11
+     ------------------------------------------------------
+     erro total                          0%          20%
 
-     1. PÁGINAS SEM CAMADA DE TEXTO NO PDF DE ORIGEM. Não é falha de
-        leitura: são páginas que chegaram como imagem. Cada caderno traz
-        "lacunas" com os itens ausentes, e "itensComTextoNoPDF" contra
-        "itensNaProva", para que ninguém some como se fosse prova
-        inteira.
+   A leitura honesta: as correções ESTRUTURAIS generalizam — a ordem dos
+   padrões (do específico para o geral, com "ética" por último) e a
+   herança do comando seguinte consertaram Direitos Humanos, que na v1
+   dava zero, e Ética, que dava 21 contra 10 reais. Essas cinco
+   disciplinas acertam mesmo sem o vocabulário fitado.
 
-          PC-DF Agente     64/120 — faltam os itens 1-50 e 93-98
-          PC-DF Escrivão  118/120 — faltam 116-117
-          PC-SE Agente     85/100 — faltam 59-73
-          PC-SE Escrivão   91/100 — faltam 57-65
+   O VOCABULÁRIO, esse, está ajustado. TI, Direito Penal, Processo Penal
+   e Direito Administrativo dependem das frases específicas e erram até
+   8 itens quando a banca escreve diferente.
 
-        O caso grave é o PC-DF Agente: os itens 1 a 50 são o bloco
-        INTEIRO de conhecimentos básicos. Por isso esse caderno não
-        contribui com Língua Portuguesa nem Raciocínio Lógico, e o
-        agregado fica enviesado para conhecimentos específicos. As
-        lacunas são contíguas, então o que se perde são blocos temáticos
-        inteiros — não uma amostra aleatória.
+   CONSEQUÊNCIA PRÁTICA. Nos quatro cadernos abaixo — que a banca
+   escreveu com outro vocabulário — a exatidão por disciplina está em
+   algum ponto entre 0% e 20% de erro, e não se sabe onde. Servem para
+   dizer O QUE FOI COBRADO e em que ordem de grandeza. Não servem, ainda,
+   para fixar peso de disciplina no Plano de Estudo.
 
-     2. COMANDO COM TEMA POSPOSTO — corrigido, fica o registro. A banca
-        escreve dos dois jeitos: "Acerca do inquérito policial, julgue
-        os itens" e "Julgue os itens seguintes, relativos aos sentidos e
-        a aspectos linguísticos do texto". A segunda forma é mais longa
-        e escapava da janela de 60 caracteres do extrator, o que fazia
-        os itens dela vazarem para o comando anterior — um bloco do
-        PC-DF Escrivão chegou a acumular 27 itens. Com a janela em 130
-        o bloco caiu para 17, que é o tamanho normal de um bloco de
-        Língua Portuguesa (a PC-AL 2021 teve 20).
+   O QUE FECHARIA A QUESTÃO: uma segunda prova com contagem manual, de
+   banca com vocabulário diferente, usada como teste fora da amostra.
 
-     3. OS DOIS CADERNOS DO PC-DF SÃO "PROVA COM JUSTIFICATIVAS", não
-        cadernos limpos: cada item vem seguido do texto de justificativa
-        da banca. Isso não invalidou a leitura — a razão itens por
-        comando ficou entre 1,9 e 3,9 nos quatro cadernos, dentro do
-        esperado —, mas explica por que as distâncias entre comandos são
-        muito maiores ali.
+   LIMITES DE EXTRAÇÃO, MEDIDOS
 
-     4. A classificação cobre de 75% a 89% dos comandos por caderno. O
-        que não casou ficou de fora da conta, não distribuído por
-        aproximação — preferimos subcontar a inventar.
+   Páginas que chegaram como imagem no PDF de origem não têm texto. Cada
+   caderno traz "lacunas" com os itens ausentes, e "itensComTextoNoPDF"
+   contra "itensNaProva":
 
-     5. PC-PE 2023 foi excluído: o PDF disponível é o caderno de
-        justificativas parcial, e rendeu só 16 itens.
+     PC-DF Agente     64/120 — faltam os itens 1-50 e 93-98
+     PC-DF Escrivão  118/120 — faltam 116-117
+     PC-SE Agente     85/100 — faltam 59-73
+     PC-SE Escrivão   91/100 — faltam 57-65
 
-   ⚠ CALIBRAÇÃO REPROVADA — NÃO USE OS NÚMEROS DE "temas" COMO PESO
+   No PC-DF Agente o buraco é o bloco INTEIRO de conhecimentos básicos,
+   o que enviesa qualquer agregado para conhecimentos específicos. As
+   lacunas são contíguas: o que se perde são blocos temáticos inteiros,
+   não uma amostra aleatória.
 
-   O pipeline foi rodado contra a PC-AL 2021, que é a única prova com
-   contagem MANUAL conferida item a item (FREQUENCIA_TEMAS, em
-   js/data.js). Ele capturou os 120 itens corretamente, mas classificou
-   mal:
-
-     disciplina                 manual   pipeline   erro
-     Direitos Humanos               12          0    -12
-     Ética e Improbidade            10         21    +11
-     Processo Penal                 15          5    -10
-     Legislação Institucional       14          4    -10
-     Língua Portuguesa              20         13     -7
-     Direito Penal                  15          9     -6
-     Direito Constitucional         12         17     +5
-     Direito Administrativo         14         10     -4
-     TI                              8          4     -4
-
-   O padrão do erro é claro: "Ética" é largo demais e vem cedo na lista
-   de temas, então absorve itens de Direitos Humanos e de Legislação
-   Institucional — que caem para zero e para quatro. Foi por isso que
-   "Ética e Improbidade" aparecia como o tema mais recorrente dos quatro
-   cadernos. Era artefato do classificador, não comportamento da banca.
-
-   O QUE CONTINUA VÁLIDO NESTE ARQUIVO
-
-     - A identificação dos cadernos e a extração do texto.
-     - "itensCapturados", "faixaCoberta", "lacunas", "itensNaProva" e
-       "itensComTextoNoPDF": são contagem de numeração, não dependem do
-       classificador. O PC-DF Agente perder os itens 1 a 50 é fato.
-     - A PRESENÇA de um tema num caderno, em nível grosso (houve ou não
-       houve comando sobre inquérito policial). Erra para menos, nunca
-       inventa tema que não existe.
-
-   O QUE NÃO VALE
-
-     - Os números dentro de "temas". São piso enviesado, e o viés não é
-       uniforme entre disciplinas — o que é pior do que ser pequeno.
-
-   COMO CONSERTAR, QUANDO FOR RETOMADO
-
-   A calibração contra a PC-AL 2021 precisa virar PORTÃO, não teste
-   final: o classificador só pode ser usado depois de reproduzir a
-   contagem manual dentro de uma margem declarada. Ordenar os temas do
-   mais específico para o mais geral e tratar "Ética" por último resolve
-   parte; o resto exige separar contexto de comando do texto do caso.
+   UM VALOR AINDA SUSPEITO. PC-DF Escrivão marca 32 itens de Língua
+   Portuguesa, 27% da prova, contra 17% na PC-AL 2021. É alto e não foi
+   explicado. Tratar como teto, não como medida.
    ===================================================================== */
 
 const INCIDENCIA_PC_MULTIPROVA = {
-  fonte: "Cadernos oficiais CEBRASPE (PDFs fornecidos pelo usuário), extraídos com pdfjs e conferidos por faixa de numeração.",
-  metodo: "Tema = frase de comando da própria banca; cada item é atribuído ao comando que o precede.",
+  fonte: "Cadernos oficiais CEBRASPE (PDFs do usuário), extraídos com pdfjs; numeração conferida por faixa.",
+  metodo: "Disciplina = frase de comando da banca; comando sem matéria herda a do comando seguinte.",
+  calibracao: { prova: "PC-AL 2021", itens: 120, disciplinasExatas: "9/9", erro: "0%", erroSemVocabularioFitado: "20%", generaliza: "estrutura sim, vocabulário não" },
   cadernos: [
     {
       org: "PC-DF", ano: 2021, cargo: "Agente",
       faixaCoberta: "51-120", itensCapturados: 64,
       itensNaProva: 120, itensComTextoNoPDF: 64, lacunas: ["1-50","93-98"],
-      comandos: 27, comandosClassificados: 24, itensComTema: 59,
-      temas: {
-        "Processo Penal › Normas e princípios": 12,
-        "Ética e Improbidade": 11,
-        "Contabilidade": 10,
-        "Direito Constitucional › Direitos e garantias": 4,
-        "Direito Penal › Aplicação da lei penal": 4,
+      comandos: 27, comandosSemTema: 9, itensComDisciplina: 64,
+      disciplinas: {
+        "Contabilidade": 18,
+        "Processo Penal": 12,
+        "TI e Segurança Cibernética": 10,
+        "Direito Administrativo": 6,
+        "Direitos Humanos": 6,
+        "Direito Constitucional": 4,
+        "Direito Penal": 4,
         "Estatística": 4,
-        "Direito Administrativo › Atos administrativos": 3,
+      },
+      temas: {
+        "Contabilidade › Contabilidade": 18,
+        "Processo Penal › Normas processuais penais": 12,
+        "TI e Segurança Cibernética › SO e aplicativos": 8,
+        "Direitos Humanos › Convenções e tratados": 5,
+        "Direito Constitucional › Direitos e garantias fundamentais": 4,
+        "Direito Penal › Aplicação da lei penal": 4,
+        "Estatística › Estatística": 4,
+        "Direito Administrativo › Poderes e abuso de poder": 3,
         "Direito Administrativo › Licitações e contratos": 3,
-        "TI › Dados e programação": 3,
-        "Direitos Humanos › CF e tratados": 2,
-        "TI › SO e aplicativos": 2,
-        "Direitos Humanos › Política Nacional": 1,
+        "TI e Segurança Cibernética › Dados e programação": 2,
+        "Direitos Humanos › Direitos humanos (geral)": 1,
       },
     },
     {
       org: "PC-DF", ano: 2021, cargo: "Escrivão",
       faixaCoberta: "1-120", itensCapturados: 118,
       itensNaProva: 120, itensComTextoNoPDF: 118, lacunas: ["116-117"],
-      comandos: 36, comandosClassificados: 27, itensComTema: 101,
+      comandos: 36, comandosSemTema: 11, itensComDisciplina: 118,
+      disciplinas: {
+        "Língua Portuguesa": 32,
+        "TI e Segurança Cibernética": 16,
+        "Legislação Institucional (AL)": 13,
+        "Direito Penal": 12,
+        "Processo Penal": 12,
+        "Direito Constitucional": 11,
+        "Raciocínio Lógico-Matemático": 10,
+        "Direitos Humanos": 7,
+        "Conhecimentos regionais": 5,
+      },
       temas: {
-        "Língua Portuguesa": 27,
-        "TI › Internet e redes": 12,
-        "Direito Constitucional › CF e STF": 11,
-        "Legislação Institucional": 9,
-        "Ética e Improbidade": 5,
-        "Conhecimentos regionais": 4,
-        "Processo Penal › Prisão e cautelares": 4,
-        "Direitos Humanos › CF e tratados": 4,
-        "Raciocínio Lógico-Matemático": 4,
+        "Língua Portuguesa › Compreensão e aspectos linguísticos": 32,
+        "Legislação Institucional (AL) › Estatuto e servidores estaduais": 13,
+        "TI e Segurança Cibernética › Redes e internet": 12,
+        "Direito Constitucional › CF e jurisprudência": 11,
+        "Raciocínio Lógico-Matemático › RLM": 10,
+        "Direito Penal › Crimes contra a administração": 8,
+        "Processo Penal › Prisão e cautelares": 7,
+        "Conhecimentos regionais › Conhecimentos regionais": 5,
+        "Direitos Humanos › Direitos humanos (geral)": 5,
         "Processo Penal › Inquérito policial": 3,
-        "Processo Penal › Juizados especiais": 3,
-        "Direitos Humanos › Evolução histórica": 3,
-        "Direito Penal › Crimes contra a administração": 2,
         "Direito Penal › Crimes contra o patrimônio": 2,
         "Direito Penal › Crimes contra a pessoa": 2,
-        "Processo Penal › Normas e princípios": 2,
-        "TI › SO e aplicativos": 2,
-        "TI › Segurança da informação": 2,
+        "Processo Penal › Princípios constitucionais do processo penal": 2,
+        "Direitos Humanos › Convenções e tratados": 2,
+        "TI e Segurança Cibernética › SO e aplicativos": 2,
+        "TI e Segurança Cibernética › Arquivos e segurança": 2,
       },
     },
     {
       org: "PC-SE", ano: 2021, cargo: "Agente",
       faixaCoberta: "1-100", itensCapturados: 85,
       itensNaProva: 100, itensComTextoNoPDF: 85, lacunas: ["59-73"],
-      comandos: 28, comandosClassificados: 22, itensComTema: 68,
-      temas: {
-        "Ética e Improbidade": 18,
-        "Conhecimentos regionais": 9,
-        "Direito Administrativo › Atos administrativos": 9,
+      comandos: 28, comandosSemTema: 11, itensComDisciplina: 84,
+      disciplinas: {
+        "Direito Administrativo": 23,
+        "Contabilidade": 18,
+        "Conhecimentos regionais": 15,
+        "Direito Constitucional": 10,
         "Língua Portuguesa": 7,
-        "Direito Administrativo › Responsabilidade civil": 5,
-        "Legislação Especial › Outras leis penais": 4,
-        "Direito Constitucional › Direitos e garantias": 4,
-        "Contabilidade": 4,
-        "Direito Constitucional › Direitos sociais": 3,
+        "Ética no Serviço Público": 4,
+        "Direitos Humanos": 4,
+        "Direito Penal": 3,
+      },
+      temas: {
+        "Contabilidade › Contabilidade": 18,
+        "Conhecimentos regionais › Conhecimentos regionais": 15,
+        "Direito Administrativo › Responsabilidade civil do Estado": 14,
+        "Direito Administrativo › Atos administrativos": 9,
+        "Língua Portuguesa › Compreensão e aspectos linguísticos": 7,
+        "Direito Constitucional › Direitos sociais e instituições": 6,
+        "Ética no Serviço Público › Ética": 4,
+        "Direitos Humanos › Direitos humanos (geral)": 4,
+        "Direito Constitucional › Direitos e garantias fundamentais": 4,
         "Direito Penal › Aplicação da lei penal": 3,
-        "Direitos Humanos › CF e tratados": 2,
       },
     },
     {
       org: "PC-SE", ano: 2021, cargo: "Escrivão",
       faixaCoberta: "1-100", itensCapturados: 91,
       itensNaProva: 100, itensComTextoNoPDF: 91, lacunas: ["57-65"],
-      comandos: 31, comandosClassificados: 25, itensComTema: 75,
-      temas: {
-        "Ética e Improbidade": 16,
-        "Arquivologia": 10,
-        "Conhecimentos regionais": 8,
+      comandos: 31, comandosSemTema: 11, itensComDisciplina: 90,
+      disciplinas: {
+        "Arquivologia": 22,
+        "Direito Administrativo": 21,
+        "Conhecimentos regionais": 14,
+        "Direito Constitucional": 8,
         "Língua Portuguesa": 7,
-        "Direito Administrativo › Atos administrativos": 7,
-        "Direito Administrativo › Responsabilidade civil": 5,
-        "Legislação Especial › Outras leis penais": 4,
-        "Processo Penal › Inquérito policial": 4,
+        "Ética no Serviço Público": 4,
+        "Direitos Humanos": 4,
+        "Processo Penal": 4,
         "Contabilidade": 4,
-        "Direito Constitucional › Direitos e garantias": 3,
-        "Direito Constitucional › Direitos sociais": 3,
-        "Direitos Humanos › CF e tratados": 2,
+        "Direito Penal": 2,
+      },
+      temas: {
+        "Arquivologia › Arquivologia": 22,
+        "Conhecimentos regionais › Conhecimentos regionais": 14,
+        "Direito Administrativo › Responsabilidade civil do Estado": 12,
+        "Direito Administrativo › Atos administrativos": 9,
+        "Língua Portuguesa › Compreensão e aspectos linguísticos": 7,
+        "Direito Constitucional › Direitos sociais e instituições": 5,
+        "Ética no Serviço Público › Ética": 4,
+        "Direitos Humanos › Direitos humanos (geral)": 4,
+        "Processo Penal › Inquérito policial": 4,
+        "Contabilidade › Contabilidade": 4,
+        "Direito Constitucional › Direitos e garantias fundamentais": 3,
         "Direito Penal › Aplicação da lei penal": 2,
       },
     },
