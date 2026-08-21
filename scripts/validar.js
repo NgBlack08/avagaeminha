@@ -524,6 +524,19 @@ function validar({ quieto = false } = {}) {
 
     for (const disc of Object.keys(ed.itensPorDisciplina)) {
       if (!ed.prioridade[disc]) erros.push(`${onde}: disciplina "${disc}" não tem faixa de prioridade`);
+      /* Procedência é obrigatória junto com a prioridade. Sem ela o peso
+         volta a ser exibido como se tivesse sido medido, que é o defeito
+         que o campo existe para impedir — cinco dos quinze são estimativa. */
+      if (ed.procedenciaPeso && !ed.procedenciaPeso[disc]) {
+        erros.push(`${onde}: disciplina "${disc}" não declara procedência do peso (medido/edital/analogia/estimado)`);
+      }
+    }
+    if (ed.procedenciaPeso) {
+      const VALIDAS = new Set(["medido", "edital", "analogia", "estimado"]);
+      for (const [disc, p] of Object.entries(ed.procedenciaPeso)) {
+        if (!VALIDAS.has(p)) erros.push(`${onde}: procedência "${p}" (${disc}) não existe — use medido, edital, analogia ou estimado`);
+        if (!(disc in ed.itensPorDisciplina)) erros.push(`${onde}: procedência declarada para "${disc}", que não está em itensPorDisciplina`);
+      }
     }
     for (const [disc, faixa] of Object.entries(ed.prioridade)) {
       if (!(faixa in ed.pesoPorPrioridade)) {

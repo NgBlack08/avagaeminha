@@ -2500,6 +2500,15 @@ function renderRaioX() {
    derivado das faixas de prioridade do Relatório Consolidado. O que ela
    mostra é aritmética do edital: o total continua 120, entram seis
    disciplinas novas, logo tudo o que já existia encolhe. */
+/* Selo que diz de onde veio o peso. Só aparece quando o peso NÃO foi
+   contado numa prova: marcar o que é sólido em toda linha vira ruído, e o
+   que precisa de ressalva é justamente a minoria estimada. */
+function seloProcedencia(disciplina, ed) {
+  const p = procedenciaDoPeso(disciplina, ed);
+  if (!p || p.chave === "medido") return "";
+  return ` <span class="selo-proc selo-${p.chave}" title="${escapeHtml(p.explica)}">${escapeHtml(p.rotulo)}</span>`;
+}
+
 function comparacao2021x2026Html(ed) {
   if (!ed || !ed.itensPorDisciplina) return "";
   const de2021 = new Map();
@@ -2524,7 +2533,7 @@ function comparacao2021x2026Html(ed) {
           </div>
           <div class="cmp-num">${l.itens2021 !== null
             ? `${l.itens2021} → ${dec1(l.peso2026)}`
-            : `<span class="cmp-novo">nova</span> ${dec1(l.peso2026)}`}</div>
+            : `<span class="cmp-novo">nova</span> ${dec1(l.peso2026)}`}${seloProcedencia(l.disc, ed)}</div>
         </div>`).join("")}
     </div>
     <div style="font-size:12.5px;color:var(--muted);margin-top:12px">

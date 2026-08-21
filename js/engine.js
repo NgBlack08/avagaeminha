@@ -1078,6 +1078,38 @@ function questaoLiberada(q) {
 
    Sem trilha escolhida (concursoFoco null), o escopo é o banco inteiro —
    é o estado de quem já usa o app e não escolheu nada. */
+/* PROCEDÊNCIA DO PESO DE UMA DISCIPLINA.
+
+   O peso que o Plano de Estudo e o Radar usam nem sempre foi medido: em
+   cinco das quinze disciplinas da PC-AL 2026 ele é inferência do volume
+   de conteúdo do edital, porque a disciplina não existia em 2021 e não há
+   caderno para contar. Exibir 3,6 com a mesma confiança de 14,3 é o tipo
+   de coisa que este app existe para não fazer.
+
+   Devolve null quando a trilha não declara procedência — a de Fisioterapia
+   não tem faixas de prioridade, e portanto não tem esta distinção. */
+const PROCEDENCIA_PESO = {
+  medido:   { rotulo: "medido",     curto: "M", explica: "Contado item a item no caderno da PC-AL 2021." },
+  edital:   { rotulo: "pelo edital", curto: "E", explica: "Decidido pelo escopo do edital de 2026, contra o que o histórico sugeria." },
+  analogia: { rotulo: "por analogia", curto: "A", explica: "Medido em cadernos de outras Polícias Civis; nunca cobrado na PC-AL." },
+  estimado: { rotulo: "estimado",   curto: "?", explica: "Sem medição: o peso vem do volume de conteúdo do edital, que é sinal fraco." },
+};
+
+function procedenciaDoPeso(disciplina, ed) {
+  const edital = ed || editalDoFoco();
+  const chave = edital && edital.procedenciaPeso && edital.procedenciaPeso[disciplina];
+  if (!chave) return null;
+  return { chave, ...PROCEDENCIA_PESO[chave] };
+}
+
+/* Peso é confiável quando alguém contou. `edital` também conta como
+   apoiado em documento — o que não se apoia em nada verificável é
+   `estimado`, e `analogia` mede outra prova. */
+function pesoEhMedido(disciplina, ed) {
+  const p = procedenciaDoPeso(disciplina, ed);
+  return !!p && (p.chave === "medido" || p.chave === "edital");
+}
+
 function editalDoFoco() {
   const foco = APP_STATE.config.concursoFoco;
   return (foco && EDITAIS[foco]) || null;

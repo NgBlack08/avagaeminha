@@ -1687,6 +1687,41 @@ const EDITAIS = {
        muda um valor e recalcula, em vez de reescrever quinze pesos à mão. */
     pesoPorPrioridade: { "S++": 4.0, "S+": 3.0, "S": 2.5, "A+/S": 2.25, "A+": 2.0, "A": 1.5, "A/B": 1.0 },
 
+    /* DE ONDE VEIO O PESO DE CADA DISCIPLINA.
+
+       Sem este campo, o Radar exibia 3,6 com a mesma cara de 14,3, e o
+       aluno não tinha como saber que um número foi contado item a item
+       num caderno e o outro foi inferido do tamanho do conteúdo. Cinco
+       dos quinze pesos são estimativa, e agora dizem isso na tela.
+
+         medido    contagem manual da PC-AL 2021, item a item, 120 de 120
+         edital    o escopo do edital 2026 decidiu, CONTRA o histórico
+         analogia  medido em cadernos de outras PCs, nunca na PC-AL
+         estimado  sem medição em lugar nenhum; peso vem do volume de
+                   conteúdo listado no edital, que é sinal fraco
+
+       A distinção entre `medido` e `edital` importa: nas duas linhas
+       marcadas `edital` a evidência histórica aponta para o OUTRO lado, e
+       a decisão foi de que escopo escrito vence inferência. São as
+       primeiras a rever se a prova de 2026 contrariar. */
+    procedenciaPeso: {
+      "Língua Portuguesa": "medido",
+      "TI e Segurança Cibernética": "edital",
+      "Direitos Humanos": "medido",
+      "Ética no Serviço Público": "medido",
+      "Raciocínio Lógico-Matemático": "estimado",
+      "Atualidades": "estimado",
+      "Processo Penal": "medido",
+      "Direito Penal": "medido",
+      "Direito Administrativo": "medido",
+      "Legislação Institucional (AL)": "medido",
+      "Direito Constitucional": "edital",
+      "Legislação Especial": "estimado",
+      "Contabilidade e Análise Financeira": "analogia",
+      "Estatística": "estimado",
+      "Crimes Cibernéticos e Segurança Digital": "estimado",
+    },
+
     /* Peso de cada disciplina na composição de simulados, na projeção de
        corte e na ordem do plano de estudos.
 
