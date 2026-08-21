@@ -1645,19 +1645,40 @@ const EDITAIS = {
        histórico específico da PC/AL, recorrência em outras policiais da
        banca e aderência ao edital de 2026. */
     prioridade: {
+      /* REVISADO EM AGOSTO/2026 contra o edital e o histórico medido.
+         A faixa é o que reparte os itens — ver itensPorDisciplina. */
       "Direito Penal": "S++",
       "Processo Penal": "S++",
-      "Direito Constitucional": "S++",
       "Direito Administrativo": "S++",
       "Legislação Institucional (AL)": "S++",
-      "Legislação Especial": "S+",
-      "Língua Portuguesa": "S+",
-      "TI e Segurança Cibernética": "S",
-      "Direitos Humanos": "A+/S",
-      "Contabilidade e Análise Financeira": "A+",
+      /* Era S++. O edital de 2026 reduziu Constitucional a UM tópico —
+         "CF/88", só com Direitos e Garantias Fundamentais e Segurança
+         Pública. O histórico puxaria para cima (12 itens em 2021, 11,1
+         em cinco cadernos), mas escopo escrito vence inferência. */
+      "Direito Constitucional": "S+",
+      /* Era S+. Português é o sinal mais consistente da medição: 20
+         itens em 2021 e 19,3 em quatro dos cinco cadernos. */
+      "Língua Portuguesa": "S++",
+      /* Era S. O edital trocou informática básica por 23 tópicos —
+         Linux, nuvem, SQL, LGPD, IA, linguagens de programação, MITRE,
+         NIST, OAuth2. Sobe apesar de 2021 ter tido só 8 itens. */
+      "TI e Segurança Cibernética": "S+",
+      /* Era S+. Sem histórico separado: na medição, legislação especial
+         aparece dentro de Direito Penal. */
+      "Legislação Especial": "S",
+      /* Era A+/S. Medido 12 em 2021 e 8,3 em cinco cadernos. */
+      "Direitos Humanos": "S",
+      /* Era A+. Mede 14,9 onde aparece, mas em cadernos de perfil
+         contábil (PC-DF Agente, PC-SE), não replicáveis na PC-AL. Sobe
+         com cautela. */
+      "Contabilidade e Análise Financeira": "S",
       "Estatística": "A+",
-      "Crimes Cibernéticos e Segurança Digital": "A+",
-      "Ética no Serviço Público": "A",
+      /* Era A+. Sem histórico, seis tópicos, e parte do conteúdo se
+         sobrepõe a TI — contava duas vezes. */
+      "Crimes Cibernéticos e Segurança Digital": "A/B",
+      /* Era A. Conteúdo ESTADUAL (Lei 6.754/2006): só a PC-AL vale como
+         evidência, e ela deu 10 itens em 2021. */
+      "Ética no Serviço Público": "A+",
       "Raciocínio Lógico-Matemático": "A",
       "Atualidades": "A/B",
     },
@@ -1692,24 +1713,76 @@ const EDITAIS = {
        avaliação, não quota por disciplina, e o próprio relatório adverte
        contra converter a distribuição de 2021 em previsão. São peso de
        ESTUDO: quanto cada disciplina deve ocupar do treino. */
+    /* PESOS DERIVADOS DO HISTÓRICO MEDIDO — revisão de agosto/2026.
+
+       Antes, todas as quinze disciplinas recebiam uma fatia arbitrada
+       pelas faixas de prioridade do Relatório Consolidado. Era juízo
+       editorial apresentado como número, e o validador o consumia como
+       se fosse alvo estatístico.
+
+       Agora as nove disciplinas que EXISTIRAM na PC-AL 2021 têm peso
+       derivado da contagem manual daquele caderno, conferida item a
+       item (120 de 120, ver FREQUENCIA_TEMAS e
+       js/data-incidencia-pc-manual.js). As outras seis não têm
+       histórico algum — são disciplinas que o edital de 2026 criou — e
+       por isso MANTIVERAM o valor editorial anterior, em vez de receber
+       um número inventado com cara de medição.
+
+       O reescalonamento existe porque o edital não cresceu: a prova
+       continua com 50 + 70 itens, e passou de nove para quinze
+       disciplinas. As antigas cedem espaço proporcionalmente (fator
+       0,786 no P1 e 0,691 no P2). Não é opinião sobre importância, é
+       aritmética do edital.
+
+       QUANDO O EDITAL CONTRARIA O HISTÓRICO, O EDITAL GANHA. Escopo é
+       fato escrito; histórico é inferência sobre o futuro. Duas linhas
+       são decididas assim, contra o que 2021 sugeriria:
+
+         TI E SEGURANÇA CIBERNÉTICA sobe. O histórico manda 6,3 (eram 8
+         itens em 2021), mas o edital de 2026 trocou informática básica
+         por 23 tópicos — Linux, nuvem, SQL, LGPD, IA, linguagens de
+         programação, MITRE, NIST, OAuth2. Fica 11.
+
+         DIREITO CONSTITUCIONAL desce. O histórico (12 em 2021) e a
+         medição em cinco cadernos (11,1) puxariam para cima, mas o
+         edital reduziu a disciplina a UM tópico: "Constituição Federal
+         de 1988", com apenas Direitos e Garantias Fundamentais e
+         Segurança Pública. Fica 8.
+
+       O reescalonamento geral existe porque o edital não cresceu: a
+       prova continua com 50 + 70 itens e passou de nove disciplinas
+       para quinze. As antigas cedem espaço — aritmética, não juízo.
+
+       AS QUATRO LINHAS FRACAS, declaradas: Atualidades, Raciocínio
+       Lógico, Legislação Especial e Crimes Cibernéticos não têm
+       histórico na PC-AL. O que as sustenta é volume de conteúdo do
+       edital, que é sinal fraco — muito conteúdo listado não implica
+       muitos itens. Estatística é o caso extremo: das maiores seções do
+       edital, sem nenhuma tradição de cobrança na PC-AL.
+
+       O sinal que sustenta cada linha está em REVISAO-PESOS-2026.md.
+
+       ONDE MEXER. Estes números são DERIVADOS de `prioridade` — quem
+       reparte é a faixa, e o validador refaz a conta e compara. Para
+       mudar um peso, mude a faixa da disciplina, não o número aqui. */
     itensPorDisciplina: {
       /* P1 — conhecimentos básicos: 50 itens */
-      "Língua Portuguesa": 12.7,
-      "TI e Segurança Cibernética": 10.6,
-      "Direitos Humanos": 9.6,
-      "Raciocínio Lógico-Matemático": 6.4,
-      "Ética no Serviço Público": 6.4,
-      "Atualidades": 4.3,
+      "Língua Portuguesa": 14.3,           /* S++ · medido 20 em 2021; 19,3 em 4 de 5 cadernos */
+      "TI e Segurança Cibernética": 10.7,  /* S+  · EDITAL: 23 tópicos, escopo expandido */
+      "Direitos Humanos": 8.9,             /* S   · medido 12 em 2021; 8,3 em 5 de 5 */
+      "Ética no Serviço Público": 7.1,     /* A+  · medido 10 em 2021 (conteúdo estadual) */
+      "Raciocínio Lógico-Matemático": 5.4, /* A   · sem histórico — estimado pelo edital */
+      "Atualidades": 3.6,                  /* A/B · sem histórico — 1 tópico no edital */
       /* P2 — conhecimentos específicos: 70 itens */
-      "Processo Penal": 9.7,
-      "Direito Constitucional": 9.7,
-      "Direito Administrativo": 9.7,
-      "Legislação Institucional (AL)": 9.7,
-      "Direito Penal": 9.6,
-      "Legislação Especial": 7.2,
-      "Contabilidade e Análise Financeira": 4.8,
-      "Estatística": 4.8,
-      "Crimes Cibernéticos e Segurança Digital": 4.8,
+      "Processo Penal": 10.4,              /* S++ · medido 15 em 2021; 12,0 em 5 de 5 */
+      "Direito Penal": 10.4,               /* S++ · medido 15 em 2021; 9,8 em 5 de 5 */
+      "Direito Administrativo": 10.4,      /* S++ · medido 14 em 2021; 12,6 em 4 de 5 */
+      "Legislação Institucional (AL)": 10.4, /* S++ · medido 14 em 2021 (conteúdo estadual) */
+      "Direito Constitucional": 7.8,       /* S+  · EDITAL: 1 tópico, escopo reduzido */
+      "Legislação Especial": 6.5,          /* S   · sem histórico separado */
+      "Contabilidade e Análise Financeira": 6.5, /* S · 14,9 onde aparece, outro perfil de prova */
+      "Estatística": 5.2,                  /* A+  · sem histórico na PC-AL */
+      "Crimes Cibernéticos e Segurança Digital": 2.6, /* A/B · sem histórico, sobrepõe TI */
     },
     /* Estrutura da PC/AL 2021, item a item — a âncora histórica do
        relatório. Fica registrada como HISTÓRIA, não como previsão: serve
