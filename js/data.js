@@ -1691,7 +1691,7 @@ const EDITAIS = {
 
        Sem este campo, o Radar exibia 3,6 com a mesma cara de 14,3, e o
        aluno não tinha como saber que um número foi contado item a item
-       num caderno e o outro foi inferido do tamanho do conteúdo. Cinco
+       num caderno e o outro foi inferido do tamanho do conteúdo. Três
        dos quinze pesos são estimativa, e agora dizem isso na tela.
 
          medido    contagem manual da PC-AL 2021, item a item, 120 de 120
@@ -1703,13 +1703,21 @@ const EDITAIS = {
        A distinção entre `medido` e `edital` importa: nas duas linhas
        marcadas `edital` a evidência histórica aponta para o OUTRO lado, e
        a decisão foi de que escopo escrito vence inferência. São as
-       primeiras a rever se a prova de 2026 contrariar. */
+       primeiras a rever se a prova de 2026 contrariar.
+
+       RLM e Estatística estiveram marcadas `estimado` por engano — as
+       duas foram contadas em três cadernos cada (18 e 20 itens) em
+       js/data-incidencia-pc-manual.js, que é exatamente a situação de
+       Contabilidade. O selo dizia "sem medição" ao aluno sobre número
+       que tinha medição. O bloco de conferência em scripts/validar.js
+       agora confronta cada linha daqui contra aquele arquivo, para o
+       engano não voltar em silêncio. */
     procedenciaPeso: {
       "Língua Portuguesa": "medido",
       "TI e Segurança Cibernética": "edital",
       "Direitos Humanos": "medido",
       "Ética no Serviço Público": "medido",
-      "Raciocínio Lógico-Matemático": "estimado",
+      "Raciocínio Lógico-Matemático": "analogia",
       "Atualidades": "estimado",
       "Processo Penal": "medido",
       "Direito Penal": "medido",
@@ -1718,7 +1726,7 @@ const EDITAIS = {
       "Direito Constitucional": "edital",
       "Legislação Especial": "estimado",
       "Contabilidade e Análise Financeira": "analogia",
-      "Estatística": "estimado",
+      "Estatística": "analogia",
       "Crimes Cibernéticos e Segurança Digital": "estimado",
     },
 

@@ -2521,6 +2521,19 @@ function comparacao2021x2026Html(ed) {
   const topo = Math.max(...linhas.map(l => Math.max(l.peso2026, l.itens2021 || 0)));
   const larg = v => Math.round(100 * v / topo);
 
+  /* O parágrafo de leitura trazia "20 itens para peso 12,7" e "de 15 para
+     9,6" escritos à mão, e a revisão de pesos de 2026 os deixou para trás:
+     a tabela logo acima dizia 14,3 e 10,4 na mesma tela. Número em prosa
+     não tem validador — então ele passa a sair da mesma fonte da tabela. */
+  const exemplo = disc => {
+    const l = linhas.find(x => x.disc === disc);
+    return l ? { de: l.itens2021, para: dec1(l.peso2026) } : null;
+  };
+  const exLP = exemplo("Língua Portuguesa");
+  const exDP = exemplo("Direito Penal");
+  const novas = linhas.filter(l => l.itens2021 === null).length;
+  const POREXTENSO = ["nenhuma", "uma", "duas", "três", "quatro", "cinco", "seis", "sete", "oito", "nove"];
+
   return `
     <div class="cmp-legenda"><span class="cmp-chip cmp-a"></span>2021 (medido) <span class="cmp-chip cmp-b"></span>2026 (peso de estudo)</div>
     <div class="cmp-tabela">
@@ -2538,8 +2551,8 @@ function comparacao2021x2026Html(ed) {
     </div>
     <div style="font-size:12.5px;color:var(--muted);margin-top:12px">
       Leitura: a prova continua com <b>120 itens</b> (50 + 70), e o edital de 2026 acrescenta
-      <b>seis disciplinas</b>. Como o total não cresce, tudo o que já existia cede espaço —
-      Língua Portuguesa sai de 20 itens para peso 12,7; Direito Penal, de 15 para 9,6.
+      <b>${POREXTENSO[novas] || novas} disciplinas</b>. Como o total não cresce, tudo o que já existia cede espaço —
+      ${exLP ? `Língua Portuguesa sai de ${exLP.de} itens para peso ${exLP.para}` : ""}${exLP && exDP ? "; " : ""}${exDP ? `Direito Penal, de ${exDP.de} para ${exDP.para}` : ""}.
       Não é leitura sobre a banca, é aritmética do edital.
       <br>O lado de 2021 é contagem no caderno oficial; o de 2026 é peso de <b>estudo</b>
       derivado das faixas de prioridade — o edital define objetos de avaliação, não quota por disciplina.

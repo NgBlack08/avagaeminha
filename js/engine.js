@@ -1091,7 +1091,11 @@ function questaoLiberada(q) {
 const PROCEDENCIA_PESO = {
   medido:   { rotulo: "medido",     curto: "M", explica: "Contado item a item no caderno da PC-AL 2021." },
   edital:   { rotulo: "pelo edital", curto: "E", explica: "Decidido pelo escopo do edital de 2026, contra o que o histórico sugeria." },
-  analogia: { rotulo: "por analogia", curto: "A", explica: "Medido em cadernos de outras Polícias Civis; nunca cobrado na PC-AL." },
+  /* O texto não pode dizer que a medição FIXOU o peso: nas três linhas
+     marcadas assim o número contado e o número aplicado divergem, porque
+     a faixa de prioridade é grossa e a medição vem de outro estado. Ela é
+     indício de que a banca cobra a matéria, não cota. */
+  analogia: { rotulo: "por analogia", curto: "A", explica: "Medido em cadernos de outras Polícias Civis, nunca na PC-AL — serve de indício de que a banca cobra a matéria, não fixa o peso." },
   estimado: { rotulo: "estimado",   curto: "?", explica: "Sem medição: o peso vem do volume de conteúdo do edital, que é sinal fraco." },
 };
 

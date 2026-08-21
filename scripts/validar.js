@@ -168,7 +168,7 @@ function validar({ quieto = false } = {}) {
   const {
     QUESTOES, DNA_BANCA, EDITAIS, ESTRATEGIAS, DISCIPLINAS_JURIDICAS,
     PONTOS_RUPTURA, RUPTURA_POR_PEGADINHA, CHECKLIST_RESOLUCAO, VIGENCIA_STATUS,
-    LIMIARES_ATENCAO, INCIDENCIA_PCAL2021, FREQUENCIA_TEMAS, PREDICOES,
+    LIMIARES_ATENCAO, INCIDENCIA_PCAL2021, INCIDENCIA_PC_MANUAL, FREQUENCIA_TEMAS, PREDICOES,
     CONCURSOS, CONCURSO_POR_SIGLA,
   } = carregarDados(manifesto);
 
@@ -342,6 +342,62 @@ function validar({ quieto = false } = {}) {
         }
         if (orig.onde !== t.onde) {
           erros.push(`FREQUENCIA_TEMAS ${f.disciplina} / "${t.tema}": localização "${t.onde}" diverge de "${orig.onde}" na contagem do caderno.`);
+        }
+      }
+    }
+
+    /* ---- Contagem manual dos cinco cadernos de PC ----
+
+       INCIDENCIA_PC_MANUAL foi criada, embasou a revisão de pesos de 2026
+       e ficou sem validador nenhum: não estava nas globais públicas, e
+       portanto nem era carregada aqui. Um número trocado ali passaria
+       despercebido, apesar de ser a base de quinze pesos.
+
+       A conferência que dá confiança na leitura manual é a soma: os
+       blocos de cada caderno são contíguos e não se sobrepõem, então uma
+       fronteira lida errado quebra a soma da disciplina contra o total
+       conferido. É a mesma lógica da conferência da PC-AL 2021 acima. */
+    {
+      const M = INCIDENCIA_PC_MANUAL;
+      let somaConferidos = 0;
+      const porDisc = new Map();
+
+      for (const c of M.cadernos) {
+        const onde = `${c.org} ${c.ano} ${c.cargo}`;
+        const soma = Object.values(c.disciplinas).reduce((a, b) => a + b, 0);
+        if (soma !== c.conferidos) {
+          erros.push(`INCIDENCIA_PC_MANUAL ${onde}: disciplinas somam ${soma} itens, mas o caderno declara ${c.conferidos} conferidos.`);
+        }
+        if (c.conferidos > c.itensNaProva) {
+          erros.push(`INCIDENCIA_PC_MANUAL ${onde}: ${c.conferidos} conferidos numa prova de ${c.itensNaProva} itens.`);
+        }
+        somaConferidos += c.conferidos;
+        for (const [d, n] of Object.entries(c.disciplinas)) {
+          const a = porDisc.get(d) || { itens: 0, cadernos: 0 };
+          porDisc.set(d, { itens: a.itens + n, cadernos: a.cadernos + 1 });
+        }
+      }
+
+      if (somaConferidos !== M.totalConferido) {
+        erros.push(`INCIDENCIA_PC_MANUAL: os cadernos somam ${somaConferidos} itens conferidos, mas totalConferido declara ${M.totalConferido}.`);
+      }
+
+      /* `agregado` é resumo dos cadernos, não fonte — refazer a conta é o
+         que impede a tabela de resumo de andar sozinha, do mesmo jeito
+         que itensPorDisciplina é refeito a partir das faixas. */
+      for (const a of M.agregado) {
+        const real = porDisc.get(a.disciplina);
+        if (!real) { erros.push(`INCIDENCIA_PC_MANUAL agregado: "${a.disciplina}" não aparece em caderno nenhum.`); continue; }
+        if (real.itens !== a.itens) {
+          erros.push(`INCIDENCIA_PC_MANUAL agregado "${a.disciplina}": ${a.itens} itens declarados contra ${real.itens} somados nos cadernos.`);
+        }
+        if (real.cadernos !== a.cadernos) {
+          erros.push(`INCIDENCIA_PC_MANUAL agregado "${a.disciplina}": ${a.cadernos} cadernos declarados contra ${real.cadernos} em que a disciplina aparece.`);
+        }
+      }
+      for (const d of porDisc.keys()) {
+        if (!M.agregado.some(a => a.disciplina === d)) {
+          erros.push(`INCIDENCIA_PC_MANUAL: "${d}" foi contada nos cadernos e não consta do agregado.`);
         }
       }
     }
@@ -526,7 +582,7 @@ function validar({ quieto = false } = {}) {
       if (!ed.prioridade[disc]) erros.push(`${onde}: disciplina "${disc}" não tem faixa de prioridade`);
       /* Procedência é obrigatória junto com a prioridade. Sem ela o peso
          volta a ser exibido como se tivesse sido medido, que é o defeito
-         que o campo existe para impedir — cinco dos quinze são estimativa. */
+         que o campo existe para impedir — três dos quinze são estimativa. */
       if (ed.procedenciaPeso && !ed.procedenciaPeso[disc]) {
         erros.push(`${onde}: disciplina "${disc}" não declara procedência do peso (medido/edital/analogia/estimado)`);
       }
@@ -536,6 +592,63 @@ function validar({ quieto = false } = {}) {
       for (const [disc, p] of Object.entries(ed.procedenciaPeso)) {
         if (!VALIDAS.has(p)) erros.push(`${onde}: procedência "${p}" (${disc}) não existe — use medido, edital, analogia ou estimado`);
         if (!(disc in ed.itensPorDisciplina)) erros.push(`${onde}: procedência declarada para "${disc}", que não está em itensPorDisciplina`);
+      }
+    }
+
+    /* ---- Procedência declarada × medição que existe ----
+
+       A conferência acima só olha se o campo está preenchido com um dos
+       quatro valores. Não bastou: RLM e Estatística ficaram marcadas
+       `estimado` — cujo selo diz ao aluno "sem medição" — quando as duas
+       têm 18 e 20 itens contados em três cadernos cada. O selo afirmava
+       falta de evidência sobre número que tinha evidência.
+
+       Aqui cada rótulo é confrontado com INCIDENCIA_PC_MANUAL, que é o
+       que os quatro valores descrevem:
+
+         medido/edital  tem de aparecer no caderno da PC-AL
+         analogia       tem de aparecer em algum caderno, e NÃO na PC-AL
+         estimado       não pode aparecer em caderno nenhum
+
+       `edital` entra junto de `medido` de propósito: as duas dizem que a
+       PC-AL cobrou a disciplina; a diferença entre elas é de qual sinal
+       venceu na hora de fixar o peso, não de haver medição. */
+    if (ed.id === "PCAL" && INCIDENCIA_PC_MANUAL && ed.procedenciaPeso) {
+      /* Os nomes do edital de 2026 são mais longos que os da contagem. */
+      const NA_CONTAGEM = {
+        "Contabilidade e Análise Financeira": "Contabilidade",
+        "Legislação Institucional (AL)": "Legislação Institucional",
+      };
+      const pcal = INCIDENCIA_PC_MANUAL.cadernos.find(c => c.org === "PC-AL");
+      const emAlgum = new Set(INCIDENCIA_PC_MANUAL.agregado.map(a => a.disciplina));
+
+      for (const [disc, p] of Object.entries(ed.procedenciaPeso)) {
+        const nome = NA_CONTAGEM[disc] || disc;
+        const naPCAL = pcal && nome in pcal.disciplinas;
+        const medida = emAlgum.has(nome);
+        const quantos = (INCIDENCIA_PC_MANUAL.agregado.find(a => a.disciplina === nome) || {});
+
+        if ((p === "medido" || p === "edital") && !naPCAL) {
+          erros.push(`${onde}: "${disc}" está como "${p}", que afirma cobrança na PC-AL, mas não foi contada no caderno da PC-AL 2021. Use "analogia" se a medição vem de outros estados, "estimado" se não há medição.`);
+        }
+        if (p === "analogia" && !medida) {
+          erros.push(`${onde}: "${disc}" está como "analogia", que afirma medição em cadernos de outras PCs, mas não foi contada em caderno nenhum. Use "estimado".`);
+        }
+        if (p === "analogia" && naPCAL) {
+          erros.push(`${onde}: "${disc}" está como "analogia" ("nunca na PC-AL"), mas foi contada no caderno da PC-AL 2021. Use "medido".`);
+        }
+        if (p === "estimado" && medida) {
+          erros.push(`${onde}: "${disc}" está como "estimado", cujo selo diz ao aluno "sem medição", mas tem ${quantos.itens} itens contados em ${quantos.cadernos} caderno(s). Use "${naPCAL ? "medido" : "analogia"}".`);
+        }
+      }
+
+      /* Disciplina que a banca cobra e o edital carregado não prevê: não
+         é erro (o edital manda), mas some da tela sem deixar rastro. */
+      const fora = INCIDENCIA_PC_MANUAL.agregado
+        .filter(a => !Object.keys(ed.itensPorDisciplina).some(d => (NA_CONTAGEM[d] || d) === a.disciplina))
+        .sort((x, y) => y.itens - x.itens);
+      if (fora.length) {
+        avisos.push(`[${ed.curto || ed.id}] medidas em prova de PC e ausentes do edital carregado: ${fora.map(a => `${a.disciplina} (${a.itens} itens em ${a.cadernos})`).join(", ")} — conferir se o edital de 2026 as prevê em algum tópico.`);
       }
     }
     for (const [disc, faixa] of Object.entries(ed.prioridade)) {

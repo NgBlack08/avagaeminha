@@ -46,6 +46,11 @@ const GLOBAIS_PUBLICAS = [
   /* Contagem item a item do caderno oficial da PC/AL 2021 — a fonte que
      substituiu os `freq`/`score` escritos à mão. js/data-incidencia-real.js. */
   "INCIDENCIA_PCAL2021",
+  /* Contagem manual de cinco cadernos de PC (476 itens) — a base da
+     revisão de pesos de 2026. Ficou fora desta lista quando foi criada,
+     e por isso viajava no bundle sem validador nenhum enxergando: um
+     número trocado ali não quebrava nada. js/data-incidencia-pc-manual.js. */
+  "INCIDENCIA_PC_MANUAL",
   "COMPARACAO_2021_2026",
   "CONCURSO_POR_SIGLA",
 ];
