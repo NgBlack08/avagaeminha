@@ -1921,7 +1921,7 @@ const CONFIANCA_ROTULOS = { 1: "chute", 2: "dúvida", 3: "certeza" };
    a Predição de Cobrança (PREDICOES, por tema) e o desempenho real do
    usuário por disciplina (statsPorDisciplina). O resultado é uma lista
    priorizada do que estudar hoje, com uma cota sugerida de questões —
-   não é mágica: é a meta semanal de sempre, só redistribuída pelo que
+   não é mágica: é a meta DIÁRIA de sempre, só redistribuída pelo que
    mais pesa e pelo que está mais fraco. */
 const PLANO_STATUS = {
   naoIniciada: { fator: 1.00, nome: "Não iniciada" },
@@ -1962,14 +1962,24 @@ function faseDoPlano(diasRestantes) {
    não bater com a soma das disciplinas exibidas logo abaixo dele. */
 const META_DIARIA_MIN = 1;
 const META_DIARIA_MAX = 200;
-function metaDiariaPadrao() { return Math.max(5, Math.round(META_SEMANAL_QUESTOES / 7)); }
+/* A meta do dia é a grandeza PRIMÁRIA: é ela que o aluno configura, ela
+   que o Plano de Estudo distribui entre as disciplinas e ela que a barra
+   de hoje mede. A semanal deriva dela (ver calcularMetaSemanal).
+
+   Era o contrário até a 7.196: a semanal era uma constante de 100 e a
+   diária saía de 100÷7. O efeito era que configurar 30 questões por dia
+   deixava a barra semanal parada em 100 — o aluno batia a meta da semana
+   na terça e seguia vendo "100" como se fosse o alvo. Duas metas que se
+   contradizem na mesma tela ensinam a ignorar as duas. */
+const META_DIARIA_PADRAO = 14;
+function metaDiariaPadrao() { return META_DIARIA_PADRAO; }
 function metaDiariaConfigurada() {
   const v = APP_STATE.config.metaDiaria;
   return Number.isFinite(v) && v > 0
     ? Math.min(META_DIARIA_MAX, Math.max(META_DIARIA_MIN, Math.round(v)))
     : metaDiariaPadrao();
 }
-/* Passar null volta ao padrão derivado da meta semanal. */
+/* Passar null volta ao valor padrão (META_DIARIA_PADRAO). */
 function definirMetaDiaria(valor) {
   const n = valor === null || valor === undefined || !Number.isFinite(+valor)
     ? null
@@ -2458,7 +2468,9 @@ const PATENTES = [
   { nome: "Delegado-Geral",        xp: 9200 },
 ];
 
-const META_SEMANAL_QUESTOES = 100;
+/* A meta da semana são sete dias da meta diária configurada — não um
+   número próprio. Ver META_DIARIA_PADRAO, acima, para o motivo. */
+function metaSemanalQuestoes() { return metaDiariaConfigurada() * 7; }
 
 /* ---------------- Escopo da gamificação: GLOBAL, por decisão ----------------
    XP, patente, streak, meta semanal e conquistas somam TODAS as respostas e
@@ -2540,7 +2552,8 @@ function calcularMetaSemanal() {
   for (const qid in APP_STATE.respostas) {
     for (const h of APP_STATE.respostas[qid]) if (h.data >= inicioSemana.getTime()) n++;
   }
-  return { respondidas: n, meta: META_SEMANAL_QUESTOES, pct: Math.min(100, Math.round(n / META_SEMANAL_QUESTOES * 100)) };
+  const meta = metaSemanalQuestoes();
+  return { respondidas: n, meta, diaria: metaDiariaConfigurada(), pct: Math.min(100, Math.round(n / meta * 100)) };
 }
 
 const CONQUISTAS = [

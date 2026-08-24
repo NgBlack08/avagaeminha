@@ -730,7 +730,7 @@ function gamiCardHtml(gam) {
           ? '<span class="tag ok">✓ batida</span>'
           : `<a href="#" onclick="navigate('planoestudo');return false;">faltam ${dia.restantes} →</a>`}</div>
         <div class="gami-bar small ${dia.cumprida ? "ok" : ""}"><i style="width:${dia.pct}%"></i></div>
-        <div class="gami-meta-lbl" style="margin-top:8px">Meta semanal: ${semana.respondidas}/${semana.meta} questões</div>
+        <div class="gami-meta-lbl" style="margin-top:8px">Meta semanal: ${semana.respondidas}/${semana.meta} questões <span class="hint">(${semana.diaria}/dia × 7)</span></div>
         <div class="gami-bar small"><i style="width:${semana.pct}%"></i></div>
       </div>
       <div class="gami-conquistas">
@@ -2790,7 +2790,7 @@ async function iniciarMetaDoDia() {
 async function abrirEditorMetaDiaria() {
   const valor = await mostrarPromptNumero({
     titulo: "Meta diária de questões",
-    mensagem: `Quantas questões você quer resolver por dia? O padrão é ${metaDiariaPadrao()} (sua meta semanal dividida por 7).`,
+    mensagem: `Quantas questões você quer resolver por dia? O padrão é ${metaDiariaPadrao()}. A meta da semana acompanha: são sete dias do que você escolher aqui.`,
     valorInicial: metaDiariaConfigurada(),
     min: META_DIARIA_MIN, max: META_DIARIA_MAX, sufixo: "questões/dia",
   });
@@ -2926,7 +2926,7 @@ function renderPlanoEstudo() {
   ${progressoHtml}
   ${revisaoHtml}
   <div class="card">
-    <h3>📌 Prioridades de hoje <span class="hint">a meta de ${plano.metaDiaria}/dia, redistribuída pelo peso no edital e pelo seu desempenho${plano.metaPersonalizada ? "" : " (padrão: meta semanal ÷ 7)"}</span></h3>
+    <h3>📌 Prioridades de hoje <span class="hint">a meta de ${plano.metaDiaria}/dia, redistribuída pelo peso no edital e pelo seu desempenho${plano.metaPersonalizada ? "" : " (valor padrão)"}</span></h3>
     ${plano.foco.length ? plano.foco.map(it => `
       <div class="pe-item ${it.cumprida ? "cumprida" : ""}">
         <div class="pe-item-top">
