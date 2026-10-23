@@ -78,7 +78,7 @@ const QUESTOES_PCAL_LOTE83 = [
   {
     ...BASE83,
     id: "LI-139", subassunto: "Chefia — art. 2º e conflito com norma posterior",
-    origem: "Inédita — estilo CEBRASPE (Lei 6.441/2003, art. 2º; Lei 14.735/2023)",
+    origem: "Inédita — estilo CEBRASPE (Lei 6.441/2003, art. 2º; Lei 14.735/2023); o mesmo ponto, com o mesmo gabarito, aparece em item do curso nos QAPs DSO (Lei 6.441/2003, item 2)",
     dificuldade: 3, tempoIdealSeg: 75,
     enunciado: "A chefia da Polícia Civil é exercida em cargo de provimento em comissão privativo de Delegado de Carreira da própria instituição, nomeado pelo Governador do Estado.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "privativo de Delegado de Carreira",
@@ -160,7 +160,7 @@ const QUESTOES_PCAL_LOTE83 = [
   {
     ...BASE83,
     id: "LI-143", subassunto: "Apuração de infrações — art. 6º, II",
-    origem: "Inédita — estilo CEBRASPE (Lei estadual 6.441/2003, art. 6º, II)",
+    origem: "Inédita — estilo CEBRASPE (Lei estadual 6.441/2003, art. 6º, II); o mesmo ponto, com o mesmo gabarito, aparece em item do curso nos QAPs DSO (Lei 6.441/2003, item 5)",
     dificuldade: 3, tempoIdealSeg: 70,
     enunciado: "Compete à Polícia Civil apurar todas as infrações penais praticadas no território do Estado, inclusive as militares, nos limites de sua competência constitucional.",
     gabarito: "E", pegadinha: "exigencia-inexistente", palavraChave: "inclusive as militares",
@@ -180,7 +180,7 @@ const QUESTOES_PCAL_LOTE83 = [
   {
     ...BASE83,
     id: "LI-144", subassunto: "Iniciativa da polícia judiciária — art. 7º, I",
-    origem: "Inédita — estilo CEBRASPE (Lei estadual 6.441/2003, art. 7º, I)",
+    origem: "Inédita — estilo CEBRASPE (Lei estadual 6.441/2003, art. 7º, I); o mesmo ponto, com o mesmo gabarito, aparece em item do curso nos QAPs DSO (Lei 6.441/2003, item 7)",
     dificuldade: 3, tempoIdealSeg: 75,
     enunciado: "As funções de Polícia Judiciária são exercidas por iniciativa própria, mediante requisição de autoridade judiciária ou do Ministério Público, ou ainda mediante requerimento de qualquer cidadão.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "requerimento de qualquer cidadão",

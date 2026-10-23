@@ -77,7 +77,7 @@ const QUESTOES_PCAL_LOTE13 = [
   {
     id: "LI-005", disciplina: "Legislação Institucional (AL)", assunto: "Lei Orgânica Nacional das Polícias Civis", subassunto: "Competência da polícia civil (art. 6º)",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (Lei 14.735/2023, edital PC-AL 2026)",
+    origem: "Inédita — estilo CEBRASPE (Lei 14.735/2023, edital PC-AL 2026); o mesmo ponto, com o mesmo gabarito, aparece em item do curso nos QAPs DSO (Lei 14.735/2023, item 6)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 45, probReaparecer: 0.92,
     enunciado: "Compete à polícia civil, ressalvadas a competência da União e as infrações penais militares, executar privativamente as funções de polícia judiciária civil e de apuração de infrações penais, materializadas em inquérito policial ou em outro procedimento de investigação.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "privativamente / ressalvadas",

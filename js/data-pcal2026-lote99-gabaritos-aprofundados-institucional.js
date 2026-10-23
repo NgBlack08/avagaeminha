@@ -639,6 +639,7 @@ const QUESTOES_PCAL_LOTE99 = [
 
   {
     ...BASE99,
+    origem: "Material do usuário — Gabarito Estratégico PC-AL, lotes 1 a 7 (assertiva original; gabarito e fundamentação conferidos contra o texto da lei); o mesmo ponto, com o mesmo gabarito, aparece em item do curso nos QAPs DSO (Lei 6.441/2003, item 10)",
     id: "LI-187", assunto: "Estrutura organizacional da PC-AL (Lei 6.441/2003)", subassunto: "DEMEPE x DEPIN — arts. 23 e 24",
     dificuldade: 3, tempoIdealSeg: 65,
     enunciado: "Ao Departamento Metropolitano de Polícia Especializada (DEMEPE) compete a execução, coordenação e fiscalização das atividades de Polícia Judiciária das delegacias especializadas da Capital e da Grande Maceió, bem como das delegacias especializadas do interior do Estado.",
@@ -715,6 +716,7 @@ const QUESTOES_PCAL_LOTE99 = [
 
   {
     ...BASE99,
+    origem: "Material do usuário — Gabarito Estratégico PC-AL, lotes 1 a 7 (assertiva original; gabarito e fundamentação conferidos contra o texto da lei); o mesmo texto aparece em item do curso nos QAPs DSO (Lei 6.441/2003, item 9)",
     id: "LI-191", assunto: "Estrutura organizacional da PC-AL (Lei 6.441/2003)", subassunto: "Licenças e alvarás de diversões públicas — art. 7º, VI",
     dificuldade: 3, tempoIdealSeg: 65,
     enunciado: "Compete privativamente à Polícia Civil autorizar, expedir licenças e alvarás e fiscalizar a realização de competições esportivas e demais eventos de diversões públicas.",
