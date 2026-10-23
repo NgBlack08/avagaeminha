@@ -93,7 +93,7 @@ const QUESTOES_SESAUAL_LOTE61 = [
   {
     id: "ET-027", disciplina: "Ética no Serviço Público", assunto: "Código de Ética Funcional (AL)", subassunto: "Demora no atendimento como dano moral",
     concurso: "SESAU", cargo: ["Escrivão","Agente","Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (Edital SESAU/AL 2026)",
+    origem: "Inédita — estilo CEBRASPE (Edital SESAU/AL 2026); o mesmo ponto, com o mesmo gabarito, aparece em item do curso nos QAPs DSO (Código de Ética de AL, item 2)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.84,
     enunciado: "Deixar o servidor qualquer pessoa à espera de solução que compete ao setor em que exerça suas funções, permitindo a formação de longas filas ou qualquer outra espécie de atraso na prestação do serviço, caracteriza dano moral aos usuários dos serviços públicos estaduais.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "caracteriza dano moral aos usuários",
@@ -192,7 +192,7 @@ const QUESTOES_SESAUAL_LOTE61 = [
   {
     id: "ET-032", disciplina: "Ética no Serviço Público", assunto: "Código de Ética Funcional (AL)", subassunto: "Dever de resistir a pressões e denunciá-las",
     concurso: "SESAU", cargo: ["Escrivão","Agente","Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (Edital SESAU/AL 2026)",
+    origem: "Inédita — estilo CEBRASPE (Edital SESAU/AL 2026); o mesmo ponto, com o mesmo gabarito, aparece em item do curso nos QAPs DSO (Código de Ética de AL, item 4)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.85,
     enunciado: "É dever do servidor resistir a todas as pressões de superiores hierárquicos, de contratantes, interessados e outros que visem obter quaisquer favores, benesses ou vantagens indevidas em decorrência de ações imorais, ilegais ou aéticas, e denunciá-las.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "e denunciá-las",

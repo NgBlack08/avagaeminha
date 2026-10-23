@@ -546,7 +546,7 @@ const QUESTOES_PCAL_LOTE87 = [
     ...BASE87_ET,
     id: "ET-059", assunto: "Ética no serviço público",
     subassunto: "Moralidade como princípio constitucional",
-    origem: "CEBRASPE PF 2025 (Policial) — gabarito revisado na fonte normativa (CF, art. 37, caput)",
+    origem: "CEBRASPE PF 2025 (Policial) — gabarito revisado na fonte normativa (CF, art. 37, caput); o texto coincide com item de prova dos QAPs DSO — CEBRASPE PF 2025",
     dificuldade: 1, tempoIdealSeg: 45,
     enunciado: "A moralidade é princípio que rege a atuação da administração pública.",
     gabarito: "C",

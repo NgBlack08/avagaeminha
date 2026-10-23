@@ -964,7 +964,7 @@ const QUESTOES_PCAL_LOTE107 = [
     },
     comentario: {
       resolucao: "ERRADO. Tratar com cuidado os usuários é dever do servidor. Procrastinar ou dificultar o exercício regular de direito por qualquer pessoa é o oposto: é conduta vedada, que causa dano moral ao usuário. O item põe uma proibição dentro da lista de deveres.",
-      fundamento: "Normas de conduta do servidor público; Decreto 1.171/1994, XV, 'e'.",
+      fundamento: "Normas de conduta do servidor público; Decreto 1.171/1994, XV, 'd'.",
       macete: "Procrastinar direito alheio: proibido.",
       erroComum: "Ler só a primeira metade do item.",
       comoBancaPensa: "Primeira parte verdadeira, segunda falsa.",
