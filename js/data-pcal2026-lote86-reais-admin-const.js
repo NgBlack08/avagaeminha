@@ -282,7 +282,7 @@ const QUESTOES_PCAL_LOTE86 = [
     ...BASE86_DA,
     id: "DA-089", assunto: "Administração indireta",
     subassunto: "Empresas públicas e sociedades de economia mista",
-    origem: "CEBRASPE PF 2025 (Policial) — gabarito revisado na fonte normativa (Lei 13.303/2016, arts. 3º e 4º)",
+    origem: "CEBRASPE PF 2025 (Policial) — gabarito revisado na fonte normativa (Lei 13.303/2016, arts. 3º e 4º); o texto coincide com item de prova dos QAPs DSO — CESPE / CEBRASPE - 2025 - Polícia Federal - Agente de Polícia Federal",
     dificuldade: 3, tempoIdealSeg: 85,
     enunciado: "As sociedades de economia mista e as empresas públicas desempenham atividade de natureza econômica e se distinguem pela forma de organização e pela composição do capital.",
     gabarito: "C",
