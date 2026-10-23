@@ -237,7 +237,7 @@ const QUESTOES_PCAL_LOTE47 = [
   {
     id: "DC-100", disciplina: "Direito Constitucional", assunto: "Direito eleitoral e partidos políticos", subassunto: "Vedação a recursos financeiros estrangeiros (art. 17, II)",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (CF/88, art. 17, II)",
+    origem: "Inédita — estilo CEBRASPE (CF/88, art. 17, II); o texto coincide com item de prova dos QAPs DSO — CEBRASPE (CESPE) - 2026 - Técnico Administrativo (TCE RN)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.8,
     enunciado: "É assegurada a liberdade de criação, fusão, incorporação e extinção de partidos políticos, sendo permitido o recebimento de recursos financeiros de entidades estrangeiras, desde que não haja subordinação do partido a governo estrangeiro.",
     gabarito: "E", pegadinha: "exigencia-inexistente", palavraChave: "permitido o recebimento de recursos financeiros ... desde que não haja subordinação",

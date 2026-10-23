@@ -268,7 +268,7 @@ const QUESTOES_PCAL_LOTE44 = [
   {
     id: "DC-061", disciplina: "Direito Constitucional", assunto: "Remédios constitucionais", subassunto: "Ação popular (art. 5º, LXXIII)",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (CF/88, art. 5º, LXXIII)",
+    origem: "Inédita — estilo CEBRASPE (CF/88, art. 5º, LXXIII); o texto coincide com item de prova dos QAPs DSO — CESPE / CEBRASPE - 2025 - ANM - Analista Administrativo - Especialidade: Administrativo",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.82,
     enunciado: "Qualquer cidadão é parte legítima para propor ação popular que vise anular ato lesivo ao patrimônio público, à moralidade administrativa, ao meio ambiente ou ao patrimônio histórico e cultural, ficando o autor, salvo comprovada má-fé, isento de custas judiciais e do ônus da sucumbência.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "qualquer cidadão ... isento de custas ... salvo comprovada má-fé",
