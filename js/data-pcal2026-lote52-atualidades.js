@@ -13,7 +13,7 @@ const QUESTOES_PCAL_LOTE52 = [
   {
     id: "AT-001", disciplina: "Atualidades", assunto: "New START e Armas Nucleares", subassunto: "Renovação do tratado",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (Atualidades 2025/2026, adaptado de material de revisão)",
+    origem: "Inédita — estilo CEBRASPE (Atualidades 2025/2026, adaptado de material de revisão); também nos QAPs DSO (Atualidades, Davi Costa — QAP geral, item 1)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 45, probReaparecer: 0.8,
     enunciado: "O Tratado New START, principal acordo de controle de armas nucleares entre Estados Unidos e Rússia, foi renovado automaticamente em fevereiro de 2026 por mais dez anos, mantendo limites obrigatórios para os arsenais estratégicos dos dois países até 2036.",
     gabarito: "E", pegadinha: "exigencia-inexistente", palavraChave: "renovado automaticamente",
@@ -32,7 +32,7 @@ const QUESTOES_PCAL_LOTE52 = [
   {
     id: "AT-002", disciplina: "Atualidades", assunto: "Comércio Exterior Brasileiro", subassunto: "Principal parceiro comercial",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (Atualidades 2025/2026, adaptado de material de revisão)",
+    origem: "Inédita — estilo CEBRASPE (Atualidades 2025/2026, adaptado de material de revisão); também nos QAPs DSO (Atualidades, Davi Costa — QAP geral, item 2)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 45, probReaparecer: 0.85,
     enunciado: "A Argentina se mantém como principal destino das exportações brasileiras, enquanto os automóveis lideram a pauta exportadora nacional.",
     gabarito: "E", pegadinha: "troca-sujeito", palavraChave: "Argentina",
@@ -51,7 +51,7 @@ const QUESTOES_PCAL_LOTE52 = [
   {
     id: "AT-003", disciplina: "Atualidades", assunto: "Comércio Exterior Brasileiro", subassunto: "Principal parceiro comercial",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (Atualidades 2025/2026, adaptado de material de revisão)",
+    origem: "Inédita — estilo CEBRASPE (Atualidades 2025/2026, adaptado de material de revisão); também nos QAPs DSO (Atualidades, Davi Costa — QAP geral, item 3)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 45, probReaparecer: 0.85,
     enunciado: "A União Europeia ocupa atualmente a posição de principal parceira comercial do Brasil, com destaque para as exportações de café.",
     gabarito: "E", pegadinha: "troca-sujeito", palavraChave: "União Europeia",
@@ -70,7 +70,7 @@ const QUESTOES_PCAL_LOTE52 = [
   {
     id: "AT-004", disciplina: "Atualidades", assunto: "Comércio Exterior Brasileiro", subassunto: "Principal parceiro comercial",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (Atualidades 2025/2026, adaptado de material de revisão)",
+    origem: "Inédita — estilo CEBRASPE (Atualidades 2025/2026, adaptado de material de revisão); também nos QAPs DSO (Atualidades, Davi Costa — QAP geral, item 4)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 45, probReaparecer: 0.85,
     enunciado: "Os Estados Unidos consolidaram-se como principal parceiro comercial do Brasil, impulsionados pelas importações de produtos industrializados brasileiros.",
     gabarito: "E", pegadinha: "troca-sujeito", palavraChave: "Estados Unidos",
@@ -89,7 +89,7 @@ const QUESTOES_PCAL_LOTE52 = [
   {
     id: "AT-005", disciplina: "Atualidades", assunto: "Comércio Exterior Brasileiro", subassunto: "Pauta exportadora",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (Atualidades 2025/2026, adaptado de material de revisão)",
+    origem: "Inédita — estilo CEBRASPE (Atualidades 2025/2026, adaptado de material de revisão); também nos QAPs DSO (Atualidades, Davi Costa — QAP geral, item 5)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 45, probReaparecer: 0.85,
     enunciado: "A pauta exportadora brasileira foi liderada principalmente por produtos industriais de alto valor agregado, destinados ao mercado europeu.",
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "produtos industriais de alto valor agregado",
@@ -108,7 +108,7 @@ const QUESTOES_PCAL_LOTE52 = [
   {
     id: "AT-006", disciplina: "Atualidades", assunto: "Comércio Exterior Brasileiro", subassunto: "Pauta exportadora",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (Atualidades 2025/2026, adaptado de material de revisão)",
+    origem: "Inédita — estilo CEBRASPE (Atualidades 2025/2026, adaptado de material de revisão); também nos QAPs DSO (Atualidades, Davi Costa — QAP geral, item 6)",
     tipo: "CE", dificuldade: 1, tempoIdealSeg: 40, probReaparecer: 0.85,
     enunciado: "O petróleo bruto, a soja e o minério de ferro lideram a pauta exportadora brasileira, tendo a China como principal destino.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "China",
@@ -129,7 +129,7 @@ const QUESTOES_PCAL_LOTE52 = [
   {
     id: "AT-007", disciplina: "Atualidades", assunto: "Copa do Mundo de 2026", subassunto: "Cooperação e tensões na América do Norte",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (Atualidades 2025/2026, adaptado de material de revisão)",
+    origem: "Inédita — estilo CEBRASPE (Atualidades 2025/2026, adaptado de material de revisão); também nos QAPs DSO (Atualidades, Davi Costa — QAP geral, item 7)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.75,
     enunciado: "A realização da Copa do Mundo de 2026 em três países distintos — Estados Unidos, Canadá e México — é frequentemente apontada como um exemplo de cooperação regional na América do Norte, embora tensões diplomáticas e divergências em temas como comércio, segurança de fronteiras e migração permaneçam entre os governos envolvidos.",
     gabarito: "C", pegadinha: "verdade-mais-falso", palavraChave: "cooperação regional",
@@ -148,7 +148,7 @@ const QUESTOES_PCAL_LOTE52 = [
   {
     id: "AT-008", disciplina: "Atualidades", assunto: "Copa do Mundo de 2026", subassunto: "Debates migratórios",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (Atualidades 2025/2026, adaptado de material de revisão)",
+    origem: "Inédita — estilo CEBRASPE (Atualidades 2025/2026, adaptado de material de revisão); também nos QAPs DSO (Atualidades, Davi Costa — QAP geral, item 8)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.75,
     enunciado: "A realização da Copa do Mundo de 2026 tende a intensificar os debates sobre imigração e controle de fronteiras na América do Norte, tendo em vista que o aumento do fluxo de turistas internacionais ocorre em um contexto no qual Estados Unidos, Canadá e México mantêm políticas migratórias próprias e interesses nem sempre convergentes em matéria de segurança e circulação de pessoas.",
     gabarito: "C", pegadinha: "verdade-mais-falso", palavraChave: "políticas migratórias próprias",
@@ -167,7 +167,7 @@ const QUESTOES_PCAL_LOTE52 = [
   {
     id: "AT-009", disciplina: "Atualidades", assunto: "Copa do Mundo de 2026", subassunto: "Riscos econômicos",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (Atualidades 2025/2026, adaptado de material de revisão)",
+    origem: "Inédita — estilo CEBRASPE (Atualidades 2025/2026, adaptado de material de revisão); também nos QAPs DSO (Atualidades, Davi Costa — QAP geral, item 9)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.75,
     enunciado: "Embora a Copa do Mundo de 2026 seja realizada conjuntamente por Estados Unidos, Canadá e México, os possíveis ganhos econômicos associados ao evento podem ser afetados por disputas comerciais entre os países-sede, uma vez que medidas protecionistas, tarifas de importação e incertezas nas cadeias produtivas tendem a impactar investimentos, custos logísticos e fluxos de negócios relacionados ao torneio.",
     gabarito: "C", pegadinha: "verdade-mais-falso", palavraChave: "disputas comerciais",
@@ -188,7 +188,7 @@ const QUESTOES_PCAL_LOTE52 = [
   {
     id: "AT-010", disciplina: "Atualidades", assunto: "Crise EUA–Venezuela", subassunto: "Classificação como organização terrorista",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (Atualidades 2025/2026, adaptado de material de revisão)",
+    origem: "Inédita — estilo CEBRASPE (Atualidades 2025/2026, adaptado de material de revisão); também nos QAPs DSO (Atualidades, Davi Costa — QAP geral, item 10)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 60, probReaparecer: 0.75,
     enunciado: "A estratégia norte-americana de vincular o governo venezuelano ao narcoterrorismo permite a Washington invocar o princípio de legítima defesa e abrir caminho para a imposição de sanções mais rigorosas, bloqueio de ativos e uso de força militar sob o pretexto de combater o terrorismo internacional, sem necessitar de aprovação do Conselho de Segurança da ONU.",
     gabarito: "C", pegadinha: "verdade-mais-falso", palavraChave: "sem necessitar de aprovação do Conselho de Segurança",
@@ -207,7 +207,7 @@ const QUESTOES_PCAL_LOTE52 = [
   {
     id: "AT-011", disciplina: "Atualidades", assunto: "Crise EUA–Venezuela", subassunto: "Classificação como organização terrorista",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (Atualidades 2025/2026, adaptado de material de revisão)",
+    origem: "Inédita — estilo CEBRASPE (Atualidades 2025/2026, adaptado de material de revisão); também nos QAPs DSO (Atualidades, Davi Costa — QAP geral, item 11)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 60, probReaparecer: 0.75,
     enunciado: "A classificação do Cartel de los Soles como organização terrorista pelos EUA tem como principal objetivo geopolítico a liberação de vastas reservas de petróleo venezuelano para o mercado global, através de uma intervenção militar direta e imediata, garantindo a baixa dos preços internacionais.",
     gabarito: "E", pegadinha: "generalizacao", palavraChave: "objetivo geopolítico",
@@ -226,7 +226,7 @@ const QUESTOES_PCAL_LOTE52 = [
   {
     id: "AT-012", disciplina: "Atualidades", assunto: "Crise EUA–Venezuela", subassunto: "Deterrence e Doutrina Monroe",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (Atualidades 2025/2026, adaptado de material de revisão)",
+    origem: "Inédita — estilo CEBRASPE (Atualidades 2025/2026, adaptado de material de revisão); também nos QAPs DSO (Atualidades, Davi Costa — QAP geral, item 12)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 60, probReaparecer: 0.7,
     enunciado: "A escalada militar e as acusações no Caribe representam um exemplo consolidado e amplamente reconhecido de Deterrence (Dissuasão) na Geopolítica, na medida em que comprova, de forma inequívoca, que os Estados Unidos buscam evitar que a China ou a Rússia estabeleçam bases militares permanentes na Venezuela, o que ameaçaria diretamente a doutrina de Monroe.",
     gabarito: "E", pegadinha: "exigencia-inexistente", palavraChave: "comprova, de forma inequívoca",
@@ -245,7 +245,7 @@ const QUESTOES_PCAL_LOTE52 = [
   {
     id: "AT-013", disciplina: "Atualidades", assunto: "Crise EUA–Venezuela", subassunto: "Capacidade de dissuasão venezuelana",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (Atualidades 2025/2026, adaptado de material de revisão)",
+    origem: "Inédita — estilo CEBRASPE (Atualidades 2025/2026, adaptado de material de revisão); também nos QAPs DSO (Atualidades, Davi Costa — QAP geral, item 13)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.75,
     enunciado: "A resposta do governo venezuelano, que mobiliza sua milícia e nega a existência do Cartel, demonstra a sua total capacidade de dissuasão e poderio militar equilibrado frente à superioridade bélica dos EUA, tornando inviável qualquer tipo de intervenção militar direta.",
     gabarito: "E", pegadinha: "generalizacao", palavraChave: "poderio militar equilibrado",
@@ -264,7 +264,7 @@ const QUESTOES_PCAL_LOTE52 = [
   {
     id: "AT-014", disciplina: "Atualidades", assunto: "Crise EUA–Venezuela", subassunto: "Conceito de Narcoestado",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (Atualidades 2025/2026, adaptado de material de revisão)",
+    origem: "Inédita — estilo CEBRASPE (Atualidades 2025/2026, adaptado de material de revisão); também nos QAPs DSO (Atualidades, Davi Costa — QAP geral, item 14)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 60, probReaparecer: 0.75,
     enunciado: "O conceito de Narcoestado é amplamente aceito e aplicado à Venezuela pela comunidade internacional (incluindo Brasil, União Europeia e a maioria dos países latino-americanos) como uma categoria consensual para descrever a infiltração completa e comprovada do tráfico de drogas no alto escalão do governo, o que unifica o bloco de oposição a Maduro.",
     gabarito: "E", pegadinha: "generalizacao", palavraChave: "amplamente aceito",
@@ -285,7 +285,7 @@ const QUESTOES_PCAL_LOTE52 = [
   {
     id: "AT-015", disciplina: "Atualidades", assunto: "Mercado de Trabalho no Brasil", subassunto: "Taxa de desocupação (IBGE/PNAD)",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (Atualidades 2025/2026, adaptado de material de revisão)",
+    origem: "Inédita — estilo CEBRASPE (Atualidades 2025/2026, adaptado de material de revisão); também nos QAPs DSO (Atualidades, Davi Costa — QAP geral, item 15)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 45, probReaparecer: 0.8,
     enunciado: "De acordo com os dados divulgados pelo Instituto Brasileiro de Geografia e Estatística (IBGE), a taxa de desocupação no Brasil atingiu o menor nível desde o início da série histórica em 2012, registrando 5,2% no trimestre móvel encerrado em novembro de 2025.",
     gabarito: "C", pegadinha: "troca-numerica", palavraChave: "5,2%",
@@ -306,7 +306,7 @@ const QUESTOES_PCAL_LOTE52 = [
   {
     id: "AT-016", disciplina: "Atualidades", assunto: "OMC e Comércio Internacional", subassunto: "Papel institucional da OMC",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (Atualidades 2025/2026, adaptado de material de revisão)",
+    origem: "Inédita — estilo CEBRASPE (Atualidades 2025/2026, adaptado de material de revisão); também nos QAPs DSO (Atualidades, Davi Costa — QAP geral, item 16)",
     tipo: "CE", dificuldade: 1, tempoIdealSeg: 40, probReaparecer: 0.8,
     enunciado: "A importância da Organização Mundial do Comércio (OMC) se dá, sobretudo, devido à coordenação de múltiplos interesses no comércio internacional, buscando a abertura dos mercados e a livre concorrência.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "abertura dos mercados",
@@ -325,7 +325,7 @@ const QUESTOES_PCAL_LOTE52 = [
   {
     id: "AT-017", disciplina: "Atualidades", assunto: "Cultura, Tecnologia e IA", subassunto: "Relatório da UNESCO",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (Atualidades 2025/2026, adaptado de material de revisão)",
+    origem: "Inédita — estilo CEBRASPE (Atualidades 2025/2026, adaptado de material de revisão); também nos QAPs DSO (Atualidades, Davi Costa — QAP geral, item 17)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.7,
     enunciado: "Entre as oportunidades associadas à transformação digital do setor cultural, destaca-se a possibilidade do uso da inteligência artificial generativa para digitalizar, proteger e facilitar o acesso ao patrimônio cultural.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "patrimônio cultural",
@@ -346,7 +346,7 @@ const QUESTOES_PCAL_LOTE52 = [
   {
     id: "AT-018", disciplina: "Atualidades", assunto: "Sistema Financeiro Nacional", subassunto: "Operação Compliance Zero",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (Atualidades 2025/2026, adaptado de material de revisão)",
+    origem: "Inédita — estilo CEBRASPE (Atualidades 2025/2026, adaptado de material de revisão); também nos QAPs DSO (Atualidades, Davi Costa — QAP geral, item 18)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.8,
     enunciado: "No final de 2025, a Polícia Federal deflagrou a Operação Compliance Zero, que investigou fraudes financeiras envolvendo instituições do Sistema Financeiro Nacional; no âmbito dessa operação, a Justiça Federal negou habeas corpus e manteve a prisão do presidente do Banco Central, Gabriel Galípolo, acusado de participar de esquema de emissão de títulos de crédito falsos estimado em bilhões de reais.",
     gabarito: "E", pegadinha: "troca-sujeito", palavraChave: "presidente do Banco Central",
@@ -365,7 +365,7 @@ const QUESTOES_PCAL_LOTE52 = [
   {
     id: "AT-019", disciplina: "Atualidades", assunto: "BRICS", subassunto: "Natureza e composição do bloco",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (Atualidades 2025/2026, adaptado de material de revisão)",
+    origem: "Inédita — estilo CEBRASPE (Atualidades 2025/2026, adaptado de material de revisão); também nos QAPs DSO (Atualidades, Davi Costa — QAP geral, item 19)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.85,
     enunciado: "O Rio de Janeiro sediou a décima sétima cúpula anual do BRICS. Esse acrônimo designa uma aliança político-militar que reúne 32 países membros da Europa e da América do Norte, os quais se reúnem para consultas e cooperação nas áreas de segurança e defesa.",
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "aliança político-militar",
@@ -384,7 +384,7 @@ const QUESTOES_PCAL_LOTE52 = [
   {
     id: "AT-020", disciplina: "Atualidades", assunto: "Política Tarifária dos EUA", subassunto: "Tarifas do governo Trump sobre o Brasil",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (Atualidades 2025/2026, adaptado de material de revisão)",
+    origem: "Inédita — estilo CEBRASPE (Atualidades 2025/2026, adaptado de material de revisão); também nos QAPs DSO (Atualidades, Davi Costa — QAP geral, item 20), 2ª afirmativa da questão de V/F",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.8,
     enunciado: "As tarifas aplicadas pelo governo dos Estados Unidos sob a presidência de Donald Trump tinham como objetivo facilitar a entrada de produtos estrangeiros no mercado norte-americano, reduzindo os custos de importação para empresas locais.",
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "facilitar a entrada de produtos estrangeiros",
@@ -403,7 +403,7 @@ const QUESTOES_PCAL_LOTE52 = [
   {
     id: "AT-021", disciplina: "Atualidades", assunto: "Lei Magnitsky", subassunto: "Sanções por violações de direitos humanos",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (Atualidades 2025/2026, adaptado de material de revisão)",
+    origem: "Inédita — estilo CEBRASPE (Atualidades 2025/2026, adaptado de material de revisão); também nos QAPs DSO (Atualidades, Davi Costa — QAP geral, item 21)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.85,
     enunciado: "Continua repercutindo no Brasil e no cenário internacional a aplicação de uma lei dos Estados Unidos que autoriza sanções contra pessoas envolvidas em graves violações de direitos humanos e corrupção. A Lei Magnitsky foi usada para punir autoridades estrangeiras — inclusive brasileiras — com medidas como bloqueio de bens e proibição de entrada no território norte-americano.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "bloqueio de bens",
@@ -424,7 +424,7 @@ const QUESTOES_PCAL_LOTE52 = [
   {
     id: "AT-022", disciplina: "Atualidades", assunto: "Conflito Israel–Irã", subassunto: "Ataques a instalações nucleares (jun/2025)",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (Atualidades 2025/2026, adaptado de material de revisão)",
+    origem: "Inédita — estilo CEBRASPE (Atualidades 2025/2026, adaptado de material de revisão); também nos QAPs DSO (Atualidades, Davi Costa — QAP geral, item 22)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.8,
     enunciado: "No conflito direto entre Israel e Irã ocorrido em junho de 2025, os Estados Unidos participaram militarmente ao realizar ataques contra instalações nucleares iranianas, incluindo os complexos de Fordow, Natanz e Isfahan, justificando a ação como uma medida destinada a degradar a capacidade nuclear do Irã.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "Fordow, Natanz e Isfahan",
@@ -445,7 +445,7 @@ const QUESTOES_PCAL_LOTE52 = [
   {
     id: "AT-023", disciplina: "Atualidades", assunto: "IA Agêntica", subassunto: "Transição para sistemas autônomos",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (Atualidades 2025/2026, adaptado de material de revisão)",
+    origem: "Inédita — estilo CEBRASPE (Atualidades 2025/2026, adaptado de material de revisão); também nos QAPs DSO (Atualidades, Davi Costa — QAP geral, item 23)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.75,
     enunciado: "No campo corporativo internacional, o período recente consolidou a transição da inteligência artificial generativa tradicional para a chamada IA Agêntica, isto é, sistemas capazes de tomar decisões e agir de forma autônoma em cadeias de suprimentos e processos empresariais.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "IA Agêntica",
@@ -466,7 +466,7 @@ const QUESTOES_PCAL_LOTE52 = [
   {
     id: "AT-024", disciplina: "Atualidades", assunto: "Economia e Tecnologia", subassunto: "Fortuna e IPO da SpaceX",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (Atualidades 2025/2026, adaptado de material de revisão)",
+    origem: "Inédita — estilo CEBRASPE (Atualidades 2025/2026, adaptado de material de revisão); também nos QAPs DSO (Atualidades, Davi Costa — QAP geral, item 24)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.75,
     enunciado: "No cenário econômico e tecnológico recente, o bilionário Elon Musk atingiu a marca histórica de primeira pessoa a acumular uma fortuna de um trilhão de dólares, marco impulsionado pela aguardada Oferta Pública Inicial (IPO) da SpaceX.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "um trilhão de dólares",
@@ -487,7 +487,7 @@ const QUESTOES_PCAL_LOTE52 = [
   {
     id: "AT-025", disciplina: "Atualidades", assunto: "Política Sul-Americana 2026", subassunto: "Eleições no Peru",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (Atualidades 2025/2026, adaptado de material de revisão)",
+    origem: "Inédita — estilo CEBRASPE (Atualidades 2025/2026, adaptado de material de revisão); também nos QAPs DSO (Atualidades, Davi Costa — caderno Internacional, item 1)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.75,
     enunciado: "Nas eleições gerais do Peru de 2026, a candidata Keiko Fujimori venceu o segundo turno contra Roberto Sánchez por uma diferença inferior a 1% dos votos válidos, em uma das disputas mais acirradas da história recente do país.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "inferior a 1%",
@@ -506,7 +506,7 @@ const QUESTOES_PCAL_LOTE52 = [
   {
     id: "AT-026", disciplina: "Atualidades", assunto: "Política Sul-Americana 2026", subassunto: "Eleições na Colômbia",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (Atualidades 2025/2026, adaptado de material de revisão)",
+    origem: "Inédita — estilo CEBRASPE (Atualidades 2025/2026, adaptado de material de revisão); também nos QAPs DSO (Atualidades, Davi Costa — caderno Internacional, item 2)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.75,
     enunciado: "Na eleição presidencial colombiana de 2026, Gustavo Petro conquistou a autorização constitucional para concorrer à reeleição e derrotou Abelardo de La Espriella no segundo turno.",
     gabarito: "E", pegadinha: "exigencia-inexistente", palavraChave: "autorização constitucional para concorrer à reeleição",
@@ -527,7 +527,7 @@ const QUESTOES_PCAL_LOTE52 = [
   {
     id: "AT-027", disciplina: "Atualidades", assunto: "Transição Energética", subassunto: "Impactos socioambientais das renováveis",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (Atualidades 2025/2026, adaptado de material de revisão)",
+    origem: "Inédita — estilo CEBRASPE (Atualidades 2025/2026, adaptado de material de revisão); também nos QAPs DSO (Atualidades, Davi Costa — caderno Internacional, item 3)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.8,
     enunciado: "A expansão das fontes renováveis de energia contribui para a redução das emissões de gases de efeito estufa, mas não elimina totalmente a possibilidade de impactos socioambientais associados à instalação de grandes empreendimentos energéticos. Com base nisso, é incorreto afirmar que toda fonte renovável é necessariamente isenta de impactos ambientais.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "não elimina totalmente",
@@ -546,7 +546,7 @@ const QUESTOES_PCAL_LOTE52 = [
   {
     id: "AT-028", disciplina: "Atualidades", assunto: "Transição Energética", subassunto: "Competitividade de solar e eólica",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (Atualidades 2025/2026, adaptado de material de revisão)",
+    origem: "Inédita — estilo CEBRASPE (Atualidades 2025/2026, adaptado de material de revisão); também nos QAPs DSO (Atualidades, Davi Costa — caderno Internacional, item 4)",
     tipo: "CE", dificuldade: 1, tempoIdealSeg: 45, probReaparecer: 0.8,
     enunciado: "A crescente participação da energia solar e eólica na matriz elétrica mundial tem sido favorecida pelo avanço tecnológico e pela redução de custos, fatores que ampliam sua competitividade econômica em relação a diversas fontes fósseis.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "redução de custos",
@@ -565,7 +565,7 @@ const QUESTOES_PCAL_LOTE52 = [
   {
     id: "AT-029", disciplina: "Atualidades", assunto: "Transição Energética", subassunto: "Minerais críticos e renováveis",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (Atualidades 2025/2026, adaptado de material de revisão)",
+    origem: "Inédita — estilo CEBRASPE (Atualidades 2025/2026, adaptado de material de revisão); também nos QAPs DSO (Atualidades, Davi Costa — caderno Internacional, item 5)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 60, probReaparecer: 0.8,
     enunciado: "Do ponto de vista econômico, a transição energética tende a reduzir a importância estratégica dos minerais utilizados na fabricação de baterias, painéis solares e turbinas eólicas, uma vez que as energias renováveis dependem apenas de recursos inesgotáveis.",
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "dependem apenas de recursos inesgotáveis",
@@ -584,7 +584,7 @@ const QUESTOES_PCAL_LOTE52 = [
   {
     id: "AT-030", disciplina: "Atualidades", assunto: "Transição Energética", subassunto: "Segurança energética",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (Atualidades 2025/2026, adaptado de material de revisão)",
+    origem: "Inédita — estilo CEBRASPE (Atualidades 2025/2026, adaptado de material de revisão); também nos QAPs DSO (Atualidades, Davi Costa — caderno Internacional, item 6)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.75,
     enunciado: "A diversificação da matriz energética com fontes renováveis pode aumentar a segurança energética de um país ao reduzir a dependência de uma única fonte de energia e diminuir sua vulnerabilidade a crises de abastecimento.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "segurança energética",
@@ -603,7 +603,7 @@ const QUESTOES_PCAL_LOTE52 = [
   {
     id: "AT-031", disciplina: "Atualidades", assunto: "Transição Energética", subassunto: "Demanda por eletricidade e IA",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (Atualidades 2025/2026, adaptado de material de revisão)",
+    origem: "Inédita — estilo CEBRASPE (Atualidades 2025/2026, adaptado de material de revisão); também nos QAPs DSO (Atualidades, Davi Costa — caderno Internacional, item 7)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.75,
     enunciado: "Mesmo em um cenário de expansão das energias renováveis, o crescimento da demanda mundial por eletricidade, associado à digitalização da economia e à inteligência artificial, tem levado especialistas a defender que a transição energética ocorrerá de forma gradual, e não imediata.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "de forma gradual",
@@ -624,7 +624,7 @@ const QUESTOES_PCAL_LOTE52 = [
   {
     id: "AT-032", disciplina: "Atualidades", assunto: "Terras Raras e Minerais Críticos", subassunto: "Importância geopolítica",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (Atualidades 2025/2026, adaptado de material de revisão)",
+    origem: "Inédita — estilo CEBRASPE (Atualidades 2025/2026, adaptado de material de revisão); também nos QAPs DSO (Atualidades, Davi Costa — caderno Internacional, item 8)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.8,
     enunciado: "A crescente demanda por veículos elétricos, turbinas eólicas, semicondutores e equipamentos militares tem ampliado a importância geopolítica das terras raras e de outros minerais críticos, tornando-os objeto de disputas estratégicas entre grandes potências.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "disputas estratégicas",
@@ -643,7 +643,7 @@ const QUESTOES_PCAL_LOTE52 = [
   {
     id: "AT-033", disciplina: "Atualidades", assunto: "Terras Raras e Minerais Críticos", subassunto: "Diversificação de fornecedores",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (Atualidades 2025/2026, adaptado de material de revisão)",
+    origem: "Inédita — estilo CEBRASPE (Atualidades 2025/2026, adaptado de material de revisão); também nos QAPs DSO (Atualidades, Davi Costa — caderno Internacional, item 9)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.75,
     enunciado: "A concentração da produção e, principalmente, do processamento de terras raras em poucos países tem levado diversas nações a buscar fornecedores alternativos e a estabelecer novas parcerias internacionais para reduzir vulnerabilidades em suas cadeias de suprimento.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "fornecedores alternativos",
@@ -662,7 +662,7 @@ const QUESTOES_PCAL_LOTE52 = [
   {
     id: "AT-034", disciplina: "Atualidades", assunto: "Terras Raras e Minerais Críticos", subassunto: "Reservas minerais e geopolítica",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (Atualidades 2025/2026, adaptado de material de revisão)",
+    origem: "Inédita — estilo CEBRASPE (Atualidades 2025/2026, adaptado de material de revisão); também nos QAPs DSO (Atualidades, Davi Costa — caderno Internacional, item 10); o gabarito impresso do caderno marca CERTO, mas contradiz o próprio material (\"recursos naturais são trunfo geopolítico\") — mantido ERRADO",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.75,
     enunciado: "O aumento da relevância dos minerais críticos nas relações internacionais reduz a importância geopolítica de países detentores de grandes reservas minerais, uma vez que a transição energética depende do avanço tecnológico e não da disponibilidade de recursos naturais.",
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "reduz a importância geopolítica",
@@ -683,7 +683,7 @@ const QUESTOES_PCAL_LOTE52 = [
   {
     id: "AT-035", disciplina: "Atualidades", assunto: "Segurança Internacional", subassunto: "Política de segurança de Bukele (El Salvador)",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (Atualidades 2025/2026, adaptado de material de revisão)",
+    origem: "Inédita — estilo CEBRASPE (Atualidades 2025/2026, adaptado de material de revisão); também nos QAPs DSO (Atualidades, Davi Costa — caderno Internacional, item 11)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.8,
     enunciado: "A política de segurança implementada pelo presidente Nayib Bukele em El Salvador baseia-se, entre outros aspectos, no estado de exceção, em prisões em massa e no enfraquecimento operacional de facções criminosas, medidas que contribuíram para a expressiva redução dos índices de homicídio no país.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "estado de exceção",
@@ -702,7 +702,7 @@ const QUESTOES_PCAL_LOTE52 = [
   {
     id: "AT-036", disciplina: "Atualidades", assunto: "Segurança Internacional", subassunto: "Crime organizado transnacional",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (Atualidades 2025/2026, adaptado de material de revisão)",
+    origem: "Inédita — estilo CEBRASPE (Atualidades 2025/2026, adaptado de material de revisão); também nos QAPs DSO (Atualidades, Davi Costa — caderno Internacional, item 12)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.85,
     enunciado: "O combate contemporâneo ao crime organizado internacional envolve exclusivamente ações policiais internas, sem necessidade de cooperação entre Estados, troca de inteligência ou coordenação para enfrentar redes transnacionais de tráfico de drogas, armas e pessoas.",
     gabarito: "E", pegadinha: "restricao-indevida", palavraChave: "exclusivamente ações policiais internas",
@@ -721,7 +721,7 @@ const QUESTOES_PCAL_LOTE52 = [
   {
     id: "AT-037", disciplina: "Atualidades", assunto: "Segurança Internacional", subassunto: "Crime organizado transnacional",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (Atualidades 2025/2026, adaptado de material de revisão)",
+    origem: "Inédita — estilo CEBRASPE (Atualidades 2025/2026, adaptado de material de revisão); também nos QAPs DSO (Atualidades, Davi Costa — caderno Internacional, item 13)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.8,
     enunciado: "A crescente atuação de facções criminosas em mais de um país reforça a percepção de que a criminalidade organizada deixou de ser apenas um problema de segurança pública interna, assumindo também relevância geopolítica e de segurança internacional.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "relevância geopolítica",
@@ -742,7 +742,7 @@ const QUESTOES_PCAL_LOTE52 = [
   {
     id: "AT-038", disciplina: "Atualidades", assunto: "Capitalismo de Plataforma e Tecnologia", subassunto: "Modelo de negócio das plataformas digitais",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (Atualidades 2025/2026, adaptado de material de revisão)",
+    origem: "Inédita — estilo CEBRASPE (Atualidades 2025/2026, adaptado de material de revisão); também nos QAPs DSO (Atualidades, Davi Costa — caderno Internacional, item 14)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.8,
     enunciado: "No capitalismo de plataforma, empresas digitais atuam como intermediárias entre prestadores de serviços e consumidores, obtendo vantagens econômicas por meio do controle de dados, algoritmos e redes de usuários, mesmo sem necessariamente possuir os ativos físicos utilizados na prestação do serviço.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "sem necessariamente possuir os ativos físicos",
@@ -761,7 +761,7 @@ const QUESTOES_PCAL_LOTE52 = [
   {
     id: "AT-039", disciplina: "Atualidades", assunto: "Capitalismo de Plataforma e Tecnologia", subassunto: "Uberização do trabalho",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (Atualidades 2025/2026, adaptado de material de revisão)",
+    origem: "Inédita — estilo CEBRASPE (Atualidades 2025/2026, adaptado de material de revisão); também nos QAPs DSO (Atualidades, Davi Costa — caderno Internacional, item 15)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.85,
     enunciado: "A chamada uberização do trabalho está associada ao aumento da formalização das relações trabalhistas, garantindo estabilidade contratual e ampliação automática dos direitos sociais dos trabalhadores.",
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "aumento da formalização",
@@ -780,7 +780,7 @@ const QUESTOES_PCAL_LOTE52 = [
   {
     id: "AT-040", disciplina: "Atualidades", assunto: "Capitalismo de Plataforma e Tecnologia", subassunto: "Terciarização da economia",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (Atualidades 2025/2026, adaptado de material de revisão)",
+    origem: "Inédita — estilo CEBRASPE (Atualidades 2025/2026, adaptado de material de revisão); também nos QAPs DSO (Atualidades, Davi Costa — caderno Internacional, item 16)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.75,
     enunciado: "O avanço do setor de serviços nas economias contemporâneas, processo conhecido como terciarização, está relacionado tanto à difusão das tecnologias da informação quanto à crescente importância das atividades financeiras, logísticas, educacionais, de saúde e de entretenimento.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "terciarização",
@@ -799,7 +799,7 @@ const QUESTOES_PCAL_LOTE52 = [
   {
     id: "AT-041", disciplina: "Atualidades", assunto: "Capitalismo de Plataforma e Tecnologia", subassunto: "Algoritmos e redes sociais",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (Atualidades 2025/2026, adaptado de material de revisão)",
+    origem: "Inédita — estilo CEBRASPE (Atualidades 2025/2026, adaptado de material de revisão); também nos QAPs DSO (Atualidades, Davi Costa — caderno Internacional, item 17)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.8,
     enunciado: "Nas redes sociais digitais, os algoritmos possuem papel relevante na seleção e organização dos conteúdos visualizados pelos usuários, podendo influenciar padrões de consumo, comportamento político e circulação de informações.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "algoritmos",
@@ -818,7 +818,7 @@ const QUESTOES_PCAL_LOTE52 = [
   {
     id: "AT-042", disciplina: "Atualidades", assunto: "Capitalismo de Plataforma e Tecnologia", subassunto: "Conceito de Big Data",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (Atualidades 2025/2026, adaptado de material de revisão)",
+    origem: "Inédita — estilo CEBRASPE (Atualidades 2025/2026, adaptado de material de revisão); também nos QAPs DSO (Atualidades, Davi Costa — caderno Internacional, item 18)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.8,
     enunciado: "O conceito de Big Data refere-se apenas ao armazenamento de grandes quantidades de dados, não possuindo relação com questões ambientais, econômicas ou de governança pública.",
     gabarito: "E", pegadinha: "restricao-indevida", palavraChave: "refere-se apenas ao armazenamento",
@@ -839,7 +839,7 @@ const QUESTOES_PCAL_LOTE52 = [
   {
     id: "AT-043", disciplina: "Atualidades", assunto: "Oriente Médio", subassunto: "Israel, Irã e atores não estatais",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (Atualidades 2025/2026, adaptado de material de revisão)",
+    origem: "Inédita — estilo CEBRASPE (Atualidades 2025/2026, adaptado de material de revisão); também nos QAPs DSO (Atualidades, Davi Costa — caderno Internacional, item 19)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 60, probReaparecer: 0.75,
     enunciado: "A intensificação dos confrontos entre Israel e grupos armados apoiados pelo Irã evidencia uma contradição estratégica: embora Teerã utilize atores não estatais como instrumento de projeção regional de poder, sua doutrina de segurança permanece baseada exclusivamente na dissuasão indireta, excluindo a possibilidade de ações militares conduzidas diretamente por forças iranianas contra o território israelense.",
     gabarito: "E", pegadinha: "restricao-indevida", palavraChave: "exclusivamente na dissuasão indireta",
