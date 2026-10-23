@@ -672,6 +672,7 @@ const QUESTOES_PCAL_LOTE96 = [
 
   {
     ...CE96,
+    origem: "Material do usuário — Exercícios de Fixação: Princípios do Direito Penal (CERTO/ERRADO, redação original); item da CEBRASPE, MPE-SC 2021 (Promotor de Justiça), segundo o QAP DSO, com o mesmo gabarito",
     id: "DP-157", subassunto: "EF-DP05 — alteridade e tentativa de suicídio",
     dificuldade: 3, tempoIdealSeg: 70,
     enunciado: "Nenhum dos princípios que regem o direito penal veda a criminalização, pelo legislador, da tentativa de suicídio, embora, no momento, esta conduta não esteja tipificada.",
@@ -691,6 +692,7 @@ const QUESTOES_PCAL_LOTE96 = [
 
   {
     ...CE96,
+    origem: "Material do usuário — Exercícios de Fixação: Princípios do Direito Penal (CERTO/ERRADO, redação original); item da CEBRASPE, PC-SE 2018 (Delegado), segundo o QAP DSO, com o mesmo gabarito",
     id: "DP-158", subassunto: "EF-DP06 — lei em sentido material × formal",
     dificuldade: 3, tempoIdealSeg: 70,
     enunciado: "Em razão do princípio da legalidade penal, a tipificação de conduta como crime deve ser feita por meio de lei em sentido material, não se exigindo, em regra, a lei em sentido formal.",
