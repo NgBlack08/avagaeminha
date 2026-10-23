@@ -92,7 +92,7 @@ const DNA_BANCA = [
   { slug: "restricao-indevida", nome: "Restrição indevida", atencao: "media",
     desc: "A banca pega uma regra ampla e a restringe ('somente durante o dia', 'apenas mediante mandado'). O conteúdo parece correto, mas o recorte torna a frase falsa.",
     gatilho: "Pergunte: a lei realmente limita a isso, ou há outras hipóteses?" },
-  { slug: "verdade-mais-falso", nome: "Verdade + falso emendado", atencao: "baixa",
+  { slug: "verdade-mais-falso", nome: "Verdade + falso emendado", atencao: "media",
     desc: "Inicia com afirmação verdadeira e emenda uma conclusão falsa. O candidato valida o início e 'carrega' a confiança para o fim.",
     gatilho: "Julgue cada oração separadamente. Uma parte falsa torna TUDO errado." },
   { slug: "exigencia-inexistente", nome: "Exigência inexistente", atencao: "baixa",

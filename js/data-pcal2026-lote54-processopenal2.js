@@ -75,7 +75,7 @@ const QUESTOES_PCAL_LOTE54 = [
   {
     id: "PP-074", disciplina: "Processo Penal", assunto: "Princípios constitucionais do processo penal", subassunto: "Inadmissibilidade das provas ilícitas",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (CF, art. 5º, LVI; CPP, art. 157; princípio da proporcionalidade)",
+    origem: "Inédita — estilo CEBRASPE (CF, art. 5º, LVI; CPP, art. 157; princípio da proporcionalidade); o texto coincide com item de prova dos QAPs DSO — CESPE - 2018 - STM - Analista Judiciário - Área Judiciária",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.85,
     enunciado: "A despeito do princípio constitucional da vedação às provas ilícitas, o juiz poderá considerar uma prova ilícita em qualquer situação, desde que se convença de sua importância para a condenação do réu.",
     gabarito: "E", pegadinha: "generalizacao", palavraChave: "em qualquer situação",
@@ -153,7 +153,7 @@ const QUESTOES_PCAL_LOTE54 = [
   {
     id: "PP-078", disciplina: "Processo Penal", assunto: "Disposições preliminares", subassunto: "Territorialidade da lei processual penal (CPP, art. 1º)",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (CPP, art. 1º; CF, art. 52, I)",
+    origem: "Inédita — estilo CEBRASPE (CPP, art. 1º; CF, art. 52, I); o texto coincide com item de prova dos QAPs DSO — CESPE - 2018 - STJ - Analista Judiciário - Oficial de Justiça Avaliador Federal",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 60, probReaparecer: 0.85,
     enunciado: "O Código de Processo Penal será aplicado a todas as ações penais e correlatas que tiverem curso no território nacional, nelas incluídas as destinadas a apurar crime de responsabilidade cometido pelo presidente da República.",
     gabarito: "E", pegadinha: "generalizacao", palavraChave: "nelas incluídas",
@@ -210,7 +210,7 @@ const QUESTOES_PCAL_LOTE54 = [
   {
     id: "PP-081", disciplina: "Processo Penal", assunto: "Disposições preliminares", subassunto: "Aplicação imediata e isolamento dos atos processuais",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (CPP, art. 2º)",
+    origem: "Inédita — estilo CEBRASPE (CPP, art. 2º); o texto coincide com item de prova dos QAPs DSO — CESPE - 2017 - TRF 1ª Região - Técnico Judiciário",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.85,
     enunciado: "A lei processual penal deverá ser aplicada imediatamente, sem que isso prejudique a validade dos atos realizados sob a vigência da lei anterior, tampouco constitua ofensa ao princípio da irretroatividade.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "sem prejuízo da validade dos atos",

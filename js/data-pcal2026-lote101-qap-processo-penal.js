@@ -9,10 +9,12 @@
 
    CONTAGEM
      55 itens nos cadernos de Processo Penal
-     -8  repetições internas
-     -12 já estavam no banco (PP-071, 073, 074, 077 a 081, 111 e 112;
-         alguns aparecem em mais de um caderno), não duplicados
-     = 35 itens novos, PP-116 em diante.
+     -10 repetições internas
+     -5  já estavam no banco com o mesmo texto: PP-074, PP-078, PP-081 (inéditas
+         do QuestLab com redação igual à do item real) e PP-111, PP-112
+     = 40 itens novos, PP-116 a PP-155. Os cinco últimos (PP-151 a 155)
+       entraram depois: eram itens reais parecidos com inéditas do banco
+       (PP-071, 077, 079, 080 e 073), mas não o mesmo item.
 
    Nenhuma divergência de gabarito encontrada contra o CPP vigente.
    Atenção a dois pontos de vigência que os comentários tratam: a vedação da
@@ -852,6 +854,124 @@ const QUESTOES_PCAL_LOTE101 = [
       macete: "Reincidente, orcrim armada, milícia, arma restrita: o CPP manda denegar a liberdade provisória.",
       erroComum: "Aplicar ao caso a jurisprudência geral contra vedações abstratas e ignorar o texto do § 2º.",
       comoBancaPensa: "Cobra a letra de um dispositivo novo que contraria a tendência jurisprudencial.",
+    },
+  },
+
+  /* ===== ACRÉSCIMOS — PRINCÍPIOS E LEI NO TEMPO ===== */
+
+  {
+    ...BASE101,
+    id: "PP-151", assunto: "Princípios constitucionais do processo penal",
+    subassunto: "Contraditório, ampla defesa e acesso aos elementos documentados",
+    origem: "CESPE / CEBRASPE - 2025 - MPE-CE - Analista Ministerial (Direito) — QAP DSO (Direitos), gabarito do material",
+    dificuldade: 2, tempoIdealSeg: 65,
+    enunciado: "Os princípios do contraditório e da ampla defesa asseguram o direito de o acusado ser ouvido e de apresentar provas, bem como o direito de acesso aos elementos que, já documentados em procedimento investigatório realizado por órgão competente, digam respeito ao exercício do direito de defesa.",
+    gabarito: "C",
+    pegadinha: "juris-mais-lei",
+    palavraChave: "já documentados",
+    cognitivo: {
+      motivo: "Unir o conteúdo clássico da ampla defesa à Súmula Vinculante 14.",
+      palavraCritica: "já documentados",
+    },
+    comentario: {
+      resolucao: "CERTO. O contraditório e a ampla defesa (CF, art. 5º, LV) asseguram ao acusado participar do processo, ser ouvido e produzir provas. A parte final do item reproduz a Súmula Vinculante 14 do STF: é direito do defensor, no interesse do representado, ter acesso amplo aos elementos de prova que, JÁ DOCUMENTADOS em procedimento investigatório realizado por órgão com competência de polícia judiciária, digam respeito ao exercício do direito de defesa. O 'já documentados' é o limite: diligências em curso (uma interceptação ainda em andamento, por exemplo) podem ser preservadas.",
+      fundamento: "CF, art. 5º, LV; STF, Súmula Vinculante 14.",
+      macete: "SV 14: acesso ao que já está no papel, não ao que ainda está acontecendo.",
+      erroComum: "Achar que o defensor pode acessar diligências ainda em curso.",
+      comoBancaPensa: "Mistura princípio constitucional e súmula vinculante numa frase longa e correta.",
+    },
+  },
+
+  {
+    ...BASE101,
+    id: "PP-152", assunto: "Princípios constitucionais do processo penal",
+    subassunto: "Juiz natural",
+    origem: "CESPE - 2018 - STM - Analista Judiciário - Área Judiciária — QAP DSO (Direitos), gabarito do material",
+    dificuldade: 1, tempoIdealSeg: 40,
+    enunciado: "Ninguém será processado nem sentenciado, senão pela autoridade competente, em respeito ao princípio constitucional do juiz natural.",
+    gabarito: "C",
+    pegadinha: "literalidade",
+    palavraChave: "autoridade competente",
+    cognitivo: {
+      motivo: "Reconhecer o art. 5º, LIII, como expressão do juiz natural.",
+      palavraCritica: "juiz natural",
+    },
+    comentario: {
+      resolucao: "CERTO. É a redação do art. 5º, LIII, da CF: 'ninguém será processado nem sentenciado senão pela autoridade competente'. Junto com o inciso XXXVII ('não haverá juízo ou tribunal de exceção'), forma o princípio do juiz natural: o julgador deve estar previamente definido por regras gerais de competência, anteriores ao fato.",
+      fundamento: "CF, art. 5º, XXXVII e LIII.",
+      macete: "Juiz natural = juiz definido antes do fato, por regra geral.",
+      erroComum: "Confundir com o princípio do promotor natural, que a doutrina extrai do mesmo inciso.",
+      comoBancaPensa: "Literalidade constitucional cobrada sem armadilha.",
+    },
+  },
+
+  {
+    ...BASE101,
+    id: "PP-153", assunto: "Disposições preliminares",
+    subassunto: "Aplicação imediata da lei processual",
+    origem: "CESPE - 2021 - Polícia Civil -DF - Agente de Polícia — QAP DSO (Direitos), gabarito do material",
+    dificuldade: 1, tempoIdealSeg: 45,
+    enunciado: "Uma norma processual penal só terá aplicabilidade aos crimes que forem praticados após sua entrada em vigor.",
+    gabarito: "E",
+    pegadinha: "troca-conceito",
+    palavraChave: "aos crimes que forem praticados após",
+    cognitivo: {
+      motivo: "Separar o marco da lei processual (o ato processual) do marco da lei penal (o fato).",
+      palavraCritica: "crimes que forem praticados",
+    },
+    comentario: {
+      resolucao: "ERRADO. A lei processual penal aplica-se DESDE LOGO, aos processos em curso, ainda que o crime tenha sido praticado antes dela (CPP, art. 2º). O marco temporal é o ato processual a ser praticado, não a data do crime. Os atos já realizados sob a lei anterior continuam válidos. O critério da data do fato é o da lei PENAL. (As normas mistas, com conteúdo penal e processual, seguem a regra da lei penal mais benéfica.)",
+      fundamento: "CPP, art. 2º.",
+      macete: "Lei processual nova: vale para os próximos atos, seja qual for a data do crime.",
+      erroComum: "Aplicar à lei processual a irretroatividade da lei penal.",
+      comoBancaPensa: "Usa o critério da lei penal (data do crime) numa afirmação sobre lei processual.",
+    },
+  },
+
+  {
+    ...BASE101,
+    concurso: "PCAL", ano: 2021,
+    id: "PP-154", assunto: "Disposições preliminares",
+    subassunto: "Lei processual mais benéfica não renova atos",
+    origem: "CEBRASPE PC-AL 2021 (Escrivão) — caderno: CESPE - 2021 - PCAL - Escrivão de Polícia — QAP DSO (Direitos), gabarito do material",
+    dificuldade: 1, tempoIdealSeg: 50,
+    enunciado: "Em relação ao processo penal, lei nova mais benéfica, quando modifica procedimentos no processo penal, retroage e impõe a renovação dos atos já praticados.",
+    gabarito: "E",
+    pegadinha: "verdade-mais-falso",
+    palavraChave: "retroage e impõe a renovação",
+    cognitivo: {
+      motivo: "Lembrar que a lei processual não retroage nem anula o que já foi feito, ainda que benéfica.",
+      palavraCritica: "renovação dos atos",
+    },
+    comentario: {
+      resolucao: "ERRADO. A lei que muda procedimento é processual e segue o art. 2º do CPP: aplica-se desde logo, SEM PREJUÍZO DA VALIDADE DOS ATOS REALIZADOS sob a vigência da lei anterior. Não há retroatividade nem renovação de atos, ainda que a lei nova seja mais favorável à defesa. A retroatividade benéfica é regra da lei penal (CF, art. 5º, XL).",
+      fundamento: "CPP, art. 2º; CF, art. 5º, XL.",
+      macete: "Procedimento novo não refaz o processo velho.",
+      erroComum: "Achar que 'mais benéfica' faz a lei processual retroagir.",
+      comoBancaPensa: "Junta a ideia correta (lei benéfica) a um efeito que só vale para lei penal.",
+    },
+  },
+
+  {
+    ...BASE101,
+    id: "PP-155", assunto: "Princípios constitucionais do processo penal",
+    subassunto: "Produção antecipada de provas — art. 366 e Súmula 455 do STJ",
+    origem: "CESPE / CEBRASPE - 2025 - MPE-CE - Analista Ministerial - Especialidade: Direito — QAP DSO (Direitos), gabarito do material",
+    dificuldade: 3, tempoIdealSeg: 70,
+    enunciado: "Considerando os aspectos legais previstos no Código de Processo Penal, viola o princípio da ampla defesa decisão que determine a produção antecipada de provas nos casos em que o acusado, citado por edital, não compareça nem constitua advogado.",
+    gabarito: "E",
+    pegadinha: "juris-mais-lei",
+    palavraChave: "viola o princípio da ampla defesa",
+    cognitivo: {
+      motivo: "Saber que o art. 366 autoriza a prova antecipada, desde que fundamentada na urgência.",
+      palavraCritica: "viola",
+    },
+    comentario: {
+      resolucao: "ERRADO. O art. 366 do CPP prevê que, se o acusado citado por edital não comparecer nem constituir advogado, ficam suspensos o processo e o prazo prescricional, PODENDO O JUIZ DETERMINAR A PRODUÇÃO ANTECIPADA DAS PROVAS CONSIDERADAS URGENTES. Não há violação da ampla defesa na previsão em si. O limite está na Súmula 455 do STJ: a decisão deve ser concretamente fundamentada, não a justificando unicamente o mero decurso do tempo. Fundamentada, é válida — e há defensor nomeado para acompanhar o ato.",
+      fundamento: "CPP, art. 366; STJ, Súmula 455.",
+      macete: "Réu revel citado por edital: processo suspenso, prova urgente pode ser antecipada, com fundamento concreto.",
+      erroComum: "Concluir que qualquer prova sem o réu viola a ampla defesa.",
+      comoBancaPensa: "Generaliza para 'viola' o que a lei autoriza com condição.",
     },
   },
 
