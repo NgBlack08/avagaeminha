@@ -219,7 +219,7 @@ const QUESTOES_PCAL_LOTE64 = [
   {
     id: "TI-117", disciplina: "TI e Segurança Cibernética", assunto: "Sistemas operacionais", subassunto: "Linux — gerenciamento de processos",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (padrão de literalidade técnica)",
+    origem: "Inédita — estilo CEBRASPE (padrão de literalidade técnica); o ponto coincide com item dos QAPs DSO (TI, Ricardo Beck — caderno Linux, questão 5)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 60, probReaparecer: 0.86,
     enunciado: "No Linux, o comando ps apresenta um retrato estático dos processos no instante da execução, ao passo que utilitários como top e htop atualizam periodicamente a exibição, permitindo acompanhar consumo de CPU e memória em tempo real.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "retrato estático ... atualizam periodicamente",
@@ -415,7 +415,7 @@ const QUESTOES_PCAL_LOTE64 = [
   {
     id: "TI-127", disciplina: "TI e Segurança Cibernética", assunto: "Sistemas operacionais", subassunto: "Linux — gerenciamento de pacotes",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (padrão de literalidade técnica)",
+    origem: "Inédita — estilo CEBRASPE (padrão de literalidade técnica); o ponto coincide com item dos QAPs DSO (TI, Ricardo Beck — caderno Linux, questão 7)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 60, probReaparecer: 0.85,
     enunciado: "O apt é o gerenciador de pacotes de alto nível típico das distribuições derivadas do Debian, enquanto o yum e seu sucessor dnf cumprem papel equivalente em distribuições da família Red Hat, todos capazes de obter e aplicar correções de segurança a partir de repositórios oficiais.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "apt ... Debian ... yum e seu sucessor dnf ... Red Hat",
@@ -453,7 +453,7 @@ const QUESTOES_PCAL_LOTE64 = [
   {
     id: "TI-129", disciplina: "TI e Segurança Cibernética", assunto: "Sistemas operacionais", subassunto: "Linux — atualização do kernel",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (padrão de generalização)",
+    origem: "Inédita — estilo CEBRASPE (padrão de generalização); o ponto coincide com item dos QAPs DSO (TI, Ricardo Beck — caderno Linux, questão 6)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 80, probReaparecer: 0.83,
     enunciado: "No Linux, a aplicação de atualizações de segurança nunca demanda a reinicialização do sistema, já que o modelo modular do kernel permite substituir em tempo de execução qualquer componente atualizado.",
     gabarito: "E", pegadinha: "generalizacao", palavraChave: "nunca demanda a reinicialização ... qualquer componente",
@@ -493,7 +493,7 @@ const QUESTOES_PCAL_LOTE64 = [
   {
     id: "TI-131", disciplina: "TI e Segurança Cibernética", assunto: "Sistemas operacionais", subassunto: "Linux — comandos de rede",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (padrão de troca de sujeito)",
+    origem: "Inédita — estilo CEBRASPE (padrão de troca de sujeito); o ponto coincide com item dos QAPs DSO (TI, Ricardo Beck — caderno Linux, questão 8)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 60, probReaparecer: 0.88,
     enunciado: "Em distribuições Linux, o comando ipconfig exibe as configurações das interfaces de rede, ao passo que, no Windows, essa mesma função cabe ao comando ifconfig.",
     gabarito: "E", pegadinha: "troca-sujeito", palavraChave: "Linux ... ipconfig ... Windows ... ifconfig",
@@ -571,7 +571,7 @@ const QUESTOES_PCAL_LOTE64 = [
   {
     id: "TI-135", disciplina: "TI e Segurança Cibernética", assunto: "Sistemas operacionais", subassunto: "Android — SELinux",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (padrão de troca de conceitos)",
+    origem: "Inédita — estilo CEBRASPE (padrão de troca de conceitos); o ponto coincide com item dos QAPs DSO (TI, Ricardo Beck — caderno Linux, questão 1)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 80, probReaparecer: 0.85,
     enunciado: "Nas versões estáveis do Android a partir da 5.0, o SELinux permanece em modo permissivo, limitando-se a registrar em log as violações de política, sem bloquear efetivamente os acessos indevidos.",
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "permanece em modo permissivo ... sem bloquear efetivamente",
@@ -611,7 +611,7 @@ const QUESTOES_PCAL_LOTE64 = [
   {
     id: "TI-137", disciplina: "TI e Segurança Cibernética", assunto: "Sistemas operacionais", subassunto: "Android — sistema de arquivos",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (padrão de troca de conceitos)",
+    origem: "Inédita — estilo CEBRASPE (padrão de troca de conceitos); o ponto coincide com item dos QAPs DSO (TI, Ricardo Beck — caderno Linux, questão 2)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 60, probReaparecer: 0.84,
     enunciado: "O Android adota o NTFS como sistema de arquivos padrão de sua partição de dados, escolha justificada pelo suporte nativo desse sistema a permissões granulares e pela compatibilidade com mídias removíveis.",
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "NTFS como sistema de arquivos padrão",
@@ -630,7 +630,7 @@ const QUESTOES_PCAL_LOTE64 = [
   {
     id: "TI-138", disciplina: "TI e Segurança Cibernética", assunto: "Sistemas operacionais", subassunto: "Android — gerenciamento de aplicativos",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (padrão de literalidade técnica)",
+    origem: "Inédita — estilo CEBRASPE (padrão de literalidade técnica); o ponto coincide com item dos QAPs DSO (TI, Ricardo Beck — caderno Linux, questão 3)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 65, probReaparecer: 0.82,
     enunciado: "No Android, o PackageManager responde pela instalação, atualização e remoção de aplicativos, verificando a assinatura digital do pacote .apk, de modo que uma atualização só é aceita se estiver assinada com a mesma chave do aplicativo já instalado.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "assinatura digital ... mesma chave do aplicativo já instalado",

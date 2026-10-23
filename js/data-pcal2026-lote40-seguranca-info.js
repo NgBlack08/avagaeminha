@@ -20,7 +20,7 @@ const QUESTOES_PCAL_LOTE40 = [
   {
     id: "TI-034", disciplina: "TI e Segurança Cibernética", assunto: "Malwares", subassunto: "Worm (autopropagação)",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Segurança da Informação)",
+    origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Segurança da Informação); o ponto coincide com item dos QAPs DSO (TI, Ricardo Beck — caderno Segurança, questão 3)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.86,
     enunciado: "O worm é um tipo de praga virtual capaz de se replicar e se propagar automaticamente de um computador para outro através da rede, explorando vulnerabilidades dos sistemas, sem depender de um arquivo hospedeiro ou da ação direta do usuário.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "autopropagação automática ... sem arquivo hospedeiro",
@@ -39,7 +39,7 @@ const QUESTOES_PCAL_LOTE40 = [
   {
     id: "TI-035", disciplina: "TI e Segurança Cibernética", assunto: "Malwares", subassunto: "Worm (autopropagação)",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Segurança da Informação)",
+    origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Segurança da Informação); o ponto coincide com item dos QAPs DSO (TI, Ricardo Beck — caderno Segurança, questão 4)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.84,
     enunciado: "O worm é um programa incapaz de se propagar automaticamente pelas redes de computadores, sendo necessário que sua disseminação ocorra por meio de dispositivos de mídia removível, como pendrives.",
     gabarito: "E", pegadinha: "termo-absoluto", palavraChave: "incapaz ... mídia removível",
@@ -77,7 +77,7 @@ const QUESTOES_PCAL_LOTE40 = [
   {
     id: "TI-037", disciplina: "TI e Segurança Cibernética", assunto: "Malwares", subassunto: "Trojan (cavalo de Troia)",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Segurança da Informação)",
+    origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Segurança da Informação); o ponto coincide com item dos QAPs DSO (TI, Ricardo Beck — caderno Segurança, questão 6)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 60, probReaparecer: 0.82,
     enunciado: "O cavalo de Troia (trojan), entre outras ações maliciosas que pode desencadear, propaga-se automaticamente pela rede, enviando cópias de seu próprio código por e-mail para outros dispositivos, de modo que impressoras, roteadores e aparelhos conectados por Bluetooth passam a retransmitir o código malicioso.",
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "propaga-se automaticamente pela rede",
@@ -115,7 +115,7 @@ const QUESTOES_PCAL_LOTE40 = [
   {
     id: "TI-039", disciplina: "TI e Segurança Cibernética", assunto: "Malwares", subassunto: "Ransomware × spyware",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Segurança da Informação)",
+    origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Segurança da Informação); o ponto coincide com item dos QAPs DSO (TI, Ricardo Beck — caderno Segurança, questão 1)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.88,
     enunciado: "O ransomware é uma praga virtual que tem como principal característica capturar dados pessoais do usuário para utilizá-los no envio de mensagens de spam, sem solicitar qualquer permissão.",
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "capturar dados pessoais ... enviar spam",
@@ -136,7 +136,7 @@ const QUESTOES_PCAL_LOTE40 = [
   {
     id: "TI-040", disciplina: "TI e Segurança Cibernética", assunto: "Firewall × antivírus × backup", subassunto: "Firewall (controle de tráfego)",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Segurança da Informação)",
+    origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Segurança da Informação); o ponto coincide com item dos QAPs DSO (TI, Ricardo Beck — caderno Segurança, questão 8)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.86,
     enunciado: "Por meio do recurso de proteção firewall, é possível ao usuário solicitar ao sistema uma verificação de seus arquivos em busca de possíveis códigos maliciosos armazenados no computador.",
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "verificação de seus arquivos",
@@ -174,7 +174,7 @@ const QUESTOES_PCAL_LOTE40 = [
   {
     id: "TI-042", disciplina: "TI e Segurança Cibernética", assunto: "Firewall × antivírus × backup", subassunto: "Recuperação de falhas de armazenamento",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Segurança da Informação)",
+    origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Segurança da Informação); o ponto coincide com item dos QAPs DSO (TI, Ricardo Beck — caderno Segurança, questão 9)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.8,
     enunciado: "Algumas falhas catastróficas no armazenamento de dados podem ser corrigidas por meio da restauração do firewall do computador afetado, uma vez que esse mecanismo também é responsável por preservar cópias dos dados armazenados.",
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "restauração do firewall ... preservar cópias",
@@ -193,7 +193,7 @@ const QUESTOES_PCAL_LOTE40 = [
   {
     id: "TI-043", disciplina: "TI e Segurança Cibernética", assunto: "Firewall × antivírus × backup", subassunto: "Categorias de antimalware",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Segurança da Informação)",
+    origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Segurança da Informação); o ponto coincide com item dos QAPs DSO (TI, Ricardo Beck — caderno Segurança, questão 7)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.78,
     enunciado: "As ferramentas antimalware são programas projetados para identificar, neutralizar ou eliminar códigos maliciosos de um computador, existindo diferentes categorias especializadas, como antivírus, antispyware, antirootkit e antitrojan, cada uma voltada ao combate de um tipo específico de ameaça.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "categorias especializadas ... tipo específico de ameaça",
@@ -214,7 +214,7 @@ const QUESTOES_PCAL_LOTE40 = [
   {
     id: "TI-044", disciplina: "TI e Segurança Cibernética", assunto: "Procedimentos de backup", subassunto: "Backup diferencial",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Segurança da Informação)",
+    origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Segurança da Informação); o ponto coincide com item dos QAPs DSO (TI, Ricardo Beck — caderno Segurança, questão 12)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.86,
     enunciado: "O backup diferencial copia todos os arquivos alterados desde o último backup completo, de modo que, para uma restauração total dos dados, bastam o último backup completo e o último backup diferencial realizado.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "último completo ... último diferencial",
@@ -233,7 +233,7 @@ const QUESTOES_PCAL_LOTE40 = [
   {
     id: "TI-045", disciplina: "TI e Segurança Cibernética", assunto: "Procedimentos de backup", subassunto: "Diferencial × incremental (espaço e velocidade)",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Segurança da Informação)",
+    origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Segurança da Informação); o ponto coincide com item dos QAPs DSO (TI, Ricardo Beck — caderno Segurança, questão 10)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 70, probReaparecer: 0.86,
     enunciado: "Caso um backup completo seja executado aos domingos e, ao longo da semana, sejam executados backups diferenciais diariamente até sábado, a criação desses backups diferenciais será mais rápida e consumirá menos espaço de armazenamento do que se, no lugar deles, fossem adotados backups incrementais ao longo da semana.",
     gabarito: "E", pegadinha: "verdade-mais-falso", palavraChave: "mais rápida ... menos espaço",
@@ -271,7 +271,7 @@ const QUESTOES_PCAL_LOTE40 = [
   {
     id: "TI-047", disciplina: "TI e Segurança Cibernética", assunto: "Procedimentos de backup", subassunto: "Backup incremental",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Segurança da Informação)",
+    origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Segurança da Informação); o ponto coincide com item dos QAPs DSO (TI, Ricardo Beck — caderno Segurança, questão 11)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 60, probReaparecer: 0.82,
     enunciado: "Dentre os tipos usuais de becape, o que mais consome espaço de armazenamento no computador é o backup incremental, por acumular sucessivamente todas as alterações realizadas desde a primeira cópia completa.",
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "incremental ... mais consome espaço",
@@ -290,7 +290,7 @@ const QUESTOES_PCAL_LOTE40 = [
   {
     id: "TI-048", disciplina: "TI e Segurança Cibernética", assunto: "Procedimentos de backup", subassunto: "Backup incremental",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Segurança da Informação)",
+    origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Segurança da Informação); o ponto coincide com item dos QAPs DSO (TI, Ricardo Beck — caderno Segurança, questão 13)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.82,
     enunciado: "O backup incremental, uma vez configurado e executado, realiza uma cópia exata e completa de todos os arquivos e pastas selecionados a cada execução, sendo especialmente indicado para situações em que se necessite de recuperação rápida e integral de dados após falha de hardware.",
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "cópia exata e completa ... recuperação rápida e integral",
@@ -349,7 +349,7 @@ const QUESTOES_PCAL_LOTE40 = [
   {
     id: "TI-051", disciplina: "TI e Segurança Cibernética", assunto: "Computação em nuvem", subassunto: "Nuvem × ransomware",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Segurança da Informação)",
+    origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Segurança da Informação); o ponto coincide com item dos QAPs DSO (TI, Ricardo Beck — caderno Segurança, questão 2)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.84,
     enunciado: "Por serem totalmente imunes a pragas virtuais como o ransomware, os serviços de armazenamento em nuvem eliminam por completo o risco de perda de arquivos decorrente desse tipo de ameaça.",
     gabarito: "E", pegadinha: "termo-absoluto", palavraChave: "totalmente imunes ... eliminam por completo",
@@ -368,7 +368,7 @@ const QUESTOES_PCAL_LOTE40 = [
   {
     id: "TI-052", disciplina: "TI e Segurança Cibernética", assunto: "Computação em nuvem", subassunto: "OneDrive (Arquivos sob Demanda)",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Segurança da Informação)",
+    origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Segurança da Informação); o ponto coincide com item dos QAPs DSO (TI, Ricardo Beck — caderno Segurança, questão 16)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.8,
     enunciado: "O OneDrive, serviço de armazenamento em nuvem da Microsoft, permite a sincronização seletiva de pastas e arquivos do dispositivo local, sendo que, após a sincronização, a cópia local do arquivo é sempre apagada, permanecendo apenas a versão armazenada na nuvem.",
     gabarito: "E", pegadinha: "termo-absoluto", palavraChave: "sempre apagada",
@@ -427,7 +427,7 @@ const QUESTOES_PCAL_LOTE40 = [
   {
     id: "TI-055", disciplina: "TI e Segurança Cibernética", assunto: "Ataques de negação de serviço (DDoS)", subassunto: "DDoS × ransomware (identificação do ataque)",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Segurança da Informação)",
+    origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Segurança da Informação); o ponto coincide com item dos QAPs DSO (TI, Ricardo Beck — caderno Segurança, questão 20)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 70, probReaparecer: 0.88,
     enunciado: "Um incidente de segurança em que um serviço público foi derrubado após receber um volume massivo de conexões simultâneas provenientes de diversos países, com o objetivo de sobrecarregar a infraestrutura e interromper o funcionamento do sistema, pode ser corretamente classificado como um ataque de ransomware.",
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "volume massivo ... classificado como ... ransomware",
@@ -484,7 +484,7 @@ const QUESTOES_PCAL_LOTE40 = [
   {
     id: "TI-058", disciplina: "TI e Segurança Cibernética", assunto: "Tríade CID", subassunto: "Integridade e disponibilidade",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Segurança da Informação)",
+    origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Segurança da Informação); o ponto coincide com item dos QAPs DSO (TI, Ricardo Beck — caderno Segurança, questão 18)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.82,
     enunciado: "O princípio da integridade da informação garante que os dados permaneçam completos e não sejam alterados de forma indevida, ao passo que o princípio da disponibilidade assegura que os sistemas e as informações estejam acessíveis sempre que necessários aos usuários devidamente autorizados.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "não sejam alterados indevidamente ... acessíveis quando necessários",
@@ -503,7 +503,7 @@ const QUESTOES_PCAL_LOTE40 = [
   {
     id: "TI-059", disciplina: "TI e Segurança Cibernética", assunto: "Tríade CID", subassunto: "Confidencialidade, integridade e disponibilidade",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Segurança da Informação)",
+    origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Segurança da Informação); o ponto coincide com item dos QAPs DSO (TI, Ricardo Beck — caderno Segurança, questão 19)",
     tipo: "CE", dificuldade: 1, tempoIdealSeg: 45, probReaparecer: 0.84,
     enunciado: "São considerados atributos básicos e fundamentais da segurança da informação a confidencialidade, a integridade e a disponibilidade, os quais compõem a chamada tríade CID.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "confidencialidade, integridade e disponibilidade ... tríade CID",

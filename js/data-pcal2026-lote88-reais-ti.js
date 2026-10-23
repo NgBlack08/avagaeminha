@@ -276,7 +276,7 @@ const QUESTOES_PCAL_LOTE88 = [
     ...BASE88,
     id: "TI-245", assunto: "Programação",
     subassunto: "Funções lambda em Python",
-    origem: "CEBRASPE PF 2025 (Escrivão) — gabarito revisado na fonte técnica (documentação Python)",
+    origem: "CEBRASPE PF 2025 (Escrivão) — gabarito revisado na fonte técnica (documentação Python); o ponto coincide com item dos QAPs DSO (TI, Ricardo Beck — caderno Python, questão 5)",
     dificuldade: 3, tempoIdealSeg: 85,
     enunciado: "Em Python, a função lambda permite a criação de funções anônimas, que podem ser usadas como argumentos em funções de ordem superior, o que facilita a programação funcional.",
     gabarito: "C",

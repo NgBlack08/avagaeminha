@@ -399,7 +399,7 @@ const QUESTOES_PCAL_LOTE65 = [
   {
     id: "TI-162", disciplina: "TI e Segurança Cibernética", assunto: "Correio eletrônico", subassunto: "Campos Para, Cc e Cco",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (padrão de literalidade técnica)",
+    origem: "Inédita — estilo CEBRASPE (padrão de literalidade técnica); o ponto coincide com item dos QAPs DSO (TI, Ricardo Beck — caderno Correio Eletrônico, questão 7)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.91,
     enunciado: "Os endereços inseridos no campo Cco de uma mensagem recebem cópia dela sem que sejam exibidos aos demais destinatários, ao contrário do que ocorre com os endereços lançados nos campos Para e Cc.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "Cco ... sem que sejam exibidos aos demais destinatários",
@@ -475,7 +475,7 @@ const QUESTOES_PCAL_LOTE65 = [
   {
     id: "TI-166", disciplina: "TI e Segurança Cibernética", assunto: "Correio eletrônico", subassunto: "Encaminhar e responder",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (padrão de exigência inexistente)",
+    origem: "Inédita — estilo CEBRASPE (padrão de exigência inexistente); o ponto coincide com item dos QAPs DSO (TI, Ricardo Beck — caderno Correio Eletrônico, questão 4)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.74,
     enunciado: "Mensagem recebida com documento anexado somente pode ser encaminhada a outro usuário se o anexo for previamente removido, porquanto os protocolos de correio eletrônico vedam, por razões de segurança, o repasse de mensagens com arquivos anexados.",
     gabarito: "E", pegadinha: "exigencia-inexistente", palavraChave: "somente pode ser encaminhada se o anexo for previamente removido ... protocolos ... vedam",
@@ -515,7 +515,7 @@ const QUESTOES_PCAL_LOTE65 = [
   {
     id: "TI-168", disciplina: "TI e Segurança Cibernética", assunto: "Correio eletrônico", subassunto: "Pastas e exclusão de mensagens",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (padrão de termo absoluto)",
+    origem: "Inédita — estilo CEBRASPE (padrão de termo absoluto); o ponto coincide com item dos QAPs DSO (TI, Ricardo Beck — caderno Correio Eletrônico, questão 6)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 55, probReaparecer: 0.83,
     enunciado: "No Microsoft Outlook, todas as mensagens excluídas da Caixa de Entrada são automaticamente redirecionadas para a pasta de lixo eletrônico, onde permanecem até a exclusão definitiva.",
     gabarito: "E", pegadinha: "termo-absoluto", palavraChave: "todas as mensagens excluídas ... redirecionadas para a pasta de lixo eletrônico",
@@ -553,7 +553,7 @@ const QUESTOES_PCAL_LOTE65 = [
   {
     id: "TI-170", disciplina: "TI e Segurança Cibernética", assunto: "Correio eletrônico", subassunto: "Webmail — Gmail",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (padrão de troca numérica)",
+    origem: "Inédita — estilo CEBRASPE (padrão de troca numérica); o ponto coincide com item dos QAPs DSO (TI, Ricardo Beck — caderno Correio Eletrônico, questão 9)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 60, probReaparecer: 0.76,
     enunciado: "As mensagens movidas para a lixeira do Gmail são excluídas em definitivo após sete dias e sete horas, independentemente de qualquer providência do usuário.",
     gabarito: "E", pegadinha: "troca-numerica", palavraChave: "sete dias e sete horas",
@@ -591,7 +591,7 @@ const QUESTOES_PCAL_LOTE65 = [
   {
     id: "TI-172", disciplina: "TI e Segurança Cibernética", assunto: "Correio eletrônico", subassunto: "Webmail — Gmail",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (padrão de literalidade técnica)",
+    origem: "Inédita — estilo CEBRASPE (padrão de literalidade técnica); o ponto coincide com item dos QAPs DSO (TI, Ricardo Beck — caderno Correio Eletrônico, questão 10)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 60, probReaparecer: 0.78,
     enunciado: "No Gmail, é possível inserir na mensagem arquivos hospedados no Google Drive, recurso que permite compartilhar conteúdo que excederia o limite de tamanho previsto para anexos convencionais.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "inserir ... arquivos hospedados no Google Drive ... excederia o limite",
@@ -629,7 +629,7 @@ const QUESTOES_PCAL_LOTE65 = [
   {
     id: "TI-174", disciplina: "TI e Segurança Cibernética", assunto: "Correio eletrônico", subassunto: "Webmail e cliente de e-mail",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (padrão de literalidade técnica)",
+    origem: "Inédita — estilo CEBRASPE (padrão de literalidade técnica); o ponto coincide com item dos QAPs DSO (TI, Ricardo Beck — caderno Correio Eletrônico, questão 2)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.89,
     enunciado: "Os serviços de webmail permitem o acesso às mensagens de correio eletrônico diretamente pelo navegador de Internet, sem que seja necessária a instalação de um programa cliente de e-mail no dispositivo do usuário.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "diretamente pelo navegador ... sem que seja necessária a instalação",
@@ -667,7 +667,7 @@ const QUESTOES_PCAL_LOTE65 = [
   {
     id: "TI-176", disciplina: "TI e Segurança Cibernética", assunto: "Correio eletrônico", subassunto: "Natureza assíncrona do e-mail",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (padrão de troca de conceitos)",
+    origem: "Inédita — estilo CEBRASPE (padrão de troca de conceitos); o ponto coincide com item dos QAPs DSO (TI, Ricardo Beck — caderno Correio Eletrônico, questão 3)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 60, probReaparecer: 0.87,
     enunciado: "O envio de mensagem por correio eletrônico pressupõe que remetente e destinatário estejam simultaneamente conectados à Internet, condição sem a qual a comunicação não se estabelece.",
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "simultaneamente conectados ... sem a qual a comunicação não se estabelece",
@@ -707,7 +707,7 @@ const QUESTOES_PCAL_LOTE65 = [
   {
     id: "TI-178", disciplina: "TI e Segurança Cibernética", assunto: "Correio eletrônico", subassunto: "Microsoft Outlook — contas",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (padrão de literalidade técnica)",
+    origem: "Inédita — estilo CEBRASPE (padrão de literalidade técnica); o ponto coincide com item dos QAPs DSO (TI, Ricardo Beck — caderno Correio Eletrônico, questão 15)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.8,
     enunciado: "O Microsoft Outlook permite configurar, em uma mesma instalação, diversas contas de correio eletrônico de provedores distintos, cada qual com sua estrutura própria de pastas.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "diversas contas ... de provedores distintos ... estrutura própria de pastas",
@@ -726,7 +726,7 @@ const QUESTOES_PCAL_LOTE65 = [
   {
     id: "TI-179", disciplina: "TI e Segurança Cibernética", assunto: "Correio eletrônico", subassunto: "Microsoft Outlook — contas",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (padrão de restrição indevida)",
+    origem: "Inédita — estilo CEBRASPE (padrão de restrição indevida); o ponto coincide com item dos QAPs DSO (TI, Ricardo Beck — caderno Correio Eletrônico, questão 16)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.71,
     enunciado: "O Microsoft Outlook 2010 não admite a configuração de múltiplas contas de correio eletrônico em uma única instalação, ficando o usuário limitado a uma conta por vez.",
     gabarito: "E", pegadinha: "restricao-indevida", palavraChave: "não admite ... limitado a uma conta por vez",
@@ -745,7 +745,7 @@ const QUESTOES_PCAL_LOTE65 = [
   {
     id: "TI-180", disciplina: "TI e Segurança Cibernética", assunto: "Correio eletrônico", subassunto: "Microsoft Outlook — regras",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (padrão de literalidade técnica)",
+    origem: "Inédita — estilo CEBRASPE (padrão de literalidade técnica); o ponto coincide com item dos QAPs DSO (TI, Ricardo Beck — caderno Correio Eletrônico, questão 1/5)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 60, probReaparecer: 0.88,
     enunciado: "O recurso de regras do Microsoft Outlook possibilita automatizar o tratamento das mensagens recebidas, com ações como mover para pastas determinadas, atribuir categorias, sinalizar, encaminhar e responder, segundo critérios definidos pelo próprio usuário.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "mover ... atribuir categorias ... encaminhar e responder ... critérios definidos pelo usuário",
@@ -844,7 +844,7 @@ const QUESTOES_PCAL_LOTE65 = [
   {
     id: "TI-185", disciplina: "TI e Segurança Cibernética", assunto: "Correio eletrônico", subassunto: "Compactação de arquivos para envio",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (padrão de literalidade técnica)",
+    origem: "Inédita — estilo CEBRASPE (padrão de literalidade técnica); o ponto coincide com item dos QAPs DSO (TI, Ricardo Beck — caderno Correio Eletrônico, questão 14)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 60, probReaparecer: 0.73,
     enunciado: "Programas compactadores, como o 7-Zip e o WinRAR, reduzem o tamanho dos arquivos e permitem reuni-los em um único pacote, o que facilita o envio por correio eletrônico, sem que a compactação, por si só, torne o conteúdo inacessível a terceiros.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "reduzem o tamanho ... reuni-los em um único pacote ... sem que a compactação, por si só, torne o conteúdo inacessível",

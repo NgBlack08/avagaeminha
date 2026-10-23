@@ -35,7 +35,7 @@ const QUESTOES_PCAL_LOTE43 = [
   {
     id: "TI-083", disciplina: "TI e Segurança Cibernética", assunto: "Internet e navegação", subassunto: "Navegação anônima/privada",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Internet)",
+    origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Internet); o ponto coincide com item dos QAPs DSO (TI, Ricardo Beck — caderno Internet, questão 1)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.78,
     enunciado: "Ao navegar em abas anônimas (ou privadas), o usuário torna-se completamente irrastreável na Internet, uma vez que esse modo de navegação impede que sites visitados e o provedor de acesso identifiquem as atividades realizadas durante a sessão.",
     gabarito: "E", pegadinha: "termo-absoluto", palavraChave: "completamente irrastreável ... impede que sites ... identifiquem",
@@ -75,7 +75,7 @@ const QUESTOES_PCAL_LOTE43 = [
   {
     id: "TI-085", disciplina: "TI e Segurança Cibernética", assunto: "Computação em nuvem", subassunto: "Nuvem pública — isolamento multi-inquilino",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Internet)",
+    origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Internet); o ponto coincide com item dos QAPs DSO (TI, Ricardo Beck — caderno Internet, questão 2)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 55, probReaparecer: 0.76,
     enunciado: "Os dados de uma organização armazenados em nuvem pública podem ser visualizados por outras organizações que utilizam o mesmo provedor, embora estas não possam alterá-los, uma vez que o caráter 'público' desse modelo de nuvem se estende também à visibilidade dos dados armazenados.",
     gabarito: "E", pegadinha: "verdade-mais-falso", palavraChave: "podem ser visualizados ... caráter 'público' ... se estende ... aos dados",
@@ -96,7 +96,7 @@ const QUESTOES_PCAL_LOTE43 = [
   {
     id: "TI-086", disciplina: "TI e Segurança Cibernética", assunto: "Computação em nuvem", subassunto: "Conceito e características",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Internet)",
+    origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Internet); o ponto coincide com item dos QAPs DSO (TI, Ricardo Beck — caderno Internet, questão 3)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.8,
     enunciado: "A computação em nuvem é um estilo de computação que permite acesso remoto a recursos compartilhados de forma dinâmica e escalável, geralmente via Internet, possibilitando ao usuário provisionar recursos sob demanda, sem a necessidade de investimento prévio em infraestrutura própria dimensionada para o pico de uso.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "acesso remoto ... dinâmica e escalável ... sob demanda",
@@ -136,7 +136,7 @@ const QUESTOES_PCAL_LOTE43 = [
   {
     id: "TI-088", disciplina: "TI e Segurança Cibernética", assunto: "Internet e navegação", subassunto: "Intranet e extranet",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Internet)",
+    origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Internet); o ponto coincide com item dos QAPs DSO (TI, Ricardo Beck — caderno Internet, questão 4)",
     tipo: "CE", dificuldade: 1, tempoIdealSeg: 40, probReaparecer: 0.8,
     enunciado: "A intranet utiliza os mesmos protocolos empregados na Internet, como o TCP/IP e o HTTP, mas constitui uma rede mais restrita, de acesso limitado aos usuários autorizados dentro de uma organização.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "mesmos protocolos ... rede mais restrita",
@@ -195,7 +195,7 @@ const QUESTOES_PCAL_LOTE43 = [
   {
     id: "TI-091", disciplina: "TI e Segurança Cibernética", assunto: "Computação em nuvem", subassunto: "SaaS x PaaS x IaaS",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Internet)",
+    origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Internet); o ponto coincide com item dos QAPs DSO (TI, Ricardo Beck — caderno Internet, questão 5)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 60, probReaparecer: 0.78,
     enunciado: "Na computação em nuvem do tipo software como serviço (SaaS), o provedor oferece infraestrutura e ferramentas de desenvolvimento, permitindo ao cliente desenvolver e gerenciar suas próprias aplicações a partir dessa base fornecida.",
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "software como serviço (SaaS) ... desenvolver e gerenciar suas próprias aplicações",
@@ -216,7 +216,7 @@ const QUESTOES_PCAL_LOTE43 = [
   {
     id: "TI-092", disciplina: "TI e Segurança Cibernética", assunto: "Computação em nuvem", subassunto: "Armazenamento em nuvem (cloud storage)",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Internet)",
+    origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Internet); o ponto coincide com item dos QAPs DSO (TI, Ricardo Beck — caderno Internet, questão 6)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 45, probReaparecer: 0.78,
     enunciado: "O serviço de armazenamento em nuvem permite salvar arquivos, bancos de dados e outras informações em servidores remotos, oferecendo vantagens de acessibilidade e escalabilidade frente aos dispositivos de armazenamento local, ainda que sua disponibilidade dependa da conexão à Internet e da infraestrutura do provedor contratado.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "acessibilidade e escalabilidade ... depende da conexão à Internet",
@@ -275,7 +275,7 @@ const QUESTOES_PCAL_LOTE43 = [
   {
     id: "TI-095", disciplina: "TI e Segurança Cibernética", assunto: "Computação em nuvem", subassunto: "SaaS — responsabilidade do provedor",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Internet)",
+    origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Internet); o ponto coincide com item dos QAPs DSO (TI, Ricardo Beck — caderno Internet, questão 7)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.76,
     enunciado: "No modelo de computação em nuvem SaaS (software as a service), o consumidor tem controle sobre a infraestrutura de rede, os servidores e o sistema operacional, sendo responsável pela instalação, configuração e manutenção das aplicações fornecidas pelo provedor.",
     gabarito: "E", pegadinha: "troca-sujeito", palavraChave: "consumidor tem controle ... responsável pela instalação, configuração e manutenção",
@@ -296,7 +296,7 @@ const QUESTOES_PCAL_LOTE43 = [
   {
     id: "TI-096", disciplina: "TI e Segurança Cibernética", assunto: "Ferramentas de produtividade e acesso remoto", subassunto: "Acesso remoto e suítes de escritório",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Internet)",
+    origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Internet); o ponto coincide com item dos QAPs DSO (TI, Ricardo Beck — caderno Internet, questão 8)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.78,
     enunciado: "Ferramentas como o Microsoft Remote Desktop e o TeamViewer permitem o acesso remoto a computadores, possibilitando inclusive a transferência de arquivos entre as máquinas conectadas, ao passo que suítes como o Microsoft Office e o LibreOffice oferecem compatibilidade entre diversos formatos de documentos, planilhas e apresentações.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "transferência de arquivos ... compatibilidade entre diversos formatos",
@@ -336,7 +336,7 @@ const QUESTOES_PCAL_LOTE43 = [
   {
     id: "TI-098", disciplina: "TI e Segurança Cibernética", assunto: "Ferramentas de produtividade e acesso remoto", subassunto: "Impressão em rede e rastros digitais",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Internet)",
+    origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Internet); o ponto coincide com item dos QAPs DSO (TI, Ricardo Beck — caderno Internet, questão 9)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.78,
     enunciado: "Quando documentos são impressos em uma impressora conectada à rede, é possível, por meio dos registros do servidor de impressão (spooler), resgatar informações como o usuário que solicitou a impressão, a data da impressão, o nome do arquivo impresso e a quantidade de folhas impressas, dados úteis, inclusive, em investigações periciais.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "resgatar informações ... usuário ... data ... nome do arquivo ... quantidade de folhas",
@@ -376,7 +376,7 @@ const QUESTOES_PCAL_LOTE43 = [
   {
     id: "TI-100", disciplina: "TI e Segurança Cibernética", assunto: "Mecanismos de busca", subassunto: "Pesquisa aprimorada e dados estruturados",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Internet)",
+    origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Internet); o ponto coincide com item dos QAPs DSO (TI, Ricardo Beck — caderno Internet, questão 10)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.76,
     enunciado: "A pesquisa do tipo aprimorada do Google pode apresentar resultados ricos que dependem de dados estruturados (marcações do tipo schema) presentes nas páginas indexadas, os quais ajudam o mecanismo de busca a organizar e exibir informações adicionais sobre o conteúdo encontrado.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "dados estruturados ... marcações ... ajudam ... exibir informações adicionais",
@@ -435,7 +435,7 @@ const QUESTOES_PCAL_LOTE43 = [
   {
     id: "TI-103", disciplina: "TI e Segurança Cibernética", assunto: "Mecanismos de busca", subassunto: "Operadores de pesquisa (aspas duplas)",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Internet)",
+    origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Internet); o ponto coincide com item dos QAPs DSO (TI, Ricardo Beck — caderno Internet, questão 11)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 55, probReaparecer: 0.78,
     enunciado: "Ao se usar aspas duplas para delimitar uma frase de pesquisa em motores de busca como o Google, o mecanismo restringe os resultados a páginas que contenham a sequência de palavras idêntica à da frase delimitada, incluindo-se a mesma pontuação e capitalização presentes nos termos de consulta originais.",
     gabarito: "E", pegadinha: "generalizacao", palavraChave: "incluindo-se a mesma pontuação e capitalização",
@@ -475,7 +475,7 @@ const QUESTOES_PCAL_LOTE43 = [
   {
     id: "TI-105", disciplina: "TI e Segurança Cibernética", assunto: "Internet e navegação", subassunto: "Endereço IP, DNS e ARP",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Internet)",
+    origem: "Inédita — estilo CEBRASPE (padrão de provas anteriores em Internet); o ponto coincide com item dos QAPs DSO (TI, Ricardo Beck — caderno Internet, questão 12)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 60, probReaparecer: 0.78,
     enunciado: "Em redes de computadores, o endereço IP é definido como o protocolo responsável pela conversão de nomes de domínio em endereços físicos de dispositivos, função que é desempenhada de forma independente dos protocolos DNS e ARP.",
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "endereço IP é definido como o protocolo responsável pela conversão",

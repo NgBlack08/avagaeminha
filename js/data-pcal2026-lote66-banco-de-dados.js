@@ -36,7 +36,7 @@ const QUESTOES_PCAL_LOTE66 = [
   {
     id: "TI-187", disciplina: "TI e Segurança Cibernética", assunto: "Banco de dados", subassunto: "Dado e informação",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (padrão de literalidade técnica)",
+    origem: "Inédita — estilo CEBRASPE (padrão de literalidade técnica); o ponto coincide com item dos QAPs DSO (TI, Ricardo Beck — caderno Banco de Dados, questão 16)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.79,
     enunciado: "Em processamento de dados, o dado constitui a matéria-prima bruta, ao passo que a informação resulta da organização e do tratamento desses dados de modo a lhes conferir significado para quem os recebe.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "matéria-prima bruta ... organização e tratamento ... significado",
@@ -55,7 +55,7 @@ const QUESTOES_PCAL_LOTE66 = [
   {
     id: "TI-188", disciplina: "TI e Segurança Cibernética", assunto: "Banco de dados", subassunto: "Dados estruturados e não estruturados",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (padrão de generalização)",
+    origem: "Inédita — estilo CEBRASPE (padrão de generalização); o ponto coincide com item dos QAPs DSO (TI, Ricardo Beck — caderno Banco de Dados, questão 1)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 70, probReaparecer: 0.83,
     enunciado: "Por não observarem formato predefinido, os dados não estruturados são mais simples de manipular e de consultar do que os dados estruturados, o que dispensa recursos especializados de processamento.",
     gabarito: "E", pegadinha: "generalizacao", palavraChave: "mais simples de manipular ... dispensa recursos especializados",
@@ -74,7 +74,7 @@ const QUESTOES_PCAL_LOTE66 = [
   {
     id: "TI-189", disciplina: "TI e Segurança Cibernética", assunto: "Banco de dados", subassunto: "Dados estruturados e não estruturados",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (padrão de literalidade técnica)",
+    origem: "Inédita — estilo CEBRASPE (padrão de literalidade técnica); o ponto coincide com item dos QAPs DSO (TI, Ricardo Beck — caderno Banco de Dados, questão 3)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 60, probReaparecer: 0.85,
     enunciado: "Dados estruturados obedecem a esquema rígido definido antes da carga, com campos e tipos determinados, enquanto dados não estruturados não se sujeitam a modelo prévio, sendo típicos os textos livres, as imagens, os áudios e os vídeos.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "esquema rígido definido antes da carga ... textos livres, imagens, áudios e vídeos",
@@ -93,7 +93,7 @@ const QUESTOES_PCAL_LOTE66 = [
   {
     id: "TI-190", disciplina: "TI e Segurança Cibernética", assunto: "Banco de dados", subassunto: "Dados semiestruturados",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (padrão de troca de conceitos)",
+    origem: "Inédita — estilo CEBRASPE (padrão de troca de conceitos); o ponto coincide com item dos QAPs DSO (TI, Ricardo Beck — caderno Banco de Dados, questão 9)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 80, probReaparecer: 0.78,
     enunciado: "Documentos em HTML e em XML classificam-se como dados estruturados, dado que suas marcações definem rigidamente o esquema do conteúdo, de modo equivalente ao que ocorre com as tabelas de um banco de dados relacional.",
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "HTML e XML ... dados estruturados ... equivalente ... tabelas",
@@ -112,7 +112,7 @@ const QUESTOES_PCAL_LOTE66 = [
   {
     id: "TI-191", disciplina: "TI e Segurança Cibernética", assunto: "Banco de dados", subassunto: "Dados não estruturados",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (padrão de termo absoluto)",
+    origem: "Inédita — estilo CEBRASPE (padrão de termo absoluto); o ponto coincide com item dos QAPs DSO (TI, Ricardo Beck — caderno Banco de Dados, questão 4)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 75, probReaparecer: 0.74,
     enunciado: "Em arquiteturas de Big Data, os dados não estruturados não admitem indexação nem consulta direta, sendo obrigatória sua conversão prévia em dados estruturados para que qualquer análise possa ser realizada.",
     gabarito: "E", pegadinha: "termo-absoluto", palavraChave: "não admitem indexação nem consulta direta ... obrigatória sua conversão prévia",
@@ -131,7 +131,7 @@ const QUESTOES_PCAL_LOTE66 = [
   {
     id: "TI-192", disciplina: "TI e Segurança Cibernética", assunto: "Banco de dados", subassunto: "Big Data",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (padrão de generalização)",
+    origem: "Inédita — estilo CEBRASPE (padrão de generalização); o ponto coincide com item dos QAPs DSO (TI, Ricardo Beck — caderno Banco de Dados, questão 10)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 65, probReaparecer: 0.8,
     enunciado: "Big Data consiste unicamente no armazenamento de grandes volumes de dados estruturados em bancos de dados relacionais, mantendo-se fora do conceito os dados não estruturados e semiestruturados.",
     gabarito: "E", pegadinha: "generalizacao", palavraChave: "unicamente ... dados estruturados em bancos de dados relacionais",
@@ -150,7 +150,7 @@ const QUESTOES_PCAL_LOTE66 = [
   {
     id: "TI-193", disciplina: "TI e Segurança Cibernética", assunto: "Banco de dados", subassunto: "Big Data",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (padrão de literalidade técnica)",
+    origem: "Inédita — estilo CEBRASPE (padrão de literalidade técnica); o ponto coincide com item dos QAPs DSO (TI, Ricardo Beck — caderno Banco de Dados, questão 13)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 60, probReaparecer: 0.82,
     enunciado: "Entre os Vs comumente associados ao Big Data, a variedade designa a convivência de diferentes tipos de dados — estruturados, semiestruturados e não estruturados — em um mesmo ambiente analítico.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "variedade ... diferentes tipos de dados",
@@ -171,7 +171,7 @@ const QUESTOES_PCAL_LOTE66 = [
   {
     id: "TI-194", disciplina: "TI e Segurança Cibernética", assunto: "Banco de dados", subassunto: "Data lake",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (padrão de literalidade técnica)",
+    origem: "Inédita — estilo CEBRASPE (padrão de literalidade técnica); o ponto coincide com item dos QAPs DSO (TI, Ricardo Beck — caderno Banco de Dados, questão 5/12)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 75, probReaparecer: 0.76,
     enunciado: "O data lake armazena dados brutos, de origens diversas, em seu formato original, sem a imposição prévia do esquema rígido característico do banco de dados relacional, o que favorece abordagens em que a transformação ocorre após a carga.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "dados brutos ... formato original ... transformação ocorre após a carga",
@@ -209,7 +209,7 @@ const QUESTOES_PCAL_LOTE66 = [
   {
     id: "TI-196", disciplina: "TI e Segurança Cibernética", assunto: "Banco de dados", subassunto: "ETL e ELT",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (padrão de literalidade técnica)",
+    origem: "Inédita — estilo CEBRASPE (padrão de literalidade técnica); o ponto coincide com item dos QAPs DSO (TI, Ricardo Beck — caderno Banco de Dados, questão 11)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 75, probReaparecer: 0.68,
     enunciado: "No processo de ETL, a padronização de formatos, a limpeza de inconsistências e a decomposição de campos com múltiplas ocorrências em registros distintos são atividades próprias da etapa de transformação.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "padronização ... limpeza ... decomposição de campos com múltiplas ocorrências ... etapa de transformação",
@@ -228,7 +228,7 @@ const QUESTOES_PCAL_LOTE66 = [
   {
     id: "TI-197", disciplina: "TI e Segurança Cibernética", assunto: "Banco de dados", subassunto: "OLTP e OLAP",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (padrão de troca de conceitos)",
+    origem: "Inédita — estilo CEBRASPE (padrão de troca de conceitos); o ponto coincide com item dos QAPs DSO (TI, Ricardo Beck — caderno Banco de Dados, questão 8)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 85, probReaparecer: 0.7,
     enunciado: "O data warehouse é orientado à transação, sendo otimizado para inserções e atualizações frequentes de pequeno volume, características que o tornam adequado ao processamento operacional do dia a dia.",
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "data warehouse ... orientado à transação ... processamento operacional",
@@ -249,7 +249,7 @@ const QUESTOES_PCAL_LOTE66 = [
   {
     id: "TI-198", disciplina: "TI e Segurança Cibernética", assunto: "Banco de dados", subassunto: "Relacionamentos e cardinalidade",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (padrão de literalidade técnica)",
+    origem: "Inédita — estilo CEBRASPE (padrão de literalidade técnica); o ponto coincide com item dos QAPs DSO (TI, Ricardo Beck — caderno Banco de Dados, questão 2)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 80, probReaparecer: 0.81,
     enunciado: "O relacionamento de cardinalidade N:N identificado entre duas entidades no modelo lógico exige, na implementação relacional, a criação de uma terceira tabela, que armazena as chaves estrangeiras correspondentes às chaves primárias das duas tabelas originais.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "N:N ... criação de uma terceira tabela ... chaves estrangeiras",
@@ -327,7 +327,7 @@ const QUESTOES_PCAL_LOTE66 = [
   {
     id: "TI-202", disciplina: "TI e Segurança Cibernética", assunto: "Banco de dados", subassunto: "Integridade referencial",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (padrão de literalidade técnica)",
+    origem: "Inédita — estilo CEBRASPE (padrão de literalidade técnica); o ponto coincide com item dos QAPs DSO (TI, Ricardo Beck — caderno Banco de Dados, questão 6)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 65, probReaparecer: 0.87,
     enunciado: "A integridade referencial assegura que todo valor lançado em coluna definida como chave estrangeira corresponda a um valor existente na chave referenciada da outra tabela, o que impede a permanência de registros órfãos.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "chave estrangeira corresponda a um valor existente ... registros órfãos",
@@ -403,7 +403,7 @@ const QUESTOES_PCAL_LOTE66 = [
   {
     id: "TI-206", disciplina: "TI e Segurança Cibernética", assunto: "Banco de dados", subassunto: "Restrições de integridade",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (padrão de generalização)",
+    origem: "Inédita — estilo CEBRASPE (padrão de generalização); o ponto coincide com item dos QAPs DSO (TI, Ricardo Beck — caderno Banco de Dados, questão 25)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 65, probReaparecer: 0.73,
     enunciado: "Restrições de integridade como a chave estrangeira podem ser suprimidas do projeto do banco de dados como técnica corrente de otimização, sem prejuízo à consistência das informações armazenadas.",
     gabarito: "E", pegadinha: "generalizacao", palavraChave: "podem ser suprimidas ... sem prejuízo à consistência",
@@ -481,7 +481,7 @@ const QUESTOES_PCAL_LOTE66 = [
   {
     id: "TI-210", disciplina: "TI e Segurança Cibernética", assunto: "Linguagem SQL", subassunto: "Sublinguagens (DDL, DML, DCL e TCL)",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (padrão de troca de conceitos)",
+    origem: "Inédita — estilo CEBRASPE (padrão de troca de conceitos); o ponto coincide com item dos QAPs DSO (TI, Ricardo Beck — caderno Banco de Dados, questão 18)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 65, probReaparecer: 0.8,
     enunciado: "O comando SELECT integra a DDL, uma vez que lhe cabe definir a estrutura lógica dos dados que serão apresentados ao usuário como resultado da consulta.",
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "SELECT integra a DDL ... definir a estrutura lógica",
@@ -500,7 +500,7 @@ const QUESTOES_PCAL_LOTE66 = [
   {
     id: "TI-211", disciplina: "TI e Segurança Cibernética", assunto: "Linguagem SQL", subassunto: "Comandos de manipulação (DML)",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (padrão de troca de conceitos)",
+    origem: "Inédita — estilo CEBRASPE (padrão de troca de conceitos); o ponto coincide com item dos QAPs DSO (TI, Ricardo Beck — caderno Banco de Dados, questão 26)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.77,
     enunciado: "O comando INSERT INTO destina-se à alteração de valores de registros já existentes na tabela, ao passo que a inclusão de novas linhas é realizada pelo comando UPDATE.",
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "INSERT INTO ... alteração de valores ... UPDATE ... inclusão de novas linhas",
@@ -519,7 +519,7 @@ const QUESTOES_PCAL_LOTE66 = [
   {
     id: "TI-212", disciplina: "TI e Segurança Cibernética", assunto: "Linguagem SQL", subassunto: "Comandos de manipulação (DML)",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (padrão de termo absoluto)",
+    origem: "Inédita — estilo CEBRASPE (padrão de termo absoluto); o ponto coincide com item dos QAPs DSO (TI, Ricardo Beck — caderno Banco de Dados, questão 7)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 70, probReaparecer: 0.82,
     enunciado: "A execução de UPDATE ou de DELETE sem a cláusula WHERE alcança todas as linhas da tabela, razão pela qual tais comandos, executados por engano nessas condições, comprometem a consistência lógica dos dados.",
     gabarito: "C", pegadinha: "termo-absoluto", palavraChave: "sem a cláusula WHERE alcança todas as linhas",
@@ -597,7 +597,7 @@ const QUESTOES_PCAL_LOTE66 = [
   {
     id: "TI-216", disciplina: "TI e Segurança Cibernética", assunto: "Linguagem SQL", subassunto: "LIMIT e OFFSET",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (padrão de verdade seguida de falso)",
+    origem: "Inédita — estilo CEBRASPE (padrão de verdade seguida de falso); o ponto coincide com item dos QAPs DSO (TI, Ricardo Beck — caderno Banco de Dados, questão 15)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 90, probReaparecer: 0.74,
     enunciado: "A execução do comando SELECT * FROM OCORRENCIA LIMIT 10 OFFSET 5 retorna, no máximo, cinco registros, contados a partir do sexto registro do conjunto de resultados.",
     gabarito: "E", pegadinha: "verdade-mais-falso", palavraChave: "no máximo, cinco registros ... a partir do sexto registro",
@@ -635,7 +635,7 @@ const QUESTOES_PCAL_LOTE66 = [
   {
     id: "TI-218", disciplina: "TI e Segurança Cibernética", assunto: "Linguagem SQL", subassunto: "Comparação com NULL",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (padrão de troca de conceitos)",
+    origem: "Inédita — estilo CEBRASPE (padrão de troca de conceitos); o ponto coincide com item dos QAPs DSO (TI, Ricardo Beck — caderno Banco de Dados, questão 19)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 85, probReaparecer: 0.79,
     enunciado: "Considerando que a coluna id_setor admita valor nulo, o comando SELECT nome FROM SERVIDOR WHERE id_setor = NULL retorna os nomes dos servidores que não possuam setor cadastrado.",
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "WHERE id_setor = NULL",
@@ -751,7 +751,7 @@ const QUESTOES_PCAL_LOTE66 = [
   {
     id: "TI-224", disciplina: "TI e Segurança Cibernética", assunto: "Banco de dados", subassunto: "Visões (views)",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (padrão de troca de conceitos)",
+    origem: "Inédita — estilo CEBRASPE (padrão de troca de conceitos); o ponto coincide com item dos QAPs DSO (TI, Ricardo Beck — caderno Banco de Dados, questão 17)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 80, probReaparecer: 0.78,
     enunciado: "A view é uma tabela física estática que duplica, em novo espaço de disco, os dados da tabela de origem a cada nova linha nela inserida, com a finalidade precípua de reforçar a segurança do perímetro de rede.",
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "tabela física estática que duplica ... segurança do perímetro de rede",
