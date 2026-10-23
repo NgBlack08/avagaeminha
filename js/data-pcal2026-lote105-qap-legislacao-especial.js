@@ -20,9 +20,6 @@
      = 90 itens novos, LE-308 em diante.
 
    OBSERVAÇÕES SOBRE GABARITO (o gabarito do QAP foi mantido em todos)
-     - Uso de bens da massa pelo administrador judicial: o item fala em
-       "uso ilegal de bens", nome que a Lei 11.101/2005 não usa; o
-       comentário indica o art. 173.
      - Sentença de falência como condição objetiva de punibilidade: o item
        diz "para que se consume"; o comentário registra a imprecisão.
      - Desvio de bens do idoso por empregado de banco (PC-SE 2018): o
@@ -1148,23 +1145,23 @@ const QUESTOES_PCAL_LOTE105 = [
   {
     ...BASE105,
     id: "LE-355", assunto: "Crimes Falimentares",
-    subassunto: "Uso indevido de bens da massa pelo administrador judicial",
-    origem: "CEBRASPE (CESPE) - 2014 - Analista Legislativo (CAM DEP) /Consultor Legislativo/Área XXII — QAP DSO (Direitos), gabarito do material; gabarito mantido; ver observação no comentário sobre o nome do tipo",
-    dificuldade: 3, tempoIdealSeg: 60,
+    subassunto: "Uso ilegal de bens da massa — art. 174",
+    origem: "CEBRASPE (CESPE) - 2014 - Analista Legislativo (CAM DEP) /Consultor Legislativo/Área XXII — QAP DSO (Direitos), gabarito do material",
+    dificuldade: 2, tempoIdealSeg: 60,
     enunciado: "Relativo aos crimes falimentares, administrador judicial de massa falida que, com justificativa de necessidade pessoal, utilizar-se, diariamente, de veículo pertencente à massa, para transporte de sua família, praticará crime previsto na lei específica como uso ilegal de bens.",
     gabarito: "C",
     pegadinha: "literalidade",
     palavraChave: "uso ilegal de bens",
     cognitivo: {
-      motivo: "Saber que o desvio de bens da massa é crime falimentar mesmo sem apropriação definitiva.",
+      motivo: "Conhecer o tipo do art. 174 da Lei 11.101/2005 e seu nomen iuris.",
       palavraCritica: "praticará crime",
     },
     comentario: {
-      resolucao: "CERTO, segundo o gabarito do material (CEBRASPE, Câmara dos Deputados, 2014). O administrador judicial que usa, para fins pessoais e de modo habitual, bem pertencente à massa desvia o bem da sua destinação e pratica crime da Lei 11.101/2005 — o art. 173 pune apropriar-se, desviar ou ocultar bens pertencentes ao devedor sob recuperação judicial ou à massa falida. OBSERVAÇÃO: a lei não usa o nomen iuris 'uso ilegal de bens'; o enquadramento usual é o do art. 173 (desvio, ocultação ou apropriação de bens).",
-      fundamento: "Lei 11.101/2005, art. 173.",
-      macete: "Administrador que usa o carro da massa para a família: desvio de bem da massa.",
-      erroComum: "Achar que só a apropriação definitiva é crime.",
-      comoBancaPensa: "Usa um nome de crime que não está na lei.",
+      resolucao: "CERTO. O art. 174 da Lei 11.101/2005, cujo nome é 'aquisição, recebimento ou uso ilegal de bens', pune adquirir, receber, USAR, ilicitamente, bem que sabe pertencer à massa falida, ou influir para que terceiro de boa-fé o adquira, receba ou use (reclusão de 2 a 4 anos e multa). O administrador judicial que usa diariamente, em proveito da família, o veículo da massa pratica o uso ilegal, e a justificativa de necessidade pessoal não afasta o crime. Não confundir com o art. 173 (desvio, ocultação ou apropriação de bens), que exige a retirada do bem do patrimônio da massa.",
+      fundamento: "Lei 11.101/2005, arts. 173 e 174.",
+      macete: "Usar o bem da massa já é crime (art. 174); desviar ou se apropriar é o art. 173.",
+      erroComum: "Achar que só a apropriação definitiva é crime falimentar.",
+      comoBancaPensa: "Usa o nome legal do tipo num caso concreto de uso pessoal.",
     },
   },
 
