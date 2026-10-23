@@ -42,7 +42,7 @@ const QUESTOES_PCAL_LOTE48 = [
   {
     id: "LE-142", disciplina: "Legislação Especial", assunto: "Crimes contra a ordem tributária", subassunto: "Crimes comuns x funcionais (arts. 1º a 3º)",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (Lei 8.137/1990, arts. 1º a 3º)",
+    origem: "Inédita — estilo CEBRASPE (Lei 8.137/1990, arts. 1º a 3º); o texto coincide com item de prova dos QAPs DSO — QUADRIX - 2024 - Profissional de Atividades Estratégicas (CFN)/Contador",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.76,
     enunciado: "Os crimes contra a ordem tributária são, em sua totalidade, considerados crimes próprios, sendo praticados exclusivamente por aqueles que exercem poder de decisão em estabelecimentos privados que realizam qualquer atividade econômica.",
     gabarito: "E", pegadinha: "generalizacao", palavraChave: "em sua totalidade ... crimes próprios ... exclusivamente",

@@ -201,7 +201,7 @@ const QUESTOES_PCAL_LOTE49 = [
   {
     id: "LE-164", disciplina: "Legislação Especial", assunto: "Lavagem de Dinheiro", subassunto: "Suspensão de medidas assecuratórias e prisão — oitiva do MP (art. 4º-B)",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (Lei 9.613/1998, art. 4º-B)",
+    origem: "Inédita — estilo CEBRASPE (Lei 9.613/1998, art. 4º-B); o texto coincide com item de prova dos QAPs DSO — CEBRASPE (CESPE) - 2021 - Atividades Técnicas de Complexidade Gerencial (MJSP)/Técnico Especializado",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.78,
     enunciado: "As medidas assecuratórias de bens, direitos ou valores e a ordem de prisão de pessoas poderão ser suspensas imediatamente pelo juiz quando a sua pronta execução puder comprometer as investigações em curso, sendo dispensada a oitiva do Ministério Público em razão da urgência do ato processual.",
     gabarito: "E", pegadinha: "exigencia-inexistente", palavraChave: "sendo dispensada a oitiva do Ministério Público",
@@ -241,7 +241,7 @@ const QUESTOES_PCAL_LOTE49 = [
   {
     id: "LE-166", disciplina: "Legislação Especial", assunto: "Lavagem de Dinheiro", subassunto: "Afastamento de servidor público indiciado (art. 17-D)",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (Lei 9.613/1998, art. 17-D)",
+    origem: "Inédita — estilo CEBRASPE (Lei 9.613/1998, art. 17-D); o texto coincide com item de prova dos QAPs DSO — CEBRASPE (CESPE) - 2021 - Agente de Polícia Judiciária (PC SE)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.76,
     enunciado: "Servidor público indiciado, em tese, pela prática de crime de lavagem de dinheiro deverá ser afastado imediatamente do cargo ou função, com prejuízo de remunerações, até que o juiz competente autorize o seu retorno às atividades.",
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "afastado imediatamente ... com prejuízo de remunerações",
