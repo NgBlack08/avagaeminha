@@ -363,7 +363,7 @@ const QUESTOES_PCAL_LOTE113 = [
       palavraCritica: "ciência social",
     },
     comentario: {
-      resolucao: "CERTO. A contabilidade é ciência social: estuda e controla o patrimônio das entidades para fornecer informações sobre sua composição e variações, úteis ao tomador de decisão.",
+      resolucao: "CERTO. O item junta os três elementos da definição clássica: a natureza (ciência social, porque trata de relações humanas e econômicas, e não de leis naturais), o objeto (o patrimônio) e a finalidade (informar o usuário para que decida). Nenhum deles está distorcido.",
       fundamento: "Doutrina contábil.",
       macete: "Ciência SOCIAL do patrimônio.",
       erroComum: "Classificá-la como ciência exata.",
