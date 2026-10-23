@@ -707,7 +707,7 @@ const QUESTOES_PCAL_LOTE65 = [
   {
     id: "TI-178", disciplina: "TI e Segurança Cibernética", assunto: "Correio eletrônico", subassunto: "Microsoft Outlook — contas",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (padrão de literalidade técnica); o ponto coincide com item dos QAPs DSO (TI, Ricardo Beck — caderno Correio Eletrônico, questão 15)",
+    origem: "Inédita — estilo CEBRASPE (padrão de literalidade técnica); o ponto coincide com item dos QAPs DSO (TI, Ricardo Beck — caderno Correio Eletrônico, questão 15); repetido no bônus de TI do QAP DSO (Aula em Estúdio — Correio Eletrônico, parte 1, questão 6)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.8,
     enunciado: "O Microsoft Outlook permite configurar, em uma mesma instalação, diversas contas de correio eletrônico de provedores distintos, cada qual com sua estrutura própria de pastas.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "diversas contas ... de provedores distintos ... estrutura própria de pastas",
