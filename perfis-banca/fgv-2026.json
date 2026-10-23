@@ -1,0 +1,94 @@
+{
+  "perfil": "FGV-2026",
+  "banca": "FGV",
+  "formato": "ME (A–E), 100 questões, sem desconto por erro",
+  "escopo": "Aplicar SOMENTE a provas FGV a partir de 2026. Não transferir para CEBRASPE (C/E) nem para FGV anterior a 2023: no controle FGV 2022 vários sinais são invertidos.",
+  "fontes": {
+    "alvo": "FGV PC-PR 2026, Agente de Polícia Judiciária, caderno CNS201 tipo 1, aplicada em 11/10/2026, gabarito preliminar",
+    "controle": "FGV PC-RJ 2022, Inspetor de Polícia de 6ª Classe, tipo 1, aplicada em 30/01/2022, gabarito definitivo",
+    "relatorios": [
+      "AUDITORIA-IA-FGV-PCPR-2026.md",
+      "AUDITORIA-PARAMETROS-SITE-vs-FGV-IA.md"
+    ]
+  },
+  "metricas": {
+    "cv_tamanho_alternativas_portugues": { "fgv2026": 0.037, "fgv2022": 0.171, "nota": "mediana; permutação p<0,0001" },
+    "cv_tamanho_alternativas_forense": { "fgv2026": 0.087 },
+    "absolutizador_errada_sobre_certa": { "fgv2026": 1.86, "fgv2022": 0.72, "nota": "inverteu: em 2026 a palavra absoluta aparece mais na alternativa errada" },
+    "absolutizador_presente": { "fgv2026_certa": 0.16, "fgv2026_errada": 0.29 },
+    "filtro_absolutizador_preserva_gabarito": { "fgv2026": 0.84, "nota": "serve para eliminar, não para decidir" },
+    "gabarito_mais_longo": { "fgv2026": 0.23, "fgv2022": 0.23, "nota": "sem atalho geral de tamanho" },
+    "gabarito_entre_2_mais_longas": { "forense": 0.75, "direitos_humanos": 1.0 },
+    "razao_tamanho_gabarito_sobre_media": { "geral": 0.99, "forense": 1.07, "direitos_humanos": 1.14, "direito_81_97": "0,50 a 0,83 (gabarito curto)" },
+    "primeiro_item_verdadeiro_I_II_III_e_VF": 0.76,
+    "distribuicao_letras": { "fgv2026": { "A": 13, "B": 22, "C": 21, "D": 25, "E": 19 }, "qui2": 4.0, "significativo": false },
+    "piramide_tamanho": { "fgv2026_bloco_juridico": "10/10 em Leg. Estadual, Adm e Proc. Penal", "fgv2022": "9/86" },
+    "moldes_de_comando": {
+      "contribui para": { "fgv2026": 8, "fgv2022": 0 },
+      "Nesse cenário, considerando as disposições": { "fgv2026": 9, "fgv2022": 0 }
+    }
+  },
+  "modos_de_producao": [
+    {
+      "id": "A-sintetizador",
+      "disciplinas": ["Língua Portuguesa", "Ciências Forenses", "Direitos Humanos"],
+      "assinatura": "alternativas isométricas; formato [verbo no infinitivo]+[objeto]+[qualificador]; meia-verdade em duas metades; um operador de distorção por distrator",
+      "gabarito": "síntese fiel com ressalva ('pode', 'compatível', 'em conjunto', 'não… por si só', 'mas não dispensa', 'sem atribuição automática'); em Forense, 7/10"
+    },
+    {
+      "id": "B-conversao-de-fonte",
+      "disciplinas": ["TI e Segurança Cibernética", "Crimes Digitais"],
+      "assinatura": "trecho de documentação primária (Microsoft Learn, Android Source, UEFI, Google Workspace, ANPD, CERT.br) traduzido e adaptado ao contexto policial; item I = paráfrase verdadeira; falsos = mutação",
+      "sinais_do_falso": ["absolutizador", "contradição interna", "absurdo de categoria", "taxonomia inventada", "número arbitrário", "nome técnico inventado por analogia (manager-bde, fix-bde, wincfg)"]
+    },
+    {
+      "id": "C-molde-juridico",
+      "disciplinas": ["Direito Penal", "Processo Penal", "Constitucional", "Administrativo", "Legislação Estadual", "Contabilidade", "RLM", "Estatística"],
+      "assinatura": "'Nesse cenário, considerando as disposições da Lei nº X'; alternativas em pirâmide de tamanho; gabarito curto = letra da lei; peso forte de lei de 2025–2026"
+    }
+  ],
+  "operadores_de_distorcao": [
+    { "id": "absolutizacao", "exemplos": ["eliminam os acidentes", "suficiente para individualizar", "dispensa exames"] },
+    { "id": "restricao", "exemplos": ["restringir a orientação", "exclusivamente na deep web"] },
+    { "id": "cronologia-inventada", "exemplos": ["ordenar cronologicamente", "ordem cronológica rígida", "sequência temporal"] },
+    { "id": "troca-tempo-modalidade", "exemplos": ["ações já realizadas", "alteração já ocorrida / expansão futura", "recomendações cuja execução depende"] },
+    { "id": "extrapolacao-juridica", "exemplos": ["estabelece obrigações legais", "caráter legalmente obrigatório"] },
+    { "id": "inversao-agente", "exemplos": ["atribuir às vítimas a responsabilidade", "entrada e saída do projétil trocadas"] },
+    { "id": "substituicao", "exemplos": ["substitui sua função", "hash pode substituir a documentação"] },
+    { "id": "falsa-causalidade", "exemplos": ["a saudade decorre do emprego dos tempos verbais"] },
+    { "id": "termo-de-outra-categoria", "exemplos": ["vitimização preterdolosa", "provoking", "manager-bde"] }
+  ],
+  "excecoes": [
+    "Quando a própria norma é absoluta (proibição da tortura, Q98), o absoluto é o gabarito.",
+    "Q47: 'recai somente…' é o gabarito."
+  ],
+  "protocolo_resolucao": {
+    "modo_A": [
+      "identificar o critério anunciado no comando",
+      "procurar um operador de distorção em cada alternativa e eliminar",
+      "entre as restantes, escolher a que ressalva",
+      "comparar só as caudas em alternativas com o mesmo prefixo"
+    ],
+    "modo_B": [
+      "supor o item I verdadeiro (76%) e desconfiar de II/III",
+      "checar contradição interna",
+      "o nome técnico real é o padrão; os inventados seguem o mesmo molde",
+      "desconfiar de número redondo arbitrário e de categoria fora da taxonomia oficial"
+    ],
+    "modo_C": ["lei seca com prioridade para 2025–2026", "gabarito tende a ser a alternativa curta"]
+  },
+  "nao_sao_indicio": [
+    "erro de digitação (existia em 2022)",
+    "personagem policial no enunciado (existia em 2022; novo é só o uso decorativo)",
+    "letra do gabarito"
+  ],
+  "metas_para_questoes_geradas": {
+    "cv_alternativas_portugues": "≈0,04 (±0,03)",
+    "cv_alternativas_forense": "≈0,09",
+    "gabarito_mais_longo_max": 0.25,
+    "absolutizador_errada_sobre_certa": "≈1,8",
+    "operador_registrado_por_distrator": true,
+    "gabarito_com_ressalva_forense": "≈70%"
+  },
+  "limites": "Duas provas, de cargos e estados diferentes: basta para mostrar que o padrão de 2026 não é o padrão de sempre da FGV, mas não prova a ferramenta usada. Para fixar quando a mudança começou, falta uma prova FGV de 2024–2025."
+}
