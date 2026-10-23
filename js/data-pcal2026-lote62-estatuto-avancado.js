@@ -67,7 +67,7 @@ const QUESTOES_PCAL_LOTE62 = [
   {
     id: "LI-080", disciplina: "Legislação Institucional (AL)", assunto: "Estatuto da PC-AL (Lei 3.437/1975)", subassunto: "Composição do regime jurídico (art. 1º, p.u.)",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (padrão de literalidade normativa)",
+    origem: "Inédita — estilo CEBRASPE (padrão de literalidade normativa); o mesmo ponto, com o mesmo gabarito, aparece em item do curso nos QAPs DSO (Estatuto da PC-AL, item 1)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.86,
     enunciado: "O regime jurídico dos funcionários civis da Polícia Civil de Alagoas compõe-se exclusivamente das normas especiais do respectivo Estatuto, afastada a incidência das normas gerais do Estatuto dos Funcionários Públicos Civis do Estado.",
     gabarito: "E", pegadinha: "restricao-indevida", palavraChave: "exclusivamente ... afastada a incidência das normas gerais",
@@ -86,7 +86,7 @@ const QUESTOES_PCAL_LOTE62 = [
   {
     id: "LI-081", disciplina: "Legislação Institucional (AL)", assunto: "Estatuto da PC-AL (Lei 3.437/1975)", subassunto: "Comissionados como policiais civis (art. 2º, p.u.)",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (padrão de literalidade normativa)",
+    origem: "Inédita — estilo CEBRASPE (padrão de literalidade normativa); o mesmo ponto, com o mesmo gabarito, aparece em item do curso nos QAPs DSO (Estatuto da PC-AL, item 2)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.8,
     enunciado: "Os ocupantes de cargos em comissão e funções gratificadas com atribuições e responsabilidade de natureza policial são considerados policiais civis desde que assim declarados por decreto do chefe do Poder Executivo.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "declarados por decreto do chefe do Poder Executivo",
@@ -105,7 +105,7 @@ const QUESTOES_PCAL_LOTE62 = [
   {
     id: "LI-082", disciplina: "Legislação Institucional (AL)", assunto: "Estatuto da PC-AL (Lei 3.437/1975)", subassunto: "Vedação de serviços gratuitos (art. 3º)",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (padrão de literalidade normativa)",
+    origem: "Inédita — estilo CEBRASPE (padrão de literalidade normativa); o mesmo ponto, com o mesmo gabarito, aparece em item do curso nos QAPs DSO (Estatuto da PC-AL, item 3)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 60, probReaparecer: 0.78,
     enunciado: "É admitida a prestação de serviços gratuitos à Polícia Civil de Alagoas por prazo não superior a trinta dias, hipótese em que o período será computado como de efetivo exercício.",
     gabarito: "E", pegadinha: "exigencia-inexistente", palavraChave: "por prazo não superior a trinta dias",
@@ -226,7 +226,7 @@ const QUESTOES_PCAL_LOTE62 = [
   {
     id: "LI-091", disciplina: "Legislação Institucional (AL)", assunto: "Estatuto da PC-AL (Lei 3.437/1975)", subassunto: "Cabo da PM e cargo de Delegado (art. 40, § 2º)",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (padrão de literalidade normativa)",
+    origem: "Inédita — estilo CEBRASPE (padrão de literalidade normativa); o mesmo ponto, com o mesmo gabarito, aparece em item do curso nos QAPs DSO (Estatuto da PC-AL, item 13)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.79,
     enunciado: "O policial militar na graduação de cabo não poderá, em hipótese alguma, ser nomeado para exercer o cargo de delegado de polícia nem designado para responder pelo expediente do respectivo órgão.",
     gabarito: "C", pegadinha: "termo-absoluto", palavraChave: "em hipótese alguma",
@@ -266,7 +266,7 @@ const QUESTOES_PCAL_LOTE62 = [
   {
     id: "LI-093", disciplina: "Legislação Institucional (AL)", assunto: "Estatuto da PC-AL (Lei 3.437/1975)", subassunto: "Remoção por conveniência da disciplina (art. 65)",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (padrão de literalidade normativa)",
+    origem: "Inédita — estilo CEBRASPE (padrão de literalidade normativa); o mesmo ponto, com o mesmo gabarito, aparece em item do curso nos QAPs DSO (Estatuto da PC-AL, item 15)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 70, probReaparecer: 0.82,
     enunciado: "A remoção por conveniência da disciplina deverá ser expressamente justificada pelo chefe do serviço em que estiver lotado o funcionário e acarretará a perda dos direitos e vantagens atribuídos às demais modalidades de remoção, inclusive da gratificação de função policial.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "inclusive da gratificação de função policial",
@@ -325,7 +325,7 @@ const QUESTOES_PCAL_LOTE62 = [
   {
     id: "LI-096", disciplina: "Legislação Institucional (AL)", assunto: "Estatuto da PC-AL (Lei 3.437/1975)", subassunto: "Cumulação da gratificação de risco (art. 78, § 4º)",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (padrão de literalidade normativa)",
+    origem: "Inédita — estilo CEBRASPE (padrão de literalidade normativa); o mesmo ponto, com o mesmo gabarito, aparece em item do curso nos QAPs DSO (Estatuto da PC-AL, item 22)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 60, probReaparecer: 0.72,
     enunciado: "A gratificação de ação policial não poderá ser acumulada com qualquer outra gratificação referente a risco de vida.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "qualquer outra referente a risco de vida",
@@ -557,7 +557,7 @@ const QUESTOES_PCAL_LOTE62 = [
   {
     id: "LI-108", disciplina: "Legislação Institucional (AL)", assunto: "Estatuto da PC-AL (Lei 3.437/1975)", subassunto: "Limites da revisão disciplinar (art. 126)",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (padrão de literalidade normativa)",
+    origem: "Inédita — estilo CEBRASPE (padrão de literalidade normativa); o mesmo ponto, com o mesmo gabarito, aparece em item do curso nos QAPs DSO (Estatuto da PC-AL, item 40)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 70, probReaparecer: 0.79,
     enunciado: "A simples alegação de injustiça da penalidade não constitui fundamento para a revisão do processo disciplinar.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "simples alegação de injustiça",
@@ -673,7 +673,7 @@ const QUESTOES_PCAL_LOTE62 = [
   {
     id: "LI-114", disciplina: "Legislação Institucional (AL)", assunto: "Estatuto da PC-AL (Lei 3.437/1975)", subassunto: "Precedência hierárquica (art. 5º, p.u.)",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (padrão de literalidade normativa)",
+    origem: "Inédita — estilo CEBRASPE (padrão de literalidade normativa); o mesmo ponto, com o mesmo gabarito, aparece em item do curso nos QAPs DSO (Estatuto da PC-AL, item 4)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.72,
     enunciado: "A Polícia Civil fundamenta-se na hierarquia e na disciplina, estabelecendo-se a precedência, basicamente, pela subordinação funcional.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "basicamente, pela subordinação funcional",

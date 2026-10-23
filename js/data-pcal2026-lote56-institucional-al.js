@@ -26,7 +26,7 @@ const QUESTOES_PCAL_LOTE56 = [
   {
     id: "LI-045", disciplina: "Legislação Institucional (AL)", assunto: "Estatuto da PC-AL (Lei 3.437/1975)", subassunto: "Formas de provimento (art. 36)",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (Estatuto PC-AL, Lei 3.437/1975)",
+    origem: "Inédita — estilo CEBRASPE (Estatuto PC-AL, Lei 3.437/1975); o mesmo ponto, com o mesmo gabarito, aparece em item do curso nos QAPs DSO (Estatuto da PC-AL, item 11)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.85,
     enunciado: "De acordo com o texto do Estatuto da Polícia Civil de Alagoas, os cargos de natureza policial são providos por nomeação, promoção, acesso, reintegração, aproveitamento, reversão e transferência.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "nomeação, promoção, acesso, reintegração, aproveitamento, reversão e transferência",
@@ -45,7 +45,7 @@ const QUESTOES_PCAL_LOTE56 = [
   {
     id: "LI-046", disciplina: "Legislação Institucional (AL)", assunto: "Estatuto da PC-AL (Lei 3.437/1975)", subassunto: "Requisitos de investidura (art. 38)",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (Estatuto PC-AL, Lei 3.437/1975)",
+    origem: "Inédita — estilo CEBRASPE (Estatuto PC-AL, Lei 3.437/1975); o mesmo ponto, com o mesmo gabarito, aparece em item do curso nos QAPs DSO (Estatuto da PC-AL, item 12)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.9,
     enunciado: "Para exercer os cargos de que trata o Estatuto da PC-AL, exige-se, entre outros requisitos, ter no máximo trinta anos de idade, limite que se aplica em qualquer hipótese, inclusive ao funcionário público e aos cargos em comissão.",
     gabarito: "E", pegadinha: "literalidade", palavraChave: "em qualquer hipótese, inclusive ao funcionário público e aos cargos em comissão",
@@ -163,7 +163,7 @@ const QUESTOES_PCAL_LOTE56 = [
   {
     id: "LI-055", disciplina: "Legislação Institucional (AL)", assunto: "Estatuto da PC-AL (Lei 3.437/1975)", subassunto: "Precedência hierárquica (art. 67)",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (Estatuto PC-AL, Lei 3.437/1975)",
+    origem: "Inédita — estilo CEBRASPE (Estatuto PC-AL, Lei 3.437/1975); o mesmo ponto, com o mesmo gabarito, aparece em item do curso nos QAPs DSO (Estatuto da PC-AL, item 19)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 70, probReaparecer: 0.85,
     enunciado: "Na Polícia Civil de Alagoas, o primeiro critério de precedência hierárquica é o maior tempo de serviço público, seguido do maior nível ou símbolo de vencimento-base.",
     gabarito: "E", pegadinha: "literalidade", palavraChave: "primeiro critério ... maior tempo de serviço público",
@@ -182,7 +182,7 @@ const QUESTOES_PCAL_LOTE56 = [
   {
     id: "LI-056", disciplina: "Legislação Institucional (AL)", assunto: "Estatuto da PC-AL (Lei 3.437/1975)", subassunto: "Precedência hierárquica (art. 67)",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (Estatuto PC-AL, Lei 3.437/1975)",
+    origem: "Inédita — estilo CEBRASPE (Estatuto PC-AL, Lei 3.437/1975); o mesmo ponto, com o mesmo gabarito, aparece em item do curso nos QAPs DSO (Estatuto da PC-AL, item 20)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.8,
     enunciado: "Persistindo o empate entre policiais civis após aplicados os demais critérios de precedência hierárquica previstos no Estatuto da PC-AL, terá precedência o mais idoso.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "mais idoso",
@@ -201,7 +201,7 @@ const QUESTOES_PCAL_LOTE56 = [
   {
     id: "LI-057", disciplina: "Legislação Institucional (AL)", assunto: "Estatuto da PC-AL (Lei 3.437/1975)", subassunto: "Ajuda de custo (art. 70)",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (Estatuto PC-AL, Lei 3.437/1975)",
+    origem: "Inédita — estilo CEBRASPE (Estatuto PC-AL, Lei 3.437/1975); o mesmo ponto, com o mesmo gabarito, aparece em item do curso nos QAPs DSO (Estatuto da PC-AL, item 21)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 70, probReaparecer: 0.8,
     enunciado: "A ajuda de custo concedida ao policial civil que passe a ter exercício em nova sede destina-se ao ressarcimento das despesas de viagem à nova instalação, inclusive as de transporte, e não excederá a um mês de vencimento.",
     gabarito: "E", pegadinha: "literalidade", palavraChave: "inclusive as de transporte",
@@ -222,7 +222,7 @@ const QUESTOES_PCAL_LOTE56 = [
   {
     id: "LI-058", disciplina: "Legislação Institucional (AL)", assunto: "Estatuto da PC-AL (Lei 3.437/1975)", subassunto: "Acumulação de cargos (art. 85)",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (Estatuto PC-AL, Lei 3.437/1975)",
+    origem: "Inédita — estilo CEBRASPE (Estatuto PC-AL, Lei 3.437/1975); o mesmo ponto, com o mesmo gabarito, aparece em item do curso nos QAPs DSO (Estatuto da PC-AL, item 23)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 70, probReaparecer: 0.8,
     enunciado: "A regra no Estatuto da PC-AL é a vedação de acumulação de cargos ou funções, admitindo-se, excepcionalmente, a acumulação de um cargo policial técnico ou científico com o de professor, desde que haja correlação de matérias e compatibilidade de horários.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "cargo policial técnico ou científico com o de professor ... correlação de matérias e compatibilidade de horários",
@@ -262,7 +262,7 @@ const QUESTOES_PCAL_LOTE56 = [
   {
     id: "LI-060", disciplina: "Legislação Institucional (AL)", assunto: "Estatuto da PC-AL (Lei 3.437/1975)", subassunto: "Repreensão (art. 93)",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (Estatuto PC-AL, Lei 3.437/1975)",
+    origem: "Inédita — estilo CEBRASPE (Estatuto PC-AL, Lei 3.437/1975); o mesmo ponto, com o mesmo gabarito, aparece em item do curso nos QAPs DSO (Estatuto da PC-AL, item 27)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.85,
     enunciado: "Diante de falta leve não tipificada para outra sanção específica, a chefia poderá aplicar repreensão verbal ao policial civil, sem registro nos assentamentos, para não macular sua ficha funcional.",
     gabarito: "E", pegadinha: "literalidade", palavraChave: "repreensão verbal ... sem registro",
@@ -300,7 +300,7 @@ const QUESTOES_PCAL_LOTE56 = [
   {
     id: "LI-062", disciplina: "Legislação Institucional (AL)", assunto: "Estatuto da PC-AL (Lei 3.437/1975)", subassunto: "Multa (art. 95)",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (Estatuto PC-AL, Lei 3.437/1975)",
+    origem: "Inédita — estilo CEBRASPE (Estatuto PC-AL, Lei 3.437/1975); o mesmo ponto, com o mesmo gabarito, aparece em item do curso nos QAPs DSO (Estatuto da PC-AL, item 28)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 60, probReaparecer: 0.8,
     enunciado: "Quando houver conveniência para o serviço, a pena de suspensão poderá ser convertida em multa na base máxima de 50% do vencimento ou remuneração, ficando o policial civil obrigado a permanecer em serviço.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "convertida em multa na base máxima de 50% ... permanecer em serviço",
@@ -376,7 +376,7 @@ const QUESTOES_PCAL_LOTE56 = [
   {
     id: "LI-066", disciplina: "Legislação Institucional (AL)", assunto: "Estatuto da PC-AL (Lei 3.437/1975)", subassunto: "Detenção disciplinar — visitas (art. 104)",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (Estatuto PC-AL, Lei 3.437/1975)",
+    origem: "Inédita — estilo CEBRASPE (Estatuto PC-AL, Lei 3.437/1975); o mesmo ponto, com o mesmo gabarito, aparece em item do curso nos QAPs DSO (Estatuto da PC-AL, items 24, 33)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.75,
     enunciado: "Durante o cumprimento da detenção disciplinar, é vedado ao funcionário receber visitas de familiares ou amigos, a fim de preservar o caráter punitivo da medida.",
     gabarito: "E", pegadinha: "literalidade", palavraChave: "é vedado ... receber visitas",
@@ -473,7 +473,7 @@ const QUESTOES_PCAL_LOTE56 = [
   {
     id: "LI-071", disciplina: "Legislação Institucional (AL)", assunto: "Estatuto da PC-AL (Lei 3.437/1975)", subassunto: "Suspensão preventiva (art. 110 e 112)",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (Estatuto PC-AL, Lei 3.437/1975)",
+    origem: "Inédita — estilo CEBRASPE (Estatuto PC-AL, Lei 3.437/1975); o mesmo ponto, com o mesmo gabarito, aparece em item do curso nos QAPs DSO (Estatuto da PC-AL, item 35)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 70, probReaparecer: 0.8,
     enunciado: "A suspensão preventiva, cabível quando a presença do funcionário puder influir na apuração da falta, é de até trinta dias, podendo ser prorrogada até noventa dias, após o que cessam seus efeitos ainda que não concluído o processo.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "até trinta dias, podendo ser prorrogada até noventa dias",
@@ -494,7 +494,7 @@ const QUESTOES_PCAL_LOTE56 = [
   {
     id: "LI-072", disciplina: "Legislação Institucional (AL)", assunto: "Estatuto da PC-AL (Lei 3.437/1975)", subassunto: "Processo disciplinar prévio (art. 115)",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (Estatuto PC-AL, Lei 3.437/1975)",
+    origem: "Inédita — estilo CEBRASPE (Estatuto PC-AL, Lei 3.437/1975); o mesmo ponto, com o mesmo gabarito, aparece em item do curso nos QAPs DSO (Estatuto da PC-AL, item 25)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 70, probReaparecer: 0.85,
     enunciado: "O processo disciplinar precederá à aplicação das penas de suspensão por mais de quinze dias, destituição de função, demissão e cassação de disponibilidade.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "suspensão por mais de quinze dias, destituição, demissão e cassação",
@@ -513,7 +513,7 @@ const QUESTOES_PCAL_LOTE56 = [
   {
     id: "LI-073", disciplina: "Legislação Institucional (AL)", assunto: "Estatuto da PC-AL (Lei 3.437/1975)", subassunto: "Sindicância (art. 117)",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (Estatuto PC-AL, Lei 3.437/1975)",
+    origem: "Inédita — estilo CEBRASPE (Estatuto PC-AL, Lei 3.437/1975); o mesmo ponto, com o mesmo gabarito, aparece em item do curso nos QAPs DSO (Estatuto da PC-AL, item 37)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 60, probReaparecer: 0.8,
     enunciado: "A sindicância será instaurada quando as irregularidades não se revelarem evidentes ou quando for incerta a sua autoria, e será conduzida por dois funcionários policiais de categoria igual ou superior.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "dois funcionários policiais de categoria igual ou superior",
@@ -551,7 +551,7 @@ const QUESTOES_PCAL_LOTE56 = [
   {
     id: "LI-075", disciplina: "Legislação Institucional (AL)", assunto: "Estatuto da PC-AL (Lei 3.437/1975)", subassunto: "Suspeição de membro (art. 123)",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (Estatuto PC-AL, Lei 3.437/1975)",
+    origem: "Inédita — estilo CEBRASPE (Estatuto PC-AL, Lei 3.437/1975); o mesmo ponto, com o mesmo gabarito, aparece em item do curso nos QAPs DSO (Estatuto da PC-AL, item 38)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.75,
     enunciado: "Acolhida a alegação de suspeição de membro da Comissão de Disciplina, sua substituição será definitiva, alcançando todos os processos disciplinares futuros de que ele participaria.",
     gabarito: "E", pegadinha: "literalidade", palavraChave: "substituição será definitiva ... todos os processos ... futuros",
