@@ -55,7 +55,7 @@ const QUESTOES_PCAL_LOTE81 = [
   {
     ...BASE81,
     id: "CC-105", assunto: "Convenção de Budapeste", subassunto: "Responsabilidade da pessoa jurídica — art. 12",
-    origem: "Inédita — estilo CEBRASPE (Decreto nº 11.491/2023, art. 12 da Convenção)",
+    origem: "Inédita — estilo CEBRASPE (Decreto nº 11.491/2023, art. 12 da Convenção); o mesmo ponto, com o mesmo gabarito, aparece em item do curso nos QAPs DSO (Convenção de Budapeste, item 1)",
     dificuldade: 3, tempoIdealSeg: 80,
     enunciado: "A responsabilidade da pessoa jurídica prevista na Convenção só pode ser reconhecida mediante demonstração de intenção dolosa de dirigente da alta administração, não bastando a falta de supervisão que tenha tornado possível a prática da infração por pessoa sob sua autoridade.",
     gabarito: "E", pegadinha: "restricao-indevida", palavraChave: "não bastando a falta de supervisão",
@@ -97,7 +97,7 @@ const QUESTOES_PCAL_LOTE81 = [
   {
     ...BASE81,
     id: "CC-107", assunto: "Convenção de Budapeste", subassunto: "Dados de tráfego — art. 1º, 'd'",
-    origem: "Inédita — estilo CEBRASPE (Decreto nº 11.491/2023, art. 1º da Convenção)",
+    origem: "Inédita — estilo CEBRASPE (Decreto nº 11.491/2023, art. 1º da Convenção); o mesmo ponto, com o mesmo gabarito, aparece em item do curso nos QAPs DSO (Convenção de Budapeste, item 4)",
     dificuldade: 3, tempoIdealSeg: 70,
     enunciado: "Consideram-se dados de tráfego, na Convenção, quaisquer dados referentes ao conteúdo da comunicação, inclusive as mensagens trocadas entre sistemas informáticos, desde que armazenados por provedor situado em território nacional.",
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "referentes ao conteúdo da comunicação",
@@ -117,7 +117,7 @@ const QUESTOES_PCAL_LOTE81 = [
   {
     ...BASE81,
     id: "CC-108", assunto: "Convenção de Budapeste", subassunto: "Dado informático — art. 1º, 'b'",
-    origem: "Inédita — estilo CEBRASPE (Decreto nº 11.491/2023, art. 1º da Convenção)",
+    origem: "Inédita — estilo CEBRASPE (Decreto nº 11.491/2023, art. 1º da Convenção); o mesmo ponto, com o mesmo gabarito, aparece em item do curso nos QAPs DSO (Convenção de Budapeste, item 11)",
     dificuldade: 3, tempoIdealSeg: 70,
     enunciado: "Na terminologia da Convenção, considera-se dado informático apenas aquele que represente instruções executáveis por programa, excluídas as representações de fatos, informações ou conceitos armazenadas em outros formatos.",
     gabarito: "E", pegadinha: "restricao-indevida", palavraChave: "apenas ... instruções executáveis",
@@ -137,7 +137,7 @@ const QUESTOES_PCAL_LOTE81 = [
   {
     ...BASE81,
     id: "CC-109", assunto: "Convenção de Budapeste", subassunto: "Prestador de serviço — art. 1º, 'c'",
-    origem: "Inédita — estilo CEBRASPE (Decreto nº 11.491/2023, art. 1º da Convenção)",
+    origem: "Inédita — estilo CEBRASPE (Decreto nº 11.491/2023, art. 1º da Convenção); o mesmo ponto, com o mesmo gabarito, aparece em item do curso nos QAPs DSO (Convenção de Budapeste, item 8)",
     dificuldade: 3, tempoIdealSeg: 75,
     enunciado: "Enquadra-se no conceito de prestador de serviço a entidade que apenas armazene ou processe dados informáticos por conta de um serviço de comunicação ou de seus usuários, ainda que não ofereça a comunicação diretamente a estes.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "por conta de",
@@ -157,7 +157,7 @@ const QUESTOES_PCAL_LOTE81 = [
   {
     ...BASE81,
     id: "CC-110", assunto: "Convenção de Budapeste", subassunto: "Informações de assinante — art. 18.3",
-    origem: "Inédita — estilo CEBRASPE (Decreto nº 11.491/2023, art. 18.3 da Convenção)",
+    origem: "Inédita — estilo CEBRASPE (Decreto nº 11.491/2023, art. 18.3 da Convenção); o mesmo ponto, com o mesmo gabarito, aparece em item do curso nos QAPs DSO (Convenção de Budapeste, item 18)",
     dificuldade: 3, tempoIdealSeg: 70,
     enunciado: "As informações relativas a assinantes, na definição da Convenção, compreendem os dados de tráfego gerados durante a transmissão e o conteúdo das comunicações mantidas pelo usuário.",
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "compreendem os dados de tráfego ... e o conteúdo",
@@ -179,7 +179,7 @@ const QUESTOES_PCAL_LOTE81 = [
   {
     ...BASE81,
     id: "CC-111", assunto: "Convenção de Budapeste", subassunto: "Reserva quanto à posse — art. 9º",
-    origem: "Inédita — estilo CEBRASPE (Decreto nº 11.491/2023, art. 9º da Convenção)",
+    origem: "Inédita — estilo CEBRASPE (Decreto nº 11.491/2023, art. 9º da Convenção); o mesmo ponto, com o mesmo gabarito, aparece em item do curso nos QAPs DSO (Convenção de Budapeste, item 5)",
     dificuldade: 3, tempoIdealSeg: 65,
     enunciado: "A Convenção admite que o Estado-parte se reserve o direito de não criminalizar a simples posse de pornografia infantil armazenada em sistema informático.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "reserve o direito de não criminalizar",
@@ -199,7 +199,7 @@ const QUESTOES_PCAL_LOTE81 = [
   {
     ...BASE81,
     id: "CC-112", assunto: "Convenção de Budapeste", subassunto: "Falsificação informática — art. 7º",
-    origem: "Inédita — estilo CEBRASPE (Decreto nº 11.491/2023, art. 7º da Convenção)",
+    origem: "Inédita — estilo CEBRASPE (Decreto nº 11.491/2023, art. 7º da Convenção); o mesmo ponto, com o mesmo gabarito, aparece em item do curso nos QAPs DSO (Convenção de Budapeste, item 9)",
     dificuldade: 2, tempoIdealSeg: 60,
     enunciado: "É facultado ao Estado-parte condicionar a punição da falsificação informática à demonstração de intenção de defraudar ou de outro propósito fraudulento.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "facultado ... condicionar",
@@ -221,7 +221,7 @@ const QUESTOES_PCAL_LOTE81 = [
   {
     ...BASE81,
     id: "CC-113", assunto: "Convenção de Budapeste", subassunto: "Âmbito dos poderes processuais — art. 14.3",
-    origem: "Inédita — estilo CEBRASPE (Decreto nº 11.491/2023, art. 14 da Convenção)",
+    origem: "Inédita — estilo CEBRASPE (Decreto nº 11.491/2023, art. 14 da Convenção); o mesmo ponto, com o mesmo gabarito, aparece em item do curso nos QAPs DSO (Convenção de Budapeste, item 6)",
     dificuldade: 3, tempoIdealSeg: 80,
     enunciado: "As medidas de recolha de dados de tráfego e de interceptação de dados de conteúdo em tempo real aplicam-se obrigatoriamente a toda comunicação, inclusive à transmitida em sistema operado em benefício de grupo restrito de utilizadores que não empregue redes públicas de comunicação.",
     gabarito: "E", pegadinha: "termo-absoluto", palavraChave: "obrigatoriamente a toda comunicação",
@@ -261,7 +261,7 @@ const QUESTOES_PCAL_LOTE81 = [
   {
     ...BASE81,
     id: "CC-115", assunto: "Convenção de Budapeste", subassunto: "Conservação expedita — art. 16.2",
-    origem: "Inédita — estilo CEBRASPE (Decreto nº 11.491/2023, art. 16 da Convenção)",
+    origem: "Inédita — estilo CEBRASPE (Decreto nº 11.491/2023, art. 16 da Convenção); o mesmo ponto, com o mesmo gabarito, aparece em item do curso nos QAPs DSO (Convenção de Budapeste, item 3)",
     dificuldade: 3, tempoIdealSeg: 70,
     enunciado: "Ordenada a conservação expedita de dados informáticos armazenados, a Convenção impõe que sejam conservados obrigatoriamente por cento e oitenta dias, prorrogáveis por igual período mediante autorização judicial.",
     gabarito: "E", pegadinha: "troca-numerica", palavraChave: "cento e oitenta dias",
@@ -281,7 +281,7 @@ const QUESTOES_PCAL_LOTE81 = [
   {
     ...BASE81,
     id: "CC-116", assunto: "Convenção de Budapeste", subassunto: "Confidencialidade imposta ao prestador — arts. 20.3 e 21.3",
-    origem: "Inédita — estilo CEBRASPE (Decreto nº 11.491/2023, arts. 20 e 21 da Convenção)",
+    origem: "Inédita — estilo CEBRASPE (Decreto nº 11.491/2023, arts. 20 e 21 da Convenção); o mesmo ponto, com o mesmo gabarito, aparece em item do curso nos QAPs DSO (Convenção de Budapeste, item 14)",
     dificuldade: 3, tempoIdealSeg: 75,
     enunciado: "O prestador de serviço compelido a colaborar na interceptação de dados de conteúdo em tempo real pode revelar a seus clientes a existência do procedimento, como forma de resguardar o direito deles à privacidade.",
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "pode revelar a seus clientes",
@@ -303,7 +303,7 @@ const QUESTOES_PCAL_LOTE81 = [
   {
     ...BASE81,
     id: "CC-117", assunto: "Convenção de Budapeste", subassunto: "Jurisdição — art. 22",
-    origem: "Inédita — estilo CEBRASPE (Decreto nº 11.491/2023, art. 22 da Convenção)",
+    origem: "Inédita — estilo CEBRASPE (Decreto nº 11.491/2023, art. 22 da Convenção); o mesmo ponto, com o mesmo gabarito, aparece em item do curso nos QAPs DSO (Convenção de Budapeste, item 15)",
     dificuldade: 2, tempoIdealSeg: 60,
     enunciado: "O Estado-parte adota jurisdição sobre a infração prevista na Convenção que seja cometida a bordo de aeronave matriculada segundo as suas leis.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "aeronave matriculada segundo as suas leis",
@@ -323,7 +323,7 @@ const QUESTOES_PCAL_LOTE81 = [
   {
     ...BASE81,
     id: "CC-118", assunto: "Convenção de Budapeste", subassunto: "Extraditar ou julgar — art. 24.6",
-    origem: "Inédita — estilo CEBRASPE (Decreto nº 11.491/2023, art. 24 da Convenção)",
+    origem: "Inédita — estilo CEBRASPE (Decreto nº 11.491/2023, art. 24 da Convenção); o mesmo ponto, com o mesmo gabarito, aparece em item do curso nos QAPs DSO (Convenção de Budapeste, item 10)",
     dificuldade: 3, tempoIdealSeg: 75,
     enunciado: "Recusada a extradição unicamente em razão da nacionalidade do procurado, o Estado requerido deve, a pedido do Estado requerente, submeter o caso às suas autoridades competentes para fins de persecução penal.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "submeter o caso às suas autoridades competentes",
@@ -363,7 +363,7 @@ const QUESTOES_PCAL_LOTE81 = [
   {
     ...BASE81,
     id: "CC-120", assunto: "Convenção de Budapeste", subassunto: "Prazo da conservação internacional — art. 29.7",
-    origem: "Inédita — estilo CEBRASPE (Decreto nº 11.491/2023, art. 29 da Convenção)",
+    origem: "Inédita — estilo CEBRASPE (Decreto nº 11.491/2023, art. 29 da Convenção); o mesmo ponto, com o mesmo gabarito, aparece em item do curso nos QAPs DSO (Convenção de Budapeste, item 17)",
     dificuldade: 3, tempoIdealSeg: 70,
     enunciado: "Atendido o pedido de conservação expedita formulado por outro Estado-parte, os dados devem ser conservados por prazo não inferior a sessenta dias, a fim de permitir que o Estado requerente formule o pedido de acesso.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "não inferior a sessenta dias",
@@ -383,7 +383,7 @@ const QUESTOES_PCAL_LOTE81 = [
   {
     ...BASE81,
     id: "CC-121", assunto: "Convenção de Budapeste", subassunto: "Acesso transfronteiriço — art. 32",
-    origem: "Inédita — estilo CEBRASPE (Decreto nº 11.491/2023, art. 32 da Convenção)",
+    origem: "Inédita — estilo CEBRASPE (Decreto nº 11.491/2023, art. 32 da Convenção); o mesmo ponto, com o mesmo gabarito, aparece em item do curso nos QAPs DSO (Convenção de Budapeste, item 19)",
     dificuldade: 3, tempoIdealSeg: 80,
     enunciado: "Independentemente de autorização do outro Estado-parte, é lícito o acesso a dados informáticos armazenados em seu território quando estes forem publicamente disponíveis ou quando houver consentimento voluntário de quem tenha autoridade legal para divulgá-los.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "publicamente disponíveis ou ... consentimento voluntário",
@@ -403,7 +403,7 @@ const QUESTOES_PCAL_LOTE81 = [
   {
     ...BASE81,
     id: "CC-122", assunto: "Convenção de Budapeste", subassunto: "Relação com outros tratados — art. 39",
-    origem: "Inédita — estilo CEBRASPE (Decreto nº 11.491/2023, art. 39 da Convenção)",
+    origem: "Inédita — estilo CEBRASPE (Decreto nº 11.491/2023, art. 39 da Convenção); o mesmo ponto, com o mesmo gabarito, aparece em item do curso nos QAPs DSO (Convenção de Budapeste, item 16)",
     dificuldade: 3, tempoIdealSeg: 70,
     enunciado: "A Convenção sobre o Crime Cibernético substitui os tratados multilaterais e bilaterais anteriormente celebrados entre as Partes sobre crimes informáticos e assistência penal internacional, prevalecendo sobre eles em caso de conflito.",
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "substitui",
