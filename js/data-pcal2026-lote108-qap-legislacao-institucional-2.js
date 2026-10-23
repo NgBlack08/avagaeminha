@@ -18,8 +18,9 @@
 
    OBSERVAÇÕES (o gabarito do QAP foi mantido em todos)
      - Lei 6.276, Classe D: o material dá 360 horas (escala 120/240/360,
-       a mesma de LI-132); o texto compilado consultado mostra 200 horas
-       (redação da Lei 7.602/2014). Registrado no comentário.
+       a mesma de LI-132). Conferido em 10/2026 no texto da Lei 7.602/2014:
+       360 h é o art. 7º (Parte Permanente); 120/160/200 h é o art. 8º
+       (Partes Especial e Suplementar). Não havia divergência.
      - Greve do servidor (CE/AL): o item cobra o texto estadual; o
        comentário registra a CF, art. 37, VII, e o Tema 541 do STF.
    ===================================================================== */
@@ -598,7 +599,7 @@ const QUESTOES_PCAL_LOTE108 = [
     ...BASE108,
     id: "LI-345", assunto: "Carreiras da PC-AL (Lei 6.276/2001)",
     subassunto: "Classe D — carga horária e interstício",
-    origem: "Item inédito do QAP DSO (2026) — QAP DSO (Legislação), gabarito do material; item de autoria do curso, reescrito aqui com redação própria (mesmo ponto e mesmo gabarito)",
+    origem: "Item inédito do QAP DSO (2026) — QAP DSO (Legislação), gabarito do material; item de autoria do curso, reescrito aqui com redação própria (mesmo ponto e mesmo gabarito); conferido em 10/2026: 360 h é o art. 7º; 120/160/200 h é o art. 8º (Lei 7.602/2014)",
     dificuldade: 3, tempoIdealSeg: 65,
     enunciado: "Na Parte Permanente, a progressão horizontal para a Classe D exige 360 horas de cursos de capacitação na área de atuação e, além dessa titulação, interstício de cinco anos contados do último posicionamento na Classe anterior.",
     gabarito: "C",
@@ -609,7 +610,7 @@ const QUESTOES_PCAL_LOTE108 = [
       palavraCritica: "360 horas",
     },
     comentario: {
-      resolucao: "CERTO, segundo o gabarito do material (art. 7º, § 1º, IV, e § 2º). A progressão horizontal exige titulação mais interstício de cinco anos contado do último posicionamento na Classe imediatamente anterior. Observação: a versão compilada consultada (redação da Lei 7.602/2014) mostra escala de 120, 160 e 200 horas para as Classes B, C e D. O material e o item LI-132 do banco usam 120, 240 e 360. O gabarito do QAP foi mantido; confira o texto vigente indicado no edital.",
+      resolucao: "CERTO, segundo o gabarito do material (art. 7º, § 1º, IV, e § 2º, na redação da Lei 7.602/2014). A Classe D da Parte Permanente exige 360 horas de capacitação na área de atuação, e a progressão horizontal pede também o interstício de cinco anos contado do último posicionamento na Classe anterior. A escala de 120, 160 e 200 horas existe, mas é a do art. 8º (Partes Especial e Suplementar, nível médio) — conferido no texto da Lei 7.602/2014.",
       fundamento: "Lei estadual nº 6.276/2001, art. 7º, § 1º, e § 2º.",
       macete: "Progressão horizontal: horas + 5 anos.",
       erroComum: "Esquecer o interstício.",

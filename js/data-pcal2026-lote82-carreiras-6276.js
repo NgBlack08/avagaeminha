@@ -43,7 +43,16 @@
        subsídio; a vigente, dada pela Lei 6.927/2008, o RESSALVA. Uma
        palavra troca o gabarito.
 
-   Gabarito: 9 CERTO / 9 ERRADO. Vale a nota metodológica do lote 77
+   ATUALIZAÇÃO (10/2026). O consolidado acima parou em 2008 e não trazia
+   a Lei 7.602/2014, que deu nova redação aos arts. 2º, 3º (§ 1º), 7º e
+   8º, nem a Lei 9.032/2023 (art. 7º, § 7º). Hoje há Classes A a G nas
+   três Partes; o art. 7º prevê linhas horizontal E vertical; sumiram o
+   piso de 40 horas por curso, a ordem de ingresso nos cursos e a
+   progressão automática. LI-121, LI-131, LI-134, LI-135 e LI-137 foram
+   reescritos ou tiveram o gabarito revisto, e LI-124, LI-132, LI-133 e
+   LI-136 ganharam a citação da redação atual.
+
+   Gabarito original: 9 CERTO / 9 ERRADO. Vale a nota metodológica do lote 77
    sobre comprimento e regra cega em lote pequeno.
    ===================================================================== */
 
@@ -82,20 +91,20 @@ const QUESTOES_PCAL_LOTE82 = [
   {
     ...BASE82,
     id: "LI-121", subassunto: "Classes por parte da carreira — art. 2º",
-    origem: "Inédita — estilo CEBRASPE (Lei estadual 6.276/2001, art. 2º)",
+    origem: "Inédita — estilo CEBRASPE (Lei estadual 6.276/2001, art. 2º); atualizado em 10/2026 à redação da Lei 7.602/2014",
     dificuldade: 3, tempoIdealSeg: 70,
     enunciado: "Os cargos da Parte Permanente distribuem-se em quatro Classes — A, B, C e D —, ao passo que os da Parte Especial e da Parte Suplementar se distribuem em três Classes: B, C e D.",
-    gabarito: "C", pegadinha: "literalidade", palavraChave: "três Classes: B, C e D",
+    gabarito: "E", pegadinha: "literalidade", palavraChave: "três Classes: B, C e D",
     cognitivo: {
-      motivo: "Cobrar a assimetria criada pela Lei 6.788/2006, que a redação anterior não tinha.",
-      palavraCritica: "Parte Especial",
+      motivo: "Cobrar a estrutura de Classes após a Lei 7.602/2014.",
+      palavraCritica: "Classes A a G",
     },
     comentario: {
-      resolucao: "CERTO. É a redação vigente do art. 2º, dada pela Lei nº 6.788/2006. A assimetria é deliberada: quem já era da carreira migrou para a Parte Especial e entra a partir da Classe B, enquanto a Classe A é o degrau de ingresso da Parte Permanente. As redações anteriores previam quatro Classes para todos, sem distinção.",
-      fundamento: "Lei estadual nº 6.276/2001, art. 2º, com a redação da Lei nº 6.788/2006.",
-      macete: "Permanente começa em A; Especial e Suplementar começam em B.",
-      erroComum: "Uniformizar em quatro Classes, que era a regra até 2006.",
-      comoBancaPensa: "Número que muda conforme a parte da carreira — formato clássico de troca numérica."
+      resolucao: "ERRADO. A estrutura descrita é a da Lei 6.788/2006, superada. Desde a Lei 7.602/2014, o art. 2º remete aos Anexos I, II e III, e os arts. 7º e 8º organizam a progressão horizontal em sete Classes, de A a G, tanto na Parte Permanente (Classe A: nível superior) quanto nas Partes Especial e Suplementar (Classe A: nível médio). Não há mais quatro Classes de um lado e três do outro.",
+      fundamento: "Lei estadual nº 6.276/2001, arts. 2º, 7º e 8º, com a redação da Lei nº 7.602/2014.",
+      macete: "Hoje: Classes A a G nas três Partes. O que muda é a escolaridade e as horas.",
+      erroComum: "Estudar por material anterior a 2014.",
+      comoBancaPensa: "Cobra uma estrutura revogada como se estivesse em vigor."
     }
   },
 
@@ -144,7 +153,7 @@ const QUESTOES_PCAL_LOTE82 = [
   {
     ...BASE82,
     id: "LI-124", subassunto: "Requisitos específicos — art. 3º, § 1º",
-    origem: "Inédita — estilo CEBRASPE (Lei estadual 6.276/2001, art. 3º, § 1º)",
+    origem: "Inédita — estilo CEBRASPE (Lei estadual 6.276/2001, art. 3º, § 1º); atualizado em 10/2026 à redação da Lei 7.602/2014",
     dificuldade: 3, tempoIdealSeg: 70,
     enunciado: "Exige-se a Carteira Nacional de Habilitação apenas para o cargo de Agente de Polícia, ao passo que a comprovação de conhecimentos de informática, por prova específica, é exigida para todos os cargos.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "apenas para o cargo de Agente",
@@ -153,10 +162,10 @@ const QUESTOES_PCAL_LOTE82 = [
       palavraCritica: "apenas",
     },
     comentario: {
-      resolucao: "CERTO. O § 1º do art. 3º é expresso: CNH para o cargo de Agente de Polícia, e conhecimentos de informática, mediante prova específica definida em regulamento, para TODOS os cargos. São dois requisitos com alcances diferentes no mesmo parágrafo.",
-      fundamento: "Lei estadual nº 6.276/2001, art. 3º, § 1º.",
-      macete: "CNH: só Agente. Informática: todo mundo.",
-      erroComum: "Estender a CNH ao Escrivão, por serem os dois cargos da mesma lei.",
+      resolucao: "CERTO. Pelo § 1º do art. 3º, na redação da Lei 7.602/2014, exige-se a CNH, categoria B ou superior, só para o cargo de Agente de Polícia; para o Escrivão, certificado de curso de digitação; e, para ambos, comprovação de conhecimentos de digitação e informática por prova específica definida em edital. São requisitos com alcances diferentes no mesmo parágrafo.",
+      fundamento: "Lei estadual nº 6.276/2001, art. 3º, § 1º, com a redação da Lei nº 7.602/2014.",
+      macete: "CNH: só Agente. Certificado de digitação: só Escrivão. Prova de digitação e informática: os dois.",
+      erroComum: "Estender a CNH ao Escrivão.",
       comoBancaPensa: "Dois requisitos no mesmo dispositivo, com abrangências distintas — basta trocar uma para o item cair."
     }
   },
@@ -288,27 +297,27 @@ const QUESTOES_PCAL_LOTE82 = [
   {
     ...BASE82,
     id: "LI-131", subassunto: "Linha de progressão — art. 7º",
-    origem: "Inédita — estilo CEBRASPE (Lei estadual 6.276/2001, art. 7º)",
+    origem: "Inédita — estilo CEBRASPE (Lei estadual 6.276/2001, art. 7º); atualizado em 10/2026 à redação da Lei 7.602/2014",
     dificuldade: 3, tempoIdealSeg: 70,
-    enunciado: "A progressão funcional nas carreiras de Agente de Polícia e Escrivão de Polícia da Parte Permanente dar-se-á em linha vertical de acesso, segundo o grau de formação exigido para o provimento do cargo.",
-    gabarito: "E", pegadinha: "troca-conceito", palavraChave: "linha vertical de acesso",
+    enunciado: "A progressão funcional nas carreiras de Agente de Polícia e Escrivão de Polícia da Parte Permanente dar-se-á exclusivamente em linha horizontal de acesso, segundo o grau de formação exigido para o provimento do cargo.",
+    gabarito: "E", pegadinha: "troca-conceito", palavraChave: "exclusivamente em linha horizontal",
     cognitivo: {
-      motivo: "Reproduzir a redação original do art. 7º, que falava em linha vertical, hoje substituída por horizontal.",
-      palavraCritica: "vertical",
+      motivo: "Cobrar as duas linhas de progressão do art. 7º.",
+      palavraCritica: "horizontal e vertical",
     },
     comentario: {
-      resolucao: "ERRADO. A redação vigente do art. 7º, dada pela Lei nº 6.788/2006, prevê progressão em linha HORIZONTAL de acesso. A original de 2001 dizia 'vertical', e foi revogada. O resto da assertiva está correto — o critério é mesmo o grau de formação —, o que torna o erro mais difícil de ver.",
-      fundamento: "Lei estadual nº 6.276/2001, art. 7º, com a redação da Lei nº 6.788/2006.",
-      macete: "Depois de 2006, a progressão dessas carreiras é HORIZONTAL, por Classe.",
-      erroComum: "Associar 'progressão por classes' à ideia intuitiva de subida vertical.",
-      comoBancaPensa: "Troca uma palavra do caput e mantém todo o resto fiel — o item parece o texto legal."
+      resolucao: "ERRADO. Desde a Lei 7.602/2014, o caput do art. 7º prevê progressão em linha HORIZONTAL E VERTICAL de acesso, segundo o grau de formação. A horizontal anda pelas Classes (A a G), com horas de capacitação e interstício; a vertical anda pelos Níveis (I a IV), por qualificação e pós-graduação, sem interstício. A redação de 2006 falava só em horizontal.",
+      fundamento: "Lei estadual nº 6.276/2001, art. 7º, com a redação da Lei nº 7.602/2014.",
+      macete: "Horizontal = Classes (horas + 5 anos). Vertical = Níveis (títulos, sem interstício).",
+      erroComum: "Lembrar só da progressão por Classes.",
+      comoBancaPensa: "Restringe a uma linha o que a lei prevê em duas."
     }
   },
 
   {
     ...BASE82,
     id: "LI-132", subassunto: "Horas de capacitação por Classe — art. 7º, I a IV",
-    origem: "Inédita — estilo CEBRASPE (Lei estadual 6.276/2001, art. 7º)",
+    origem: "Inédita — estilo CEBRASPE (Lei estadual 6.276/2001, art. 7º); atualizado em 10/2026 à redação da Lei 7.602/2014",
     dificuldade: 3, tempoIdealSeg: 75,
     enunciado: "Exige-se, além do curso de nível superior, 240 horas de cursos de capacitação para a Classe B, 360 horas para a Classe C e 480 horas para a Classe D.",
     gabarito: "E", pegadinha: "troca-numerica", palavraChave: "240 horas ... Classe B",
@@ -317,18 +326,18 @@ const QUESTOES_PCAL_LOTE82 = [
       palavraCritica: "480",
     },
     comentario: {
-      resolucao: "ERRADO. A escala correta do art. 7º é 120 horas para a Classe B, 240 para a Classe C e 360 para a Classe D — sempre somadas ao curso de nível superior. O item desloca toda a régua em um degrau e inventa um patamar de 480 horas, que não existe na lei.",
-      fundamento: "Lei estadual nº 6.276/2001, art. 7º, incisos II, III e IV, com a redação da Lei nº 6.788/2006.",
-      macete: "120, 240, 360 — de cem em cem e vinte, e para em 360. A Classe A não exige horas, só o superior.",
-      erroComum: "Lembrar que os números crescem de 120 em 120 e não conferir onde a régua começa.",
-      comoBancaPensa: "Mantém o padrão aritmético para o item parecer plausível e desloca o ponto de partida."
+      resolucao: "ERRADO. A escala do art. 7º, § 1º, na redação da Lei 7.602/2014, é de 120 horas para a Classe B, 240 para a C e 360 para a D, e segue de 120 em 120 até a G (480, 600 e 720), sempre somadas ao curso superior da Classe A. O item desloca a régua em um degrau: 480 horas é a exigência da Classe E, não da D. Não confunda com o art. 8º (Partes Especial e Suplementar, nível médio): 120, 160 e 200 horas para B, C e D.",
+      fundamento: "Lei estadual nº 6.276/2001, art. 7º, com a redação da Lei nº 7.602/2014.",
+      macete: "Parte Permanente: +120 por Classe (120, 240, 360...). Especial/Suplementar: +40 (120, 160, 200...).",
+      erroComum: "Misturar a escala do art. 7º com a do art. 8º.",
+      comoBancaPensa: "Desloca a escala inteira em um degrau."
     }
   },
 
   {
     ...BASE82,
     id: "LI-133", subassunto: "Interstício — art. 7º, § 1º",
-    origem: "Inédita — estilo CEBRASPE (Lei estadual 6.276/2001, art. 7º, § 1º)",
+    origem: "Inédita — estilo CEBRASPE (Lei estadual 6.276/2001, art. 7º, § 1º); atualizado em 10/2026 à redação da Lei 7.602/2014",
     dificuldade: 3, tempoIdealSeg: 70,
     enunciado: "A progressão horizontal obedecerá, exclusivamente, à titulação exigida mais o interstício de cinco anos, contados a partir do último posicionamento na Classe imediatamente anterior.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "cinco anos",
@@ -337,9 +346,9 @@ const QUESTOES_PCAL_LOTE82 = [
       palavraCritica: "exclusivamente",
     },
     comentario: {
-      resolucao: "CERTO. É a redação vigente do § 1º do art. 7º. Note o 'exclusivamente': os requisitos são apenas dois — titulação e interstício —, e o prazo não corre da posse, mas do último posicionamento na Classe imediatamente anterior.",
-      fundamento: "Lei estadual nº 6.276/2001, art. 7º, § 1º, com a redação da Lei nº 6.788/2006.",
-      macete: "Titulação + cinco anos, contados do último posicionamento. Nada além disso.",
+      resolucao: "CERTO. É o § 2º do art. 7º, na redação da Lei 7.602/2014: a progressão horizontal é requerida no órgão de origem, deferida e homologada pela Secretaria de Estado da Gestão Pública e obedece, exclusivamente, à titulação exigida mais o interstício de cinco anos, contados do último posicionamento na Classe imediatamente anterior. O prazo não corre da posse.",
+      fundamento: "Lei estadual nº 6.276/2001, art. 7º, § 2º, com a redação da Lei nº 7.602/2014.",
+      macete: "Titulação + cinco anos, contados do último posicionamento.",
       erroComum: "Contar o interstício do ingresso na carreira, e não da Classe anterior.",
       comoBancaPensa: "O marco inicial da contagem é o detalhe que a banca troca sem mexer no número."
     }
@@ -348,47 +357,47 @@ const QUESTOES_PCAL_LOTE82 = [
   {
     ...BASE82,
     id: "LI-134", subassunto: "Carga mínima dos cursos — art. 7º, § 2º",
-    origem: "Inédita — estilo CEBRASPE (Lei estadual 6.276/2001, art. 7º, § 2º)",
+    origem: "Inédita — estilo CEBRASPE (Lei estadual 6.276/2001, art. 7º, § 2º); atualizado em 10/2026 à redação da Lei 7.602/2014",
     dificuldade: 3, tempoIdealSeg: 65,
-    enunciado: "Os cursos de capacitação exigidos para a progressão serão oferecidos obrigatoriamente pela Administração Pública Estadual, computando-se, para efeito de somatório das horas, aqueles que possuam carga mínima de vinte horas.",
-    gabarito: "E", pegadinha: "troca-numerica", palavraChave: "vinte horas",
+    enunciado: "Os cursos de capacitação exigidos para a progressão horizontal na Parte Permanente devem ser oferecidos exclusivamente pela Academia de Polícia Civil.",
+    gabarito: "E", pegadinha: "troca-numerica", palavraChave: "exclusivamente pela Academia de Polícia Civil",
     cognitivo: {
-      motivo: "Trocar o piso de carga horária que filtra quais cursos entram no somatório.",
-      palavraCritica: "vinte",
+      motivo: "Cobrar quem pode oferecer os cursos de capacitação.",
+      palavraCritica: "APOCAL, Escola de Governo ou instituição reconhecida",
     },
     comentario: {
-      resolucao: "ERRADO. O § 2º do art. 7º exige carga mínima de QUARENTA horas para que o curso seja computado no somatório. O piso existe para impedir que se acumulem muitos cursos curtos até atingir o total exigido pela Classe.",
-      fundamento: "Lei estadual nº 6.276/2001, art. 7º, § 2º, com a redação da Lei nº 6.788/2006.",
-      macete: "Só conta curso de 40 horas para cima.",
-      erroComum: "Supor que qualquer certificado se soma, independentemente da duração.",
-      comoBancaPensa: "Reduz o piso pela metade — número plausível, e poucos candidatos memorizam esse parágrafo."
+      resolucao: "ERRADO. Pelo art. 7º, § 1º, II a VII, na redação da Lei 7.602/2014, os cursos de capacitação, na área de atuação, podem ser oferecidos pela Academia de Polícia Civil, pela Escola de Governo de Alagoas ou por instituição reconhecida pela Administração Pública. A APOCAL é uma das opções, não a única.",
+      fundamento: "Lei estadual nº 6.276/2001, art. 7º, com a redação da Lei nº 7.602/2014.",
+      macete: "Cursos: APOCAL, Escola de Governo ou instituição reconhecida.",
+      erroComum: "Achar que só a Academia de Polícia vale para a carreira.",
+      comoBancaPensa: "Restringe a uma fonte o que a lei abre a três."
     }
   },
 
   {
     ...BASE82,
     id: "LI-135", subassunto: "Acesso aos cursos e desempate — art. 7º, § 3º",
-    origem: "Inédita — estilo CEBRASPE (Lei estadual 6.276/2001, art. 7º, § 3º)",
+    origem: "Inédita — estilo CEBRASPE (Lei estadual 6.276/2001, art. 7º, § 3º); atualizado em 10/2026 à redação da Lei 7.602/2014",
     dificuldade: 3, tempoIdealSeg: 75,
-    enunciado: "O ingresso nos cursos de capacitação observa, em regime de alternância, o maior tempo de serviço público do servidor, e, havendo empate, o maior tempo na Classe em que ele se encontrar.",
-    gabarito: "E", pegadinha: "troca-conceito", palavraChave: "maior tempo de serviço público",
+    enunciado: "Na Parte Permanente, o Nível I da progressão vertical exige curso de qualificação profissional na área de atuação com carga horária de quarenta horas.",
+    gabarito: "E", pegadinha: "troca-conceito", palavraChave: "quarenta horas",
     cognitivo: {
-      motivo: "Inverter a ordem dos critérios do § 3º, trocando o principal pelo de desempate.",
-      palavraCritica: "havendo empate",
+      motivo: "Separar as cargas da progressão vertical nas duas partes da carreira.",
+      palavraCritica: "cento e vinte horas",
     },
     comentario: {
-      resolucao: "ERRADO. A ordem é a inversa. O critério principal é o maior tempo de serviço NA CLASSE em que o servidor se encontrar; o primeiro desempate é o maior tempo no serviço público; e, persistindo o empate, procede-se a sorteio. O item troca os dois primeiros de lugar e omite o sorteio.",
-      fundamento: "Lei estadual nº 6.276/2001, art. 7º, § 3º.",
-      macete: "Primeiro o tempo na Classe; depois o tempo no serviço público; por último, sorteio.",
-      erroComum: "Presumir que o tempo total de serviço público prevalece, por ser o critério mais comum na Administração.",
-      comoBancaPensa: "Inverte critério principal e critério de desempate — a assertiva usa as palavras certas na ordem errada."
+      resolucao: "ERRADO. Na Parte Permanente (art. 7º, § 3º, I, na redação da Lei 7.602/2014), o Nível I exige curso de qualificação profissional na área de atuação com 120 horas; os Níveis II a IV pedem pós-graduação (especialização, mestrado ou doutorado, ou especializações acumuladas). Quarenta horas é o Nível I das Partes Especial e Suplementar (art. 8º, § 3º, I).",
+      fundamento: "Lei estadual nº 6.276/2001, arts. 7º, § 3º, e 8º, § 3º, com a redação da Lei nº 7.602/2014.",
+      macete: "Vertical, Nível I: 120 h (Permanente) × 40 h (Especial/Suplementar).",
+      erroComum: "Trocar as escalas dos arts. 7º e 8º.",
+      comoBancaPensa: "Usa o número certo da outra parte da carreira."
     }
   },
 
   {
     ...BASE82,
     id: "LI-136", subassunto: "Vedação ao reaproveitamento — art. 7º, § 4º",
-    origem: "Inédita — estilo CEBRASPE (Lei estadual 6.276/2001, art. 7º, § 4º)",
+    origem: "Inédita — estilo CEBRASPE (Lei estadual 6.276/2001, art. 7º, § 4º); atualizado em 10/2026 à redação da Lei 7.602/2014",
     dificuldade: 2, tempoIdealSeg: 60,
     enunciado: "A qualificação, a habilitação ou a titulação já utilizada em uma progressão pode ser novamente aproveitada em outra forma de progressão funcional, desde que respeitado o interstício legal entre elas.",
     gabarito: "E", pegadinha: "exigencia-inexistente", palavraChave: "pode ser aproveitada em mais de uma",
@@ -397,9 +406,9 @@ const QUESTOES_PCAL_LOTE82 = [
       palavraCritica: "desde que",
     },
     comentario: {
-      resolucao: "ERRADO. O § 4º do art. 7º é categórico: 'Sob nenhuma hipótese uma mesma qualificação, habilitação ou titulação poderá ser utilizada em mais de uma forma de progressão'. Não há ressalva, e o respeito ao interstício não abre exceção alguma — a condição criada pelo item não existe na lei.",
-      fundamento: "Lei estadual nº 6.276/2001, art. 7º, § 4º.",
-      macete: "Cada título vale uma vez só. 'Sob nenhuma hipótese' não comporta condição.",
+      resolucao: "ERRADO. O § 6º do art. 7º, na redação da Lei 7.602/2014, é categórico: 'Sob nenhuma hipótese uma mesma qualificação ou titulação poderá ser utilizada em mais de uma forma de progressão'. Não há ressalva, e o respeito ao interstício não abre exceção. A mesma vedação está no § 8º do art. 8º para as Partes Especial e Suplementar.",
+      fundamento: "Lei estadual nº 6.276/2001, art. 7º, § 6º, com a redação da Lei nº 7.602/2014.",
+      macete: "Cada título vale uma vez só.",
       erroComum: "Aceitar a ressalva por ela soar razoável e administrativamente plausível.",
       comoBancaPensa: "Transforma vedação absoluta em regra condicionada — inversão típica do padrão 'exigência inexistente'."
     }
@@ -408,20 +417,20 @@ const QUESTOES_PCAL_LOTE82 = [
   {
     ...BASE82,
     id: "LI-137", subassunto: "Progressão automática — art. 7º, § 5º",
-    origem: "Inédita — estilo CEBRASPE (Lei estadual 6.276/2001, art. 7º, § 5º)",
+    origem: "Inédita — estilo CEBRASPE (Lei estadual 6.276/2001, art. 7º, § 5º); atualizado em 10/2026 à redação da Lei 7.602/2014",
     dificuldade: 3, tempoIdealSeg: 70,
     enunciado: "Decorrido o interstício sem que a Administração Pública tenha oferecido os cursos de capacitação, a progressão horizontal dar-se-á automaticamente.",
-    gabarito: "C", pegadinha: "literalidade", palavraChave: "automaticamente",
+    gabarito: "E", pegadinha: "literalidade", palavraChave: "automaticamente",
     cognitivo: {
-      motivo: "Cobrar o § 5º, acrescentado em 2006, que impede que a omissão estatal trave a carreira.",
-      palavraCritica: "automaticamente",
+      motivo: "Cobrar que a progressão horizontal depende da titulação.",
+      palavraCritica: "exclusivamente titulação + interstício",
     },
     comentario: {
-      resolucao: "CERTO. É o § 5º do art. 7º, acrescentado pela Lei nº 6.788/2006. A lógica é impedir que a inércia da Administração — que é quem deve oferecer os cursos, por força do § 2º — prejudique o servidor: cumprido o interstício sem oferta, a progressão ocorre de pleno direito.",
-      fundamento: "Lei estadual nº 6.276/2001, art. 7º, § 5º (acrescentado pela Lei nº 6.788/2006).",
-      macete: "Se o Estado não ofereceu curso, o servidor progride assim mesmo.",
-      erroComum: "Supor que a titulação é sempre indispensável, sem conhecer a válvula de escape do § 5º.",
-      comoBancaPensa: "Dispositivo que contraria a regra geral do próprio artigo — por isso é bom item de prova."
+      resolucao: "ERRADO. A progressão automática por falta de oferta de cursos estava no § 5º da redação de 2006, que a Lei 7.602/2014 substituiu ao dar nova redação integral ao art. 7º. Hoje a progressão horizontal é requerida e obedece, exclusivamente, à titulação exigida mais o interstício de cinco anos (§ 2º); sem as horas de capacitação, não há progressão. Os cursos podem vir da APOCAL, da Escola de Governo ou de instituição reconhecida.",
+      fundamento: "Lei estadual nº 6.276/2001, art. 7º, § 2º, com a redação da Lei nº 7.602/2014.",
+      macete: "Sem titulação, sem progressão: a válvula de 2006 não existe mais.",
+      erroComum: "Estudar pelo texto de 2006.",
+      comoBancaPensa: "Cobra dispositivo revogado como se vigesse."
     }
   },
 
