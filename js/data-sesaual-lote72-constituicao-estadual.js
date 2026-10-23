@@ -61,20 +61,20 @@ const QUESTOES_SESAUAL_LOTE72 = [
   {
     id: "LEA-042", disciplina: "Legislação Estadual (AL)", assunto: "Constituição do Estado de Alagoas", subassunto: "Art. 6º — Capital",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (padrão de troca de sujeito)",
+    origem: "Inédita — estilo CEBRASPE (padrão de troca de sujeito); reescrito na calibragem de 10/2026: o erro do item foi corrigido, gabarito passou a CERTO",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.62,
-    enunciado: "A Constituição Estadual fixa a Capital e a sede do Governo do Estado de Alagoas no Município de Arapiraca.",
-    gabarito: "E", pegadinha: "troca-sujeito", palavraChave: "Capital ... Arapiraca",
+    enunciado: "A Constituição Estadual fixa a Capital e a sede do Governo do Estado de Alagoas no Município de Maceió.",
+    gabarito: "C", pegadinha: "troca-sujeito", palavraChave: "Maceió",
     cognitivo: {
-      motivo: "Cobrar um dado objetivo de fácil verificação, trocado por outro município do Estado.",
-      palavraCritica: "Arapiraca",
+      motivo: "Fixar a sede do Governo na Constituição de Alagoas.",
+      palavraCritica: "Maceió",
     },
     comentario: {
-      resolucao: "ERRADO. A Capital e a sede do Governo são no Município de MACEIÓ, conforme o art. 6º. Arapiraca é o segundo município mais populoso do Estado e sedia provas de concurso, o que torna o nome familiar ao candidato — e é justamente essa familiaridade que a banca explora.",
+      resolucao: "CERTO. O art. 6º da Constituição do Estado de Alagoas fixa em Maceió a Capital e a sede do Governo. Arapiraca, segundo município mais populoso, é o distrator usual.",
       fundamento: "Constituição do Estado de Alagoas, art. 6º.",
-      macete: "Capital de Alagoas: Maceió. Arapiraca é a segunda cidade.",
-      erroComum: "Aceitar o nome por reconhecê-lo como cidade importante do Estado.",
-      comoBancaPensa: "Troca um dado objetivo por outro plausível do mesmo universo."
+      macete: "Capital e sede do Governo: Maceió (art. 6º).",
+      erroComum: "Procurar pegadinha onde não há.",
+      comoBancaPensa: "Item correto e literal."
     }
   },
   {

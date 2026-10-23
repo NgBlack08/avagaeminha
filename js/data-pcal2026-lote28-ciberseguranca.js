@@ -73,20 +73,20 @@ const QUESTOES_PCAL_LOTE28 = [
   {
     id: "CC-018", disciplina: "Crimes Cibernéticos e Segurança Digital", assunto: "Invasão de dispositivo", subassunto: "Art. 154-A pós-Lei 14.155/2021",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (CP, art. 154-A; Lei 14.155/2021)",
+    origem: "Inédita — estilo CEBRASPE (CP, art. 154-A; Lei 14.155/2021); corrigido em 10/2026: a Lei 14.155/2021 suprimiu a elementar 'violação indevida de mecanismo de segurança'",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 55, probReaparecer: 0.8,
     enunciado: "Mesmo após as alterações promovidas pela Lei 14.155/2021, o crime de invasão de dispositivo informático (art. 154-A do Código Penal) continua exigindo, como elementar do tipo, a violação indevida de mecanismo de segurança do dispositivo invadido.",
-    gabarito: "C", pegadinha: "juris-mais-lei", palavraChave: "continua exigindo ... violação indevida de mecanismo de segurança",
+    gabarito: "E", pegadinha: "juris-mais-lei", palavraChave: "continua exigindo",
     cognitivo: {
-      motivo: "Cobrar a permanência da elementar 'violação de mecanismo de segurança' após a Lei 14.155/2021.",
+      motivo: "Cobrar a supressão da elementar 'violação de mecanismo de segurança' pela Lei 14.155/2021.",
       palavraCritica: "continua exigindo",
     },
     comentario: {
-      resolucao: "CERTO. A Lei 14.155/2021 agravou a pena do art. 154-A (de detenção para reclusão) e incluiu qualificadoras (vítima idosa ou vulnerável, instituições financeiras, infraestruturas críticas, administração pública), mas não alterou a elementar do caput: o crime continua exigindo a invasão mediante violação indevida de mecanismo de segurança do dispositivo.",
-      fundamento: "CP, art. 154-A; Lei 14.155/2021.",
-      macete: "14.155/21: pena mais grave + qualificadoras. Elementar da violação de segurança permanece.",
-      erroComum: "Achar que a lei de 2021 dispensou a violação do mecanismo de segurança.",
-      comoBancaPensa: "Testa se o candidato confunde agravamento de pena com mudança na conduta típica."
+      resolucao: "ERRADO. A Lei 14.155/2021 fez duas coisas no art. 154-A: tornou a pena mais grave (reclusão de 1 a 4 anos) e mudou a redação do caput, SUPRIMINDO a elementar 'mediante violação indevida de mecanismo de segurança'. Desde então, invadir dispositivo desprotegido também configura o crime, desde que haja o fim de obter, adulterar ou destruir dados sem autorização do usuário, ou de instalar vulnerabilidades.",
+      fundamento: "CP, art. 154-A, com a redação da Lei 14.155/2021.",
+      macete: "14.155/21: pena maior E tipo mais amplo (sai a exigência de violar a segurança).",
+      erroComum: "Achar que a lei de 2021 só agravou a pena.",
+      comoBancaPensa: "Testa se o candidato percebeu a mudança na conduta típica, e não só na pena."
     }
   },
   {

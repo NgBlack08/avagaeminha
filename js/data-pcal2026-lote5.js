@@ -251,20 +251,20 @@ const QUESTOES_PCAL_LOTE5 = [
   /* ==================== CRIMES CIBERNÉTICOS E SEGURANÇA DIGITAL ==================== */
   {
     id: "CC-005", disciplina: "Crimes Cibernéticos e Segurança Digital", assunto: "Invasão de dispositivo", subassunto: "Art. 154-A do CP",
-    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026); corrigido em 10/2026: a Lei 14.155/2021 suprimiu a elementar 'violação indevida de mecanismo de segurança'",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 45, probReaparecer: 0.9,
-    enunciado: "O crime de invasão de dispositivo informático, previsto no art. 154-A do Código Penal, exige, para sua configuração, a violação indevida de mecanismo de segurança, com o fim de obter, adulterar ou destruir dados sem autorização do titular do dispositivo.",
-    gabarito: "C", pegadinha: "literalidade", palavraChave: "violação de mecanismo de segurança",
+    enunciado: "O crime de invasão de dispositivo informático, previsto no art. 154-A do Código Penal, exige, para sua configuração, a violação indevida de mecanismo de segurança, com o fim de obter, adulterar ou destruir dados sem autorização do usuário do dispositivo.",
+    gabarito: "E", pegadinha: "literalidade", palavraChave: "violação indevida de mecanismo de segurança",
     cognitivo: {
-      motivo: "Cobrar os elementos do art. 154-A do CP (Lei 12.737/2012, alterado pela Lei 14.155/2021).",
-      palavraCritica: "violação indevida de mecanismo de segurança",
+      motivo: "Cobrar a redação atual do art. 154-A após a Lei 14.155/2021.",
+      palavraCritica: "elementar suprimida em 2021",
     },
     comentario: {
-      resolucao: "CERTO. CP, art. 154-A (Lei 12.737/2012, com penas ampliadas pela Lei 14.155/2021): exige a invasão de dispositivo mediante violação indevida de mecanismo de segurança, com o fim de obter, adulterar ou destruir dados/informações sem autorização, ou instalar vulnerabilidades. A ação penal é, em regra, condicionada à representação.",
-      fundamento: "CP, art. 154-A e 154-B (Lei 12.737/2012; Lei 14.155/2021).",
-      macete: "Invasão = tem que 'furar' a segurança. É o crime da 'Carolina Dieckmann'.",
-      erroComum: "Dispensar a violação de mecanismo de segurança.",
-      comoBancaPensa: "Elemento normativo do tipo (mecanismo de segurança) é o ponto de manipulação."
+      resolucao: "ERRADO. A exigência de 'violação indevida de mecanismo de segurança' estava na redação original (Lei 12.737/2012) e foi SUPRIMIDA pela Lei 14.155/2021. Hoje basta invadir dispositivo informático de uso alheio, conectado ou não à rede, com o fim de obter, adulterar ou destruir dados sem autorização expressa ou tácita do usuário, ou de instalar vulnerabilidades para obter vantagem ilícita. A mesma lei passou a pena para reclusão de 1 a 4 anos.",
+      fundamento: "CP, art. 154-A, com a redação da Lei 14.155/2021.",
+      macete: "Depois de 2021, invadir aparelho desprotegido também é crime.",
+      erroComum: "Repetir a redação de 2012, que exigia 'furar' a segurança.",
+      comoBancaPensa: "Cobra a redação antiga de um tipo alterado recentemente."
     }
   },
   {
@@ -305,20 +305,20 @@ const QUESTOES_PCAL_LOTE5 = [
   },
   {
     id: "CC-008", disciplina: "Crimes Cibernéticos e Segurança Digital", assunto: "LGPD", subassunto: "Tratamento de dados pela segurança pública",
-    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026); reescrito na calibragem de 10/2026: uma palavra da fonte trocada, gabarito passou a ERRADO",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 45, probReaparecer: 0.8,
-    enunciado: "A Lei Geral de Proteção de Dados (Lei nº 13.709/2018) não se aplica ao tratamento de dados pessoais realizado para fins exclusivos de segurança pública, defesa nacional, segurança do Estado ou atividades de investigação e repressão de infrações penais.",
-    gabarito: "C", pegadinha: "literalidade", palavraChave: "fins exclusivos de segurança pública",
+    enunciado: "A Lei Geral de Proteção de Dados (Lei nº 13.709/2018) aplica-se ao tratamento de dados pessoais realizado para fins exclusivos de segurança pública, defesa nacional, segurança do Estado ou atividades de investigação e repressão de infrações penais.",
+    gabarito: "E", pegadinha: "literalidade", palavraChave: "aplica-se",
     cognitivo: {
       motivo: "Cobrar a exceção de aplicação da LGPD (art. 4º, III).",
-      palavraCritica: "fins exclusivos de segurança pública",
+      palavraCritica: "não se aplica",
     },
     comentario: {
-      resolucao: "CERTO. Lei 13.709/2018, art. 4º, III: a LGPD não se aplica ao tratamento de dados realizado para fins exclusivos de segurança pública, defesa nacional, segurança do Estado ou investigação e repressão penal, que serão regidos por legislação específica, observados o devido processo e os princípios de proteção.",
+      resolucao: "ERRADO. Pelo art. 4º, III, a LGPD NÃO se aplica ao tratamento realizado para fins exclusivos de segurança pública, defesa nacional, segurança do Estado ou investigação e repressão penal. Esse tratamento será regido por legislação específica, que deve observar o devido processo legal e os princípios gerais de proteção da LGPD (§ 1º).",
       fundamento: "Lei 13.709/2018, art. 4º, III e §§.",
-      macete: "Atividade-fim de polícia investigativa = fora da LGPD (regra própria).",
+      macete: "Atividade-fim de polícia investigativa = fora da LGPD (lei própria).",
       erroComum: "Aplicar a LGPD integralmente à investigação criminal.",
-      comoBancaPensa: "Exceções de incidência da LGPD são o ponto mais cobrado do tema."
+      comoBancaPensa: "Mantém a lista das finalidades e inverte a regra de incidência."
     }
   },
 

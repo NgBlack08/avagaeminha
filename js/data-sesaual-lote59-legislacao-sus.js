@@ -28,20 +28,20 @@ const QUESTOES_SESAUAL_LOTE59 = [
   {
     id: "SUS-001", disciplina: "Legislação Aplicada ao SUS", assunto: "Evolução histórica do SUS", subassunto: "8ª Conferência Nacional de Saúde",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (Edital SESAU/AL 2026)",
+    origem: "Inédita — estilo CEBRASPE (Edital SESAU/AL 2026); reescrito na calibragem de 10/2026: uma palavra da fonte trocada, gabarito passou a ERRADO",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.82,
-    enunciado: "A 8ª Conferência Nacional de Saúde, realizada em 1986, é considerada o marco da Reforma Sanitária brasileira, tendo consolidado o conceito ampliado de saúde e as bases doutrinárias posteriormente incorporadas pela Constituição Federal de 1988.",
-    gabarito: "C", pegadinha: "literalidade", palavraChave: "marco da Reforma Sanitária ... bases incorporadas pela CF/88",
+    enunciado: "A 10ª Conferência Nacional de Saúde, realizada em 1986, é considerada o marco da Reforma Sanitária brasileira, tendo consolidado o conceito ampliado de saúde e as bases doutrinárias posteriormente incorporadas pela Constituição Federal de 1988.",
+    gabarito: "E", pegadinha: "literalidade", palavraChave: "10ª Conferência",
     cognitivo: {
-      motivo: "Fixar o marco histórico que a banca usa como âncora cronológica do SUS.",
-      palavraCritica: "1986",
+      motivo: "Fixar a conferência-marco da Reforma Sanitária.",
+      palavraCritica: "8ª Conferência",
     },
     comentario: {
-      resolucao: "CERTO. A 8ª CNS foi a primeira conferência aberta à participação da sociedade civil, e seu relatório final firmou o conceito ampliado de saúde — saúde como resultado de condições de vida, não como ausência de doença. Dali saíram as três teses que a CF/88 encampou: saúde como direito de todos e dever do Estado, sistema único, e participação da comunidade. Guarde a cronologia, porque a banca troca as datas: 1986 é a Conferência; 1988 é a Constituição; 1990 são as Leis 8.080 e 8.142.",
+      resolucao: "ERRADO. O marco da Reforma Sanitária é a 8ª Conferência Nacional de Saúde, de 1986 — a primeira aberta à sociedade civil, cujo relatório firmou o conceito ampliado de saúde e as teses que a CF/88 encampou: saúde como direito de todos e dever do Estado, sistema único e participação da comunidade. A data está certa; o número da conferência, não.",
       fundamento: "Relatório Final da 8ª Conferência Nacional de Saúde (1986); CF/88, arts. 196 a 198.",
-      macete: "1986 Conferência → 1988 Constituição → 1990 Leis Orgânicas.",
-      erroComum: "Confundir a 8ª CNS (1986) com a promulgação da Lei 8.080 (1990).",
-      comoBancaPensa: "Item histórico de âncora: cobra a data-marco para depois inverter a cronologia em outros itens."
+      macete: "8ª CNS, 1986 → CF, 1988 → Leis 8.080 e 8.142, 1990.",
+      erroComum: "Lembrar o ano e não o número da conferência.",
+      comoBancaPensa: "Mantém a data e troca o ordinal do evento."
     }
   },
   {
@@ -106,20 +106,20 @@ const QUESTOES_SESAUAL_LOTE59 = [
   {
     id: "SUS-005", disciplina: "Legislação Aplicada ao SUS", assunto: "Seguridade social e saúde na CF/88", subassunto: "Art. 194 — conceito de seguridade social",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (Edital SESAU/AL 2026)",
+    origem: "Inédita — estilo CEBRASPE (Edital SESAU/AL 2026); reescrito na calibragem de 10/2026: uma palavra da fonte trocada, gabarito passou a ERRADO",
     tipo: "CE", dificuldade: 1, tempoIdealSeg: 45, probReaparecer: 0.85,
-    enunciado: "A seguridade social compreende um conjunto integrado de ações de iniciativa dos poderes públicos e da sociedade, destinadas a assegurar os direitos relativos à saúde, à previdência e à assistência social.",
-    gabarito: "C", pegadinha: "literalidade", palavraChave: "saúde, previdência e assistência social",
+    enunciado: "A seguridade social compreende um conjunto integrado de ações de iniciativa dos poderes públicos e da sociedade, destinadas a assegurar os direitos relativos à saúde, à previdência e à educação.",
+    gabarito: "E", pegadinha: "literalidade", palavraChave: "educação",
     cognitivo: {
-      motivo: "Fixar o tripé da seguridade social, base de todos os itens do art. 194 ao 200.",
-      palavraCritica: "saúde, à previdência e à assistência social",
+      motivo: "Fixar o tripé da seguridade social (CF, art. 194).",
+      palavraCritica: "assistência social",
     },
     comentario: {
-      resolucao: "CERTO. É a transcrição do caput do art. 194 da CF. O tripé importa porque cada perna tem lógica própria de acesso: previdência é CONTRIBUTIVA (só quem contribui recebe); saúde e assistência social são NÃO contributivas. A assistência ainda exige comprovação de necessidade — 'a quem dela necessitar', art. 203 —, enquanto a saúde é a única das três com acesso universal e incondicionado. A banca troca essas condições de acesso entre si.",
+      resolucao: "ERRADO. O art. 194 da CF fala em saúde, previdência e ASSISTÊNCIA SOCIAL. A educação é direito social, mas fica fora da seguridade. Lembre a lógica de acesso: só a previdência é contributiva; a saúde é universal; a assistência é para quem dela necessitar.",
       fundamento: "CF/88, art. 194, caput; arts. 196 e 203.",
-      macete: "Tripé SAP: Saúde, Assistência, Previdência. Só a Previdência exige contribuição.",
-      erroComum: "Incluir educação ou trabalho no rol da seguridade social.",
-      comoBancaPensa: "Item literal de abertura, que ancora as trocas de condição de acesso nos itens seguintes."
+      macete: "Tripé SAP: Saúde, Assistência, Previdência.",
+      erroComum: "Incluir educação ou trabalho na seguridade social.",
+      comoBancaPensa: "Reproduz o caput e troca a terceira perna do tripé."
     }
   },
   {
@@ -220,20 +220,20 @@ const QUESTOES_SESAUAL_LOTE59 = [
   {
     id: "SUS-011", disciplina: "Legislação Aplicada ao SUS", assunto: "Seguridade social e saúde na CF/88", subassunto: "Art. 200 — competências do SUS",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (Edital SESAU/AL 2026)",
+    origem: "Inédita — estilo CEBRASPE (Edital SESAU/AL 2026); reescrito na calibragem de 10/2026: uma palavra da fonte trocada, gabarito passou a ERRADO",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 60, probReaparecer: 0.8,
-    enunciado: "Compete ao Sistema Único de Saúde, entre outras atribuições, ordenar a formação de recursos humanos na área de saúde e participar da formulação da política e da execução das ações de saneamento básico.",
-    gabarito: "C", pegadinha: "literalidade", palavraChave: "ordenar a formação de recursos humanos",
+    enunciado: "Compete ao Sistema Único de Saúde, entre outras atribuições, ordenar a formação de recursos humanos na área de saúde e participar da formulação da política e da execução das ações de habitação popular.",
+    gabarito: "E", pegadinha: "literalidade", palavraChave: "habitação popular",
     cognitivo: {
-      motivo: "Cobrar duas competências do art. 200 que soam alheias à saúde e por isso são negadas por reflexo.",
-      palavraCritica: "ordenar a formação",
+      motivo: "Fixar as competências do art. 200 da CF.",
+      palavraCritica: "saneamento básico",
     },
     comentario: {
-      resolucao: "CERTO. São os incisos III e IV do art. 200. Ambos costumam ser marcados como ERRADO por parecerem competência de outra pasta — educação e saneamento —, e é justamente essa intuição que a banca pune. Repare no verbo, que é onde mora a precisão: no saneamento o SUS PARTICIPA da formulação e da execução (a titularidade é do setor de saneamento); na formação de RH ele ORDENA. Item que troque 'participar' por 'executar com exclusividade' no saneamento estaria errado.",
+      resolucao: "ERRADO. O inciso IV do art. 200 manda o SUS participar da formulação da política e da execução das ações de SANEAMENTO BÁSICO, não de habitação popular. A primeira parte — ordenar a formação de recursos humanos na saúde (inciso III) — está correta.",
       fundamento: "CF/88, art. 200, III e IV.",
-      macete: "No art. 200, o verbo é o gabarito: ordenar, participar, executar, colaborar, fiscalizar.",
-      erroComum: "Negar a competência por achar que formação de RH é assunto do MEC.",
-      comoBancaPensa: "Escolhe as competências contraintuitivas do rol para punir resposta por reflexo."
+      macete: "Art. 200: ordenar RH, participar do saneamento, fiscalizar alimentos, colaborar com o meio ambiente.",
+      erroComum: "Aceitar política social vizinha no lugar do saneamento.",
+      comoBancaPensa: "Mantém o verbo e troca o objeto da competência."
     }
   },
   {
@@ -336,20 +336,20 @@ const QUESTOES_SESAUAL_LOTE59 = [
   {
     id: "SUS-017", disciplina: "Legislação Aplicada ao SUS", assunto: "Lei 8.080/1990", subassunto: "Art. 4º §2º — participação da iniciativa privada",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (Edital SESAU/AL 2026)",
+    origem: "Inédita — estilo CEBRASPE (Edital SESAU/AL 2026); reescrito na calibragem de 10/2026: o erro do item foi corrigido, gabarito passou a CERTO",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.74,
-    enunciado: "A iniciativa privada poderá participar do Sistema Único de Saúde em caráter suplementar.",
-    gabarito: "E", pegadinha: "troca-conceito", palavraChave: "caráter suplementar",
+    enunciado: "A iniciativa privada poderá participar do Sistema Único de Saúde em caráter complementar.",
+    gabarito: "C", pegadinha: "troca-conceito", palavraChave: "complementar",
     cognitivo: {
-      motivo: "Cobrar a diferença entre saúde complementar e saúde suplementar.",
-      palavraCritica: "suplementar",
+      motivo: "Fixar o caráter da participação privada no SUS.",
+      palavraCritica: "complementar",
     },
     comentario: {
-      resolucao: "ERRADO. O §2º do art. 4º da Lei 8.080 diz caráter COMPLEMENTAR, e a diferença de uma sílaba muda o regime jurídico inteiro. Saúde COMPLEMENTAR é o prestador privado contratado ou conveniado pelo SUS quando a rede pública é insuficiente: integra o sistema, segue suas regras e é pago com dinheiro público. Saúde SUPLEMENTAR é o setor de planos e seguros privados, custeado pelo usuário e regulado pela ANS (Lei 9.656/1998), que corre por fora do SUS. O item trocou um pelo outro.",
+      resolucao: "CERTO. É o § 2º do art. 4º da Lei 8.080 e o § 1º do art. 199 da CF: caráter COMPLEMENTAR. Saúde 'suplementar' é outra coisa — o setor de planos e seguros, regulado pela ANS, fora do SUS.",
       fundamento: "Lei 8.080/1990, art. 4º, § 2º; CF/88, art. 199, § 1º.",
-      macete: "Complementar = dentro do SUS. Suplementar = planos de saúde, fora dele.",
-      erroComum: "Aceitar suplementar por soar equivalente a complementar.",
-      comoBancaPensa: "Dois termos quase idênticos com regimes jurídicos distintos — troca de conceito clássica."
+      macete: "Complementar = dentro do SUS. Suplementar = planos de saúde.",
+      erroComum: "Trocar complementar por suplementar.",
+      comoBancaPensa: "Item correto com o termo exato."
     }
   },
   {
@@ -530,20 +530,20 @@ const QUESTOES_SESAUAL_LOTE59 = [
   {
     id: "SUS-027", disciplina: "Legislação Aplicada ao SUS", assunto: "Resolução CNS 453/2012", subassunto: "Composição paritária detalhada",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (Edital SESAU/AL 2026)",
+    origem: "Inédita — estilo CEBRASPE (Edital SESAU/AL 2026); reescrito na calibragem de 10/2026: uma palavra da fonte trocada, gabarito passou a ERRADO",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 60, probReaparecer: 0.85,
-    enunciado: "Conforme a Resolução nº 453/2012 do Conselho Nacional de Saúde, a representação nos Conselhos de Saúde observará a proporção de 50% de entidades e movimentos representativos de usuários, 25% de entidades representativas dos trabalhadores da área de saúde e 25% de representação de governo e prestadores de serviços privados conveniados ou sem fins lucrativos.",
-    gabarito: "C", pegadinha: "literalidade", palavraChave: "50% ... 25% ... 25%",
+    enunciado: "Conforme a Resolução nº 453/2012 do Conselho Nacional de Saúde, a representação nos Conselhos de Saúde observará a proporção de 50% de entidades representativas dos trabalhadores da área de saúde, 25% de entidades e movimentos representativos de usuários e 25% de representação de governo e prestadores de serviços privados conveniados ou sem fins lucrativos.",
+    gabarito: "E", pegadinha: "literalidade", palavraChave: "50% de entidades representativas dos trabalhadores",
     cognitivo: {
-      motivo: "Fixar a proporção exata que operacionaliza a paridade da Lei 8.142.",
-      palavraCritica: "50%",
+      motivo: "Fixar a composição dos conselhos de saúde.",
+      palavraCritica: "50% usuários",
     },
     comentario: {
-      resolucao: "CERTO. É a Quarta Diretriz da Resolução CNS 453/2012, que detalha o que a Lei 8.142 enuncia de forma aberta no §4º do art. 1º. A resolução é o instrumento que converte 'paridade em relação ao conjunto dos demais segmentos' numa regra aplicável: 50/25/25. Note que governo e prestadores dividem um único quarto — não são segmentos separados de 25% cada, e essa é a repartição que a banca costuma alterar para 25/25/25/25.",
+      resolucao: "ERRADO. Usuários e trabalhadores estão trocados. Pela Quarta Diretriz da Resolução CNS 453/2012, são 50% de USUÁRIOS, 25% de TRABALHADORES da saúde e 25% de governo e prestadores, juntos. A metade dos usuários é o que dá a paridade prevista no § 4º do art. 1º da Lei 8.142/1990.",
       fundamento: "Resolução CNS 453/2012, Quarta Diretriz; Lei 8.142/1990, art. 1º, § 4º.",
-      macete: "50 usuários / 25 trabalhadores / 25 governo + prestadores (juntos).",
-      erroComum: "Separar governo e prestadores em dois blocos de 25%.",
-      comoBancaPensa: "Cobra o detalhamento infralegal que a lei deixou em aberto."
+      macete: "50 usuários / 25 trabalhadores / 25 governo + prestadores.",
+      erroComum: "Lembrar os percentuais e trocar os segmentos.",
+      comoBancaPensa: "Mantém os números e permuta quem fica com a metade."
     }
   },
   {
@@ -568,20 +568,20 @@ const QUESTOES_SESAUAL_LOTE59 = [
   {
     id: "SUS-029", disciplina: "Legislação Aplicada ao SUS", assunto: "Resolução CNS 453/2012", subassunto: "Natureza e vinculação do Conselho",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (Edital SESAU/AL 2026)",
+    origem: "Inédita — estilo CEBRASPE (Edital SESAU/AL 2026); reescrito na calibragem de 10/2026: uma palavra da fonte trocada, gabarito passou a ERRADO",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.73,
     enunciado: "O Conselho de Saúde é órgão colegiado, deliberativo e permanente do SUS em cada esfera de governo, integrante da estrutura organizacional do Conselho Nacional de Saúde, das secretarias de saúde dos estados, do Distrito Federal e dos municípios.",
-    gabarito: "C", pegadinha: "literalidade", palavraChave: "integrante da estrutura organizacional",
+    gabarito: "E", pegadinha: "literalidade", palavraChave: "estrutura organizacional do Conselho Nacional de Saúde",
     cognitivo: {
-      motivo: "Fixar que o Conselho integra a estrutura do órgão gestor, sem perder autonomia deliberativa.",
-      palavraCritica: "integrante da estrutura organizacional",
+      motivo: "Fixar a vinculação administrativa dos conselhos de saúde.",
+      palavraCritica: "Ministério da Saúde",
     },
     comentario: {
-      resolucao: "CERTO. É a Primeira Diretriz da Resolução 453/2012. O ponto que parece contraditório e não é: o Conselho INTEGRA a estrutura administrativa do Ministério ou da Secretaria — de onde vêm sua dotação orçamentária e sua estrutura de apoio —, mas isso não o subordina ao gestor quanto ao mérito das deliberações. Vinculação administrativa e independência decisória convivem, e é por isso que a mesma resolução exige presidência eleita e dotação própria: são as garantias que impedem a vinculação de virar sujeição.",
+      resolucao: "ERRADO. Pela Primeira Diretriz da Resolução 453/2012, o Conselho de Saúde integra a estrutura organizacional do MINISTÉRIO DA SAÚDE e das secretarias de saúde dos estados, do DF e dos municípios — não a do Conselho Nacional de Saúde, que é ele próprio um desses conselhos, no âmbito federal. O restante (colegiado, deliberativo, permanente, em cada esfera) está correto. Integrar a estrutura do gestor não significa subordinar-se a ele quanto ao mérito das deliberações.",
       fundamento: "Resolução CNS 453/2012, Primeira e Terceira Diretrizes.",
-      macete: "Está na estrutura do gestor, mas não obedece ao gestor.",
-      erroComum: "Negar por supor que integrar a estrutura significaria subordinação hierárquica.",
-      comoBancaPensa: "Transcreve dispositivo cuja redação soa incoerente com a autonomia do órgão."
+      macete: "Conselho fica na estrutura do gestor (Ministério/Secretaria), mas não obedece ao gestor.",
+      erroComum: "Aceitar 'Conselho Nacional' porque soa como a instância superior.",
+      comoBancaPensa: "Reproduz a diretriz e troca o órgão de vinculação."
     }
   },
   {
@@ -627,20 +627,20 @@ const QUESTOES_SESAUAL_LOTE59 = [
   {
     id: "SUS-032", disciplina: "Legislação Aplicada ao SUS", assunto: "Decreto 7.508/2011", subassunto: "Ações mínimas da Região de Saúde",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (Edital SESAU/AL 2026)",
+    origem: "Inédita — estilo CEBRASPE (Edital SESAU/AL 2026); reescrito na calibragem de 10/2026: uma palavra da fonte trocada, gabarito passou a ERRADO",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.82,
-    enunciado: "Para ser instituída, a Região de Saúde deve conter, no mínimo, ações e serviços de atenção primária, urgência e emergência, atenção psicossocial, atenção ambulatorial especializada e hospitalar, e vigilância em saúde.",
-    gabarito: "C", pegadinha: "literalidade", palavraChave: "atenção psicossocial ... vigilância em saúde",
+    enunciado: "Para ser instituída, a Região de Saúde deve conter, no mínimo, ações e serviços de atenção primária, urgência e emergência, assistência farmacêutica, atenção ambulatorial especializada e hospitalar, e vigilância em saúde.",
+    gabarito: "E", pegadinha: "literalidade", palavraChave: "assistência farmacêutica",
     cognitivo: {
-      motivo: "Cobrar o rol mínimo do art. 5º, que a banca reduz ou amplia.",
-      palavraCritica: "no mínimo",
+      motivo: "Fixar o rol mínimo do art. 5º do Decreto 7.508/2011.",
+      palavraCritica: "atenção psicossocial",
     },
     comentario: {
-      resolucao: "CERTO. É o art. 5º do Decreto 7.508, com os cinco itens exatos. A atenção psicossocial é a mais esquecida da lista e por isso a mais retirada em item adulterado. Repare que é piso, não teto — 'no mínimo' —, então a região pode ofertar mais. E o rol tem consequência prática: uma região que não consiga ofertar os cinco não pode ser instituída isoladamente, o que empurra os municípios à pactuação regional em vez da solução isolada.",
+      resolucao: "ERRADO. O rol mínimo do art. 5º do Decreto 7.508/2011 tem cinco itens: atenção primária, urgência e emergência, ATENÇÃO PSICOSSOCIAL, atenção ambulatorial especializada e hospitalar, e vigilância em saúde. A assistência farmacêutica não está no rol; ela entrou no lugar da atenção psicossocial, a mais esquecida da lista.",
       fundamento: "Decreto 7.508/2011, art. 5º, I a V.",
       macete: "Cinco mínimos: primária, urgência, psicossocial, especializada/hospitalar, vigilância.",
-      erroComum: "Omitir a atenção psicossocial do rol mínimo.",
-      comoBancaPensa: "Lista fechada de cinco itens: terreno natural para supressão de um deles."
+      erroComum: "Aceitar serviço plausível no lugar da atenção psicossocial.",
+      comoBancaPensa: "Lista fechada com um item trocado por outro do mesmo campo."
     }
   },
   {

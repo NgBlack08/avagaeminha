@@ -699,7 +699,7 @@ const QUESTOES_PCAL_LOTE133 = [
 
   {
     ...BASE133,
-    id: "PT-423", assunto: "Orações subordinadas",
+    id: "PT-423", assunto: "Coesão textual",
     subassunto: "'Que' conjunção integrante em oração predicativa",
     origem: "CEBRASPE (prova não identificada no caderno) — QAP DSO (Língua Portuguesa — caderno bônus), gabarito do material",
     dificuldade: 2, tempoIdealSeg: 70,
@@ -747,7 +747,7 @@ const QUESTOES_PCAL_LOTE133 = [
 
   {
     ...BASE133,
-    id: "PT-425", assunto: "Orações subordinadas",
+    id: "PT-425", assunto: "Coesão textual",
     subassunto: "Antecedente do relativo",
     origem: "CEBRASPE (prova não identificada no caderno) — QAP DSO (Língua Portuguesa — caderno bônus), gabarito do material",
     dificuldade: 2, tempoIdealSeg: 70,
@@ -771,7 +771,7 @@ const QUESTOES_PCAL_LOTE133 = [
 
   {
     ...BASE133,
-    id: "PT-426", assunto: "Orações subordinadas",
+    id: "PT-426", assunto: "Compreensão e reescritura",
     subassunto: "Ter que × ter de",
     origem: "CEBRASPE (prova não identificada no caderno) — QAP DSO (Língua Portuguesa — caderno bônus), gabarito do material",
     dificuldade: 2, tempoIdealSeg: 70,
@@ -795,7 +795,7 @@ const QUESTOES_PCAL_LOTE133 = [
 
   {
     ...BASE133,
-    id: "PT-427", assunto: "Orações subordinadas",
+    id: "PT-427", assunto: "Compreensão e reescritura",
     subassunto: "Supressão de 'é o que'",
     origem: "CEBRASPE (prova não identificada no caderno) — QAP DSO (Língua Portuguesa — caderno bônus), gabarito do material",
     dificuldade: 2, tempoIdealSeg: 70,

@@ -103,20 +103,20 @@ const QUESTOES_PCAL_LOTE10 = [
   },
   {
     id: "DP-047", disciplina: "Direito Penal", assunto: "Teoria da pena", subassunto: "Reincidência",
-    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026); reescrito na calibragem de 10/2026: o erro do item foi corrigido, gabarito passou a CERTO",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 45, probReaparecer: 0.75,
-    enunciado: "Verifica-se a reincidência quando o agente comete novo crime antes de transitar em julgado a sentença que o tenha condenado por crime anterior.",
-    gabarito: "E", pegadinha: "troca-numerica", palavraChave: "antes de transitar em julgado",
+    enunciado: "Verifica-se a reincidência quando o agente comete novo crime depois de transitar em julgado a sentença que o tenha condenado por crime anterior.",
+    gabarito: "C", pegadinha: "troca-numerica", palavraChave: "depois de transitar em julgado",
     cognitivo: {
-      motivo: "Cobrar o conceito de reincidência (art. 63 do CP).",
-      palavraCritica: "antes (deveria ser depois do trânsito em julgado)",
+      motivo: "Fixar o conceito legal de reincidência (CP, art. 63).",
+      palavraCritica: "depois",
     },
     comentario: {
-      resolucao: "ERRADO. CP, art. 63: a reincidência verifica-se quando o agente comete novo crime DEPOIS de transitar em julgado a sentença que o condenou por crime anterior. Se o novo crime é anterior ao trânsito em julgado, há, no máximo, maus antecedentes.",
+      resolucao: "CERTO. É o art. 63 do CP: reincidência exige novo crime DEPOIS do trânsito em julgado da condenação anterior. Crime cometido antes do trânsito não gera reincidência, ainda que haja condenação posterior.",
       fundamento: "CP, art. 63; Lei de Contravenções, art. 7º.",
-      macete: "Reincidência exige condenação anterior DEFINITIVA antes do novo crime.",
-      erroComum: "Confundir reincidência com maus antecedentes.",
-      comoBancaPensa: "Troca 'depois' por 'antes' do trânsito em julgado."
+      macete: "Reincidente: condenado definitivamente e volta a delinquir.",
+      erroComum: "Contar como reincidência a condenação ainda recorrível.",
+      comoBancaPensa: "Item correto e literal."
     }
   },
   {
@@ -359,20 +359,20 @@ const QUESTOES_PCAL_LOTE10 = [
   },
   {
     id: "PP-033", disciplina: "Processo Penal", assunto: "Provas", subassunto: "Ônus da prova",
-    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026); reescrito na calibragem de 10/2026: o erro do item foi corrigido, gabarito passou a CERTO",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 40, probReaparecer: 0.8,
-    enunciado: "No processo penal, em decorrência do princípio da verdade real, cabe ao acusado o ônus de provar a sua inocência.",
-    gabarito: "E", pegadinha: "troca-conceito", palavraChave: "ônus de provar a inocência",
+    enunciado: "No processo penal, por força da presunção de inocência, o ônus de provar a culpa do acusado recai sobre a acusação.",
+    gabarito: "C", pegadinha: "troca-conceito", palavraChave: "recai sobre a acusação",
     cognitivo: {
-      motivo: "Cobrar o ônus da prova e a presunção de inocência.",
-      palavraCritica: "acusado prova a inocência (falso)",
+      motivo: "Fixar a distribuição do ônus da prova no processo penal.",
+      palavraCritica: "acusação",
     },
     comentario: {
-      resolucao: "ERRADO. Por força da presunção de inocência (CF, art. 5º, LVII), o ônus de provar a culpa recai sobre a ACUSAÇÃO. O acusado não tem o dever de provar sua inocência; a dúvida se resolve em seu favor (in dubio pro reo).",
+      resolucao: "CERTO. Pela presunção de inocência (CF, art. 5º, LVII), cabe à ACUSAÇÃO provar a culpa. O acusado não tem o dever de provar a inocência; na dúvida, absolve-se (in dubio pro reo).",
       fundamento: "CF, art. 5º, LVII; CPP, art. 156.",
-      macete: "Ônus da prova = acusação. Réu não prova inocência.",
-      erroComum: "Inverter o ônus da prova no processo penal.",
-      comoBancaPensa: "Usa 'verdade real' como falso fundamento para inverter o ônus."
+      macete: "Quem acusa prova.",
+      erroComum: "Transferir ao réu o ônus de provar a inocência.",
+      comoBancaPensa: "Item correto sobre princípio constitucional."
     }
   },
   {
@@ -413,20 +413,20 @@ const QUESTOES_PCAL_LOTE10 = [
   },
   {
     id: "PP-036", disciplina: "Processo Penal", assunto: "Provas", subassunto: "Interrogatório na instrução",
-    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026); reescrito na calibragem de 10/2026: o erro do item foi corrigido, gabarito passou a CERTO",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 45, probReaparecer: 0.72,
-    enunciado: "No procedimento comum, o interrogatório do acusado constitui o primeiro ato da instrução processual, realizado antes da oitiva das testemunhas de acusação e defesa.",
-    gabarito: "E", pegadinha: "troca-conceito", palavraChave: "primeiro ato da instrução",
+    enunciado: "No procedimento comum, o interrogatório do acusado é o último ato da instrução, realizado depois da oitiva das testemunhas de acusação e de defesa.",
+    gabarito: "C", pegadinha: "troca-conceito", palavraChave: "último ato da instrução",
     cognitivo: {
-      motivo: "Cobrar a posição do interrogatório como último ato da instrução (Lei 11.719/2008).",
-      palavraCritica: "primeiro ato (deveria ser o último)",
+      motivo: "Fixar a posição do interrogatório (CPP, art. 400).",
+      palavraCritica: "último",
     },
     comentario: {
-      resolucao: "ERRADO. Após a Lei 11.719/2008, o interrogatório passou a ser o ÚLTIMO ato da instrução (CPP, art. 400), realizado depois da oitiva das testemunhas, para ampliar a autodefesa. O STF estende essa lógica a procedimentos especiais.",
+      resolucao: "CERTO. Desde a Lei 11.719/2008, o interrogatório é o ÚLTIMO ato da instrução (CPP, art. 400), para que o acusado se defenda conhecendo toda a prova produzida.",
       fundamento: "CPP, art. 400 (Lei 11.719/2008); jurisprudência do STF.",
-      macete: "O réu fala por último: interrogatório = último ato da instrução.",
-      erroComum: "Aplicar a ordem anterior a 2008 (interrogatório primeiro).",
-      comoBancaPensa: "Usa a ordem revogada do interrogatório."
+      macete: "Interrogatório por último: defesa sabendo de tudo.",
+      erroComum: "Manter a ordem antiga, com o interrogatório no início.",
+      comoBancaPensa: "Item correto sobre a ordem dos atos."
     }
   },
 

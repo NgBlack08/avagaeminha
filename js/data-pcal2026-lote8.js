@@ -127,20 +127,20 @@ const QUESTOES_PCAL_LOTE8 = [
   },
   {
     id: "DP-031", disciplina: "Direito Penal", assunto: "Crimes contra a Administração Pública", subassunto: "Resistência",
-    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026); reescrito na calibragem de 10/2026: uma palavra da fonte trocada, gabarito passou a ERRADO",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 40, probReaparecer: 0.75,
-    enunciado: "Configura o crime de resistência a oposição à execução de ato legal, mediante violência ou ameaça a funcionário competente para executá-lo ou a quem lhe esteja prestando auxílio.",
-    gabarito: "C", pegadinha: "literalidade", palavraChave: "violência ou ameaça / ato legal",
+    enunciado: "Configura o crime de desobediência a oposição à execução de ato legal, mediante violência ou ameaça a funcionário competente para executá-lo ou a quem lhe esteja prestando auxílio.",
+    gabarito: "E", pegadinha: "literalidade", palavraChave: "desobediência",
     cognitivo: {
-      motivo: "Distinguir resistência (art. 329) de desobediência (art. 330).",
-      palavraCritica: "com violência ou ameaça / ato legal",
+      motivo: "Distinguir resistência de desobediência.",
+      palavraCritica: "resistência",
     },
     comentario: {
-      resolucao: "CERTO. CP, art. 329: opor-se à execução de ato LEGAL, mediante violência ou ameaça a funcionário competente ou a quem lhe presta auxílio. Sem violência/ameaça, a conduta pode configurar desobediência (art. 330). A oposição a ato ilegal não caracteriza o crime.",
+      resolucao: "ERRADO. Opor-se à execução de ato legal mediante violência ou ameaça é RESISTÊNCIA (CP, art. 329). A desobediência (art. 330) é desobedecer a ordem legal de funcionário público, sem violência nem ameaça.",
       fundamento: "CP, arts. 329 e 330.",
-      macete: "Resistência: força + ato legal. Desobediência: sem força.",
-      erroComum: "Suprimir a violência/ameaça ou admitir resistência a ato ilegal.",
-      comoBancaPensa: "Resistência × desobediência é cobrada pela presença de violência/ameaça."
+      macete: "Resistência = oposição com violência/ameaça. Desobediência = só não cumprir.",
+      erroComum: "Tratar os dois crimes como sinônimos.",
+      comoBancaPensa: "Troca o nome do crime e mantém a descrição."
     }
   },
   {
@@ -368,7 +368,7 @@ const QUESTOES_PCAL_LOTE8 = [
 
   /* ===== LÍNGUA PORTUGUESA ===== */
   {
-    id: "PT-010", disciplina: "Língua Portuguesa", assunto: "Sintaxe", subassunto: "Vírgula entre sujeito e verbo",
+    id: "PT-010", disciplina: "Língua Portuguesa", assunto: "Pontuação", subassunto: "Vírgula entre sujeito e verbo",
     concurso: "PCAL", cargo: ["Escrivão","Agente","Especialista em Saúde — Fisioterapia"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 45, probReaparecer: 0.8,
     textoApoio: "Os agentes responsáveis pela investigação apresentaram o relatório final à autoridade.",
@@ -444,38 +444,38 @@ const QUESTOES_PCAL_LOTE8 = [
   },
   {
     id: "PP-026", disciplina: "Processo Penal", assunto: "Competência", subassunto: "Lugar da infração",
-    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026); reescrito na calibragem de 10/2026: uma palavra da fonte trocada, gabarito passou a ERRADO",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 40, probReaparecer: 0.75,
-    enunciado: "Como regra geral, a competência para o processo e julgamento será determinada pelo lugar em que se consumar a infração ou, no caso de tentativa, pelo lugar em que for praticado o último ato de execução.",
-    gabarito: "C", pegadinha: "literalidade", palavraChave: "lugar da consumação",
+    enunciado: "Como regra geral, a competência para o processo e julgamento será determinada pelo lugar em que se consumar a infração ou, no caso de tentativa, pelo lugar em que for praticado o primeiro ato de execução.",
+    gabarito: "E", pegadinha: "literalidade", palavraChave: "primeiro ato de execução",
     cognitivo: {
-      motivo: "Cobrar a competência ratione loci (art. 70 do CPP).",
-      palavraCritica: "lugar da consumação (CPP) × lugar da ação (CP)",
+      motivo: "Fixar a regra do art. 70 do CPP.",
+      palavraCritica: "último ato de execução",
     },
     comentario: {
-      resolucao: "CERTO. CPP, art. 70: a competência é, em regra, determinada pelo lugar da consumação da infração (teoria do resultado); na tentativa, pelo local do último ato de execução. Difere do art. 6º do CP (lugar do crime — teoria da ubiquidade, para fixar a lei brasileira).",
+      resolucao: "ERRADO. No crime tentado, a competência é do lugar em que foi praticado o ÚLTIMO ato de execução (CPP, art. 70). A regra geral — lugar da consumação (teoria do resultado) — está correta.",
       fundamento: "CPP, art. 70; CP, art. 6º.",
-      macete: "Competência (CPP) = onde consumou. Lei aplicável (CP) = ubiquidade.",
-      erroComum: "Aplicar a ubiquidade do CP à competência interna do CPP.",
-      comoBancaPensa: "Cruza a competência do CPP com o lugar do crime do CP."
+      macete: "Consumado: onde consumou. Tentado: onde parou (último ato).",
+      erroComum: "Pensar no início da execução.",
+      comoBancaPensa: "Troca uma palavra no fecho do dispositivo."
     }
   },
   {
     id: "PP-027", disciplina: "Processo Penal", assunto: "Ação penal", subassunto: "Prazo para oferecimento da denúncia",
-    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026); reescrito na calibragem de 10/2026: uma palavra da fonte trocada, gabarito passou a ERRADO",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 40, probReaparecer: 0.75,
-    enunciado: "O prazo para o oferecimento da denúncia, estando o réu preso, é de cinco dias, contados da data em que o órgão do Ministério Público receber os autos do inquérito policial; se solto, o prazo é de quinze dias.",
-    gabarito: "C", pegadinha: "literalidade", palavraChave: "cinco dias preso / quinze solto",
+    enunciado: "O prazo para o oferecimento da denúncia, estando o réu preso, é de cinco dias, contados da data em que o órgão do Ministério Público receber os autos do inquérito policial; se solto, o prazo é de trinta dias.",
+    gabarito: "E", pegadinha: "literalidade", palavraChave: "trinta dias",
     cognitivo: {
-      motivo: "Cobrar os prazos da denúncia (art. 46 do CPP).",
-      palavraCritica: "preso 5 / solto 15",
+      motivo: "Fixar os prazos do art. 46 do CPP.",
+      palavraCritica: "quinze dias",
     },
     comentario: {
-      resolucao: "CERTO. CPP, art. 46: o prazo para oferecimento da denúncia é de 5 dias se o réu estiver preso e de 15 dias se estiver solto, contados do recebimento dos autos pelo MP. Na ação penal privada, o prazo de decadência para a queixa é, em regra, de 6 meses.",
+      resolucao: "ERRADO. Pelo art. 46 do CPP, o prazo é de cinco dias para réu preso e de QUINZE dias para réu solto, contados do recebimento dos autos pelo MP. Trinta dias é prazo de outra fase: o de conclusão do inquérito com investigado solto (art. 10).",
       fundamento: "CPP, art. 46; art. 38.",
-      macete: "Preso = 5 (tem pressa). Solto = 15.",
-      erroComum: "Inverter os prazos ou preso/solto.",
-      comoBancaPensa: "Prazos processuais são cobrados por inversão numérica."
+      macete: "Denúncia: 5 (preso) / 15 (solto). Inquérito: 10 (preso) / 30 (solto).",
+      erroComum: "Misturar os prazos da denúncia com os do inquérito.",
+      comoBancaPensa: "Troca um prazo por outro do mesmo código."
     }
   },
 

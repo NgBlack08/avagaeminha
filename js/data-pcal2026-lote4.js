@@ -494,20 +494,20 @@ const QUESTOES_PCAL_LOTE4 = [
   /* ==================== DIREITO ADMINISTRATIVO ==================== */
   {
     id: "DA-006", disciplina: "Direito Administrativo", assunto: "Organização administrativa", subassunto: "Autarquias",
-    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026); reescrito na calibragem de 10/2026: uma palavra da fonte trocada, gabarito passou a ERRADO",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 40, probReaparecer: 0.85,
-    enunciado: "As autarquias são pessoas jurídicas de direito público, integrantes da Administração indireta, criadas diretamente por lei específica, dispensando registro de seus atos constitutivos para adquirir personalidade jurídica.",
-    gabarito: "C", pegadinha: "literalidade", palavraChave: "criadas por lei",
+    enunciado: "As autarquias são pessoas jurídicas de direito privado, integrantes da Administração indireta, criadas diretamente por lei específica, dispensando registro de seus atos constitutivos para adquirir personalidade jurídica.",
+    gabarito: "E", pegadinha: "literalidade", palavraChave: "direito privado",
     cognitivo: {
-      motivo: "Cobrar o regime de criação das autarquias (art. 37, XIX, CF).",
-      palavraCritica: "criadas diretamente por lei",
+      motivo: "Cobrar a natureza jurídica das autarquias (art. 37, XIX, CF).",
+      palavraCritica: "direito privado",
     },
     comentario: {
-      resolucao: "CERTO. As autarquias são pessoas jurídicas de direito público, criadas diretamente por lei específica (CF, art. 37, XIX), adquirindo personalidade com a vigência da lei — sem necessidade de registro. Já as empresas públicas e sociedades de economia mista têm sua criação apenas autorizada por lei.",
+      resolucao: "ERRADO. Autarquia é pessoa jurídica de direito PÚBLICO. O resto do item está correto: é criada diretamente por lei específica (CF, art. 37, XIX) e adquire personalidade com a vigência da lei, sem registro. Direito privado é o regime das empresas públicas e sociedades de economia mista, cuja criação a lei apenas autoriza.",
       fundamento: "CF, art. 37, XIX; Decreto-Lei 200/1967.",
-      macete: "Autarquia: lei CRIA (pronto). Estatal: lei AUTORIZA (ainda precisa registrar).",
-      erroComum: "Aplicar à autarquia o regime de 'autorização' das estatais.",
-      comoBancaPensa: "Criar × autorizar por lei é o divisor clássico da Administração indireta."
+      macete: "Autarquia: direito público, lei CRIA. Estatal: direito privado, lei AUTORIZA.",
+      erroComum: "Validar o item pelo trecho correto da criação por lei e não conferir a natureza jurídica.",
+      comoBancaPensa: "Reproduz o conceito e troca só a natureza jurídica — direito público × privado."
     }
   },
   {

@@ -86,20 +86,20 @@ const QUESTOES_PCAL_LOTE6 = [
   },
   {
     id: "PP-024", disciplina: "Processo Penal", assunto: "Lei 9.099/1995", subassunto: "Representação — lesão leve e culposa",
-    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026); reescrito na calibragem de 10/2026: uma palavra da fonte trocada, gabarito passou a ERRADO",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 40, probReaparecer: 0.78,
-    enunciado: "Por força da Lei nº 9.099/1995, os crimes de lesão corporal leve e de lesão corporal culposa passaram a depender de representação do ofendido para a instauração da ação penal.",
-    gabarito: "C", pegadinha: "literalidade", palavraChave: "dependem de representação",
+    enunciado: "Por força da Lei nº 9.099/1995, os crimes de lesão corporal leve e de lesão corporal grave passaram a depender de representação do ofendido para a instauração da ação penal.",
+    gabarito: "E", pegadinha: "literalidade", palavraChave: "lesão corporal grave",
     cognitivo: {
-      motivo: "Cobrar a alteração da natureza da ação penal na lesão leve/culposa (art. 88).",
-      palavraCritica: "representação (condicionada)",
+      motivo: "Fixar o art. 88 da Lei 9.099/1995.",
+      palavraCritica: "lesão corporal culposa",
     },
     comentario: {
-      resolucao: "CERTO. Lei 9.099/1995, art. 88: a ação penal relativa aos crimes de lesões corporais leves e culposas passou a depender de representação. Ressalva importante: na lesão corporal em contexto de violência doméstica contra a mulher, a ação é pública incondicionada (Súmula 542/STJ).",
+      resolucao: "ERRADO. O art. 88 da Lei 9.099/1995 tornou condicionadas à representação a lesão corporal LEVE e a lesão corporal CULPOSA. A lesão grave segue de ação pública incondicionada. Lembre a exceção da violência doméstica contra a mulher: ali a lesão leve é incondicionada (Lei 11.340/2006, art. 41; Súmula 542 do STJ).",
       fundamento: "Lei 9.099/1995, art. 88; Súmula 542/STJ.",
-      macete: "Lesão leve/culposa = representação. Violência doméstica = incondicionada.",
-      erroComum: "Manter a lesão leve como incondicionada em regra.",
-      comoBancaPensa: "Cobra a regra e testa a exceção da violência doméstica."
+      macete: "Representação (art. 88): leve e culposa.",
+      erroComum: "Estender a representação a todas as lesões.",
+      comoBancaPensa: "Troca uma das espécies de lesão."
     }
   },
 
@@ -218,20 +218,20 @@ const QUESTOES_PCAL_LOTE6 = [
   },
   {
     id: "DA-011", disciplina: "Direito Administrativo", assunto: "Licitações", subassunto: "Crimes licitatórios no CP",
-    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026); reescrito na calibragem de 10/2026: uma palavra da fonte trocada, gabarito passou a ERRADO",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 45, probReaparecer: 0.8,
-    enunciado: "Com a Lei nº 14.133/2021, os crimes em licitações e contratos administrativos, antes previstos na Lei nº 8.666/1993, passaram a integrar o Código Penal, em capítulo próprio.",
-    gabarito: "C", pegadinha: "literalidade", palavraChave: "passaram a integrar o Código Penal",
+    enunciado: "Com a Lei nº 14.133/2021, os crimes em licitações e contratos administrativos, antes previstos na Lei nº 8.666/1993, passaram a integrar a Lei de Improbidade Administrativa, em capítulo próprio.",
+    gabarito: "E", pegadinha: "literalidade", palavraChave: "Lei de Improbidade Administrativa",
     cognitivo: {
-      motivo: "Cobrar a migração dos crimes licitatórios para o CP (arts. 337-E a 337-P).",
+      motivo: "Cobrar o novo endereço dos crimes licitatórios.",
       palavraCritica: "Código Penal (arts. 337-E a 337-P)",
     },
     comentario: {
-      resolucao: "CERTO. A Lei 14.133/2021 revogou os tipos penais da Lei 8.666/1993 e inseriu os crimes em licitações e contratos no Código Penal (arts. 337-E a 337-P), no Título XI (crimes contra a Administração Pública).",
+      resolucao: "ERRADO. Os crimes em licitações e contratos foram para o CÓDIGO PENAL (arts. 337-E a 337-P, no Título XI). A Lei de Improbidade (8.429/1992) trata de ilícitos civis e administrativos, não de crimes.",
       fundamento: "CP, arts. 337-E a 337-P (Lei 14.133/2021); revogação dos arts. 89 a 108 da Lei 8.666/1993.",
-      macete: "Crime de licitação 'mudou de endereço': foi da 8.666 para o CP.",
-      erroComum: "Localizar os crimes ainda na Lei 8.666.",
-      comoBancaPensa: "Alteração recente de localização normativa é cobrança típica."
+      macete: "Crime de licitação 'mudou de endereço': da 8.666 para o CP.",
+      erroComum: "Associar licitação irregular à improbidade e esquecer que os tipos penais foram para o CP.",
+      comoBancaPensa: "Mantém o fato (migração) e troca o diploma de destino."
     }
   },
   {
@@ -386,20 +386,20 @@ const QUESTOES_PCAL_LOTE6 = [
   /* ==================== DIREITO PENAL — CRIMES CONTRA A ADMINISTRAÇÃO ==================== */
   {
     id: "DP-021", disciplina: "Direito Penal", assunto: "Crimes contra a Administração Pública", subassunto: "Prevaricação",
-    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026); reescrito na calibragem de 10/2026: uma palavra da fonte trocada, gabarito passou a ERRADO",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 45, probReaparecer: 0.8,
-    enunciado: "Comete prevaricação o funcionário público que retarda ou deixa de praticar, indevidamente, ato de ofício, ou o pratica contra disposição expressa de lei, para satisfazer interesse ou sentimento pessoal.",
-    gabarito: "C", pegadinha: "literalidade", palavraChave: "interesse ou sentimento pessoal",
+    enunciado: "Comete prevaricação o funcionário público que retarda ou deixa de praticar, indevidamente, ato de ofício, ou o pratica contra disposição expressa de lei, cedendo a pedido ou influência de outrem.",
+    gabarito: "E", pegadinha: "literalidade", palavraChave: "cedendo a pedido ou influência de outrem",
     cognitivo: {
-      motivo: "Cobrar o elemento subjetivo especial da prevaricação (art. 319).",
-      palavraCritica: "satisfazer interesse ou sentimento pessoal",
+      motivo: "Distinguir prevaricação de corrupção passiva privilegiada.",
+      palavraCritica: "interesse ou sentimento pessoal",
     },
     comentario: {
-      resolucao: "CERTO. CP, art. 319: prevaricar é retardar ou deixar de praticar, indevidamente, ato de ofício, ou praticá-lo contra disposição expressa de lei, para satisfazer interesse ou sentimento pessoal. O especial fim de agir (interesse/sentimento pessoal) é o que a distingue de outros crimes funcionais.",
+      resolucao: "ERRADO. Na prevaricação (CP, art. 319), o agente age 'para satisfazer interesse ou sentimento pessoal'. Ceder a pedido ou influência de outrem é a corrupção passiva privilegiada (art. 317, § 2º). A descrição das condutas — retardar, deixar de praticar ou praticar contra a lei — é comum às duas.",
       fundamento: "CP, art. 319.",
-      macete: "Prevaricação: motivação pessoal, SEM vantagem econômica.",
-      erroComum: "Confundir com corrupção passiva (que exige vantagem indevida).",
-      comoBancaPensa: "Troca o elemento subjetivo (sentimento pessoal × vantagem) entre crimes funcionais."
+      macete: "Prevaricação: motivo pessoal. Corrupção privilegiada: pedido de outrem.",
+      erroComum: "Julgar pela conduta, que é igual, e não pelo motivo, que distingue os crimes.",
+      comoBancaPensa: "Reproduz o tipo e troca o elemento subjetivo especial."
     }
   },
   {

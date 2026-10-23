@@ -206,20 +206,20 @@ const QUESTOES_PCAL_LOTE38 = [
   {
     id: "CC-020", disciplina: "Crimes Cibernéticos e Segurança Digital", assunto: "Interceptação de comunicações", subassunto: "Lei nº 9.296/1996",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (Lei 9.296/1996)",
+    origem: "Inédita — estilo CEBRASPE (Lei 9.296/1996); reescrito na calibragem de 10/2026: uma palavra da fonte trocada, gabarito passou a ERRADO",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 75, probReaparecer: 0.78,
-    enunciado: "Constitui crime, nos termos da Lei nº 9.296/1996, realizar interceptação de comunicações telefônicas, de informática ou telemática sem autorização judicial ou com objetivos não autorizados em lei, sujeitando o responsável a pena de reclusão.",
-    gabarito: "C", pegadinha: "literalidade", palavraChave: "interceptação ... sem autorização judicial ... reclusão",
+    enunciado: "Constitui crime, nos termos da Lei nº 9.296/1996, realizar interceptação de comunicações telefônicas, de informática ou telemática sem autorização judicial ou com objetivos não autorizados em lei, sujeitando o responsável a pena de detenção.",
+    gabarito: "E", pegadinha: "literalidade", palavraChave: "detenção",
     cognitivo: {
-      motivo: "Cobrar a tipificação da interceptação ilegal de comunicações.",
-      palavraCritica: "sem autorização judicial ... reclusão",
+      motivo: "Cobrar a pena do crime de interceptação ilegal.",
+      palavraCritica: "reclusão",
     },
     comentario: {
-      resolucao: "CERTO. O art. 10 da Lei 9.296/1996 tipifica como crime, com pena de reclusão, a realização de interceptação de comunicações telefônicas, de informática ou telemática sem autorização judicial, ou com objetivos não autorizados em lei.",
+      resolucao: "ERRADO. O art. 10 da Lei 9.296/1996 comina pena de RECLUSÃO (de dois a quatro anos, e multa), não de detenção. A descrição da conduta está correta: interceptar sem autorização judicial ou com objetivos não autorizados em lei.",
       fundamento: "Lei nº 9.296/1996, art. 10.",
-      macete: "Interceptação sem ordem judicial ou fora da finalidade legal = crime (reclusão).",
-      erroComum: "Tratar a interceptação irregular como mera infração administrativa, não como crime.",
-      comoBancaPensa: "Item de fixação sobre a tipificação penal da interceptação ilegal de comunicações."
+      macete: "Interceptação ilegal = crime com reclusão.",
+      erroComum: "Não conferir a espécie de pena por estar certa a descrição da conduta.",
+      comoBancaPensa: "Reproduz o tipo e troca a espécie de pena."
     }
   },
   {

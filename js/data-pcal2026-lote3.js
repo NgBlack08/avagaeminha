@@ -53,20 +53,20 @@ const QUESTOES_PCAL_LOTE3 = [
   /* ============ DIREITO PENAL — CRIMES CONTRA O PATRIMÔNIO ============ */
   {
     id: "DP-015", disciplina: "Direito Penal", assunto: "Crimes contra o patrimônio", subassunto: "Roubo próprio × impróprio",
-    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026); reescrito na calibragem de 10/2026: uma palavra da fonte trocada, gabarito passou a ERRADO",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 40, probReaparecer: 0.85,
-    enunciado: "Configura roubo impróprio a conduta do agente que, logo depois de subtraída a coisa, emprega violência contra pessoa a fim de assegurar a impunidade do crime ou a detenção da coisa para si.",
-    gabarito: "C", pegadinha: "literalidade", palavraChave: "logo depois de subtraída",
+    enunciado: "Configura roubo próprio a conduta do agente que, logo depois de subtraída a coisa, emprega violência contra pessoa a fim de assegurar a impunidade do crime ou a detenção da coisa para si.",
+    gabarito: "E", pegadinha: "literalidade", palavraChave: "roubo próprio",
     cognitivo: {
-      motivo: "Diferenciar roubo próprio (violência ANTES/DURANTE) de roubo impróprio (violência DEPOIS da subtração) — art. 157, § 1º.",
-      palavraCritica: "logo depois de subtraída",
+      motivo: "Distinguir roubo próprio de impróprio.",
+      palavraCritica: "roubo impróprio",
     },
     comentario: {
-      resolucao: "CERTO. CP, art. 157, § 1º: o roubo impróprio ocorre quando o agente, logo depois de subtraída a coisa, emprega violência ou grave ameaça contra pessoa para assegurar a impunidade do crime ou a detenção da coisa. (Obs.: doutrina majoritária exige que a subtração já tenha se iniciado.)",
+      resolucao: "ERRADO. A conduta descrita — violência empregada LOGO DEPOIS da subtração, para garantir a impunidade ou a detenção da coisa — é o roubo IMPRÓPRIO (CP, art. 157, § 1º). No roubo próprio (caput), a violência ou grave ameaça é meio para a subtração, vindo antes ou durante ela.",
       fundamento: "CP, art. 157, caput e § 1º.",
-      macete: "Furtou e, ao ser flagrado, agrediu para fugir com o bem = roubo impróprio.",
-      erroComum: "Confundir o momento da violência ou achar que grave ameaça também basta no impróprio.",
-      comoBancaPensa: "O elemento temporal (antes/depois) é o ponto exato de manipulação da assertiva."
+      macete: "Próprio: violência para subtrair. Impróprio: subtrai e depois agride para garantir.",
+      erroComum: "Não olhar o momento da violência.",
+      comoBancaPensa: "Mantém a definição e troca o nome do instituto."
     }
   },
   {

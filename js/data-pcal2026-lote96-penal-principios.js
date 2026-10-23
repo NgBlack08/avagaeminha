@@ -1563,15 +1563,15 @@ const QUESTOES_PCAL_LOTE96 = [
   {
     ...NOVA_CE96, id: "DP-210", subassunto: "Insignificância e degraus do crime",
     dificuldade: 3, tempoIdealSeg: 65,
-    enunciado: "Reconhecida a insignificância, afasta-se a ilicitude da conduta, que permanece típica e culpável.",
-    gabarito: "E", pegadinha: "troca-conceito", palavraChave: "ilicitude",
-    cognitivo: { motivo: "Cobrar em qual degrau da estrutura do crime a insignificância opera.", palavraCritica: "ilicitude" },
+    enunciado: "Reconhecida a insignificância, afasta-se a tipicidade material da conduta.",
+    gabarito: "C", pegadinha: "troca-conceito", palavraChave: "tipicidade material",
+    cognitivo: { motivo: "Fixar onde atua o princípio da insignificância.", palavraCritica: "tipicidade" },
     comentario: {
-      resolucao: "ERRADO. A insignificância opera na TIPICIDADE, e na sua dimensão material: a conduta deixa de ser típica, e por isso não se chega sequer a discutir ilicitude ou culpabilidade. Excludentes de ilicitude são outras — legítima defesa, estado de necessidade, estrito cumprimento do dever legal e exercício regular de direito, no art. 23 do CP.",
+      resolucao: "CERTO. A insignificância opera na TIPICIDADE, em sua dimensão material: a lesão ao bem jurídico é tão pequena que a conduta deixa de ser típica. Por isso nem se chega a discutir ilicitude ou culpabilidade.",
       fundamento: "Princípio da insignificância; CP, art. 23.",
-      macete: "Bagatela derruba no primeiro degrau. Nem chega na ilicitude.",
-      erroComum: "Marcar certo por lembrar que a insignificância \"exclui o crime\", sem precisar onde.",
-      comoBancaPensa: "Percorre os degraus do conceito analítico e troca aquele em que o instituto atua.",
+      macete: "Insignificância = atipicidade material.",
+      erroComum: "Deslocar a insignificância para a ilicitude.",
+      comoBancaPensa: "Item correto sobre a natureza do princípio.",
     },
   },
   {

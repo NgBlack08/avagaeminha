@@ -314,7 +314,7 @@ const QUESTOES_PCAL_LOTE130 = [
 
   {
     ...BASE130,
-    id: "PT-268", assunto: "Termos essenciais da oração",
+    id: "PT-268", assunto: "Compreensão e reescritura",
     subassunto: "Há × existem — mudança de função",
     origem: "CEBRASPE (prova não identificada no caderno) — QAP DSO (Língua Portuguesa), gabarito do material",
     dificuldade: 3, tempoIdealSeg: 90,

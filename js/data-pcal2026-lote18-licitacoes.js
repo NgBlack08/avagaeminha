@@ -51,20 +51,20 @@ const QUESTOES_PCAL_LOTE18 = [
   {
     id: "DA-026", disciplina: "Direito Administrativo", assunto: "Lei de Licitações (14.133/2021)", subassunto: "Pregão (art. 29)",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (Lei 14.133/2021, edital PC-AL 2026)",
+    origem: "Inédita — estilo CEBRASPE (Lei 14.133/2021, edital PC-AL 2026); reescrito na calibragem de 10/2026: o erro do item foi corrigido, gabarito passou a CERTO",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 55, probReaparecer: 0.82,
-    enunciado: "O pregão é a modalidade adequada e obrigatória para a contratação de bens e serviços especiais de engenharia.",
-    gabarito: "E", pegadinha: "troca-conceito", palavraChave: "serviços especiais de engenharia",
+    enunciado: "O pregão é a modalidade de licitação adequada para a contratação de bens e serviços comuns, inclusive serviços comuns de engenharia.",
+    gabarito: "C", pegadinha: "troca-conceito", palavraChave: "bens e serviços comuns",
     cognitivo: {
-      motivo: "Cobrar o cabimento do pregão (art. 29).",
-      palavraCritica: "serviços especiais de engenharia",
+      motivo: "Fixar o objeto do pregão na Lei 14.133/2021.",
+      palavraCritica: "comuns",
     },
     comentario: {
-      resolucao: "ERRADO. O pregão destina-se à contratação de bens e serviços comuns, assim entendidos aqueles cujos padrões de desempenho e qualidade podem ser objetivamente definidos pelo edital (art. 29). Serviços especiais de engenharia não são objeto do pregão. A vedação alcança expressamente os serviços técnicos especializados de natureza predominantemente intelectual e as obras/serviços especiais de engenharia.",
+      resolucao: "CERTO. Na Lei 14.133/2021, o pregão serve aos bens e serviços COMUNS, aqueles com padrões de desempenho e qualidade definíveis objetivamente pelo edital (art. 6º, XLI), o que inclui serviços comuns de engenharia. Não se aplica a serviços técnicos especializados intelectuais nem a obras e serviços especiais de engenharia (art. 29, parágrafo único).",
       fundamento: "Lei 14.133/2021, art. 29 e parágrafo único.",
-      macete: "Pregão: comum sim, especial não.",
-      erroComum: "Aplicar pregão a serviço especial de engenharia.",
-      comoBancaPensa: "Troca 'comum' por 'especial' no objeto do pregão."
+      macete: "Pregão = comum (até engenharia comum). Especial ou obra = concorrência.",
+      erroComum: "Achar que tudo que envolve engenharia sai do pregão.",
+      comoBancaPensa: "Cobra o objeto da modalidade com a ressalva da engenharia comum."
     }
   },
   {
@@ -108,20 +108,20 @@ const QUESTOES_PCAL_LOTE18 = [
   {
     id: "DA-029", disciplina: "Direito Administrativo", assunto: "Lei de Licitações (14.133/2021)", subassunto: "Inversão de fases (art. 17, § 1º)",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (Lei 14.133/2021, edital PC-AL 2026)",
+    origem: "Inédita — estilo CEBRASPE (Lei 14.133/2021, edital PC-AL 2026); reescrito na calibragem de 10/2026: uma palavra da fonte trocada, gabarito passou a ERRADO",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.78,
-    enunciado: "Segundo a Lei 14.133/2021, a fase de julgamento, em regra, antecede a de habilitação, admitindo-se a inversão dessa ordem mediante ato motivado e previsão expressa no edital.",
-    gabarito: "C", pegadinha: "literalidade", palavraChave: "ato motivado e previsão no edital",
+    enunciado: "Segundo a Lei 14.133/2021, a fase de habilitação, em regra, antecede a de julgamento, admitindo-se a inversão dessa ordem mediante ato motivado e previsão expressa no edital.",
+    gabarito: "E", pegadinha: "literalidade", palavraChave: "habilitação, em regra, antecede",
     cognitivo: {
       motivo: "Cobrar a regra e a exceção quanto à ordem das fases.",
-      palavraCritica: "ato motivado e previsão no edital",
+      palavraCritica: "ordem das fases",
     },
     comentario: {
-      resolucao: "CERTO. Em regra, o julgamento antecede a habilitação na Lei 14.133/2021. A inversão dessa ordem é admitida excepcionalmente, desde que precedida de ato motivado e com previsão expressa no edital (art. 17, § 1º).",
+      resolucao: "ERRADO. A ordem está trocada. Na Lei 14.133/2021, em regra, o JULGAMENTO antecede a HABILITAÇÃO (art. 17, IV e V). A inversão — habilitação antes do julgamento — é a exceção, admitida mediante ato motivado e previsão expressa no edital (art. 17, § 1º).",
       fundamento: "Lei 14.133/2021, art. 17, § 1º.",
-      macete: "Inversão de fases: motivação + edital.",
-      erroComum: "Achar que a inversão é livre.",
-      comoBancaPensa: "Testa as condições da inversão."
+      macete: "Nova lei: primeiro julga, depois habilita (como no pregão). Inverter exige motivação + edital.",
+      erroComum: "Levar para a nova lei a ordem da Lei 8.666/1993, em que a habilitação vinha antes.",
+      comoBancaPensa: "Mantém as condições da inversão e troca qual fase vem primeiro."
     }
   },
   {
@@ -146,20 +146,20 @@ const QUESTOES_PCAL_LOTE18 = [
   {
     id: "DA-031", disciplina: "Direito Administrativo", assunto: "Lei de Licitações (14.133/2021)", subassunto: "Inexigibilidade (art. 74)",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (Lei 14.133/2021, edital PC-AL 2026)",
+    origem: "Inédita — estilo CEBRASPE (Lei 14.133/2021, edital PC-AL 2026); reescrito na calibragem de 10/2026: o erro do item foi corrigido, gabarito passou a CERTO",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 55, probReaparecer: 0.78,
-    enunciado: "As hipóteses de inexigibilidade de licitação previstas na Lei 14.133/2021 constituem rol taxativo.",
-    gabarito: "E", pegadinha: "troca-conceito", palavraChave: "rol taxativo",
+    enunciado: "As hipóteses de inexigibilidade de licitação previstas na Lei 14.133/2021 constituem rol exemplificativo.",
+    gabarito: "C", pegadinha: "troca-conceito", palavraChave: "exemplificativo",
     cognitivo: {
-      motivo: "Cobrar a natureza exemplificativa da inexigibilidade (art. 74).",
-      palavraCritica: "taxativo",
+      motivo: "Distinguir os róis de inexigibilidade e de dispensa.",
+      palavraCritica: "exemplificativo",
     },
     comentario: {
-      resolucao: "ERRADO. As hipóteses de inexigibilidade (art. 74) são exemplificativas, pois derivam do conceito geral de inviabilidade de competição — a lei usa a expressão 'em especial'. A taxatividade é característica das hipóteses de licitação dispensável (art. 75).",
+      resolucao: "CERTO. A inexigibilidade decorre da inviabilidade de competição, e o art. 74 usa 'em especial' antes de listar os casos: o rol é exemplificativo. Já a dispensa (art. 75) é rol taxativo, porque nela a competição é possível e só a lei pode afastá-la.",
       fundamento: "Lei 14.133/2021, arts. 74 e 75.",
-      macete: "Inexigível = exemplificativo; dispensável = taxativo.",
-      erroComum: "Tornar taxativo o rol da inexigibilidade.",
-      comoBancaPensa: "Troca o regime entre inexigibilidade e dispensa."
+      macete: "Inexigível: 'em especial' = exemplos. Dispensável: lista fechada.",
+      erroComum: "Trocar o caráter dos dois róis.",
+      comoBancaPensa: "Item correto que a banca costuma inverter."
     }
   },
   {
@@ -222,20 +222,20 @@ const QUESTOES_PCAL_LOTE18 = [
   {
     id: "DA-035", disciplina: "Direito Administrativo", assunto: "Lei de Licitações (14.133/2021)", subassunto: "Princípios (art. 5º)",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (Lei 14.133/2021, edital PC-AL 2026)",
+    origem: "Inédita — estilo CEBRASPE (Lei 14.133/2021, edital PC-AL 2026); reescrito na calibragem de 10/2026: uma palavra da fonte trocada, gabarito passou a ERRADO",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.74,
-    enunciado: "A Lei 14.133/2021 relaciona, entre os princípios aplicáveis às licitações e contratos, além da legalidade, impessoalidade, moralidade, publicidade e eficiência, também o planejamento, a segregação de funções e a segurança jurídica.",
-    gabarito: "C", pegadinha: "literalidade", palavraChave: "segregação de funções",
+    enunciado: "A Lei 14.133/2021 relaciona, entre os princípios aplicáveis às licitações e contratos, além da legalidade, impessoalidade, moralidade, publicidade e eficiência, também o planejamento, a subsidiariedade e a segurança jurídica.",
+    gabarito: "E", pegadinha: "literalidade", palavraChave: "subsidiariedade",
     cognitivo: {
       motivo: "Cobrar os princípios expressos da Lei 14.133/2021 (art. 5º).",
-      palavraCritica: "segregação de funções",
+      palavraCritica: "subsidiariedade",
     },
     comentario: {
-      resolucao: "CERTO. O art. 5º da Lei 14.133/2021 arrola extenso conjunto de princípios, incluindo legalidade, impessoalidade, moralidade, publicidade, eficiência, além de planejamento, segurança jurídica, segregação de funções, motivação, entre outros. O item reproduz corretamente parte desse rol.",
+      resolucao: "ERRADO. O art. 5º da Lei 14.133/2021 traz planejamento e segurança jurídica, mas não a 'subsidiariedade'. O princípio que ocupa esse lugar no rol, e que a nova lei destacou, é a SEGREGAÇÃO DE FUNÇÕES. Os demais citados constam do artigo.",
       fundamento: "Lei 14.133/2021, art. 5º.",
-      macete: "Novos destaques: planejamento e segregação de funções.",
-      erroComum: "Negar a segregação de funções como princípio.",
-      comoBancaPensa: "Testa os princípios expressos da nova lei."
+      macete: "Destaques da nova lei: planejamento, segregação de funções, segurança jurídica.",
+      erroComum: "Aceitar princípio que soa plausível sem conferir o rol.",
+      comoBancaPensa: "Rol extenso com um elemento estranho infiltrado."
     }
   },
   {

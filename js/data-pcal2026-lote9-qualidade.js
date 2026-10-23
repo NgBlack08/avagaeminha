@@ -70,38 +70,38 @@ const QUESTOES_PCAL_LOTE9 = [
   /* ===== CRIMES CIBERNÉTICOS (reduzir viés 'C') ===== */
   {
     id: "CC-009", disciplina: "Crimes Cibernéticos e Segurança Digital", assunto: "Invasão de dispositivo", subassunto: "Ação penal",
-    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026); reescrito na calibragem de 10/2026: o erro do item foi corrigido, gabarito passou a CERTO",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 40, probReaparecer: 0.8,
-    enunciado: "O crime de invasão de dispositivo informático, previsto no art. 154-A do Código Penal, é, em todas as hipóteses, de ação penal pública incondicionada.",
-    gabarito: "E", pegadinha: "termo-absoluto", palavraChave: "todas as hipóteses / incondicionada",
+    enunciado: "O crime de invasão de dispositivo informático, previsto no art. 154-A do Código Penal, é, em regra, de ação penal pública condicionada à representação.",
+    gabarito: "C", pegadinha: "troca-conceito", palavraChave: "condicionada à representação",
     cognitivo: {
-      motivo: "Cobrar a natureza da ação penal do art. 154-A (art. 154-B do CP).",
-      palavraCritica: "em todas as hipóteses (falso)",
+      motivo: "Fixar a ação penal do art. 154-A.",
+      palavraCritica: "em regra",
     },
     comentario: {
-      resolucao: "ERRADO. CP, art. 154-B: a ação penal é, em regra, pública CONDICIONADA à representação. Será incondicionada apenas quando o crime for cometido contra a Administração Pública (direta ou indireta) de qualquer dos Poderes/entes. Logo, não é incondicionada 'em todas as hipóteses'.",
+      resolucao: "CERTO. Pelo art. 154-B do CP, a ação é, em regra, pública condicionada à representação. Será incondicionada quando o crime for cometido contra a administração pública direta ou indireta de qualquer dos Poderes ou contra empresas concessionárias de serviços públicos.",
       fundamento: "CP, art. 154-B (Lei 12.737/2012).",
-      macete: "Regra: representação. Exceção (vítima é o Estado): incondicionada.",
-      erroComum: "Tratar a ação como sempre incondicionada.",
-      comoBancaPensa: "Termo absoluto ('todas as hipóteses') sobre a natureza da ação penal."
+      macete: "154-A: representação, salvo contra a administração ou concessionária.",
+      erroComum: "Esquecer a regra e lembrar só a exceção.",
+      comoBancaPensa: "Item correto que ressalva a exceção pelo 'em regra'."
     }
   },
   {
     id: "CC-010", disciplina: "Crimes Cibernéticos e Segurança Digital", assunto: "Golpes virtuais", subassunto: "Phishing × ransomware",
-    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026); reescrito na calibragem de 10/2026: o erro do item foi corrigido, gabarito passou a CERTO",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 35, probReaparecer: 0.82,
-    enunciado: "O phishing é um tipo de código malicioso que criptografa os arquivos do dispositivo da vítima e exige o pagamento de resgate para a sua liberação.",
-    gabarito: "E", pegadinha: "troca-conceito", palavraChave: "criptografa e exige resgate",
+    enunciado: "O ransomware é um tipo de código malicioso que criptografa os arquivos do dispositivo da vítima e exige o pagamento de resgate para a sua liberação.",
+    gabarito: "C", pegadinha: "troca-conceito", palavraChave: "ransomware",
     cognitivo: {
-      motivo: "Distinguir phishing (engenharia social) de ransomware (sequestro de dados).",
-      palavraCritica: "criptografa e exige resgate = ransomware (não phishing)",
+      motivo: "Fixar o conceito de ransomware.",
+      palavraCritica: "ransomware",
     },
     comentario: {
-      resolucao: "ERRADO. A descrição (cifrar arquivos e exigir resgate) é de RANSOMWARE. O phishing é técnica de engenharia social: mensagens fraudulentas que se passam por instituições legítimas para induzir a vítima a fornecer dados/credenciais.",
+      resolucao: "CERTO. Ransomware sequestra dados: cifra os arquivos e cobra resgate, em geral em criptomoeda, pela chave. Phishing, com quem a banca costuma trocá-lo, é técnica de engenharia social, não código que cifra arquivos.",
       fundamento: "Segurança da informação — golpes e códigos maliciosos (CERT.br).",
-      macete: "Phishing = pescaria (isca). Ransomware = resgate (sequestro de dados).",
-      erroComum: "Trocar phishing por ransomware.",
-      comoBancaPensa: "Definição correta de um conceito com o nome de outro."
+      macete: "Ransom = resgate.",
+      erroComum: "Confundir ransomware com phishing.",
+      comoBancaPensa: "Item correto e conceitual."
     }
   },
 
@@ -220,20 +220,20 @@ const QUESTOES_PCAL_LOTE9 = [
   /* ===== DIREITO PENAL (reduzir viés 'C') ===== */
   {
     id: "DP-039", disciplina: "Direito Penal", assunto: "Teoria do crime", subassunto: "Tentativa — punição",
-    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026); reescrito na calibragem de 10/2026: o erro do item foi corrigido, gabarito passou a CERTO",
     tipo: "CE", dificuldade: 1, tempoIdealSeg: 30, probReaparecer: 0.82,
-    enunciado: "No Código Penal, a tentativa é punida, em regra, com a mesma pena cominada ao crime consumado.",
-    gabarito: "E", pegadinha: "exigencia-inexistente", palavraChave: "mesma pena",
+    enunciado: "No Código Penal, salvo disposição em contrário, a tentativa é punida com a pena do crime consumado, diminuída de um a dois terços.",
+    gabarito: "C", pegadinha: "exigencia-inexistente", palavraChave: "diminuída de um a dois terços",
     cognitivo: {
-      motivo: "Cobrar a regra de punição da tentativa (art. 14, parágrafo único).",
-      palavraCritica: "mesma pena (falso)",
+      motivo: "Fixar a punição da tentativa (CP, art. 14, parágrafo único).",
+      palavraCritica: "um a dois terços",
     },
     comentario: {
-      resolucao: "ERRADO. CP, art. 14, parágrafo único: salvo disposição em contrário, pune-se a tentativa com a pena do crime consumado, DIMINUÍDA de um a dois terços (teoria objetiva). Só nos crimes de atentado (empreendimento) a tentativa é punida como consumação.",
+      resolucao: "CERTO. Art. 14, parágrafo único, do CP: pena do consumado diminuída de um a dois terços (teoria objetiva). Quanto mais perto da consumação, menor a redução.",
       fundamento: "CP, art. 14, II e parágrafo único.",
-      macete: "Tentativa = pena do consumado − (1/3 a 2/3). Quanto mais perto de consumar, menor a redução.",
-      erroComum: "Igualar a pena da tentativa à do consumado.",
-      comoBancaPensa: "Omite a causa de diminuição obrigatória da tentativa."
+      macete: "Tentativa: −1/3 a −2/3; quanto mais perto do fim, menos desconto.",
+      erroComum: "Achar que a tentativa leva a pena cheia.",
+      comoBancaPensa: "Item correto e literal."
     }
   },
   {
@@ -505,20 +505,20 @@ const QUESTOES_PCAL_LOTE9 = [
   },
   {
     id: "DA-018", disciplina: "Direito Administrativo", assunto: "Atos administrativos", subassunto: "Revogação × anulação",
-    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026); reescrito na calibragem de 10/2026: o erro do item foi corrigido, gabarito passou a CERTO",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 40, probReaparecer: 0.8,
-    enunciado: "O Poder Judiciário, no exercício de sua função jurisdicional, pode revogar atos administrativos de outros Poderes por razões de conveniência e oportunidade.",
-    gabarito: "E", pegadinha: "troca-conceito", palavraChave: "revogar / conveniência e oportunidade",
+    enunciado: "O Poder Judiciário, na função jurisdicional, pode anular atos administrativos ilegais de outros Poderes, mas não revogá-los por conveniência e oportunidade.",
+    gabarito: "C", pegadinha: "troca-conceito", palavraChave: "anular",
     cognitivo: {
-      motivo: "Cobrar a impossibilidade de o Judiciário revogar atos de outros Poderes.",
-      palavraCritica: "revogar por conveniência (falso p/ o Judiciário)",
+      motivo: "Distinguir anulação de revogação quanto ao Judiciário.",
+      palavraCritica: "anular × revogar",
     },
     comentario: {
-      resolucao: "ERRADO. O Judiciário, na função jurisdicional, pode ANULAR atos administrativos ilegais (de qualquer Poder), mas não pode REVOGÁ-LOS por conveniência e oportunidade — a revogação é competência da própria Administração que editou o ato (Súmula 473/STF).",
+      resolucao: "CERTO. Na função jurisdicional, o Judiciário controla a LEGALIDADE dos atos administrativos e pode anulá-los. A revogação, por conveniência e oportunidade, é exclusiva da Administração que praticou o ato (Súmula 473 do STF). Em sua função atípica administrativa, o Judiciário revoga apenas os próprios atos.",
       fundamento: "Súmula 473/STF; separação de Poderes.",
-      macete: "Judiciário anula (ilegalidade). Revogação (mérito) é só da Administração.",
-      erroComum: "Atribuir ao Judiciário a revogação por mérito.",
-      comoBancaPensa: "Troca anulação (Judiciário) por revogação (Administração)."
+      macete: "Judiciário anula (ilegalidade); Administração anula e revoga.",
+      erroComum: "Achar que o juiz pode substituir o mérito administrativo.",
+      comoBancaPensa: "Item correto que separa os dois institutos."
     }
   },
 ];

@@ -105,7 +105,7 @@ const QUESTOES_PCAL_LOTE11 = [
     }
   },
   {
-    id: "PT-020", disciplina: "Língua Portuguesa", assunto: "Sintaxe", subassunto: "Pontuação — conjunção deslocada",
+    id: "PT-020", disciplina: "Língua Portuguesa", assunto: "Pontuação", subassunto: "Pontuação — conjunção deslocada",
     concurso: "PCAL", cargo: ["Escrivão","Agente","Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — simulado estilo CEBRASPE (bloco 1, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.8,

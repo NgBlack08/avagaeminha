@@ -828,7 +828,7 @@ const QUESTOES = [
     }
   },
   {
-    id: "PT-003", disciplina: "Língua Portuguesa", assunto: "Sintaxe", subassunto: "Pontuação — vírgulas",
+    id: "PT-003", disciplina: "Língua Portuguesa", assunto: "Pontuação", subassunto: "Pontuação — vírgulas",
     concurso: "PCAL", cargo: ["Escrivão","Agente","Especialista em Saúde — Fisioterapia"], ano: 2026, origem: "Inédita — estilo CEBRASPE (padrão PCAL)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 60, probReaparecer: 0.8,
     textoApoio: "A segurança pública, dever do Estado, direito e responsabilidade de todos, é exercida para a preservação da ordem pública e da incolumidade das pessoas e do patrimônio.",
@@ -847,7 +847,7 @@ const QUESTOES = [
     }
   },
   {
-    id: "PT-004", disciplina: "Língua Portuguesa", assunto: "Sintaxe", subassunto: "Crase",
+    id: "PT-004", disciplina: "Língua Portuguesa", assunto: "Crase", subassunto: "Crase",
     concurso: "PCDF", cargo: ["Escrivão","Agente","Especialista em Saúde — Fisioterapia"], ano: 2026, origem: "Inédita — estilo CEBRASPE (padrão PCDF)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 45, probReaparecer: 0.75,
     textoApoio: "O acesso à informação e a transparência dos órgãos policiais são essenciais à consolidação da confiança social nas instituições de segurança.",

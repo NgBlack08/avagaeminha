@@ -91,20 +91,20 @@ const QUESTOES_PCAL_LOTE33 = [
   {
     id: "DA-055", disciplina: "Direito Administrativo", assunto: "Controle da Administração Pública", subassunto: "Controle legislativo",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (CF/88, art. 49, V)",
+    origem: "Inédita — estilo CEBRASPE (CF/88, art. 49, V); reescrito na calibragem de 10/2026: uma palavra da fonte trocada, gabarito passou a ERRADO",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 75, probReaparecer: 0.8,
-    enunciado: "Compete ao Congresso Nacional, e não privativamente ao Senado Federal, sustar os atos normativos do Poder Executivo que exorbitem do poder regulamentar ou dos limites de delegação legislativa.",
-    gabarito: "C", pegadinha: "literalidade", palavraChave: "Congresso Nacional, e não privativamente ao Senado",
+    enunciado: "Compete ao Senado Federal, e não ao Congresso Nacional, sustar os atos normativos do Poder Executivo que exorbitem do poder regulamentar ou dos limites de delegação legislativa.",
+    gabarito: "E", pegadinha: "literalidade", palavraChave: "Senado Federal, e não ao Congresso Nacional",
     cognitivo: {
-      motivo: "Cobrar o órgão constitucionalmente competente para sustar atos normativos do Executivo.",
-      palavraCritica: "Congresso Nacional",
+      motivo: "Cobrar o órgão competente para sustar atos normativos do Executivo.",
+      palavraCritica: "Senado × Congresso",
     },
     comentario: {
-      resolucao: "CERTO. A competência para sustar os atos normativos do Poder Executivo que exorbitem do poder regulamentar ou dos limites de delegação legislativa é do CONGRESSO NACIONAL (art. 49, V, CF), e não privativa do Senado Federal.",
+      resolucao: "ERRADO. A competência é do CONGRESSO NACIONAL, e exclusiva (CF, art. 49, V): sustar os atos normativos do Executivo que exorbitem do poder regulamentar ou dos limites de delegação legislativa. O item atribui ao Senado, isoladamente, uma competência das duas Casas.",
       fundamento: "Constituição Federal, art. 49, V.",
-      macete: "Sustar atos do Executivo que exorbitam = Congresso Nacional (bicameral), não só o Senado.",
-      erroComum: "Confundir competências do Congresso Nacional com competências privativas do Senado Federal.",
-      comoBancaPensa: "Cobra a redação correta da competência constitucional, testando a precisão do conhecimento do candidato."
+      macete: "Sustar atos do Executivo que exorbitam = Congresso Nacional (art. 49, V).",
+      erroComum: "Confundir competências exclusivas do Congresso com privativas do Senado.",
+      comoBancaPensa: "Troca o órgão em competência constitucional literal."
     }
   },
   {

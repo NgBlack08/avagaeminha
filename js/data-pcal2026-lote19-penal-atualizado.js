@@ -114,20 +114,20 @@ const QUESTOES_PCAL_LOTE19 = [
   {
     id: "DP-058", disciplina: "Direito Penal", assunto: "Perseguição (stalking)", subassunto: "Habitualidade",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (CP, art. 147-A)",
+    origem: "Inédita — estilo CEBRASPE (CP, art. 147-A); reescrito na calibragem de 10/2026: o erro do item foi corrigido, gabarito passou a CERTO",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 50, probReaparecer: 0.78,
-    enunciado: "O crime de perseguição configura-se com a prática de um único ato isolado dirigido à vítima.",
-    gabarito: "E", pegadinha: "restricao-indevida", palavraChave: "um único ato isolado",
+    enunciado: "O crime de perseguição exige reiteração de condutas, não se configurando por um único ato isolado dirigido à vítima.",
+    gabarito: "C", pegadinha: "restricao-indevida", palavraChave: "reiteração",
     cognitivo: {
-      motivo: "Cobrar a exigência de reiteração no crime de perseguição.",
-      palavraCritica: "único ato isolado",
+      motivo: "Fixar a natureza habitual do crime de perseguição (CP, art. 147-A).",
+      palavraCritica: "reiteradamente",
     },
     comentario: {
-      resolucao: "ERRADO. O crime de perseguição (art. 147-A) tem natureza habitual e exige reiteração de condutas, não se configurando por um único ato isolado. A prática única e pontual pode caracterizar outro delito, como a ameaça.",
+      resolucao: "CERTO. O art. 147-A pune perseguir alguém 'reiteradamente', por qualquer meio: é crime habitual. Ato isolado pode configurar outro crime (ameaça, por exemplo), não a perseguição.",
       fundamento: "CP, art. 147-A.",
-      macete: "Reiterou? É stalking. Ato único não basta.",
-      erroComum: "Admitir configuração por ato único.",
-      comoBancaPensa: "Suprime a elementar da reiteração."
+      macete: "Stalking = repetição.",
+      erroComum: "Achar que um único ato basta.",
+      comoBancaPensa: "Item correto sobre a estrutura do tipo."
     }
   },
   {
@@ -154,20 +154,20 @@ const QUESTOES_PCAL_LOTE19 = [
   {
     id: "DP-060", disciplina: "Direito Penal", assunto: "Concurso de pessoas", subassunto: "Teoria adotada (art. 29)",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (CP, art. 29)",
+    origem: "Inédita — estilo CEBRASPE (CP, art. 29); reescrito na calibragem de 10/2026: o erro do item foi corrigido, gabarito passou a CERTO",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 55, probReaparecer: 0.82,
-    enunciado: "Quanto ao concurso de pessoas, o Código Penal adotou, como regra, a teoria pluralista, segundo a qual cada concorrente responde por um crime autônomo e distinto.",
-    gabarito: "E", pegadinha: "troca-conceito", palavraChave: "teoria pluralista",
+    enunciado: "Quanto ao concurso de pessoas, o Código Penal adotou, como regra, a teoria monista, segundo a qual todos os concorrentes respondem pelo mesmo crime.",
+    gabarito: "C", pegadinha: "troca-conceito", palavraChave: "teoria monista",
     cognitivo: {
-      motivo: "Cobrar a teoria monista do concurso de pessoas (art. 29).",
-      palavraCritica: "pluralista",
+      motivo: "Fixar a teoria adotada no concurso de pessoas (CP, art. 29).",
+      palavraCritica: "monista",
     },
     comentario: {
-      resolucao: "ERRADO. O Código Penal adotou, como regra, a teoria MONISTA (unitária) no art. 29: todos os que concorrem para o crime respondem pelo mesmo delito, na medida de sua culpabilidade. A teoria pluralista aparece apenas em exceções específicas.",
+      resolucao: "CERTO. O art. 29 adota a teoria monista (unitária): quem concorre para o crime responde por ele, na medida de sua culpabilidade. Há exceções pluralistas pontuais, como aborto com consentimento (arts. 124 e 126) e corrupção ativa e passiva.",
       fundamento: "CP, art. 29.",
-      macete: "Concurso de pessoas: regra monista, exceção pluralista.",
-      erroComum: "Trocar monista por pluralista.",
-      comoBancaPensa: "Inverte a teoria adotada."
+      macete: "Regra monista; exceções pluralistas pontuais.",
+      erroComum: "Tomar as exceções pela regra.",
+      comoBancaPensa: "Item correto que ressalva a regra."
     }
   },
   {
@@ -313,20 +313,20 @@ const QUESTOES_PCAL_LOTE19 = [
   {
     id: "DP-068", disciplina: "Direito Penal", assunto: "Crimes contra a honra", subassunto: "Calúnia × injúria (art. 138 × 140)",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (CP, arts. 138 e 140)",
+    origem: "Inédita — estilo CEBRASPE (CP, arts. 138 e 140); reescrito na calibragem de 10/2026: o erro do item foi corrigido, gabarito passou a CERTO",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.8,
-    enunciado: "Comete calúnia quem atribui a alguém, falsamente, qualidade negativa que ofenda sua dignidade ou decoro.",
-    gabarito: "E", pegadinha: "troca-conceito", palavraChave: "qualidade negativa",
+    enunciado: "Comete injúria quem ofende a dignidade ou o decoro de alguém, atribuindo-lhe qualidade negativa.",
+    gabarito: "C", pegadinha: "troca-conceito", palavraChave: "injúria",
     cognitivo: {
-      motivo: "Cobrar a distinção entre calúnia e injúria.",
-      palavraCritica: "qualidade negativa",
+      motivo: "Distinguir injúria de calúnia e difamação.",
+      palavraCritica: "injúria",
     },
     comentario: {
-      resolucao: "ERRADO. A conduta descrita — atribuir qualidade negativa que ofende a dignidade ou o decoro — caracteriza INJÚRIA (art. 140). A calúnia (art. 138) consiste em imputar falsamente a alguém FATO definido como crime.",
+      resolucao: "CERTO. Injúria (CP, art. 140) ofende a honra subjetiva: dignidade ou decoro, por atribuição de qualidade negativa. Calúnia imputa falsamente fato definido como crime; difamação imputa fato ofensivo à reputação.",
       fundamento: "CP, arts. 138 e 140.",
-      macete: "Calúnia: fato-crime. Injúria: qualidade/xingamento.",
-      erroComum: "Trocar os conceitos de calúnia e injúria.",
-      comoBancaPensa: "Troca de conceitos entre crimes contra a honra."
+      macete: "Calúnia: crime falso. Difamação: fato. Injúria: qualidade.",
+      erroComum: "Trocar os três crimes contra a honra.",
+      comoBancaPensa: "Item correto e conceitual."
     }
   },
 

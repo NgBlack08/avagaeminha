@@ -52,20 +52,20 @@ const QUESTOES_PCAL_LOTE21 = [
   {
     id: "DA-042", disciplina: "Direito Administrativo", assunto: "Poderes administrativos", subassunto: "Poder de polícia (restrição indevida)",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (poder de polícia)",
+    origem: "Inédita — estilo CEBRASPE (poder de polícia); reescrito na calibragem de 10/2026: o erro do item foi corrigido, gabarito passou a CERTO",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.78,
-    enunciado: "O poder de polícia administrativa esgota-se na atividade repressiva, consistente na aplicação de sanções aos particulares.",
-    gabarito: "E", pegadinha: "restricao-indevida", palavraChave: "esgota-se na atividade repressiva",
+    enunciado: "O poder de polícia administrativa não se esgota na atividade repressiva, abrangendo também atuação preventiva, como a edição de normas e a concessão de licenças.",
+    gabarito: "C", pegadinha: "restricao-indevida", palavraChave: "atuação preventiva",
     cognitivo: {
-      motivo: "Cobrar as fases/dimensões do poder de polícia.",
-      palavraCritica: "esgota-se na repressiva",
+      motivo: "Fixar o ciclo do poder de polícia.",
+      palavraCritica: "preventiva e repressiva",
     },
     comentario: {
-      resolucao: "ERRADO. O poder de polícia compreende as fases de ordem de polícia (normas), consentimento (licenças/autorizações), fiscalização e sanção. Tem atuação preventiva, fiscalizatória e repressiva — não se esgota na atividade repressiva.",
+      resolucao: "CERTO. O ciclo de polícia tem quatro fases: ordem (normas), consentimento (licenças e autorizações), fiscalização e sanção. As duas primeiras são preventivas; a sanção é repressiva. Polícia administrativa atua antes e depois da infração.",
       fundamento: "Doutrina; Lei 13.874/2019 (ciclo de polícia).",
-      macete: "Ciclo: ordem, consentimento, fiscalização, sanção.",
-      erroComum: "Reduzir o poder de polícia à sanção.",
-      comoBancaPensa: "Restringe indevidamente o alcance do poder."
+      macete: "Ciclo de polícia: ordem, consentimento, fiscalização, sanção.",
+      erroComum: "Reduzir o poder de polícia à aplicação de multas.",
+      comoBancaPensa: "Item correto sobre o alcance do poder."
     }
   },
   {
@@ -90,20 +90,20 @@ const QUESTOES_PCAL_LOTE21 = [
   {
     id: "DP-070", disciplina: "Direito Penal", assunto: "Ação penal", subassunto: "Queixa-crime (troca de sujeito)",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (CPP, ação penal privada)",
+    origem: "Inédita — estilo CEBRASPE (CPP, ação penal privada); reescrito na calibragem de 10/2026: o erro do item foi corrigido, gabarito passou a CERTO",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.76,
-    enunciado: "Na ação penal privada, cabe ao querelado o oferecimento da queixa-crime.",
-    gabarito: "E", pegadinha: "troca-sujeito", palavraChave: "querelado",
+    enunciado: "Na ação penal privada, cabe ao querelante o oferecimento da queixa-crime.",
+    gabarito: "C", pegadinha: "troca-sujeito", palavraChave: "querelante",
     cognitivo: {
-      motivo: "Cobrar os polos da ação penal privada.",
-      palavraCritica: "querelado",
+      motivo: "Distinguir querelante de querelado.",
+      palavraCritica: "querelante",
     },
     comentario: {
-      resolucao: "ERRADO. Na ação penal privada, o ofendido (ou seu representante) é o querelante e oferece a queixa-crime; o querelado é o réu. Logo, a queixa cabe ao querelante, não ao querelado.",
+      resolucao: "CERTO. Querelante é o ofendido (ou seu representante), autor da queixa-crime; querelado é o réu. A troca entre os dois termos é a armadilha clássica.",
       fundamento: "CPP, arts. 30 e 44; CP, art. 100, § 2º.",
-      macete: "Querelante = autor (oferece queixa). Querelado = réu.",
-      erroComum: "Inverter os polos da ação privada.",
-      comoBancaPensa: "Troca de sujeitos processuais."
+      macete: "Querelante queixa; querelado é queixado.",
+      erroComum: "Trocar querelante e querelado.",
+      comoBancaPensa: "Item correto de vocabulário processual."
     }
   },
   {
@@ -129,20 +129,20 @@ const QUESTOES_PCAL_LOTE21 = [
   {
     id: "DA-043", disciplina: "Direito Administrativo", assunto: "Atos administrativos", subassunto: "Requisitos (verdade + falso)",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (requisitos do ato administrativo)",
+    origem: "Inédita — estilo CEBRASPE (requisitos do ato administrativo); reescrito na calibragem de 10/2026: o erro do item foi corrigido, gabarito passou a CERTO",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 55, probReaparecer: 0.8,
-    enunciado: "São requisitos de validade do ato administrativo a competência, a finalidade, a forma, o motivo, o objeto e a publicidade.",
-    gabarito: "E", pegadinha: "verdade-mais-falso", palavraChave: "e a publicidade",
+    enunciado: "São requisitos de validade do ato administrativo a competência, a finalidade, a forma, o motivo e o objeto.",
+    gabarito: "C", pegadinha: "verdade-mais-falso", palavraChave: "competência, a finalidade, a forma, o motivo e o objeto",
     cognitivo: {
-      motivo: "Cobrar os cinco requisitos do ato administrativo.",
-      palavraCritica: "publicidade",
+      motivo: "Fixar os elementos do ato administrativo.",
+      palavraCritica: "cinco elementos",
     },
     comentario: {
-      resolucao: "ERRADO. Os requisitos (elementos) do ato administrativo são cinco: competência, finalidade, forma, motivo e objeto (art. 2º da Lei 4.717/1965). A publicidade é princípio da Administração e condição de eficácia — não integra o rol dos requisitos de validade.",
+      resolucao: "CERTO. São os cinco elementos tradicionais, extraídos do art. 2º da Lei 4.717/1965: competência, finalidade, forma, motivo e objeto. A publicidade é condição de eficácia, não elemento de validade — é ela que a banca costuma infiltrar no rol.",
       fundamento: "Lei 4.717/1965, art. 2º; CF, art. 37.",
-      macete: "COM-FI-FO-MO-OB. Publicidade é princípio, não requisito.",
-      erroComum: "Incluir a publicidade entre os requisitos.",
-      comoBancaPensa: "Emenda item falso a uma lista verdadeira."
+      macete: "COFIFOMOB: competência, finalidade, forma, motivo, objeto.",
+      erroComum: "Desconfiar de lista correta e completa.",
+      comoBancaPensa: "Rol correto, sem o intruso habitual."
     }
   },
   {

@@ -52,20 +52,20 @@ const QUESTOES_SESAUAL_LOTE60 = [
   {
     id: "LEA-002", disciplina: "Legislação Estadual (AL)", assunto: "Lei 5.247/1991 — provimento e posse", subassunto: "Prazo para entrar em exercício",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (Edital SESAU/AL 2026)",
+    origem: "Inédita — estilo CEBRASPE (Edital SESAU/AL 2026); reescrito na calibragem de 10/2026: o erro do item foi corrigido, gabarito passou a CERTO",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.82,
-    enunciado: "É de trinta dias o prazo para o servidor entrar em exercício, contado da data da publicação do ato de nomeação.",
-    gabarito: "E", pegadinha: "troca-conceito", palavraChave: "da data da publicação do ato de nomeação",
+    enunciado: "É de trinta dias o prazo para o servidor entrar em exercício, contado da data da posse.",
+    gabarito: "C", pegadinha: "troca-conceito", palavraChave: "contado da data da posse",
     cognitivo: {
-      motivo: "Cobrar o termo inicial do prazo de exercício, que é a posse.",
-      palavraCritica: "publicação do ato de nomeação",
+      motivo: "Fixar o marco do prazo para entrar em exercício.",
+      palavraCritica: "data da posse",
     },
     comentario: {
-      resolucao: "ERRADO. O art. 26, §1º, conta os trinta dias da data da POSSE, não da publicação da nomeação. O item aproveita que a duração está certa para trocar o marco — e o marco trocado é o do outro prazo, o de posse (art. 13, §2º). Se o servidor não entrar em exercício no prazo, a consequência não é a mesma da posse não tomada: aqui o ato de nomeação é revogado (art. 26, §2º).",
+      resolucao: "CERTO. O art. 26, § 1º, da Lei 5.247/1991 dá trinta dias para entrar em exercício, contados da POSSE. O marco é o que costuma ser trocado: a contagem a partir da publicação da nomeação vale para a posse, não para o exercício.",
       fundamento: "Lei estadual 5.247/1991, art. 26, §§ 1º e 2º; art. 13, § 2º.",
-      macete: "Exercício conta da POSSE. Posse conta da PUBLICAÇÃO.",
-      erroComum: "Somar os dois prazos como se corressem do mesmo marco.",
-      comoBancaPensa: "Mantém o numeral correto e desloca só o termo inicial."
+      macete: "Nomeação → posse → exercício: cada prazo conta do ato anterior.",
+      erroComum: "Contar o exercício da publicação da nomeação.",
+      comoBancaPensa: "Item correto com o marco certo."
     }
   },
   {
@@ -109,20 +109,20 @@ const QUESTOES_SESAUAL_LOTE60 = [
   {
     id: "LEA-005", disciplina: "Legislação Estadual (AL)", assunto: "Lei 5.247/1991 — vacância", subassunto: "Hipóteses de vacância",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (Edital SESAU/AL 2026)",
+    origem: "Inédita — estilo CEBRASPE (Edital SESAU/AL 2026); reescrito na calibragem de 10/2026: uma palavra da fonte trocada, gabarito passou a ERRADO",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.76,
-    enunciado: "Determinam a vacância do cargo público, entre outras hipóteses, a exoneração, a demissão, a promoção, a aposentadoria, a posse em outro cargo inacumulável e o falecimento.",
-    gabarito: "C", pegadinha: "literalidade", palavraChave: "posse em outro cargo inacumulável",
+    enunciado: "Determinam a vacância do cargo público, entre outras hipóteses, a exoneração, a demissão, a remoção, a aposentadoria, a posse em outro cargo inacumulável e o falecimento.",
+    gabarito: "E", pegadinha: "literalidade", palavraChave: "remoção",
     cognitivo: {
-      motivo: "Fixar o rol do art. 40, com atenção às hipóteses que não são punitivas.",
-      palavraCritica: "posse em outro cargo inacumulável",
+      motivo: "Fixar o rol do art. 40 e separar vacância de deslocamento.",
+      palavraCritica: "remoção",
     },
     comentario: {
-      resolucao: "CERTO. Todas constam do art. 40 da Lei 5.247/1991, que traz nove hipóteses — as seis do item mais a ascensão, a transferência e a readaptação. O ponto que confunde é que a vacância não é sanção: promoção e aposentadoria abrem vaga tanto quanto a demissão. Vacância descreve o cargo que ficou sem titular, qualquer que tenha sido a causa.",
+      resolucao: "ERRADO. A remoção não gera vacância: é o deslocamento do servidor, que continua titular do mesmo cargo. O art. 40 da Lei 5.247/1991 traz a PROMOÇÃO nesse lugar, ao lado de exoneração, demissão, ascensão, transferência, readaptação, aposentadoria, posse em outro cargo inacumulável e falecimento.",
       fundamento: "Lei estadual 5.247/1991, art. 40, I a IX.",
-      macete: "Vacância não é castigo — promoção e aposentadoria também vagam o cargo.",
-      erroComum: "Restringir a vacância às hipóteses de desligamento punitivo.",
-      comoBancaPensa: "Mistura hipóteses favoráveis e desfavoráveis no mesmo rol para testar o conceito."
+      macete: "Vacância = o cargo fica sem titular. Remoção muda o lugar, não o cargo.",
+      erroComum: "Confundir promoção (vaga o cargo anterior) com remoção (não vaga nada).",
+      comoBancaPensa: "Troca uma hipótese do rol por instituto de nome parecido."
     }
   },
   {
@@ -341,20 +341,20 @@ const QUESTOES_SESAUAL_LOTE60 = [
   {
     id: "LEA-017", disciplina: "Legislação Estadual (AL)", assunto: "Lei 5.247/1991 — jornada e férias", subassunto: "Pagamento da remuneração de férias",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (Edital SESAU/AL 2026)",
+    origem: "Inédita — estilo CEBRASPE (Edital SESAU/AL 2026); reescrito na calibragem de 10/2026: o erro do item foi corrigido, gabarito passou a CERTO",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 50, probReaparecer: 0.66,
-    enunciado: "O pagamento da remuneração das férias será efetuado até dois dias após o início do respectivo período.",
-    gabarito: "E", pegadinha: "troca-conceito", palavraChave: "até dois dias após o início",
+    enunciado: "O pagamento da remuneração das férias será efetuado até dois dias antes do início do respectivo período.",
+    gabarito: "C", pegadinha: "troca-conceito", palavraChave: "dois dias antes",
     cognitivo: {
-      motivo: "Cobrar que o pagamento antecede o gozo das férias.",
-      palavraCritica: "após",
+      motivo: "Fixar o momento do pagamento das férias.",
+      palavraCritica: "antes",
     },
     comentario: {
-      resolucao: "ERRADO. O art. 82 determina o pagamento até dois dias ANTES do início do período — o item inverte a preposição e mantém o numeral. A antecipação existe por finalidade prática: as férias se destinam ao descanso, e o servidor precisa dispor dos recursos ao iniciá-las, não depois. É a mesma lógica do pagamento antecipado de férias na legislação trabalhista.",
+      resolucao: "CERTO. É o art. 82 da Lei 5.247/1991: o pagamento é feito até dois dias ANTES do início das férias, para que o servidor disponha do dinheiro durante o descanso. A banca costuma trocar 'antes' por 'após'.",
       fundamento: "Lei estadual 5.247/1991, art. 82.",
-      macete: "Paga-se ANTES de sair de férias, não durante.",
-      erroComum: "Fixar-se no numeral e não conferir se é antes ou depois.",
-      comoBancaPensa: "Inverte uma preposição — a menor alteração possível num dispositivo curto."
+      macete: "Férias: paga ANTES de sair.",
+      erroComum: "Desconfiar da antecipação.",
+      comoBancaPensa: "Item correto, com a preposição que costuma ser trocada."
     }
   },
 
@@ -613,20 +613,20 @@ const QUESTOES_SESAUAL_LOTE60 = [
   {
     id: "LEA-031", disciplina: "Legislação Estadual (AL)", assunto: "Lei 5.247/1991 — regime disciplinar", subassunto: "Limite da suspensão",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (Edital SESAU/AL 2026)",
+    origem: "Inédita — estilo CEBRASPE (Edital SESAU/AL 2026); reescrito na calibragem de 10/2026: uma palavra da fonte trocada, gabarito passou a ERRADO",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 55, probReaparecer: 0.8,
-    enunciado: "A suspensão será aplicada em caso de reincidência nas faltas punidas com advertência e de violação das demais proibições que não tipifiquem infração sujeita a penalidade de demissão, não podendo exceder noventa dias.",
-    gabarito: "C", pegadinha: "literalidade", palavraChave: "não podendo exceder noventa dias",
+    enunciado: "A suspensão será aplicada em caso de reincidência nas faltas punidas com advertência e de violação das demais proibições que não tipifiquem infração sujeita a penalidade de demissão, não podendo exceder cento e vinte dias.",
+    gabarito: "E", pegadinha: "literalidade", palavraChave: "cento e vinte dias",
     cognitivo: {
-      motivo: "Fixar o teto da suspensão e as hipóteses que a autorizam.",
+      motivo: "Fixar o teto da suspensão.",
       palavraCritica: "noventa dias",
     },
     comentario: {
-      resolucao: "CERTO. É o caput do art. 132 da Lei 5.247/1991. O dispositivo desenha a suspensão como penalidade intermediária: cabe na reincidência do que já rendeu advertência e nas violações que não chegam a justificar demissão. Guarde também o §1º, que traz uma suspensão específica de até quinze dias para o servidor que se recusa injustificadamente a submeter-se a inspeção médica — prazo bem menor e cobrado à parte.",
+      resolucao: "ERRADO. O teto da suspensão é de NOVENTA dias (art. 132 da Lei 5.247/1991). As hipóteses de cabimento estão corretas: reincidência em falta punida com advertência e violação das demais proibições que não levem à demissão. Há ainda a suspensão de até quinze dias para quem recusa inspeção médica (§ 1º).",
       fundamento: "Lei estadual 5.247/1991, art. 132, caput e § 1º.",
       macete: "Suspensão: teto de 90 dias; recusa a inspeção médica, até 15.",
-      erroComum: "Aplicar o teto de 90 dias também à recusa de inspeção médica.",
-      comoBancaPensa: "Um artigo com dois tetos distintos: cobra qual vale para cada hipótese."
+      erroComum: "Aceitar o número porque as hipóteses de cabimento estão certas.",
+      comoBancaPensa: "Reproduz o caput e altera só o teto."
     }
   },
   {
@@ -689,20 +689,20 @@ const QUESTOES_SESAUAL_LOTE60 = [
   {
     id: "LEA-035", disciplina: "Legislação Estadual (AL)", assunto: "Lei 5.247/1991 — regime disciplinar", subassunto: "Prazos de prescrição da ação disciplinar",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (Edital SESAU/AL 2026)",
+    origem: "Inédita — estilo CEBRASPE (Edital SESAU/AL 2026); reescrito na calibragem de 10/2026: uma palavra da fonte trocada, gabarito passou a ERRADO",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 70, probReaparecer: 0.9,
-    enunciado: "A ação disciplinar prescreverá em cinco anos quanto às infrações puníveis com demissão, cassação de aposentadoria ou disponibilidade e destituição de cargo em comissão; em dois anos quanto à suspensão; e em cento e oitenta dias quanto à advertência.",
-    gabarito: "C", pegadinha: "literalidade", palavraChave: "cinco anos ... dois anos ... cento e oitenta dias",
+    enunciado: "A ação disciplinar prescreverá em cinco anos quanto às infrações puníveis com demissão, cassação de aposentadoria ou disponibilidade e destituição de cargo em comissão; em dois anos quanto à suspensão; e em um ano quanto à advertência.",
+    gabarito: "E", pegadinha: "literalidade", palavraChave: "um ano quanto à advertência",
     cognitivo: {
-      motivo: "Fixar os três prazos prescricionais, campeões de cobrança na disciplina.",
+      motivo: "Fixar os três prazos prescricionais da ação disciplinar.",
       palavraCritica: "cento e oitenta dias",
     },
     comentario: {
-      resolucao: "CERTO. São os três incisos do art. 144 da Lei 5.247/1991, com os prazos exatos. A escada é proporcional à gravidade: quanto mais severa a penalidade, mais tempo a Administração tem para agir. Guarde ainda dois complementos muito cobrados: o §2º manda aplicar os prazos da lei penal às infrações que também sejam crime — o que pode ampliar muito o prazo —, e o §3º prevê que a abertura de sindicância ou a instauração de processo disciplinar INTERROMPE a prescrição até a decisão final.",
+      resolucao: "ERRADO. O prazo para a advertência é de CENTO E OITENTA DIAS (art. 144, III, da Lei 5.247/1991), não de um ano. Os outros dois degraus estão certos: cinco anos para demissão, cassação e destituição; dois anos para suspensão. Lembre ainda que sindicância ou processo disciplinar interrompem a prescrição (§ 3º).",
       fundamento: "Lei estadual 5.247/1991, art. 144, I a III e §§ 2º e 3º.",
       macete: "5 anos (demissão) · 2 anos (suspensão) · 180 dias (advertência).",
       erroComum: "Trocar os 180 dias por um ano.",
-      comoBancaPensa: "Três numerais numa escada: cobra literal para depois permutar os degraus."
+      comoBancaPensa: "Escada de três prazos com o último degrau alterado."
     }
   },
   {

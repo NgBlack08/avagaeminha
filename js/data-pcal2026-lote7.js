@@ -88,20 +88,20 @@ const QUESTOES_PCAL_LOTE7 = [
   /* ==================== DIREITO ADMINISTRATIVO ==================== */
   {
     id: "DA-013", disciplina: "Direito Administrativo", assunto: "Organização administrativa", subassunto: "Descentralização × desconcentração",
-    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026); reescrito na calibragem de 10/2026: uma palavra da fonte trocada, gabarito passou a ERRADO",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 45, probReaparecer: 0.85,
-    enunciado: "A desconcentração administrativa pressupõe a distribuição interna de competências entre órgãos de uma mesma pessoa jurídica, ao passo que a descentralização implica a transferência de atribuições para pessoa jurídica distinta.",
-    gabarito: "C", pegadinha: "literalidade", palavraChave: "mesma pessoa jurídica × pessoa distinta",
+    enunciado: "A descentralização administrativa pressupõe a distribuição interna de competências entre órgãos de uma mesma pessoa jurídica, ao passo que a desconcentração implica a transferência de atribuições para pessoa jurídica distinta.",
+    gabarito: "E", pegadinha: "literalidade", palavraChave: "descentralização ... mesma pessoa jurídica",
     cognitivo: {
       motivo: "Distinguir descentralização de desconcentração.",
       palavraCritica: "desconcentração = interna; descentralização = nova PJ",
     },
     comentario: {
-      resolucao: "CERTO. A desconcentração distribui competências internamente, entre órgãos de uma mesma pessoa jurídica (com hierarquia). A descentralização transfere atribuições a pessoa jurídica distinta (Administração indireta ou particular), sem hierarquia, mas com vinculação/controle finalístico.",
+      resolucao: "ERRADO. As definições estão trocadas. A DESCONCENTRAÇÃO distribui competências internamente, entre órgãos de uma mesma pessoa jurídica (com hierarquia). A DESCENTRALIZAÇÃO transfere atribuições a pessoa jurídica distinta, sem hierarquia, com controle finalístico.",
       fundamento: "Doutrina administrativista; Decreto-Lei 200/1967.",
-      macete: "Desconcentração = órgãos (mesma PJ). Descentralização = outra PJ.",
+      macete: "DesCONcentração = CONtinua na mesma pessoa. Descentralização = outra pessoa.",
       erroComum: "Inverter qual fenômeno cria nova pessoa jurídica.",
-      comoBancaPensa: "Par conceitual espelhado invertido — clássico de organização administrativa."
+      comoBancaPensa: "Par conceitual espelhado: as definições ficam, os nomes trocam de lugar."
     }
   },
   {
@@ -142,20 +142,20 @@ const QUESTOES_PCAL_LOTE7 = [
   },
   {
     id: "DA-016", disciplina: "Direito Administrativo", assunto: "Controle da Administração", subassunto: "Controle externo",
-    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026)",
+    concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026, origem: "Inédita — estilo CEBRASPE (edital PC-AL 2026); reescrito na calibragem de 10/2026: uma palavra da fonte trocada, gabarito passou a ERRADO",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 40, probReaparecer: 0.75,
-    enunciado: "O controle externo da Administração Pública é exercido pelo Poder Legislativo, com o auxílio do Tribunal de Contas, abrangendo a fiscalização contábil, financeira, orçamentária, operacional e patrimonial.",
-    gabarito: "C", pegadinha: "literalidade", palavraChave: "Legislativo com auxílio do Tribunal de Contas",
+    enunciado: "O controle externo da Administração Pública é exercido pelo Tribunal de Contas, com o auxílio do Poder Legislativo, abrangendo a fiscalização contábil, financeira, orçamentária, operacional e patrimonial.",
+    gabarito: "E", pegadinha: "literalidade", palavraChave: "com o auxílio do Poder Legislativo",
     cognitivo: {
-      motivo: "Cobrar a titularidade e o alcance do controle externo (CF, arts. 70 e 71).",
-      palavraCritica: "Legislativo + auxílio do Tribunal de Contas",
+      motivo: "Cobrar a titularidade do controle externo (CF, arts. 70 e 71).",
+      palavraCritica: "Tribunal de Contas × Legislativo",
     },
     comentario: {
-      resolucao: "CERTO. CF, arts. 70 e 71: o controle externo é exercido pelo Congresso Nacional (Legislativo), com o auxílio do Tribunal de Contas, abrangendo a fiscalização contábil, financeira, orçamentária, operacional e patrimonial quanto à legalidade, legitimidade e economicidade.",
+      resolucao: "ERRADO. Os papéis estão invertidos. O titular do controle externo é o Poder Legislativo (Congresso Nacional, na União), que o exerce COM O AUXÍLIO do Tribunal de Contas (CF, arts. 70 e 71). O alcance da fiscalização — contábil, financeira, orçamentária, operacional e patrimonial — está correto.",
       fundamento: "CF, arts. 70 e 71.",
-      macete: "Controle externo = Legislativo + TC (o TC é auxiliar, não Judiciário).",
-      erroComum: "Alocar o Tribunal de Contas no Judiciário.",
-      comoBancaPensa: "A natureza do Tribunal de Contas (auxiliar do Legislativo) é o ponto cobrado."
+      macete: "Controle externo = Legislativo, auxiliado pelo TC (o TC auxilia, não é auxiliado).",
+      erroComum: "Achar que, por julgar contas, o Tribunal de Contas é o titular do controle externo.",
+      comoBancaPensa: "Mantém a lista de fiscalizações e inverte titular e auxiliar."
     }
   },
 

@@ -313,20 +313,20 @@ const QUESTOES_SESAUAL_LOTE69 = [
   {
     id: "SUS-055", disciplina: "Legislação Aplicada ao SUS", assunto: "Seguridade social e saúde na CF/88", subassunto: "Art. 199 — participação complementar",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (padrão de literalidade legal)",
+    origem: "Inédita — estilo CEBRASPE (padrão de literalidade legal); reescrito na calibragem de 10/2026: uma palavra da fonte trocada, gabarito passou a ERRADO",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 80, probReaparecer: 0.78,
-    enunciado: "As instituições privadas poderão participar de forma complementar do SUS, mediante contrato de direito público ou convênio, tendo preferência as entidades filantrópicas e as sem fins lucrativos.",
-    gabarito: "C", pegadinha: "literalidade", palavraChave: "de forma complementar ... preferência as entidades filantrópicas e as sem fins lucrativos",
+    enunciado: "As instituições privadas poderão participar de forma substitutiva do SUS, mediante contrato de direito público ou convênio, tendo preferência as entidades filantrópicas e as sem fins lucrativos.",
+    gabarito: "E", pegadinha: "literalidade", palavraChave: "substitutiva",
     cognitivo: {
-      motivo: "Cobrar o regime da participação privada e a ordem de preferência.",
-      palavraCritica: "complementar ... preferência",
+      motivo: "Fixar o caráter da participação privada no SUS (CF, art. 199, § 1º).",
+      palavraCritica: "complementar",
     },
     comentario: {
-      resolucao: "CERTO. É o art. 199, §1º. Três elementos são cobrados: a participação é COMPLEMENTAR (não substitutiva — o privado entra quando a capacidade pública é insuficiente); o instrumento é contrato de direito público ou convênio; e há preferência para filantrópicas e sem fins lucrativos. Isso convive com o caput, que declara livre a assistência à saúde à iniciativa privada.",
+      resolucao: "ERRADO. A participação privada no SUS é COMPLEMENTAR (CF, art. 199, § 1º): o privado entra quando a capacidade pública é insuficiente, sem substituí-la. Instrumento (contrato de direito público ou convênio) e preferência (filantrópicas e sem fins lucrativos) estão corretos.",
       fundamento: "CF/1988, art. 199, caput e §1º; Lei nº 8.080/1990, art. 24 e art. 25.",
-      macete: "Privado no SUS é complementar, e o filantrópico tem a fila preferencial.",
-      erroComum: "Trocar 'complementar' por 'suplementar' — este é o regime dos planos de saúde.",
-      comoBancaPensa: "Item de literalidade cuja armadilha correlata é a troca complementar/suplementar."
+      macete: "Privado no SUS é complementar; o filantrópico tem preferência.",
+      erroComum: "Aceitar o item pelo instrumento e pela preferência corretos.",
+      comoBancaPensa: "Troca a palavra que define o regime da participação."
     }
   },
   {
@@ -486,20 +486,20 @@ const QUESTOES_SESAUAL_LOTE69 = [
   {
     id: "SUS-064", disciplina: "Legislação Aplicada ao SUS", assunto: "Lei 8.080/1990", subassunto: "Art. 9º — direção única",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (padrão de troca de conceitos)",
+    origem: "Inédita — estilo CEBRASPE (padrão de troca de conceitos); reescrito na calibragem de 10/2026: o erro do item foi corrigido, gabarito passou a CERTO",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 75, probReaparecer: 0.76,
-    enunciado: "A direção do SUS é única e exercida, em âmbito estadual, pelo Ministério da Saúde e, em âmbito nacional, pela respectiva Secretaria de Saúde ou órgão equivalente.",
-    gabarito: "E", pegadinha: "troca-conceito", palavraChave: "âmbito estadual, pelo Ministério da Saúde ... nacional, pela ... Secretaria",
+    enunciado: "A direção do SUS é única e exercida, em âmbito nacional, pelo Ministério da Saúde e, em âmbito estadual, pela respectiva Secretaria de Saúde ou órgão equivalente.",
+    gabarito: "C", pegadinha: "troca-conceito", palavraChave: "Ministério da Saúde",
     cognitivo: {
-      motivo: "Cobrar a correspondência entre esfera e órgão de direção.",
-      palavraCritica: "estadual, pelo Ministério da Saúde",
+      motivo: "Fixar a direção única em cada esfera (Lei 8.080, art. 9º).",
+      palavraCritica: "direção única",
     },
     comentario: {
-      resolucao: "ERRADO. Está invertido. Pelo art. 9º, a direção única é exercida: na União, pelo MINISTÉRIO DA SAÚDE; nos estados e no DF, pela respectiva Secretaria de Saúde ou órgão equivalente; nos municípios, igualmente pela Secretaria de Saúde ou órgão equivalente. O princípio da direção única significa um só gestor por esfera — não um só gestor para todo o país.",
+      resolucao: "CERTO. Pelo art. 9º da Lei 8.080, a direção única é exercida na União pelo Ministério da Saúde; nos estados e no DF, pela Secretaria de Saúde ou órgão equivalente; nos municípios, pela Secretaria Municipal de Saúde ou órgão equivalente.",
       fundamento: "Lei nº 8.080/1990, art. 9º, I a III.",
-      macete: "Ministério é federal. Secretaria é estadual ou municipal.",
-      erroComum: "Interpretar 'direção única' como comando nacional centralizado.",
-      comoBancaPensa: "Troca os órgãos de duas esferas em item que parece apenas descritivo."
+      macete: "Uma direção por esfera: Ministério, Secretaria Estadual, Secretaria Municipal.",
+      erroComum: "Achar que direção única significa comando só do Ministério.",
+      comoBancaPensa: "Item correto que a banca costuma inverter."
     }
   },
   {
@@ -754,20 +754,20 @@ const QUESTOES_SESAUAL_LOTE69 = [
   {
     id: "SUS-078", disciplina: "Legislação Aplicada ao SUS", assunto: "Lei 8.080/1990", subassunto: "Art. 19-I — atendimento domiciliar",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (padrão de exigência inexistente)",
+    origem: "Inédita — estilo CEBRASPE (padrão de exigência inexistente); reescrito na calibragem de 10/2026: o erro do item foi corrigido, gabarito passou a CERTO",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 85, probReaparecer: 0.66,
-    enunciado: "O atendimento e a internação domiciliares no âmbito do SUS independem da concordância do paciente e de sua família, bastando a indicação médica para sua realização.",
-    gabarito: "E", pegadinha: "exigencia-inexistente", palavraChave: "independem da concordância do paciente e de sua família",
+    enunciado: "O atendimento e a internação domiciliares no SUS só poderão ser realizados por indicação médica, com expressa concordância do paciente e de sua família.",
+    gabarito: "C", pegadinha: "exigencia-inexistente", palavraChave: "expressa concordância",
     cognitivo: {
-      motivo: "Cobrar o requisito de consentimento no atendimento domiciliar.",
-      palavraCritica: "independem da concordância",
+      motivo: "Fixar os requisitos do atendimento domiciliar (art. 19-I).",
+      palavraCritica: "concordância",
     },
     comentario: {
-      resolucao: "ERRADO. O art. 19-I, §2º, exige exatamente o contrário: o atendimento e a internação domiciliares só poderão ser realizados por indicação médica, COM EXPRESSA CONCORDÂNCIA DO PACIENTE E DE SUA FAMÍLIA. São duas condições cumulativas — indicação técnica e consentimento —, o que preserva a autonomia consagrada no art. 7º, III.",
+      resolucao: "CERTO. É o § 3º do art. 19-I da Lei 8.080: indicação médica E expressa concordância do paciente e de sua família. A internação domiciliar muda a rotina da casa e exige a participação da família no cuidado, daí a concordância.",
       fundamento: "Lei nº 8.080/1990, art. 19-I, §§1º e 2º.",
-      macete: "Internação domiciliar exige indicação médica E concordância da família.",
-      erroComum: "Supor que a indicação clínica dispensa o consentimento.",
-      comoBancaPensa: "Suprime um requisito legal expresso, apresentando o outro como suficiente."
+      macete: "Domiciliar: médico indica, paciente e família concordam.",
+      erroComum: "Achar que basta a indicação médica.",
+      comoBancaPensa: "Item correto com os dois requisitos cumulativos."
     }
   },
   {
@@ -792,20 +792,20 @@ const QUESTOES_SESAUAL_LOTE69 = [
   {
     id: "SUS-080", disciplina: "Legislação Aplicada ao SUS", assunto: "Lei 8.080/1990", subassunto: "Art. 19-Q — CONITEC",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (padrão de literalidade legal)",
+    origem: "Inédita — estilo CEBRASPE (padrão de literalidade legal); reescrito na calibragem de 10/2026: uma palavra da fonte trocada, gabarito passou a ERRADO",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 85, probReaparecer: 0.6,
-    enunciado: "A incorporação, a exclusão ou a alteração de novos medicamentos, produtos e procedimentos pelo SUS são atribuições do Ministério da Saúde, assessorado pela Comissão Nacional de Incorporação de Tecnologias no SUS.",
-    gabarito: "C", pegadinha: "literalidade", palavraChave: "atribuições do Ministério da Saúde, assessorado pela Comissão Nacional de Incorporação de Tecnologias",
+    enunciado: "A incorporação, a exclusão ou a alteração de novos medicamentos, produtos e procedimentos pelo SUS são atribuições da Agência Nacional de Vigilância Sanitária, assessorada pela Comissão Nacional de Incorporação de Tecnologias no SUS.",
+    gabarito: "E", pegadinha: "literalidade", palavraChave: "Agência Nacional de Vigilância Sanitária",
     cognitivo: {
-      motivo: "Cobrar quem decide e quem assessora na incorporação de tecnologias.",
-      palavraCritica: "assessorado",
+      motivo: "Fixar quem decide a incorporação de tecnologias no SUS (art. 19-Q).",
+      palavraCritica: "Ministério da Saúde",
     },
     comentario: {
-      resolucao: "CERTO. É o art. 19-Q, incluído pela Lei 12.401/2011. A decisão é do MINISTÉRIO DA SAÚDE; a CONITEC ASSESSORA, emitindo relatório que considera as evidências científicas sobre eficácia, acurácia, efetividade e segurança, além da avaliação econômica comparativa. O processo é público e admite consulta pública.",
+      resolucao: "ERRADO. Pelo art. 19-Q da Lei 8.080 (incluído pela Lei 12.401/2011), a decisão é do MINISTÉRIO DA SAÚDE, assessorado pela CONITEC. A Anvisa registra produtos e fiscaliza; o registro é pressuposto da incorporação, mas não a decide.",
       fundamento: "Lei nº 8.080/1990, arts. 19-Q e 19-R (Lei nº 12.401/2011).",
-      macete: "CONITEC recomenda; o Ministério decide.",
-      erroComum: "Atribuir à CONITEC o poder decisório final.",
-      comoBancaPensa: "Item correto que distingue órgão consultivo de órgão decisório."
+      macete: "Anvisa registra; CONITEC recomenda; Ministério decide.",
+      erroComum: "Confundir registro sanitário com incorporação ao SUS.",
+      comoBancaPensa: "Troca o órgão decisório por outro do mesmo setor."
     }
   },
   {
@@ -1081,20 +1081,20 @@ const QUESTOES_SESAUAL_LOTE69 = [
   {
     id: "SUS-095", disciplina: "Legislação Aplicada ao SUS", assunto: "LC 141/2012 — financiamento", subassunto: "Distrito Federal",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (padrão de literalidade legal)",
+    origem: "Inédita — estilo CEBRASPE (padrão de literalidade legal); reescrito na calibragem de 10/2026: uma palavra da fonte trocada, gabarito passou a ERRADO",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 85, probReaparecer: 0.6,
-    enunciado: "O Distrito Federal aplicará, anualmente, em ações e serviços públicos de saúde, no mínimo doze por cento do produto da arrecadação dos impostos de competência estadual e quinze por cento do produto da arrecadação dos impostos de competência municipal.",
-    gabarito: "C", pegadinha: "literalidade", palavraChave: "doze por cento ... competência estadual ... quinze por cento ... competência municipal",
+    enunciado: "O Distrito Federal aplicará, anualmente, em ações e serviços públicos de saúde, no mínimo quinze por cento do produto da arrecadação dos impostos de competência estadual e doze por cento do produto da arrecadação dos impostos de competência municipal.",
+    gabarito: "E", pegadinha: "literalidade", palavraChave: "quinze por cento ... competência estadual",
     cognitivo: {
-      motivo: "Cobrar a aplicação combinada dos dois percentuais ao DF.",
-      palavraCritica: "combinação dos dois percentuais",
+      motivo: "Fixar os percentuais mínimos do DF (LC 141/2012).",
+      palavraCritica: "12% estadual; 15% municipal",
     },
     comentario: {
-      resolucao: "CERTO. É o art. 7º, parágrafo único, combinado com o art. 6º. Como o DF acumula competências estaduais e municipais, aplica cada percentual sobre a respectiva base: 12% sobre os impostos estaduais e 15% sobre os municipais. Não existe percentual único para o DF.",
+      resolucao: "ERRADO. Os percentuais estão invertidos. O DF aplica 12% sobre os impostos de competência ESTADUAL e 15% sobre os de competência MUNICIPAL (LC 141/2012, arts. 6º e 7º), porque acumula as duas competências e segue, em cada base, o mínimo do respectivo ente.",
       fundamento: "LC nº 141/2012, arts. 6º e 7º, parágrafo único.",
-      macete: "DF acumula competências, então acumula os dois percentuais, cada um na sua base.",
-      erroComum: "Aplicar ao DF um percentual único.",
-      comoBancaPensa: "Item correto que exige entender a natureza híbrida do DF."
+      macete: "Estado 12%, município 15% — o DF faz os dois, cada um na sua base.",
+      erroComum: "Lembrar os dois números e não a base de cada um.",
+      comoBancaPensa: "Mantém os números e troca as bases."
     }
   },
   {
@@ -1176,20 +1176,20 @@ const QUESTOES_SESAUAL_LOTE69 = [
   {
     id: "SUS-100", disciplina: "Legislação Aplicada ao SUS", assunto: "LC 141/2012 — financiamento", subassunto: "Art. 36 §5º — audiência pública",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (padrão de literalidade legal)",
+    origem: "Inédita — estilo CEBRASPE (padrão de literalidade legal); reescrito na calibragem de 10/2026: uma palavra da fonte trocada, gabarito passou a ERRADO",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 85, probReaparecer: 0.7,
-    enunciado: "O gestor do SUS apresentará, até o fim dos meses de maio, setembro e fevereiro, em audiência pública na casa legislativa do respectivo ente, o relatório sobre o montante e a fonte dos recursos aplicados, as auditorias realizadas e a oferta e produção de serviços na rede assistencial.",
-    gabarito: "C", pegadinha: "literalidade", palavraChave: "maio, setembro e fevereiro ... audiência pública na casa legislativa",
+    enunciado: "O gestor do SUS apresentará, até o fim dos meses de maio, setembro e dezembro, em audiência pública na casa legislativa do respectivo ente, o relatório sobre o montante e a fonte dos recursos aplicados, as auditorias realizadas e a oferta e produção de serviços na rede assistencial.",
+    gabarito: "E", pegadinha: "literalidade", palavraChave: "maio, setembro e dezembro",
     cognitivo: {
-      motivo: "Cobrar os meses exatos da prestação de contas quadrimestral em audiência pública.",
-      palavraCritica: "maio, setembro e fevereiro",
+      motivo: "Fixar os prazos do relatório quadrimestral (LC 141/2012, art. 36, § 5º).",
+      palavraCritica: "fevereiro",
     },
     comentario: {
-      resolucao: "CERTO. É o art. 36, §5º. Os meses seguem os quadrimestres: janeiro-abril presta contas até maio; maio-agosto até setembro; setembro-dezembro até fevereiro do ano seguinte. A audiência é na casa legislativa — Câmara Municipal, Assembleia ou Congresso —, o que soma controle parlamentar ao controle social exercido pelos conselhos.",
+      resolucao: "ERRADO. Os meses são maio, setembro e FEVEREIRO (LC 141/2012, art. 36, § 5º): cada relatório vem no mês seguinte ao fim do quadrimestre, e o de setembro a dezembro só pode ser apresentado em fevereiro do ano seguinte. Em dezembro o quadrimestre ainda não acabou.",
       fundamento: "LC nº 141/2012, art. 36, §5º.",
-      macete: "Maio, setembro e fevereiro: sempre no mês seguinte ao fim do quadrimestre.",
-      erroComum: "Confundir os meses ou supor que a apresentação é ao conselho de saúde.",
-      comoBancaPensa: "Item de literalidade com três números exatos, que o candidato tende a não memorizar."
+      macete: "Maio, setembro e fevereiro: o mês seguinte ao fim de cada quadrimestre.",
+      erroComum: "Fechar o ano em dezembro por intuição.",
+      comoBancaPensa: "Troca um dos três meses por outro plausível."
     }
   },
   {
@@ -1273,20 +1273,20 @@ const QUESTOES_SESAUAL_LOTE69 = [
   {
     id: "SUS-105", disciplina: "Legislação Aplicada ao SUS", assunto: "Decreto 7.508/2011", subassunto: "Região de Saúde — instituição",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (padrão de troca de sujeito)",
+    origem: "Inédita — estilo CEBRASPE (padrão de troca de sujeito); reescrito na calibragem de 10/2026: o erro do item foi corrigido, gabarito passou a CERTO",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 85, probReaparecer: 0.76,
-    enunciado: "As Regiões de Saúde serão instituídas pela União, mediante portaria do Ministério da Saúde, ouvidos os estados e municípios interessados.",
-    gabarito: "E", pegadinha: "troca-sujeito", palavraChave: "instituídas pela União ... portaria do Ministério da Saúde",
+    enunciado: "As Regiões de Saúde serão instituídas pelo Estado, em articulação com os municípios, respeitadas as diretrizes gerais pactuadas na CIT.",
+    gabarito: "C", pegadinha: "troca-sujeito", palavraChave: "instituídas pelo Estado",
     cognitivo: {
-      motivo: "Cobrar quem institui a Região de Saúde.",
-      palavraCritica: "pela União",
+      motivo: "Fixar quem institui as Regiões de Saúde (Decreto 7.508/2011).",
+      palavraCritica: "Estado",
     },
     comentario: {
-      resolucao: "ERRADO. As Regiões de Saúde são instituídas pelo ESTADO, em articulação com os municípios, respeitadas as diretrizes gerais pactuadas na CIT (art. 4º do Decreto 7.508/2011). A lógica é territorial: cabe ao estado organizar o espaço regional dentro de seu território. Regiões fronteiriças, com outro país, e interestaduais têm regras próprias, com participação da União.",
+      resolucao: "CERTO. Pelo art. 4º do Decreto 7.508/2011, as Regiões de Saúde são instituídas pelo ESTADO, em articulação com os municípios, respeitadas as diretrizes pactuadas na Comissão Intergestores Tripartite.",
       fundamento: "Decreto nº 7.508/2011, art. 4º e §§.",
-      macete: "Quem desenha a Região de Saúde é o estado, junto com os municípios.",
-      erroComum: "Atribuir à União a instituição das regiões.",
-      comoBancaPensa: "Troca o ente competente num dispositivo sobre organização territorial."
+      macete: "Região de Saúde: o Estado institui, com os municípios.",
+      erroComum: "Atribuir à União a criação das regiões.",
+      comoBancaPensa: "Item correto sobre competência."
     }
   },
   {
@@ -1560,39 +1560,39 @@ const QUESTOES_SESAUAL_LOTE69 = [
   {
     id: "SUS-120", disciplina: "Legislação Aplicada ao SUS", assunto: "Vigilância em saúde", subassunto: "Violência e notificação",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (padrão de literalidade técnica)",
+    origem: "Inédita — estilo CEBRASPE (padrão de literalidade técnica); reescrito na calibragem de 10/2026: uma palavra da fonte trocada, gabarito passou a ERRADO",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 80, probReaparecer: 0.8,
-    enunciado: "A violência sexual e a tentativa de suicídio integram a lista de notificação compulsória imediata, devendo ser comunicadas em até vinte e quatro horas à autoridade de saúde competente.",
-    gabarito: "C", pegadinha: "literalidade", palavraChave: "violência sexual e a tentativa de suicídio ... imediata ... vinte e quatro horas",
+    enunciado: "A violência sexual e a tentativa de suicídio integram a lista de notificação compulsória imediata, devendo ser comunicadas em até sete dias à autoridade de saúde competente.",
+    gabarito: "E", pegadinha: "literalidade", palavraChave: "sete dias",
     cognitivo: {
-      motivo: "Cobrar a inclusão da violência entre os eventos de notificação imediata, de aplicação direta na clínica.",
-      palavraCritica: "imediata",
+      motivo: "Fixar o prazo da notificação imediata.",
+      palavraCritica: "vinte e quatro horas",
     },
     comentario: {
-      resolucao: "CERTO. Violência sexual e tentativa de suicídio são de notificação IMEDIATA (24 horas), porque exigem acionamento rápido da rede de proteção e de cuidado. A violência interpessoal e autoprovocada em geral é de notificação compulsória, e a notificação independe de autorização da vítima — é ato de vigilância, distinto do registro policial.",
+      resolucao: "ERRADO. Notificação compulsória IMEDIATA é feita em até 24 horas; sete dias é o prazo da notificação SEMANAL. Violência sexual e tentativa de suicídio são de notificação imediata, porque exigem acionamento rápido da rede de proteção e cuidado — o item acerta a classificação e erra o prazo.",
       fundamento: "Portaria de Consolidação nº 4/2017 (MS); Lei nº 10.778/2003; Lei nº 13.931/2019.",
-      macete: "Violência sexual e tentativa de suicídio: 24 horas, sem exceção.",
-      erroComum: "Classificar violência como notificação semanal.",
-      comoBancaPensa: "Item correto de alto valor prático para profissionais de saúde."
+      macete: "Imediata = 24 h. Semanal = 7 dias.",
+      erroComum: "Não ligar a palavra 'imediata' ao prazo de 24 horas.",
+      comoBancaPensa: "Classificação certa com prazo de outra categoria."
     }
   },
   {
     id: "SUS-121", disciplina: "Legislação Aplicada ao SUS", assunto: "Vigilância em saúde", subassunto: "Hanseníase e tuberculose",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (padrão de troca de conceitos)",
+    origem: "Inédita — estilo CEBRASPE (padrão de troca de conceitos); reescrito na calibragem de 10/2026: o erro do item foi corrigido, gabarito passou a CERTO",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 80, probReaparecer: 0.72,
-    enunciado: "A hanseníase é doença de notificação compulsória imediata, devendo ser comunicada em até vinte e quatro horas em razão de seu elevado potencial de transmissão.",
-    gabarito: "E", pegadinha: "troca-conceito", palavraChave: "hanseníase ... imediata ... vinte e quatro horas",
+    enunciado: "A hanseníase é doença de notificação compulsória semanal, devendo ser comunicada em até sete dias.",
+    gabarito: "C", pegadinha: "troca-conceito", palavraChave: "semanal",
     cognitivo: {
-      motivo: "Cobrar a classificação da hanseníase, que é semanal, não imediata.",
-      palavraCritica: "imediata",
+      motivo: "Separar notificação imediata de semanal.",
+      palavraCritica: "semanal",
     },
     comentario: {
-      resolucao: "ERRADO. A hanseníase é de notificação compulsória SEMANAL (até 7 dias). Sua transmissão é lenta e exige contato prolongado, o que dispensa resposta em 24 horas — diferente de sarampo, cólera ou febre amarela, que são imediatas. A tuberculose segue a mesma lógica da hanseníase.",
+      resolucao: "CERTO. A hanseníase é de notificação compulsória SEMANAL (até 7 dias). A transmissão é lenta e exige contato prolongado, o que dispensa resposta em 24 horas; o importante é o diagnóstico e o exame dos contatos.",
       fundamento: "Portaria de Consolidação nº 4/2017 (MS).",
-      macete: "Transmissão lenta e crônica (hanseníase, tuberculose): semanal.",
-      erroComum: "Presumir que toda doença infecciosa relevante é de notificação imediata.",
-      comoBancaPensa: "Oferece justificativa epidemiológica falsa para sustentar a classificação errada."
+      macete: "Imediata = 24 h; semanal = 7 dias. Hanseníase: semanal.",
+      erroComum: "Achar que toda doença transmissível é de notificação imediata.",
+      comoBancaPensa: "Item correto que exige saber a categoria."
     }
   },
   {
@@ -1636,20 +1636,20 @@ const QUESTOES_SESAUAL_LOTE69 = [
   {
     id: "SUS-124", disciplina: "Legislação Aplicada ao SUS", assunto: "Vigilância em saúde", subassunto: "Notificação e sigilo",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (padrão de exigência inexistente)",
+    origem: "Inédita — estilo CEBRASPE (padrão de exigência inexistente); reescrito na calibragem de 10/2026: o erro do item foi corrigido, gabarito passou a CERTO",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 85, probReaparecer: 0.68,
-    enunciado: "A notificação compulsória de caso suspeito depende de confirmação diagnóstica laboratorial prévia, sendo vedado ao profissional notificar antes do resultado do exame.",
-    gabarito: "E", pegadinha: "exigencia-inexistente", palavraChave: "depende de confirmação diagnóstica laboratorial prévia",
+    enunciado: "A notificação compulsória de caso suspeito independe de confirmação diagnóstica laboratorial prévia.",
+    gabarito: "C", pegadinha: "exigencia-inexistente", palavraChave: "independe de confirmação",
     cognitivo: {
-      motivo: "Cobrar que a suspeita basta para notificar, princípio operacional da vigilância.",
-      palavraCritica: "confirmação diagnóstica laboratorial prévia",
+      motivo: "Fixar o momento da notificação.",
+      palavraCritica: "suspeita",
     },
     comentario: {
-      resolucao: "ERRADO. A notificação é feita diante da SUSPEITA, justamente para permitir resposta rápida — esperar a confirmação laboratorial anularia a finalidade da vigilância, que é interromper a cadeia de transmissão. A norma é expressa ao dizer que a notificação compulsória é obrigatória diante da suspeita ou confirmação. A investigação posterior descarta ou confirma o caso.",
+      resolucao: "CERTO. Notifica-se a SUSPEITA, justamente para permitir resposta rápida da vigilância. Esperar o exame atrasaria o bloqueio da transmissão e a investigação.",
       fundamento: "Lei nº 6.259/1975; Portaria de Consolidação nº 4/2017 (MS).",
-      macete: "Na dúvida, notifique. A confirmação vem depois.",
-      erroComum: "Condicionar a notificação ao diagnóstico fechado.",
-      comoBancaPensa: "Inverte a lógica da vigilância, criando requisito que a inviabilizaria."
+      macete: "Suspeitou, notificou.",
+      erroComum: "Achar que só se notifica caso confirmado.",
+      comoBancaPensa: "Item correto e de alto valor prático."
     }
   },
   {
