@@ -22,7 +22,8 @@ const QUESTOES_PCAL_LOTE112 = [
 
   {
     ...BASE112,
-    id: "LI-395", disciplina: "Legislação Institucional (AL)", assunto: "Estatuto da PC-AL (Lei 3.437/1975)",    subassunto: "Derivado de LI-278, LI-281, LI-282, LI-283 — cargos e requisitos de provimento",
+    id: "LI-395", disciplina: "Legislação Institucional (AL)", assunto: "Estatuto da PC-AL (Lei 3.437/1975)",
+    subassunto: "Derivado de LI-278, LI-281, LI-282, LI-283 — cargos e requisitos de provimento",
     dificuldade: 3, tempoIdealSeg: 130,
     enunciado: "Acerca dos cargos da Polícia Civil previstos no Estatuto de Alagoas (Lei estadual n.º 3.437/1975), considere as seguintes afirmações:\n\nI. Segundo o Estatuto da Polícia Civil de Alagoas, basta a conclusão do ensino médio para o provimento do cargo de Inspetor de Polícia, sendo a graduação em Direito apenas um diferencial, não uma exigência.\nII. Candidato ao cargo de Perito Criminal, bacharel em Química, não pode ser eliminado por falta de graduação em Direito, pois, sendo a perícia atividade de natureza científica, o Estatuto da PC-AL se satisfaz com formação técnica na área.\nIII. O Guarda de Presídio pode recusar-se a escoltar preso até o hospital quando escalado para vigilância, porque o Estatuto da PC-AL limita suas atribuições às tarefas da escala de serviço.\nIV. No concurso para Dactiloscopista, é indevida a exigência de graduação superior de candidato que comprovou o ensino médio e o curso oficial de dactiloscopia, porque o Estatuto da PC-AL não pede mais do que isso para o cargo.\n\nAssinale a alternativa correta:",
     alternativas: [
@@ -48,7 +49,8 @@ const QUESTOES_PCAL_LOTE112 = [
 
   {
     ...BASE112,
-    id: "LI-396", disciplina: "Legislação Institucional (AL)", assunto: "Estatuto da PC-AL (Lei 3.437/1975)",    subassunto: "Derivado de LI-289, LI-290, LI-292, LI-295 — detenção, suspensão e comissão de disciplina",
+    id: "LI-396", disciplina: "Legislação Institucional (AL)", assunto: "Estatuto da PC-AL (Lei 3.437/1975)",
+    subassunto: "Derivado de LI-289, LI-290, LI-292, LI-295 — detenção, suspensão e comissão de disciplina",
     dificuldade: 3, tempoIdealSeg: 130,
     enunciado: "Com relação ao regime disciplinar do Estatuto da Polícia Civil de Alagoas, considere as seguintes afirmações:\n\nI. É válida a ordem escrita de Delegado de Polícia que impõe a subordinado detenção disciplinar de dez dias em sala especial da SSP, porquanto o Estatuto da PC-AL permite que qualquer autoridade de direção policial determine essa medida.\nII. É nula, por incompetência, a suspensão de vinte e cinco dias aplicada por Diretor de Departamento a policial civil subordinado.\nIII. Viola o Estatuto da PC-AL o cumprimento, na residência do policial, de detenção disciplinar de quarenta e oito horas, visto que toda detenção deve ser cumprida em repartição policial designada.\nIV. Os membros da Comissão de Disciplina dedicam-se exclusivamente aos trabalhos do colegiado, com dispensa de outras funções, e podem ser destituídos se agirem com desídia ou forem indiciados.\n\nAssinale a alternativa correta:",
     alternativas: [
@@ -74,7 +76,8 @@ const QUESTOES_PCAL_LOTE112 = [
 
   {
     ...BASE112,
-    id: "LI-397", disciplina: "Legislação Institucional (AL)", assunto: "Regime jurídico dos servidores estaduais",    subassunto: "Derivado de LI-299, LI-306, LI-309, LI-312 — formas de provimento e exoneração",
+    id: "LI-397", disciplina: "Legislação Institucional (AL)", assunto: "Regime jurídico dos servidores estaduais",
+    subassunto: "Derivado de LI-299, LI-306, LI-309, LI-312 — formas de provimento e exoneração",
     dificuldade: 3, tempoIdealSeg: 130,
     enunciado: "De acordo com a Lei estadual n.º 5.247/1991 (Regime Jurídico Único dos servidores civis de Alagoas), considere as seguintes afirmações:\n\nI. Se um servidor público civil não for aprovado em estágio probatório no cargo público em que tenha tomado posse, poderá ocorrer o seu aproveitamento, se anteriormente ele ocupava cargo efetivo.\nII. A exoneração de cargo efetivo poderá ser efetivada de ofício pela administração.\nIII. A nomeação restringe-se aos cargos de provimento efetivo.\nIV. A nomeação é a forma originária de provimento dos cargos públicos, sendo formas derivadas a promoção e a ascensão.\n\nAssinale a alternativa correta:",
     alternativas: [
@@ -100,7 +103,8 @@ const QUESTOES_PCAL_LOTE112 = [
 
   {
     ...BASE112,
-    id: "LI-398", disciplina: "Legislação Institucional (AL)", assunto: "Regime jurídico dos servidores estaduais",    subassunto: "Derivado de LI-297, LI-301, LI-308, LI-311 — licenças e vantagens",
+    id: "LI-398", disciplina: "Legislação Institucional (AL)", assunto: "Regime jurídico dos servidores estaduais",
+    subassunto: "Derivado de LI-297, LI-301, LI-308, LI-311 — licenças e vantagens",
     dificuldade: 3, tempoIdealSeg: 130,
     enunciado: "Com base no Regime Jurídico Único dos servidores civis de Alagoas (Lei estadual n.º 5.247/1991), considere as seguintes afirmações:\n\nI. Com base na Lei n.º 5.247/1991, servidor público civil que estiver em gozo de licença por motivo de doença em pessoa da família não poderá exercer qualquer atividade remunerada, mas poderá exercê-la se a licença for por motivo de afastamento de cônjuge.\nII. Servidor público civil que receba indenização, gratificação e adicionais terá somente essas duas últimas vantagens incorporadas ao seu vencimento.\nIII. Os adicionais de insalubridade e periculosidade incorporam-se à remuneração do servidor, ainda que cessadas as condições que os tenham ensejado.\nIV. Vencimento consiste na retribuição pecuniária pelo exercício do cargo público acrescida das vantagens pecuniárias permanentes estabelecidas em lei.\n\nAssinale a alternativa correta:",
     alternativas: [
@@ -126,7 +130,8 @@ const QUESTOES_PCAL_LOTE112 = [
 
   {
     ...BASE112,
-    id: "LI-399", disciplina: "Legislação Institucional (AL)", assunto: "Estrutura organizacional da PC-AL (Lei 6.441/2003)",    subassunto: "Derivado de LI-321, LI-324, LI-325, LI-332 — natureza, objetivos e competências",
+    id: "LI-399", disciplina: "Legislação Institucional (AL)", assunto: "Estrutura organizacional da PC-AL (Lei 6.441/2003)",
+    subassunto: "Derivado de LI-321, LI-324, LI-325, LI-332 — natureza, objetivos e competências",
     dificuldade: 3, tempoIdealSeg: 130,
     enunciado: "Acerca da Lei estadual n.º 6.441/2003, que organiza a Polícia Civil de Alagoas, considere as seguintes afirmações:\n\nI. A Polícia Civil de Alagoas, apesar da autonomia administrativa e gerencial que a lei lhe confere, é entidade da administração indireta do Estado, vinculada ao Secretário Coordenador de Justiça e Defesa Social.\nII. Entre os objetivos institucionais da Polícia Civil de Alagoas está o emprego, como regra, dos recursos da inteligência, da persuasão e do diálogo, reservando-se o uso da força para quando se apresentar como recurso extremo.\nIII. A instauração de inquérito policial não figura entre as competências privativas da Polícia Civil listadas na Lei estadual n.º 6.441/2003, por ser atribuição exclusiva da autoridade judiciária.\nIV. Compete ao Departamento de Polícia do Interior executar, coordenar e fiscalizar as atividades de polícia judiciária das delegacias especializadas situadas no interior do Estado.\n\nAssinale a alternativa correta:",
     alternativas: [
@@ -152,7 +157,8 @@ const QUESTOES_PCAL_LOTE112 = [
 
   {
     ...BASE112,
-    id: "LI-400", disciplina: "Legislação Institucional (AL)", assunto: "Carreiras da PC-AL (Lei 6.276/2001)",    subassunto: "Derivado de LI-337, LI-341, LI-342, LI-350 — ingresso e subsídio",
+    id: "LI-400", disciplina: "Legislação Institucional (AL)", assunto: "Carreiras da PC-AL (Lei 6.276/2001)",
+    subassunto: "Derivado de LI-337, LI-341, LI-342, LI-350 — ingresso e subsídio",
     dificuldade: 3, tempoIdealSeg: 130,
     enunciado: "Considerando a Lei estadual n.º 6.276/2001, que estrutura as carreiras de Agente e Escrivão da Polícia Civil de Alagoas, considere as seguintes afirmações:\n\nI. A prova específica de conhecimentos de digitação e informática prevista na Lei estadual n.º 6.276/2001 é exigida somente dos candidatos a Escrivão de Polícia, e não dos candidatos a Agente.\nII. Policial civil remunerado por subsídio nos termos da Lei estadual n.º 6.276/2001 pode receber adicional de insalubridade, além do subsídio, se trabalhar habitualmente em condições nocivas à saúde.\nIII. O pagamento de adicional noturno ao Agente de Polícia remunerado por subsídio não ofende, por si só, a regra da parcela única da Lei estadual n.º 6.276/2001, pois o próprio diploma ressalva expressamente essa vantagem.\nIV. Pós-graduação feita no exterior pode ser usada para progressão funcional na Parte Permanente sem nenhuma providência no Brasil, bastando comprovar que a instituição estrangeira é oficialmente reconhecida no país onde funciona.\n\nAssinale a alternativa correta:",
     alternativas: [
@@ -178,7 +184,8 @@ const QUESTOES_PCAL_LOTE112 = [
 
   {
     ...BASE112,
-    id: "LI-401", disciplina: "Legislação Institucional (AL)", assunto: "Carreiras da PC-AL (Lei 6.276/2001)",    subassunto: "Derivado de LI-346, LI-348, LI-349, LI-353 — progressão horizontal e vertical",
+    id: "LI-401", disciplina: "Legislação Institucional (AL)", assunto: "Carreiras da PC-AL (Lei 6.276/2001)",
+    subassunto: "Derivado de LI-346, LI-348, LI-349, LI-353 — progressão horizontal e vertical",
     dificuldade: 3, tempoIdealSeg: 130,
     enunciado: "No que se refere à progressão funcional prevista na Lei estadual n.º 6.276/2001, considere as seguintes afirmações:\n\nI. Escrivão da Parte Permanente na Classe B há quatro anos que já concluiu as horas de capacitação exigidas para a Classe C pode progredir de imediato, porque, cumprida a titulação, a lei não impõe requisito temporal.\nII. Na Parte Permanente, quem concluiu três especializações na área de atuação satisfaz a titulação do Nível III da progressão vertical, mesmo sem ser mestre.\nIII. O Nível IV da progressão vertical na Parte Permanente exige obrigatoriamente doutorado na área de atuação, pois o acúmulo de especializações só substitui o mestrado no Nível III.\nIV. Servidor da Parte Especial com nível médio e 120 horas de qualificação profissional na área de atuação cumpre a titulação do Nível III da progressão vertical, não precisando cumprir interstício de cinco anos para essa progressão.\n\nAssinale a alternativa correta:",
     alternativas: [
@@ -204,7 +211,8 @@ const QUESTOES_PCAL_LOTE112 = [
 
   {
     ...BASE112,
-    id: "LI-402", disciplina: "Legislação Institucional (AL)", assunto: "Lei Orgânica Nacional das Polícias Civis",    subassunto: "Derivado de LI-366, LI-369, LI-371, LI-374 — Delegado-Geral, Conselho e Corregedoria",
+    id: "LI-402", disciplina: "Legislação Institucional (AL)", assunto: "Lei Orgânica Nacional das Polícias Civis",
+    subassunto: "Derivado de LI-366, LI-369, LI-371, LI-374 — Delegado-Geral, Conselho e Corregedoria",
     dificuldade: 3, tempoIdealSeg: 130,
     enunciado: "Com base na Lei n.º 14.735/2023 (Lei Orgânica Nacional das Polícias Civis), considere as seguintes afirmações:\n\nI. O Delegado-Geral de Polícia Civil é nomeado pelo governador entre os delegados de polícia em atividade da classe mais elevada do cargo.\nII. Presidido pelo Delegado-Geral, o Conselho Superior de Polícia Civil é formado só por delegados de polícia, admitida, conforme a lei do ente federativo, a participação apenas consultiva de representantes dos demais cargos.\nIII. Nos processos disciplinares com pena de demissão, a Lei Orgânica Nacional garante duplo grau de revisão: recurso primeiro ao Delegado-Geral e depois ao Conselho Superior de Polícia Civil, que decide em definitivo na esfera administrativa.\nIV. Mesmo que o órgão central de perícia criminal não esteja integrado à polícia civil, é garantido a esta, mediante requisição fundamentada, o livre acesso aos bancos de dados das unidades técnico-científicas não integradas.\n\nAssinale a alternativa correta:",
     alternativas: [
@@ -230,7 +238,8 @@ const QUESTOES_PCAL_LOTE112 = [
 
   {
     ...BASE112,
-    id: "LI-403", disciplina: "Legislação Institucional (AL)", assunto: "Lei Orgânica Nacional das Polícias Civis",    subassunto: "Derivado de LI-376, LI-377, LI-379, LI-383 — concurso, formação e porte",
+    id: "LI-403", disciplina: "Legislação Institucional (AL)", assunto: "Lei Orgânica Nacional das Polícias Civis",
+    subassunto: "Derivado de LI-376, LI-377, LI-379, LI-383 — concurso, formação e porte",
     dificuldade: 3, tempoIdealSeg: 130,
     enunciado: "De acordo com a Lei n.º 14.735/2023, considere as seguintes afirmações:\n\nI. Exigem-se do candidato a delegado de polícia bacharelado em Direito e três anos de atividade jurídica ou policial, comprovados no ato da posse, e não necessariamente na inscrição no concurso.\nII. Desde que a lei do ente federativo o permita, o concurso para delegado de polícia pode ser só de provas, sendo facultativas a prova oral e a participação da Ordem dos Advogados do Brasil.\nIII. Durante o curso de formação profissional, de caráter eliminatório, o candidato tem direito à ajuda de custo de, no mínimo, metade da remuneração prevista para a classe inicial do cargo.\nIV. Os policiais civis em atividade têm livre porte de arma de fogo válido em todo o território nacional e conservam essa autorização ao se aposentarem, na forma da legislação em vigor.\n\nAssinale a alternativa correta:",
     alternativas: [
@@ -256,7 +265,8 @@ const QUESTOES_PCAL_LOTE112 = [
 
   {
     ...BASE112,
-    id: "LI-404", disciplina: "Legislação Institucional (AL)", assunto: "Lei Orgânica Nacional das Polícias Civis",    subassunto: "Derivado de LI-357, LI-358, LI-359, LI-361 — princípios, diretrizes e competências",
+    id: "LI-404", disciplina: "Legislação Institucional (AL)", assunto: "Lei Orgânica Nacional das Polícias Civis",
+    subassunto: "Derivado de LI-357, LI-358, LI-359, LI-361 — princípios, diretrizes e competências",
     dificuldade: 3, tempoIdealSeg: 130,
     enunciado: "A respeito dos princípios, das diretrizes e das competências da polícia civil na Lei n.º 14.735/2023, considere as seguintes afirmações:\n\nI. Sendo princípio institucional da polícia civil, o sigilo da investigação é absoluto e deve prevalecer mesmo quando não for necessário à efetividade da apuração nem à proteção da intimidade das pessoas.\nII. Constitui diretriz da polícia civil o planejamento e a distribuição do efetivo por resolução do Conselho Superior de Polícia Civil, de forma proporcional ao número de habitantes, à extensão territorial e aos índices de criminalidade da circunscrição.\nIII. A repressão qualificada que a Lei Orgânica Nacional fixa como diretriz da polícia civil restringe-se aos crimes hediondos e equiparados, à corrupção, à lavagem de dinheiro, ao tráfico de drogas e ao crime organizado, não alcançando os crimes cibernéticos nem os crimes contra a administração pública.\nIV. Garantir a preservação dos locais de ocorrência de infração penal e controlar o acesso de pessoas a eles compete exclusivamente à polícia civil, vedada a atuação de outros órgãos policiais inclusive nas situações de flagrante delito.\n\nAssinale a alternativa correta:",
     alternativas: [
@@ -283,7 +293,8 @@ const QUESTOES_PCAL_LOTE112 = [
   {
     ...BASE112,
     cargo: ["Escrivão", "Agente", "Especialista em Saúde — Fisioterapia"],
-    id: "ET-109", disciplina: "Ética no Serviço Público", assunto: "Ética e moral",    subassunto: "Derivado de ET-062, ET-064, ET-066, ET-072 — conceitos e valores",
+    id: "ET-109", disciplina: "Ética no Serviço Público", assunto: "Ética e moral",
+    subassunto: "Derivado de ET-062, ET-064, ET-066, ET-072 — conceitos e valores",
     dificuldade: 3, tempoIdealSeg: 130,
     enunciado: "A respeito de ética, moral e valores, considere as seguintes afirmações:\n\nI. Os valores éticos sujeitam-se a aspectos sociais e culturais, razão pela qual são mutáveis.\nII. Na perspectiva clássica, a ética assume uma concepção predominantemente formal, dissociada da análise dos bens que as pessoas desejam e do modo como aqueles são distribuídos no direito, na política e na economia.\nIII. A conduta ética é racionalmente justificável e praticada de forma autônoma.\nIV. Em uma democracia, as escolhas políticas são inteiramente dissociadas de valores morais.\n\nAssinale a alternativa correta:",
     alternativas: [
@@ -310,7 +321,8 @@ const QUESTOES_PCAL_LOTE112 = [
   {
     ...BASE112,
     cargo: ["Escrivão", "Agente", "Especialista em Saúde — Fisioterapia"],
-    id: "ET-110", disciplina: "Ética no Serviço Público", assunto: "Ética no serviço público",    subassunto: "Derivado de ET-077, ET-078, ET-079, ET-080 — deveres do servidor",
+    id: "ET-110", disciplina: "Ética no Serviço Público", assunto: "Ética no serviço público",
+    subassunto: "Derivado de ET-077, ET-078, ET-079, ET-080 — deveres do servidor",
     dificuldade: 3, tempoIdealSeg: 130,
     enunciado: "Com relação aos deveres éticos do servidor público, considere as seguintes afirmações:\n\nI. O servidor público, ao tomar conhecimento de atos e fatos contrários ao interesse público, possui discricionariedade para reportá-los a seus superiores.\nII. A prestação de contas é dever do servidor público, porém deve ser retardada quando assim determinarem os superiores hierárquicos.\nIII. É dever do servidor público manter-se atualizado em relação às instruções, às normas de serviço e à legislação pertinentes ao órgão onde exerce suas funções.\nIV. A observância da moralidade na administração pública possui estatura unicamente infraconstitucional, pois se origina de disciplina veiculada nos códigos de ética elaborados no âmbito das administrações federais, estaduais e municipais.\n\nAssinale a alternativa correta:",
     alternativas: [
@@ -337,7 +349,8 @@ const QUESTOES_PCAL_LOTE112 = [
   {
     ...BASE112,
     cargo: ["Escrivão", "Agente", "Especialista em Saúde — Fisioterapia"],
-    id: "ET-111", disciplina: "Ética no Serviço Público", assunto: "Código de Ética Funcional (AL)",    subassunto: "Derivado de ET-088, ET-089, ET-092, ET-100 — vedações e regras deontológicas",
+    id: "ET-111", disciplina: "Ética no Serviço Público", assunto: "Código de Ética Funcional (AL)",
+    subassunto: "Derivado de ET-088, ET-089, ET-092, ET-100 — vedações e regras deontológicas",
     dificuldade: 3, tempoIdealSeg: 130,
     enunciado: "À luz do Código de Ética dos servidores de Alagoas (Lei estadual n.º 6.754/2006), considere as seguintes afirmações:\n\nI. O Código de Ética de Alagoas veda que o servidor se apresente embriagado durante o expediente, mas nada dispõe sobre a embriaguez fora do ambiente de trabalho.\nII. Para o Código de Ética, a moralidade administrativa integra o Direito como elemento indissociável e se converte em fator de legalidade, de modo que um ato eticamente reprovável pode ser inválido ainda que aparentemente conforme a lei.\nIII. Admite-se que o servidor solicite doações ou ajudas de particulares para cumprir sua missão ou acelerar o serviço, desde que os valores revertam ao setor e sejam devidamente registrados.\nIV. Ainda que não gere atraso em processos, a ausência injustificada do servidor ao trabalho é fator de desmoralização do serviço público, com reflexos negativos nas relações humanas.\n\nAssinale a alternativa correta:",
     alternativas: [
@@ -363,7 +376,8 @@ const QUESTOES_PCAL_LOTE112 = [
 
   {
     ...BASE112,
-    id: "CC-154", disciplina: "Crimes Cibernéticos e Segurança Digital", assunto: "LGPD",    subassunto: "Derivado de CC-126, CC-129, CC-134, CC-135 — conceitos e agentes de tratamento",
+    id: "CC-154", disciplina: "Crimes Cibernéticos e Segurança Digital", assunto: "LGPD",
+    subassunto: "Derivado de CC-126, CC-129, CC-134, CC-135 — conceitos e agentes de tratamento",
     dificuldade: 3, tempoIdealSeg: 130,
     enunciado: "Considerando as definições da Lei n.º 13.709/2018 (LGPD), considere as seguintes afirmações:\n\nI. Conforme a LGPD, o dado pessoal relativo a origem racial ou étnica, bem como a convicção religiosa e opinião política, é classificado como dado pessoal anonimizado.\nII. Aquele que realiza o tratamento de dados pessoais em nome do operador é denominado controlador.\nIII. Considera-se encarregado a pessoa natural ou jurídica, de direito público ou privado, que realiza o tratamento de dados pessoais em nome do controlador.\nIV. Com base na Lei Geral de Proteção de Dados, considera-se relatório de impacto à proteção de dados pessoais a documentação do controlador que contém a descrição dos processos de tratamento de dados pessoais que podem gerar riscos às liberdades civis e aos direitos fundamentais, bem como medidas, salvaguardas e mecanismos de mitigação de riscos.\n\nAssinale a alternativa correta:",
     alternativas: [
@@ -389,7 +403,8 @@ const QUESTOES_PCAL_LOTE112 = [
 
   {
     ...BASE112,
-    id: "CC-155", disciplina: "Crimes Cibernéticos e Segurança Digital", assunto: "LGPD",    subassunto: "Derivado de CC-136, CC-130, CC-141, CC-142 — consentimento e término do tratamento",
+    id: "CC-155", disciplina: "Crimes Cibernéticos e Segurança Digital", assunto: "LGPD",
+    subassunto: "Derivado de CC-136, CC-130, CC-141, CC-142 — consentimento e término do tratamento",
     dificuldade: 3, tempoIdealSeg: 130,
     enunciado: "Acerca do consentimento e das hipóteses de tratamento na LGPD, considere as seguintes afirmações:\n\nI. O tratamento de dados pessoais deve ser realizado mediante o consentimento do titular, ficando dispensada tal exigência para os dados tornados manifestamente públicos pelo titular.\nII. O consentimento do titular dos dados pessoais pode ser obtido de forma implícita e inferido a partir de ações indiretas do titular, como a navegação em um site ou o uso de um serviço.\nIII. O tratamento dos dados sensíveis poderá ocorrer, inclusive, visando à proteção da vida ou da incolumidade física do titular ou de terceiro.\nIV. O término do tratamento de dados pessoais ocorrerá exatamente quando da revogação do consentimento pela autoridade nacional de proteção de dados.\n\nAssinale a alternativa correta:",
     alternativas: [
@@ -415,7 +430,8 @@ const QUESTOES_PCAL_LOTE112 = [
 
   {
     ...BASE112,
-    id: "CC-156", disciplina: "Crimes Cibernéticos e Segurança Digital", assunto: "LGPD",    subassunto: "Derivado de CC-125, CC-128, CC-132, CC-146 — fundamentos, alcance e transferência internacional",
+    id: "CC-156", disciplina: "Crimes Cibernéticos e Segurança Digital", assunto: "LGPD",
+    subassunto: "Derivado de CC-125, CC-128, CC-132, CC-146 — fundamentos, alcance e transferência internacional",
     dificuldade: 3, tempoIdealSeg: 130,
     enunciado: "Em relação aos fundamentos e ao alcance da LGPD, considere as seguintes afirmações:\n\nI. A Lei Geral de Proteção de Dados Pessoais (LGPD) não se aplica ao tratamento de dados pessoais realizado para fins exclusivos de atividades de investigação e repressão de infrações penais.\nII. A Lei Geral de Proteção de Dados Pessoais prevê como fundamentos da disciplina da proteção de dados pessoais a livre iniciativa, a livre concorrência e a defesa do consumidor.\nIII. A proteção de dados assegurada pela LGPD abrange apenas as operações de tratamento de dados pessoais realizadas entre particular e o poder público.\nIV. A transferência internacional de dados pessoais no contexto do agronegócio deve observar tanto a legislação de proteção de dados do país destinatário quanto a LGPD; no entanto, quando a transferência tiver como finalidade a obtenção de certificação internacional, ela não estará sujeita às exigências da LGPD.\n\nAssinale a alternativa correta:",
     alternativas: [
@@ -441,7 +457,8 @@ const QUESTOES_PCAL_LOTE112 = [
 
   {
     ...BASE112,
-    id: "LE-417", disciplina: "Legislação Especial", assunto: "Crimes Falimentares",    subassunto: "Derivado de LE-408, LE-410, LE-412, LE-413 — classificação, competência e sujeitos",
+    id: "LE-417", disciplina: "Legislação Especial", assunto: "Crimes Falimentares",
+    subassunto: "Derivado de LE-408, LE-410, LE-412, LE-413 — classificação, competência e sujeitos",
     dificuldade: 3, tempoIdealSeg: 130,
     enunciado: "Acerca dos crimes falimentares, considere as seguintes afirmações:\n\nI. Segundo a doutrina, são considerados crimes antefalimentares aqueles cujo tipo penal descreve comportamento anterior à decretação da falência e somente por força desta é considerado crime.\nII. Com a declaração da quebra, o ilícito penal, previsto na lei falimentar, é atraído para a competência do juízo falimentar.\nIII. Aos crimes falimentares é inaplicável a regra da co-autoria.\nIV. O perito que, direta ou indiretamente, adquire bens da massa comete crime próprio.\n\nAssinale a alternativa correta:",
     alternativas: [
