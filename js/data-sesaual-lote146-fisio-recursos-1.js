@@ -914,7 +914,7 @@ const QUESTOES_SESAUAL_LOTE146 = [
     tipo: "ME", dificuldade: 1, tempoIdealSeg: 130, probReaparecer: 0.65,
     enunciado: "A terapia com não tem efeito térmico e é caracterizada pela conversão de energia luminosa em energia bioquímica. Os efeitos fisiológicos da bioestimulação molecular evidenciam liberação de endorfina e modulação do sistema imune, proporcionando uma ação analgésica, reparação tecidual e o controle do processo inflamatório. Assinale a alternativa que preencha corretamente a lacuna.",
     alternativas: [
-      "Laser de baixa intensidade ==2cbfcb==",
+      "Laser de baixa intensidade",
       "Laser de alta intensidade",
       "Ultrassom de baixa frequência",
       "Ultrassom de alta frequência",

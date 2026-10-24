@@ -1354,7 +1354,7 @@ const QUESTOES_SESAUAL_LOTE165 = [
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2023,
     origem: "AVANÇA SP/Pref. de São Lourenço da Serra SP/2023 — questão do material Estratégia (Legislação SUS, Aula 07)",
     tipo: "ME", dificuldade: 2, tempoIdealSeg: 150, probReaparecer: 0.65,
-    enunciado: "Sobre a Lei nº 8.142, de 28 de dezembro de 1990, julgue os itens a seguir e assinale a alternativa correta: I - A Conferência de Saúde reúne-se a cada quatro anos com a representantes de vários segmentos da sociedade para avaliar a situação de saúde. ==2cbfcb== II - O Conselho de Saúde é um órgão colegiado composto por representantes do governo, prestadores de serviço, profissionais de saúde. É de caráter temporário e deliberativo. III - As Conferências de Saúde e os Conselhos de Saúde têm sua organização e normas de funcionamento definidas em regimento próprio, aprovadas pelo respectivo conselho.",
+    enunciado: "Sobre a Lei nº 8.142, de 28 de dezembro de 1990, julgue os itens a seguir e assinale a alternativa correta: I - A Conferência de Saúde reúne-se a cada quatro anos com a representantes de vários segmentos da sociedade para avaliar a situação de saúde. II - O Conselho de Saúde é um órgão colegiado composto por representantes do governo, prestadores de serviço, profissionais de saúde. É de caráter temporário e deliberativo. III - As Conferências de Saúde e os Conselhos de Saúde têm sua organização e normas de funcionamento definidas em regimento próprio, aprovadas pelo respectivo conselho.",
     alternativas: [
       "Apenas o item I é verdadeiro.",
       "Apenas o item II é verdadeiro.",
