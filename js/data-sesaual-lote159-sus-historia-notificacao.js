@@ -321,10 +321,10 @@ const QUESTOES_SESAUAL_LOTE159 = [
   },
   {
     id: "SUS-139", disciplina: "Legislação Aplicada ao SUS", assunto: "Notificação compulsória e vigilância", subassunto: "Meningite bacteriana",
-    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "banca não identificada no material — questão do material Estratégia (Legislação SUS, Aula 00)",
+    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2020,
+    origem: "Instituto AOCP - Residência Multiprofissional (ESPBA/2020) — questão do material Estratégia (Legislação SUS, Aula 00)",
     tipo: "ME", dificuldade: 2, tempoIdealSeg: 150, probReaparecer: 0.65,
-    enunciado: "(Instituto AOCP - Residência Multiprofissional (ESPBA/2020) Paciente, sexo masculino, 62 anos, deu entrada no serviço de Urgência e Emergência apresentando febre (38,7ºC), cefaleia, náusea, vômito, confusão mental e sinal de Kernig positivo, sendo diagnosticado com meningite bacteriana. Nesse sentido, quanto à notificação do caso, assinale a alternativa que corresponde à conduta correta a ser tomada pela equipe de saúde após o conhecimento da doença.",
+    enunciado: "Paciente, sexo masculino, 62 anos, deu entrada no serviço de Urgência e Emergência apresentando febre (38,7ºC), cefaleia, náusea, vômito, confusão mental e sinal de Kernig positivo, sendo diagnosticado com meningite bacteriana. Nesse sentido, quanto à notificação do caso, assinale a alternativa que corresponde à conduta correta a ser tomada pela equipe de saúde após o conhecimento da doença.",
     alternativas: [
       "Notificar o caso ao Ministério da Saúde e à Secretaria Estadual de Saúde em até 7 dias.",
       "Notificar o caso apenas à Secretaria Municipal de Saúde em até 48 horas.",
@@ -347,10 +347,10 @@ const QUESTOES_SESAUAL_LOTE159 = [
   },
   {
     id: "SUS-140", disciplina: "Legislação Aplicada ao SUS", assunto: "Notificação compulsória e vigilância", subassunto: "Violência doméstica",
-    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "banca não identificada no material — questão do material Estratégia (Legislação SUS, Aula 00)",
+    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2020,
+    origem: "Instituto AOCP - Residência Multiprofissional em Urgência e Emergência (ESPBA)/2020 — questão do material Estratégia (Legislação SUS, Aula 00)",
     tipo: "ME", dificuldade: 2, tempoIdealSeg: 150, probReaparecer: 0.65,
-    enunciado: "Instituto AOCP - Residência Multiprofissional em Urgência e Emergência (ESPBA)/2020 Paciente, sexo feminino, 26 anos, casada, deu entrada no serviço de Urgência e Emergência de um hospital, com fortes dores no corpo, escoriações na face, hematomas em MMII e uma fratura no MSE. Após realizar o atendimento e ampla investigação clínica, os profissionais de saúde descobriram que a paciente sofria violência doméstica exercida pelo marido há um ano. Nesse sentido, quanto à notificação de doenças e agravos, assinale a alternativa que corresponde à conduta correta a ser tomada pela equipe de saúde.",
+    enunciado: "Paciente, sexo feminino, 26 anos, casada, deu entrada no serviço de Urgência e Emergência de um hospital, com fortes dores no corpo, escoriações na face, hematomas em MMII e uma fratura no MSE. Após realizar o atendimento e ampla investigação clínica, os profissionais de saúde descobriram que a paciente sofria violência doméstica exercida pelo marido há um ano. Nesse sentido, quanto à notificação de doenças e agravos, assinale a alternativa que corresponde à conduta correta a ser tomada pela equipe de saúde.",
     alternativas: [
       "Notificar o caso em até 7 dias, a partir do conhecimento da ocorrência do agravo.",
       "Notificar o caso em até 24 horas, a partir do conhecimento da ocorrência do agravo.",
@@ -772,9 +772,9 @@ const QUESTOES_SESAUAL_LOTE159 = [
   {
     id: "SUS-158", disciplina: "Legislação Aplicada ao SUS", assunto: "Reforma Sanitária e construção do SUS", subassunto: "Motivação da Reforma Sanitária",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "banca não identificada no material — questão do material Estratégia (Legislação SUS, Aula 01)",
+    origem: "VUNESP/ Prefeitura de São José do Rio Preto - SP/ 2026 — questão do material Estratégia (Legislação SUS, Aula 01)",
     tipo: "ME", dificuldade: 1, tempoIdealSeg: 130, probReaparecer: 0.65,
-    enunciado: "VUNESP/ Prefeitura de São José do Rio Preto - SP/ 2026 - Durante a década de 1970, o sistema de saúde brasileiro era fortemente vinculado ao modelo previdenciário, no qual apenas os trabalhadores com carteira assinada tinham acesso à assistência médica financiada pelo Estado, por meio do Instituto Nacional de Assistência Médica da Previdência Social (INAMPS). Considerando esse contexto histórico, qual foi uma das principais motivações para o surgimento do Movimento da Reforma Sanitária Brasileira?",
+    enunciado: "Durante a década de 1970, o sistema de saúde brasileiro era fortemente vinculado ao modelo previdenciário, no qual apenas os trabalhadores com carteira assinada tinham acesso à assistência médica financiada pelo Estado, por meio do Instituto Nacional de Assistência Médica da Previdência Social (INAMPS). Considerando esse contexto histórico, qual foi uma das principais motivações para o surgimento do Movimento da Reforma Sanitária Brasileira?",
     alternativas: [
       "Romper com o modelo excludente vigente, propondo um sistema público universal.",
       "Ampliar o número de hospitais da iniciativa privada conveniados com o sistema previdenciário.",
@@ -798,9 +798,9 @@ const QUESTOES_SESAUAL_LOTE159 = [
   {
     id: "SUS-159", disciplina: "Legislação Aplicada ao SUS", assunto: "Reforma Sanitária e construção do SUS", subassunto: "8ª Conferência Nacional de Saúde",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "banca não identificada no material — questão do material Estratégia (Legislação SUS, Aula 01)",
+    origem: "UFG/ Prefeitura de Gameleira de Goiás - GO/ 2026 — questão do material Estratégia (Legislação SUS, Aula 01)",
     tipo: "ME", dificuldade: 1, tempoIdealSeg: 130, probReaparecer: 0.65,
-    enunciado: "UFG/ Prefeitura de Gameleira de Goiás - GO/ 2026 - A construção do Sistema Único de Saúde (SUS) foi fruto de discussões realizadas, ao longo dos anos, com a participação da sociedade, trabalhadores, gestores e diversos segmentos sociais. Nessa trajetória, qual dos eventos é considerado como um importante marco histórico em que foram delineados os princípios norteadores do SUS?",
+    enunciado: "A construção do Sistema Único de Saúde (SUS) foi fruto de discussões realizadas, ao longo dos anos, com a participação da sociedade, trabalhadores, gestores e diversos segmentos sociais. Nessa trajetória, qual dos eventos é considerado como um importante marco histórico em que foram delineados os princípios norteadores do SUS?",
     alternativas: [
       "Declaração de Alma Ata.",
       "Reforma Sanitária Brasileira.",
@@ -823,7 +823,7 @@ const QUESTOES_SESAUAL_LOTE159 = [
   {
     id: "SUS-160", disciplina: "Legislação Aplicada ao SUS", assunto: "Reforma Sanitária e construção do SUS", subassunto: "8ª Conferência Nacional de Saúde",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "Adaptada de banca não identificada no material (múltipla escolha convertida em C/E pelo QuestLab; base: Estratégia, Legislação SUS, Aula 01)",
+    origem: "Adaptada de UFG/ Prefeitura de Gameleira de Goiás - GO/ 2026 (múltipla escolha convertida em C/E pelo QuestLab; base: Estratégia, Legislação SUS, Aula 01)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 85, probReaparecer: 0.7,
     enunciado: "A 8ª Conferência Nacional de Saúde, realizada em 1986, foi a primeira com ampla participação da sociedade civil, e seu relatório final serviu de base para a seção da saúde na Constituição Federal de 1988.",
     gabarito: "C", pegadinha: "troca-numerica", palavraChave: "1986",
@@ -842,9 +842,9 @@ const QUESTOES_SESAUAL_LOTE159 = [
   {
     id: "SUS-161", disciplina: "Legislação Aplicada ao SUS", assunto: "Evolução histórica do sistema de saúde", subassunto: "Modelos de atenção — campanhista",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "banca não identificada no material — questão do material Estratégia (Legislação SUS, Aula 01)",
+    origem: "GEDUC/ Prefeitura de Calçado - PE/ 2026 — questão do material Estratégia (Legislação SUS, Aula 01)",
     tipo: "ME", dificuldade: 2, tempoIdealSeg: 150, probReaparecer: 0.65,
-    enunciado: "GEDUC/ Prefeitura de Calçado - PE/ 2026 - A história da saúde pública no Brasil é marcada pela transição de diferentes modelos de atenção, que refletem as concepções de saúde e doença vigentes em cada época, culminando na proposta do SUS. Sobre os modelos de atenção em saúde pública, marque V para as afirmativas verdadeiras e F para as falsas. ( ) O modelo campanhista, predominante no início do século XX, focava na assistência individualizada e hospitalocêntrica, sendo a base para a criação do INAMPS. ( ) O SUS (Sistema Único de Saúde) adota integralmente o modelo assistencial privatista, priorizando a compra de serviços privados em detrimento da rede pública. ( ) A transição demográfica e epidemiológica, com o aumento de doenças crônicas, tornou o modelo campanhista (focado em doenças agudas) o mais adequado para a realidade atual. ( ) O modelo campanhista caracterizou-se por intervenções verticais, centralizadas e focadas no combate a epidemias e endemias específicas, como a febre amarela e a varíola, muitas vezes de forma autoritária.",
+    enunciado: "A história da saúde pública no Brasil é marcada pela transição de diferentes modelos de atenção, que refletem as concepções de saúde e doença vigentes em cada época, culminando na proposta do SUS. Sobre os modelos de atenção em saúde pública, marque V para as afirmativas verdadeiras e F para as falsas. ( ) O modelo campanhista, predominante no início do século XX, focava na assistência individualizada e hospitalocêntrica, sendo a base para a criação do INAMPS. ( ) O SUS (Sistema Único de Saúde) adota integralmente o modelo assistencial privatista, priorizando a compra de serviços privados em detrimento da rede pública. ( ) A transição demográfica e epidemiológica, com o aumento de doenças crônicas, tornou o modelo campanhista (focado em doenças agudas) o mais adequado para a realidade atual. ( ) O modelo campanhista caracterizou-se por intervenções verticais, centralizadas e focadas no combate a epidemias e endemias específicas, como a febre amarela e a varíola, muitas vezes de forma autoritária.",
     alternativas: [
       "V, V, F, F.",
       "V, F, V, F.",
@@ -867,7 +867,7 @@ const QUESTOES_SESAUAL_LOTE159 = [
   {
     id: "SUS-162", disciplina: "Legislação Aplicada ao SUS", assunto: "Evolução histórica do sistema de saúde", subassunto: "Modelos de atenção — campanhista",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "Adaptada de banca não identificada no material (múltipla escolha convertida em C/E pelo QuestLab; base: Estratégia, Legislação SUS, Aula 01)",
+    origem: "Adaptada de GEDUC/ Prefeitura de Calçado - PE/ 2026 (múltipla escolha convertida em C/E pelo QuestLab; base: Estratégia, Legislação SUS, Aula 01)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 85, probReaparecer: 0.7,
     enunciado: "Na história da organização da saúde pública no Brasil, o modelo sanitarista-campanhista, predominante no início do século XX, caracterizou-se pela assistência médica individual e hospitalocêntrica, que deu origem ao INAMPS.",
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "assistência médica individual",
@@ -886,9 +886,9 @@ const QUESTOES_SESAUAL_LOTE159 = [
   {
     id: "SUS-163", disciplina: "Legislação Aplicada ao SUS", assunto: "Reforma Sanitária e construção do SUS", subassunto: "Alma-Ata (1978)",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "banca não identificada no material — questão do material Estratégia (Legislação SUS, Aula 01)",
+    origem: "FUNDATEC/ Prefeitura de Gravataí - RS/ 2026 — questão do material Estratégia (Legislação SUS, Aula 01)",
     tipo: "ME", dificuldade: 2, tempoIdealSeg: 150, probReaparecer: 0.65,
-    enunciado: "FUNDATEC/ Prefeitura de Gravataí - RS/ 2026 - Conforme o Ministério da Saúde (2022), analise as seguintes asserções e a relação proposta entre elas: I. A Conferência de Alma-Ata, realizada em 1978, possui relação estreita com a rede de Atenção Primária no Brasil. PORQUE II. Consolida-se como um marco ao trazer à tona a discussão sobre a reestruturação dos sistemas de saúde. A respeito dessas asserções, assinale a alternativa correta.",
+    enunciado: "Conforme o Ministério da Saúde (2022), analise as seguintes asserções e a relação proposta entre elas: I. A Conferência de Alma-Ata, realizada em 1978, possui relação estreita com a rede de Atenção Primária no Brasil. PORQUE II. Consolida-se como um marco ao trazer à tona a discussão sobre a reestruturação dos sistemas de saúde. A respeito dessas asserções, assinale a alternativa correta.",
     alternativas: [
       "As asserções I e II são proposições verdadeiras, e a II é uma justificativa da I.",
       "As asserções I e II são proposições verdadeiras, mas a II não é uma justificativa da I.",
@@ -912,9 +912,9 @@ const QUESTOES_SESAUAL_LOTE159 = [
   {
     id: "SUS-164", disciplina: "Legislação Aplicada ao SUS", assunto: "Reforma Sanitária e construção do SUS", subassunto: "Conquista da Reforma Sanitária",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "banca não identificada no material — questão do material Estratégia (Legislação SUS, Aula 01)",
+    origem: "UFG/ SES-GO/ 2026 — questão do material Estratégia (Legislação SUS, Aula 01)",
     tipo: "ME", dificuldade: 1, tempoIdealSeg: 130, probReaparecer: 0.65,
-    enunciado: "UFG/ SES-GO/ 2026 - O Movimento de Reforma Sanitária Brasileira (RSB) consolidou-se na década de 1970 e 1980 como uma resposta crítica ao modelo assistencialista e dicotômico vigente durante a ditadura militar. Trata-se de uma conquista histórica da RSB a criação:",
+    enunciado: "O Movimento de Reforma Sanitária Brasileira (RSB) consolidou-se na década de 1970 e 1980 como uma resposta crítica ao modelo assistencialista e dicotômico vigente durante a ditadura militar. Trata-se de uma conquista histórica da RSB a criação:",
     alternativas: [
       "Das Conferências Nacionais de Saúde (CNS).",
       "Do Sistema Único de Saúde (SUS).",
@@ -937,9 +937,9 @@ const QUESTOES_SESAUAL_LOTE159 = [
   {
     id: "SUS-165", disciplina: "Legislação Aplicada ao SUS", assunto: "Reforma Sanitária e construção do SUS", subassunto: "Papel da 8ª CNS",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "banca não identificada no material — questão do material Estratégia (Legislação SUS, Aula 01)",
+    origem: "VUNESP/ UNIFESP/ 2026 — questão do material Estratégia (Legislação SUS, Aula 01)",
     tipo: "ME", dificuldade: 2, tempoIdealSeg: 150, probReaparecer: 0.65,
-    enunciado: "VUNESP/ UNIFESP/ 2026 - A 8ª Conferência Nacional de Saúde (1986) é considerada um marco da Reforma Sanitária Brasileira. Considerando o papel dessa Conferência no processo de formulação do SUS, é correto afirmar que ela:",
+    enunciado: "A 8ª Conferência Nacional de Saúde (1986) é considerada um marco da Reforma Sanitária Brasileira. Considerando o papel dessa Conferência no processo de formulação do SUS, é correto afirmar que ela:",
     alternativas: [
       "Criou formalmente o Sistema Único de Saúde, estabelecendo sua estrutura administrativa e seu modelo de financiamento.",
       "Propôs princípios como universalidade, equidade, integralidade e participação social, que orientaram a base conceitual do SUS.",
@@ -963,7 +963,7 @@ const QUESTOES_SESAUAL_LOTE159 = [
   {
     id: "SUS-166", disciplina: "Legislação Aplicada ao SUS", assunto: "Reforma Sanitária e construção do SUS", subassunto: "Papel da 8ª CNS",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "Adaptada de banca não identificada no material (múltipla escolha convertida em C/E pelo QuestLab; base: Estratégia, Legislação SUS, Aula 01)",
+    origem: "Adaptada de VUNESP/ UNIFESP/ 2026 (múltipla escolha convertida em C/E pelo QuestLab; base: Estratégia, Legislação SUS, Aula 01)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 85, probReaparecer: 0.7,
     enunciado: "No processo de construção do sistema de saúde brasileiro, a 8ª Conferência Nacional de Saúde criou formalmente o SUS e fixou os percentuais mínimos de aplicação em saúde para a União, os estados e os municípios.",
     gabarito: "E", pegadinha: "troca-sujeito", palavraChave: "criou formalmente o SUS",
@@ -982,9 +982,9 @@ const QUESTOES_SESAUAL_LOTE159 = [
   {
     id: "SUS-167", disciplina: "Legislação Aplicada ao SUS", assunto: "Reforma Sanitária e construção do SUS", subassunto: "Características da Reforma Sanitária",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "banca não identificada no material — questão do material Estratégia (Legislação SUS, Aula 01)",
+    origem: "VUNESP/ Prefeitura de São José do Rio Preto - SP/ 2026 — questão do material Estratégia (Legislação SUS, Aula 01)",
     tipo: "ME", dificuldade: 3, tempoIdealSeg: 170, probReaparecer: 0.65,
-    enunciado: "VUNESP/ Prefeitura de São José do Rio Preto - SP/ 2026 - Assinale a alternativa que aponta algumas características da Reforma Sanitária Brasileira (RSB).",
+    enunciado: "Assinale a alternativa que aponta algumas características da Reforma Sanitária Brasileira (RSB).",
     alternativas: [
       "A RSB culminou na inclusão do SUS na Constituição Federal em um período de grande ascensão das políticas sociais pelo mundo todo.",
       "A oitava Conferência Nacional de Saúde foi convocada pelo Senado, pois, naquela época, não havia instância de participação social deliberativa.",
@@ -1008,9 +1008,9 @@ const QUESTOES_SESAUAL_LOTE159 = [
   {
     id: "SUS-168", disciplina: "Legislação Aplicada ao SUS", assunto: "Reforma Sanitária e construção do SUS", subassunto: "Momento culminante da Reforma Sanitária",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "banca não identificada no material — questão do material Estratégia (Legislação SUS, Aula 01)",
+    origem: "IDCAP/ INOVA Capixaba - ES/ 2026 — questão do material Estratégia (Legislação SUS, Aula 01)",
     tipo: "ME", dificuldade: 2, tempoIdealSeg: 150, probReaparecer: 0.65,
-    enunciado: "IDCAP/ INOVA Capixaba - ES/ 2026 - No contexto da redemocratização brasileira, a Reforma Sanitária ganhou centralidade ao articular saúde, democracia e participação social. Esse movimento buscou superar o modelo médico-assistencial excludente, ampliando o debate para além do setor técnico, incorporando dimensões políticas, sociais e estruturais. Nesse processo histórico, um evento específico foi decisivo para consolidar propostas e mobilizar amplamente a sociedade civil. Com base nesse contexto, assinale a alternativa que identifica corretamente o marco histórico que representou o momento culminante do movimento da Reforma Sanitária no Brasil:",
+    enunciado: "No contexto da redemocratização brasileira, a Reforma Sanitária ganhou centralidade ao articular saúde, democracia e participação social. Esse movimento buscou superar o modelo médico-assistencial excludente, ampliando o debate para além do setor técnico, incorporando dimensões políticas, sociais e estruturais. Nesse processo histórico, um evento específico foi decisivo para consolidar propostas e mobilizar amplamente a sociedade civil. Com base nesse contexto, assinale a alternativa que identifica corretamente o marco histórico que representou o momento culminante do movimento da Reforma Sanitária no Brasil:",
     alternativas: [
       "A implementação das Ações Integradas de Saúde (AIS), como estratégia administrativa de articulação interministerial.",
       "A extinção do Ministério da Previdência e Assistência Social, com a incorporação integral da saúde ao Ministério da Saúde.",
@@ -1034,9 +1034,9 @@ const QUESTOES_SESAUAL_LOTE159 = [
   {
     id: "SUS-169", disciplina: "Legislação Aplicada ao SUS", assunto: "Evolução histórica do sistema de saúde", subassunto: "Fatos da história da saúde",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "banca não identificada no material — questão do material Estratégia (Legislação SUS, Aula 01)",
+    origem: "IBAM/ Prefeitura de Arraial do Cabo - RJ/ 2026 — questão do material Estratégia (Legislação SUS, Aula 01)",
     tipo: "ME", dificuldade: 2, tempoIdealSeg: 150, probReaparecer: 0.65,
-    enunciado: "IBAM/ Prefeitura de Arraial do Cabo - RJ/ 2026 - Considerando a história das políticas públicas em saúde no Brasil, a seguinte alternativa apresenta uma afirmativa verdadeira:",
+    enunciado: "Considerando a história das políticas públicas em saúde no Brasil, a seguinte alternativa apresenta uma afirmativa verdadeira:",
     alternativas: [
       "As Santas Casas de Misericórdia surgiram no Período Imperial.",
       "A Revolta da Vacina, ocorrida durante o Período Republicano, consistiu em uma reação popular à obrigatoriedade da vacina contra a febre amarela.",
@@ -1059,7 +1059,7 @@ const QUESTOES_SESAUAL_LOTE159 = [
   {
     id: "SUS-170", disciplina: "Legislação Aplicada ao SUS", assunto: "Evolução histórica do sistema de saúde", subassunto: "Fatos da história da saúde",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "Adaptada de banca não identificada no material (múltipla escolha convertida em C/E pelo QuestLab; base: Estratégia, Legislação SUS, Aula 01)",
+    origem: "Adaptada de IBAM/ Prefeitura de Arraial do Cabo - RJ/ 2026 (múltipla escolha convertida em C/E pelo QuestLab; base: Estratégia, Legislação SUS, Aula 01)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 85, probReaparecer: 0.7,
     enunciado: "A Revolta da Vacina, ocorrida no Rio de Janeiro em 1904, foi reação popular à vacinação obrigatória contra a varíola, no contexto das campanhas sanitárias de Oswaldo Cruz.",
     gabarito: "C", pegadinha: "troca-numerica", palavraChave: "varíola",
@@ -1077,10 +1077,10 @@ const QUESTOES_SESAUAL_LOTE159 = [
   },
   {
     id: "SUS-171", disciplina: "Legislação Aplicada ao SUS", assunto: "Evolução histórica do sistema de saúde", subassunto: "Construção histórica do SUS",
-    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "banca não identificada no material — questão do material Estratégia (Legislação SUS, Aula 01)",
+    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2025,
+    origem: "FGV/ EBSERH/ 2025 — questão do material Estratégia (Legislação SUS, Aula 01)",
     tipo: "ME", dificuldade: 2, tempoIdealSeg: 150, probReaparecer: 0.65,
-    enunciado: "FGV/ EBSERH/ 2025 - Com relação à construção histórica do Sistema Único de Saúde (SUS), avalie as afirmativas a seguir e assinale (V) para a verdadeira e (F) para a falsa. ( ) O SUS foi criado inicialmente durante o Governo Vargas, voltado, a princípio, apenas para o atendimento aos trabalhadores da economia formal e suas famílias. ( ) A Constituição Federal de 1988 introduziu o fundamento da universalização do SUS e estabeleceu a integração dos serviços públicos de saúde em uma rede regionalizada e hierarquizada. ( ) O projeto inicial do sistema previa a sua evolução para o Sistema Unificado e Descentralizado de Saúde (SUDS), cuja execução permanece em aberto e em progresso. As afirmativas são, respectivamente,",
+    enunciado: "Com relação à construção histórica do Sistema Único de Saúde (SUS), avalie as afirmativas a seguir e assinale (V) para a verdadeira e (F) para a falsa. ( ) O SUS foi criado inicialmente durante o Governo Vargas, voltado, a princípio, apenas para o atendimento aos trabalhadores da economia formal e suas famílias. ( ) A Constituição Federal de 1988 introduziu o fundamento da universalização do SUS e estabeleceu a integração dos serviços públicos de saúde em uma rede regionalizada e hierarquizada. ( ) O projeto inicial do sistema previa a sua evolução para o Sistema Unificado e Descentralizado de Saúde (SUDS), cuja execução permanece em aberto e em progresso. As afirmativas são, respectivamente,",
     alternativas: [
       "F – V – F.",
       "F – V – V.",
@@ -1103,10 +1103,10 @@ const QUESTOES_SESAUAL_LOTE159 = [
   },
   {
     id: "SUS-172", disciplina: "Legislação Aplicada ao SUS", assunto: "Reforma Sanitária e construção do SUS", subassunto: "Principal proposta da Reforma Sanitária",
-    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "banca não identificada no material — questão do material Estratégia (Legislação SUS, Aula 01)",
+    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2025,
+    origem: "FGV/ TRT - 24ª REGIÃO (MS)/ 2025 — questão do material Estratégia (Legislação SUS, Aula 01)",
     tipo: "ME", dificuldade: 1, tempoIdealSeg: 130, probReaparecer: 0.65,
-    enunciado: "FGV/ TRT - 24ª REGIÃO (MS)/ 2025 - Ao analisar a instituição do SUS, o CFESS (2011) o referencia como uma das proposições da Reforma Sanitária. Assinale a opção que indica, corretamente, sua principal proposta.",
+    enunciado: "Ao analisar a instituição do SUS, o CFESS (2011) o referencia como uma das proposições da Reforma Sanitária. Assinale a opção que indica, corretamente, sua principal proposta.",
     alternativas: [
       "Um novo modelo assistencial, pautado na assistência quaternária de saúde.",
       "Uma ampla participação social, conjugando as instituições parlamentares com uma rede de organizações de base.",
@@ -1129,10 +1129,10 @@ const QUESTOES_SESAUAL_LOTE159 = [
   },
   {
     id: "SUS-173", disciplina: "Legislação Aplicada ao SUS", assunto: "Reforma Sanitária e construção do SUS", subassunto: "Princípios da construção do SUS",
-    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "banca não identificada no material — questão do material Estratégia (Legislação SUS, Aula 01)",
+    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2025,
+    origem: "FGV/ Prefeitura de Canaã dos Carajás - PA/ 2025 — questão do material Estratégia (Legislação SUS, Aula 01)",
     tipo: "ME", dificuldade: 1, tempoIdealSeg: 130, probReaparecer: 0.65,
-    enunciado: "FGV/ Prefeitura de Canaã dos Carajás - PA/ 2025 - O Projeto da Reforma Sanitária tem como principais proposições a defesa da universalização das políticas sociais e a garantia dos direitos sociais no âmbito da Política de Saúde. Sobre os princípios que orientam a organização do sistema de saúde por meio da construção do SUS, assinale a afirmativa correta.",
+    enunciado: "O Projeto da Reforma Sanitária tem como principais proposições a defesa da universalização das políticas sociais e a garantia dos direitos sociais no âmbito da Política de Saúde. Sobre os princípios que orientam a organização do sistema de saúde por meio da construção do SUS, assinale a afirmativa correta.",
     alternativas: [
       "Totalidade, centralização e focalização.",
       "Completude, descentralização e difusão.",
@@ -1155,10 +1155,10 @@ const QUESTOES_SESAUAL_LOTE159 = [
   },
   {
     id: "SUS-174", disciplina: "Legislação Aplicada ao SUS", assunto: "Reforma Sanitária e construção do SUS", subassunto: "Cebes, Abrasco, 8ª CNS e Arouca",
-    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "banca não identificada no material — questão do material Estratégia (Legislação SUS, Aula 01)",
+    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2025,
+    origem: "FGV/ EBSERH/ 2025 — questão do material Estratégia (Legislação SUS, Aula 01)",
     tipo: "ME", dificuldade: 3, tempoIdealSeg: 170, probReaparecer: 0.65,
-    enunciado: "FGV/ EBSERH/ 2025 - O movimento da Reforma Sanitária nasceu no início da década de 1970. A expressão foi usada para se referir ao conjunto de ideias que se tinha em relação às mudanças e transformações necessárias na área da saúde. Essas mudanças não abarcavam apenas o sistema, mas todo o setor da saúde, em busca da melhoria das condições de vida da população. Grupos de médicos e outros profissionais preocupados com a saúde pública desenvolveram teses e integraram discussões políticas. (Adaptado de https://pensesus.fiocruz.br/reforma-sanit%C3%A1ria) Sobre a reforma sanitária brasileira como um movimento político e social que prepara a formação do SUS, analise as afirmativas a seguir. I. Na segunda metade dos anos 1970, duas instituições foram importantes para a formação da área de conhecimento batizada de saúde coletiva: o Centro Brasileiro de Estudos de Saúde (Cebes) e a Associação Brasileira em Saúde Coletiva (Abrasco). II. A 8ª Conferência Nacional de Saúde (1986) foi a primeira aberta à sociedade e seu relatório final embasou o capítulo sobre Saúde na Constituição Federal de 1988, tendo abordado prioritariamente o problema da ampliação e sistematização das campanhas nacionais contra a hanseníase e a tuberculose. III. O sanitarista Sérgio Arouca foi um dos principais teóricos e articuladores políticos do chamado “movimento sanitarista”, tendo proposto um conceito ampliado de saúde, como o completo bem-estar físico, mental e social, e não a simples ausência de doença. Está correto o que se afirma em:",
+    enunciado: "O movimento da Reforma Sanitária nasceu no início da década de 1970. A expressão foi usada para se referir ao conjunto de ideias que se tinha em relação às mudanças e transformações necessárias na área da saúde. Essas mudanças não abarcavam apenas o sistema, mas todo o setor da saúde, em busca da melhoria das condições de vida da população. Grupos de médicos e outros profissionais preocupados com a saúde pública desenvolveram teses e integraram discussões políticas. (Adaptado de https://pensesus.fiocruz.br/reforma-sanit%C3%A1ria) Sobre a reforma sanitária brasileira como um movimento político e social que prepara a formação do SUS, analise as afirmativas a seguir. I. Na segunda metade dos anos 1970, duas instituições foram importantes para a formação da área de conhecimento batizada de saúde coletiva: o Centro Brasileiro de Estudos de Saúde (Cebes) e a Associação Brasileira em Saúde Coletiva (Abrasco). II. A 8ª Conferência Nacional de Saúde (1986) foi a primeira aberta à sociedade e seu relatório final embasou o capítulo sobre Saúde na Constituição Federal de 1988, tendo abordado prioritariamente o problema da ampliação e sistematização das campanhas nacionais contra a hanseníase e a tuberculose. III. O sanitarista Sérgio Arouca foi um dos principais teóricos e articuladores políticos do chamado “movimento sanitarista”, tendo proposto um conceito ampliado de saúde, como o completo bem-estar físico, mental e social, e não a simples ausência de doença. Está correto o que se afirma em:",
     alternativas: [
       "I, apenas.",
       "I e II, apenas.",
@@ -1181,10 +1181,10 @@ const QUESTOES_SESAUAL_LOTE159 = [
   },
   {
     id: "SUS-175", disciplina: "Legislação Aplicada ao SUS", assunto: "Evolução histórica do sistema de saúde", subassunto: "INPS (1966)",
-    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "banca não identificada no material — questão do material Estratégia (Legislação SUS, Aula 01)",
+    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2025,
+    origem: "UPENET/IAUPE/ SES-PE/ 2025 — questão do material Estratégia (Legislação SUS, Aula 01)",
     tipo: "ME", dificuldade: 2, tempoIdealSeg: 150, probReaparecer: 0.65,
-    enunciado: "UPENET/IAUPE/ SES-PE/ 2025 - Na história da saúde pública brasileira, tivemos um marco em 1966 com a criação:",
+    enunciado: "Na história da saúde pública brasileira, tivemos um marco em 1966 com a criação:",
     alternativas: [
       "Dos Sistemas Unificados e Descentralizados de Saúde (SUDS).",
       "Das Caixas de Aposentadorias e Pensões (CAP).",
@@ -1208,7 +1208,7 @@ const QUESTOES_SESAUAL_LOTE159 = [
   {
     id: "SUS-176", disciplina: "Legislação Aplicada ao SUS", assunto: "Evolução histórica do sistema de saúde", subassunto: "INPS (1966)",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "Adaptada de banca não identificada no material (múltipla escolha convertida em C/E pelo QuestLab; base: Estratégia, Legislação SUS, Aula 01)",
+    origem: "Adaptada de UPENET/IAUPE/ SES-PE/ 2025 (múltipla escolha convertida em C/E pelo QuestLab; base: Estratégia, Legislação SUS, Aula 01)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 85, probReaparecer: 0.7,
     enunciado: "Em 1977, no âmbito do Sistema Nacional de Previdência e Assistência Social, foi criado o INAMPS, responsável pela assistência médica aos trabalhadores contribuintes da previdência e seus dependentes.",
     gabarito: "C", pegadinha: "troca-numerica", palavraChave: "1977",
@@ -1302,10 +1302,10 @@ const QUESTOES_SESAUAL_LOTE159 = [
   },
   {
     id: "SUS-181", disciplina: "Legislação Aplicada ao SUS", assunto: "Evolução histórica do sistema de saúde", subassunto: "SUDS — exceto",
-    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "banca não identificada no material — questão do material Estratégia (Legislação SUS, Aula 01)",
+    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2024,
+    origem: "UPENET/ IAUPE/ SES-PE/ 2024 — questão do material Estratégia (Legislação SUS, Aula 01)",
     tipo: "ME", dificuldade: 3, tempoIdealSeg: 170, probReaparecer: 0.65,
-    enunciado: "UPENET/ IAUPE/ SES-PE/ 2024 - Antes da promulgação da Constituição, foi criado um programa em 1987 pelo INAMPS, que se instituiu como modelo de transição, o Sistema Unificado e Descentralizado de Saúde (SUDS) cujos objetivos estão indicados abaixo, EXCETO na alternativa:",
+    enunciado: "Antes da promulgação da Constituição, foi criado um programa em 1987 pelo INAMPS, que se instituiu como modelo de transição, o Sistema Unificado e Descentralizado de Saúde (SUDS) cujos objetivos estão indicados abaixo, EXCETO na alternativa:",
     alternativas: [
       "Promover a participação social.",
       "Descentralização das ações de saúde.",
@@ -1328,10 +1328,10 @@ const QUESTOES_SESAUAL_LOTE159 = [
   },
   {
     id: "SUS-182", disciplina: "Legislação Aplicada ao SUS", assunto: "Reforma Sanitária e construção do SUS", subassunto: "Condução da Reforma Sanitária",
-    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "banca não identificada no material — questão do material Estratégia (Legislação SUS, Aula 01)",
+    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2023,
+    origem: "FUNCERN/ Prefeitura de Junco do Seridó - PB/ 2023 — questão do material Estratégia (Legislação SUS, Aula 01)",
     tipo: "ME", dificuldade: 2, tempoIdealSeg: 150, probReaparecer: 0.65,
-    enunciado: "FUNCERN/ Prefeitura de Junco do Seridó - PB/ 2023 - O Sistema Único de Saúde (SUS), desde 1988, é fruto de um movimento denominado Reforma Sanitária. Com relação à Reforma Sanitária brasileira e suas implicações para o SUS, é correto afirmar que:",
+    enunciado: "O Sistema Único de Saúde (SUS), desde 1988, é fruto de um movimento denominado Reforma Sanitária. Com relação à Reforma Sanitária brasileira e suas implicações para o SUS, é correto afirmar que:",
     alternativas: [
       "os partidos políticos monopolizaram o movimento de reforma;",
       "a Reforma Sanitária brasileira foi conduzida pela sociedade civil;",
@@ -1353,10 +1353,10 @@ const QUESTOES_SESAUAL_LOTE159 = [
   },
   {
     id: "SUS-183", disciplina: "Legislação Aplicada ao SUS", assunto: "Evolução histórica do sistema de saúde", subassunto: "Lei Eloy Chaves",
-    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "banca não identificada no material — questão do material Estratégia (Legislação SUS, Aula 01)",
+    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2023,
+    origem: "VUNESP/ CAMPREV - SP/ 2023 — questão do material Estratégia (Legislação SUS, Aula 01)",
     tipo: "ME", dificuldade: 1, tempoIdealSeg: 130, probReaparecer: 0.65,
-    enunciado: "VUNESP/ CAMPREV - SP/ 2023 - No tange à evolução histórica, esta Lei é considerada como marco inicial da Previdência Social no Brasil, em razão da articulação para a criação da Caixa de Aposentadoria e Pensão para a categoria dos ferroviários. Trata-se da Lei:",
+    enunciado: "No tange à evolução histórica, esta Lei é considerada como marco inicial da Previdência Social no Brasil, em razão da articulação para a criação da Caixa de Aposentadoria e Pensão para a categoria dos ferroviários. Trata-se da Lei:",
     alternativas: [
       "Arthur Bernardes",
       "Irineu Machado",
@@ -1380,7 +1380,7 @@ const QUESTOES_SESAUAL_LOTE159 = [
   {
     id: "SUS-184", disciplina: "Legislação Aplicada ao SUS", assunto: "Evolução histórica do sistema de saúde", subassunto: "Lei Eloy Chaves",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "Adaptada de banca não identificada no material (múltipla escolha convertida em C/E pelo QuestLab; base: Estratégia, Legislação SUS, Aula 01)",
+    origem: "Adaptada de VUNESP/ CAMPREV - SP/ 2023 (múltipla escolha convertida em C/E pelo QuestLab; base: Estratégia, Legislação SUS, Aula 01)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 100, probReaparecer: 0.7,
     enunciado: "As Caixas de Aposentadorias e Pensões, criadas a partir da Lei Eloy Chaves de 1923, eram organizadas por empresa e financiadas por empregados e empregadores, ao passo que os Institutos de Aposentadoria e Pensões, da Era Vargas, eram organizados por categoria profissional com participação do Estado.",
     gabarito: "C", pegadinha: "troca-sujeito", palavraChave: "por empresa",
@@ -1398,10 +1398,10 @@ const QUESTOES_SESAUAL_LOTE159 = [
   },
   {
     id: "SUS-185", disciplina: "Legislação Aplicada ao SUS", assunto: "Reforma Sanitária e construção do SUS", subassunto: "8ª CNS e SUDS",
-    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "banca não identificada no material — questão do material Estratégia (Legislação SUS, Aula 01)",
+    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2023,
+    origem: "UNIFASE - RJ/ UNIFASE - RJ/ 2023 — questão do material Estratégia (Legislação SUS, Aula 01)",
     tipo: "ME", dificuldade: 1, tempoIdealSeg: 130, probReaparecer: 0.65,
-    enunciado: "UNIFASE - RJ/ UNIFASE - RJ/ 2023 - Assinale a alternativa que representa um marco na história da saúde brasileira, que resultou na implantação do Sistema Unificado e Descentralizado de Saúde (SUDS), na formação das bases para o capítulo sobre saúde na Constituição Brasileira, e ainda desempenhou um importante papel na propagação do movimento da Reforma Sanitária:",
+    enunciado: "Assinale a alternativa que representa um marco na história da saúde brasileira, que resultou na implantação do Sistema Unificado e Descentralizado de Saúde (SUDS), na formação das bases para o capítulo sobre saúde na Constituição Brasileira, e ainda desempenhou um importante papel na propagação do movimento da Reforma Sanitária:",
     alternativas: [
       "9ª Conferência Nacional da Saúde, ocorrida em 1992.",
       "6ª Conferência Nacional da Saúde, ocorrida em 1988.",
@@ -1424,10 +1424,10 @@ const QUESTOES_SESAUAL_LOTE159 = [
   },
   {
     id: "SUS-186", disciplina: "Legislação Aplicada ao SUS", assunto: "Evolução histórica do sistema de saúde", subassunto: "INAMPS sucede o INPS",
-    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "banca não identificada no material — questão do material Estratégia (Legislação SUS, Aula 01)",
+    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2023,
+    origem: "OBJETIVA/ Hospital Municipal Dr. Mário Gatti - SP/ 2023 — questão do material Estratégia (Legislação SUS, Aula 01)",
     tipo: "ME", dificuldade: 1, tempoIdealSeg: 130, probReaparecer: 0.65,
-    enunciado: "OBJETIVA/ Hospital Municipal Dr. Mário Gatti - SP/ 2023 - Considerando-se os marcos do desenvolvimento histórico da organização sanitária que antecedeu o SUS, assinalar a alternativa que preenche as lacunas abaixo CORRETAMENTE: No âmbito da medicina previdenciária, em 1977, foi criado o ________ que sucedeu o ________.",
+    enunciado: "Considerando-se os marcos do desenvolvimento histórico da organização sanitária que antecedeu o SUS, assinalar a alternativa que preenche as lacunas abaixo CORRETAMENTE: No âmbito da medicina previdenciária, em 1977, foi criado o ________ que sucedeu o ________.",
     alternativas: [
       "IPASE | INAMPS",
       "INAMPS | INPS",
@@ -1449,10 +1449,10 @@ const QUESTOES_SESAUAL_LOTE159 = [
   },
   {
     id: "SUS-187", disciplina: "Legislação Aplicada ao SUS", assunto: "Reforma Sanitária e construção do SUS", subassunto: "Hésio Cordeiro",
-    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "banca não identificada no material — questão do material Estratégia (Legislação SUS, Aula 01)",
+    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2023,
+    origem: "MARANATHA Assessoria/ Prefeitura de Farol - PR/ 2023 — questão do material Estratégia (Legislação SUS, Aula 01)",
     tipo: "ME", dificuldade: 2, tempoIdealSeg: 150, probReaparecer: 0.65,
-    enunciado: "MARANATHA Assessoria/ Prefeitura de Farol - PR/ 2023 - Quem levou o antigo INAMPS a consagrar os princípios do movimento sanitário e foi um dos formuladores da proposta de criação de um “sistema universal de saúde” no Brasil e ajudou a fundar o SUS (Sistema Único de Saúde).",
+    enunciado: "Quem levou o antigo INAMPS a consagrar os princípios do movimento sanitário e foi um dos formuladores da proposta de criação de um “sistema universal de saúde” no Brasil e ajudou a fundar o SUS (Sistema Único de Saúde).",
     alternativas: [
       "Edward Jenner.",
       "Hésio de Albuquerque Cordeiro.",
@@ -1474,10 +1474,10 @@ const QUESTOES_SESAUAL_LOTE159 = [
   },
   {
     id: "SUS-188", disciplina: "Legislação Aplicada ao SUS", assunto: "Reforma Sanitária e construção do SUS", subassunto: "Movimento que buscou equilibrar desigualdades",
-    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "banca não identificada no material — questão do material Estratégia (Legislação SUS, Aula 01)",
+    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2023,
+    origem: "CPCON/ Prefeitura de Catolé do Rocha - PB/ 2023 — questão do material Estratégia (Legislação SUS, Aula 01)",
     tipo: "ME", dificuldade: 1, tempoIdealSeg: 130, probReaparecer: 0.65,
-    enunciado: "CPCON/ Prefeitura de Catolé do Rocha - PB/ 2023 - Antes da instituição do Sistema Único de Saúde, a assistência à saúde da população era condicionada à condição de trabalho. Quem tinha emprego registrado na carteira profissional possuía assistência médica através das Caixas de Previdência, ou então pagava médicos particulares e, em casos de internação, também pagava pelo serviço. Para quem não tinha emprego registrado ou não podia pagar um médico, deveria buscar as Santas Casas de Misericórdia ou os postos de saúde municipais, que viviam sempre lotados. Para equilibrar essas desigualdades, começou a surgir no Brasil um movimento denominado: (Fonte: O trabalho do Agente Comunitário de Saúde (2000)).",
+    enunciado: "Antes da instituição do Sistema Único de Saúde, a assistência à saúde da população era condicionada à condição de trabalho. Quem tinha emprego registrado na carteira profissional possuía assistência médica através das Caixas de Previdência, ou então pagava médicos particulares e, em casos de internação, também pagava pelo serviço. Para quem não tinha emprego registrado ou não podia pagar um médico, deveria buscar as Santas Casas de Misericórdia ou os postos de saúde municipais, que viviam sempre lotados. Para equilibrar essas desigualdades, começou a surgir no Brasil um movimento denominado: (Fonte: O trabalho do Agente Comunitário de Saúde (2000)).",
     alternativas: [
       "Saúde para todos no ano 2000.",
       "Reforma Psiquiátrica.",
@@ -1500,8 +1500,8 @@ const QUESTOES_SESAUAL_LOTE159 = [
   },
   {
     id: "SUS-189", disciplina: "Legislação Aplicada ao SUS", assunto: "Evolução histórica do sistema de saúde", subassunto: "Marcos históricos — Revolta da Vacina e Lei Eloy Chaves",
-    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "banca não identificada no material — questão do material Estratégia (Legislação SUS, Aula 01)",
+    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2023,
+    origem: "FEPESE/ Prefeitura de Balneário Camboriú - SC/ 2023 — questão do material Estratégia (Legislação SUS, Aula 01)",
     tipo: "ME", dificuldade: 2, tempoIdealSeg: 150, probReaparecer: 0.65,
     enunciado: "Analise as afirmativas abaixo acerca dos marcos históricos do sistema público de saúde no Brasil. 1. Em 1904 aconteceu a Revolta da Vacina no Rio de Janeiro, primeira interferência histórica da sociedade civil nas questões de saúde pública do país. Esse movimento resultou em mudanças no Departamento Nacional de Saúde Pública. 2. Em 1923, com a Lei Eloy Chaves, a assistência à saúde passou a ser vinculada à contribuição dos trabalhadores brasileiros à previdência social, criando as Caixas de Aposentadorias e Pensões (CAP). Somente aqueles que contribuíam com a previdência tinham direito à saúde. 3. Durante todo esse período, a assistência à saúde estava restrita aos trabalhadores que contribuíam com a previdência social. As Santas Casas de Misericórdia, dirigidas pela igreja católica, eram a única opção para os doentes que não contribuíam com a previdência. Assinale a alternativa que indica todas as afirmativas corretas.",
     alternativas: [
@@ -1564,10 +1564,10 @@ const QUESTOES_SESAUAL_LOTE159 = [
   },
   {
     id: "SUS-192", disciplina: "Legislação Aplicada ao SUS", assunto: "Evolução histórica do sistema de saúde", subassunto: "IAPs nos anos 1930",
-    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "banca não identificada no material — questão do material Estratégia (Legislação SUS, Aula 01)",
+    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2022,
+    origem: "IBFC/ DPE-MT/ 2022 — questão do material Estratégia (Legislação SUS, Aula 01)",
     tipo: "ME", dificuldade: 2, tempoIdealSeg: 150, probReaparecer: 0.65,
-    enunciado: "IBFC/ DPE-MT/ 2022 - Os Institutos de Aposentadoria e Pensões (IAPs) são apontados por Behring; Boschetti (2006) como equipamentos que apresentaram grande expansão nos anos 30 no Brasil. Conforme as autoras, os Institutos de Aposentadoria e Pensões (IAPs), nesse contexto:",
+    enunciado: "Os Institutos de Aposentadoria e Pensões (IAPs) são apontados por Behring; Boschetti (2006) como equipamentos que apresentaram grande expansão nos anos 30 no Brasil. Conforme as autoras, os Institutos de Aposentadoria e Pensões (IAPs), nesse contexto:",
     alternativas: [
       "cobriam riscos ligados à perda da capacidade laborativa em categorias de trabalhadores estratégicas.",
       "eram organizados por meio de contribuições provenientes apenas dos trabalhadores o que dificultava a concessão de benefícios e serviços por esses equipamentos.",
@@ -1589,10 +1589,10 @@ const QUESTOES_SESAUAL_LOTE159 = [
   },
   {
     id: "SUS-193", disciplina: "Legislação Aplicada ao SUS", assunto: "Reforma Sanitária e construção do SUS", subassunto: "Conceito de saúde na Reforma Sanitária",
-    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "banca não identificada no material — questão do material Estratégia (Legislação SUS, Aula 01)",
+    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2022,
+    origem: "FAURGS/ SES-RS/ 2022 — questão do material Estratégia (Legislação SUS, Aula 01)",
     tipo: "ME", dificuldade: 1, tempoIdealSeg: 130, probReaparecer: 0.65,
-    enunciado: "FAURGS/ SES-RS/ 2022 - O processo histórico da política de saúde como direito trouxe os movimentos sociais como fundamentais ao processo de luta e conquista desse direito social. A Reforma Sanitária permitiu que o conceito de saúde garantisse vieses fundamentais para a realidade da população brasileira, em relação à Reforma Sanitária. Considere as seguintes afirmações. I - A compreensão de saúde para além da ausência de doença. II - Investimento em práticas coletivas de saúde para além da abordagem individual. III- Superação do modelo médico centrado. IV - A saúde compreende determinantes e condicionantes em saúde que compõem diferentes aspectos da vida dos usuários. Quais estão corretas em relação à Reforma Sanitária?",
+    enunciado: "O processo histórico da política de saúde como direito trouxe os movimentos sociais como fundamentais ao processo de luta e conquista desse direito social. A Reforma Sanitária permitiu que o conceito de saúde garantisse vieses fundamentais para a realidade da população brasileira, em relação à Reforma Sanitária. Considere as seguintes afirmações. I - A compreensão de saúde para além da ausência de doença. II - Investimento em práticas coletivas de saúde para além da abordagem individual. III- Superação do modelo médico centrado. IV - A saúde compreende determinantes e condicionantes em saúde que compõem diferentes aspectos da vida dos usuários. Quais estão corretas em relação à Reforma Sanitária?",
     alternativas: [
       "Apenas I.",
       "Apenas IV.",
@@ -1641,10 +1641,10 @@ const QUESTOES_SESAUAL_LOTE159 = [
   },
   {
     id: "SUS-195", disciplina: "Legislação Aplicada ao SUS", assunto: "Reforma Sanitária e construção do SUS", subassunto: "8ª CNS — saúde como direito",
-    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "banca não identificada no material — questão do material Estratégia (Legislação SUS, Aula 01)",
+    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2022,
+    origem: "CONSULPAM/ Prefeitura de Irauçuba - CE/ 2022 — questão do material Estratégia (Legislação SUS, Aula 01)",
     tipo: "ME", dificuldade: 1, tempoIdealSeg: 130, probReaparecer: 0.65,
-    enunciado: "CONSULPAM/ Prefeitura de Irauçuba - CE/ 2022 - Em março de 1986, ocorreu em Brasília a VIII Conferência Nacional de Saúde, onde se estabeleceu um consenso político que permitiu a conformação do projeto da Reforma Sanitária, que se caracterizou, dentre outros, pelo seguinte aspecto:",
+    enunciado: "Em março de 1986, ocorreu em Brasília a VIII Conferência Nacional de Saúde, onde se estabeleceu um consenso político que permitiu a conformação do projeto da Reforma Sanitária, que se caracterizou, dentre outros, pelo seguinte aspecto:",
     alternativas: [
       "A saúde como direito de cidadania e dever do Estado.",
       "A exclusão da população do acesso aos serviços de saúde.",
@@ -1666,10 +1666,10 @@ const QUESTOES_SESAUAL_LOTE159 = [
   },
   {
     id: "SUS-196", disciplina: "Legislação Aplicada ao SUS", assunto: "Reforma Sanitária e construção do SUS", subassunto: "Reforma Sanitária — incorreta",
-    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "banca não identificada no material — questão do material Estratégia (Legislação SUS, Aula 01)",
+    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2022,
+    origem: "UPENET/IAUPE/ SES-PE/ 2022 — questão do material Estratégia (Legislação SUS, Aula 01)",
     tipo: "ME", dificuldade: 2, tempoIdealSeg: 150, probReaparecer: 0.65,
-    enunciado: "UPENET/IAUPE/ SES-PE/ 2022 - O Sistema Único de Saúde (SUS) é reconhecido dentro e fora do Brasil como uma importantíssima conquista no contexto da luta contra a ditadura empresarial-militar (1964-1985). Esse mesmo SUS é também reconhecidamente obra da moderna Reforma Sanitária Brasileira (RSB). Sobre a RSB, assinale a alternativa INCORRETA.",
+    enunciado: "O Sistema Único de Saúde (SUS) é reconhecido dentro e fora do Brasil como uma importantíssima conquista no contexto da luta contra a ditadura empresarial-militar (1964-1985). Esse mesmo SUS é também reconhecidamente obra da moderna Reforma Sanitária Brasileira (RSB). Sobre a RSB, assinale a alternativa INCORRETA.",
     alternativas: [
       "A RSB surgiu numa conjuntura de transição democrática, com ampla participação da sociedade civil.",
       "O movimento sanitário reuniu intelectuais, profissionais da área da saúde, organizações e associações.",
@@ -1730,10 +1730,10 @@ const QUESTOES_SESAUAL_LOTE159 = [
   },
   {
     id: "SUS-199", disciplina: "Legislação Aplicada ao SUS", assunto: "Reforma Sanitária e construção do SUS", subassunto: "Reforma Sanitária — conceito",
-    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "banca não identificada no material — questão do material Estratégia (Legislação SUS, Aula 01)",
+    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2021,
+    origem: "INSTITUTO AOCP/ Prefeitura de João Pessoa - PB/ 2021 — questão do material Estratégia (Legislação SUS, Aula 01)",
     tipo: "ME", dificuldade: 1, tempoIdealSeg: 130, probReaparecer: 0.65,
-    enunciado: "INSTITUTO AOCP/ Prefeitura de João Pessoa - PB/ 2021 - Considerando a Reforma Sanitária no Brasil, assinale a alternativa correta.",
+    enunciado: "Considerando a Reforma Sanitária no Brasil, assinale a alternativa correta.",
     alternativas: [
       "A Reforma Sanitária é a designação que se dá à plataforma de governo da década de 1980.",
       "A Reforma Sanitária pautou a discussão sobre a especialização da medicina e saúde na atenção individual dos sujeitos.",
@@ -1756,10 +1756,10 @@ const QUESTOES_SESAUAL_LOTE159 = [
   },
   {
     id: "SUS-200", disciplina: "Legislação Aplicada ao SUS", assunto: "Reforma Sanitária e construção do SUS", subassunto: "Propostas da Reforma Sanitária (CFESS)",
-    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "banca não identificada no material — questão do material Estratégia (Legislação SUS, Aula 01)",
+    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2021,
+    origem: "FGV/ Prefeitura de Paulínia - SP/ 2021 — questão do material Estratégia (Legislação SUS, Aula 01)",
     tipo: "ME", dificuldade: 1, tempoIdealSeg: 130, probReaparecer: 0.65,
-    enunciado: "FGV/ Prefeitura de Paulínia - SP/ 2021 - De acordo com o CFESS (2010), assinale a opção que indica as principais propostas da Reforma Sanitária.",
+    enunciado: "De acordo com o CFESS (2010), assinale a opção que indica as principais propostas da Reforma Sanitária.",
     alternativas: [
       "A implantação da política de prevenção e a assistência de atenção básica no meio rural.",
       "O atendimento médico-social às populações vulneráveis e às patologias destas populações.",
@@ -1782,10 +1782,10 @@ const QUESTOES_SESAUAL_LOTE159 = [
   },
   {
     id: "SUS-201", disciplina: "Legislação Aplicada ao SUS", assunto: "Evolução histórica do sistema de saúde", subassunto: "Revolta da Vacina — reação do governo",
-    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "banca não identificada no material — questão do material Estratégia (Legislação SUS, Aula 01)",
+    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2021,
+    origem: "UEG/ UEG/ 2021 — questão do material Estratégia (Legislação SUS, Aula 01)",
     tipo: "ME", dificuldade: 2, tempoIdealSeg: 150, probReaparecer: 0.65,
-    enunciado: "UEG/ UEG/ 2021 - Diante do surto de varíola de 1904, o presidente Rodrigues Alves decretou a vacinação obrigatória contra a doença – jornais e panfletos produzidos pela população insatisfeita começaram a circular na cidade, acusando Oswaldo Cruz de despotismo sanitário e de ser um cientista “desligado da realidade do país”. Os opositores do presidente afirmavam que essa era uma forma truculenta de impor a vacinação e que deveria ser uma decisão pessoal vacinar-se ou não. Já descontente com as ações precedentes da campanha sanitária e da reforma urbanística que a prejudicava, a população rebelou-se, agredindo os vacinadores. (TASINAFO, C. R.; FREITAS NETO, J. A. de. História Geral e do Brasil. São Paulo: Harbra, 2006. p. 578). O texto descreve o clima político que antecedeu a Revolta da Vacina. Diante da crise, o presidente Rodrigues Alves.",
+    enunciado: "Diante do surto de varíola de 1904, o presidente Rodrigues Alves decretou a vacinação obrigatória contra a doença – jornais e panfletos produzidos pela população insatisfeita começaram a circular na cidade, acusando Oswaldo Cruz de despotismo sanitário e de ser um cientista “desligado da realidade do país”. Os opositores do presidente afirmavam que essa era uma forma truculenta de impor a vacinação e que deveria ser uma decisão pessoal vacinar-se ou não. Já descontente com as ações precedentes da campanha sanitária e da reforma urbanística que a prejudicava, a população rebelou-se, agredindo os vacinadores. (TASINAFO, C. R.; FREITAS NETO, J. A. de. História Geral e do Brasil. São Paulo: Harbra, 2006. p. 578). O texto descreve o clima político que antecedeu a Revolta da Vacina. Diante da crise, o presidente Rodrigues Alves.",
     alternativas: [
       "eximiu-se, deixando toda responsabilidade a cargo de Oswaldo Cruz.",
       "decretou estado de sítio e revogou a obrigatoriedade da vacinação.",
@@ -1808,10 +1808,10 @@ const QUESTOES_SESAUAL_LOTE159 = [
   },
   {
     id: "SUS-202", disciplina: "Legislação Aplicada ao SUS", assunto: "Evolução histórica do sistema de saúde", subassunto: "Revolta da Vacina",
-    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "banca não identificada no material — questão do material Estratégia (Legislação SUS, Aula 01)",
+    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2021,
+    origem: "OMNI/ Prefeitura de Santana do Livramento - RS/ 2021 — questão do material Estratégia (Legislação SUS, Aula 01)",
     tipo: "ME", dificuldade: 1, tempoIdealSeg: 130, probReaparecer: 0.65,
-    enunciado: "OMNI/ Prefeitura de Santana do Livramento - RS/ 2021 - A Revolta da Vacina foi uma rebelião popular contra a vacina:",
+    enunciado: "A Revolta da Vacina foi uma rebelião popular contra a vacina:",
     alternativas: [
       "antitetânica, ocorrida no Paraná, em novembro de 1804.",
       "antipoliomielite, ocorrida, em São Paulo, em novembro de 1804.",
@@ -1833,10 +1833,10 @@ const QUESTOES_SESAUAL_LOTE159 = [
   },
   {
     id: "SUS-203", disciplina: "Legislação Aplicada ao SUS", assunto: "Evolução histórica do sistema de saúde", subassunto: "Política de saúde de 1930 a meados de 1960",
-    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "banca não identificada no material — questão do material Estratégia (Legislação SUS, Aula 01)",
+    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2021,
+    origem: "IBADE/ VIVA COMUNIDADE-VIVA RIO/ 2021 — questão do material Estratégia (Legislação SUS, Aula 01)",
     tipo: "ME", dificuldade: 2, tempoIdealSeg: 150, probReaparecer: 0.65,
-    enunciado: "IBADE/ VIVA COMUNIDADE-VIVA RIO/ 2021 - Entre a década de 30 e meados da década de 60, a Política de Saúde caracterizou-se pela(o):",
+    enunciado: "Entre a década de 30 e meados da década de 60, a Política de Saúde caracterizou-se pela(o):",
     alternativas: [
       "assistência médica pautada na filantropia e na prática liberal.",
       "modelo médico curativo, individual, assistencialista e especializado.",
@@ -1859,10 +1859,10 @@ const QUESTOES_SESAUAL_LOTE159 = [
   },
   {
     id: "SUS-204", disciplina: "Legislação Aplicada ao SUS", assunto: "Reforma Sanitária e construção do SUS", subassunto: "Participação em saúde (Machado, 1986)",
-    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "banca não identificada no material — questão do material Estratégia (Legislação SUS, Aula 01)",
+    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2021,
+    origem: "Instituto UniFil/ Prefeitura de Marechal Cândido Rondon - PR/ 2021 — questão do material Estratégia (Legislação SUS, Aula 01)",
     tipo: "ME", dificuldade: 2, tempoIdealSeg: 150, probReaparecer: 0.65,
-    enunciado: "Instituto UniFil/ Prefeitura de Marechal Cândido Rondon - PR/ 2021 - O Movimento de Reforma Sanitária com a proposta do Sistema Único de Saúde como alternativa ao Sistema de Saúde em vigor, foi legitimado em nível nacional na VIII Conferência Nacional de Saúde, em 1986. A participação no Sistema Único de Saúde na perspectiva do Controle Social foi um dos eixos dos debates desta Conferência. De acordo com Machado (1986), a participação em Saúde é definida como:",
+    enunciado: "O Movimento de Reforma Sanitária com a proposta do Sistema Único de Saúde como alternativa ao Sistema de Saúde em vigor, foi legitimado em nível nacional na VIII Conferência Nacional de Saúde, em 1986. A participação no Sistema Único de Saúde na perspectiva do Controle Social foi um dos eixos dos debates desta Conferência. De acordo com Machado (1986), a participação em Saúde é definida como:",
     alternativas: [
       "o conjunto de intervenções que as diferentes forças sociais realizam para influenciar a formulação, a execução e a avaliação das políticas públicas para o setor saúde.",
       "o conjunto de intervenções de saúde no âmbito individual e coletivo que envolve: promoção, prevenção, diagnóstico, tratamento e reabilitação.",
@@ -1884,10 +1884,10 @@ const QUESTOES_SESAUAL_LOTE159 = [
   },
   {
     id: "SUS-205", disciplina: "Legislação Aplicada ao SUS", assunto: "Reforma Sanitária e construção do SUS", subassunto: "Reforma Sanitária — itens",
-    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "banca não identificada no material — questão do material Estratégia (Legislação SUS, Aula 01)",
+    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2021,
+    origem: "Avança SP / Prefeitura de Vinhedo - SP / 2021 — questão do material Estratégia (Legislação SUS, Aula 01)",
     tipo: "ME", dificuldade: 1, tempoIdealSeg: 130, probReaparecer: 0.65,
-    enunciado: "Avança SP / Prefeitura de Vinhedo - SP / 2021 - No que se refere à Reforma Sanitária, analise os itens a seguir e, ao final, assinale a alternativa correta: I – Nasceu no contexto da luta contra a ditadura, no início da década de 1970. II – Entre os políticos que apoiaram o movimento, destaca-se o sanitarista Sérgio Arouca. III – As propostas resultaram na universalidade do direito à saúde, oficializado com a Constituição Federal de 1988 e a criação do Sistema Único de Saúde (SUS).",
+    enunciado: "No que se refere à Reforma Sanitária, analise os itens a seguir e, ao final, assinale a alternativa correta: I – Nasceu no contexto da luta contra a ditadura, no início da década de 1970. II – Entre os políticos que apoiaram o movimento, destaca-se o sanitarista Sérgio Arouca. III – As propostas resultaram na universalidade do direito à saúde, oficializado com a Constituição Federal de 1988 e a criação do Sistema Único de Saúde (SUS).",
     alternativas: [
       "Apenas o item I é verdadeiro.",
       "Apenas o item II é verdadeiro.",
@@ -1910,10 +1910,10 @@ const QUESTOES_SESAUAL_LOTE159 = [
   },
   {
     id: "SUS-206", disciplina: "Legislação Aplicada ao SUS", assunto: "Reforma Sanitária e construção do SUS", subassunto: "SUS — afirmativa correta",
-    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "banca não identificada no material — questão do material Estratégia (Legislação SUS, Aula 01)",
+    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2020,
+    origem: "Instituto UniFil/ Prefeitura de Itambé - PR/ 2020 — questão do material Estratégia (Legislação SUS, Aula 01)",
     tipo: "ME", dificuldade: 1, tempoIdealSeg: 130, probReaparecer: 0.65,
-    enunciado: "Instituto UniFil/ Prefeitura de Itambé - PR/ 2020 - Sobre a saúde pública brasileira e o Sistema Único de Saúde (SUS), assinale a alternativa correta.",
+    enunciado: "Sobre a saúde pública brasileira e o Sistema Único de Saúde (SUS), assinale a alternativa correta.",
     alternativas: [
       "O SUS foi criado no ano de 1987, pela Constituição Federal Brasileira, passando a ser regulamentado apenas no ano de 1989 pela Lei Ordinária nº 8.080.",
       "Anteriormente a criação o SUS a assistência à saúde era prestada pelo INAMPS, que também era um sistema de acesso universal.",
@@ -1936,7 +1936,7 @@ const QUESTOES_SESAUAL_LOTE159 = [
   {
     id: "SUS-207", disciplina: "Legislação Aplicada ao SUS", assunto: "Reforma Sanitária e construção do SUS", subassunto: "SUS — afirmativa correta",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "Adaptada de banca não identificada no material (múltipla escolha convertida em C/E pelo QuestLab; base: Estratégia, Legislação SUS, Aula 01)",
+    origem: "Adaptada de Instituto UniFil/ Prefeitura de Itambé - PR/ 2020 (múltipla escolha convertida em C/E pelo QuestLab; base: Estratégia, Legislação SUS, Aula 01)",
     tipo: "CE", dificuldade: 1, tempoIdealSeg: 70, probReaparecer: 0.7,
     enunciado: "O SUS foi criado pela Constituição Federal de 1987 e regulamentado em 1989 pela Lei Ordinária nº 8.080, que dispõe sobre as condições para a promoção, proteção e recuperação da saúde.",
     gabarito: "E", pegadinha: "troca-numerica", palavraChave: "1987 ... 1989",
@@ -1954,10 +1954,10 @@ const QUESTOES_SESAUAL_LOTE159 = [
   },
   {
     id: "SUS-208", disciplina: "Legislação Aplicada ao SUS", assunto: "Reforma Sanitária e construção do SUS", subassunto: "Desafios para resgatar a Reforma Sanitária",
-    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "banca não identificada no material — questão do material Estratégia (Legislação SUS, Aula 01)",
+    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2020,
+    origem: "Prefeitura de Cananéia - SP/ 2020 — questão do material Estratégia (Legislação SUS, Aula 01)",
     tipo: "ME", dificuldade: 3, tempoIdealSeg: 170, probReaparecer: 0.65,
-    enunciado: "Prefeitura de Cananéia - SP/ 2020 - Assinale a alternativa que contenha alguns desafios a serem vencidos para resgatar preceitos da Reforma Sanitária.",
+    enunciado: "Assinale a alternativa que contenha alguns desafios a serem vencidos para resgatar preceitos da Reforma Sanitária.",
     alternativas: [
       "Equacionar a relação do SUS com o setor privado, incluindo o capital estrangeiro, de maneira que haja uma colaboração mútua e fortalecer o papel do médico clínico como centro da atenção à saúde.",
       "Fortalecer os processos de regionalização cooperativa e solidária, na perspectiva da ampliação do acesso com equidade e considerar a diversidade cultural e a desigualdade socioeconômica presente no território nacional.",
@@ -1980,10 +1980,10 @@ const QUESTOES_SESAUAL_LOTE159 = [
   },
   {
     id: "SUS-209", disciplina: "Legislação Aplicada ao SUS", assunto: "Reforma Sanitária e construção do SUS", subassunto: "Cebes e Abrasco — incorreta",
-    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "banca não identificada no material — questão do material Estratégia (Legislação SUS, Aula 01)",
+    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2020,
+    origem: "FUNDEP (Gestão de Concursos)/ Prefeitura de Barão de Cocais - MG/ 2020 — questão do material Estratégia (Legislação SUS, Aula 01)",
     tipo: "ME", dificuldade: 3, tempoIdealSeg: 170, probReaparecer: 0.65,
-    enunciado: "FUNDEP (Gestão de Concursos)/ Prefeitura de Barão de Cocais - MG/ 2020 - Sobre as principais características, o processo de surgimento e o legado da reforma sanitária brasileira, assinale a alternativa incorreta.",
+    enunciado: "Sobre as principais características, o processo de surgimento e o legado da reforma sanitária brasileira, assinale a alternativa incorreta.",
     alternativas: [
       "As narrativas em torno da reforma sanitária brasileira localizam, como regra, a origem do movimento no contexto da segunda metade dos anos 1970, período que coincide com a criação do Centro Brasileiro de Estudos de Saúde (Cebes) e, três anos depois, com a criação da Associação Brasileira de Pós-graduação em Saúde Coletiva (Abrasco).",
       "O Simpósio de Política Nacional de Saúde estabeleceu princípios centrais que seriam adotados pela reforma sanitária, como o direito universal à saúde.",
@@ -2005,10 +2005,10 @@ const QUESTOES_SESAUAL_LOTE159 = [
   },
   {
     id: "SUS-210", disciplina: "Legislação Aplicada ao SUS", assunto: "Reforma Sanitária e construção do SUS", subassunto: "Marcos da Reforma Sanitária",
-    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "banca não identificada no material — questão do material Estratégia (Legislação SUS, Aula 01)",
+    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2020,
+    origem: "INSTITUTO AOCP/ Prefeitura de Recife - PE/ 2020 — questão do material Estratégia (Legislação SUS, Aula 01)",
     tipo: "ME", dificuldade: 1, tempoIdealSeg: 130, probReaparecer: 0.65,
-    enunciado: "INSTITUTO AOCP/ Prefeitura de Recife - PE/ 2020 - Preencha as lacunas e assinale a alternativa correta. O movimento da Reforma Sanitária nasceu no contexto da luta contra a ditadura, no início da década de 1970, referindo-se ao conjunto de ideias que se tinha em relação às mudanças e transformações necessárias na área da saúde. Esse processo teve como marco institucional a ____________________ realizada em 1986. As propostas da Reforma Sanitária resultaram, finalmente, na universalidade do direito à saúde, oficializada com a _____________________ e a criação do Sistema Único de Saúde (SUS).",
+    enunciado: "Preencha as lacunas e assinale a alternativa correta. O movimento da Reforma Sanitária nasceu no contexto da luta contra a ditadura, no início da década de 1970, referindo-se ao conjunto de ideias que se tinha em relação às mudanças e transformações necessárias na área da saúde. Esse processo teve como marco institucional a ____________________ realizada em 1986. As propostas da Reforma Sanitária resultaram, finalmente, na universalidade do direito à saúde, oficializada com a _____________________ e a criação do Sistema Único de Saúde (SUS).",
     alternativas: [
       "Conferência de Alma Ata / Lei n° 8080/90.",
       "Conferência de Alma Ata / Constituição Federal de 1988.",
@@ -2031,10 +2031,10 @@ const QUESTOES_SESAUAL_LOTE159 = [
   },
   {
     id: "SUS-211", disciplina: "Legislação Aplicada ao SUS", assunto: "Reforma Sanitária e construção do SUS", subassunto: "Fundamentos da reforma — exceto",
-    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "banca não identificada no material — questão do material Estratégia (Legislação SUS, Aula 01)",
+    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2020,
+    origem: "MS CONCURSOS/ Prefeitura de Chupinguaia - RO/ 2020 — questão do material Estratégia (Legislação SUS, Aula 01)",
     tipo: "ME", dificuldade: 2, tempoIdealSeg: 150, probReaparecer: 0.65,
-    enunciado: "MS CONCURSOS/ Prefeitura de Chupinguaia - RO/ 2020 - Ao compreender o Sistema Único de Assistência Social - SUAS como estratégia, o projeto de reforma sanitária tem como base o Estado democrático de direito, responsável pelas políticas sociais e, consequentemente, pela saúde. Destacam-se como fundamentos dessa proposta, exceto:",
+    enunciado: "Ao compreender o Sistema Único de Assistência Social - SUAS como estratégia, o projeto de reforma sanitária tem como base o Estado democrático de direito, responsável pelas políticas sociais e, consequentemente, pela saúde. Destacam-se como fundamentos dessa proposta, exceto:",
     alternativas: [
       "A melhoria da qualidade dos serviços com a adoção de um novo modelo assistencial pautado na integralidade e equidade das ações.",
       "Democratização das ações e transparência no uso de recursos e ações do governo.",
@@ -2075,10 +2075,10 @@ const QUESTOES_SESAUAL_LOTE159 = [
   },
   {
     id: "SUS-213", disciplina: "Legislação Aplicada ao SUS", assunto: "Reforma Sanitária e construção do SUS", subassunto: "SUS — afirmativa correta",
-    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "banca não identificada no material — questão do material Estratégia (Legislação SUS, Aula 01)",
+    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2020,
+    origem: "VUNESP/ EBSERH/ 2020 — questão do material Estratégia (Legislação SUS, Aula 01)",
     tipo: "ME", dificuldade: 2, tempoIdealSeg: 150, probReaparecer: 0.65,
-    enunciado: "VUNESP/ EBSERH/ 2020 - O Sistema Único de Saúde (SUS) é uma conquista da sociedade e foi criado para promover a justiça social e superar as desigualdades na assistência à saúde da população. Assinale a alternativa correta.",
+    enunciado: "O Sistema Único de Saúde (SUS) é uma conquista da sociedade e foi criado para promover a justiça social e superar as desigualdades na assistência à saúde da população. Assinale a alternativa correta.",
     alternativas: [
       "Antes de 1988, o sistema público de saúde atendia apenas quem não contribuía para a Previdência Social.",
       "A Constituição de 1988 garantiu a saúde como direito de todos e dever do Estado, garantido mediante políticas sociais e econômicas.",
@@ -2102,7 +2102,7 @@ const QUESTOES_SESAUAL_LOTE159 = [
   {
     id: "SUS-214", disciplina: "Legislação Aplicada ao SUS", assunto: "Reforma Sanitária e construção do SUS", subassunto: "SUS — afirmativa correta",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "Adaptada de banca não identificada no material (múltipla escolha convertida em C/E pelo QuestLab; base: Estratégia, Legislação SUS, Aula 01)",
+    origem: "Adaptada de VUNESP/ EBSERH/ 2020 (múltipla escolha convertida em C/E pelo QuestLab; base: Estratégia, Legislação SUS, Aula 01)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 100, probReaparecer: 0.7,
     enunciado: "O Ministério da Saúde foi criado como pasta autônoma em 1953, desmembrado do antigo Ministério da Educação e Saúde, instituído em 1930.",
     gabarito: "C", pegadinha: "troca-numerica", palavraChave: "1953",

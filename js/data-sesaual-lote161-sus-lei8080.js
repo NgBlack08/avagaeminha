@@ -12,10 +12,10 @@
 const QUESTOES_SESAUAL_LOTE161 = [
   {
     id: "SUS-298", disciplina: "Legislação Aplicada ao SUS", assunto: "Subsistemas e assistência terapêutica (Lei 8.080, arts. 19-A a 19-U)", subassunto: "Subsistema de Atenção à Saúde Indígena",
-    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "banca não identificada no material — questão do material Estratégia (Legislação SUS, Aula 03)",
+    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2025,
+    origem: "FGV / EBSERH / 2025 — questão do material Estratégia (Legislação SUS, Aula 03)",
     tipo: "ME", dificuldade: 2, tempoIdealSeg: 150, probReaparecer: 0.65,
-    enunciado: "FGV / EBSERH / 2025 - A Lei nº 8080 de 19/09/1990, regula, em todo o território nacional, as ações e serviços de saúde, executados isolada ou conjuntamente, em caráter permanente ou eventual, por pessoas naturais ou jurídicas de direito Público ou privado. De acordo com a Lei nº 8080, em relação ao Subsistema de Atenção à Saúde Indígena, assinale a afirmativa correta.",
+    enunciado: "A Lei nº 8080 de 19/09/1990, regula, em todo o território nacional, as ações e serviços de saúde, executados isolada ou conjuntamente, em caráter permanente ou eventual, por pessoas naturais ou jurídicas de direito Público ou privado. De acordo com a Lei nº 8080, em relação ao Subsistema de Atenção à Saúde Indígena, assinale a afirmativa correta.",
     alternativas: [
       "Caberá aos estados e municípios, com seus recursos próprios, financiar o Subsistema de Atenção à Saúde Indígena.",
       "A rede do SUS não deverá fazer o registro e a notificação da declaração de raça ou cor, evitando discriminação com os indígenas atendidos nos sistemas públicos de saúde.",
@@ -39,7 +39,7 @@ const QUESTOES_SESAUAL_LOTE161 = [
   {
     id: "SUS-299", disciplina: "Legislação Aplicada ao SUS", assunto: "Subsistemas e assistência terapêutica (Lei 8.080, arts. 19-A a 19-U)", subassunto: "Subsistema de Atenção à Saúde Indígena",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "Adaptada de banca não identificada no material (múltipla escolha convertida em C/E pelo QuestLab; base: Estratégia, Legislação SUS, Aula 03)",
+    origem: "Adaptada de FGV / EBSERH / 2025 (múltipla escolha convertida em C/E pelo QuestLab; base: Estratégia, Legislação SUS, Aula 03)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 100, probReaparecer: 0.7,
     enunciado: "Cabe à União, com recursos próprios, financiar o Subsistema de Atenção à Saúde Indígena, podendo os estados, os municípios e outras instituições governamentais e não governamentais atuar complementarmente no custeio e na execução das ações.",
     gabarito: "C", pegadinha: "troca-sujeito", palavraChave: "União, com recursos próprios",
@@ -58,7 +58,7 @@ const QUESTOES_SESAUAL_LOTE161 = [
   {
     id: "SUS-300", disciplina: "Legislação Aplicada ao SUS", assunto: "Subsistemas e assistência terapêutica (Lei 8.080, arts. 19-A a 19-U)", subassunto: "Subsistema de Atenção à Saúde Indígena",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "Adaptada de banca não identificada no material (múltipla escolha convertida em C/E pelo QuestLab; base: Estratégia, Legislação SUS, Aula 03)",
+    origem: "Adaptada de FGV / EBSERH / 2025 (múltipla escolha convertida em C/E pelo QuestLab; base: Estratégia, Legislação SUS, Aula 03)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 100, probReaparecer: 0.7,
     enunciado: "Na atenção à saúde indígena, a rede do SUS deve fazer o registro e a notificação da raça ou cor desde que o próprio usuário o solicite expressamente, como forma de proteger os indígenas contra a discriminação nos serviços públicos.",
     gabarito: "E", pegadinha: "restricao-indevida", palavraChave: "obrigatoriamente",
@@ -77,7 +77,7 @@ const QUESTOES_SESAUAL_LOTE161 = [
   {
     id: "SUS-301", disciplina: "Legislação Aplicada ao SUS", assunto: "Subsistemas e assistência terapêutica (Lei 8.080, arts. 19-A a 19-U)", subassunto: "Subsistema de Atenção à Saúde Indígena",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "Adaptada de banca não identificada no material (múltipla escolha convertida em C/E pelo QuestLab; base: Estratégia, Legislação SUS, Aula 03)",
+    origem: "Adaptada de FGV / EBSERH / 2025 (múltipla escolha convertida em C/E pelo QuestLab; base: Estratégia, Legislação SUS, Aula 03)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 85, probReaparecer: 0.7,
     enunciado: "O acesso das populações indígenas ao SUS deve ser garantido em âmbito local, regional e de centros especializados, de acordo com suas necessidades, compreendendo a atenção primária, secundária e terciária à saúde.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "primária, secundária e terciária",
@@ -95,10 +95,10 @@ const QUESTOES_SESAUAL_LOTE161 = [
   },
   {
     id: "SUS-302", disciplina: "Legislação Aplicada ao SUS", assunto: "Organização, direção e gestão (Lei 8.080, arts. 9º a 14-B)", subassunto: "Comissões intersetoriais",
-    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "banca não identificada no material — questão do material Estratégia (Legislação SUS, Aula 03)",
+    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2025,
+    origem: "OBJETIVA / Prefeitura de Arvorezinha - RS/ 2025 — questão do material Estratégia (Legislação SUS, Aula 03)",
     tipo: "ME", dificuldade: 1, tempoIdealSeg: 130, probReaparecer: 0.65,
-    enunciado: "OBJETIVA / Prefeitura de Arvorezinha - RS/ 2025 - Em conformidade com a Lei nº 8.080/1990 — Lei Orgânica da Saúde, assinalar a alternativa que preenche as lacunas abaixo CORRETAMENTE. Serão criadas comissões ___________ de âmbito nacional, subordinadas _________ , integradas pelos Ministérios e órgãos competentes e por entidades representativas da sociedade civil",
+    enunciado: "Em conformidade com a Lei nº 8.080/1990 — Lei Orgânica da Saúde, assinalar a alternativa que preenche as lacunas abaixo CORRETAMENTE. Serão criadas comissões ___________ de âmbito nacional, subordinadas _________ , integradas pelos Ministérios e órgãos competentes e por entidades representativas da sociedade civil",
     alternativas: [
       "divididas | à Secretária de Saúde",
       "interligadas | ao Governo Federal",
@@ -121,7 +121,7 @@ const QUESTOES_SESAUAL_LOTE161 = [
   {
     id: "SUS-303", disciplina: "Legislação Aplicada ao SUS", assunto: "Organização, direção e gestão (Lei 8.080, arts. 9º a 14-B)", subassunto: "Comissões intersetoriais",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "Adaptada de banca não identificada no material (múltipla escolha convertida em C/E pelo QuestLab; base: Estratégia, Legislação SUS, Aula 03)",
+    origem: "Adaptada de OBJETIVA / Prefeitura de Arvorezinha - RS/ 2025 (múltipla escolha convertida em C/E pelo QuestLab; base: Estratégia, Legislação SUS, Aula 03)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 85, probReaparecer: 0.7,
     enunciado: "As comissões intersetoriais de âmbito nacional previstas na Lei 8.080/1990 são subordinadas ao Ministério da Saúde e compostas por representantes dos gestores federal, estaduais e municipais do SUS.",
     gabarito: "E", pegadinha: "troca-sujeito", palavraChave: "subordinadas ao CNS",
@@ -139,10 +139,10 @@ const QUESTOES_SESAUAL_LOTE161 = [
   },
   {
     id: "SUS-304", disciplina: "Legislação Aplicada ao SUS", assunto: "Princípios e diretrizes do SUS (Lei 8.080, arts. 7º e 8º)", subassunto: "Universalidade",
-    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "banca não identificada no material — questão do material Estratégia (Legislação SUS, Aula 03)",
+    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2025,
+    origem: "FUNDEP (Gestão de Concursos) / UPA-CS / 2025 — questão do material Estratégia (Legislação SUS, Aula 03)",
     tipo: "ME", dificuldade: 1, tempoIdealSeg: 130, probReaparecer: 0.65,
-    enunciado: "FUNDEP (Gestão de Concursos) / UPA-CS / 2025 - O Sistema Único de Saúde (SUS) apresenta-se como uma resposta coletiva aos desafios de garantir condições dignas para todos. Qual princípio do SUS assegura que todos os cidadãos tenham acesso irrestrito aos serviços de saúde, afirmando ser um direito humano?",
+    enunciado: "O Sistema Único de Saúde (SUS) apresenta-se como uma resposta coletiva aos desafios de garantir condições dignas para todos. Qual princípio do SUS assegura que todos os cidadãos tenham acesso irrestrito aos serviços de saúde, afirmando ser um direito humano?",
     alternativas: [
       "Universalidade.",
       "Integralidade.",
@@ -164,10 +164,10 @@ const QUESTOES_SESAUAL_LOTE161 = [
   },
   {
     id: "SUS-305", disciplina: "Legislação Aplicada ao SUS", assunto: "Princípios e diretrizes do SUS (Lei 8.080, arts. 7º e 8º)", subassunto: "Pilares da Lei 8.080",
-    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "banca não identificada no material — questão do material Estratégia (Legislação SUS, Aula 03)",
+    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2025,
+    origem: "ADM&TEC / Prefeitura de João Alfredo - PE / 2025 — questão do material Estratégia (Legislação SUS, Aula 03)",
     tipo: "ME", dificuldade: 1, tempoIdealSeg: 130, probReaparecer: 0.65,
-    enunciado: "ADM&TEC / Prefeitura de João Alfredo - PE / 2025 - A Lei nº 8.080/1990 organiza as ações de saúde em todo o território nacional, contemplando princípios fundamentais do SUS. Assinale a alternativa CORRETA:",
+    enunciado: "A Lei nº 8.080/1990 organiza as ações de saúde em todo o território nacional, contemplando princípios fundamentais do SUS. Assinale a alternativa CORRETA:",
     alternativas: [
       "O acesso aos serviços de saúde depende de vínculo empregatício, priorizando indivíduos com carteira assinada.",
       "A universalização do atendimento, a integralidade das ações e a participação da comunidade configuram pilares importantes previstos pela lei.",
@@ -189,10 +189,10 @@ const QUESTOES_SESAUAL_LOTE161 = [
   },
   {
     id: "SUS-306", disciplina: "Legislação Aplicada ao SUS", assunto: "Subsistemas e assistência terapêutica (Lei 8.080, arts. 19-A a 19-U)", subassunto: "Atendimento e internação domiciliar — V/F",
-    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "banca não identificada no material — questão do material Estratégia (Legislação SUS, Aula 03)",
+    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2025,
+    origem: "FGV / EBSERH / 2025 — questão do material Estratégia (Legislação SUS, Aula 03)",
     tipo: "ME", dificuldade: 2, tempoIdealSeg: 150, probReaparecer: 0.65,
-    enunciado: "FGV / EBSERH / 2025 - Conforme estabelece a Lei Orgânica da Saúde, em relação ao subsistema de atendimento e internação hospitalar, avalie as afirmativas a seguir e assinale (V) para a verdadeira e (F) para a falsa. ( ) Na modalidade de assistência de atendimento e internação domiciliares incluem-se, principalmente, os procedimentos médicos, de enfermagem, fisioterapêuticos, psicológicos e de assistência social, entre outros necessários ao cuidado integral dos pacientes em seu domicílio. ( ) O atendimento e a internação domiciliares serão realizados por equipes multidisciplinares que atuarão na medicina preventiva, terapêutica e reabilitadora. ( ) O atendimento e a internação domiciliares só poderão ser realizados por indicação médica, com expressa concordância do paciente e de sua família. As afirmativas são, respectivamente,",
+    enunciado: "Conforme estabelece a Lei Orgânica da Saúde, em relação ao subsistema de atendimento e internação hospitalar, avalie as afirmativas a seguir e assinale (V) para a verdadeira e (F) para a falsa. ( ) Na modalidade de assistência de atendimento e internação domiciliares incluem-se, principalmente, os procedimentos médicos, de enfermagem, fisioterapêuticos, psicológicos e de assistência social, entre outros necessários ao cuidado integral dos pacientes em seu domicílio. ( ) O atendimento e a internação domiciliares serão realizados por equipes multidisciplinares que atuarão na medicina preventiva, terapêutica e reabilitadora. ( ) O atendimento e a internação domiciliares só poderão ser realizados por indicação médica, com expressa concordância do paciente e de sua família. As afirmativas são, respectivamente,",
     alternativas: [
       "V – V – V.",
       "V – F – F.",
@@ -216,7 +216,7 @@ const QUESTOES_SESAUAL_LOTE161 = [
   {
     id: "SUS-307", disciplina: "Legislação Aplicada ao SUS", assunto: "Subsistemas e assistência terapêutica (Lei 8.080, arts. 19-A a 19-U)", subassunto: "Atendimento e internação domiciliar — V/F",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "Adaptada de banca não identificada no material (múltipla escolha convertida em C/E pelo QuestLab; base: Estratégia, Legislação SUS, Aula 03)",
+    origem: "Adaptada de FGV / EBSERH / 2025 (múltipla escolha convertida em C/E pelo QuestLab; base: Estratégia, Legislação SUS, Aula 03)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 85, probReaparecer: 0.7,
     enunciado: "No âmbito do SUS, o atendimento e a internação domiciliares só podem ser realizados por indicação médica, com expressa concordância do paciente e de sua família.",
     gabarito: "C", pegadinha: "termo-absoluto", palavraChave: "só por indicação médica",
@@ -235,7 +235,7 @@ const QUESTOES_SESAUAL_LOTE161 = [
   {
     id: "SUS-308", disciplina: "Legislação Aplicada ao SUS", assunto: "Subsistemas e assistência terapêutica (Lei 8.080, arts. 19-A a 19-U)", subassunto: "Atendimento e internação domiciliar — V/F",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "Adaptada de banca não identificada no material (múltipla escolha convertida em C/E pelo QuestLab; base: Estratégia, Legislação SUS, Aula 03)",
+    origem: "Adaptada de FGV / EBSERH / 2025 (múltipla escolha convertida em C/E pelo QuestLab; base: Estratégia, Legislação SUS, Aula 03)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 100, probReaparecer: 0.7,
     enunciado: "Na modalidade de atendimento e internação domiciliares, as equipes multidisciplinares atuam nos níveis da medicina terapêutica e reabilitadora, ficando as ações preventivas a cargo exclusivo da atenção básica, fora do domicílio do paciente.",
     gabarito: "E", pegadinha: "restricao-indevida", palavraChave: "preventiva, terapêutica e reabilitadora",
@@ -253,10 +253,10 @@ const QUESTOES_SESAUAL_LOTE161 = [
   },
   {
     id: "SUS-309", disciplina: "Legislação Aplicada ao SUS", assunto: "Princípios e diretrizes do SUS (Lei 8.080, arts. 7º e 8º)", subassunto: "Lacunas — organização, regido, integralidade, descentralizada",
-    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "banca não identificada no material — questão do material Estratégia (Legislação SUS, Aula 03)",
+    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2025,
+    origem: "IBADE / Prefeitura de Rolim de Moura - RO / 2025 — questão do material Estratégia (Legislação SUS, Aula 03)",
     tipo: "ME", dificuldade: 1, tempoIdealSeg: 130, probReaparecer: 0.65,
-    enunciado: "IBADE / Prefeitura de Rolim de Moura - RO / 2025 - A Lei 8.080/1990, conhecida como Lei Orgânica da Saúde, estabelece as bases para a ________ e o funcionamento do Sistema Único de Saúde (SUS). De acordo com essa lei, a saúde é um direito de todos e um dever do Estado. O SUS é ________ pelos princípios da universalidade, da equidade e da ________. Além disso, a lei define que a gestão do SUS deve ser ________.",
+    enunciado: "A Lei 8.080/1990, conhecida como Lei Orgânica da Saúde, estabelece as bases para a ________ e o funcionamento do Sistema Único de Saúde (SUS). De acordo com essa lei, a saúde é um direito de todos e um dever do Estado. O SUS é ________ pelos princípios da universalidade, da equidade e da ________. Além disso, a lei define que a gestão do SUS deve ser ________.",
     alternativas: [
       "sustentação – regido – impessoalidade – cofinanciada",
       "organização – regido - integralidade – descentralizada",
@@ -279,8 +279,8 @@ const QUESTOES_SESAUAL_LOTE161 = [
   },
   {
     id: "SUS-310", disciplina: "Legislação Aplicada ao SUS", assunto: "Financiamento, planejamento e orçamento (Lei 8.080, arts. 31 a 38)", subassunto: "Conta especial dos recursos do SUS",
-    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "banca não identificada no material — questão do material Estratégia (Legislação SUS, Aula 03)",
+    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2025,
+    origem: "IBADE / Prefeitura de Rolim de Moura - RO / 2025 — questão do material Estratégia (Legislação SUS, Aula 03)",
     tipo: "ME", dificuldade: 1, tempoIdealSeg: 130, probReaparecer: 0.65,
     enunciado: "Segundo o art. 33 da Lei 8.080/90, os recursos financeiros do Sistema Único de Saúde (SUS) serão depositados em conta especial, em cada esfera de sua atuação, e movimentados sob fiscalização dos respectivos:",
     alternativas: [
@@ -306,7 +306,7 @@ const QUESTOES_SESAUAL_LOTE161 = [
   {
     id: "SUS-311", disciplina: "Legislação Aplicada ao SUS", assunto: "Financiamento, planejamento e orçamento (Lei 8.080, arts. 31 a 38)", subassunto: "Conta especial dos recursos do SUS",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "Adaptada de banca não identificada no material (múltipla escolha convertida em C/E pelo QuestLab; base: Estratégia, Legislação SUS, Aula 03)",
+    origem: "Adaptada de IBADE / Prefeitura de Rolim de Moura - RO / 2025 (múltipla escolha convertida em C/E pelo QuestLab; base: Estratégia, Legislação SUS, Aula 03)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 85, probReaparecer: 0.7,
     enunciado: "Na esfera federal, os recursos financeiros do SUS originários do orçamento da seguridade social são administrados pelo Ministério da Saúde por meio do Fundo Nacional de Saúde.",
     gabarito: "C", pegadinha: "troca-sujeito", palavraChave: "Fundo Nacional de Saúde",
@@ -325,7 +325,7 @@ const QUESTOES_SESAUAL_LOTE161 = [
   {
     id: "SUS-312", disciplina: "Legislação Aplicada ao SUS", assunto: "Financiamento, planejamento e orçamento (Lei 8.080, arts. 31 a 38)", subassunto: "Conta especial dos recursos do SUS",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "Adaptada de banca não identificada no material (múltipla escolha convertida em C/E pelo QuestLab; base: Estratégia, Legislação SUS, Aula 03)",
+    origem: "Adaptada de IBADE / Prefeitura de Rolim de Moura - RO / 2025 (múltipla escolha convertida em C/E pelo QuestLab; base: Estratégia, Legislação SUS, Aula 03)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 100, probReaparecer: 0.7,
     enunciado: "Os recursos financeiros do SUS são depositados em conta especial em cada esfera de atuação e movimentados mediante deliberação prévia das comissões intergestores bipartite e tripartite, que exercem a fiscalização desses recursos.",
     gabarito: "E", pegadinha: "troca-sujeito", palavraChave: "Conselhos de Saúde",
@@ -343,10 +343,10 @@ const QUESTOES_SESAUAL_LOTE161 = [
   },
   {
     id: "SUS-313", disciplina: "Legislação Aplicada ao SUS", assunto: "Subsistemas e assistência terapêutica (Lei 8.080, arts. 19-A a 19-U)", subassunto: "Assistência terapêutica e incorporação de tecnologia",
-    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "banca não identificada no material — questão do material Estratégia (Legislação SUS, Aula 03)",
+    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2024,
+    origem: "FGV / EBSERH / 2024 — questão do material Estratégia (Legislação SUS, Aula 03)",
     tipo: "ME", dificuldade: 3, tempoIdealSeg: 170, probReaparecer: 0.65,
-    enunciado: "FGV / EBSERH / 2024 - A assistência terapêutica e a incorporação de tecnologia em saúde são fatores determinantes na melhoria da qualidade da saúde da população e na redução nas taxas de mortalidade de um número considerável de doenças, motivo pelo qual sua definição, incorporação e financiamento têm sido objeto de diversos dispositivos legais. A esse respeito, com base na Lei nº 8.080/90, assinale a afirmativa que caracteriza corretamente a assistência terapêutica e/ou a incorporação de tecnologia em saúde.",
+    enunciado: "A assistência terapêutica e a incorporação de tecnologia em saúde são fatores determinantes na melhoria da qualidade da saúde da população e na redução nas taxas de mortalidade de um número considerável de doenças, motivo pelo qual sua definição, incorporação e financiamento têm sido objeto de diversos dispositivos legais. A esse respeito, com base na Lei nº 8.080/90, assinale a afirmativa que caracteriza corretamente a assistência terapêutica e/ou a incorporação de tecnologia em saúde.",
     alternativas: [
       "A incorporação, exclusão ou alteração pelo Sistema Único de Saúde (SUS) de novos medicamentos, produtos e procedimentos, bem como a constituição ou alteração de protocolo clínico, são atribuições da Agência Nacional de Saúde, assessorada pela Comissão Nacional de Incorporação de Tecnologias no SUS.",
       "A autorização e o financiamento de novos procedimentos médicos são avaliados pela Comissão Nacional de Incorporação de Tecnologias (Conitec), que assessora o Conselho Federal de Medicina e o Conselho Nacional de Saúde a respeito dessas decisões.",
@@ -370,7 +370,7 @@ const QUESTOES_SESAUAL_LOTE161 = [
   {
     id: "SUS-314", disciplina: "Legislação Aplicada ao SUS", assunto: "Subsistemas e assistência terapêutica (Lei 8.080, arts. 19-A a 19-U)", subassunto: "Assistência terapêutica e incorporação de tecnologia",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "Adaptada de banca não identificada no material (múltipla escolha convertida em C/E pelo QuestLab; base: Estratégia, Legislação SUS, Aula 03)",
+    origem: "Adaptada de FGV / EBSERH / 2024 (múltipla escolha convertida em C/E pelo QuestLab; base: Estratégia, Legislação SUS, Aula 03)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 85, probReaparecer: 0.7,
     enunciado: "A incorporação, a exclusão ou a alteração, pelo SUS, de novos medicamentos, produtos e procedimentos, bem como a constituição ou a alteração de protocolo clínico ou de diretriz terapêutica, são atribuições do Ministério da Saúde, assessorado pela Conitec.",
     gabarito: "C", pegadinha: "troca-sujeito", palavraChave: "Ministério da Saúde, assessorado pela Conitec",
@@ -389,7 +389,7 @@ const QUESTOES_SESAUAL_LOTE161 = [
   {
     id: "SUS-315", disciplina: "Legislação Aplicada ao SUS", assunto: "Subsistemas e assistência terapêutica (Lei 8.080, arts. 19-A a 19-U)", subassunto: "Assistência terapêutica e incorporação de tecnologia",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "Adaptada de banca não identificada no material (múltipla escolha convertida em C/E pelo QuestLab; base: Estratégia, Legislação SUS, Aula 03)",
+    origem: "Adaptada de FGV / EBSERH / 2024 (múltipla escolha convertida em C/E pelo QuestLab; base: Estratégia, Legislação SUS, Aula 03)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 100, probReaparecer: 0.7,
     enunciado: "O relatório da Conitec sobre a incorporação de tecnologia no SUS deve considerar as evidências científicas sobre eficácia, acurácia, efetividade e segurança, sendo dispensada a avaliação econômica comparativa dos benefícios e custos em relação às tecnologias já incorporadas.",
     gabarito: "E", pegadinha: "restricao-indevida", palavraChave: "avaliação econômica comparativa",
@@ -408,7 +408,7 @@ const QUESTOES_SESAUAL_LOTE161 = [
   {
     id: "SUS-316", disciplina: "Legislação Aplicada ao SUS", assunto: "Subsistemas e assistência terapêutica (Lei 8.080, arts. 19-A a 19-U)", subassunto: "Assistência terapêutica e incorporação de tecnologia",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "Adaptada de banca não identificada no material (múltipla escolha convertida em C/E pelo QuestLab; base: Estratégia, Legislação SUS, Aula 03)",
+    origem: "Adaptada de FGV / EBSERH / 2024 (múltipla escolha convertida em C/E pelo QuestLab; base: Estratégia, Legislação SUS, Aula 03)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 100, probReaparecer: 0.7,
     enunciado: "São vedados, em todas as esferas de gestão do SUS, o pagamento, o ressarcimento ou o reembolso de medicamento, produto e procedimento clínico ou cirúrgico experimental, ou de uso não autorizado pela Anvisa.",
     gabarito: "C", pegadinha: "termo-absoluto", palavraChave: "experimental",
@@ -464,10 +464,10 @@ const QUESTOES_SESAUAL_LOTE161 = [
   },
   {
     id: "SUS-319", disciplina: "Legislação Aplicada ao SUS", assunto: "Disposições gerais, objetivos e campo de atuação (Lei 8.080, arts. 2º a 6º)", subassunto: "Vigilância epidemiológica — definição",
-    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "banca não identificada no material — questão do material Estratégia (Legislação SUS, Aula 03)",
+    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2024,
+    origem: "IBFC / Prefeitura de Fortaleza - CE / 2024 — questão do material Estratégia (Legislação SUS, Aula 03)",
     tipo: "ME", dificuldade: 1, tempoIdealSeg: 130, probReaparecer: 0.65,
-    enunciado: "IBFC / Prefeitura de Fortaleza - CE / 2024 - Lei Federal n° 8.080/1990 – Entende-se por um conjunto de ações que proporcionam o conhecimento, a detecção ou prevenção de qualquer mudança nos fatores determinantes e condicionantes de saúde individual ou coletiva, com a finalidade de recomendar e adotar as medidas de prevenção e controle das doenças ou agravos, como______. Assinale a alternativa que preencha corretamente a lacuna.",
+    enunciado: "Lei Federal n° 8.080/1990 – Entende-se por um conjunto de ações que proporcionam o conhecimento, a detecção ou prevenção de qualquer mudança nos fatores determinantes e condicionantes de saúde individual ou coletiva, com a finalidade de recomendar e adotar as medidas de prevenção e controle das doenças ou agravos, como______. Assinale a alternativa que preencha corretamente a lacuna.",
     alternativas: [
       "vigilância de saúde pública",
       "saneamento",
@@ -491,7 +491,7 @@ const QUESTOES_SESAUAL_LOTE161 = [
   {
     id: "SUS-320", disciplina: "Legislação Aplicada ao SUS", assunto: "Disposições gerais, objetivos e campo de atuação (Lei 8.080, arts. 2º a 6º)", subassunto: "Vigilância epidemiológica — definição",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "Adaptada de banca não identificada no material (múltipla escolha convertida em C/E pelo QuestLab; base: Estratégia, Legislação SUS, Aula 03)",
+    origem: "Adaptada de IBFC / Prefeitura de Fortaleza - CE / 2024 (múltipla escolha convertida em C/E pelo QuestLab; base: Estratégia, Legislação SUS, Aula 03)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 85, probReaparecer: 0.7,
     enunciado: "Na Lei 8.080/1990, vigilância epidemiológica é o conjunto de ações capaz de eliminar, diminuir ou prevenir riscos à saúde e de intervir nos problemas sanitários decorrentes da produção e circulação de bens e da prestação de serviços de interesse da saúde.",
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "definição da vigilância sanitária",
@@ -509,10 +509,10 @@ const QUESTOES_SESAUAL_LOTE161 = [
   },
   {
     id: "SUS-321", disciplina: "Legislação Aplicada ao SUS", assunto: "Princípios e diretrizes do SUS (Lei 8.080, arts. 7º e 8º)", subassunto: "Universalidade × igualdade",
-    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "banca não identificada no material — questão do material Estratégia (Legislação SUS, Aula 03)",
+    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2024,
+    origem: "FGV / Prefeitura de Macaé - RJ / 2024 — questão do material Estratégia (Legislação SUS, Aula 03)",
     tipo: "ME", dificuldade: 2, tempoIdealSeg: 150, probReaparecer: 0.65,
-    enunciado: "FGV / Prefeitura de Macaé - RJ / 2024 - Quando o ente federativo busca garantir que todos tenham acesso às ações e serviços de saúde, independente de raça, sexo ou classe social, ele está atuando de acordo com o seguinte princípio do SUS:",
+    enunciado: "Quando o ente federativo busca garantir que todos tenham acesso às ações e serviços de saúde, independente de raça, sexo ou classe social, ele está atuando de acordo com o seguinte princípio do SUS:",
     alternativas: [
       "equidade.",
       "igualdade.",
@@ -535,10 +535,10 @@ const QUESTOES_SESAUAL_LOTE161 = [
   },
   {
     id: "SUS-322", disciplina: "Legislação Aplicada ao SUS", assunto: "Princípios e diretrizes do SUS (Lei 8.080, arts. 7º e 8º)", subassunto: "Princípios doutrinários",
-    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "banca não identificada no material — questão do material Estratégia (Legislação SUS, Aula 03)",
+    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2024,
+    origem: "IBFC / Prefeitura de Fortaleza - CE / 2024 — questão do material Estratégia (Legislação SUS, Aula 03)",
     tipo: "ME", dificuldade: 1, tempoIdealSeg: 130, probReaparecer: 0.65,
-    enunciado: "IBFC / Prefeitura de Fortaleza - CE / 2024 - Assinale a alternativa que apresenta os principais princípios do Sistema Único de Saúde (SUS).",
+    enunciado: "Assinale a alternativa que apresenta os principais princípios do Sistema Único de Saúde (SUS).",
     alternativas: [
       "Universalidade, Integralidade e Equidade",
       "Causalidade, Prioridade e Centralidade",
@@ -561,10 +561,10 @@ const QUESTOES_SESAUAL_LOTE161 = [
   },
   {
     id: "SUS-323", disciplina: "Legislação Aplicada ao SUS", assunto: "Princípios e diretrizes do SUS (Lei 8.080, arts. 7º e 8º)", subassunto: "Hierarquização",
-    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "banca não identificada no material — questão do material Estratégia (Legislação SUS, Aula 03)",
+    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2024,
+    origem: "ALE TO / FGV/2024 — questão do material Estratégia (Legislação SUS, Aula 03)",
     tipo: "ME", dificuldade: 2, tempoIdealSeg: 150, probReaparecer: 0.65,
-    enunciado: "ALE TO / FGV/2024 - A organização dos serviços de saúde em atenção primária, secundária e terciária (níveis crescentes de complexidade) visando disponibilizar a assistência requerida para cada caso, diz respeito ao seguinte princípio do SUS:",
+    enunciado: "A organização dos serviços de saúde em atenção primária, secundária e terciária (níveis crescentes de complexidade) visando disponibilizar a assistência requerida para cada caso, diz respeito ao seguinte princípio do SUS:",
     alternativas: [
       "Equidade",
       "Universalidade",
@@ -588,7 +588,7 @@ const QUESTOES_SESAUAL_LOTE161 = [
   {
     id: "SUS-324", disciplina: "Legislação Aplicada ao SUS", assunto: "Princípios e diretrizes do SUS (Lei 8.080, arts. 7º e 8º)", subassunto: "Hierarquização",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "Adaptada de banca não identificada no material (múltipla escolha convertida em C/E pelo QuestLab; base: Estratégia, Legislação SUS, Aula 03)",
+    origem: "Adaptada de ALE TO / FGV/2024 (múltipla escolha convertida em C/E pelo QuestLab; base: Estratégia, Legislação SUS, Aula 03)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 100, probReaparecer: 0.7,
     enunciado: "A regionalização, diretriz organizativa do SUS, consiste na organização das ações e dos serviços de saúde em níveis de complexidade tecnológica crescente, da atenção primária à terciária, para que cada caso receba a assistência que requer.",
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "hierarquização",
@@ -606,8 +606,8 @@ const QUESTOES_SESAUAL_LOTE161 = [
   },
   {
     id: "SUS-325", disciplina: "Legislação Aplicada ao SUS", assunto: "Telessaúde (Lei 8.080, arts. 26-A a 26-H)", subassunto: "Telessaúde — V/F",
-    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "banca não identificada no material — questão do material Estratégia (Legislação SUS, Aula 03)",
+    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2024,
+    origem: "ALE TO / FGV / 2024 — questão do material Estratégia (Legislação SUS, Aula 03)",
     tipo: "ME", dificuldade: 2, tempoIdealSeg: 150, probReaparecer: 0.65,
     enunciado: "Considerando as disposições da Lei nº 8.080/90 acerca da telessaúde, analise as afirmativas a seguir e assinale (V) para a verdadeira e (F) para a falsa. ( ) Entre os princípios que devem ser observados no exercício da telessaúde estão a assistência segura e com qualidade e a confidencialidade dos dados. ( ) Ao recusar o atendimento na modalidade telessaúde o paciente abre mão da possibilidade de atendimento presencial. ( ) Compete aos Conselhos Federais de fiscalização do exercício profissional a normatização ética relativa à prestação dos serviços na modalidade telessaúde. As afirmativas são, respectivamente,",
     alternativas: [
@@ -633,7 +633,7 @@ const QUESTOES_SESAUAL_LOTE161 = [
   {
     id: "SUS-326", disciplina: "Legislação Aplicada ao SUS", assunto: "Telessaúde (Lei 8.080, arts. 26-A a 26-H)", subassunto: "Telessaúde — V/F",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "Adaptada de banca não identificada no material (múltipla escolha convertida em C/E pelo QuestLab; base: Estratégia, Legislação SUS, Aula 03)",
+    origem: "Adaptada de ALE TO / FGV / 2024 (múltipla escolha convertida em C/E pelo QuestLab; base: Estratégia, Legislação SUS, Aula 03)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 85, probReaparecer: 0.7,
     enunciado: "Entre os princípios da telessaúde está o direito de recusa ao atendimento nessa modalidade, com a garantia do atendimento presencial sempre que solicitado.",
     gabarito: "C", pegadinha: "termo-absoluto", palavraChave: "sempre que solicitado",
@@ -652,7 +652,7 @@ const QUESTOES_SESAUAL_LOTE161 = [
   {
     id: "SUS-327", disciplina: "Legislação Aplicada ao SUS", assunto: "Telessaúde (Lei 8.080, arts. 26-A a 26-H)", subassunto: "Telessaúde — V/F",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "Adaptada de banca não identificada no material (múltipla escolha convertida em C/E pelo QuestLab; base: Estratégia, Legislação SUS, Aula 03)",
+    origem: "Adaptada de ALE TO / FGV / 2024 (múltipla escolha convertida em C/E pelo QuestLab; base: Estratégia, Legislação SUS, Aula 03)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 100, probReaparecer: 0.7,
     enunciado: "A normatização ética relativa à prestação de serviços na modalidade telessaúde compete ao Ministério da Saúde, por ato do órgão de direção nacional do SUS, aplicando-se de forma subsidiária as resoluções dos conselhos profissionais.",
     gabarito: "E", pegadinha: "troca-sujeito", palavraChave: "conselhos federais",
@@ -670,10 +670,10 @@ const QUESTOES_SESAUAL_LOTE161 = [
   },
   {
     id: "SUS-328", disciplina: "Legislação Aplicada ao SUS", assunto: "Princípios e diretrizes do SUS (Lei 8.080, arts. 7º e 8º)", subassunto: "Equidade",
-    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "banca não identificada no material — questão do material Estratégia (Legislação SUS, Aula 03)",
+    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2024,
+    origem: "ALE TO/FGV/2024 — questão do material Estratégia (Legislação SUS, Aula 03)",
     tipo: "ME", dificuldade: 1, tempoIdealSeg: 130, probReaparecer: 0.65,
-    enunciado: "ALE TO/FGV/2024 - O princípio do SUS orientado pelo respeito às necessidades, diversidades e especificidades de cada cidadão ou grupo social e que tem relação direta com os conceitos de igualdade e de justiça social é denominado",
+    enunciado: "O princípio do SUS orientado pelo respeito às necessidades, diversidades e especificidades de cada cidadão ou grupo social e que tem relação direta com os conceitos de igualdade e de justiça social é denominado",
     alternativas: [
       "equidade",
       "integralidade",
@@ -696,8 +696,8 @@ const QUESTOES_SESAUAL_LOTE161 = [
   },
   {
     id: "SUS-329", disciplina: "Legislação Aplicada ao SUS", assunto: "Princípios e diretrizes do SUS (Lei 8.080, arts. 7º e 8º)", subassunto: "Princípios do art. 7º",
-    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "banca não identificada no material — questão do material Estratégia (Legislação SUS, Aula 03)",
+    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2024,
+    origem: "FGV / Prefeitura de Abreu e Lima - PE / 2024 — questão do material Estratégia (Legislação SUS, Aula 03)",
     tipo: "ME", dificuldade: 1, tempoIdealSeg: 130, probReaparecer: 0.65,
     enunciado: "A Lei nº 8.080/90 estabelece que são princípios do Sistema Único de Saúde (SUS):",
     alternativas: [
@@ -723,7 +723,7 @@ const QUESTOES_SESAUAL_LOTE161 = [
   {
     id: "SUS-330", disciplina: "Legislação Aplicada ao SUS", assunto: "Princípios e diretrizes do SUS (Lei 8.080, arts. 7º e 8º)", subassunto: "Princípios do art. 7º",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "Adaptada de banca não identificada no material (múltipla escolha convertida em C/E pelo QuestLab; base: Estratégia, Legislação SUS, Aula 03)",
+    origem: "Adaptada de FGV / Prefeitura de Abreu e Lima - PE / 2024 (múltipla escolha convertida em C/E pelo QuestLab; base: Estratégia, Legislação SUS, Aula 03)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 85, probReaparecer: 0.7,
     enunciado: "Constitui princípio do SUS, segundo a Lei 8.080/1990, o direito à informação às pessoas assistidas sobre sua saúde, ao lado da divulgação de informações quanto ao potencial dos serviços de saúde e à sua utilização pelo usuário.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "direito à informação",
@@ -741,10 +741,10 @@ const QUESTOES_SESAUAL_LOTE161 = [
   },
   {
     id: "SUS-331", disciplina: "Legislação Aplicada ao SUS", assunto: "Subsistemas e assistência terapêutica (Lei 8.080, arts. 19-A a 19-U)", subassunto: "Subsistemas da Lei 8.080",
-    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "banca não identificada no material — questão do material Estratégia (Legislação SUS, Aula 03)",
+    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2023,
+    origem: "FEPESE / Prefeitura de Balneário Camboriú - SC / 2023 — questão do material Estratégia (Legislação SUS, Aula 03)",
     tipo: "ME", dificuldade: 2, tempoIdealSeg: 150, probReaparecer: 0.65,
-    enunciado: "FEPESE / Prefeitura de Balneário Camboriú - SC / 2023 - Segundo a Lei nº 8080 de 19 de setembro de 1990 e suas atualizações, dentro do Sistema Único de Saúde há outros subsistemas que auxiliam a garantir ações e serviços de saúde à populações específicas. Dentre eles, estão:",
+    enunciado: "Segundo a Lei nº 8080 de 19 de setembro de 1990 e suas atualizações, dentro do Sistema Único de Saúde há outros subsistemas que auxiliam a garantir ações e serviços de saúde à populações específicas. Dentre eles, estão:",
     alternativas: [
       "De Saúde Prisional, de Atenção à Saúde Indígena e de Atenção à Saúde da População.",
       "De Atendimento Domiciliar, de Atendimento à Saúde da Mulher, de Atendimento ao adolescente.",
@@ -768,7 +768,7 @@ const QUESTOES_SESAUAL_LOTE161 = [
   {
     id: "SUS-332", disciplina: "Legislação Aplicada ao SUS", assunto: "Subsistemas e assistência terapêutica (Lei 8.080, arts. 19-A a 19-U)", subassunto: "Subsistemas da Lei 8.080",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "Adaptada de banca não identificada no material (múltipla escolha convertida em C/E pelo QuestLab; base: Estratégia, Legislação SUS, Aula 03)",
+    origem: "Adaptada de FEPESE / Prefeitura de Balneário Camboriú - SC / 2023 (múltipla escolha convertida em C/E pelo QuestLab; base: Estratégia, Legislação SUS, Aula 03)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 85, probReaparecer: 0.7,
     enunciado: "Nos serviços do SUS, da rede própria ou conveniada, a parturiente tem direito a um acompanhante de sua escolha durante o trabalho de parto, o parto e o pós-parto imediato, e cabe a ela, e não à equipe, indicar quem será essa pessoa.",
     gabarito: "C", pegadinha: "troca-sujeito", palavraChave: "indicado pela parturiente",
@@ -787,7 +787,7 @@ const QUESTOES_SESAUAL_LOTE161 = [
   {
     id: "SUS-333", disciplina: "Legislação Aplicada ao SUS", assunto: "Subsistemas e assistência terapêutica (Lei 8.080, arts. 19-A a 19-U)", subassunto: "Subsistemas da Lei 8.080",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "Adaptada de banca não identificada no material (múltipla escolha convertida em C/E pelo QuestLab; base: Estratégia, Legislação SUS, Aula 03)",
+    origem: "Adaptada de FEPESE / Prefeitura de Balneário Camboriú - SC / 2023 (múltipla escolha convertida em C/E pelo QuestLab; base: Estratégia, Legislação SUS, Aula 03)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 100, probReaparecer: 0.7,
     enunciado: "A Lei 8.080/1990 institui, entre seus subsistemas, o Subsistema de Saúde Prisional e o Subsistema de Atenção à Saúde do Idoso, ambos com financiamento federal exclusivo e gestão própria vinculada diretamente ao Ministério da Saúde.",
     gabarito: "E", pegadinha: "exigencia-inexistente", palavraChave: "subsistemas da lei",
@@ -805,10 +805,10 @@ const QUESTOES_SESAUAL_LOTE161 = [
   },
   {
     id: "SUS-334", disciplina: "Legislação Aplicada ao SUS", assunto: "Subsistemas e assistência terapêutica (Lei 8.080, arts. 19-A a 19-U)", subassunto: "Internação domiciliar — incorreta",
-    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "banca não identificada no material — questão do material Estratégia (Legislação SUS, Aula 03)",
+    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2023,
+    origem: "IBFC /Prefeitura de Cuiabá - MT / 2023 — questão do material Estratégia (Legislação SUS, Aula 03)",
     tipo: "ME", dificuldade: 1, tempoIdealSeg: 130, probReaparecer: 0.65,
-    enunciado: "IBFC /Prefeitura de Cuiabá - MT / 2023 - Sobre o atendimento e a internação domiciliar, assinale a alternativa incorreta em relação ao que é proposto pela Lei 8.080 de 1990, no Sistema Único de Saúde brasileiro.",
+    enunciado: "Sobre o atendimento e a internação domiciliar, assinale a alternativa incorreta em relação ao que é proposto pela Lei 8.080 de 1990, no Sistema Único de Saúde brasileiro.",
     alternativas: [
       "Na modalidade de assistência de atendimento domiciliar incluem-se, principalmente, os procedimentos médicos, de enfermagem, fisioterapêuticos, psicológicos e de assistência social, entre outros necessários ao cuidado integral dos pacientes em seu domicílio",
       "A internação domiciliar deve ser realizada por equipes multidisciplinares que atuarão nos níveis da medicina tanto preventiva, quanto terapêutica e reabilitadora",
@@ -830,10 +830,10 @@ const QUESTOES_SESAUAL_LOTE161 = [
   },
   {
     id: "SUS-335", disciplina: "Legislação Aplicada ao SUS", assunto: "Disposições gerais, objetivos e campo de atuação (Lei 8.080, arts. 2º a 6º)", subassunto: "Lei 8.080 — incorreta",
-    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "banca não identificada no material — questão do material Estratégia (Legislação SUS, Aula 03)",
+    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2023,
+    origem: "Avança SP / Prefeitura de Americana - SP P/ 2023 — questão do material Estratégia (Legislação SUS, Aula 03)",
     tipo: "ME", dificuldade: 2, tempoIdealSeg: 150, probReaparecer: 0.65,
-    enunciado: "Avança SP / Prefeitura de Americana - SP P/ 2023 - Sobre a Lei 8080/90, considere a alternativa incorreta:",
+    enunciado: "Sobre a Lei 8080/90, considere a alternativa incorreta:",
     alternativas: [
       "Dispõe sobre as condições para a promoção, proteção e recuperação da saúde, a organização e o funcionamento dos serviços correspondentes e dá outras providências.",
       "Esta lei regula, em todo o território nacional, as ações e serviços de saúde, executados isolada ou conjuntamente, em caráter permanente ou eventual, por pessoas naturais ou jurídicas de direito Público ou privado.",
@@ -857,7 +857,7 @@ const QUESTOES_SESAUAL_LOTE161 = [
   {
     id: "SUS-336", disciplina: "Legislação Aplicada ao SUS", assunto: "Disposições gerais, objetivos e campo de atuação (Lei 8.080, arts. 2º a 6º)", subassunto: "Lei 8.080 — incorreta",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "Adaptada de banca não identificada no material (múltipla escolha convertida em C/E pelo QuestLab; base: Estratégia, Legislação SUS, Aula 03)",
+    origem: "Adaptada de Avança SP / Prefeitura de Americana - SP P/ 2023 (múltipla escolha convertida em C/E pelo QuestLab; base: Estratégia, Legislação SUS, Aula 03)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 100, probReaparecer: 0.7,
     enunciado: "O Decreto 7.508/2011 regulamenta a Lei 8.142/1990, dispondo sobre a organização do SUS, o planejamento da saúde, a assistência à saúde e a articulação interfederativa, e institui as conferências e os conselhos de saúde.",
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "regulamenta a Lei 8.080",
@@ -875,10 +875,10 @@ const QUESTOES_SESAUAL_LOTE161 = [
   },
   {
     id: "SUS-337", disciplina: "Legislação Aplicada ao SUS", assunto: "Disposições gerais, objetivos e campo de atuação (Lei 8.080, arts. 2º a 6º)", subassunto: "Objetivos do SUS (art. 5º)",
-    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "banca não identificada no material — questão do material Estratégia (Legislação SUS, Aula 03)",
+    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2023,
+    origem: "Avança SP /Prefeitura de Americana - SP Prova: Avança SP / 2023 — questão do material Estratégia (Legislação SUS, Aula 03)",
     tipo: "ME", dificuldade: 2, tempoIdealSeg: 150, probReaparecer: 0.65,
-    enunciado: "Avança SP /Prefeitura de Americana - SP Prova: Avança SP / 2023 - O artigo 5º da Lei 8080/90 discorre sobre os objetivos do SUS, que são: I - a identificação e divulgação dos fatores condicionantes e determinantes da saúde. II - a assistência às pessoas por intermédio de ações de promoção, proteção e recuperação da saúde, com a realização integrada das ações assistenciais e das atividades preventivas. III – a utilização da epidemiologia para o estabelecimento de prioridades, a alocação de recursos e a orientação programática. É correto o que se afirma em:",
+    enunciado: "O artigo 5º da Lei 8080/90 discorre sobre os objetivos do SUS, que são: I - a identificação e divulgação dos fatores condicionantes e determinantes da saúde. II - a assistência às pessoas por intermédio de ações de promoção, proteção e recuperação da saúde, com a realização integrada das ações assistenciais e das atividades preventivas. III – a utilização da epidemiologia para o estabelecimento de prioridades, a alocação de recursos e a orientação programática. É correto o que se afirma em:",
     alternativas: [
       "I, apenas.",
       "I e II, apenas.",
@@ -902,7 +902,7 @@ const QUESTOES_SESAUAL_LOTE161 = [
   {
     id: "SUS-338", disciplina: "Legislação Aplicada ao SUS", assunto: "Disposições gerais, objetivos e campo de atuação (Lei 8.080, arts. 2º a 6º)", subassunto: "Objetivos do SUS (art. 5º)",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "Adaptada de banca não identificada no material (múltipla escolha convertida em C/E pelo QuestLab; base: Estratégia, Legislação SUS, Aula 03)",
+    origem: "Adaptada de Avança SP /Prefeitura de Americana - SP Prova: Avança SP / 2023 (múltipla escolha convertida em C/E pelo QuestLab; base: Estratégia, Legislação SUS, Aula 03)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 100, probReaparecer: 0.7,
     enunciado: "A utilização da epidemiologia para o estabelecimento de prioridades, a alocação de recursos e a orientação programática figura entre os objetivos do SUS listados no art. 5º da Lei 8.080/1990, ao lado da identificação dos fatores determinantes.",
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "princípio, não objetivo",
@@ -920,10 +920,10 @@ const QUESTOES_SESAUAL_LOTE161 = [
   },
   {
     id: "SUS-339", disciplina: "Legislação Aplicada ao SUS", assunto: "Princípios e diretrizes do SUS (Lei 8.080, arts. 7º e 8º)", subassunto: "Princípios — exceto",
-    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "banca não identificada no material — questão do material Estratégia (Legislação SUS, Aula 03)",
+    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2023,
+    origem: "Instituto Consulplan / Prefeitura de Formiga - MG / 2023 — questão do material Estratégia (Legislação SUS, Aula 03)",
     tipo: "ME", dificuldade: 1, tempoIdealSeg: 130, probReaparecer: 0.65,
-    enunciado: "Instituto Consulplan / Prefeitura de Formiga - MG / 2023 - De acordo com a Constituição Federal de 1988 (CF-88), a “saúde é direito de todos e dever do Estado”. No período anterior a CF-88, o sistema público de saúde prestava assistência apenas aos trabalhadores vinculados à Previdência Social, aproximadamente 30 milhões de pessoas com acesso aos serviços hospitalares, cabendo o atendimento aos demais cidadãos às entidades filantrópicas. (Disponível em: Ministério da Saúde.) A Lei nº 8.080/1990 preconiza como princípios do Sistema Único de Saúde (SUS), EXCETO:",
+    enunciado: "De acordo com a Constituição Federal de 1988 (CF-88), a “saúde é direito de todos e dever do Estado”. No período anterior a CF-88, o sistema público de saúde prestava assistência apenas aos trabalhadores vinculados à Previdência Social, aproximadamente 30 milhões de pessoas com acesso aos serviços hospitalares, cabendo o atendimento aos demais cidadãos às entidades filantrópicas. (Disponível em: Ministério da Saúde.) A Lei nº 8.080/1990 preconiza como princípios do Sistema Único de Saúde (SUS), EXCETO:",
     alternativas: [
       "Igualdade.",
       "Centralidade.",
@@ -945,10 +945,10 @@ const QUESTOES_SESAUAL_LOTE161 = [
   },
   {
     id: "SUS-340", disciplina: "Legislação Aplicada ao SUS", assunto: "Disposições gerais, objetivos e campo de atuação (Lei 8.080, arts. 2º a 6º)", subassunto: "Art. 2º — dever do Estado",
-    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "banca não identificada no material — questão do material Estratégia (Legislação SUS, Aula 03)",
+    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2023,
+    origem: "INSTITUTO AOCP / SESA-BA / 2023 — questão do material Estratégia (Legislação SUS, Aula 03)",
     tipo: "ME", dificuldade: 2, tempoIdealSeg: 150, probReaparecer: 0.65,
-    enunciado: "INSTITUTO AOCP / SESA-BA / 2023 - Em relação à Lei n° 8.080/1990, assinale a alternativa correta.",
+    enunciado: "Em relação à Lei n° 8.080/1990, assinale a alternativa correta.",
     alternativas: [
       "A saúde é um direito fundamental do ser humano, devendo o Estado prover as condições dispensáveis ao seu pleno exercício.",
       "O dever do Estado de garantir a saúde não exclui o das pessoas, da família, das empresas e da sociedade.",
@@ -972,7 +972,7 @@ const QUESTOES_SESAUAL_LOTE161 = [
   {
     id: "SUS-341", disciplina: "Legislação Aplicada ao SUS", assunto: "Disposições gerais, objetivos e campo de atuação (Lei 8.080, arts. 2º a 6º)", subassunto: "Art. 2º — dever do Estado",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "Adaptada de banca não identificada no material (múltipla escolha convertida em C/E pelo QuestLab; base: Estratégia, Legislação SUS, Aula 03)",
+    origem: "Adaptada de INSTITUTO AOCP / SESA-BA / 2023 (múltipla escolha convertida em C/E pelo QuestLab; base: Estratégia, Legislação SUS, Aula 03)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 85, probReaparecer: 0.7,
     enunciado: "A formulação e a execução da política de sangue e seus derivados estão incluídas no campo de atuação do SUS, assim como a vigilância nutricional e a orientação alimentar.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "política de sangue",
@@ -990,10 +990,10 @@ const QUESTOES_SESAUAL_LOTE161 = [
   },
   {
     id: "SUS-342", disciplina: "Legislação Aplicada ao SUS", assunto: "Competências das três esferas (Lei 8.080, arts. 15 a 18)", subassunto: "Atribuições comuns (art. 15)",
-    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "banca não identificada no material — questão do material Estratégia (Legislação SUS, Aula 03)",
+    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2023,
+    origem: "BRB / Prefeitura de Borda da Mata - MG / 2023 — questão do material Estratégia (Legislação SUS, Aula 03)",
     tipo: "ME", dificuldade: 3, tempoIdealSeg: 170, probReaparecer: 0.65,
-    enunciado: "BRB / Prefeitura de Borda da Mata - MG / 2023 - Conforme a Lei nº 8.080/90, a União, os Estados, o Distrito Federal e os Municípios exercerão, em seu âmbito administrativo, a seguinte atribuição:",
+    enunciado: "Conforme a Lei nº 8.080/90, a União, os Estados, o Distrito Federal e os Municípios exercerão, em seu âmbito administrativo, a seguinte atribuição:",
     alternativas: [
       "Participação na formulação e na execução da política de formação e desenvolvimento de recursos humanos para a saúde.",
       "Promover articulação com os órgãos educacionais e de fiscalização do exercício profissional, bem como com entidades representativas de formação de recursos humanos na área de saúde.",
@@ -1016,10 +1016,10 @@ const QUESTOES_SESAUAL_LOTE161 = [
   },
   {
     id: "SUS-343", disciplina: "Legislação Aplicada ao SUS", assunto: "Competências das três esferas (Lei 8.080, arts. 15 a 18)", subassunto: "Direção municipal — exceto",
-    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "banca não identificada no material — questão do material Estratégia (Legislação SUS, Aula 03)",
+    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2023,
+    origem: "FUNDEP (Gestão de Concursos) / Câmara de Contagem - MG / 2023 — questão do material Estratégia (Legislação SUS, Aula 03)",
     tipo: "ME", dificuldade: 2, tempoIdealSeg: 150, probReaparecer: 0.65,
-    enunciado: "FUNDEP (Gestão de Concursos) / Câmara de Contagem - MG / 2023 - Com base no disposto pela Lei nº 8080, de setembro de 1990, compete à direção municipal do Sistema de Saúde (SUS), exceto:",
+    enunciado: "Com base no disposto pela Lei nº 8080, de setembro de 1990, compete à direção municipal do Sistema de Saúde (SUS), exceto:",
     alternativas: [
       "Formular, avaliar e apoiar políticas de alimentação e nutrição.",
       "Dar execução, no âmbito municipal, à política de insumos e equipamentos para a saúde.",
@@ -1042,7 +1042,7 @@ const QUESTOES_SESAUAL_LOTE161 = [
   {
     id: "SUS-344", disciplina: "Legislação Aplicada ao SUS", assunto: "Competências das três esferas (Lei 8.080, arts. 15 a 18)", subassunto: "Direção municipal — exceto",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "Adaptada de banca não identificada no material (múltipla escolha convertida em C/E pelo QuestLab; base: Estratégia, Legislação SUS, Aula 03)",
+    origem: "Adaptada de FUNDEP (Gestão de Concursos) / Câmara de Contagem - MG / 2023 (múltipla escolha convertida em C/E pelo QuestLab; base: Estratégia, Legislação SUS, Aula 03)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 85, probReaparecer: 0.7,
     enunciado: "Compete à direção municipal do SUS gerir laboratórios públicos de saúde e hemocentros, bem como formar consórcios administrativos intermunicipais.",
     gabarito: "C", pegadinha: "troca-sujeito", palavraChave: "gerir laboratórios e hemocentros",
@@ -1061,7 +1061,7 @@ const QUESTOES_SESAUAL_LOTE161 = [
   {
     id: "SUS-345", disciplina: "Legislação Aplicada ao SUS", assunto: "Competências das três esferas (Lei 8.080, arts. 15 a 18)", subassunto: "Direção municipal — exceto",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "Adaptada de banca não identificada no material (múltipla escolha convertida em C/E pelo QuestLab; base: Estratégia, Legislação SUS, Aula 03)",
+    origem: "Adaptada de FUNDEP (Gestão de Concursos) / Câmara de Contagem - MG / 2023 (múltipla escolha convertida em C/E pelo QuestLab; base: Estratégia, Legislação SUS, Aula 03)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 100, probReaparecer: 0.7,
     enunciado: "Compete à direção municipal do SUS formular, avaliar e apoiar as políticas de alimentação e nutrição, cabendo à direção nacional executar, em caráter complementar, os serviços de alimentação e nutrição nos municípios.",
     gabarito: "E", pegadinha: "troca-sujeito", palavraChave: "direção nacional formula",
@@ -1079,10 +1079,10 @@ const QUESTOES_SESAUAL_LOTE161 = [
   },
   {
     id: "SUS-346", disciplina: "Legislação Aplicada ao SUS", assunto: "Disposições gerais, objetivos e campo de atuação (Lei 8.080, arts. 2º a 6º)", subassunto: "Arts. 2º e 3º",
-    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "banca não identificada no material — questão do material Estratégia (Legislação SUS, Aula 03)",
+    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2023,
+    origem: "FGV / MPE-SP / 2023 — questão do material Estratégia (Legislação SUS, Aula 03)",
     tipo: "ME", dificuldade: 1, tempoIdealSeg: 130, probReaparecer: 0.65,
-    enunciado: "FGV / MPE-SP / 2023 - A Lei nº 8.080/90 (Lei Orgânica da Saúde), sancionada em 1990, regula as ações e serviços de saúde em todo o território nacional e estabelece, entre outras coisas, os princípios, as diretrizes e os objetivos do Sistema Único de Saúde (SUS). Avalie se as afirmativas a seguir condizem com o disposto na lei. I. A saúde é um direito fundamental do ser humano, devendo o Estado prover as condições indispensáveis ao seu pleno exercício. II. O dever do Estado de garantir a saúde consiste na formulação e execução de políticas econômicas e sociais que visem à redução de riscos de doenças e de outros agravos e no estabelecimento de condições que assegurem acesso universal e igualitário às ações e aos serviços para a sua promoção, proteção e recuperação. III. O dever do Estado não exclui o das pessoas, da família, das empresas e da sociedade. IV. A saúde tem como fatores determinantes e condicionantes, entre outros, a alimentação, a moradia, o saneamento básico, o meio ambiente, o trabalho, a renda, a educação, o transporte, o lazer e o acesso aos bens e serviços essenciais; os níveis de saúde da população expressam a organização social e econômica do País. Estão corretas as afirmativas",
+    enunciado: "A Lei nº 8.080/90 (Lei Orgânica da Saúde), sancionada em 1990, regula as ações e serviços de saúde em todo o território nacional e estabelece, entre outras coisas, os princípios, as diretrizes e os objetivos do Sistema Único de Saúde (SUS). Avalie se as afirmativas a seguir condizem com o disposto na lei. I. A saúde é um direito fundamental do ser humano, devendo o Estado prover as condições indispensáveis ao seu pleno exercício. II. O dever do Estado de garantir a saúde consiste na formulação e execução de políticas econômicas e sociais que visem à redução de riscos de doenças e de outros agravos e no estabelecimento de condições que assegurem acesso universal e igualitário às ações e aos serviços para a sua promoção, proteção e recuperação. III. O dever do Estado não exclui o das pessoas, da família, das empresas e da sociedade. IV. A saúde tem como fatores determinantes e condicionantes, entre outros, a alimentação, a moradia, o saneamento básico, o meio ambiente, o trabalho, a renda, a educação, o transporte, o lazer e o acesso aos bens e serviços essenciais; os níveis de saúde da população expressam a organização social e econômica do País. Estão corretas as afirmativas",
     alternativas: [
       "I, II, III e IV.",
       "I, II e III, apenas.",
@@ -1106,7 +1106,7 @@ const QUESTOES_SESAUAL_LOTE161 = [
   {
     id: "SUS-347", disciplina: "Legislação Aplicada ao SUS", assunto: "Disposições gerais, objetivos e campo de atuação (Lei 8.080, arts. 2º a 6º)", subassunto: "Arts. 2º e 3º",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "Adaptada de banca não identificada no material (múltipla escolha convertida em C/E pelo QuestLab; base: Estratégia, Legislação SUS, Aula 03)",
+    origem: "Adaptada de FGV / MPE-SP / 2023 (múltipla escolha convertida em C/E pelo QuestLab; base: Estratégia, Legislação SUS, Aula 03)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 100, probReaparecer: 0.7,
     enunciado: "A Lei 8.080/1990 indica, entre os fatores determinantes e condicionantes da saúde, a atividade física, além da alimentação, da moradia, do saneamento básico, do meio ambiente, do trabalho, da renda, da educação, do transporte e do lazer.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "atividade física",
@@ -1125,7 +1125,7 @@ const QUESTOES_SESAUAL_LOTE161 = [
   {
     id: "SUS-348", disciplina: "Legislação Aplicada ao SUS", assunto: "Disposições gerais, objetivos e campo de atuação (Lei 8.080, arts. 2º a 6º)", subassunto: "Arts. 2º e 3º",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "Adaptada de banca não identificada no material (múltipla escolha convertida em C/E pelo QuestLab; base: Estratégia, Legislação SUS, Aula 03)",
+    origem: "Adaptada de FGV / MPE-SP / 2023 (múltipla escolha convertida em C/E pelo QuestLab; base: Estratégia, Legislação SUS, Aula 03)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 85, probReaparecer: 0.7,
     enunciado: "Os níveis de saúde da população expressam a organização social e econômica do País, sendo determinantes e condicionantes da saúde unicamente os fatores listados de forma taxativa no art. 3º da Lei 8.080/1990.",
     gabarito: "E", pegadinha: "termo-absoluto", palavraChave: "entre outros",
@@ -1143,10 +1143,10 @@ const QUESTOES_SESAUAL_LOTE161 = [
   },
   {
     id: "SUS-349", disciplina: "Legislação Aplicada ao SUS", assunto: "Princípios e diretrizes do SUS (Lei 8.080, arts. 7º e 8º)", subassunto: "Cinco princípios",
-    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "banca não identificada no material — questão do material Estratégia (Legislação SUS, Aula 03)",
+    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2023,
+    origem: "OBJETIVA / Prefeitura de Sagrada Família - RS / 2023 — questão do material Estratégia (Legislação SUS, Aula 03)",
     tipo: "ME", dificuldade: 1, tempoIdealSeg: 130, probReaparecer: 0.65,
-    enunciado: "OBJETIVA / Prefeitura de Sagrada Família - RS / 2023 - São considerados como os cinco princípios do Sistema Único de Saúde (SUS):",
+    enunciado: "São considerados como os cinco princípios do Sistema Único de Saúde (SUS):",
     alternativas: [
       "Universalidade, equidade, integralidade, descentralização e participação popular.",
       "Universalidade, igualdade de direitos, centralização e não participação popular.",
@@ -1169,10 +1169,10 @@ const QUESTOES_SESAUAL_LOTE161 = [
   },
   {
     id: "SUS-350", disciplina: "Legislação Aplicada ao SUS", assunto: "Competências das três esferas (Lei 8.080, arts. 15 a 18)", subassunto: "Competências do município",
-    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "banca não identificada no material — questão do material Estratégia (Legislação SUS, Aula 03)",
+    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2023,
+    origem: "Quadrix / IIER - SP / 2023 — questão do material Estratégia (Legislação SUS, Aula 03)",
     tipo: "ME", dificuldade: 2, tempoIdealSeg: 150, probReaparecer: 0.65,
-    enunciado: "Quadrix / IIER - SP / 2023 - A Lei n.° 8.080/1990 dispõe sobre as condições para promoção, proteção e recuperação da saúde e sobre organização e funcionamento dos serviços correspondentes, definindo as competências de cada instância de gestão (federal, estadual, distrital e municipal). Nesse sentido, as competências específicas dos municípios incluem:",
+    enunciado: "A Lei n.° 8.080/1990 dispõe sobre as condições para promoção, proteção e recuperação da saúde e sobre organização e funcionamento dos serviços correspondentes, definindo as competências de cada instância de gestão (federal, estadual, distrital e municipal). Nesse sentido, as competências específicas dos municípios incluem:",
     alternativas: [
       "coordenar a rede de laboratórios de saúde pública e hemocentros e gerir as unidades que permanecerem em sua organização administrativa.",
       "planejar, organizar, controlar e avaliar as ações e os serviços de saúde e gerir e executar os serviços públicos de saúde da sua jurisdição.",
@@ -1195,10 +1195,10 @@ const QUESTOES_SESAUAL_LOTE161 = [
   },
   {
     id: "SUS-351", disciplina: "Legislação Aplicada ao SUS", assunto: "Princípios e diretrizes do SUS (Lei 8.080, arts. 7º e 8º)", subassunto: "Princípios — conceitos",
-    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "banca não identificada no material — questão do material Estratégia (Legislação SUS, Aula 03)",
+    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2023,
+    origem: "Quadrix / IIER - SP / 2023 — questão do material Estratégia (Legislação SUS, Aula 03)",
     tipo: "ME", dificuldade: 2, tempoIdealSeg: 150, probReaparecer: 0.65,
-    enunciado: "Quadrix / IIER - SP / 2023 - Quanto aos princípios do Sistema Único de Saúde (SUS), assinale a alternativa correta.",
+    enunciado: "Quanto aos princípios do Sistema Único de Saúde (SUS), assinale a alternativa correta.",
     alternativas: [
       "O princípio da universalidade refere-se à lógica de funcionamento dos serviços de saúde que devem priorizar os usuários devidamente cadastrados pelos agentes comunitários de saúde.",
       "O princípio da equidade refere-se a ofertar o cuidado, reconhecendo as diferenças nas condições de vida e saúde e de acordo com as necessidades das pessoas, considerando que o direito à saúde passa pelas diferenciações sociais e deve atender à diversidade.",
@@ -1278,10 +1278,10 @@ const QUESTOES_SESAUAL_LOTE161 = [
   },
   {
     id: "SUS-355", disciplina: "Legislação Aplicada ao SUS", assunto: "Princípios e diretrizes do SUS (Lei 8.080, arts. 7º e 8º)", subassunto: "Resolubilidade",
-    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "banca não identificada no material — questão do material Estratégia (Legislação SUS, Aula 03)",
+    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2023,
+    origem: "IBFC / Prefeitura de Cuiabá - MT / 2023 — questão do material Estratégia (Legislação SUS, Aula 03)",
     tipo: "ME", dificuldade: 1, tempoIdealSeg: 130, probReaparecer: 0.65,
-    enunciado: "IBFC / Prefeitura de Cuiabá - MT / 2023 - A exigência de que, quando um indivíduo busca o atendimento ou quando surge um problema de impacto coletivo sobre a saúde, o serviço correspondente esteja capacitado para enfrentá-lo e resolvê-lo até o nível da sua competência, corresponde a um dos princípios que regem a organização do Sistema Único de Saúde (SUS), sendo correto afirmar que se trata do princípio da:",
+    enunciado: "A exigência de que, quando um indivíduo busca o atendimento ou quando surge um problema de impacto coletivo sobre a saúde, o serviço correspondente esteja capacitado para enfrentá-lo e resolvê-lo até o nível da sua competência, corresponde a um dos princípios que regem a organização do Sistema Único de Saúde (SUS), sendo correto afirmar que se trata do princípio da:",
     alternativas: [
       "Centralização",
       "Resolubilidade",
@@ -1304,7 +1304,7 @@ const QUESTOES_SESAUAL_LOTE161 = [
   {
     id: "SUS-356", disciplina: "Legislação Aplicada ao SUS", assunto: "Princípios e diretrizes do SUS (Lei 8.080, arts. 7º e 8º)", subassunto: "Resolubilidade",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "Adaptada de banca não identificada no material (múltipla escolha convertida em C/E pelo QuestLab; base: Estratégia, Legislação SUS, Aula 03)",
+    origem: "Adaptada de IBFC / Prefeitura de Cuiabá - MT / 2023 (múltipla escolha convertida em C/E pelo QuestLab; base: Estratégia, Legislação SUS, Aula 03)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 85, probReaparecer: 0.7,
     enunciado: "A capacidade de resolução dos serviços em todos os níveis de assistência e a organização dos serviços públicos de modo a evitar duplicidade de meios para fins idênticos figuram entre os princípios do SUS na Lei 8.080/1990.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "evitar duplicidade",
@@ -1322,8 +1322,8 @@ const QUESTOES_SESAUAL_LOTE161 = [
   },
   {
     id: "SUS-357", disciplina: "Legislação Aplicada ao SUS", assunto: "Disposições gerais, objetivos e campo de atuação (Lei 8.080, arts. 2º a 6º)", subassunto: "Objetivos do SUS",
-    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "banca não identificada no material — questão do material Estratégia (Legislação SUS, Aula 03)",
+    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2023,
+    origem: "Quadrix / Prefeitura de Alto Paraíso de Goiás - GO / 2023 — questão do material Estratégia (Legislação SUS, Aula 03)",
     tipo: "ME", dificuldade: 2, tempoIdealSeg: 150, probReaparecer: 0.65,
     enunciado: "A Lei n.° 8.080/1990 dispõe sobre as condições para a promoção, a proteção e a recuperação da saúde e sobre a organização e o funcionamento dos serviços correspondentes e dá outras providências. De acordo com essa Lei, é(são) objetivo(s) do SUS a:",
     alternativas: [
@@ -1349,7 +1349,7 @@ const QUESTOES_SESAUAL_LOTE161 = [
   {
     id: "SUS-358", disciplina: "Legislação Aplicada ao SUS", assunto: "Disposições gerais, objetivos e campo de atuação (Lei 8.080, arts. 2º a 6º)", subassunto: "Objetivos do SUS",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "Adaptada de banca não identificada no material (múltipla escolha convertida em C/E pelo QuestLab; base: Estratégia, Legislação SUS, Aula 03)",
+    origem: "Adaptada de Quadrix / Prefeitura de Alto Paraíso de Goiás - GO / 2023 (múltipla escolha convertida em C/E pelo QuestLab; base: Estratégia, Legislação SUS, Aula 03)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 85, probReaparecer: 0.7,
     enunciado: "A saúde do trabalhador, no campo de atuação do SUS, abrange a assistência ao trabalhador vítima de acidentes de trabalho ou portador de doença profissional e do trabalho, além da participação em estudos e pesquisas sobre riscos e agravos.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "acidente de trabalho",
@@ -1368,7 +1368,7 @@ const QUESTOES_SESAUAL_LOTE161 = [
   {
     id: "SUS-359", disciplina: "Legislação Aplicada ao SUS", assunto: "Disposições gerais, objetivos e campo de atuação (Lei 8.080, arts. 2º a 6º)", subassunto: "Objetivos do SUS",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "Adaptada de banca não identificada no material (múltipla escolha convertida em C/E pelo QuestLab; base: Estratégia, Legislação SUS, Aula 03)",
+    origem: "Adaptada de Quadrix / Prefeitura de Alto Paraíso de Goiás - GO / 2023 (múltipla escolha convertida em C/E pelo QuestLab; base: Estratégia, Legislação SUS, Aula 03)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 85, probReaparecer: 0.7,
     enunciado: "A fiscalização e a inspeção de alimentos, água e bebidas para consumo humano não integram o campo de atuação do SUS, pois são atribuições privativas da Anvisa, autarquia vinculada ao Ministério da Agricultura e alheia ao sistema.",
     gabarito: "E", pegadinha: "troca-sujeito", palavraChave: "campo de atuação do SUS",
@@ -1386,10 +1386,10 @@ const QUESTOES_SESAUAL_LOTE161 = [
   },
   {
     id: "SUS-360", disciplina: "Legislação Aplicada ao SUS", assunto: "Princípios e diretrizes do SUS (Lei 8.080, arts. 7º e 8º)", subassunto: "Princípios — incorreta (equidade)",
-    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "banca não identificada no material — questão do material Estratégia (Legislação SUS, Aula 03)",
+    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2023,
+    origem: "Avança SP / Prefeitura de São Miguel Arcanjo - SP / 2023 — questão do material Estratégia (Legislação SUS, Aula 03)",
     tipo: "ME", dificuldade: 1, tempoIdealSeg: 130, probReaparecer: 0.65,
-    enunciado: "Avança SP / Prefeitura de São Miguel Arcanjo - SP / 2023 - Com o propósito de promover e proteger a saúde, o Sistema Único de Saúde (SUS) se estruturou com base em princípios estabelecidos pela Constituição Federal de 1988 e pela Lei nº 8.080/1990. Acerca dos princípios e diretrizes do SUS, assinale a alternativa INCORRETA.",
+    enunciado: "Com o propósito de promover e proteger a saúde, o Sistema Único de Saúde (SUS) se estruturou com base em princípios estabelecidos pela Constituição Federal de 1988 e pela Lei nº 8.080/1990. Acerca dos princípios e diretrizes do SUS, assinale a alternativa INCORRETA.",
     alternativas: [
       "O princípio da universalidade estabelece que o SUS deve oferecer atendimento a todas as pessoas, sem exceção ou limitações, garantindo-lhes acesso integral e gratuito aos serviços de saúde necessários.",
       "O princípio que prevê a organização e a participação da comunidade na gestão do SUS envolve a atuação dos Conselhos e Conferências de Saúde, nas esferas nacional, estadual e municipal.",
@@ -1412,10 +1412,10 @@ const QUESTOES_SESAUAL_LOTE161 = [
   },
   {
     id: "SUS-361", disciplina: "Legislação Aplicada ao SUS", assunto: "Serviços privados e participação complementar (Lei 8.080, arts. 20 a 26)", subassunto: "Iniciativa privada — complementar",
-    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "banca não identificada no material — questão do material Estratégia (Legislação SUS, Aula 03)",
+    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2023,
+    origem: "BRB / Prefeitura de Borda da Mata - MG / 2023 — questão do material Estratégia (Legislação SUS, Aula 03)",
     tipo: "ME", dificuldade: 1, tempoIdealSeg: 130, probReaparecer: 0.65,
-    enunciado: "BRB / Prefeitura de Borda da Mata - MG / 2023 - Sobre a Lei 8.080/90, marque a alternativa incorreta:",
+    enunciado: "Sobre a Lei 8.080/90, marque a alternativa incorreta:",
     alternativas: [
       "A saúde é um direito fundamental do ser humano, devendo o Estado prover as condições indispensáveis ao seu pleno exercício.",
       "Esta lei regula, em todo o território nacional, as ações e serviços de saúde, executados isolada ou conjuntamente, em caráter permanente ou eventual, por pessoas naturais ou jurídicas de direito Público ou privado.",
@@ -1439,7 +1439,7 @@ const QUESTOES_SESAUAL_LOTE161 = [
   {
     id: "SUS-362", disciplina: "Legislação Aplicada ao SUS", assunto: "Serviços privados e participação complementar (Lei 8.080, arts. 20 a 26)", subassunto: "Iniciativa privada — complementar",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "Adaptada de banca não identificada no material (múltipla escolha convertida em C/E pelo QuestLab; base: Estratégia, Legislação SUS, Aula 03)",
+    origem: "Adaptada de BRB / Prefeitura de Borda da Mata - MG / 2023 (múltipla escolha convertida em C/E pelo QuestLab; base: Estratégia, Legislação SUS, Aula 03)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 85, probReaparecer: 0.7,
     enunciado: "Incluem-se no SUS as instituições públicas federais, estaduais e municipais de controle de qualidade, pesquisa e produção de insumos, medicamentos, inclusive de sangue e hemoderivados, e de equipamentos para saúde.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "incluídas no SUS",
@@ -1457,10 +1457,10 @@ const QUESTOES_SESAUAL_LOTE161 = [
   },
   {
     id: "SUS-363", disciplina: "Legislação Aplicada ao SUS", assunto: "Organização, direção e gestão (Lei 8.080, arts. 9º a 14-B)", subassunto: "Direção única na União",
-    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "banca não identificada no material — questão do material Estratégia (Legislação SUS, Aula 03)",
+    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2023,
+    origem: "FURB / Prefeitura de Schroeder - SC / 2023 — questão do material Estratégia (Legislação SUS, Aula 03)",
     tipo: "ME", dificuldade: 1, tempoIdealSeg: 130, probReaparecer: 0.65,
-    enunciado: "FURB / Prefeitura de Schroeder - SC / 2023 - A direção do Sistema Único de Saúde (SUS) é única, sendo exercida, no âmbito da União, pelo(a):",
+    enunciado: "A direção do Sistema Único de Saúde (SUS) é única, sendo exercida, no âmbito da União, pelo(a):",
     alternativas: [
       "Secretaria Estadual de Saúde.",
       "Ministério da Saúde.",
@@ -1484,7 +1484,7 @@ const QUESTOES_SESAUAL_LOTE161 = [
   {
     id: "SUS-364", disciplina: "Legislação Aplicada ao SUS", assunto: "Organização, direção e gestão (Lei 8.080, arts. 9º a 14-B)", subassunto: "Direção única na União",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "Adaptada de banca não identificada no material (múltipla escolha convertida em C/E pelo QuestLab; base: Estratégia, Legislação SUS, Aula 03)",
+    origem: "Adaptada de FURB / Prefeitura de Schroeder - SC / 2023 (múltipla escolha convertida em C/E pelo QuestLab; base: Estratégia, Legislação SUS, Aula 03)",
     tipo: "CE", dificuldade: 1, tempoIdealSeg: 70, probReaparecer: 0.7,
     enunciado: "A direção do SUS é única, sendo exercida, no âmbito dos estados e do Distrito Federal, pela respectiva secretaria de saúde ou órgão equivalente e, no âmbito dos municípios, pela respectiva secretaria de saúde ou órgão equivalente.",
     gabarito: "C", pegadinha: "troca-sujeito", palavraChave: "secretaria de saúde ou órgão equivalente",
@@ -1503,7 +1503,7 @@ const QUESTOES_SESAUAL_LOTE161 = [
   {
     id: "SUS-365", disciplina: "Legislação Aplicada ao SUS", assunto: "Organização, direção e gestão (Lei 8.080, arts. 9º a 14-B)", subassunto: "Direção única na União",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "Adaptada de banca não identificada no material (múltipla escolha convertida em C/E pelo QuestLab; base: Estratégia, Legislação SUS, Aula 03)",
+    origem: "Adaptada de FURB / Prefeitura de Schroeder - SC / 2023 (múltipla escolha convertida em C/E pelo QuestLab; base: Estratégia, Legislação SUS, Aula 03)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 100, probReaparecer: 0.7,
     enunciado: "No âmbito dos municípios, a direção única do SUS é exercida pelo conselho municipal de saúde, ao qual compete gerir o fundo municipal e executar os serviços públicos de saúde da sua jurisdição.",
     gabarito: "E", pegadinha: "troca-sujeito", palavraChave: "secretaria municipal",
@@ -1521,10 +1521,10 @@ const QUESTOES_SESAUAL_LOTE161 = [
   },
   {
     id: "SUS-366", disciplina: "Legislação Aplicada ao SUS", assunto: "Disposições gerais, objetivos e campo de atuação (Lei 8.080, arts. 2º a 6º)", subassunto: "Dever do Estado (art. 2º, § 1º)",
-    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "banca não identificada no material — questão do material Estratégia (Legislação SUS, Aula 03)",
+    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2023,
+    origem: "COSEAC / UFF / 2023 — questão do material Estratégia (Legislação SUS, Aula 03)",
     tipo: "ME", dificuldade: 1, tempoIdealSeg: 130, probReaparecer: 0.65,
-    enunciado: "COSEAC / UFF / 2023 - O Sistema Único de Saúde (SUS), através da sua legislação, especificamente na Lei de nº 8.080 de 19 de setembro de 1990, garante que a saúde é um direito fundamental do ser humano, devendo o Estado aparelhar as condições indispensáveis ao seu pleno exercício. Essa garantia do Estado em prover a saúde envolve por exemplo o(a):",
+    enunciado: "O Sistema Único de Saúde (SUS), através da sua legislação, especificamente na Lei de nº 8.080 de 19 de setembro de 1990, garante que a saúde é um direito fundamental do ser humano, devendo o Estado aparelhar as condições indispensáveis ao seu pleno exercício. Essa garantia do Estado em prover a saúde envolve por exemplo o(a):",
     alternativas: [
       "formulação e execução de políticas econômicas e sociais que visem à redução de riscos de doenças e de outros agravos.",
       "estabelecimento de condições que assegurem acesso restrito e não igualitário às ações e aos serviços para a sua promoção, proteção e recuperação.",
@@ -1547,10 +1547,10 @@ const QUESTOES_SESAUAL_LOTE161 = [
   },
   {
     id: "SUS-367", disciplina: "Legislação Aplicada ao SUS", assunto: "Subsistemas e assistência terapêutica (Lei 8.080, arts. 19-A a 19-U)", subassunto: "Lei 8.080 — correta",
-    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "banca não identificada no material — questão do material Estratégia (Legislação SUS, Aula 03)",
+    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2022,
+    origem: "Máxima / Prefeitura de Córrego Novo - MG / 2022 — questão do material Estratégia (Legislação SUS, Aula 03)",
     tipo: "ME", dificuldade: 2, tempoIdealSeg: 150, probReaparecer: 0.65,
-    enunciado: "Máxima / Prefeitura de Córrego Novo - MG / 2022 - A Lei 8.080/90 regula, em todo o território nacional, as ações e serviços de saúde, executados isolada ou conjuntamente, em caráter permanente ou eventual, por pessoas naturais ou jurídicas de direito público ou privado. De acordo com a Lei 8.080/90, é CORRETO afirmar que:",
+    enunciado: "A Lei 8.080/90 regula, em todo o território nacional, as ações e serviços de saúde, executados isolada ou conjuntamente, em caráter permanente ou eventual, por pessoas naturais ou jurídicas de direito público ou privado. De acordo com a Lei 8.080/90, é CORRETO afirmar que:",
     alternativas: [
       "A saúde é um direito fundamental do ser humano, devendo o Estado prover as condições indispensáveis ao seu pleno exercício. O dever do Estado exclui o das pessoas, da família, das empresas e da sociedade.",
       "A vigilância epidemiológica abrange o controle da prestação de serviços que se relacionam direta ou indiretamente com a saúde.",
@@ -1572,10 +1572,10 @@ const QUESTOES_SESAUAL_LOTE161 = [
   },
   {
     id: "SUS-368", disciplina: "Legislação Aplicada ao SUS", assunto: "Competências das três esferas (Lei 8.080, arts. 15 a 18)", subassunto: "Direção municipal — correta",
-    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "banca não identificada no material — questão do material Estratégia (Legislação SUS, Aula 03)",
+    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2022,
+    origem: "FAUEL / Prefeitura de Paranavaí - PR / 2022 — questão do material Estratégia (Legislação SUS, Aula 03)",
     tipo: "ME", dificuldade: 3, tempoIdealSeg: 170, probReaparecer: 0.65,
-    enunciado: "FAUEL / Prefeitura de Paranavaí - PR / 2022 - Com base na Lei 8.080/90, é CORRETO afirmar que à direção municipal do Sistema Único de Saúde (SUS) compete:",
+    enunciado: "Com base na Lei 8.080/90, é CORRETO afirmar que à direção municipal do Sistema Único de Saúde (SUS) compete:",
     alternativas: [
       "formular, avaliar e apoiar políticas de alimentação e nutrição.",
       "participar da execução, controle e avaliação das ações referentes às condições e aos ambientes de trabalho.",
@@ -1598,7 +1598,7 @@ const QUESTOES_SESAUAL_LOTE161 = [
   {
     id: "SUS-369", disciplina: "Legislação Aplicada ao SUS", assunto: "Competências das três esferas (Lei 8.080, arts. 15 a 18)", subassunto: "Direção municipal — correta",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "Adaptada de banca não identificada no material (múltipla escolha convertida em C/E pelo QuestLab; base: Estratégia, Legislação SUS, Aula 03)",
+    origem: "Adaptada de FAUEL / Prefeitura de Paranavaí - PR / 2022 (múltipla escolha convertida em C/E pelo QuestLab; base: Estratégia, Legislação SUS, Aula 03)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 100, probReaparecer: 0.7,
     enunciado: "Compete à direção estadual do SUS coordenar e, em caráter complementar, executar ações e serviços de vigilância epidemiológica, de vigilância sanitária, de alimentação e nutrição e de saúde do trabalhador.",
     gabarito: "C", pegadinha: "troca-sujeito", palavraChave: "coordenar e, complementarmente, executar",
@@ -1616,10 +1616,10 @@ const QUESTOES_SESAUAL_LOTE161 = [
   },
   {
     id: "SUS-370", disciplina: "Legislação Aplicada ao SUS", assunto: "Serviços privados e participação complementar (Lei 8.080, arts. 20 a 26)", subassunto: "Capital estrangeiro — incorreta",
-    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "banca não identificada no material — questão do material Estratégia (Legislação SUS, Aula 03)",
+    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2022,
+    origem: "FAUEL / Prefeitura de Paranavaí - PR / 2022 — questão do material Estratégia (Legislação SUS, Aula 03)",
     tipo: "ME", dificuldade: 3, tempoIdealSeg: 170, probReaparecer: 0.65,
-    enunciado: "FAUEL / Prefeitura de Paranavaí - PR / 2022 - A respeito da participação da iniciativa privada na assistência à saúde, assinale a alternativa INCORRETA, conforme a Lei 8.080/90.",
+    enunciado: "A respeito da participação da iniciativa privada na assistência à saúde, assinale a alternativa INCORRETA, conforme a Lei 8.080/90.",
     alternativas: [
       "A assistência à saúde é livre à iniciativa privada.",
       "Na prestação de serviços privados de assistência à saúde, serão observados os princípios éticos e as normas expedidas pelo órgão de direção do Sistema Único de Saúde (SUS) quanto às condições para seu funcionamento.",
@@ -1642,7 +1642,7 @@ const QUESTOES_SESAUAL_LOTE161 = [
   {
     id: "SUS-371", disciplina: "Legislação Aplicada ao SUS", assunto: "Serviços privados e participação complementar (Lei 8.080, arts. 20 a 26)", subassunto: "Capital estrangeiro — incorreta",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "Adaptada de banca não identificada no material (múltipla escolha convertida em C/E pelo QuestLab; base: Estratégia, Legislação SUS, Aula 03)",
+    origem: "Adaptada de FAUEL / Prefeitura de Paranavaí - PR / 2022 (múltipla escolha convertida em C/E pelo QuestLab; base: Estratégia, Legislação SUS, Aula 03)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 100, probReaparecer: 0.7,
     enunciado: "É permitida a participação direta ou indireta, inclusive controle, de empresas ou de capital estrangeiro na assistência à saúde para instalar, operacionalizar ou explorar hospital geral, inclusive filantrópico, hospital especializado, policlínica, clínica geral e clínica especializada.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "capital estrangeiro permitido",
@@ -1660,10 +1660,10 @@ const QUESTOES_SESAUAL_LOTE161 = [
   },
   {
     id: "SUS-372", disciplina: "Legislação Aplicada ao SUS", assunto: "Competências das três esferas (Lei 8.080, arts. 15 a 18)", subassunto: "Lei 8.080 — de acordo (hemocentros)",
-    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "banca não identificada no material — questão do material Estratégia (Legislação SUS, Aula 03)",
+    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2023,
+    origem: "VUNESP / Câmara de Marília - SP / 2023 — questão do material Estratégia (Legislação SUS, Aula 03)",
     tipo: "ME", dificuldade: 2, tempoIdealSeg: 150, probReaparecer: 0.65,
-    enunciado: "VUNESP / Câmara de Marília - SP / 2023 - Assinale a alternativa que está de acordo com a Lei n° 8.080/90.",
+    enunciado: "Assinale a alternativa que está de acordo com a Lei n° 8.080/90.",
     alternativas: [
       "Caberá à União e aos Estados, com dotações próprias, financiar o Subsistema de Atenção à Saúde Indígena.",
       "No âmbito do Sistema Único de Saúde, é vedada a internação domiciliar.",
@@ -1687,7 +1687,7 @@ const QUESTOES_SESAUAL_LOTE161 = [
   {
     id: "SUS-373", disciplina: "Legislação Aplicada ao SUS", assunto: "Competências das três esferas (Lei 8.080, arts. 15 a 18)", subassunto: "Lei 8.080 — de acordo (hemocentros)",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "Adaptada de banca não identificada no material (múltipla escolha convertida em C/E pelo QuestLab; base: Estratégia, Legislação SUS, Aula 03)",
+    origem: "Adaptada de VUNESP / Câmara de Marília - SP / 2023 (múltipla escolha convertida em C/E pelo QuestLab; base: Estratégia, Legislação SUS, Aula 03)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 100, probReaparecer: 0.7,
     enunciado: "Em situações epidemiológicas que caracterizem emergência em saúde pública, poderá ser adotado procedimento simplificado para a remessa de patrimônio genético ao exterior, na forma do regulamento.",
     gabarito: "C", pegadinha: "troca-conceito", palavraChave: "procedimento simplificado",
@@ -1705,10 +1705,10 @@ const QUESTOES_SESAUAL_LOTE161 = [
   },
   {
     id: "SUS-374", disciplina: "Legislação Aplicada ao SUS", assunto: "Telessaúde (Lei 8.080, arts. 26-A a 26-H)", subassunto: "Telessaúde — abrangência",
-    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "banca não identificada no material — questão do material Estratégia (Legislação SUS, Aula 03)",
+    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2023,
+    origem: "VUNESP / Prefeitura de São José do Rio Preto - SP / 2023 — questão do material Estratégia (Legislação SUS, Aula 03)",
     tipo: "ME", dificuldade: 2, tempoIdealSeg: 150, probReaparecer: 0.65,
-    enunciado: "VUNESP / Prefeitura de São José do Rio Preto - SP / 2023 - Com relação à prática da telessaúde, assinale a alternativa correta, com base na Lei Federal nº 8.080/90.",
+    enunciado: "Com relação à prática da telessaúde, assinale a alternativa correta, com base na Lei Federal nº 8.080/90.",
     alternativas: [
       "Embora seja permitida para a saúde privada, a prestação remota de serviços de saúde é vedada no âmbito do Sistema Único de Saúde.",
       "Consiste na prestação remota de serviços relacionados a todas as profissões da área da saúde regulamentadas pelos órgãos competentes do Poder Executivo federal.",
@@ -1732,7 +1732,7 @@ const QUESTOES_SESAUAL_LOTE161 = [
   {
     id: "SUS-375", disciplina: "Legislação Aplicada ao SUS", assunto: "Telessaúde (Lei 8.080, arts. 26-A a 26-H)", subassunto: "Telessaúde — abrangência",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "Adaptada de banca não identificada no material (múltipla escolha convertida em C/E pelo QuestLab; base: Estratégia, Legislação SUS, Aula 03)",
+    origem: "Adaptada de VUNESP / Prefeitura de São José do Rio Preto - SP / 2023 (múltipla escolha convertida em C/E pelo QuestLab; base: Estratégia, Legislação SUS, Aula 03)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 100, probReaparecer: 0.7,
     enunciado: "É dispensada a inscrição secundária ou complementar do profissional de saúde que exercer a profissão em outra jurisdição exclusivamente por meio da modalidade telessaúde.",
     gabarito: "C", pegadinha: "termo-absoluto", palavraChave: "exclusivamente por telessaúde",
@@ -1751,7 +1751,7 @@ const QUESTOES_SESAUAL_LOTE161 = [
   {
     id: "SUS-376", disciplina: "Legislação Aplicada ao SUS", assunto: "Telessaúde (Lei 8.080, arts. 26-A a 26-H)", subassunto: "Telessaúde — abrangência",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "Adaptada de banca não identificada no material (múltipla escolha convertida em C/E pelo QuestLab; base: Estratégia, Legislação SUS, Aula 03)",
+    origem: "Adaptada de VUNESP / Prefeitura de São José do Rio Preto - SP / 2023 (múltipla escolha convertida em C/E pelo QuestLab; base: Estratégia, Legislação SUS, Aula 03)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 100, probReaparecer: 0.7,
     enunciado: "A telessaúde, conforme a Lei 8.080/1990, envolve a transmissão segura de dados e informações de saúde por meio de chamadas de voz e vídeo, vedado o atendimento conduzido por mensagens escritas, e os atos nela praticados têm validade restrita ao estado de inscrição do profissional.",
     gabarito: "E", pegadinha: "restricao-indevida", palavraChave: "textos, sons, imagens",
@@ -1769,10 +1769,10 @@ const QUESTOES_SESAUAL_LOTE161 = [
   },
   {
     id: "SUS-377", disciplina: "Legislação Aplicada ao SUS", assunto: "Princípios e diretrizes do SUS (Lei 8.080, arts. 7º e 8º)", subassunto: "Universalidade — sem distinção",
-    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "banca não identificada no material — questão do material Estratégia (Legislação SUS, Aula 03)",
+    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2023,
+    origem: "VUNESP / Prefeitura de Pindamonhangaba - SP / 2023 — questão do material Estratégia (Legislação SUS, Aula 03)",
     tipo: "ME", dificuldade: 2, tempoIdealSeg: 150, probReaparecer: 0.65,
-    enunciado: "VUNESP / Prefeitura de Pindamonhangaba - SP / 2023 - Ao se afirmar que o Sistema Único de Saúde – SUS garante o direito à vida e à igualdade de acesso sem distinção de raça, sexo, religião ou qualquer forma de discriminação, refere-se ao princípio da:",
+    enunciado: "Ao se afirmar que o Sistema Único de Saúde – SUS garante o direito à vida e à igualdade de acesso sem distinção de raça, sexo, religião ou qualquer forma de discriminação, refere-se ao princípio da:",
     alternativas: [
       "transversalidade.",
       "equidade.",
@@ -1795,10 +1795,10 @@ const QUESTOES_SESAUAL_LOTE161 = [
   },
   {
     id: "SUS-378", disciplina: "Legislação Aplicada ao SUS", assunto: "Organização, direção e gestão (Lei 8.080, arts. 9º a 14-B)", subassunto: "Comissão Intergestores Bipartite",
-    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "banca não identificada no material — questão do material Estratégia (Legislação SUS, Aula 03)",
+    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2023,
+    origem: "VUNESP / Prefeitura de Pindamonhangaba - SP / 2023 — questão do material Estratégia (Legislação SUS, Aula 03)",
     tipo: "ME", dificuldade: 1, tempoIdealSeg: 130, probReaparecer: 0.65,
-    enunciado: "VUNESP / Prefeitura de Pindamonhangaba - SP / 2023 - As Comissões Intergestores Bipartite – CIB são instâncias de representação, monitoramento e pactuação política e administrativa utilizadas pelo SUS. Elas são constituídas por representantes dos gestores:",
+    enunciado: "As Comissões Intergestores Bipartite – CIB são instâncias de representação, monitoramento e pactuação política e administrativa utilizadas pelo SUS. Elas são constituídas por representantes dos gestores:",
     alternativas: [
       "municipais e federais.",
       "municipais e estaduais.",
@@ -1822,7 +1822,7 @@ const QUESTOES_SESAUAL_LOTE161 = [
   {
     id: "SUS-379", disciplina: "Legislação Aplicada ao SUS", assunto: "Organização, direção e gestão (Lei 8.080, arts. 9º a 14-B)", subassunto: "Comissão Intergestores Bipartite",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "Adaptada de banca não identificada no material (múltipla escolha convertida em C/E pelo QuestLab; base: Estratégia, Legislação SUS, Aula 03)",
+    origem: "Adaptada de VUNESP / Prefeitura de Pindamonhangaba - SP / 2023 (múltipla escolha convertida em C/E pelo QuestLab; base: Estratégia, Legislação SUS, Aula 03)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 85, probReaparecer: 0.7,
     enunciado: "As Comissões Intergestores Bipartite e Tripartite são reconhecidas pela Lei 8.080/1990 como foros de negociação e pactuação entre gestores quanto aos aspectos operacionais do SUS.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "negociação e pactuação",
@@ -1841,7 +1841,7 @@ const QUESTOES_SESAUAL_LOTE161 = [
   {
     id: "SUS-380", disciplina: "Legislação Aplicada ao SUS", assunto: "Organização, direção e gestão (Lei 8.080, arts. 9º a 14-B)", subassunto: "Comissão Intergestores Bipartite",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "Adaptada de banca não identificada no material (múltipla escolha convertida em C/E pelo QuestLab; base: Estratégia, Legislação SUS, Aula 03)",
+    origem: "Adaptada de VUNESP / Prefeitura de Pindamonhangaba - SP / 2023 (múltipla escolha convertida em C/E pelo QuestLab; base: Estratégia, Legislação SUS, Aula 03)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 100, probReaparecer: 0.7,
     enunciado: "A Comissão Intergestores Bipartite é integrada por representantes dos gestores municipais e federal, cabendo-lhe pactuar os aspectos operacionais do SUS em cada estado sem a participação da secretaria estadual de saúde.",
     gabarito: "E", pegadinha: "troca-sujeito", palavraChave: "estaduais e municipais",
@@ -1859,10 +1859,10 @@ const QUESTOES_SESAUAL_LOTE161 = [
   },
   {
     id: "SUS-381", disciplina: "Legislação Aplicada ao SUS", assunto: "Princípios e diretrizes do SUS (Lei 8.080, arts. 7º e 8º)", subassunto: "Caso — estrangeiro com dor precordial",
-    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "banca não identificada no material — questão do material Estratégia (Legislação SUS, Aula 03)",
+    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2023,
+    origem: "VUNESP / Prefeitura de Pindamonhangaba - SP / 2023 — questão do material Estratégia (Legislação SUS, Aula 03)",
     tipo: "ME", dificuldade: 2, tempoIdealSeg: 150, probReaparecer: 0.65,
-    enunciado: "VUNESP / Prefeitura de Pindamonhangaba - SP / 2023 - Um homem de nacionalidade boliviana, em situação irregular do ponto de vista da imigração, chega a uma unidade de saúde queixando-se de dor precordial intensa. A recepção o coloca para ser atendido pelo médico antes dos demais pacientes que já tinham consultas de rotina, agendadas previamente. É correto afirmar que:",
+    enunciado: "Um homem de nacionalidade boliviana, em situação irregular do ponto de vista da imigração, chega a uma unidade de saúde queixando-se de dor precordial intensa. A recepção o coloca para ser atendido pelo médico antes dos demais pacientes que já tinham consultas de rotina, agendadas previamente. É correto afirmar que:",
     alternativas: [
       "ele não poderia ter sido atendido, por ser estrangeiro em situação irregular.",
       "ele não poderia ter sido atendido antes dos pacientes que já aguardavam o atendimento na unidade, com consultas previamente agendadas.",
@@ -1886,7 +1886,7 @@ const QUESTOES_SESAUAL_LOTE161 = [
   {
     id: "SUS-382", disciplina: "Legislação Aplicada ao SUS", assunto: "Princípios e diretrizes do SUS (Lei 8.080, arts. 7º e 8º)", subassunto: "Caso — estrangeiro com dor precordial",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "Adaptada de banca não identificada no material (múltipla escolha convertida em C/E pelo QuestLab; base: Estratégia, Legislação SUS, Aula 03)",
+    origem: "Adaptada de VUNESP / Prefeitura de Pindamonhangaba - SP / 2023 (múltipla escolha convertida em C/E pelo QuestLab; base: Estratégia, Legislação SUS, Aula 03)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 100, probReaparecer: 0.7,
     enunciado: "A situação migratória irregular de um estrangeiro não impede seu atendimento no SUS, e priorizá-lo, diante de dor torácica intensa, em relação a pacientes com consultas de rotina agendadas é aplicação do princípio da equidade.",
     gabarito: "C", pegadinha: "troca-conceito", palavraChave: "equidade na priorização",
@@ -1904,10 +1904,10 @@ const QUESTOES_SESAUAL_LOTE161 = [
   },
   {
     id: "SUS-383", disciplina: "Legislação Aplicada ao SUS", assunto: "Financiamento, planejamento e orçamento (Lei 8.080, arts. 31 a 38)", subassunto: "Planejamento ascendente",
-    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "banca não identificada no material — questão do material Estratégia (Legislação SUS, Aula 03)",
+    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2023,
+    origem: "FAURGS / SES-RS / 2023 — questão do material Estratégia (Legislação SUS, Aula 03)",
     tipo: "ME", dificuldade: 2, tempoIdealSeg: 150, probReaparecer: 0.65,
-    enunciado: "FAURGS / SES-RS / 2023 - Assinale a alternativa correta em relação às normas previstas na Lei Federal nº 8.080/90.",
+    enunciado: "Assinale a alternativa correta em relação às normas previstas na Lei Federal nº 8.080/90.",
     alternativas: [
       "Os recursos financeiros do Sistema Único de Saúde (SUS) serão depositados em conta geral, em cada esfera de sua atuação, e movimentados sob deliberação dos respectivos Conselhos de Saúde.",
       "Na esfera federal, os recursos financeiros originários do Orçamento da Seguridade Social são administrados pelo Ministério da Economia, através do orçamento geral da União.",
@@ -1931,7 +1931,7 @@ const QUESTOES_SESAUAL_LOTE161 = [
   {
     id: "SUS-384", disciplina: "Legislação Aplicada ao SUS", assunto: "Financiamento, planejamento e orçamento (Lei 8.080, arts. 31 a 38)", subassunto: "Planejamento ascendente",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "Adaptada de banca não identificada no material (múltipla escolha convertida em C/E pelo QuestLab; base: Estratégia, Legislação SUS, Aula 03)",
+    origem: "Adaptada de FAURGS / SES-RS / 2023 (múltipla escolha convertida em C/E pelo QuestLab; base: Estratégia, Legislação SUS, Aula 03)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 100, probReaparecer: 0.7,
     enunciado: "O processo de planejamento e orçamento do SUS é ascendente, do nível local até o federal, ouvidos seus órgãos deliberativos, compatibilizando-se as necessidades da política de saúde com a disponibilidade de recursos em planos de saúde dos municípios, dos estados, do DF e da União.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "ascendente",
@@ -1950,7 +1950,7 @@ const QUESTOES_SESAUAL_LOTE161 = [
   {
     id: "SUS-385", disciplina: "Legislação Aplicada ao SUS", assunto: "Financiamento, planejamento e orçamento (Lei 8.080, arts. 31 a 38)", subassunto: "Planejamento ascendente",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "Adaptada de banca não identificada no material (múltipla escolha convertida em C/E pelo QuestLab; base: Estratégia, Legislação SUS, Aula 03)",
+    origem: "Adaptada de FAURGS / SES-RS / 2023 (múltipla escolha convertida em C/E pelo QuestLab; base: Estratégia, Legislação SUS, Aula 03)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 100, probReaparecer: 0.7,
     enunciado: "É vedada a transferência de recursos para o financiamento de ações não previstas nos planos de saúde, sem exceção, inclusive em situações de calamidade pública na área de saúde, que devem aguardar a revisão do plano pelo conselho correspondente.",
     gabarito: "E", pegadinha: "termo-absoluto", palavraChave: "exceto emergência ou calamidade",
@@ -1969,7 +1969,7 @@ const QUESTOES_SESAUAL_LOTE161 = [
   {
     id: "SUS-386", disciplina: "Legislação Aplicada ao SUS", assunto: "Financiamento, planejamento e orçamento (Lei 8.080, arts. 31 a 38)", subassunto: "Planejamento ascendente",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "Adaptada de banca não identificada no material (múltipla escolha convertida em C/E pelo QuestLab; base: Estratégia, Legislação SUS, Aula 03)",
+    origem: "Adaptada de FAURGS / SES-RS / 2023 (múltipla escolha convertida em C/E pelo QuestLab; base: Estratégia, Legislação SUS, Aula 03)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 100, probReaparecer: 0.7,
     enunciado: "As receitas geradas no âmbito do SUS são creditadas no caixa único do tesouro da esfera de poder em que forem arrecadadas, cabendo ao chefe do Poder Executivo decidir sobre sua aplicação em saúde ou em outras áreas.",
     gabarito: "E", pegadinha: "troca-sujeito", palavraChave: "contas especiais",
@@ -1987,10 +1987,10 @@ const QUESTOES_SESAUAL_LOTE161 = [
   },
   {
     id: "SUS-387", disciplina: "Legislação Aplicada ao SUS", assunto: "Princípios e diretrizes do SUS (Lei 8.080, arts. 7º e 8º)", subassunto: "Princípios do art. 7º — correta",
-    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "banca não identificada no material — questão do material Estratégia (Legislação SUS, Aula 03)",
+    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2023,
+    origem: "FAURGS / SES-RS / 2023 — questão do material Estratégia (Legislação SUS, Aula 03)",
     tipo: "ME", dificuldade: 1, tempoIdealSeg: 130, probReaparecer: 0.65,
-    enunciado: "FAURGS / SES-RS / 2023 - Assinale a alternativa correta em relação aos princípios que regem as ações e os serviços públicos de saúde integrantes do Sistema Único de Saúde, conforme disposto na Lei Federal nº 8.080/90.",
+    enunciado: "Assinale a alternativa correta em relação aos princípios que regem as ações e os serviços públicos de saúde integrantes do Sistema Único de Saúde, conforme disposto na Lei Federal nº 8.080/90.",
     alternativas: [
       "Seletividade de acesso aos serviços de saúde em todos os níveis de assistência.",
       "Centralização político-administrativa, com direção única em cada esfera de governo.",
@@ -2013,10 +2013,10 @@ const QUESTOES_SESAUAL_LOTE161 = [
   },
   {
     id: "SUS-388", disciplina: "Legislação Aplicada ao SUS", assunto: "Serviços privados e participação complementar (Lei 8.080, arts. 20 a 26)", subassunto: "Participação complementar — instrumento",
-    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "banca não identificada no material — questão do material Estratégia (Legislação SUS, Aula 03)",
+    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2022,
+    origem: "AVALIA / Prefeitura de Vila Velha - ES / 2022 — questão do material Estratégia (Legislação SUS, Aula 03)",
     tipo: "ME", dificuldade: 1, tempoIdealSeg: 130, probReaparecer: 0.65,
-    enunciado: "AVALIA / Prefeitura de Vila Velha - ES / 2022 - Sobre a lei 8.080/90. Quando as suas disponibilidades forem insuficientes para garantir a cobertura assistencial à população de uma determinada área, o Sistema Único de Saúde (SUS) poderá recorrer aos serviços ofertados pela iniciativa privada. A participação complementar dos serviços privados será formalizada mediante_______ ou_______, observadas, a respeito, as normas de direito público.",
+    enunciado: "Sobre a lei 8.080/90. Quando as suas disponibilidades forem insuficientes para garantir a cobertura assistencial à população de uma determinada área, o Sistema Único de Saúde (SUS) poderá recorrer aos serviços ofertados pela iniciativa privada. A participação complementar dos serviços privados será formalizada mediante_______ ou_______, observadas, a respeito, as normas de direito público.",
     alternativas: [
       "Contrato ou convênio.",
       "Contrato ou licitação.",
@@ -2040,7 +2040,7 @@ const QUESTOES_SESAUAL_LOTE161 = [
   {
     id: "SUS-389", disciplina: "Legislação Aplicada ao SUS", assunto: "Serviços privados e participação complementar (Lei 8.080, arts. 20 a 26)", subassunto: "Participação complementar — instrumento",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "Adaptada de banca não identificada no material (múltipla escolha convertida em C/E pelo QuestLab; base: Estratégia, Legislação SUS, Aula 03)",
+    origem: "Adaptada de AVALIA / Prefeitura de Vila Velha - ES / 2022 (múltipla escolha convertida em C/E pelo QuestLab; base: Estratégia, Legislação SUS, Aula 03)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 100, probReaparecer: 0.7,
     enunciado: "Na participação complementar da iniciativa privada no SUS, as entidades filantrópicas e as sem fins lucrativos têm preferência, e os critérios e valores para a remuneração dos serviços são estabelecidos pela direção nacional do SUS, aprovados no Conselho Nacional de Saúde.",
     gabarito: "C", pegadinha: "troca-sujeito", palavraChave: "aprovados no CNS",
@@ -2059,7 +2059,7 @@ const QUESTOES_SESAUAL_LOTE161 = [
   {
     id: "SUS-390", disciplina: "Legislação Aplicada ao SUS", assunto: "Serviços privados e participação complementar (Lei 8.080, arts. 20 a 26)", subassunto: "Participação complementar — instrumento",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "Adaptada de banca não identificada no material (múltipla escolha convertida em C/E pelo QuestLab; base: Estratégia, Legislação SUS, Aula 03)",
+    origem: "Adaptada de AVALIA / Prefeitura de Vila Velha - ES / 2022 (múltipla escolha convertida em C/E pelo QuestLab; base: Estratégia, Legislação SUS, Aula 03)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 100, probReaparecer: 0.7,
     enunciado: "Quando suas disponibilidades forem insuficientes para garantir a cobertura assistencial de uma área, o SUS pode recorrer aos serviços privados, tendo as empresas com fins lucrativos preferência sobre as filantrópicas, por ofertarem maior capacidade instalada.",
     gabarito: "E", pegadinha: "troca-sujeito", palavraChave: "preferência às filantrópicas",
@@ -2077,10 +2077,10 @@ const QUESTOES_SESAUAL_LOTE161 = [
   },
   {
     id: "SUS-391", disciplina: "Legislação Aplicada ao SUS", assunto: "Disposições gerais, objetivos e campo de atuação (Lei 8.080, arts. 2º a 6º)", subassunto: "Composição do SUS (art. 4º)",
-    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "banca não identificada no material — questão do material Estratégia (Legislação SUS, Aula 03)",
+    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2022,
+    origem: "SES - PB / SES - PB / 2022 — questão do material Estratégia (Legislação SUS, Aula 03)",
     tipo: "ME", dificuldade: 2, tempoIdealSeg: 150, probReaparecer: 0.65,
-    enunciado: "SES - PB / SES - PB / 2022 - A Lei nº 8.080/90 trata das condições para a promoção, proteção e recuperação da saúde, a organização e o funcionamento dos serviços correspondentes e dá outras providências. De acordo com tal lei, o Sistema Único de Saúde (SUS) é constituído pelo conjunto de ações e serviços de saúde, prestados por órgãos e instituições",
+    enunciado: "A Lei nº 8.080/90 trata das condições para a promoção, proteção e recuperação da saúde, a organização e o funcionamento dos serviços correspondentes e dá outras providências. De acordo com tal lei, o Sistema Único de Saúde (SUS) é constituído pelo conjunto de ações e serviços de saúde, prestados por órgãos e instituições",
     alternativas: [
       "públicas federais, estaduais e municipais, da Administração direta e indireta, sendo vedada a participação da iniciativa privada no SUS, ainda que em caráter complementar.",
       "públicas federais, estaduais e municipais, da Administração direta e indireta e das fundações mantidas pelo Poder Público, sendo que a iniciativa privada poderá participar do SUS em caráter complementar.",
@@ -2103,7 +2103,7 @@ const QUESTOES_SESAUAL_LOTE161 = [
   {
     id: "SUS-392", disciplina: "Legislação Aplicada ao SUS", assunto: "Disposições gerais, objetivos e campo de atuação (Lei 8.080, arts. 2º a 6º)", subassunto: "Composição do SUS (art. 4º)",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "Adaptada de banca não identificada no material (múltipla escolha convertida em C/E pelo QuestLab; base: Estratégia, Legislação SUS, Aula 03)",
+    origem: "Adaptada de SES - PB / SES - PB / 2022 (múltipla escolha convertida em C/E pelo QuestLab; base: Estratégia, Legislação SUS, Aula 03)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 100, probReaparecer: 0.7,
     enunciado: "O SUS é constituído pelo conjunto de ações e serviços de saúde prestados por órgãos e instituições públicas e privadas, da administração direta e indireta, em igualdade de condições, sem distinção entre a rede própria e a contratada.",
     gabarito: "E", pegadinha: "troca-sujeito", palavraChave: "instituições públicas",
@@ -2121,10 +2121,10 @@ const QUESTOES_SESAUAL_LOTE161 = [
   },
   {
     id: "SUS-393", disciplina: "Legislação Aplicada ao SUS", assunto: "Disposições gerais, objetivos e campo de atuação (Lei 8.080, arts. 2º a 6º)", subassunto: "Controle de bens de consumo",
-    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "banca não identificada no material — questão do material Estratégia (Legislação SUS, Aula 03)",
+    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2022,
+    origem: "FUNDATEC / Prefeitura de Eldorado do Sul - RS / 2022 — questão do material Estratégia (Legislação SUS, Aula 03)",
     tipo: "ME", dificuldade: 1, tempoIdealSeg: 130, probReaparecer: 0.65,
-    enunciado: "FUNDATEC / Prefeitura de Eldorado do Sul - RS / 2022 - De acordo com a Lei nº 8.080/90, o controle de bens de consumo que, direta ou indiretamente, relacione-se com a saúde, compreendidas todas as etapas e processos, da produção ao consumo, representa um conjunto de ações mais diretamente relacionadas com a Vigilância:",
+    enunciado: "De acordo com a Lei nº 8.080/90, o controle de bens de consumo que, direta ou indiretamente, relacione-se com a saúde, compreendidas todas as etapas e processos, da produção ao consumo, representa um conjunto de ações mais diretamente relacionadas com a Vigilância:",
     alternativas: [
       "Ambiental.",
       "Científica ou Tecnológica.",
@@ -2147,10 +2147,10 @@ const QUESTOES_SESAUAL_LOTE161 = [
   },
   {
     id: "SUS-394", disciplina: "Legislação Aplicada ao SUS", assunto: "Princípios e diretrizes do SUS (Lei 8.080, arts. 7º e 8º)", subassunto: "Princípios — redação do art. 7º",
-    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "banca não identificada no material — questão do material Estratégia (Legislação SUS, Aula 03)",
+    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2022,
+    origem: "FAURGS / SES-RS / 2022 — questão do material Estratégia (Legislação SUS, Aula 03)",
     tipo: "ME", dificuldade: 3, tempoIdealSeg: 170, probReaparecer: 0.65,
-    enunciado: "FAURGS / SES-RS / 2022 - Considere os seguintes princípios. I - Igualdade, entendida como o acesso aos serviços de saúde em todos os níveis de assistência. II - Integralidade de assistência, entendida como a preservação da autonomia das pessoas na defesa de sua integridade física e moral. III- Descentralização político-administrativa, envolvendo a regionalização e hierarquização da rede de serviços de saúde. Quais deles estão previstos na Lei 8.080/90, artigo 7º, que dispõe sobre as ações e serviços públicos de saúde e os serviços privados contratados ou conveniados que integram o Sistema Único de Saúde – SUS?",
+    enunciado: "Considere os seguintes princípios. I - Igualdade, entendida como o acesso aos serviços de saúde em todos os níveis de assistência. II - Integralidade de assistência, entendida como a preservação da autonomia das pessoas na defesa de sua integridade física e moral. III- Descentralização político-administrativa, envolvendo a regionalização e hierarquização da rede de serviços de saúde. Quais deles estão previstos na Lei 8.080/90, artigo 7º, que dispõe sobre as ações e serviços públicos de saúde e os serviços privados contratados ou conveniados que integram o Sistema Único de Saúde – SUS?",
     alternativas: [
       "Apenas I.",
       "Apenas II.",
@@ -2174,7 +2174,7 @@ const QUESTOES_SESAUAL_LOTE161 = [
   {
     id: "SUS-395", disciplina: "Legislação Aplicada ao SUS", assunto: "Princípios e diretrizes do SUS (Lei 8.080, arts. 7º e 8º)", subassunto: "Princípios — redação do art. 7º",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "Adaptada de banca não identificada no material (múltipla escolha convertida em C/E pelo QuestLab; base: Estratégia, Legislação SUS, Aula 03)",
+    origem: "Adaptada de FAURGS / SES-RS / 2022 (múltipla escolha convertida em C/E pelo QuestLab; base: Estratégia, Legislação SUS, Aula 03)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 85, probReaparecer: 0.7,
     enunciado: "Segundo o art. 7º da Lei 8.080/1990, a integralidade de assistência é entendida como conjunto articulado e contínuo das ações e serviços preventivos e curativos, individuais e coletivos, exigidos para cada caso em todos os níveis de complexidade do sistema.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "conjunto articulado e contínuo",
@@ -2193,7 +2193,7 @@ const QUESTOES_SESAUAL_LOTE161 = [
   {
     id: "SUS-396", disciplina: "Legislação Aplicada ao SUS", assunto: "Princípios e diretrizes do SUS (Lei 8.080, arts. 7º e 8º)", subassunto: "Princípios — redação do art. 7º",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "Adaptada de banca não identificada no material (múltipla escolha convertida em C/E pelo QuestLab; base: Estratégia, Legislação SUS, Aula 03)",
+    origem: "Adaptada de FAURGS / SES-RS / 2022 (múltipla escolha convertida em C/E pelo QuestLab; base: Estratégia, Legislação SUS, Aula 03)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 100, probReaparecer: 0.7,
     enunciado: "A igualdade da assistência à saúde, princípio do art. 7º da Lei 8.080/1990, é entendida como o acesso aos serviços de saúde nos diversos níveis de assistência, permitida a concessão de privilégios aos usuários que contribuem para a seguridade social.",
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "sem preconceitos ou privilégios",

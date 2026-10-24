@@ -12,9 +12,9 @@ const QUESTOES_SESAUAL_LOTE160 = [
   {
     id: "SUS-224", disciplina: "Legislação Aplicada ao SUS", assunto: "Iniciativa privada na saúde (CF, art. 199)", subassunto: "Participação complementar da iniciativa privada",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "banca não identificada no material — questão do material Estratégia (Legislação SUS, Aula 02)",
+    origem: "VUNESP/ Prefeitura de Osasco - SP/ 2026 — questão do material Estratégia (Legislação SUS, Aula 02)",
     tipo: "ME", dificuldade: 2, tempoIdealSeg: 150, probReaparecer: 0.65,
-    enunciado: "VUNESP/ Prefeitura de Osasco - SP/ 2026 – De acordo com os artigos 196 a 200 da Constituição Federal, assinale a alternativa que apresenta a forma constitucionalmente permitida de participação da iniciativa privada na saúde:",
+    enunciado: "De acordo com os artigos 196 a 200 da Constituição Federal, assinale a alternativa que apresenta a forma constitucionalmente permitida de participação da iniciativa privada na saúde:",
     alternativas: [
       "As organizações com finalidade lucrativa têm prioridade para receber recursos públicos na forma de subvenções e auxílios, conforme normas estabelecidas na legislação pertinente.",
       "As organizações privadas poderão substituir os serviços públicos municipais na forma de livre competição, pois as leis do mercado, nesse caso, são superiores ao controle público.",
@@ -38,7 +38,7 @@ const QUESTOES_SESAUAL_LOTE160 = [
   {
     id: "SUS-225", disciplina: "Legislação Aplicada ao SUS", assunto: "Iniciativa privada na saúde (CF, art. 199)", subassunto: "Participação complementar da iniciativa privada",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "Adaptada de banca não identificada no material (múltipla escolha convertida em C/E pelo QuestLab; base: Estratégia, Legislação SUS, Aula 02)",
+    origem: "Adaptada de VUNESP/ Prefeitura de Osasco - SP/ 2026 (múltipla escolha convertida em C/E pelo QuestLab; base: Estratégia, Legislação SUS, Aula 02)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 100, probReaparecer: 0.7,
     enunciado: "A Constituição Federal veda a destinação de recursos públicos para auxílios ou subvenções às instituições privadas com fins lucrativos, mas permite que estas participem do SUS de forma complementar, mediante contrato.",
     gabarito: "C", pegadinha: "verdade-mais-falso", palavraChave: "auxílios ou subvenções",
@@ -57,9 +57,9 @@ const QUESTOES_SESAUAL_LOTE160 = [
   {
     id: "SUS-226", disciplina: "Legislação Aplicada ao SUS", assunto: "Direito à saúde e diretrizes do SUS (CF, arts. 196-198)", subassunto: "Diretrizes do art. 198",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "banca não identificada no material — questão do material Estratégia (Legislação SUS, Aula 02)",
+    origem: "VUNESP/ Prefeitura de Osasco - SP/ 2026 — questão do material Estratégia (Legislação SUS, Aula 02)",
     tipo: "ME", dificuldade: 1, tempoIdealSeg: 130, probReaparecer: 0.65,
-    enunciado: "VUNESP/ Prefeitura de Osasco - SP/ 2026 – Os princípios da implantação do Sistema Único de Saúde (SUS) foram estabelecidos na legislação e devem ser seguidos em todo o país. Assinale a alternativa que traz um dos princípios originais do SUS e que está de acordo com as diretrizes previstas no art. 198 da Constituição Federal.",
+    enunciado: "Os princípios da implantação do Sistema Único de Saúde (SUS) foram estabelecidos na legislação e devem ser seguidos em todo o país. Assinale a alternativa que traz um dos princípios originais do SUS e que está de acordo com as diretrizes previstas no art. 198 da Constituição Federal.",
     alternativas: [
       "Acesso às ações e serviços de saúde de todas as naturezas jurídicas.",
       "Preservação da autonomia das pessoas na defesa dos princípios do SUS.",
@@ -83,7 +83,7 @@ const QUESTOES_SESAUAL_LOTE160 = [
   {
     id: "SUS-227", disciplina: "Legislação Aplicada ao SUS", assunto: "Direito à saúde e diretrizes do SUS (CF, arts. 196-198)", subassunto: "Diretrizes do art. 198",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "Adaptada de banca não identificada no material (múltipla escolha convertida em C/E pelo QuestLab; base: Estratégia, Legislação SUS, Aula 02)",
+    origem: "Adaptada de VUNESP/ Prefeitura de Osasco - SP/ 2026 (múltipla escolha convertida em C/E pelo QuestLab; base: Estratégia, Legislação SUS, Aula 02)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 85, probReaparecer: 0.7,
     enunciado: "Segundo o art. 198 da Constituição, entre as diretrizes que organizam a rede regionalizada e hierarquizada do SUS está o atendimento integral, com prioridade para as atividades assistenciais, sem prejuízo das ações preventivas.",
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "prioridade para as atividades assistenciais",
@@ -101,10 +101,10 @@ const QUESTOES_SESAUAL_LOTE160 = [
   },
   {
     id: "SUS-228", disciplina: "Legislação Aplicada ao SUS", assunto: "Direito à saúde e diretrizes do SUS (CF, arts. 196-198)", subassunto: "Art. 197 — relevância pública",
-    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "banca não identificada no material — questão do material Estratégia (Legislação SUS, Aula 02)",
+    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2025,
+    origem: "IGEDUC/ Prefeitura de Calumbi - PE/ 2025 — questão do material Estratégia (Legislação SUS, Aula 02)",
     tipo: "ME", dificuldade: 1, tempoIdealSeg: 130, probReaparecer: 0.65,
-    enunciado: "IGEDUC/ Prefeitura de Calumbi - PE/ 2025 – Os artigos 196 a 200 da Constituição Federal são destinados a aspectos relacionados à saúde. Conforme estabelecido pela Constituição Federal, assinale a alternativa correta:",
+    enunciado: "Os artigos 196 a 200 da Constituição Federal são destinados a aspectos relacionados à saúde. Conforme estabelecido pela Constituição Federal, assinale a alternativa correta:",
     alternativas: [
       "São de relevância pública as ações e serviços de saúde, cabendo ao Poder Público dispor, nos termos da lei, sobre sua regulamentação, fiscalização e controle, devendo sua execução ser feita diretamente ou através de terceiros e, também, por pessoa física ou jurídica de direito privado.",
       "São de relevância pública as ações e serviços de saúde, cabendo ao Poder Público dispor, nos termos da lei, sobre sua regulamentação, fiscalização e controle, devendo sua execução ser feita diretamente ou através de terceiros e, também, por pessoa física ou jurídica de direito público.",
@@ -126,10 +126,10 @@ const QUESTOES_SESAUAL_LOTE160 = [
   },
   {
     id: "SUS-229", disciplina: "Legislação Aplicada ao SUS", assunto: "Iniciativa privada na saúde (CF, art. 199)", subassunto: "Arts. 196-200 — incorreta",
-    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "banca não identificada no material — questão do material Estratégia (Legislação SUS, Aula 02)",
+    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2025,
+    origem: "FUNDATEC / UFCSPA - RS / 2025 — questão do material Estratégia (Legislação SUS, Aula 02)",
     tipo: "ME", dificuldade: 2, tempoIdealSeg: 150, probReaparecer: 0.65,
-    enunciado: "FUNDATEC / UFCSPA - RS / 2025 - De acordo com a Constituição Federal de 1988, o direito à saúde é assegurado constitucionalmente pelo artigo 6º, que enuncia o rol de direitos sociais assegurados no ordenamento jurídico brasileiro, e é disciplinado pelos artigos 196 a 200. Assinale a alternativa INCORRETA sobre os artigos mencionados.",
+    enunciado: "De acordo com a Constituição Federal de 1988, o direito à saúde é assegurado constitucionalmente pelo artigo 6º, que enuncia o rol de direitos sociais assegurados no ordenamento jurídico brasileiro, e é disciplinado pelos artigos 196 a 200. Assinale a alternativa INCORRETA sobre os artigos mencionados.",
     alternativas: [
       "A saúde é direito de todos e dever do Estado, garantido mediante políticas sociais e econômicas que visem à redução do risco de doença e de outros agravos e ao acesso universal e igualitário às ações e serviços para sua promoção, proteção e recuperação.",
       "O financiamento do Sistema Único de Saúde é realizado com recursos do orçamento da seguridade social, da União, dos Estados, do Distrito Federal e dos Municípios, além de outras fontes.",
@@ -153,7 +153,7 @@ const QUESTOES_SESAUAL_LOTE160 = [
   {
     id: "SUS-230", disciplina: "Legislação Aplicada ao SUS", assunto: "Iniciativa privada na saúde (CF, art. 199)", subassunto: "Arts. 196-200 — incorreta",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "Adaptada de banca não identificada no material (múltipla escolha convertida em C/E pelo QuestLab; base: Estratégia, Legislação SUS, Aula 02)",
+    origem: "Adaptada de FUNDATEC / UFCSPA - RS / 2025 (múltipla escolha convertida em C/E pelo QuestLab; base: Estratégia, Legislação SUS, Aula 02)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 100, probReaparecer: 0.7,
     enunciado: "Aos agentes comunitários de saúde e aos agentes de combate às endemias são asseguradas, pela Constituição, aposentadoria especial e, somado aos vencimentos, adicional de insalubridade, em razão dos riscos inerentes às funções.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "aposentadoria especial",
@@ -171,10 +171,10 @@ const QUESTOES_SESAUAL_LOTE160 = [
   },
   {
     id: "SUS-231", disciplina: "Legislação Aplicada ao SUS", assunto: "Direito à saúde e diretrizes do SUS (CF, arts. 196-198)", subassunto: "Art. 196",
-    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "banca não identificada no material — questão do material Estratégia (Legislação SUS, Aula 02)",
+    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2025,
+    origem: "Prefeitura de Bauru - SP/ Prefeitura de Bauru - SP/ 2025 — questão do material Estratégia (Legislação SUS, Aula 02)",
     tipo: "ME", dificuldade: 1, tempoIdealSeg: 130, probReaparecer: 0.65,
-    enunciado: "Prefeitura de Bauru - SP/ Prefeitura de Bauru - SP/ 2025 - Conforme estabelecido na Constituição, em seu artigo 196, a saúde é um direito de todos, que deve ser garantido mediante políticas:",
+    enunciado: "Conforme estabelecido na Constituição, em seu artigo 196, a saúde é um direito de todos, que deve ser garantido mediante políticas:",
     alternativas: [
       "Culturais e Econômicas.",
       "Sociais e Econômicas.",
@@ -196,10 +196,10 @@ const QUESTOES_SESAUAL_LOTE160 = [
   },
   {
     id: "SUS-232", disciplina: "Legislação Aplicada ao SUS", assunto: "Direito à saúde e diretrizes do SUS (CF, arts. 196-198)", subassunto: "Art. 196 — políticas",
-    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "banca não identificada no material — questão do material Estratégia (Legislação SUS, Aula 02)",
+    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2025,
+    origem: "OBJETIVA / Prefeitura de Lapa - PR / 2025 — questão do material Estratégia (Legislação SUS, Aula 02)",
     tipo: "ME", dificuldade: 1, tempoIdealSeg: 130, probReaparecer: 0.65,
-    enunciado: "OBJETIVA / Prefeitura de Lapa - PR / 2025 - Segundo a Constituição Federal, a saúde é direito de todos e um dever do Estado, garantido mediante políticas:",
+    enunciado: "Segundo a Constituição Federal, a saúde é direito de todos e um dever do Estado, garantido mediante políticas:",
     alternativas: [
       "Sociais e econômicas.",
       "Trabalhistas e previdenciárias.",
@@ -222,10 +222,10 @@ const QUESTOES_SESAUAL_LOTE160 = [
   },
   {
     id: "SUS-233", disciplina: "Legislação Aplicada ao SUS", assunto: "Direito à saúde e diretrizes do SUS (CF, arts. 196-198)", subassunto: "Saúde na CF — correta",
-    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "banca não identificada no material — questão do material Estratégia (Legislação SUS, Aula 02)",
+    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2025,
+    origem: "Instituto Ágata / Prefeitura de Anajás - PA / 2025 — questão do material Estratégia (Legislação SUS, Aula 02)",
     tipo: "ME", dificuldade: 2, tempoIdealSeg: 150, probReaparecer: 0.65,
-    enunciado: "Instituto Ágata / Prefeitura de Anajás - PA / 2025 - A Constituição Federal estabelece que a saúde é direito de todos e dever do Estado, garantido mediante políticas sociais e econômicas que visem à redução do risco de doença e de outros agravos e ao acesso universal e igualitário às ações e serviços para sua promoção, proteção e recuperação. Assinale a única alternativa correta a respeito da saúde no Brasil, de acordo com a Constituição Federal.",
+    enunciado: "A Constituição Federal estabelece que a saúde é direito de todos e dever do Estado, garantido mediante políticas sociais e econômicas que visem à redução do risco de doença e de outros agravos e ao acesso universal e igualitário às ações e serviços para sua promoção, proteção e recuperação. Assinale a única alternativa correta a respeito da saúde no Brasil, de acordo com a Constituição Federal.",
     alternativas: [
       "Compete somente à União a aplicação de recursos mínimos, anualmente, em ações e serviços públicos de saúde.",
       "É vedada a execução das ações e serviços de saúde feita diretamente por pessoa jurídica de direito privado.",
@@ -248,10 +248,10 @@ const QUESTOES_SESAUAL_LOTE160 = [
   },
   {
     id: "SUS-234", disciplina: "Legislação Aplicada ao SUS", assunto: "Seguridade social (CF, arts. 194-195)", subassunto: "Seguridade social — V/F",
-    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "banca não identificada no material — questão do material Estratégia (Legislação SUS, Aula 02)",
+    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2025,
+    origem: "Instituto Consulplan / Prefeitura de Carangola - MG / 2025 — questão do material Estratégia (Legislação SUS, Aula 02)",
     tipo: "ME", dificuldade: 2, tempoIdealSeg: 150, probReaparecer: 0.65,
-    enunciado: "Instituto Consulplan / Prefeitura de Carangola - MG / 2025 - Considerando que a seguridade social compreende um conjunto de políticas públicas destinadas a garantir proteção social a toda a população, marque V para as afirmativas verdadeiras e F para falsas. ( ) A seguridade social obedecerá aos princípios e diretrizes da proteção social e da vigilância socioassistencial. ( ) A saúde é direito de todos e dever do Estado. ( ) A organização da assistência social obedecerá às diretrizes da centralização político-administrativa e participação da população exclusivamente no controle das ações em todos os níveis. A sequência está correta em",
+    enunciado: "Considerando que a seguridade social compreende um conjunto de políticas públicas destinadas a garantir proteção social a toda a população, marque V para as afirmativas verdadeiras e F para falsas. ( ) A seguridade social obedecerá aos princípios e diretrizes da proteção social e da vigilância socioassistencial. ( ) A saúde é direito de todos e dever do Estado. ( ) A organização da assistência social obedecerá às diretrizes da centralização político-administrativa e participação da população exclusivamente no controle das ações em todos os níveis. A sequência está correta em",
     alternativas: [
       "F, F, V.",
       "F, V, F.",
@@ -273,10 +273,10 @@ const QUESTOES_SESAUAL_LOTE160 = [
   },
   {
     id: "SUS-235", disciplina: "Legislação Aplicada ao SUS", assunto: "Direito à saúde e diretrizes do SUS (CF, arts. 196-198)", subassunto: "Execução das ações de saúde",
-    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "banca não identificada no material — questão do material Estratégia (Legislação SUS, Aula 02)",
+    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2025,
+    origem: "Unesc/ Prefeitura de Maracajá - SC/ 2025 — questão do material Estratégia (Legislação SUS, Aula 02)",
     tipo: "ME", dificuldade: 1, tempoIdealSeg: 130, probReaparecer: 0.65,
-    enunciado: "Unesc/ Prefeitura de Maracajá - SC/ 2025 - De acordo com a Constituição Federal, as ações e serviços de saúde são de relevância pública, ou seja, têm grande importância para a sociedade como um todo. O Poder Público (governo) tem a responsabilidade de regulamentar, fiscalizar e controlar os serviços de saúde, para garantir sua qualidade e acesso. A execução dos serviços pode ser feita: I.Diretamente pelo Estado. II.Por meio de terceiros. III.Por pessoa física ou jurídica de direito privado. É CORRETO o que se afirma em:",
+    enunciado: "De acordo com a Constituição Federal, as ações e serviços de saúde são de relevância pública, ou seja, têm grande importância para a sociedade como um todo. O Poder Público (governo) tem a responsabilidade de regulamentar, fiscalizar e controlar os serviços de saúde, para garantir sua qualidade e acesso. A execução dos serviços pode ser feita: I.Diretamente pelo Estado. II.Por meio de terceiros. III.Por pessoa física ou jurídica de direito privado. É CORRETO o que se afirma em:",
     alternativas: [
       "I, II e III.",
       "I e II, apenas.",
@@ -298,10 +298,10 @@ const QUESTOES_SESAUAL_LOTE160 = [
   },
   {
     id: "SUS-236", disciplina: "Legislação Aplicada ao SUS", assunto: "Atribuições do SUS (CF, art. 200)", subassunto: "Art. 200 — exceto",
-    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "banca não identificada no material — questão do material Estratégia (Legislação SUS, Aula 02)",
+    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2025,
+    origem: "EVO Concursos/ Prefeitura de Pedras Grandes - SC/ 2025 — questão do material Estratégia (Legislação SUS, Aula 02)",
     tipo: "ME", dificuldade: 1, tempoIdealSeg: 130, probReaparecer: 0.65,
-    enunciado: "EVO Concursos/ Prefeitura de Pedras Grandes - SC/ 2025 - Ao sistema único de saúde compete, além de outras atribuições, nos termos da lei, exceto:",
+    enunciado: "Ao sistema único de saúde compete, além de outras atribuições, nos termos da lei, exceto:",
     alternativas: [
       "ordenar a formação de recursos humanos na área de saúde;",
       "não participar da formulação da política e da execução das ações de saneamento básico;",
@@ -361,10 +361,10 @@ const QUESTOES_SESAUAL_LOTE160 = [
   },
   {
     id: "SUS-239", disciplina: "Legislação Aplicada ao SUS", assunto: "Atribuições do SUS (CF, art. 200)", subassunto: "Art. 200 — exceto (meio ambiente)",
-    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "banca não identificada no material — questão do material Estratégia (Legislação SUS, Aula 02)",
+    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2024,
+    origem: "IDCAP/ INOVA Capixaba - ES/ 2024 — questão do material Estratégia (Legislação SUS, Aula 02)",
     tipo: "ME", dificuldade: 2, tempoIdealSeg: 150, probReaparecer: 0.65,
-    enunciado: "IDCAP/ INOVA Capixaba - ES/ 2024 - A saúde se inclui no rol dos direitos fundamentais, sendo essencial para a existência digna de todo ser humano. Conforme positivado no art. 198 da Constituição Federal, \"as ações e serviços públicos de saúde integram uma rede regionalizada e hierarquizada e constituem um sistema único [...]\". Nesse contexto, compete ao Sistema Único de Saúde, de acordo com as disposições constitucionais, além de outras atribuições, EXCETO:",
+    enunciado: "A saúde se inclui no rol dos direitos fundamentais, sendo essencial para a existência digna de todo ser humano. Conforme positivado no art. 198 da Constituição Federal, \"as ações e serviços públicos de saúde integram uma rede regionalizada e hierarquizada e constituem um sistema único [...]\". Nesse contexto, compete ao Sistema Único de Saúde, de acordo com as disposições constitucionais, além de outras atribuições, EXCETO:",
     alternativas: [
       "Controlar e fiscalizar procedimentos, produtos e substâncias de interesse para a saúde e participar da produção de medicamentos, equipamentos, imunobiológicos, hemoderivados e outros insumos.",
       "Coordenar as ações de proteção do meio ambiente, nele compreendido o do trabalho.",
@@ -388,7 +388,7 @@ const QUESTOES_SESAUAL_LOTE160 = [
   {
     id: "SUS-240", disciplina: "Legislação Aplicada ao SUS", assunto: "Atribuições do SUS (CF, art. 200)", subassunto: "Art. 200 — exceto (meio ambiente)",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "Adaptada de banca não identificada no material (múltipla escolha convertida em C/E pelo QuestLab; base: Estratégia, Legislação SUS, Aula 02)",
+    origem: "Adaptada de IDCAP/ INOVA Capixaba - ES/ 2024 (múltipla escolha convertida em C/E pelo QuestLab; base: Estratégia, Legislação SUS, Aula 02)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 85, probReaparecer: 0.7,
     enunciado: "Entre as atribuições conferidas ao Sistema Único de Saúde pelo art. 200 da Constituição, compete ao SUS coordenar as ações de proteção do meio ambiente, nele compreendido o do trabalho, bem como executar diretamente as ações de saneamento básico em todo o território nacional.",
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "coordenar",
@@ -406,10 +406,10 @@ const QUESTOES_SESAUAL_LOTE160 = [
   },
   {
     id: "SUS-241", disciplina: "Legislação Aplicada ao SUS", assunto: "Direito à saúde e diretrizes do SUS (CF, arts. 196-198)", subassunto: "Diretrizes do SUS",
-    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "banca não identificada no material — questão do material Estratégia (Legislação SUS, Aula 02)",
+    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2024,
+    origem: "COTEC/ Prefeitura de Brasília de Minas - MG/ 2024 — questão do material Estratégia (Legislação SUS, Aula 02)",
     tipo: "ME", dificuldade: 1, tempoIdealSeg: 130, probReaparecer: 0.65,
-    enunciado: "COTEC/ Prefeitura de Brasília de Minas - MG/ 2024 - As ações e serviços públicos de saúde integram uma rede regionalizada e hierarquizada e constituem um sistema único, organizado de acordo com as seguintes diretrizes:",
+    enunciado: "As ações e serviços públicos de saúde integram uma rede regionalizada e hierarquizada e constituem um sistema único, organizado de acordo com as seguintes diretrizes:",
     alternativas: [
       "Atendimento básico, participação da gestão, centralização.",
       "Descentralização, atendimento integral, participação da comunidade.",
@@ -432,10 +432,10 @@ const QUESTOES_SESAUAL_LOTE160 = [
   },
   {
     id: "SUS-242", disciplina: "Legislação Aplicada ao SUS", assunto: "Atribuições do SUS (CF, art. 200)", subassunto: "Art. 200 — afirmativas",
-    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "banca não identificada no material — questão do material Estratégia (Legislação SUS, Aula 02)",
+    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2024,
+    origem: "ADM&TEC/ Prefeitura de Timbaúba - PE/2024 — questão do material Estratégia (Legislação SUS, Aula 02)",
     tipo: "ME", dificuldade: 1, tempoIdealSeg: 130, probReaparecer: 0.65,
-    enunciado: "ADM&TEC/ Prefeitura de Timbaúba - PE/2024 - Leia as afirmativas abaixo. Ao Sistema Único de Saúde compete: I. Controlar e fiscalizar procedimentos, produtos e substâncias de interesse para a saúde e participar da produção de medicamentos, equipamentos, imunobiológicos, hemoderivados e outros insumos. II. Executar as ações de vigilância sanitária e epidemiológica, bem como as de saúde do trabalhador. III. Ordenar a formação de recursos humanos na área de saúde. IV. Incrementar, em sua área de atuação, o desenvolvimento científico e tecnológico e a inovação. Estão corretas as afirmativas:",
+    enunciado: "Leia as afirmativas abaixo. Ao Sistema Único de Saúde compete: I. Controlar e fiscalizar procedimentos, produtos e substâncias de interesse para a saúde e participar da produção de medicamentos, equipamentos, imunobiológicos, hemoderivados e outros insumos. II. Executar as ações de vigilância sanitária e epidemiológica, bem como as de saúde do trabalhador. III. Ordenar a formação de recursos humanos na área de saúde. IV. Incrementar, em sua área de atuação, o desenvolvimento científico e tecnológico e a inovação. Estão corretas as afirmativas:",
     alternativas: [
       "I e II, apenas.",
       "II e III, apenas.",
@@ -457,10 +457,10 @@ const QUESTOES_SESAUAL_LOTE160 = [
   },
   {
     id: "SUS-243", disciplina: "Legislação Aplicada ao SUS", assunto: "Seguridade social (CF, arts. 194-195)", subassunto: "Objetivos da seguridade",
-    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "banca não identificada no material — questão do material Estratégia (Legislação SUS, Aula 02)",
+    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2024,
+    origem: "IBFC/ TRF - 5ª REGIÃO/ 2024 — questão do material Estratégia (Legislação SUS, Aula 02)",
     tipo: "ME", dificuldade: 1, tempoIdealSeg: 130, probReaparecer: 0.65,
-    enunciado: "IBFC/ TRF - 5ª REGIÃO/ 2024 - A seguridade social visa assegurar os direitos à saúde, à previdência e à assistência social. Diante do exposto, assinale a alternativa correta quanto aos objetivos da seguridade social.",
+    enunciado: "A seguridade social visa assegurar os direitos à saúde, à previdência e à assistência social. Diante do exposto, assinale a alternativa correta quanto aos objetivos da seguridade social.",
     alternativas: [
       "Universalidade, equidade e confiscatoriedade",
       "Uniformidade, retroatividade e seletividade",
@@ -482,10 +482,10 @@ const QUESTOES_SESAUAL_LOTE160 = [
   },
   {
     id: "SUS-244", disciplina: "Legislação Aplicada ao SUS", assunto: "Atribuições do SUS (CF, art. 200)", subassunto: "Art. 200 — afirmativas",
-    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "banca não identificada no material — questão do material Estratégia (Legislação SUS, Aula 02)",
+    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2024,
+    origem: "FAUEL/ Prefeitura de Maringá - PR/ 2024 — questão do material Estratégia (Legislação SUS, Aula 02)",
     tipo: "ME", dificuldade: 1, tempoIdealSeg: 130, probReaparecer: 0.65,
-    enunciado: "FAUEL/ Prefeitura de Maringá - PR/ 2024 - De acordo com o Art. 200 da Constituição da República Federativa do Brasil (1988) e suas alterações, ao Sistema Único de Saúde compete, além de outras atribuições, nos termos da lei: I – executar as ações de vigilância sanitária e epidemiológica, bem como as de saúde do trabalhador; II – controlar e fiscalizar procedimentos, produtos e substâncias de interesse para a saúde e participar da produção de medicamentos, equipamentos, imunobiológicos, hemoderivados e outros insumos; III – fiscalizar e inspecionar alimentos, compreendido o controle de seu teor nutricional, bem como bebidas e águas para consumo humano; IV – participar do controle e fiscalização da produção, transporte, guarda e utilização de substâncias e produtos psicoativos, tóxicos e radioativos. A respeito das afirmativas acima, marque a alternativa CORRETA.",
+    enunciado: "De acordo com o Art. 200 da Constituição da República Federativa do Brasil (1988) e suas alterações, ao Sistema Único de Saúde compete, além de outras atribuições, nos termos da lei: I – executar as ações de vigilância sanitária e epidemiológica, bem como as de saúde do trabalhador; II – controlar e fiscalizar procedimentos, produtos e substâncias de interesse para a saúde e participar da produção de medicamentos, equipamentos, imunobiológicos, hemoderivados e outros insumos; III – fiscalizar e inspecionar alimentos, compreendido o controle de seu teor nutricional, bem como bebidas e águas para consumo humano; IV – participar do controle e fiscalização da produção, transporte, guarda e utilização de substâncias e produtos psicoativos, tóxicos e radioativos. A respeito das afirmativas acima, marque a alternativa CORRETA.",
     alternativas: [
       "Apenas as afirmativas I e II estão corretas.",
       "Apenas as afirmativas II e III estão corretas.",
@@ -507,10 +507,10 @@ const QUESTOES_SESAUAL_LOTE160 = [
   },
   {
     id: "SUS-245", disciplina: "Legislação Aplicada ao SUS", assunto: "Seguridade social (CF, arts. 194-195)", subassunto: "Princípios/objetivos da seguridade",
-    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "banca não identificada no material — questão do material Estratégia (Legislação SUS, Aula 02)",
+    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2024,
+    origem: "FGV/ TJ-SC/ 2024 — questão do material Estratégia (Legislação SUS, Aula 02)",
     tipo: "ME", dificuldade: 2, tempoIdealSeg: 150, probReaparecer: 0.65,
-    enunciado: "FGV/ TJ-SC/ 2024 - São princípios da Seguridade Social:",
+    enunciado: "São princípios da Seguridade Social:",
     alternativas: [
       "caráter democrático e descentralizado da administração e receitas das contribuições sociais;",
       "participação da iniciativa privada, obedecidos os preceitos constitucionais, e serviços de natureza urbana ou rural;",
@@ -533,10 +533,10 @@ const QUESTOES_SESAUAL_LOTE160 = [
   },
   {
     id: "SUS-246", disciplina: "Legislação Aplicada ao SUS", assunto: "Seguridade social (CF, arts. 194-195)", subassunto: "Conceito de seguridade social",
-    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "banca não identificada no material — questão do material Estratégia (Legislação SUS, Aula 02)",
+    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2024,
+    origem: "UNOESC/ Prefeitura de Maravilha - SC/ 2024 — questão do material Estratégia (Legislação SUS, Aula 02)",
     tipo: "ME", dificuldade: 1, tempoIdealSeg: 130, probReaparecer: 0.65,
-    enunciado: "UNOESC/ Prefeitura de Maravilha - SC/ 2024 - Qual é a política pública, preconizada na Constituição Federal de 1988, no Art.194, capítulo II, Seção I, que “compreende um conjunto integrado de ações de iniciativa dos Poderes Públicos e da sociedade, destinado a assegurar os direitos à saúde, à previdência e à assistência social”?",
+    enunciado: "Qual é a política pública, preconizada na Constituição Federal de 1988, no Art.194, capítulo II, Seção I, que “compreende um conjunto integrado de ações de iniciativa dos Poderes Públicos e da sociedade, destinado a assegurar os direitos à saúde, à previdência e à assistência social”?",
     alternativas: [
       "Sistema Único de Saúde.",
       "Seguridade Social.",
@@ -558,10 +558,10 @@ const QUESTOES_SESAUAL_LOTE160 = [
   },
   {
     id: "SUS-247", disciplina: "Legislação Aplicada ao SUS", assunto: "Seguridade social (CF, arts. 194-195)", subassunto: "Seletividade e distributividade",
-    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "banca não identificada no material — questão do material Estratégia (Legislação SUS, Aula 02)",
+    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2024,
+    origem: "FGV/ Prefeitura de Macaé - RJ/ 2024 — questão do material Estratégia (Legislação SUS, Aula 02)",
     tipo: "ME", dificuldade: 2, tempoIdealSeg: 150, probReaparecer: 0.65,
-    enunciado: "FGV/ Prefeitura de Macaé - RJ/ 2024 - Um dos princípios constitucionais da Seguridade Social refere-se à abrangência da cobertura e ao grau de proteção. Com base nesse princípio a Lei fixa então o conjunto de pessoas às quais os benefícios são estendidos e determina o caráter social da Seguridade Social , devendo atender prioritariamente aos mais necessitados. Assinale a opção que indica o nome desse princípio.",
+    enunciado: "Um dos princípios constitucionais da Seguridade Social refere-se à abrangência da cobertura e ao grau de proteção. Com base nesse princípio a Lei fixa então o conjunto de pessoas às quais os benefícios são estendidos e determina o caráter social da Seguridade Social , devendo atender prioritariamente aos mais necessitados. Assinale a opção que indica o nome desse princípio.",
     alternativas: [
       "Irredutibilidade do valor dos benefícios.",
       "Equidade na forma de participação no custeio.",
@@ -584,10 +584,10 @@ const QUESTOES_SESAUAL_LOTE160 = [
   },
   {
     id: "SUS-248", disciplina: "Legislação Aplicada ao SUS", assunto: "Seguridade social (CF, arts. 194-195)", subassunto: "Seguridade — correta",
-    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "banca não identificada no material — questão do material Estratégia (Legislação SUS, Aula 02)",
+    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2023,
+    origem: "CEBRASPE/ Prefeitura de São Cristóvão - SE/ 2023 — questão do material Estratégia (Legislação SUS, Aula 02)",
     tipo: "ME", dificuldade: 2, tempoIdealSeg: 150, probReaparecer: 0.65,
-    enunciado: "CEBRASPE/ Prefeitura de São Cristóvão - SE/ 2023 - No que diz respeito à seguridade social, assinale a opção correta com base na Constituição Federal de 88 (CF).",
+    enunciado: "No que diz respeito à seguridade social, assinale a opção correta com base na Constituição Federal de 88 (CF).",
     alternativas: [
       "O valor dos benefícios da seguridade social pode sofrer redução de um ano para o outro, caso haja escassez de recursos.",
       "A base de financiamento da seguridade social deverá ser pública e privada, mediante recursos provenientes do orçamento da União e de doações de grandes empresas.",
@@ -610,7 +610,7 @@ const QUESTOES_SESAUAL_LOTE160 = [
   {
     id: "SUS-249", disciplina: "Legislação Aplicada ao SUS", assunto: "Seguridade social (CF, arts. 194-195)", subassunto: "Seguridade — correta",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "Adaptada de banca não identificada no material (múltipla escolha convertida em C/E pelo QuestLab; base: Estratégia, Legislação SUS, Aula 02)",
+    origem: "Adaptada de CEBRASPE/ Prefeitura de São Cristóvão - SE/ 2023 (múltipla escolha convertida em C/E pelo QuestLab; base: Estratégia, Legislação SUS, Aula 02)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 85, probReaparecer: 0.7,
     enunciado: "A gestão administrativa da seguridade social é quadripartite, com participação dos trabalhadores, dos empregadores, dos aposentados e do Governo nos órgãos colegiados.",
     gabarito: "C", pegadinha: "troca-numerica", palavraChave: "quadripartite",
@@ -628,10 +628,10 @@ const QUESTOES_SESAUAL_LOTE160 = [
   },
   {
     id: "SUS-250", disciplina: "Legislação Aplicada ao SUS", assunto: "Seguridade social (CF, arts. 194-195)", subassunto: "Seguridade — conceito",
-    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "banca não identificada no material — questão do material Estratégia (Legislação SUS, Aula 02)",
+    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2023,
+    origem: "CEBRASPE/ PGE-ES/ 2023 — questão do material Estratégia (Legislação SUS, Aula 02)",
     tipo: "ME", dificuldade: 2, tempoIdealSeg: 150, probReaparecer: 0.65,
-    enunciado: "CEBRASPE/ PGE-ES/ 2023 - Conforme a CF, a seguridade social compreende um conjunto:",
+    enunciado: "Conforme a CF, a seguridade social compreende um conjunto:",
     alternativas: [
       "de ações independentes de iniciativa privativa dos poderes públicos e destinadas a assegurar os direitos relativos à educação, à saúde e à previdência social.",
       "integrado de ações de iniciativa privativa dos poderes públicos e da sociedade, destinadas a assegurar os direitos relativos à cultura, à educação, à saúde e à previdência social.",
@@ -654,10 +654,10 @@ const QUESTOES_SESAUAL_LOTE160 = [
   },
   {
     id: "SUS-251", disciplina: "Legislação Aplicada ao SUS", assunto: "Seguridade social (CF, arts. 194-195)", subassunto: "Objetivos — exceto",
-    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "banca não identificada no material — questão do material Estratégia (Legislação SUS, Aula 02)",
+    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2023,
+    origem: "Avança SP/ Prefeitura de São Miguel Arcanjo - SP/ 2023 — questão do material Estratégia (Legislação SUS, Aula 02)",
     tipo: "ME", dificuldade: 1, tempoIdealSeg: 130, probReaparecer: 0.65,
-    enunciado: "Avança SP/ Prefeitura de São Miguel Arcanjo - SP/ 2023 - Segundo o Art. 194 da Constituição Federal de 1988, o poder público organiza a Seguridade Social a partir dos seguintes objetivos, EXCETO:",
+    enunciado: "Segundo o Art. 194 da Constituição Federal de 1988, o poder público organiza a Seguridade Social a partir dos seguintes objetivos, EXCETO:",
     alternativas: [
       "Universalidade da cobertura e do atendimento.",
       "Seletividade e distributividade na prestação dos benefícios e serviços.",
@@ -680,10 +680,10 @@ const QUESTOES_SESAUAL_LOTE160 = [
   },
   {
     id: "SUS-252", disciplina: "Legislação Aplicada ao SUS", assunto: "Direito à saúde e diretrizes do SUS (CF, arts. 196-198)", subassunto: "Conteúdo do art. 196",
-    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "banca não identificada no material — questão do material Estratégia (Legislação SUS, Aula 02)",
+    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2023,
+    origem: "FUNDATEC/ Prefeitura de Dom Pedrito - RS/ 2023 — questão do material Estratégia (Legislação SUS, Aula 02)",
     tipo: "ME", dificuldade: 1, tempoIdealSeg: 130, probReaparecer: 0.65,
-    enunciado: "FUNDATEC/ Prefeitura de Dom Pedrito - RS/ 2023 - Qual é o conteúdo do Art. 196 da Constituição Federal do Brasil?",
+    enunciado: "Qual é o conteúdo do Art. 196 da Constituição Federal do Brasil?",
     alternativas: [
       "Estabelece o direito à educação gratuita em todos os níveis de ensino.",
       "Determina que a segurança pública é dever do Estado, mas é direito e responsabilidade de todos.",
@@ -706,10 +706,10 @@ const QUESTOES_SESAUAL_LOTE160 = [
   },
   {
     id: "SUS-253", disciplina: "Legislação Aplicada ao SUS", assunto: "Iniciativa privada na saúde (CF, art. 199)", subassunto: "Iniciativa privada — correta",
-    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "banca não identificada no material — questão do material Estratégia (Legislação SUS, Aula 02)",
+    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2023,
+    origem: "OBJETIVA / Prefeitura de Horizontina - RS/ 2023 — questão do material Estratégia (Legislação SUS, Aula 02)",
     tipo: "ME", dificuldade: 2, tempoIdealSeg: 150, probReaparecer: 0.65,
-    enunciado: "OBJETIVA / Prefeitura de Horizontina - RS/ 2023 - De acordo com as disposições da Constituição Federal sobre saúde, assinalar a alternativa CORRETA:",
+    enunciado: "De acordo com as disposições da Constituição Federal sobre saúde, assinalar a alternativa CORRETA:",
     alternativas: [
       "Somente as entidades filantrópicas e as sem fins lucrativos poderão participar de forma complementar do sistema único de saúde.",
       "É permitida a destinação de recursos públicos para auxílios ou subvenções às instituições privadas com fins lucrativos.",
@@ -732,7 +732,7 @@ const QUESTOES_SESAUAL_LOTE160 = [
   {
     id: "SUS-254", disciplina: "Legislação Aplicada ao SUS", assunto: "Iniciativa privada na saúde (CF, art. 199)", subassunto: "Iniciativa privada — correta",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "Adaptada de banca não identificada no material (múltipla escolha convertida em C/E pelo QuestLab; base: Estratégia, Legislação SUS, Aula 02)",
+    origem: "Adaptada de OBJETIVA / Prefeitura de Horizontina - RS/ 2023 (múltipla escolha convertida em C/E pelo QuestLab; base: Estratégia, Legislação SUS, Aula 02)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 100, probReaparecer: 0.7,
     enunciado: "É vedada a participação direta ou indireta de empresas ou capitais estrangeiros na assistência à saúde no País, salvo nos casos previstos em lei.",
     gabarito: "C", pegadinha: "restricao-indevida", palavraChave: "salvo nos casos previstos em lei",
@@ -751,7 +751,7 @@ const QUESTOES_SESAUAL_LOTE160 = [
   {
     id: "SUS-255", disciplina: "Legislação Aplicada ao SUS", assunto: "Iniciativa privada na saúde (CF, art. 199)", subassunto: "Iniciativa privada — correta",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "Adaptada de banca não identificada no material (múltipla escolha convertida em C/E pelo QuestLab; base: Estratégia, Legislação SUS, Aula 02)",
+    origem: "Adaptada de OBJETIVA / Prefeitura de Horizontina - RS/ 2023 (múltipla escolha convertida em C/E pelo QuestLab; base: Estratégia, Legislação SUS, Aula 02)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 85, probReaparecer: 0.7,
     enunciado: "Segundo o art. 199 da Constituição, que trata da assistência à saúde pela iniciativa privada, a participação complementar de instituições privadas no SUS é restrita às entidades filantrópicas e às sem fins lucrativos, vedada a contratação de prestadores com finalidade lucrativa.",
     gabarito: "E", pegadinha: "restricao-indevida", palavraChave: "restrita",
@@ -769,10 +769,10 @@ const QUESTOES_SESAUAL_LOTE160 = [
   },
   {
     id: "SUS-256", disciplina: "Legislação Aplicada ao SUS", assunto: "Seguridade social (CF, arts. 194-195)", subassunto: "Áreas da seguridade",
-    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "banca não identificada no material — questão do material Estratégia (Legislação SUS, Aula 02)",
+    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2023,
+    origem: "CONSULPAM/ TCM-PA/ 2023 — questão do material Estratégia (Legislação SUS, Aula 02)",
     tipo: "ME", dificuldade: 1, tempoIdealSeg: 130, probReaparecer: 0.65,
-    enunciado: "CONSULPAM/ TCM-PA/ 2023 - A seguridade social, conforme a Constituição Federal, é destinada a assegurar os direitos relativos a três áreas específicas. Assinale a alternativa que corresponde CORRETAMENTE ao disposto no art. 194 da referida norma.",
+    enunciado: "A seguridade social, conforme a Constituição Federal, é destinada a assegurar os direitos relativos a três áreas específicas. Assinale a alternativa que corresponde CORRETAMENTE ao disposto no art. 194 da referida norma.",
     alternativas: [
       "Saúde, Educação e Segurança.",
       "Assistência Social, Direitos Humanos e Saúde.",
@@ -794,10 +794,10 @@ const QUESTOES_SESAUAL_LOTE160 = [
   },
   {
     id: "SUS-257", disciplina: "Legislação Aplicada ao SUS", assunto: "Seguridade social (CF, arts. 194-195)", subassunto: "Seguridade — conceito e objetivo",
-    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "banca não identificada no material — questão do material Estratégia (Legislação SUS, Aula 02)",
+    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2023,
+    origem: "Quadrix/ Prefeitura de Alto Paraíso de Goiás - GO/ 2023 — questão do material Estratégia (Legislação SUS, Aula 02)",
     tipo: "ME", dificuldade: 2, tempoIdealSeg: 150, probReaparecer: 0.65,
-    enunciado: "Quadrix/ Prefeitura de Alto Paraíso de Goiás - GO/ 2023 - De acordo com a Constituição Federal de 1988, a seguridade social compreende",
+    enunciado: "De acordo com a Constituição Federal de 1988, a seguridade social compreende",
     alternativas: [
       "um conjunto de ações de iniciativa exclusiva dos Poderes Públicos, destinadas a assegurar os direitos relativos à saúde, à previdência e à assistência social, tendo como objetivo, entre outros, a universalidade da cobertura e do atendimento.",
       "um conjunto integrado de ações de iniciativa dos Poderes Públicos e da sociedade, destinadas a assegurar os direitos relativos à saúde, à previdência e à assistência social, tendo como objetivo, entre outros, a uniformidade e equivalência dos benefícios e serviços exclusivamente às populações urbanas.",
@@ -820,10 +820,10 @@ const QUESTOES_SESAUAL_LOTE160 = [
   },
   {
     id: "SUS-258", disciplina: "Legislação Aplicada ao SUS", assunto: "Seguridade social (CF, arts. 194-195)", subassunto: "Art. 194 — lacunas",
-    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "banca não identificada no material — questão do material Estratégia (Legislação SUS, Aula 02)",
+    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2023,
+    origem: "Avança SP/ Prefeitura de São Miguel Arcanjo - SP/ 2023 — questão do material Estratégia (Legislação SUS, Aula 02)",
     tipo: "ME", dificuldade: 1, tempoIdealSeg: 130, probReaparecer: 0.65,
-    enunciado: "Avança SP/ Prefeitura de São Miguel Arcanjo - SP/ 2023 - Tendo em vista o Art. 194 da Constituição Federal de 1988, que versa sobre a Seguridade Social brasileira, complete a frase abaixo, e marque a alternativa que contenha as palavras na ordem correta. A seguridade social compreende um conjunto integrado de ações de iniciativa ____________ e _____________, destinadas a assegurar os direitos relativos __________, __________ e ______________.",
+    enunciado: "Tendo em vista o Art. 194 da Constituição Federal de 1988, que versa sobre a Seguridade Social brasileira, complete a frase abaixo, e marque a alternativa que contenha as palavras na ordem correta. A seguridade social compreende um conjunto integrado de ações de iniciativa ____________ e _____________, destinadas a assegurar os direitos relativos __________, __________ e ______________.",
     alternativas: [
       "Dos Poderes Públicos; da sociedade; saúde; previdência; assistência social .",
       "Dos poderes públicos; da família; previdência, educação e assistência social.",
@@ -846,10 +846,10 @@ const QUESTOES_SESAUAL_LOTE160 = [
   },
   {
     id: "SUS-259", disciplina: "Legislação Aplicada ao SUS", assunto: "Seguridade social (CF, arts. 194-195)", subassunto: "Art. 194 — direitos",
-    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "banca não identificada no material — questão do material Estratégia (Legislação SUS, Aula 02)",
+    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2023,
+    origem: "FGV/ MPE-SP/ 2023 — questão do material Estratégia (Legislação SUS, Aula 02)",
     tipo: "ME", dificuldade: 1, tempoIdealSeg: 130, probReaparecer: 0.65,
-    enunciado: "FGV/ MPE-SP/ 2023 - A Constituição Federal de 1988 (CF), apelidada de “Constituição Cidadã”, se destaca por apresentar, entre outras matérias, a concepção jurídica sobre a cidadania do brasileiro, tanto no que diz respeito aos direitos e deveres, como à proteção social deste cidadão. Em seu capítulo II, Art. 194, a CF dispõe sobre a Seguridade Social. De acordo com o citado dispositivo constitucional, a seguridade social compreende um conjunto de ações de iniciativa dos Poderes Públicos e da sociedade, destinadas a assegurar os direitos relativos ao(à):",
+    enunciado: "A Constituição Federal de 1988 (CF), apelidada de “Constituição Cidadã”, se destaca por apresentar, entre outras matérias, a concepção jurídica sobre a cidadania do brasileiro, tanto no que diz respeito aos direitos e deveres, como à proteção social deste cidadão. Em seu capítulo II, Art. 194, a CF dispõe sobre a Seguridade Social. De acordo com o citado dispositivo constitucional, a seguridade social compreende um conjunto de ações de iniciativa dos Poderes Públicos e da sociedade, destinadas a assegurar os direitos relativos ao(à):",
     alternativas: [
       "trabalho, à saúde, à previdência e à assistência social.",
       "saúde, à previdência e à assistência social.",
@@ -872,10 +872,10 @@ const QUESTOES_SESAUAL_LOTE160 = [
   },
   {
     id: "SUS-260", disciplina: "Legislação Aplicada ao SUS", assunto: "Direito à saúde e diretrizes do SUS (CF, arts. 196-198)", subassunto: "Rede regionalizada e hierarquizada",
-    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "banca não identificada no material — questão do material Estratégia (Legislação SUS, Aula 02)",
+    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2023,
+    origem: "INSTITUTO AOCP / MPE-RR / 2023 — questão do material Estratégia (Legislação SUS, Aula 02)",
     tipo: "ME", dificuldade: 2, tempoIdealSeg: 150, probReaparecer: 0.65,
-    enunciado: "INSTITUTO AOCP / MPE-RR / 2023 - O art. 198 da Constituição da República prescreve que as ações e serviços públicos de saúde integram uma rede regionalizada e hierarquizada e constituem um sistema único, donde se extrai que:",
+    enunciado: "O art. 198 da Constituição da República prescreve que as ações e serviços públicos de saúde integram uma rede regionalizada e hierarquizada e constituem um sistema único, donde se extrai que:",
     alternativas: [
       "o Sistema Único de Saúde tem caráter contributivo e está ligado aos institutos previdenciários das várias regiões do país.",
       "o Sistema Único de Saúde possui hierarquização segundo os níveis de complexidade da atenção: primária, secundária e terciária.",
@@ -897,10 +897,10 @@ const QUESTOES_SESAUAL_LOTE160 = [
   },
   {
     id: "SUS-261", disciplina: "Legislação Aplicada ao SUS", assunto: "Direito à saúde e diretrizes do SUS (CF, arts. 196-198)", subassunto: "Diretrizes do art. 198 — exceto",
-    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "banca não identificada no material — questão do material Estratégia (Legislação SUS, Aula 02)",
+    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2023,
+    origem: "Unesc/ Prefeitura de Criciúma - SC/ 2023 — questão do material Estratégia (Legislação SUS, Aula 02)",
     tipo: "ME", dificuldade: 1, tempoIdealSeg: 130, probReaparecer: 0.65,
-    enunciado: "Unesc/ Prefeitura de Criciúma - SC/ 2023 - Sobre as diretrizes do Sistema Único de Saúde, de acordo com o Art. 198 da Constituição Federal do Brasil de 1988, as ações e serviços públicos de saúde integram uma rede regionalizada e hierarquizada e constituem um sistema único, organizado de acordo com as seguintes diretrizes, EXCETO:",
+    enunciado: "Sobre as diretrizes do Sistema Único de Saúde, de acordo com o Art. 198 da Constituição Federal do Brasil de 1988, as ações e serviços públicos de saúde integram uma rede regionalizada e hierarquizada e constituem um sistema único, organizado de acordo com as seguintes diretrizes, EXCETO:",
     alternativas: [
       "O sistema único de saúde será financiado, com recursos do orçamento da seguridade social, da União, dos Estados, do Distrito Federal e dos Municípios, além de outras fontes.",
       "Participação da comunidade.",
@@ -942,10 +942,10 @@ const QUESTOES_SESAUAL_LOTE160 = [
   },
   {
     id: "SUS-263", disciplina: "Legislação Aplicada ao SUS", assunto: "Financiamento do SUS (CF, art. 198)", subassunto: "Fontes de financiamento",
-    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "banca não identificada no material — questão do material Estratégia (Legislação SUS, Aula 02)",
+    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2023,
+    origem: "INSTITUTO MAIS/ Prefeitura de Santana de Parnaíba - SP/ 2023 — questão do material Estratégia (Legislação SUS, Aula 02)",
     tipo: "ME", dificuldade: 1, tempoIdealSeg: 130, probReaparecer: 0.65,
-    enunciado: "INSTITUTO MAIS/ Prefeitura de Santana de Parnaíba - SP/ 2023 - De acordo com a Constituição Federal, o Sistema Único de Saúde (SUS) deverá ser financiado com auxílio, dentre outras fontes, do(a) I. Seguridade Social. II. União e dos Estados. III. Distrito Federal e dos Municípios. É correto o que se afirma em",
+    enunciado: "De acordo com a Constituição Federal, o Sistema Único de Saúde (SUS) deverá ser financiado com auxílio, dentre outras fontes, do(a) I. Seguridade Social. II. União e dos Estados. III. Distrito Federal e dos Municípios. É correto o que se afirma em",
     alternativas: [
       "I, apenas.",
       "II, apenas.",
@@ -967,10 +967,10 @@ const QUESTOES_SESAUAL_LOTE160 = [
   },
   {
     id: "SUS-264", disciplina: "Legislação Aplicada ao SUS", assunto: "Financiamento do SUS (CF, art. 198)", subassunto: "Mínimo da União",
-    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "banca não identificada no material — questão do material Estratégia (Legislação SUS, Aula 02)",
+    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2023,
+    origem: "INSTITUTO AOCP/ SESA-BA/ 2023 — questão do material Estratégia (Legislação SUS, Aula 02)",
     tipo: "ME", dificuldade: 2, tempoIdealSeg: 150, probReaparecer: 0.65,
-    enunciado: "INSTITUTO AOCP/ SESA-BA/ 2023 - A saúde é direito de todos e dever do Estado, garantido mediante políticas sociais e econômicas que visem à redução do risco de doença e de outros agravos e ao acesso universal e igualitário às ações e serviços para sua promoção, proteção e recuperação. Nesse contexto, à luz da Constituição Federal, é correto afirmar que, anualmente, da receita corrente líquida do respectivo exercício financeiro, a União deve aplicar em ações e serviços públicos de saúde o mínimo de",
+    enunciado: "A saúde é direito de todos e dever do Estado, garantido mediante políticas sociais e econômicas que visem à redução do risco de doença e de outros agravos e ao acesso universal e igualitário às ações e serviços para sua promoção, proteção e recuperação. Nesse contexto, à luz da Constituição Federal, é correto afirmar que, anualmente, da receita corrente líquida do respectivo exercício financeiro, a União deve aplicar em ações e serviços públicos de saúde o mínimo de",
     alternativas: [
       "5% (cinco por cento).",
       "10% (dez por cento).",
@@ -994,7 +994,7 @@ const QUESTOES_SESAUAL_LOTE160 = [
   {
     id: "SUS-265", disciplina: "Legislação Aplicada ao SUS", assunto: "Financiamento do SUS (CF, art. 198)", subassunto: "Mínimo da União",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "Adaptada de banca não identificada no material (múltipla escolha convertida em C/E pelo QuestLab; base: Estratégia, Legislação SUS, Aula 02)",
+    origem: "Adaptada de INSTITUTO AOCP/ SESA-BA/ 2023 (múltipla escolha convertida em C/E pelo QuestLab; base: Estratégia, Legislação SUS, Aula 02)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 100, probReaparecer: 0.7,
     enunciado: "Conforme a Lei Complementar nº 141/2012, os estados devem aplicar em ações e serviços públicos de saúde, no mínimo, 12% e os municípios, 15% da arrecadação de impostos e transferências constitucionais, deduzidas as parcelas transferidas.",
     gabarito: "C", pegadinha: "troca-numerica", palavraChave: "12% ... 15%",
@@ -1013,7 +1013,7 @@ const QUESTOES_SESAUAL_LOTE160 = [
   {
     id: "SUS-266", disciplina: "Legislação Aplicada ao SUS", assunto: "Financiamento do SUS (CF, art. 198)", subassunto: "Mínimo da União",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "Adaptada de banca não identificada no material (múltipla escolha convertida em C/E pelo QuestLab; base: Estratégia, Legislação SUS, Aula 02)",
+    origem: "Adaptada de INSTITUTO AOCP/ SESA-BA/ 2023 (múltipla escolha convertida em C/E pelo QuestLab; base: Estratégia, Legislação SUS, Aula 02)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 100, probReaparecer: 0.7,
     enunciado: "Quanto aos percentuais mínimos de aplicação em saúde definidos na Constituição e na legislação complementar, a União deve aplicar anualmente em ações e serviços públicos de saúde o mínimo de 12% da sua receita corrente líquida, ao passo que os municípios devem aplicar no mínimo 15% da arrecadação de impostos.",
     gabarito: "E", pegadinha: "troca-numerica", palavraChave: "12% da sua receita corrente líquida",
@@ -1031,10 +1031,10 @@ const QUESTOES_SESAUAL_LOTE160 = [
   },
   {
     id: "SUS-267", disciplina: "Legislação Aplicada ao SUS", assunto: "Atribuições do SUS (CF, art. 200)", subassunto: "Art. 200 — correta",
-    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "banca não identificada no material — questão do material Estratégia (Legislação SUS, Aula 02)",
+    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2023,
+    origem: "Unesc/ Prefeitura de Criciúma - SC/ 2023 — questão do material Estratégia (Legislação SUS, Aula 02)",
     tipo: "ME", dificuldade: 2, tempoIdealSeg: 150, probReaparecer: 0.65,
-    enunciado: "Unesc/ Prefeitura de Criciúma - SC/ 2023 - Segundo a Constituição da República Federativa do Brasil de 1988, ao sistema único de saúde compete, além de outras atribuições, nos termos da Lei:",
+    enunciado: "Segundo a Constituição da República Federativa do Brasil de 1988, ao sistema único de saúde compete, além de outras atribuições, nos termos da Lei:",
     alternativas: [
       "Executar as ações de vigilância sanitária e epidemiológica, exceto as de saúde do trabalhador.",
       "Colaborar na proteção do meio ambiente, nele não compreendido o do trabalho.",
@@ -1057,10 +1057,10 @@ const QUESTOES_SESAUAL_LOTE160 = [
   },
   {
     id: "SUS-268", disciplina: "Legislação Aplicada ao SUS", assunto: "Direito à saúde e diretrizes do SUS (CF, arts. 196-198)", subassunto: "Organização das ações do SUS",
-    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "banca não identificada no material — questão do material Estratégia (Legislação SUS, Aula 02)",
+    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2023,
+    origem: "Prefeitura de Bauru - SP/Prefeitura de Bauru - SP/ 2023 — questão do material Estratégia (Legislação SUS, Aula 02)",
     tipo: "ME", dificuldade: 1, tempoIdealSeg: 130, probReaparecer: 0.65,
-    enunciado: "Prefeitura de Bauru - SP/Prefeitura de Bauru - SP/ 2023 - As ações e serviços de saúde, executados pelo Sistema Único de Saúde (SUS), seja diretamente ou mediante participação complementar da iniciativa privada, serão organizados:",
+    enunciado: "As ações e serviços de saúde, executados pelo Sistema Único de Saúde (SUS), seja diretamente ou mediante participação complementar da iniciativa privada, serão organizados:",
     alternativas: [
       "De forma, universal.",
       "De forma regionalizada e hierarquizada em níveis de complexidade crescente.",
@@ -1082,10 +1082,10 @@ const QUESTOES_SESAUAL_LOTE160 = [
   },
   {
     id: "SUS-269", disciplina: "Legislação Aplicada ao SUS", assunto: "Iniciativa privada na saúde (CF, art. 199)", subassunto: "Iniciativa privada — V/F",
-    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "banca não identificada no material — questão do material Estratégia (Legislação SUS, Aula 02)",
+    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2023,
+    origem: "IBFC/ Prefeitura de Cuiabá - MT/ 2023 — questão do material Estratégia (Legislação SUS, Aula 02)",
     tipo: "ME", dificuldade: 1, tempoIdealSeg: 130, probReaparecer: 0.65,
-    enunciado: "IBFC/ Prefeitura de Cuiabá - MT/ 2023 - De acordo com as disposições da Constituição Federal sobre saúde, analise as afirmativas a seguir e dê valores Verdadeiro (V) ou Falso (F). ( ) A assistência à saúde é livre à iniciativa privada. ( ) As instituições privadas poderão participar de forma complementar do sistema único de saúde, segundo diretrizes deste, mediante contrato de direito público ou convênio, tendo preferência as entidades filantrópicas e as sem fins lucrativos. ( ) O Estado deve fomentar a destinação de recursos públicos para auxílios ou subvenções às instituições privadas com fins lucrativos. Assinale a alternativa que apresenta a sequência correta de cima para baixo.",
+    enunciado: "De acordo com as disposições da Constituição Federal sobre saúde, analise as afirmativas a seguir e dê valores Verdadeiro (V) ou Falso (F). ( ) A assistência à saúde é livre à iniciativa privada. ( ) As instituições privadas poderão participar de forma complementar do sistema único de saúde, segundo diretrizes deste, mediante contrato de direito público ou convênio, tendo preferência as entidades filantrópicas e as sem fins lucrativos. ( ) O Estado deve fomentar a destinação de recursos públicos para auxílios ou subvenções às instituições privadas com fins lucrativos. Assinale a alternativa que apresenta a sequência correta de cima para baixo.",
     alternativas: [
       "V - V - V",
       "V - F - V",
@@ -1126,10 +1126,10 @@ const QUESTOES_SESAUAL_LOTE160 = [
   },
   {
     id: "SUS-271", disciplina: "Legislação Aplicada ao SUS", assunto: "Iniciativa privada na saúde (CF, art. 199)", subassunto: "Art. 199 — correta",
-    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "banca não identificada no material — questão do material Estratégia (Legislação SUS, Aula 02)",
+    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2023,
+    origem: "AMEOSC/ Prefeitura de Itapiranga - SC/ 2023 — questão do material Estratégia (Legislação SUS, Aula 02)",
     tipo: "ME", dificuldade: 2, tempoIdealSeg: 150, probReaparecer: 0.65,
-    enunciado: "AMEOSC/ Prefeitura de Itapiranga - SC/ 2023 - Assinale a alternativa CORRETA quanto ao Art. 199, na Seção II, da saúde, da Constituição Federal, o qual aponta sobre a assistência à saúde pela iniciativa privada.",
+    enunciado: "Assinale a alternativa CORRETA quanto ao Art. 199, na Seção II, da saúde, da Constituição Federal, o qual aponta sobre a assistência à saúde pela iniciativa privada.",
     alternativas: [
       "As instituições privadas poderão participar de forma complementar do SUS, mediante contrato de direito público ou convênio, sem estabelecimento de preferência entre as entidades.",
       "A lei disporá sobre as condições e os requisitos que facilitem a remoção de órgãos, tecidos e substâncias humanas para fins de transplante, pesquisa e tratamento, bem como a coleta, processamento e transfusão de sangue e seus derivados.",
@@ -1152,7 +1152,7 @@ const QUESTOES_SESAUAL_LOTE160 = [
   {
     id: "SUS-272", disciplina: "Legislação Aplicada ao SUS", assunto: "Iniciativa privada na saúde (CF, art. 199)", subassunto: "Art. 199 — correta",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "Adaptada de banca não identificada no material (múltipla escolha convertida em C/E pelo QuestLab; base: Estratégia, Legislação SUS, Aula 02)",
+    origem: "Adaptada de AMEOSC/ Prefeitura de Itapiranga - SC/ 2023 (múltipla escolha convertida em C/E pelo QuestLab; base: Estratégia, Legislação SUS, Aula 02)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 85, probReaparecer: 0.7,
     enunciado: "Ao tratar da participação da iniciativa privada na assistência à saúde, a Constituição admite a comercialização de sangue e seus derivados por empresas privadas, desde que autorizadas e fiscalizadas pela vigilância sanitária.",
     gabarito: "E", pegadinha: "exigencia-inexistente", palavraChave: "admite a comercialização",
@@ -1170,10 +1170,10 @@ const QUESTOES_SESAUAL_LOTE160 = [
   },
   {
     id: "SUS-273", disciplina: "Legislação Aplicada ao SUS", assunto: "Direito à saúde e diretrizes do SUS (CF, arts. 196-198)", subassunto: "Saúde na CF — afirmativas",
-    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "banca não identificada no material — questão do material Estratégia (Legislação SUS, Aula 02)",
+    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2023,
+    origem: "CPCON/ Prefeitura de Catolé do Rocha - PB/ 2023 — questão do material Estratégia (Legislação SUS, Aula 02)",
     tipo: "ME", dificuldade: 2, tempoIdealSeg: 150, probReaparecer: 0.65,
-    enunciado: "CPCON/ Prefeitura de Catolé do Rocha - PB/ 2023 - A Constituição Federal de 1988 foi o marco da criação do Sistema Único de Saúde. Em seus artigos 196 – 200, está descrita pela primeira vez a saúde como direito de cidadania. Sobre a saúde na Constituição, assinale as alternativas CORRETAS: I- As ações e serviços públicos de saúde integram uma rede regionalizada e hierarquizada e constituem um sistema único. II- Suas diretrizes são a descentralização, com direção compartilhada entre executivo e conselho de saúde em cada esfera de governo, atenção integral e participação da comunidade. III- É atribuição do SUS, entre outras, fiscalizar e inspecionar alimentos, compreendido o controle de seu teor nutricional, bem como bebidas e águas para consumo humano. IV- Ao sistema único de saúde compete ordenar a formação de recursos humanos na área de saúde. Estão CORRETAS as afirmativas:",
+    enunciado: "A Constituição Federal de 1988 foi o marco da criação do Sistema Único de Saúde. Em seus artigos 196 – 200, está descrita pela primeira vez a saúde como direito de cidadania. Sobre a saúde na Constituição, assinale as alternativas CORRETAS: I- As ações e serviços públicos de saúde integram uma rede regionalizada e hierarquizada e constituem um sistema único. II- Suas diretrizes são a descentralização, com direção compartilhada entre executivo e conselho de saúde em cada esfera de governo, atenção integral e participação da comunidade. III- É atribuição do SUS, entre outras, fiscalizar e inspecionar alimentos, compreendido o controle de seu teor nutricional, bem como bebidas e águas para consumo humano. IV- Ao sistema único de saúde compete ordenar a formação de recursos humanos na área de saúde. Estão CORRETAS as afirmativas:",
     alternativas: [
       "I, II e III apenas.",
       "I, III e IV, apenas.",
@@ -1196,10 +1196,10 @@ const QUESTOES_SESAUAL_LOTE160 = [
   },
   {
     id: "SUS-274", disciplina: "Legislação Aplicada ao SUS", assunto: "Atribuições do SUS (CF, art. 200)", subassunto: "Atribuição do SUS",
-    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "banca não identificada no material — questão do material Estratégia (Legislação SUS, Aula 02)",
+    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2023,
+    origem: "VUNESP/ Prefeitura de Pindamonhangaba - SP/ 2023 — questão do material Estratégia (Legislação SUS, Aula 02)",
     tipo: "ME", dificuldade: 2, tempoIdealSeg: 150, probReaparecer: 0.65,
-    enunciado: "VUNESP/ Prefeitura de Pindamonhangaba - SP/ 2023 - Além de controlar e fiscalizar procedimentos, produtos e substâncias de interesse para a saúde, assinale a alternativa que contém outra atribuição do SUS estabelecida na Constituição Federal de 1988.",
+    enunciado: "Além de controlar e fiscalizar procedimentos, produtos e substâncias de interesse para a saúde, assinale a alternativa que contém outra atribuição do SUS estabelecida na Constituição Federal de 1988.",
     alternativas: [
       "Proteger a família, a maternidade, a infância, a adolescência e a velhice.",
       "Garantir o piso salarial nacional para os profissionais de saúde, assistência social e educação.",
@@ -1222,10 +1222,10 @@ const QUESTOES_SESAUAL_LOTE160 = [
   },
   {
     id: "SUS-275", disciplina: "Legislação Aplicada ao SUS", assunto: "Financiamento do SUS (CF, art. 198)", subassunto: "Financiamento e ACS/ACE",
-    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "banca não identificada no material — questão do material Estratégia (Legislação SUS, Aula 02)",
+    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2022,
+    origem: "Avança SP/ Prefeitura de Laranjal Paulista - SP/ 2022 — questão do material Estratégia (Legislação SUS, Aula 02)",
     tipo: "ME", dificuldade: 2, tempoIdealSeg: 150, probReaparecer: 0.65,
-    enunciado: "Avança SP/ Prefeitura de Laranjal Paulista - SP/ 2022 - A nossa Constituição Federal de 1988 trata do direito à saúde como política social brasileira. De acordo com esse documento, considere os artigos abaixo e assinale a alternativa correta: I - O sistema único de saúde será financiado, nos termos do art. 195, com recursos do orçamento da seguridade social, da União, dos Estados, do Distrito Federal e dos Municípios, além de outras fontes. II - Os gestores locais do sistema único de saúde poderão admitir agentes comunitários de saúde e agentes de combate às endemias por meio de processo seletivo público, de acordo com a natureza e complexidade de suas atribuições e requisitos específicos para sua atuação. III - A saúde é direito de todos e dever do cidadão, garantido mediante políticas sociais e econômicas que visem à redução do risco de doença e de outros agravos e ao acesso particular e igualitário às ações e serviços para sua promoção, proteção e revogação.",
+    enunciado: "A nossa Constituição Federal de 1988 trata do direito à saúde como política social brasileira. De acordo com esse documento, considere os artigos abaixo e assinale a alternativa correta: I - O sistema único de saúde será financiado, nos termos do art. 195, com recursos do orçamento da seguridade social, da União, dos Estados, do Distrito Federal e dos Municípios, além de outras fontes. II - Os gestores locais do sistema único de saúde poderão admitir agentes comunitários de saúde e agentes de combate às endemias por meio de processo seletivo público, de acordo com a natureza e complexidade de suas atribuições e requisitos específicos para sua atuação. III - A saúde é direito de todos e dever do cidadão, garantido mediante políticas sociais e econômicas que visem à redução do risco de doença e de outros agravos e ao acesso particular e igualitário às ações e serviços para sua promoção, proteção e revogação.",
     alternativas: [
       "Apenas o item I está correto.",
       "Apenas o item II está correto.",
@@ -1249,7 +1249,7 @@ const QUESTOES_SESAUAL_LOTE160 = [
   {
     id: "SUS-276", disciplina: "Legislação Aplicada ao SUS", assunto: "Financiamento do SUS (CF, art. 198)", subassunto: "Financiamento e ACS/ACE",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "Adaptada de banca não identificada no material (múltipla escolha convertida em C/E pelo QuestLab; base: Estratégia, Legislação SUS, Aula 02)",
+    origem: "Adaptada de Avança SP/ Prefeitura de Laranjal Paulista - SP/ 2022 (múltipla escolha convertida em C/E pelo QuestLab; base: Estratégia, Legislação SUS, Aula 02)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 85, probReaparecer: 0.7,
     enunciado: "Os gestores locais do SUS poderão admitir agentes comunitários de saúde e agentes de combate às endemias por meio de processo seletivo público, de acordo com a natureza e a complexidade de suas atribuições.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "processo seletivo público",
@@ -1267,10 +1267,10 @@ const QUESTOES_SESAUAL_LOTE160 = [
   },
   {
     id: "SUS-277", disciplina: "Legislação Aplicada ao SUS", assunto: "Seguridade social (CF, arts. 194-195)", subassunto: "Financiamento da seguridade",
-    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "banca não identificada no material — questão do material Estratégia (Legislação SUS, Aula 02)",
+    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2022,
+    origem: "IBFC/ PC-BA/ 2022 — questão do material Estratégia (Legislação SUS, Aula 02)",
     tipo: "ME", dificuldade: 2, tempoIdealSeg: 150, probReaparecer: 0.65,
-    enunciado: "IBFC/ PC-BA/ 2022 - Sobre as disposições constitucionais sobre seguridade social, analise as afirmativas abaixo. I. A seguridade social será financiada por toda a sociedade, de forma direta e indireta, nos termos da lei, mediante recursos provenientes dos orçamentos da União, dos Estados, do Distrito Federal e dos Municípios, e das contribuições sociais elencadas na Constituição Federal. II. As receitas dos Estados, do Distrito Federal e dos Municípios destinadas à seguridade social constarão dos respectivos orçamentos, não integrando o orçamento da União. III. Um dos objetivos da seguridade social é a universalidade da cobertura e do atendimento. Estão corretas as afirmativas:",
+    enunciado: "Sobre as disposições constitucionais sobre seguridade social, analise as afirmativas abaixo. I. A seguridade social será financiada por toda a sociedade, de forma direta e indireta, nos termos da lei, mediante recursos provenientes dos orçamentos da União, dos Estados, do Distrito Federal e dos Municípios, e das contribuições sociais elencadas na Constituição Federal. II. As receitas dos Estados, do Distrito Federal e dos Municípios destinadas à seguridade social constarão dos respectivos orçamentos, não integrando o orçamento da União. III. Um dos objetivos da seguridade social é a universalidade da cobertura e do atendimento. Estão corretas as afirmativas:",
     alternativas: [
       "I, II e III",
       "I e II apenas",
@@ -1293,10 +1293,10 @@ const QUESTOES_SESAUAL_LOTE160 = [
   },
   {
     id: "SUS-278", disciplina: "Legislação Aplicada ao SUS", assunto: "Seguridade social (CF, arts. 194-195)", subassunto: "Contribuições sociais",
-    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "banca não identificada no material — questão do material Estratégia (Legislação SUS, Aula 02)",
+    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2022,
+    origem: "Avança SP/ Câmara Municipal de Sorocaba/ 2022 — questão do material Estratégia (Legislação SUS, Aula 02)",
     tipo: "ME", dificuldade: 2, tempoIdealSeg: 150, probReaparecer: 0.65,
-    enunciado: "Avança SP/ Câmara Municipal de Sorocaba/ 2022 - O artigo 195 da Constituição Federal destaca que a seguridade social será financiada por toda a sociedade, de forma direta e indireta, nos termos da lei, mediante recursos provenientes dos orçamentos da União, dos Estados, do Distrito Federal e dos Municípios, e sobre algumas contribuições sociais. Dessas, temos a receita de concursos:",
+    enunciado: "O artigo 195 da Constituição Federal destaca que a seguridade social será financiada por toda a sociedade, de forma direta e indireta, nos termos da lei, mediante recursos provenientes dos orçamentos da União, dos Estados, do Distrito Federal e dos Municípios, e sobre algumas contribuições sociais. Dessas, temos a receita de concursos:",
     alternativas: [
       "de prognósticos.",
       "sem vínculo empregatício.",
@@ -1320,7 +1320,7 @@ const QUESTOES_SESAUAL_LOTE160 = [
   {
     id: "SUS-279", disciplina: "Legislação Aplicada ao SUS", assunto: "Seguridade social (CF, arts. 194-195)", subassunto: "Contribuições sociais",
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "Adaptada de banca não identificada no material (múltipla escolha convertida em C/E pelo QuestLab; base: Estratégia, Legislação SUS, Aula 02)",
+    origem: "Adaptada de Avança SP/ Câmara Municipal de Sorocaba/ 2022 (múltipla escolha convertida em C/E pelo QuestLab; base: Estratégia, Legislação SUS, Aula 02)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 100, probReaparecer: 0.7,
     enunciado: "A seguridade social é financiada, entre outras fontes, por contribuições do empregador sobre a folha de salários, a receita ou o faturamento e o lucro, do trabalhador, sobre a receita de concursos de prognósticos e do importador de bens ou serviços do exterior.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "concursos de prognósticos",
@@ -1338,10 +1338,10 @@ const QUESTOES_SESAUAL_LOTE160 = [
   },
   {
     id: "SUS-280", disciplina: "Legislação Aplicada ao SUS", assunto: "Direito à saúde e diretrizes do SUS (CF, arts. 196-198)", subassunto: "Arts. 196-199 — incorreta",
-    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "banca não identificada no material — questão do material Estratégia (Legislação SUS, Aula 02)",
+    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2022,
+    origem: "AMAUC/ Prefeitura de Arabutã - SC/ 2022 — questão do material Estratégia (Legislação SUS, Aula 02)",
     tipo: "ME", dificuldade: 1, tempoIdealSeg: 130, probReaparecer: 0.65,
-    enunciado: "AMAUC/ Prefeitura de Arabutã - SC/ 2022 - De acordo com a Constituição Federal 1988, é INCORRETO afirmar que :",
+    enunciado: "De acordo com a Constituição Federal 1988, é INCORRETO afirmar que :",
     alternativas: [
       "O Art. 196, diz que a saúde é direito de todos e dever do Estado, garantido mediante políticas sociais e econômicas que visem à redução do risco de doença e de outros agravos e ao acesso universal e igualitário às ações e serviços para sua promoção, proteção e recuperação.",
       "O Art. 199 diz que a assistência à saúde é livre à iniciativa privada.",
@@ -1364,10 +1364,10 @@ const QUESTOES_SESAUAL_LOTE160 = [
   },
   {
     id: "SUS-281", disciplina: "Legislação Aplicada ao SUS", assunto: "Financiamento do SUS (CF, art. 198)", subassunto: "Financiamento do SUS",
-    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "banca não identificada no material — questão do material Estratégia (Legislação SUS, Aula 02)",
+    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2022,
+    origem: "VUNESP/ Prefeitura de Presidente Prudente - SP/ 2022 — questão do material Estratégia (Legislação SUS, Aula 02)",
     tipo: "ME", dificuldade: 1, tempoIdealSeg: 130, probReaparecer: 0.65,
-    enunciado: "VUNESP/ Prefeitura de Presidente Prudente - SP/ 2022 - A saúde é direito de todos e dever do Estado, garantido mediante políticas sociais e econômicas que visem à redução do risco de doença e de outros agravos e ao acesso universal e igualitário às ações e serviços para sua promoção, proteção e recuperação. As ações e serviços públicos de saúde integram uma rede regionalizada e hierarquizada e constituem um sistema único, organizado de acordo com as seguintes diretrizes, entre as quais: a descentralização, com direção única em cada esfera de governo; o atendimento integral, com prioridade para as atividades preventivas, sem prejuízo dos serviços assistenciais; a participação da comunidade. Nesse sentido, o Sistema Único de Saúde será financiado com os seguintes recursos:",
+    enunciado: "A saúde é direito de todos e dever do Estado, garantido mediante políticas sociais e econômicas que visem à redução do risco de doença e de outros agravos e ao acesso universal e igualitário às ações e serviços para sua promoção, proteção e recuperação. As ações e serviços públicos de saúde integram uma rede regionalizada e hierarquizada e constituem um sistema único, organizado de acordo com as seguintes diretrizes, entre as quais: a descentralização, com direção única em cada esfera de governo; o atendimento integral, com prioridade para as atividades preventivas, sem prejuízo dos serviços assistenciais; a participação da comunidade. Nesse sentido, o Sistema Único de Saúde será financiado com os seguintes recursos:",
     alternativas: [
       "dos Estados, Distrito Federal e dos Municípios.",
       "do orçamento da seguridade social, da União, dos Estados, do Distrito Federal e dos Municípios, além de outras fontes.",
@@ -1390,10 +1390,10 @@ const QUESTOES_SESAUAL_LOTE160 = [
   },
   {
     id: "SUS-282", disciplina: "Legislação Aplicada ao SUS", assunto: "Atribuições do SUS (CF, art. 200)", subassunto: "Art. 200 — correta",
-    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "banca não identificada no material — questão do material Estratégia (Legislação SUS, Aula 02)",
+    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2022,
+    origem: "AMAUC/ Prefeitura de Arabutã - SC/ 2022 — questão do material Estratégia (Legislação SUS, Aula 02)",
     tipo: "ME", dificuldade: 2, tempoIdealSeg: 150, probReaparecer: 0.65,
-    enunciado: "AMAUC/ Prefeitura de Arabutã - SC/ 2022 - Segundo a Constituição Federal, marque a alternativa CORRETA. [adaptada]",
+    enunciado: "Segundo a Constituição Federal, marque a alternativa CORRETA. [adaptada]",
     alternativas: [
       "Colaborar na proteção do meio ambiente, nele compreendido o do trabalho, é atividade extracurricular do Sistema Único de Saúde.",
       "Os gestores locais do sistema único de saúde poderão admitir agentes comunitários de saúde e agentes de combate às epidemias por meio de processo seletivo público, de acordo com a natureza e complexidade de suas atribuições e requisitos específicos para sua atuação.",
@@ -1416,10 +1416,10 @@ const QUESTOES_SESAUAL_LOTE160 = [
   },
   {
     id: "SUS-283", disciplina: "Legislação Aplicada ao SUS", assunto: "Direito à saúde e diretrizes do SUS (CF, arts. 196-198)", subassunto: "Art. 196 — redação",
-    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "banca não identificada no material — questão do material Estratégia (Legislação SUS, Aula 02)",
+    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2022,
+    origem: "IESES/ SAP-SC/ 2022 — questão do material Estratégia (Legislação SUS, Aula 02)",
     tipo: "ME", dificuldade: 1, tempoIdealSeg: 130, probReaparecer: 0.65,
-    enunciado: "IESES/ SAP-SC/ 2022 - Sobre o Artigo 196 da Constituição Federal de 1988, assinale a alternativa correta.",
+    enunciado: "Sobre o Artigo 196 da Constituição Federal de 1988, assinale a alternativa correta.",
     alternativas: [
       "A saúde é direito daqueles que não possuem planos de saúde privados, e dever do Estado, garantido mediante políticas sociais e econômicas que visem à redução do risco de doença e de outros agravos.",
       "A saúde é direito daqueles que pagam INPS, e dever do Estado, garantido mediante políticas sociais e econômicas que visem à redução do risco de doença e de outros agravos.",
@@ -1445,7 +1445,7 @@ const QUESTOES_SESAUAL_LOTE160 = [
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2022,
     origem: "CEBRASPE (CESPE) — MPE-SE 2022 — questão do material Estratégia (Legislação SUS, Aula 02)",
     tipo: "ME", dificuldade: 2, tempoIdealSeg: 150, probReaparecer: 0.65,
-    enunciado: "CEBRASPE/ MPE-SE/ 2022 - No que concerne a Constituição Federal de 1988, a União deve aplicar em saúde pública o mínimo de",
+    enunciado: "No que concerne a Constituição Federal de 1988, a União deve aplicar em saúde pública o mínimo de",
     alternativas: [
       "12% da sua receita líquida anual.",
       "15% da sua receita líquida anual.",
