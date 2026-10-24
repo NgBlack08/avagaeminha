@@ -122,7 +122,7 @@ const QUESTOES_SESAUAL_LOTE149 = [
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2025,
     origem: "FGV - 2025 - Fisioterapeuta (EBSERH) — questão do material Estratégia (Conhecimentos Específicos, Aula 08)",
     tipo: "ME", dificuldade: 2, tempoIdealSeg: 150, probReaparecer: 0.65,
-    enunciado: "Cardiovascular (e mais 7 concursos) A marcha, principal meio de locomoção do ser humano, pode ser alterada por diversos fatores, necessitando de avaliação detalhada de cada etapa de sua execução. O ciclo da marcha consiste de duas fases: apoio e balanço. Em relação à fase de apoio, avalie as afirmativas a seguir e assinale (V) para a verdadeira e (F) para a falsa. ( ) A fase representa cerca de 40% do ciclo da marcha. ( ) A fase representa cerca de 60% do ciclo da marcha. ( ) Nessa fase, ocorrem a descarga do peso e o apoio simples do membro. ( ) Nessa fase, ocorrem dois eventos instantâneos: contato inicial e retirada do contato. As afirmativas são, respectivamente,",
+    enunciado: "A marcha, principal meio de locomoção do ser humano, pode ser alterada por diversos fatores, necessitando de avaliação detalhada de cada etapa de sua execução. O ciclo da marcha consiste de duas fases: apoio e balanço. Em relação à fase de apoio, avalie as afirmativas a seguir e assinale (V) para a verdadeira e (F) para a falsa. ( ) A fase representa cerca de 40% do ciclo da marcha. ( ) A fase representa cerca de 60% do ciclo da marcha. ( ) Nessa fase, ocorrem a descarga do peso e o apoio simples do membro. ( ) Nessa fase, ocorrem dois eventos instantâneos: contato inicial e retirada do contato. As afirmativas são, respectivamente,",
     alternativas: [
       "V – F – F – V.",
       "F – V – V – V.",

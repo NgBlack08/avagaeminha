@@ -221,7 +221,7 @@ const QUESTOES_SESAUAL_LOTE154 = [
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Adaptada de NUCEPE UESPI - 2026 - Residente (UESPI) (múltipla escolha convertida em C/E pelo QuestLab; base: Estratégia, Conhecimentos Específicos, Aula 07)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 85, probReaparecer: 0.7,
-    enunciado: "A cirurgia oncológica pode ter finalidade diagnóstica, curativa, profilática, reconstrutora e paliativa, esta última voltada ao alívio de sintomas, como obstrução ou sangramento, sem objetivo de cura.",
+    enunciado: "A cirurgia oncológica pode ter finalidade diagnóstica, curativa, profilática, reconstrutora e paliativa, de modo que nem toda cirurgia em paciente com câncer visa à cura: a paliativa busca aliviar sintomas, como obstrução ou sangramento.",
     gabarito: "C", pegadinha: "restricao-indevida", palavraChave: "paliativa",
     cognitivo: {
       motivo: "Treinar indicações da cirurgia oncológica — ponto de fisioterapia em oncologia que a banca transforma em item.",
@@ -561,7 +561,7 @@ const QUESTOES_SESAUAL_LOTE154 = [
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Adaptada de Instituto Verbena - 2026 - Residência Multiprofissional e Uniprofissional (SUS GO) (múltipla escolha convertida em C/E pelo QuestLab; base: Estratégia, Conhecimentos Específicos, Aula 07)",
     tipo: "CE", dificuldade: 2, tempoIdealSeg: 85, probReaparecer: 0.7,
-    enunciado: "A fadiga relacionada ao câncer caracteriza-se por cansaço persistente, desproporcional à atividade realizada e que não melhora com o repouso, interferindo nas atividades de vida diária.",
+    enunciado: "A fadiga relacionada ao câncer caracteriza-se por cansaço persistente, desproporcional à atividade realizada e que não melhora com o repouso, devendo ser rastreada em toda consulta durante e após o tratamento.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "não melhora com o repouso",
     cognitivo: {
       motivo: "Treinar manejo da fadiga relacionada ao câncer — ponto de fadiga relacionada ao câncer que a banca transforma em item.",
@@ -1559,7 +1559,7 @@ const QUESTOES_SESAUAL_LOTE154 = [
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Adaptada de Instituto Verbena - 2026 - Residência Multiprofissional e Uniprofissional (SUS GO) (múltipla escolha convertida em C/E pelo QuestLab; base: Estratégia, Conhecimentos Específicos, Aula 07)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 100, probReaparecer: 0.7,
-    enunciado: "No escore de Mirels para risco de fratura patológica, pontuação igual ou superior a 9 indica alto risco, com recomendação usual de avaliação ortopédica para fixação profilática.",
+    enunciado: "No escore de Mirels para risco de fratura patológica, em que toda lesão lítica recebe a pontuação máxima do critério tipo de lesão, pontuação igual ou superior a 9 indica alto risco, com recomendação usual de avaliação ortopédica para fixação profilática.",
     gabarito: "C", pegadinha: "troca-numerica", palavraChave: "igual ou superior a 9",
     cognitivo: {
       motivo: "Treinar metástase óssea com Mirels 9 — ponto de fisioterapia em oncologia que a banca transforma em item.",
@@ -1782,7 +1782,7 @@ const QUESTOES_SESAUAL_LOTE154 = [
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (QuestLab; base: Estratégia, Aula 07)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 100, probReaparecer: 0.75,
-    enunciado: "Entre os princípios dos cuidados paliativos estabelecidos pela OMS está prolongar ao máximo o tempo de vida por todos os meios disponíveis, ainda que à custa de sofrimento adicional, para afastar a morte do paciente.",
+    enunciado: "Entre os princípios dos cuidados paliativos estabelecidos pela OMS está prolongar ao máximo o tempo de vida com o suporte invasivo disponível, ainda que à custa de sofrimento adicional, para afastar a morte do paciente.",
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "não acelera nem adia a morte",
     cognitivo: {
       motivo: "Treinar cuidados paliativos — princípios — ponto de cuidados paliativos que a banca transforma em item.",
@@ -1839,7 +1839,7 @@ const QUESTOES_SESAUAL_LOTE154 = [
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (QuestLab; base: Estratégia, Aula 07)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 100, probReaparecer: 0.75,
-    enunciado: "Na escala ECOG, o escore 2 corresponde ao paciente restrito ao leito ou à cadeira por mais de 50% do dia, com capacidade apenas limitada de autocuidado, e o escore 3, ao paciente capaz de realizar trabalho leve ou sedentário.",
+    enunciado: "Na escala ECOG, o escore 2 corresponde ao paciente restrito ao leito ou à cadeira por mais de 50% do dia, com capacidade limitada de autocuidado, e o escore 3, ao paciente capaz de realizar trabalho leve ou sedentário.",
     gabarito: "E", pegadinha: "troca-numerica", palavraChave: "ECOG 2 — fora do leito mais da metade do dia",
     cognitivo: {
       motivo: "Treinar eCOG 2 × ECOG 3 — ponto de avaliação em oncologia que a banca transforma em item.",
@@ -1896,7 +1896,7 @@ const QUESTOES_SESAUAL_LOTE154 = [
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (QuestLab; base: Estratégia, Aula 07)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 100, probReaparecer: 0.75,
-    enunciado: "Na radioterapia, a radiodermite e a fadiga são efeitos tardios, que surgem apenas anos após o término do tratamento, enquanto a fibrose tecidual e a retração cicatricial aparecem já na primeira semana de aplicação.",
+    enunciado: "Na radioterapia, a radiodermite e a fadiga são efeitos tardios, que surgem anos após o término do tratamento, enquanto a fibrose tecidual e a retração cicatricial aparecem já na primeira semana de aplicação.",
     gabarito: "E", pegadinha: "troca-conceito", palavraChave: "radiodermite aguda, fibrose tardia",
     cognitivo: {
       motivo: "Treinar efeitos agudos × tardios da radioterapia — ponto de fisioterapia em oncologia que a banca transforma em item.",

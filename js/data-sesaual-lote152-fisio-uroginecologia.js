@@ -1759,7 +1759,7 @@ const QUESTOES_SESAUAL_LOTE152 = [
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2025,
     origem: "FGV - 2025 - Fisioterapeuta (EBSERH) — questão do material Estratégia (Conhecimentos Específicos, Aula 12)",
     tipo: "ME", dificuldade: 2, tempoIdealSeg: 150, probReaparecer: 0.65,
-    enunciado: "Cardiovascular (e mais 7 concursos) O climatério ocorre na meia-idade da mulher, período em que ocorrem alterações importantes, entre elas, a incontinência urinária. Em relação à incontinência urinária da mulher, avalie as afirmativas a seguir e assinale (V) para a verdadeira e (F) para a falsa. ( ) O hipoestrogenismo altera a função de estruturas do assoalho pélvico. ( ) A perda de urina acontece pelo desequilíbrio entre as pressões uretral e vesical. ( ) A incontinência só ocorre em momentos de esforço extremo. ( ) A musculatura do assoalho pélvico sofre retração tecidual e aumento tônico. As afirmativas são, respectivamente,",
+    enunciado: "O climatério ocorre na meia-idade da mulher, período em que ocorrem alterações importantes, entre elas, a incontinência urinária. Em relação à incontinência urinária da mulher, avalie as afirmativas a seguir e assinale (V) para a verdadeira e (F) para a falsa. ( ) O hipoestrogenismo altera a função de estruturas do assoalho pélvico. ( ) A perda de urina acontece pelo desequilíbrio entre as pressões uretral e vesical. ( ) A incontinência só ocorre em momentos de esforço extremo. ( ) A musculatura do assoalho pélvico sofre retração tecidual e aumento tônico. As afirmativas são, respectivamente,",
     alternativas: [
       "V – V – V – V.",
       "F – F – V – V.",
