@@ -148,7 +148,7 @@ const QUESTOES_SESAUAL_LOTE149 = [
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "Fênix Instituto - 2026 - Fisioterapeuta (Pref Cerro Negro) — questão do material Estratégia (Conhecimentos Específicos, Aula 08)",
     tipo: "ME", dificuldade: 1, tempoIdealSeg: 130, probReaparecer: 0.65,
-    enunciado: "01.2025\" Na análise biomecânica da marcha humana, a fase em que ocorre apoio simultâneo dos dois pés no solo denomina-se",
+    enunciado: "Na análise biomecânica da marcha humana, a fase em que ocorre apoio simultâneo dos dois pés no solo denomina-se",
     alternativas: [
       "balanço inicial.",
       "apoio terminal.",
@@ -359,7 +359,7 @@ const QUESTOES_SESAUAL_LOTE149 = [
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2025,
     origem: "FACET - 2025 - Fisioterapeuta (Pref Bom Jardim (PE) — questão do material Estratégia (Conhecimentos Específicos, Aula 08)",
     tipo: "ME", dificuldade: 2, tempoIdealSeg: 150, probReaparecer: 0.65,
-    enunciado: ") A marcha humana, enquanto fenômeno motor complexo, requer interação coordenada entre sistemas musculoesquelético, nervoso e sensorial. A descrição biomecânica do ciclo da marcha, conforme os parâmetros funcionais estabelecidos por Perry e Burnfield (2010), permite a análise acurada dos eventos que compõem a locomoção eficiente. Considerando a nomenclatura técnico-científica amplamente aceita para as fases da marcha em adultos normotípicos, assinale a alternativa que apresenta a sequência correta e tecnicamente referenciada do ciclo completo da marcha.",
+    enunciado: "A marcha humana, enquanto fenômeno motor complexo, requer interação coordenada entre sistemas musculoesquelético, nervoso e sensorial. A descrição biomecânica do ciclo da marcha, conforme os parâmetros funcionais estabelecidos por Perry e Burnfield (2010), permite a análise acurada dos eventos que compõem a locomoção eficiente. Considerando a nomenclatura técnico-científica amplamente aceita para as fases da marcha em adultos normotípicos, assinale a alternativa que apresenta a sequência correta e tecnicamente referenciada do ciclo completo da marcha.",
     alternativas: [
       "Recepção de carga, impulso inicial, apoio de transição, pré-oscilação, oscilação ascendente, avanço médio e terminal de oscilação.",
       "Contato inicial, resposta à carga, apoio médio, apoio terminal, pré-oscilação, oscilação inicial, oscilação média e oscilação terminal.",
@@ -420,16 +420,16 @@ const QUESTOES_SESAUAL_LOTE149 = [
   },
   {
     id: "FIS-424", disciplina: "Fisioterapia", assunto: "Análise da marcha", subassunto: "Ciclo da marcha (Cipriano)",
-    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2012,
-    origem: "Marinha - 2025 - Corpo de Saúde da Marinha/Quadro de Apoio à Saúde/Fisioterapia/CP- CSM-S De acordo com Cipriano (2012) — questão do material Estratégia (Conhecimentos Específicos, Aula 08)",
+    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2025,
+    origem: "Marinha — Corpo de Saúde da Marinha, CP-CSM (2025) — questão do material Estratégia (Conhecimentos Específicos, Aula 08)",
     tipo: "ME", dificuldade: 2, tempoIdealSeg: 150, probReaparecer: 0.65,
-    enunciado: ", sobre o ciclo da marcha, assinale a opção correta.",
+    enunciado: "De acordo com Cipriano (2012), sobre o ciclo da marcha, assinale a opção correta.",
     alternativas: [
       "O primeiro período de tempo é a fase de apoio, que ocorre quando o calcanhar atinge o chão e, então, o antepé fica em contato com o solo, resultando na sustentação do membro.",
       "A maioria das anormalidades de marcha é produzida durante a fase de balanço, porque é a fase em que ocorre a sustentação do peso.",
       "A fase de apoio começa com o pé erguido do chão e termina com o contato inicial do pé oposto atingindo o solo.",
       "Aproximadamente 80% do ciclo de marcha ficam na fase de balanço, e 40% do ciclo de marcha ficam na fase de apoio,",
-      "A fase de balanço termina com o pé erguido do chão e começa com o contato inicial do pé oposto atingindo o solo. Unidade 2 – Movimentos Articulares e Atividade Muscular Durante a Marcha",
+      "A fase de balanço termina com o pé erguido do chão e começa com o contato inicial do pé oposto atingindo o solo.",
     ],
     gabarito: "A", pegadinha: "troca-numerica", palavraChave: "apoio inicia no contato do calcanhar",
     cognitivo: {
@@ -475,7 +475,7 @@ const QUESTOES_SESAUAL_LOTE149 = [
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2025,
     origem: "FUNDATEC - 2025 - Fisioterapeuta (GHC) — questão do material Estratégia (Conhecimentos Específicos, Aula 08)",
     tipo: "ME", dificuldade: 2, tempoIdealSeg: 150, probReaparecer: 0.65,
-    enunciado: "nº 01.2025 (e mais 3 concursos) Durante a marcha, quando não há a elevação do calcanhar no apoio terminal, reduzindo o comprimento do passo do lado não afetado, pode ser um sinal de fraqueza de qual músculo ou grupo muscular?",
+    enunciado: "Durante a marcha, quando não há a elevação do calcanhar no apoio terminal, reduzindo o comprimento do passo do lado não afetado, pode ser um sinal de fraqueza de qual músculo ou grupo muscular?",
     alternativas: [
       "Tríceps sural.",
       "Quadríceps femoral.",
@@ -520,7 +520,7 @@ const QUESTOES_SESAUAL_LOTE149 = [
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2025,
     origem: "FUNDATEC - 2025 - Fisioterapeuta (GHC) — questão do material Estratégia (Conhecimentos Específicos, Aula 08)",
     tipo: "ME", dificuldade: 1, tempoIdealSeg: 130, probReaparecer: 0.65,
-    enunciado: "nº 01.2025 (e mais 1 concurso) Qual é a função do quadríceps femoral no controle muscular do joelho durante a marcha na resposta à carga?",
+    enunciado: "Qual é a função do quadríceps femoral no controle muscular do joelho durante a marcha na resposta à carga?",
     alternativas: [
       "Controlar a flexão do joelho.",
       "Controlar a extensão do joelho.",
@@ -590,7 +590,7 @@ const QUESTOES_SESAUAL_LOTE149 = [
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "NUCEPE UESPI - 2026 - Residente (UESPI) — questão do material Estratégia (Conhecimentos Específicos, Aula 08)",
     tipo: "ME", dificuldade: 2, tempoIdealSeg: 150, probReaparecer: 0.65,
-    enunciado: "em Ortopedia e Traumatologia/Fisioterapia A estabilidade pélvica é essencial para a transmissão eficiente das forças entre o tronco e os membros inferiores. Quais músculos atuam de forma sinérgica na estabilização da pelve durante a marcha?",
+    enunciado: "A estabilidade pélvica é essencial para a transmissão eficiente das forças entre o tronco e os membros inferiores. Quais músculos atuam de forma sinérgica na estabilização da pelve durante a marcha?",
     alternativas: [
       "Glúteo médio e adutor longo.",
       "Glúteo médio e quadrado lombar.",
@@ -648,7 +648,7 @@ const QUESTOES_SESAUAL_LOTE149 = [
       "Eversão, abdução e dorsiflexão.",
       "Inversão, abdução e dorsiflexão.",
       "Eversão, adução e flexão plantar",
-      "Flexão plantar, adução e rotação interna tibial. Unidade 3 – Determinantes e Evolução da Marcha",
+      "Flexão plantar, adução e rotação interna tibial.",
     ],
     gabarito: "B", pegadinha: "troca-conceito", palavraChave: "eversão, abdução, dorsiflexão",
     cognitivo: {
@@ -1231,7 +1231,7 @@ const QUESTOES_SESAUAL_LOTE149 = [
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2025,
     origem: "FUNDATEC - 2025 - Fisioterapeuta (Pref Soledade (RS) — questão do material Estratégia (Conhecimentos Específicos, Aula 08)",
     tipo: "ME", dificuldade: 1, tempoIdealSeg: 130, probReaparecer: 0.65,
-    enunciado: ") Ao avaliar um paciente com queixa de alteração da marcha, o fisioterapeuta nota que na fase de impulso (apoio terminal) não há elevação do calcanhar. Com base na descrição da alteração da marcha, qual musculatura ou grupo muscular apresenta fraqueza?",
+    enunciado: "Ao avaliar um paciente com queixa de alteração da marcha, o fisioterapeuta nota que na fase de impulso (apoio terminal) não há elevação do calcanhar. Com base na descrição da alteração da marcha, qual musculatura ou grupo muscular apresenta fraqueza?",
     alternativas: [
       "Abdutores do quadril.",
       "Adutores do quadril.",

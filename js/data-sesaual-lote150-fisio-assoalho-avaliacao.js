@@ -495,7 +495,7 @@ const QUESTOES_SESAUAL_LOTE150 = [
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2025,
     origem: "FURB - 2025 - Fisioterapeuta (Pref SJ Batista (SC) — questão do material Estratégia (Conhecimentos Específicos, Aula 10)",
     tipo: "ME", dificuldade: 2, tempoIdealSeg: 150, probReaparecer: 0.65,
-    enunciado: ") O assoalho pélvico é formado por músculos, ligamentos e fáscias que sustentam as vísceras pélvicas e participam de funções como a continência urinária e fecal, o suporte postural e o controle da pressão intra-abdominal. Alterações anatômicas ou funcionais dessas estruturas podem comprometer o posicionamento dos órgãos pélvicos e gerar disfunções como incontinência, dor pélvica e prolapsos. Considerando a anatomia e a biomecânica do assoalho pélvico, assinale a alternativa correta:",
+    enunciado: "O assoalho pélvico é formado por músculos, ligamentos e fáscias que sustentam as vísceras pélvicas e participam de funções como a continência urinária e fecal, o suporte postural e o controle da pressão intra-abdominal. Alterações anatômicas ou funcionais dessas estruturas podem comprometer o posicionamento dos órgãos pélvicos e gerar disfunções como incontinência, dor pélvica e prolapsos. Considerando a anatomia e a biomecânica do assoalho pélvico, assinale a alternativa correta:",
     alternativas: [
       "O diafragma pélvico é constituído pelos músculos transverso profundo e superficial do períneo, e sua principal função é o controle do hiato urogenital.",
       "O músculo obturador interno é o principal responsável pela sustentação das vísceras pélvicas, atuando diretamente na manutenção da continência urinária.",
@@ -659,7 +659,7 @@ const QUESTOES_SESAUAL_LOTE150 = [
       "o suporte mecânico do aparelho urinário é exercido principalmente pelo diafragma uropubiano, fáscia retropélvica e diafragma cístico.",
       "o diafragma pélvico é o menor grupo do assoalho pélvico, mas é o mais resistente, estando em um compartimento mais superficial, formado pelo músculo levantador do ânus e músculo coccígeo.",
       "o diafragma pélvico e urogenital, formado pela MAP, são músculos esqueléticos que se dispõem superficial e profundamente, contêm principalmente fibras de contração lenta e dão suporte às vísceras.",
-      "o tensionamento dos grupos musculares cujo vetor de força é anterior ocorre, durante a micção, possibilitando que o colo da bexiga gire para baixo e para trás, liberando a base da uretra. Unidade 2 – Fisiologia da Micção Não há questões recentes sobre esse tema. Unidade 3 - Métodos e Técnicas de Avaliação Fisioterapêutica: Avaliação Uroginecológica e do Assoalho Pélvico",
+      "o tensionamento dos grupos musculares cujo vetor de força é anterior ocorre, durante a micção, possibilitando que o colo da bexiga gire para baixo e para trás, liberando a base da uretra.",
     ],
     gabarito: "C", pegadinha: "troca-conceito", palavraChave: "fibras de contração lenta",
     cognitivo: {
@@ -864,7 +864,7 @@ const QUESTOES_SESAUAL_LOTE150 = [
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2025,
     origem: "IADES - 2025 - Exame de Proficiência (COFFITO) — questão do material Estratégia (Conhecimentos Específicos, Aula 10)",
     tipo: "ME", dificuldade: 2, tempoIdealSeg: 150, probReaparecer: 0.65,
-    enunciado: "em Saúde da Mulher No Brasil, a terminologia empregada na avaliação e diagnóstico da função dos músculos do assoalho pélvico feminino apresenta variações, dependendo da formação do fisioterapeuta, da região geográfica e do referencial teórico adotado. Tal diversidade dificulta a comunicação entre fisioterapeutas clínicos e a comunidade científica. A padronização da terminologia visa aprimorar a troca de informações, promovendo maior clareza na compreensão entre profissionais de saúde, a sociedade e a comunidade científica. Em relação à terminologia utilizada no Brasil relacionada à avaliação e diagnóstico da função dos músculos do assoalho pélvico feminino assinale a alternativa CORRETA:",
+    enunciado: "No Brasil, a terminologia empregada na avaliação e diagnóstico da função dos músculos do assoalho pélvico feminino apresenta variações, dependendo da formação do fisioterapeuta, da região geográfica e do referencial teórico adotado. Tal diversidade dificulta a comunicação entre fisioterapeutas clínicos e a comunidade científica. A padronização da terminologia visa aprimorar a troca de informações, promovendo maior clareza na compreensão entre profissionais de saúde, a sociedade e a comunidade científica. Em relação à terminologia utilizada no Brasil relacionada à avaliação e diagnóstico da função dos músculos do assoalho pélvico feminino assinale a alternativa CORRETA:",
     alternativas: [
       "A palpação vaginal consiste em um exame visual dos músculos do assoalho pélvico realizado pela inserção de 1 ou 2 dedos no canal vaginal.",
       "A força muscular é caracterizada pela capacidade de gerar força de um músculo, comumente expressa pela medida da contração involuntária máxima.",
@@ -928,7 +928,7 @@ const QUESTOES_SESAUAL_LOTE150 = [
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2025,
     origem: "IADES - 2025 - Exame de Proficiência (COFFITO) — questão do material Estratégia (Conhecimentos Específicos, Aula 10)",
     tipo: "ME", dificuldade: 3, tempoIdealSeg: 170, probReaparecer: 0.65,
-    enunciado: "em Saúde da Mulher A avaliação dos sintomas relacionados à incontinência urinária utiliza diversos métodos e técnicas, como: história clínica, exame físico, diário miccional, teste do absorvente (pad test), questionários, entre outros. Em relação ao teste do absorvente, é possível quantificar e classificar a perda urinária em leve, moderada ou severa, além de avaliar a evolução do tratamento fisioterapêutico. Quais as orientações CORRETAS para realizar o teste do absorvente de 1 hora?",
+    enunciado: "A avaliação dos sintomas relacionados à incontinência urinária utiliza diversos métodos e técnicas, como: história clínica, exame físico, diário miccional, teste do absorvente (pad test), questionários, entre outros. Em relação ao teste do absorvente, é possível quantificar e classificar a perda urinária em leve, moderada ou severa, além de avaliar a evolução do tratamento fisioterapêutico. Quais as orientações CORRETAS para realizar o teste do absorvente de 1 hora?",
     alternativas: [
       "A mulher deve ser orientada a usar o absorvente previamente pesado, sem urinar, ingerir 500 ml de água, permanecer sentada por 15 minutos e realizar tarefas que envolvam esforço físico, aumento da pressão intra-abdominal e estímulo de urgência miccional. Após finalizar as tarefas, o absorvente deve ser pesado novamente.",
       "A mulher deve ser orientada a usar um absorvente previamente pesado, sem urinar, ingerir 500 ml de água, permanecer sentada por 15 minutos e realizar apenas as tarefas nas quais tenha ocorrido perda urinária previamente. Após a realização dessas atividades, o absorvente deve ser pesado novamente.",
@@ -998,7 +998,7 @@ const QUESTOES_SESAUAL_LOTE150 = [
       "Histeroscopia.",
       "Papanicolau.",
       "Pad Fast.",
-      "Pad Test. Unidade 4 – Anatomia, Fisiologia, Métodos e Técnicas de Avaliação Fisioterapêutica: Avaliação Anorretal e Continência Fecal (Coloproctologia)",
+      "Pad Test.",
     ],
     gabarito: "E", pegadinha: "literalidade", palavraChave: "Pad Test",
     cognitivo: {
@@ -1146,7 +1146,7 @@ const QUESTOES_SESAUAL_LOTE150 = [
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2025,
     origem: "IADES - 2025 - Exame de Proficiência (COFFITO) — questão do material Estratégia (Conhecimentos Específicos, Aula 10)",
     tipo: "ME", dificuldade: 3, tempoIdealSeg: 170, probReaparecer: 0.65,
-    enunciado: "em Saúde da Mulher O sistema anorretal, em sua função de continência e evacuação, depende intrinsecamente da integridade e coordenação das estruturas musculares. A musculatura local é composta por três componentes principais: o músculo levantador do ânus, o esfíncter anal externo e o esfíncter anal interno. Considerando a anatomia do sistema anorretal, analise as afirmativas a seguir e assinale a alternativa CORRETA:",
+    enunciado: "O sistema anorretal, em sua função de continência e evacuação, depende intrinsecamente da integridade e coordenação das estruturas musculares. A musculatura local é composta por três componentes principais: o músculo levantador do ânus, o esfíncter anal externo e o esfíncter anal interno. Considerando a anatomia do sistema anorretal, analise as afirmativas a seguir e assinale a alternativa CORRETA:",
     alternativas: [
       "O esfíncter anal interno é um músculo liso involuntário que termina cerca de 10 mm proximal à extremidade distal do esfíncter externo. É o principal responsável pelo fechamento do canal anal em repouso, por meio de atividade excitatória miogênica e simpática. Este músculo também relaxa para facilitar a evacuação.",
       "O esfíncter anal externo é um músculo liso e estriado que tem de 0,6 cm a 1,0 cm de espessura e cobre todo o esfíncter interno. Sua função principal é relaxar-se para preservar a continência quando há fezes ou flatos no reto, ou quando a pressão intraabdominal aumenta. Este músculo também relaxa para facilitar a evacuação.",
@@ -1210,7 +1210,7 @@ const QUESTOES_SESAUAL_LOTE150 = [
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2025,
     origem: "IADES - 2025 - Exame de Proficiência (COFFITO) — questão do material Estratégia (Conhecimentos Específicos, Aula 10)",
     tipo: "ME", dificuldade: 2, tempoIdealSeg: 150, probReaparecer: 0.65,
-    enunciado: "em Saúde da Mulher A incontinência fecal é uma condição que compromete a qualidade de vida, causando impacto emocional, físico e social. O tratamento conservador é uma das primeiras estratégias indicadas, pois envolve medidas não invasivas que buscam reduzir sintomas e prevenir sua progressão. Sobre o tratamento fisioterapêutico no manejo da incontinência fecal, assinale a alternativa CORRETA:",
+    enunciado: "A incontinência fecal é uma condição que compromete a qualidade de vida, causando impacto emocional, físico e social. O tratamento conservador é uma das primeiras estratégias indicadas, pois envolve medidas não invasivas que buscam reduzir sintomas e prevenir sua progressão. Sobre o tratamento fisioterapêutico no manejo da incontinência fecal, assinale a alternativa CORRETA:",
     alternativas: [
       "Mudanças de hábitos de vida só podem ser recomendadas pelo profissional de saúde quando há evidências científicas robustas e não podem ser avaliadas individualmente.",
       "O manejo conservador da incontinência fecal inclui educação do paciente, ajustes na dieta e ingestão de líquidos, incentivo à atividade física, estabelecimento de rotina de refeições e evacuação.",
