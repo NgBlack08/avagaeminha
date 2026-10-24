@@ -53,6 +53,9 @@ const GLOBAIS_PUBLICAS = [
   "INCIDENCIA_PC_MANUAL",
   "COMPARACAO_2021_2026",
   "CONCURSO_POR_SIGLA",
+  /* Roteiro dia a dia da reta final da trilha SESAU-AL, desenhado na tela
+     de Plano de Estudo. js/data-sesaual-plano-reta-final.js. */
+  "PLANO_RETA_FINAL_SESAU",
 ];
 
 /* A ordem de carga só tem uma restrição real: data.js precisa vir primeiro,

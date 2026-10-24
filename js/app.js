@@ -1545,7 +1545,9 @@ function questaoCardHtml(q, opts) {
       <span class="tag">${q.disciplina}</span>
       <span class="tag">${q.assunto}</span>
       <span class="tag diff" title="dificuldade">${diff}</span>
-      ${q.foraEdital ? '<span class="tag warn" title="Tema não consta do conteúdo programático de Agente/Escrivão no edital PC-AL 2026 — mantido como treino complementar">fora do edital PC-AL 2026</span>' : ""}
+      ${q.foraEdital ? (q.disciplina === "Fisioterapia"
+        ? '<span class="tag warn" title="Tema retirado do conteúdo de Fisioterapia pelo Edital nº 2 (retificação) da SESAU-AL — mantido como treino complementar">fora do edital retificado SESAU-AL</span>'
+        : '<span class="tag warn" title="Tema não consta do conteúdo programático de Agente/Escrivão no edital PC-AL 2026 — mantido como treino complementar">fora do edital PC-AL 2026</span>') : ""}
       ${vigenciaTagHtml(q)}
       ${s.tentativas ? `<span class="tag ${s.ultima.branco ? "" : s.ultima.correta ? "ok" : "bad"}">${s.ultima.branco ? "em branco" : s.ultima.correta ? "acertou" : "errou"} na última</span>` : ""}
       <span class="tag" title="tempo ideal de resolução">⏱ ideal: ${q.tempoIdealSeg}s</span>
@@ -2821,6 +2823,63 @@ function revisarErrosAgora() {
   bancoPagina = 0;
   navigate("banco");
 }
+/* Plano de reta final (js/data-sesaual-plano-reta-final.js): roteiro dia a
+   dia escrito para a trilha, com check por bloco guardado no estado do
+   usuário. Só aparece na trilha a que pertence, e some depois da prova. */
+function cardRetaFinal() {
+  const P = typeof PLANO_RETA_FINAL_SESAU !== "undefined" ? PLANO_RETA_FINAL_SESAU : null;
+  if (!P || APP_STATE.config.concursoFoco !== P.trilha) return "";
+  const hoje = new Date().toLocaleDateString("sv-SE"); /* AAAA-MM-DD no fuso local; toISOString viraria o dia às 21h em Alagoas */
+  if (hoje > P.dataProva) return "";
+  const feitos = APP_STATE.retaFinal || {};
+  const todos = P.dias.flatMap(d => d.blocos);
+  const nFeitos = todos.filter(b => feitos[b.id]).length;
+  const diaAtual = P.dias.find(d => d.data === hoje) || P.dias.find(d => d.data > hoje) || P.dias[P.dias.length - 1];
+  const bloco = b => `
+    <div class="pe-item ${feitos[b.id] ? "cumprida" : ""}" style="padding:8px 0">
+      <label style="display:flex;gap:10px;align-items:flex-start;cursor:pointer">
+        <input type="checkbox" ${feitos[b.id] ? "checked" : ""} onchange="marcarRetaFinal('${b.id}', this.checked)" style="margin-top:4px">
+        <span>${b.h ? `<b>${String(b.h).replace(".", ",")} h</b> · ` : ""}${escapeHtml(b.txt)}</span>
+      </label>
+      ${b.disc || b.acao ? `<div style="text-align:right"><button class="btn ghost small" onclick="abrirBlocoRetaFinal('${b.id}')">${b.acao === "simulado" ? "Abrir simulado →" : "Questões deste bloco →"}</button></div>` : ""}
+    </div>`;
+  const dia = d => `
+    <details ${d === diaAtual ? "open" : ""} style="margin:6px 0">
+      <summary style="cursor:pointer"><b>${escapeHtml(d.titulo)}</b>
+        <span class="hint">${d.blocos.filter(b => feitos[b.id]).length}/${d.blocos.length} · ${String(d.blocos.reduce((s, b) => s + b.h, 0)).replace(".", ",")} h</span>
+        ${d.data === hoje ? '<span class="tag warn">hoje</span>' : ""}</summary>
+      ${d.blocos.map(bloco).join("")}
+    </details>`;
+  return `
+  <div class="card" style="margin-bottom:16px">
+    <h3>🏁 ${escapeHtml(P.titulo)} <span class="hint">${nFeitos}/${todos.length} blocos feitos</span></h3>
+    <div class="gami-bar" style="margin:6px 0 10px"><i style="width:${Math.round(100 * nFeitos / todos.length)}%"></i></div>
+    ${P.dias.map(dia).join("")}
+    <details style="margin-top:10px"><summary style="cursor:pointer"><b>🎯 Estratégia de prova (CEBRASPE)</b></summary>
+      <ul>${P.estrategiaProva.map(t => `<li>${escapeHtml(t)}</li>`).join("")}</ul></details>
+    <details style="margin-top:6px"><summary style="cursor:pointer"><b>✍ Discursiva de Atualidades</b></summary>
+      <p class="hint" style="margin:6px 0">Estrutura</p>
+      <ol>${P.discursiva.estrutura.map(t => `<li>${escapeHtml(t)}</li>`).join("")}</ol>
+      <p class="hint" style="margin:6px 0">Temas prováveis para treino</p>
+      <ul>${P.discursiva.temas.map(t => `<li>${escapeHtml(t)}</li>`).join("")}</ul></details>
+  </div>`;
+}
+function marcarRetaFinal(id, feito) {
+  APP_STATE.retaFinal = { ...(APP_STATE.retaFinal || {}), [id]: !!feito };
+  if (!feito) delete APP_STATE.retaFinal[id];
+  saveState();
+  renderPlanoEstudo();
+}
+function abrirBlocoRetaFinal(id) {
+  const b = PLANO_RETA_FINAL_SESAU.dias.flatMap(d => d.blocos).find(x => x.id === id);
+  if (!b) return;
+  if (b.acao === "simulado") { navigate("simulado"); return; }
+  bancoFiltros = { disciplina: b.disc };
+  if (b.assuntos && b.assuntos.length) bancoFiltros.assunto = b.assuntos;
+  bancoIndice = 0;
+  bancoPagina = 0;
+  navigate("banco");
+}
 function renderPlanoEstudo() {
   const plano = planoEstudoDirigido();
   const statusCls = { naoIniciada: "idle", risco: "bad", atencao: "warn", dominada: "ok" };
@@ -2936,6 +2995,7 @@ function renderPlanoEstudo() {
       <span class="pe-fase-desc">${plano.fase.desc}</span>
     </div>
   </div>
+  ${cardRetaFinal()}
   ${metaDiaHtml}
   ${progressoHtml}
   ${revisaoHtml}

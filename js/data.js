@@ -1883,30 +1883,42 @@ const EDITAIS = {
           prova objetiva, Atualidades não entra — as questões C/E do banco
           servem como repertório para a redação, não como treino de item.
 
-       3. CORREÇÃO IMPORTANTE. Este comentário afirmava que o específico se
-          limitava à saúde da mulher e que "ortopedia, respiratória e
-          neurofuncional não caem". Estava ERRADO, e o erro tem origem
-          identificável: a DESCRIÇÃO SUMÁRIA DAS ATIVIDADES do cargo é mesmo
-          centrada em uroginecologia, coloproctologia, mama e aparelho
-          reprodutor feminino — mas descrição de atribuições do cargo não é
-          conteúdo programático da prova. O item 16.2.4 do edital, para o
-          CARGO 5, cobra fisioterapia GERAL:
+       3. EDITAL RETIFICADO (Edital nº 2, 16/07/2026). Este comentário chegou
+          a listar, para o CARGO 5, a fisioterapia GERAL do Edital nº 1 (dez
+          tópicos: provas de função muscular, órteses e próteses, neuro,
+          ortopedia, cardio, pneumo, geriatria...). Essa lista foi SUBSTITUÍDA:
+          impugnações pediram conteúdo compatível com as atribuições do cargo,
+          a banca deferiu e o Edital nº 2 republicou o específico em 5 itens:
 
-            1 métodos e técnicas de avaliação, tratamento e procedimentos;
-            2 provas de função muscular; 3 cinesiologia e biomecânica;
-            4 análise da marcha; 5 exercícios terapêuticos e treinamento
-            funcional; 6 indicação, contraindicação, técnicas e efeitos
-            fisiológicos da hidroterapia, massoterapia, mecanoterapia,
-            crioterapia, eletroterapia, termoterapia superficial e profunda;
-            7 prescrição e treinamento de órteses e próteses; 8 anatomia,
-            fisiologia, fisiologia do exercício e fisiopatologia, semiologia
-            e procedimentos nas áreas neurológica e neuropediátrica,
-            ortopedia e traumatologia, cardiologia, pneumologia, ginecologia
-            e obstetrícia; 9 geriatria; 10 ética profissional.
+            1 anatomia, fisiologia, fisiopatologia, cinesiologia e biomecânica
+              aplicadas à fisioterapia em saúde da mulher, incluindo
+              uroginecologia, coloproctologia, obstetrícia, mastologia e
+              oncologia;
+            2 métodos e técnicas de avaliação: avaliação funcional global,
+              análise da postura e da marcha, avaliação das funções muscular e
+              pulmonar, tegumentar, da dor, uroginecológica, anorretal, mamária
+              e do assoalho pélvico;
+            3 recursos terapêuticos: cinesioterapia, exercícios terapêuticos,
+              terapia manual, biofeedback, hidroterapia, massoterapia,
+              mecanoterapia, recursos miofasciais, crioterapia, bandagem
+              funcional, drenagem linfática manual, pressoterapia,
+              eletroterapia, fototerapia, termoterapia e tecnologias aplicadas
+              à reabilitação;
+            4 atuação na prevenção, promoção, proteção, educação em saúde,
+              intervenção, recuperação, habilitação e reabilitação nas
+              alterações do ciclo menstrual, gestação, parto, puerpério,
+              climatério, disfunções uroginecológicas, anorretais e mamárias,
+              decorrentes do tratamento oncológico e no pré e pós-operatório
+              de cirurgias ginecológicas, mamárias e oncológicas;
+            5 ética e legislação profissional.
 
-          Por isso a disciplina passou a se chamar "Fisioterapia", e não
-          "Fisioterapia em Saúde da Mulher": saúde da mulher é UM dos dez
-          tópicos, não o recorte da prova. */
+          Fonte: Aula 00 do curso pós-edital do Estratégia (texto da
+          retificação) e notícias da retificação; conferir no edital
+          consolidado do Cebraspe. Questões do banco sobre órteses e próteses,
+          neurofuncional, ortopedia, clínica cardiorrespiratória e geriatria
+          continuam no banco, marcadas `foraEdital` (lote 145). A disciplina
+          segue "Fisioterapia": avaliação, marcha e recursos são gerais, não
+          só de saúde da mulher. */
     itensPorDisciplina: {
       /* P1 — conhecimentos básicos: 50 itens, 4 disciplinas na objetiva */
       "Língua Portuguesa": 12.5,
