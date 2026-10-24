@@ -48,6 +48,7 @@
 
   /* raio */
   --r-sm: 8px; --r-md: 12px; --radius: 16px; --r-lg: 20px; --r-full: 999px;
+  --ctl-h: 42px; /* altura comum dos controles da linha de filtros */
 
   /* espaçamento base 4px */
   --sp-1: 4px; --sp-2: 8px; --sp-3: 12px; --sp-4: 16px; --sp-5: 20px; --sp-6: 24px; --sp-8: 32px;
@@ -472,7 +473,18 @@ label.f {
   color: var(--muted); font-weight: 500; min-width: 0; max-width: 100%;
 }
 label.f select, label.f input { max-width: 100%; }
-.filters { display: flex; flex-wrap: wrap; gap: 10px; align-items: end; }
+/* Todo filtro é rótulo em cima + controle de altura fixa embaixo, e a
+   linha alinha pelo topo. Com align-items:end, abrir um dropdown (que
+   cresce em fluxo normal) fazia os vizinhos da mesma linha — Formato,
+   Busca — descerem até a base do painel aberto. */
+.filters { display: flex; flex-wrap: wrap; gap: 12px 10px; align-items: flex-start; }
+.f-lbl { font-size: 12px; color: var(--muted); font-weight: 500; }
+.filters .busca-f { width: 220px; }
+.filters .busca-f input, .msel > summary,
+.sim-setup .opts label.f select { height: var(--ctl-h); box-sizing: border-box; }
+.checks-f { display: flex; flex-direction: column; gap: 5px; }
+.checks-row { display: flex; flex-wrap: wrap; align-items: center; column-gap: 16px; min-height: var(--ctl-h); }
+.checks-row .check { padding-bottom: 0; }
 .check { display: flex; align-items: center; gap: 7px; font-size: 13px; color: var(--text); cursor: pointer; padding-bottom: 9px; }
 
 /* Barra de escopo da trilha, acima dos filtros do Banco. Discreta mas
@@ -504,22 +516,25 @@ label.f select, label.f input { max-width: 100%; }
    os últimos filtros da linha. Fluxo normal é o mesmo mecanismo já usado
    (e testado em todas as larguras) pelo <details class="filtros-card">
    que envolve o painel inteiro — sem risco novo de estouro horizontal. */
-.msel { min-width: 170px; align-self: flex-start; }
+/* Largura fixa: sem ela o dropdown, ao abrir, crescia até a opção mais
+   longa (os assuntos chegam a 80 caracteres) e empurrava a linha inteira. */
+.msel-f { display: flex; flex-direction: column; gap: 5px; width: 190px; max-width: 100%; }
+.msel { min-width: 0; }
 .msel > summary {
   list-style: none; cursor: pointer; display: flex; align-items: center; gap: 6px;
   font: inherit; font-size: 13.5px; color: var(--text);
   background: var(--surface2); border: 1px solid var(--border); border-radius: 10px;
-  padding: 9px 13px; min-width: 0; white-space: nowrap;
+  padding: 0 13px; min-width: 0; white-space: nowrap; box-sizing: border-box;
   transition: border-color var(--t-fast);
 }
+.msel-txt { overflow: hidden; text-overflow: ellipsis; min-width: 0; }
+.msel > summary:not(.ativo) .msel-txt { color: var(--muted); }
+.msel > summary.ativo { border-color: var(--accent); background: var(--accent-soft); }
+.msel > summary.ativo .msel-txt { color: var(--accent); font-weight: 600; }
 .msel > summary::-webkit-details-marker { display: none; }
 .msel > summary::after { content: "▾"; color: var(--muted); font-size: 11px; margin-left: auto; flex-shrink: 0; transition: transform var(--t-fast); }
 .msel[open] > summary::after { transform: rotate(180deg); }
 .msel:hover > summary, .msel[open] > summary { border-color: var(--accent); }
-.msel-badge {
-  background: var(--accent-soft); color: var(--accent); border-radius: var(--r-full);
-  font-size: 11px; font-weight: 700; padding: 1px 7px; flex-shrink: 0;
-}
 .msel-panel {
   margin-top: 6px; width: 100%;
   background: var(--surface); border: 1px solid var(--border); border-radius: var(--r-md);
@@ -560,7 +575,8 @@ label.f select, label.f input { max-width: 100%; }
   input[type="checkbox"], input[type="radio"] { min-height: 0; width: 18px; height: 18px; }
   .btn, .btn.small, .chip, .vt-btn { min-height: 44px; }
   .check { min-height: 44px; padding-bottom: 0; }
-  .msel > summary { min-height: 44px; }
+  :root { --ctl-h: 44px; }
+  .filters > .f { flex: 1 1 100%; width: auto; }
   .msel-opt { min-height: 44px; }
   /* Os botões de confiança ficam lado a lado no rodapé da questão — são
      os mais difíceis de acertar com o dedo. */
@@ -703,14 +719,17 @@ mark.perigo[data-vies="C"] { background: var(--mark-c); border-bottom-color: var
 .q-actions.so-branco .btn.ghost { font-size: 13px; padding: 7px 13px; }
 
 /* ---- Seletor de formato (C/E × múltipla escolha) ---- */
-.formato-f { display: flex; flex-direction: column; gap: 6px; }
-.formato-lbl { font-size: 12px; color: var(--muted); font-weight: 600; }
-.formato-toggle { display: inline-flex; gap: 4px; background: var(--surface2); border-radius: var(--r-md); padding: 4px; }
+.formato-f { display: flex; flex-direction: column; gap: 5px; }
+.formato-lbl { font-size: 12px; color: var(--muted); font-weight: 500; }
+.formato-toggle {
+  display: inline-flex; align-items: stretch; gap: 4px; background: var(--surface2);
+  border-radius: var(--r-md); padding: 3px; height: var(--ctl-h); box-sizing: border-box; align-self: flex-start;
+}
 .fmt-btn {
   display: inline-flex; align-items: center; gap: 7px;
   border: 0; background: transparent; color: var(--muted);
   font: inherit; font-size: 13px; font-weight: 600;
-  padding: 7px 12px; border-radius: var(--r-sm); cursor: pointer;
+  padding: 0 12px; border-radius: var(--r-sm); cursor: pointer;
   transition: background var(--t-fast), color var(--t-fast);
 }
 .fmt-btn:hover:not(:disabled):not(.active) { color: var(--text); }

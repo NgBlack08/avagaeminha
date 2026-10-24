@@ -1279,9 +1279,14 @@ function renderBanco() {
       ${mselHtml(bancoFiltros, "assunto", "banco:assunto", "Assunto", assuntos.map(a => ({ v: a, t: a })), "toggleFiltroBancoMulti")}
       ${mselHtml(bancoFiltros, "dificuldade", "banco:dificuldade", "Dificuldade", [{ v: 1, t: "● Fácil" }, { v: 2, t: "●● Média" }, { v: 3, t: "●●● Difícil" }], "toggleFiltroBancoMulti")}
       ${mselHtml(bancoFiltros, "pegadinha", "banco:pegadinha", "Padrão da banca", dnaDoFoco().map(d => ({ v: d.slug, t: d.nome })), "toggleFiltroBancoMulti")}
-      <label class="f">Busca<input type="search" id="f-busca" value="${bancoFiltros.busca || ""}" placeholder="palavra-chave…" onchange="setFiltroBanco()"></label>
-      <label class="check"><input type="checkbox" id="f-erradas" ${bancoFiltros.somenteErradas ? "checked" : ""} onchange="setFiltroBanco()"> só as que errei</label>
-      <label class="check"><input type="checkbox" id="f-novas" ${bancoFiltros.somenteNaoRespondidas ? "checked" : ""} onchange="setFiltroBanco()"> só não respondidas</label>
+      <label class="f busca-f">Busca<input type="search" id="f-busca" value="${bancoFiltros.busca || ""}" placeholder="palavra-chave…" onchange="setFiltroBanco()"></label>
+      <div class="f checks-f">
+        <span class="f-lbl">Mostrar</span>
+        <div class="checks-row">
+          <label class="check"><input type="checkbox" id="f-erradas" ${bancoFiltros.somenteErradas ? "checked" : ""} onchange="setFiltroBanco()"> só as que errei</label>
+          <label class="check"><input type="checkbox" id="f-novas" ${bancoFiltros.somenteNaoRespondidas ? "checked" : ""} onchange="setFiltroBanco()"> só não respondidas</label>
+        </div>
+      </div>
     </div>
   </details>
   ${bancoModoVisual === "unica" ? renderBancoUnica(lista) : renderBancoLista(lista)}`;
@@ -1373,8 +1378,16 @@ function mselHtml(estado, campo, chave, titulo, opcoes, fnAlternar) {
   const atual = estado[campo];
   const marcados = Array.isArray(atual) ? atual : (valorFiltroAtivo(atual) ? [atual] : []);
   const aberto = mselAberto === chave;
-  return `<details class="f msel" ${aberto ? "open" : ""} ontoggle="onToggleMsel(this, '${chave}')">
-    <summary>${escapeHtml(titulo)}${marcados.length ? `<span class="msel-badge">${marcados.length}</span>` : ""}</summary>
+  /* O título sobe para um rótulo acima do controle, como em label.f e no
+     seletor de formato: com o título dentro do resumo, o dropdown ficava
+     mais baixo que os vizinhos rotulados e a linha de filtros desalinhava. */
+  const textoMarcados = marcados.length === 1
+    ? (opcoes.find(o => o.v === marcados[0]) || { t: marcados[0] }).t
+    : marcados.length ? `${marcados.length} selecionados` : "Todos";
+  return `<div class="f msel-f">
+    <span class="f-lbl">${escapeHtml(titulo)}</span>
+    <details class="msel" ${aberto ? "open" : ""} ontoggle="onToggleMsel(this, '${chave}')">
+    <summary class="${marcados.length ? "ativo" : ""}"><span class="msel-txt">${escapeHtml(String(textoMarcados))}</span></summary>
     <div class="msel-panel">
       ${opcoes.map(o => `<label class="msel-opt">
         <input type="checkbox" ${marcados.includes(o.v) ? "checked" : ""}
@@ -1382,7 +1395,8 @@ function mselHtml(estado, campo, chave, titulo, opcoes, fnAlternar) {
         <span>${escapeHtml(o.t)}</span>
       </label>`).join("")}
     </div>
-  </details>`;
+  </details>
+  </div>`;
 }
 
 /* Liga/desliga um valor num filtro categórico do Banco. Aceita o campo já
