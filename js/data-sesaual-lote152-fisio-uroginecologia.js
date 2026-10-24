@@ -78,7 +78,7 @@ const QUESTOES_SESAUAL_LOTE152 = [
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2025,
     origem: "DIRENS Aeronáutica - 2025 - Estágio de Adaptação de Oficiais de Apoio da Aeronáutica (CIAAR) — questão do material Estratégia (Conhecimentos Específicos, Aula 12)",
     tipo: "ME", dificuldade: 1, tempoIdealSeg: 130, probReaparecer: 0.65,
-    enunciado: "2026 A Incontinência Urinária (IU) é denominada como qualquer perda involuntária de urina, podendo ocorrer devido a fatores como fraqueza muscular, alterações hormonais, doenças neurológicas ou fatores comportamentais. Essa afecção pode afetar a qualidade de vida dos indivíduos, causando desconforto físico, psicológico e social. Considerada como um problema de saúde pública, acomete milhões de pessoas no mundo e apresenta uma elevada taxa de prevalência em mulheres, que aumenta com a idade. O tipo de incontinência urinária em que o paciente apresenta perda involuntária de urina durante exercício físico, ao tossir e espirrar ou por aumento da pressão intra-abdominal é denominada",
+    enunciado: "A Incontinência Urinária (IU) é denominada como qualquer perda involuntária de urina, podendo ocorrer devido a fatores como fraqueza muscular, alterações hormonais, doenças neurológicas ou fatores comportamentais. Essa afecção pode afetar a qualidade de vida dos indivíduos, causando desconforto físico, psicológico e social. Considerada como um problema de saúde pública, acomete milhões de pessoas no mundo e apresenta uma elevada taxa de prevalência em mulheres, que aumenta com a idade. O tipo de incontinência urinária em que o paciente apresenta perda involuntária de urina durante exercício físico, ao tossir e espirrar ou por aumento da pressão intra-abdominal é denominada",
     alternativas: [
       "mista.",
       "reflexa.",
@@ -103,7 +103,7 @@ const QUESTOES_SESAUAL_LOTE152 = [
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "banca não identificada no material — questão do material Estratégia (Conhecimentos Específicos, Aula 12)",
     tipo: "ME", dificuldade: 3, tempoIdealSeg: 170, probReaparecer: 0.65,
-    enunciado: "002.2026\" Na avaliação musculoesquelética de uma paciente com disfunções na musculatura do assoalho pélvico, o fisioterapeuta detecta que essa musculatura está hipoativa. Durante a consulta, o profissional identificou fatores de risco para a situação encontrada, como: 1. Parto vaginal, gravidez. 2. Tosse crônica ou persistente. 3. Índice de massa corporal alto e medida de cintura aumentada. 4. Cirurgia pélvica. 5. História de fissuras ou fístulas coexistentes. Assinale a alternativa que indica todas as afirmativas corretas.",
+    enunciado: "Na avaliação musculoesquelética de uma paciente com disfunções na musculatura do assoalho pélvico, o fisioterapeuta detecta que essa musculatura está hipoativa. Durante a consulta, o profissional identificou fatores de risco para a situação encontrada, como: 1. Parto vaginal, gravidez. 2. Tosse crônica ou persistente. 3. Índice de massa corporal alto e medida de cintura aumentada. 4. Cirurgia pélvica. 5. História de fissuras ou fístulas coexistentes. Assinale a alternativa que indica todas as afirmativas corretas.",
     alternativas: [
       "São corretas apenas as afirmativas 1, 2 e 3.",
       "São corretas apenas as afirmativas 1, 2 e 5.",
@@ -276,7 +276,7 @@ const QUESTOES_SESAUAL_LOTE152 = [
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
     origem: "UNIDAVI - 2026 - Fisioterapeuta (Pref Agrolândia) — questão do material Estratégia (Conhecimentos Específicos, Aula 12)",
     tipo: "ME", dificuldade: 3, tempoIdealSeg: 170, probReaparecer: 0.65,
-    enunciado: "001-2026\" Acerca da fisiopatologia e da intervenção fisioterapêutica na Incontinência Urinária de Esforço, registre V, para as afirmativas verdadeiras, e F, para as falsas: (__) A incontinência de esforço caracteriza-se pela perda involuntária de urina durante atividades que aumentam a pressão intra-abdominal, como tossir ou saltar. (__) O fortalecimento dos músculos do assoalho pélvico por meio dos exercícios de Kegel visa aumentar a pressão de fechamento uretral durante o esforço. (__) A obesidade e a multiparidade são fatores de risco que contribuem para a fraqueza das fáscias e ligamentos que sustentam o colo vesical em mulheres. (__) O biofeedback é uma ferramenta contraindicada para pacientes que não conseguem realizar a contração voluntária isolada da musculatura perineal. (__) A eletroestimulação intravaginal com baixa frequência é utilizada para inibir as contrações involuntárias do músculo detrusor na bexiga hiperativa. Após análise, assinale a alternativa que apresenta a sequência correta dos itens acima, de cima para baixo:",
+    enunciado: "Acerca da fisiopatologia e da intervenção fisioterapêutica na Incontinência Urinária de Esforço, registre V, para as afirmativas verdadeiras, e F, para as falsas: (__) A incontinência de esforço caracteriza-se pela perda involuntária de urina durante atividades que aumentam a pressão intra-abdominal, como tossir ou saltar. (__) O fortalecimento dos músculos do assoalho pélvico por meio dos exercícios de Kegel visa aumentar a pressão de fechamento uretral durante o esforço. (__) A obesidade e a multiparidade são fatores de risco que contribuem para a fraqueza das fáscias e ligamentos que sustentam o colo vesical em mulheres. (__) O biofeedback é uma ferramenta contraindicada para pacientes que não conseguem realizar a contração voluntária isolada da musculatura perineal. (__) A eletroestimulação intravaginal com baixa frequência é utilizada para inibir as contrações involuntárias do músculo detrusor na bexiga hiperativa. Após análise, assinale a alternativa que apresenta a sequência correta dos itens acima, de cima para baixo:",
     alternativas: [
       "F, V, F, V, V.",
       "V, F, V, V, F.",
@@ -456,7 +456,7 @@ const QUESTOES_SESAUAL_LOTE152 = [
     concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2025,
     origem: "QUADRIX - 2025 - Fisioterapeuta (FUABC) — questão do material Estratégia (Conhecimentos Específicos, Aula 12)",
     tipo: "ME", dificuldade: 2, tempoIdealSeg: 150, probReaparecer: 0.65,
-    enunciado: "- 100h\" A incontinência urinária (IU) envolve, na sua essência, perdas involuntárias de urina. Mas essa condição pode revelar-se mais complexa. Pode manifestar-se de formas distintas (mais ou menos acentuadas). Com base nessa informação, assinale a opção correta.",
+    enunciado: "A incontinência urinária (IU) envolve, na sua essência, perdas involuntárias de urina. Mas essa condição pode revelar-se mais complexa. Pode manifestar-se de formas distintas (mais ou menos acentuadas). Com base nessa informação, assinale a opção correta.",
     alternativas: [
       "A incontinência urinária de urgência, está associada à vontade controlada de urinar.",
       "A IU de esforço, onde ocorre perda de urina voluntária.",
