@@ -59,7 +59,9 @@
    que não seguem intuição (Motorista Policial exige 4ª série; Perito
    Criminal exige curso de DIREITO além do de perícia).
 
-   Equilíbrio 20 CERTO / 20 ERRADO.
+   Equilíbrio original 20 CERTO / 20 ERRADO. Em 10/2026, LI-119 foi
+   reescrita com gabarito ERRADO (o art. 40, § 1º, não foi recepcionado
+   pela CF/88 — mesmo entendimento de LI-048), ficando 19 / 21.
    ===================================================================== */
 
 const QUESTOES_PCAL_LOTE62 = [
@@ -88,15 +90,15 @@ const QUESTOES_PCAL_LOTE62 = [
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (padrão de literalidade normativa); o mesmo ponto, com o mesmo gabarito, aparece em item do curso nos QAPs DSO (Estatuto da PC-AL, item 2)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 65, probReaparecer: 0.8,
-    enunciado: "Os ocupantes de cargos em comissão e funções gratificadas com atribuições e responsabilidade de natureza policial são considerados policiais civis desde que assim declarados por decreto do chefe do Poder Executivo.",
+    enunciado: "Segundo o Estatuto da Polícia Civil de Alagoas, os ocupantes de cargos em comissão e funções gratificadas com atribuições e responsabilidade de natureza policial são considerados policiais civis desde que assim declarados por decreto do chefe do Poder Executivo.",
     gabarito: "C", pegadinha: "literalidade", palavraChave: "declarados por decreto do chefe do Poder Executivo",
     cognitivo: {
       motivo: "Fixar a condição formal que estende a qualidade de policial civil a comissionados.",
       palavraCritica: "por decreto",
     },
     comentario: {
-      resolucao: "CERTO. É o parágrafo único do art. 2º da Lei 3.437/1975. A extensão não é automática pela natureza das atribuições: exige ato formal, e ato de espécie determinada — DECRETO do chefe do Executivo. Item que troque o instrumento por portaria do Secretário de Segurança, ou que dispense o ato afirmando bastar o exercício de atribuição policial, estaria errado. O caput, por contraste, define os policiais civis pela ocupação dos cargos dos Anexos I e II.",
-      fundamento: "Lei estadual 3.437/1975, art. 2º, caput e parágrafo único.",
+      resolucao: "CERTO. É o parágrafo único do art. 2º da Lei 3.437/1975. A extensão não é automática pela natureza das atribuições: exige ato formal, e ato de espécie determinada — DECRETO do chefe do Executivo. Item que troque o instrumento por portaria do Secretário de Segurança, ou que dispense o ato afirmando bastar o exercício de atribuição policial, estaria errado. O caput, por contraste, define os policiais civis pela ocupação dos cargos dos Anexos I e II. VIGÊNCIA: o dispositivo não foi alterado nem revogado por lei estadual posterior — conferido na versão consolidada até a Lei 7.959/2017, e as Leis 8.641/2022 e 8.782/2022 não mexeram no Estatuto. O que mudou foi o entorno: a Lei Orgânica Nacional das Polícias Civis (Lei 14.735/2023) organiza a polícia civil em carreiras de cargos efetivos, providos por concurso (CF, art. 37, II), de modo que o decreto do art. 2º, p.u., só estende a qualidade de policial para fins do regime estatutário — não cria um policial de carreira nem dispensa o concurso. Por isso o item está ancorado em 'segundo o Estatuto': é a letra da lei estadual, que segue no edital.",
+      fundamento: "Lei estadual 3.437/1975, art. 2º, caput e parágrafo único; CF, art. 37, II; Lei 14.735/2023.",
       macete: "Comissionado vira policial civil por DECRETO, não pela função que exerce.",
       erroComum: "Supor equiparação automática pela natureza policial das atribuições.",
       comoBancaPensa: "Cobra a espécie do ato normativo, detalhe que quase ninguém memoriza."
@@ -235,9 +237,9 @@ const QUESTOES_PCAL_LOTE62 = [
       palavraCritica: "em hipótese alguma",
     },
     comentario: {
-      resolucao: "CERTO — e a expressão absoluta é da própria lei, não do examinador. O § 2º do art. 40 usa literalmente 'não poderá, em hipótese alguma'. Quem responde por reflexo, marcando ERRADO diante de todo termo absoluto, cai aqui. Repare no contraste interno do artigo: o § 1º ADMITE que os cargos de Delegado Regional e Especializado sejam exercidos por oficiais superiores da PM ou capitães portadores do CAO, no interesse do serviço; o § 2º fecha a porta para a graduação de cabo. O mesmo artigo abre e fecha, e é preciso saber para quem.",
-      fundamento: "Lei estadual 3.437/1975, art. 40, §§ 1º e 2º.",
-      macete: "Oficial superior e capitão com CAO: pode. Cabo: em hipótese alguma.",
+      resolucao: "CERTO — e a expressão absoluta é da própria lei, não do examinador. O § 2º do art. 40 usa literalmente 'não poderá, em hipótese alguma'. Quem responde por reflexo, marcando ERRADO diante de todo termo absoluto, cai aqui. CONTEXTO ATUAL: a Polícia Civil e a Polícia Militar são órgãos distintos, e o cargo de delegado é de carreira própria. Desde a CF/88 (art. 144, § 4º), a polícia civil é dirigida por delegado de polícia de carreira, e a Lei 14.735/2023 reforça essa exigência. Por isso o § 1º do mesmo artigo — que admitia oficiais superiores da PM ou capitães com CAO como Delegado Regional ou Especializado — não foi recepcionado (veja LI-048). O § 2º, ao contrário, continua verdadeiro: hoje a vedação vale para qualquer militar, não só para o cabo. O item é CERTO pelos dois caminhos — pela letra do Estatuto e pelo regime vigente.",
+      fundamento: "Lei estadual 3.437/1975, art. 40, §§ 1º e 2º; CF/88, art. 144, § 4º; Lei 14.735/2023.",
+      macete: "Cabo: 'em hipótese alguma' (letra do Estatuto). Hoje, nenhum militar exerce cargo de delegado — o § 1º não foi recepcionado.",
       erroComum: "Marcar ERRADO automaticamente ao ver 'em hipótese alguma'.",
       comoBancaPensa: "Usa o termo absoluto verdadeiro para punir o automatismo que ela mesma criou."
     }
@@ -714,20 +716,20 @@ const QUESTOES_PCAL_LOTE62 = [
   {
     id: "LI-119", disciplina: "Legislação Institucional (AL)", assunto: "Estatuto da PC-AL (Lei 3.437/1975)", subassunto: "Delegado Regional exercido por militar (art. 40, § 1º)",
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
-    origem: "Inédita — estilo CEBRASPE (padrão de literalidade normativa)",
+    origem: "Inédita — estilo CEBRASPE (padrão de literalidade normativa); reescrita em 10/2026 após sinalização de aluno — a versão anterior dava CERTO à letra do § 1º, que não foi recepcionado",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 70, probReaparecer: 0.74,
-    enunciado: "No interesse do serviço policial, os cargos de Delegado Regional e Especializado poderão, segundo o Estatuto, ser exercidos por oficiais superiores da Polícia Militar ou por capitães portadores do Curso de Aperfeiçoamento de Oficiais.",
-    gabarito: "C", pegadinha: "literalidade", palavraChave: "oficiais superiores da Polícia Militar ou por capitães portadores do CAO",
+    enunciado: "Atualmente, no interesse do serviço policial, os cargos de Delegado Regional e Especializado da Polícia Civil de Alagoas podem ser exercidos por oficiais superiores da Polícia Militar ou por capitães portadores do Curso de Aperfeiçoamento de Oficiais, conforme autoriza o Estatuto da PC-AL.",
+    gabarito: "E", pegadinha: "verdade-mais-falso", palavraChave: "Atualmente ... oficiais superiores da Polícia Militar",
     cognitivo: {
-      motivo: "Fixar a permissão do § 1º, contraponto necessário à vedação do § 2º.",
-      palavraCritica: "capitães portadores do CAO",
+      motivo: "Separar a letra do art. 40, § 1º, de 1975, do regime vigente desde a CF/88.",
+      palavraCritica: "Atualmente",
     },
     comentario: {
-      resolucao: "CERTO. É a literalidade do § 1º do art. 40. O dispositivo é de 1975 e convive mal com o art. 144, § 4º, da Constituição de 1988, que reserva a direção das polícias civis a delegado de polícia de carreira — discussão que existe e é legítima. Mas quando o comando pede o que diz o ESTATUTO, a resposta é a letra da lei estadual. Atenção ao recorte: só oficiais superiores ou capitães com CAO; o § 2º fecha em absoluto para a graduação de cabo.",
-      fundamento: "Lei estadual 3.437/1975, art. 40, §§ 1º e 2º; CF/88, art. 144, § 4º.",
-      macete: "Oficial superior ou capitão com CAO: a lei estadual permite. Cabo: jamais.",
-      erroComum: "Negar por invocar a regra constitucional quando o comando pede o Estatuto.",
-      comoBancaPensa: "Testa se o candidato responde ao comando efetivamente formulado."
+      resolucao: "ERRADO. O § 1º do art. 40 da Lei 3.437/1975 de fato dizia isso, mas não foi recepcionado pela Constituição de 1988: o art. 144, § 4º, determina que a polícia civil seja dirigida por delegado de polícia de carreira, e a Lei Orgânica Nacional das Polícias Civis (Lei 14.735/2023) reforça a exigência. Polícia Civil e Polícia Militar são órgãos distintos, e o cargo de delegado pertence a carreira própria, provida por concurso — não pode ser exercido por oficial da PM, seja qual for o posto. A palavra 'atualmente' é o que decide o item: ela pede o regime vigente, não a redação histórica. O § 2º, que veda o cargo ao cabo 'em hipótese alguma', continua verdadeiro e hoje vale para qualquer militar (veja LI-091 e LI-048).",
+      fundamento: "Lei estadual 3.437/1975, art. 40, §§ 1º e 2º (o § 1º não foi recepcionado); CF/88, art. 144, § 4º; Lei 14.735/2023.",
+      macete: "Delegado é de carreira. Oficial da PM como delegado: só no texto de 1975, que não foi recepcionado.",
+      erroComum: "Responder pela letra do Estatuto de 1975 sem confrontá-la com a CF/88.",
+      comoBancaPensa: "Reproduz fielmente um dispositivo que existiu e acrescenta 'atualmente' — pune quem decorou a lei sem checar a recepção."
     }
   },
 ];

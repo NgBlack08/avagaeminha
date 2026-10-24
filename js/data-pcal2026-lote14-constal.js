@@ -366,18 +366,19 @@ const QUESTOES_PCAL_LOTE14 = [
     concurso: "PCAL", cargo: ["Agente","Escrivão"], ano: 2026,
     origem: "Inédita — estilo CEBRASPE (Constituição de AL, edital PC-AL 2026)",
     tipo: "CE", dificuldade: 3, tempoIdealSeg: 50, probReaparecer: 0.75,
-    enunciado: "Os municípios alagoanos podem criar guardas municipais na forma de lei complementar estadual, ficando essas guardas supervisionadas operacionalmente pela Polícia Militar do Estado.",
-    gabarito: "C", pegadinha: "literalidade", palavraChave: "lei complementar estadual / supervisão da PM",
+    enunciado: "Segundo o texto da Constituição do Estado de Alagoas, os municípios podem constituir guardas municipais nos limites de lei complementar estadual, sendo essas guardas, quanto às atividades operacionais, supervisionadas pela Polícia Militar.",
+    gabarito: "C", pegadinha: "literalidade", palavraChave: "Segundo o texto da Constituição do Estado",
     cognitivo: {
-      motivo: "Cobrar o regime de criação e supervisão das guardas municipais na Constituição estadual.",
-      palavraCritica: "lei complementar estadual + supervisão pela PM",
+      motivo: "Cobrar a literalidade do art. 247 da Constituição estadual — e saber que ela não reflete o regime federal vigente.",
+      palavraCritica: "Segundo o texto da Constituição do Estado",
     },
     comentario: {
-      resolucao: "CERTO. A Constituição do Estado de Alagoas prevê que os municípios podem constituir guardas municipais na forma de lei complementar estadual, cabendo à Polícia Militar do Estado a supervisão operacional dessas guardas.",
-      fundamento: "Constituição do Estado de Alagoas — segurança pública; CF, art. 144, § 8º.",
-      macete: "Criação: lei complementar estadual. Supervisão operacional: PM.",
-      erroComum: "Atribuir a criação a simples lei municipal.",
-      comoBancaPensa: "Cobra os dois elementos (criação e supervisão) em um só item."
+      resolucao: "CERTO — mas só porque o comando pede o TEXTO da Constituição estadual. O art. 247 da Constituição de Alagoas (1989) diz que os municípios poderão constituir guardas municipais nos limites de lei complementar estadual (caput) e que elas, quanto às atividades operacionais, serão supervisionadas pela Polícia Militar (§ 1º). Esse desenho, porém, não corresponde ao regime federal hoje vigente: pela CF, art. 144, § 8º, quem cria a guarda é o município, e a Lei nº 13.022/2014 (Estatuto Geral das Guardas Municipais) dispõe que o município pode criar, por lei, sua guarda municipal, subordinada ao chefe do Poder Executivo municipal (art. 6º). Isso esvazia a exigência de lei complementar estadual e a supervisão pela PM, ambas difíceis de conciliar com a autonomia municipal (CF, arts. 18 e 30). O mesmo vale para o § 2º do art. 247, que veda o porte de arma ao guarda municipal: está superado pela ADI 5538 (veja LI-040). Na prova, portanto, leia o comando: se pedir 'segundo a Constituição do Estado', vale a letra do art. 247; se pedir o regime vigente, ou a norma federal, a criação é por lei municipal e a guarda se subordina ao prefeito.",
+      fundamento: "Constituição do Estado de Alagoas, art. 247, caput e §§ 1º e 2º; CF, arts. 18, 30 e 144, § 8º; Lei nº 13.022/2014, art. 6º.",
+      jurisprudencia: "STF, ADI 5538 (01/03/2021): porte de arma para integrantes das guardas municipais, sem critério demográfico. STF, Tema 656, RE 608.588 (20/02/2025): guardas podem atuar em segurança urbana, inclusive policiamento ostensivo e comunitário, respeitadas as atribuições dos demais órgãos do art. 144.",
+      macete: "Texto estadual (1989): lei complementar estadual + supervisão operacional da PM. Regime federal vigente: lei municipal + subordinação ao prefeito.",
+      erroComum: "Responder pelo texto estadual quando o item pergunta o regime vigente, ou pelo regime federal quando o item pede a letra da Constituição de Alagoas.",
+      comoBancaPensa: "Em Constituição estadual a banca costuma cobrar a literalidade; o que decide o item é o recorte do comando."
     }
   },
   {

@@ -759,7 +759,7 @@ const QUESTOES_PCAL_LOTE91 = [
       palavraCritica: "toda",
     },
     comentario: {
-      resolucao: "CERTO. É a frase final do texto, reproduzida sem alteração de alcance: 'toda obra que altera um rio altera também o modo como as pessoas medem o tempo'. A generalização é do autor, e o item apenas a repete.",
+      resolucao: "CERTO. É a frase final do texto, reproduzida sem alteração de alcance: 'Trata-se de reconhecer que toda obra que altera um rio altera também o modo como as pessoas medem o tempo'. A repetição é proposital — o item não esconde nada, e é exatamente isso que ele testa. O 'toda' costuma ser sinal de exagero inventado pela banca, e muitos candidatos marcam ERRADO por reflexo. Aqui, porém, a generalização é do próprio autor: ele a apresenta como tese ('trata-se de reconhecer que...'), sem ressalva, depois de afastar a leitura contrária à barragem. Como o item não amplia nem restringe o que o texto afirma, está correto. A pergunta a fazer não é 'o item tem termo absoluto?', mas 'o texto diz exatamente isso, com esse alcance?'.",
       fundamento: "Compreensão de texto — fidelidade ao alcance da afirmação.",
       macete: "Antes de reagir ao 'toda', procure a frase no texto. Se o autor generalizou, o item pode generalizar.",
       erroComum: "Marcar ERRADO por reflexo diante do quantificador universal.",

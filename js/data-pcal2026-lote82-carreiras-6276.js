@@ -73,14 +73,14 @@ const QUESTOES_PCAL_LOTE82 = [
     id: "LI-120", subassunto: "Carreiras abrangidas — art. 1º",
     origem: "Inédita — estilo CEBRASPE (Lei estadual 6.276/2001, art. 1º)",
     dificuldade: 3, tempoIdealSeg: 70,
-    enunciado: "A Lei estadual nº 6.276/2001 estrutura, na Parte Permanente, as carreiras de Agente de Polícia, Escrivão de Polícia, Papiloscopista e Perito Criminal.",
+    enunciado: "A Lei estadual nº 6.276/2001, em sua redação vigente, estrutura, na Parte Permanente, as carreiras de Agente de Polícia, Escrivão de Polícia, Papiloscopista e Perito Criminal.",
     gabarito: "E", pegadinha: "literalidade", palavraChave: "Papiloscopista e Perito Criminal",
     cognitivo: {
       motivo: "Cobrar a redação vigente do art. 1º contra a original, que de fato listava essas carreiras.",
       palavraCritica: "Papiloscopista",
     },
     comentario: {
-      resolucao: "ERRADO — pela redação VIGENTE. O art. 1º, com a redação dada pela Lei nº 6.788/2006, estrutura apenas as carreiras de Agente de Polícia e Escrivão de Polícia. A redação original de 2001 realmente listava oito carreiras, incluindo Papiloscopista e os Peritos, mas foi REVOGADA. Em conflito entre redações, prevalece a mais recente.",
+      resolucao: "ERRADO — pela redação VIGENTE. O art. 1º, com a redação dada pela Lei nº 6.788/2006, estrutura apenas as carreiras de Agente de Polícia e Escrivão de Polícia. A redação original de 2001 realmente listava oito carreiras, incluindo Papiloscopista e os Peritos, mas foi REVOGADA. Note que a lei não foi revogada: só o texto do art. 1º mudou, e a Lei 6.276/2001 continua sendo o diploma das carreiras de Agente e Escrivão (a Lei 7.602/2014, que mexeu depois nos arts. 2º, 3º, 7º e 8º, não alterou o art. 1º). Por isso o item cita a Lei 6.276/2001 e não a lei alteradora: quando a banca cita uma lei sem ressalva, ela se refere ao texto consolidado, com todas as alterações — e o enunciado deixa isso explícito com 'em sua redação vigente'.",
       fundamento: "Lei estadual nº 6.276/2001, art. 1º, com a redação da Lei nº 6.788/2006.",
       macete: "Depois de 2006 a lei é de duas carreiras: Agente e Escrivão. Se o item citar Perito ou Papiloscopista como carreira estruturada aqui, é texto revogado.",
       erroComum: "Responder pela apostila antiga, que reproduz a lista de oito carreiras.",
