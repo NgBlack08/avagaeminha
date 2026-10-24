@@ -2150,10 +2150,10 @@ const QUESTOES_SESAUAL_LOTE148 = [
   },
   {
     id: "FIS-399", disciplina: "Fisioterapia", assunto: "Ética profissional", subassunto: "Dever de comunicar (art. 7º)",
-    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "banca não identificada no material — questão do material Estratégia (Conhecimentos Específicos, Aula 09)",
+    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2014,
+    origem: "IDECAN - EBSERH/ HC-UFPE - 2014 — questão do material Estratégia (Conhecimentos Específicos, Aula 09)",
     tipo: "ME", dificuldade: 1, tempoIdealSeg: 130, probReaparecer: 0.65,
-    enunciado: "(IDECAN - EBSERH/ HC-UFPE - 2014) Segundo a Resolução do Conselho Federal de Fisioterapia e de Terapia Ocupacional – COFFITO nº 424/2013, que estabelece o Código de Ética e Deontologia da Fisioterapia, acerca das responsabilidades fundamentais dispostas no Cap. II, é INCORRETO afirmar que",
+    enunciado: "Segundo a Resolução do Conselho Federal de Fisioterapia e de Terapia Ocupacional – COFFITO nº 424/2013, que estabelece o Código de Ética e Deontologia da Fisioterapia, acerca das responsabilidades fundamentais dispostas no Cap. II, é INCORRETO afirmar que",
     alternativas: [
       "não cabe ao fisioterapeuta comunicar à chefia imediata da instituição em que trabalha ou à autoridade competente, fato que tenha conhecimento que seja tipificado como crime, contravenção legal ou infração ética.",
       "o fisioterapeuta protege o cliente/paciente/usuário e a instituição/programa em que trabalha contra danos decorrentes de imperícia, negligência ou imprudência por parte de qualquer membro da equipe de saúde, advertindo o profissional faltoso.",
@@ -2176,10 +2176,10 @@ const QUESTOES_SESAUAL_LOTE148 = [
   },
   {
     id: "FIS-400", disciplina: "Fisioterapia", assunto: "Ética profissional", subassunto: "Hipóteses do art. 10, II",
-    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2026,
-    origem: "banca não identificada no material — questão do material Estratégia (Conhecimentos Específicos, Aula 09)",
+    concurso: "SESAU", cargo: ["Especialista em Saúde — Fisioterapia"], ano: 2014,
+    origem: "IDECAN – PREFEITURA DUQUE DE CAXIAS/RJ - 2014 — questão do material Estratégia (Conhecimentos Específicos, Aula 09)",
     tipo: "ME", dificuldade: 1, tempoIdealSeg: 130, probReaparecer: 0.65,
-    enunciado: "(IDECAN – PREFEITURA DUQUE DE CAXIAS/RJ - 2014) Segundo a Resolução do conselho federal de fisioterapia e de terapia ocupacional – COFFITO nº 424, de 03/05/2013, D.O.U: 23/05/2013, estabelece o Código de Ética e Deontologia da Fisioterapia, em seu capítulo II – das responsabilidades fundamentais, art. 10º, que é proibido ao fisioterapeuta, nas respectivas áreas de atuação, EXCETO:",
+    enunciado: "Segundo a Resolução do conselho federal de fisioterapia e de terapia ocupacional – COFFITO nº 424, de 03/05/2013, D.O.U: 23/05/2013, estabelece o Código de Ética e Deontologia da Fisioterapia, em seu capítulo II – das responsabilidades fundamentais, art. 10º, que é proibido ao fisioterapeuta, nas respectivas áreas de atuação, EXCETO:",
     alternativas: [
       "Negar a assistência ao ser humano ou à coletividade em caso de indubitável urgência.",
       "Recomendar, prescrever e executar tratamento ou nele colaborar, quando necessário.",
